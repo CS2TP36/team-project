@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+// Creates the table which will hold the product categories, and a short description of each category.
+
 return new class extends Migration
 {
     /**
