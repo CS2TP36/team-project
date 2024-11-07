@@ -10,3 +10,8 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('pages.test');
 });
+
+// page can be accessed at site/test
+Route::get('/login', function () {
+    return view('pages.login');
+});
