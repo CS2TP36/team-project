@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('size');
             $table->string('colour');
             $table->text('description');
-            $table->foreignIDFor(Category::class)->constrained();
+            $table->foreignIDFor(Category::class)->constrained("categories");
             $table->integer('stock');
             $table->timestamps();
         });
