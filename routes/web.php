@@ -15,3 +15,8 @@ Route::get('/test', function () {
 Route::get('/login', function () {
     return view('pages.login');
 });
+
+// page can be accessed at site/test
+Route::get('/aboutus', function () {
+    return view('pages.aboutus');
+});
