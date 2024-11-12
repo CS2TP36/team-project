@@ -24,3 +24,7 @@ Route::get('/aboutus', function () {
 Route::get('/register', function () {
     return view('pages.register');
 });
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
