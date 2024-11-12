@@ -17,4 +17,22 @@
     </form>
 </div>
 </body>
+
+<style>
+.login {
+    background-color: #757474;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+    padding: 15px;
+    color: white;
+    h2 {
+        font-family:sans-serif;
+        color: white;
+        font-size: 40px;
+    }
+}
+</style>
 @endsection
