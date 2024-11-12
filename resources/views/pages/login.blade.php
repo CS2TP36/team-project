@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<!--Specifying Language-->
-<html lang = "en">
-<head>
-    <!--Specifying Character set-->
-    <meta charset = "UTF-8"/>
-    <meta name = "viewport" content = "width = device - width, initial-scale = 1.0">
-    <title>Login</title>
-</head>
-<!-- Need to reference CSS-->
+@extends('layouts.page')
+    @section('title')
+    Login
+    @endsection
+@section('content')
 <body>
 <div class = "login">
     <h2>Login</h2>
@@ -22,4 +17,4 @@
     </form>
 </div>
 </body>
-</html>
+@endsection

@@ -18,5 +18,4 @@
     <!-- utilises a consistent footer -->
     @include("reusables.footer")
 </body>
-
 </html>
