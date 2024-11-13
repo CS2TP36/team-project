@@ -20,11 +20,11 @@ class Transaction extends Model
         'transaction_info',
         'transaction_status',
     ];
-     
+
     //Get the order associated with the transaction.
-     
+
     public function order()
     {
-        return $this->belongsTo(Orders::class);
+        return $this->belongsTo(Order::class);
     }
 }
