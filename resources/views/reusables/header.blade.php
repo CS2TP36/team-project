@@ -2,7 +2,7 @@
 <header>
     <nav class="navbar">
         <div class ="navbardiv">
-            <img src = "{{ asset('images/Logo.JPG') }}" class = "logo">
+            <a href="/home"><img src = "{{ asset('images/Logo.JPG') }}" class = "logo" alt="logo"></a>
             <input class="search-bar" type = "search" placeholder="Search Here"> </input>
             <ul>
                 <li class = prime-list><a href="#"></a>Account</li>
