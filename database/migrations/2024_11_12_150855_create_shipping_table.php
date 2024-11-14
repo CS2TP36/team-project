@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Order;
+
 return new class extends Migration
 {
     /**
@@ -11,13 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transaction', function (Blueprint $table) {
+        Schema::create('shipping', function (Blueprint $table) {
             $table->id();
-            $table->foreignIDFor(Order::class);
+            $table->date('shipping_date');
+            $table->date('delivery_date');
+            $table->string('home_address');
+            $table->string('tracking_number');
             $table->timestamps();
-            $table->decimal('transaction_amount', 10, 2);
-            $table->enum('transaction_info',['purchase', 'refund', 'transfer']);
-            $table->enum('transaction_status',['pending', 'completed', 'failed']);
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transaction');
+        Schema::dropIfExists('shipping');
     }
 };

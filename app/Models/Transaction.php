@@ -15,7 +15,6 @@ class Transaction extends Model
 
     // The attributes that are mass assignable.
     protected $fillable = [
-        'order_id',
         'transaction_amount',
         'transaction_info',
         'transaction_status',

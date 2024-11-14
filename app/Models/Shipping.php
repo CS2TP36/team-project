@@ -15,9 +15,7 @@ protected $fillable = [
 'shipping_date',
 'delivery_date',
 'home_address',
-'tracking_id',
-'order_id'
-
+'tracking_number',
 ];
 
 public function order() {
