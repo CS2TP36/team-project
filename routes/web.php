@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 // redirects any route site access to the home page at /home
 Route::redirect('/', '/home');
 

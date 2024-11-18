@@ -4,8 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Order;
-return new class extends Migration
-{
+
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->decimal('transaction_amount', 10, 2);
-            $table->enum('transaction_info',['purchase', 'refund', 'transfer']);
-            $table->enum('transaction_status',['pending', 'completed', 'failed']);
+            $table->enum('transaction_info', ['purchase', 'refund', 'transfer']);
+            $table->enum('transaction_status', ['pending', 'completed', 'failed']);
         });
     }
 

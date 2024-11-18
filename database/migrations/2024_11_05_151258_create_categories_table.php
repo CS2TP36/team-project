@@ -6,8 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 // Creates the table which will hold the product categories, and a short description of each category.
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */

@@ -15,12 +15,16 @@ class Review extends Model
         'rating',
         'review'
     ];
+
     // returns user for given review
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
+
     // returns the product for given review
-    public function product() {
+    public function product()
+    {
         return $this->belongsTo(Product::class);
     }
 }

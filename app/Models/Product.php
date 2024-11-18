@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Category;
+
 class Product extends Model
 {
     protected $table = 'products';
@@ -19,13 +20,18 @@ class Product extends Model
         'stock'
     ];
 
-    public function category() {
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
-    public function reviews() {
+
+    public function reviews()
+    {
         return $this->hasMany(Review::class);
     }
-    public function images() {
+
+    public function images()
+    {
         return $this->hasMany(ProductImage::class);
     }
 

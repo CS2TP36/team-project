@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <!-- utilises a consistent header -->
-    @include("reusables.header")
-    <main>
-        <!-- allows each page to add its own main content by overriding the content section. -->
-        @yield('content')
-    </main>
-    <!-- utilises a consistent footer -->
-    @include("reusables.footer")
+<!-- utilises a consistent header -->
+@include("reusables.header")
+<main>
+    <!-- allows each page to add its own main content by overriding the content section. -->
+    @yield('content')
+</main>
+<!-- utilises a consistent footer -->
+@include("reusables.footer")
 </body>
 </html>

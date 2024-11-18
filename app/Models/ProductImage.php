@@ -14,7 +14,9 @@ class ProductImage extends Model
         // this will be the name of the image file located in the images directory
         'image_name'
     ];
-    public function product() {
+
+    public function product()
+    {
         return $this->belongsTo('App\Models\Product');
     }
 }

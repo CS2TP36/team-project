@@ -1,4 +1,3 @@
-
 <footer class="footer-check">
     <div class="footer1">
         <ul>
@@ -8,9 +7,12 @@
             <li class="footer-list"><a href="#">Follow Our Socials</a></li>
         </ul>
         <ul class="footerprime-media-container">
-            <li class="footerprime-list"><a href="#"><img src="{{asset('images/twitter-removebg-preview.png')}}" alt="Twitter"></a></li>
-            <li class="footerprime-list"><a href="#"><img src="{{asset('images/facebook-logo.png')}}" alt="Facebook"></a></li>
-            <li class="footerprime-list"><a href="#"><img src="{{asset('images/instagram-logo.png')}}" alt="Instagram"></a></li>
+            <li class="footerprime-list"><a href="#"><img src="{{asset('images/twitter-removebg-preview.png')}}"
+                                                          alt="Twitter"></a></li>
+            <li class="footerprime-list"><a href="#"><img src="{{asset('images/facebook-logo.png')}}"
+                                                          alt="Facebook"></a></li>
+            <li class="footerprime-list"><a href="#"><img src="{{asset('images/instagram-logo.png')}}" alt="Instagram"></a>
+            </li>
         </ul>
     </div>
     <div>
@@ -21,7 +23,7 @@
             <li class="footer-list"><a href="#">Terms and condition</a></li>
         </ul>
     </div>
-    <div >
+    <div>
         <ul>
             <li class="footer-list"><a href="#">Page Directs</a></li>
             <li class="footer-list"><a href="/login">Sign in </a></li>
