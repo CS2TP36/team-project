@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
-</head>
-
-<body>
+@extends('layouts.page')
+@section('title','Register')
+@section('content')
 <h2>Register to Become a Member</h2>
 <form id="signupForm">
     <label for="firstName">First Name:</label>
@@ -43,8 +36,7 @@
 
     <button type="submit">Sign Up</button>
 </form>
-</body>
-
+@endsection
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -54,7 +46,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        margin: 0;
+        margin-top: 120px;
     }
 
     h2 {
@@ -111,5 +103,4 @@
         background-color: darkred;
     }
 </style>
-
 
