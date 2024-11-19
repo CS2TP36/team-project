@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-</head>
-
-
-<body>
-<!-- need to add the header -->
-
+@extends('layouts.page')
+@section('title','About Us')
+@section('content')
 <h1> About Us </h1>
 <h2>Learn more about us</h2>
 <h2>Who we are</h2>
@@ -39,8 +30,4 @@
     could create something bigger than ourselves.
 </p>
 
-<!-- need to add footer -->
-
-
-</body>
-</html>
+@endsection
