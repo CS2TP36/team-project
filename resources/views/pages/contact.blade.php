@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0 ,userscalable-no ">
-    <title>Contact Me</title>
-</head>
-<body>
-
+@extends('layouts.page')
+@section('title','Contact')
+@section('content')
 <div class="container">
     <div class="contactInfo">
         <div>
@@ -76,5 +70,4 @@
     <label for="rating">Please Rate our Service</label><br>
     <input type="range" id="rating" name="rating" min="1" max="10" step="1">
 </div>
-</body>
-</html>
+@endsection
