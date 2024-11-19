@@ -20,19 +20,43 @@ class Product extends Model
         'stock'
     ];
 
-    public function category()
+    public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function reviews()
+    public function reviews(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Review::class);
     }
 
-    public function images()
+    public function images(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(ProductImage::class);
     }
+
+    // A function which returns all the images for the current product as assets (put straight into href)
+    public function getImageLinks(): array {
+        // Gets the current product id
+        $pid = $this->getAttribute('id');
+        /*
+         *  Gets all productImage objects relating to product
+         * (should have probably just used \App\Models\Product::images)
+        */
+        $productImages = ProductImage::all()->where('product_id', $pid);
+        // Put all the image names in a new array
+        $imageNames = [];
+        foreach ($productImages as $image) {
+            $imageNames[] = $image->getAttribute('image_name');
+        }
+        // Generate a new array of asset links to each image
+        $imageLinks = [];
+        foreach ($imageNames as $imageName) {
+            $imageLinks[] = asset("images/productImage/" . $imageName);
+        }
+        // Return the images so they can be used by the individual product page (could also be used by the products page with a [0] but that seems inefficient.)
+        return $imageLinks;
+    }
+
 
 }
