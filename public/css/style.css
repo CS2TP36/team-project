@@ -49,7 +49,7 @@
 
 .logo {
     display: inline-block;
-    height: 120px;
+    height: 100px;
 }
 
 .prime-list{
@@ -84,15 +84,16 @@
 
 #banner {
     width: 100%;
-    height: 800px;
-    object-fit: cover;
     position: relative;
+    object-fit: cover;
+    max-height: 600px;
 }
 
 
 #banner-container {
     position: relative;
     width: 100%;
+    max-height: 600px;
 }
 
 
@@ -368,4 +369,23 @@
     button:hover {
         background-color: darkred;
     }
+}
+
+
+.catogery-selector{
+    text-decoration: none;
+    list-style: none
+}
+
+.catogery-buttons{
+    color:#333;
+    
+}
+
+.catogery{
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none
+
 }

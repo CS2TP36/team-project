@@ -5,15 +5,6 @@
 
 
 @section('content')
-    <nav class="second-nav">
-        <div class="second-navdiv">
-            <ul>
-                <li class=subprime-list><a href="#"></a>Men</li>
-                <li class=subprime-list><a href="#"></a>Women</li>
-            </ul>
-        </div>
-    </nav>
-
     <section>
         <div id="banner-container">
             <img src="{{asset('images/Hero-banner.jpeg')}}" id="banner">

@@ -29,3 +29,7 @@ Route::get('/register', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
+
+Route::get('/products', function () {
+    return view('pages.products');
+});
