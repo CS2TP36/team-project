@@ -10,7 +10,7 @@
             <img src="{{asset('images/Hero-banner.jpeg')}}" id="banner">
             <div id="text-banner">
                 <p>The Best Quality For The Best Price</p>
-                <a href="#">Shop Now</a>
+                <a href="/products">Shop Now</a>
             </div>
         </div>
     </section>
