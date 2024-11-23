@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -16,6 +17,8 @@ class DatabaseSeeder extends Seeder
     {
         // Adds required categories
         $this->addCategories();
+        // Adds some products
+        $this->addProducts();
     }
     private function addCategories()
     {
@@ -49,6 +52,28 @@ class DatabaseSeeder extends Seeder
         }
     }
     private function addProducts() {
-
+        $products = [
+            new Product([
+                'name' => 'Athletic Pro Hoodie',
+                'description' => "Staying comfortable during workouts is possible with the Athletic Pro Hoodie. Made from soft fabric and sweat resistant technology, this hoodie is perfect for gym sessions or casual outings keeping you athletic wherever you are.",
+                'price' => 25.99,
+                'colour' => 'Green',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+            new Product([
+                'name' => 'Trailblazer Pullover Hoodie',
+                'description' => "The Trailblazer Pullover Hoodie is crafted for adventure with Its soft fleece lining keeps you warm during hikes or chilly mornings and the relaxed fit ensuring all-day comfort you can’t go wrong picking this choice.",
+                'price' => 30.00,
+                'colour' => 'Grey',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ])
+        ];
+        foreach ($products as $product) {
+            $product->save();
+        }
     }
 }
