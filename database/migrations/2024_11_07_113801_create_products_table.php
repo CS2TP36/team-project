@@ -15,9 +15,9 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->decimal('price', 8, 2);
-            $table->integer('size');
             $table->string('colour');
             $table->text('description');
+            $table->boolean('mens');
             $table->foreignIDFor(Category::class)->constrained("categories");
             $table->integer('stock');
             $table->timestamps();
