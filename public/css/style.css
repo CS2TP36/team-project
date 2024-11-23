@@ -369,6 +369,11 @@
     button:hover {
         background-color: darkred;
     }
+
+    .error {
+        color: red;
+        font-size: 0.9em;
+    }
 }
 
 
