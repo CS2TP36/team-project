@@ -1,5 +1,8 @@
 @extends('layouts.page')
 @section('title','Register')
+@section('script')
+    {{ asset('/js/register-validation.js') }}
+@endsection
 @section('content')
     <div class="register">
         <h2>Register to Become a Member</h2>
@@ -35,7 +38,7 @@
 
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required pattern="^\+44\d{10,13}$" placeholder="e.g., +44 1234 567890">
-            <span id="phoneError" class="error"></span>      
+            <span id="phoneError" class="error"></span>
 
 
             <br> <br>
