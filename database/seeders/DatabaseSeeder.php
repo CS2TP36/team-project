@@ -52,7 +52,11 @@ class DatabaseSeeder extends Seeder
         }
     }
     private function addProducts() {
+        // A list of products
+        // Copied from document provided by Muhammed
         $products = [
+            // Mens
+            //   Hoodies
             new Product([
                 'name' => 'Athletic Pro Hoodie',
                 'description' => "Staying comfortable during workouts is possible with the Athletic Pro Hoodie. Made from soft fabric and sweat resistant technology, this hoodie is perfect for gym sessions or casual outings keeping you athletic wherever you are.",
@@ -70,7 +74,36 @@ class DatabaseSeeder extends Seeder
                 'mens' => true,
                 'category_id' => Category::all()->where('name','Hoodies')->first()->id,
                 'stock' => rand(1, 50)
-            ])
+            ]),
+            new Product([
+                'name' => 'Urban Style Zip-Up Hoodie',
+                'description' => "Elevate your street style with the Urban Style Zip-Up Hoodie. Designed with durable fabric, this hoodie combines fashion and functionality for your active lifestyle whether that be sports or something a little bit more relaxed this hoodie has got you covered.",
+                'price' => 35.50,
+                'colour' => 'Red',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+            new Product([
+                'name' => 'EcoFit Hoodie',
+                'description' => "The EcoFit Hoodie is perfect for eco-conscious fitness enthusiasts. Breathable and lightweight, it’s ideal for jogging, yoga, or casual wear an all round good option.",
+                'price' => 28.99,
+                'colour' => 'Green',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+            //   Shoes
+            new Product([
+                'name' => 'Velocity Running Shoes',
+                'description' => "Push past your limits with the Velocity Running Shoes. Designed for ultimate performance, these shoes feature breathable material and enhanced grip for various terrains letting you above and beyond.",
+                'price' => 35.00,
+                'colour' => 'Green / Blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
         ];
         foreach ($products as $product) {
             $product->save();
