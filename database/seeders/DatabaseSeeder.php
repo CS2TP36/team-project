@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
     }
     private function addProducts() {
         // A list of products
-        // Copied from document provided by Muhammed
+        // Copied from document provided by Muhammad Khan on Trello
         $products = [
             // Mens
             //   Hoodies
