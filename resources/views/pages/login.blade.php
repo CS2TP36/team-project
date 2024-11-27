@@ -3,18 +3,36 @@
     Login
 @endsection
 @section('content')
-    
+<body>    
     <div class="login">
-        <body>
         <h2>Login</h2>
-        <!-- Need to work out how to use form method with Laravel-->
-        <form method="post" action="">
-            Username: <input type="text" name="username"/><br>
-            Password: <input type="password" name="password"/><br><br>
-            <input type="submit" value="Login"/>
-             <!--Links to registeration page-->
-            <a href="/register"><input type="register" value="Register"/></a>
-        </form>
-        </body>
+
+        <div class= "existing-customers">
+            <h3>Existing Customers</h3>
+            <form>
+                <label for="username">Username *</lable><br>
+                <input type="text" id="username" name="username" required/><br>
+                
+                <label for="password">Password *</lable><br>
+                <input type="password" id="password" name="password" required/><br>
+                
+                <buton type="submit">Sign In</button>
+            </form>    
+            <a href="#">Forgotten your password?</a>
+        </div>
+
+        <div class= "new-customers">
+            <h3>New to SportsWear?</h3>
+            <form>
+                <p>Line 1 ------------------------------------------------</p>
+                <p>Line 2 ------------------------------------------------</p>
+                <p>Line 3 ------------------------------------------------</p>
+                <p>Line 4 ------------------------------------------------</p>
+                <p>Line 5 ------------------------------------------------</p>
+                <a href="/register"><buton type="button">Register today</button></a>
+            </form>    
+        </div>
     </div>
+
+</body>
 @endsection
