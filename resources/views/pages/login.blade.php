@@ -10,15 +10,15 @@
         <div class= "existing-customers">
             <h3>Existing Customers</h3>
             <form>
-                <label for="username">Username *</lable><br>
-                <input type="text" id="username" name="username" required/><br>
+                <label for="username">Username *</label><br>
+                <input type="text" id="username" name="username" required/></input><br>
                 
-                <label for="password">Password *</lable><br>
-                <input type="password" id="password" name="password" required/><br>
+                <label for="password">Password *</label><br>
+                <input type="password" id="password" name="password" required/></input><br>
                 
-                <buton type="submit">Sign In</button>
+                <button type="submit">Sign In</button>
             </form>    
-            <a href="#">Forgotten your password?</a>
+            <a href="#"><p>Forgotten your password?</p></a>
         </div>
 
         <div class= "new-customers">
@@ -29,10 +29,9 @@
                 <p>Line 3 ------------------------------------------------</p>
                 <p>Line 4 ------------------------------------------------</p>
                 <p>Line 5 ------------------------------------------------</p>
-                <a href="/register"><buton type="button">Register today</button></a>
+                <a href="/register"><button type="button">Register today</button></a>
             </form>    
         </div>
     </div>
-
 </body>
 @endsection
