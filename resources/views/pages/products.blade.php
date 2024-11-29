@@ -1,8 +1,7 @@
 @extends('layouts.page')
 @section('title','products')
+@use('\App\Http\Controllers\ProductLister')
 @section('content')
-\App\Http\Controllers\ProductLister
-
 <section>
         <div id="banner-container">
             <img src="{{asset('images/products-banner.png')}}" id="banner">
@@ -57,7 +56,7 @@
                 <label for="shoes">Shoes</label>
             </li>
     </ul>
-    
+
     <ul class="category-selector">
         <li class="category">Gender</li>
         <li class="category-buttons">
@@ -70,7 +69,7 @@
         </li>
     </ul>
 
-    
+
     <ul class="category-selector">
         <li class="category">Size</li>
         <li class="category-buttons">
@@ -142,16 +141,14 @@
             <label for="discounted-items">Discounted Items</label>
         </li>
     </ul>
-    
+
     <ul class="category-selector">
         <li><button class="filter-btn">Apply Filter</button></li>
     </ul>
 </div>
 
-@use('\App\Http\Controllers\ProductLister')
-
+@php($products = ProductLister::get())
 <div id="products-list">
-    {{$products = ProductLister::get()}};
     @foreach($products as $product)
         <div class="product-item">
             <h3>{{ $product['name'] }}</h3>
