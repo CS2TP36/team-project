@@ -26,3 +26,4 @@ class ProductLister extends Controller
             return $products;
     }
 }
+ 

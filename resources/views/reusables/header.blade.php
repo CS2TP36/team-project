@@ -1,4 +1,4 @@
-<!-- insert header code here -->
+
 <header>
     <nav class="navbar">
         <div class="navbardiv">
