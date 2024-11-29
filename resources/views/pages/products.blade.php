@@ -153,6 +153,7 @@
         <div class="product-item">
             <h3>{{ $product['name'] }}</h3>
             <p>£{{ $product['price'] }}</p>
+            <!-- images might work now with $product->getMainImage() -->
         </div>
     @endforeach
 </div>

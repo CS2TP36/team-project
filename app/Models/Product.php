@@ -58,5 +58,8 @@ class Product extends Model
         return $imageLinks;
     }
 
-
+    // A function which returns the first image
+    public function getMainImage() {
+        return $this->getImageLinks()[0];
+    }
 }

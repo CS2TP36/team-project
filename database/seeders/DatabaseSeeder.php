@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductImage;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,8 +20,10 @@ class DatabaseSeeder extends Seeder
         $this->addCategories();
         // Adds some products
         $this->addProducts();
+        // Adds images
+        $this->addImages();
     }
-    private function addCategories()
+    private function addCategories(): void
     {
         //shoes, trousers, hoodies, jackets, shirts
         //creates a load of categories to add to the database.
@@ -51,7 +54,7 @@ class DatabaseSeeder extends Seeder
             $category->save();
         }
     }
-    private function addProducts() {
+    private function addProducts(): void {
         // A list of products
         // Copied from document provided by Muhammad Khan on Trello
         $products = [
@@ -107,6 +110,34 @@ class DatabaseSeeder extends Seeder
         ];
         foreach ($products as $product) {
             $product->save();
+        }
+    }
+    private function addImages(): void {
+        // image names generated using uuid v4
+        $images = [
+            new ProductImage([
+                'product_id' => 1,
+                'image_name' => 'e962817a-cc88-4939-b985-29d8c6709dbc.png'
+            ]),
+            new ProductImage([
+                'product_id' => 2,
+                'image_name' => 'b227d00e-7254-4502-9f0c-0b2384797932.png'
+            ]),
+            new ProductImage([
+                'product_id' => 3,
+                'image_name' => 'c20ab3a3-b904-4450-8292-2bd5036757ec.png'
+            ]),
+            new ProductImage([
+                'product_id' => 4,
+                'image_name' => '7db446c4-8537-41b6-a1ee-e7068bfb8bc8.png'
+            ]),
+            new ProductImage([
+                'product_id' => 5,
+                'image_name' => '68313941-69f1-4bf9-bb02-de3a64caa29f.png'
+            ])
+        ];
+        foreach ($images as $image) {
+            $image->save();
         }
     }
 }
