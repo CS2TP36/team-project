@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductImage;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,6 +20,8 @@ class DatabaseSeeder extends Seeder
         $this->addCategories();
         // Adds some products
         $this->addProducts();
+        // Add images
+        $this->addImages();
     }
     private function addCategories()
     {
@@ -107,7 +110,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Apex Trainers',
                 'description' => " To stay at the top you'll need the Apex Trainers. They deliver comfort and style.Ideal for both workouts and casual wear providing excellent support for all-day activity and helping you stay on top.",
                 'price' => 32.50,
-                'color' => 'Red / Blue',
+                'colour' => 'Red / Blue',
                 'mens' => true,
                 'category_id' => Category::all()->where('name','Shoes')->first()->id,
                 'stock' => rand(1,50)
@@ -116,17 +119,17 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Trail Master Hiking Shoes',
                 'description' => " The Trail Master Hiking Shoes are designed for durability and comfort,they provide excellent traction on uneven surfaces making them perferct for hiking.",
                 'price' => 35.99,
-                'color' => 'Brown/Blue',
+                'colour' => 'Brown/Blue',
                 'mens' => true,
                 'category_id' => Category::all()->where('name','Shoes')->first()->id,
                 'stock' => rand(1,50)
-                
+
             ]),
             new Product ([
                 'name' => 'Flex Court Sneakers',
                 'description'=> " The Flex Court Sneakers are versatile and stylish , perfect for both indoor sports and streetwear.Their lightweight design ensures agility and comfort",
                 'price' => 29.99,
-                'color' => 'red',
+                'colour' => 'red',
                 'mens' => true,
                 'category_id' => Category::all()->where('name','Shoes')->first()->id,
                 'stock' => rand(1,50)
@@ -136,9 +139,9 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Dynamic Fit Joggers',
                 'description' => "The Dynamic Fit Joggers are made from stretchable fabric , offering maximum mobility and comfort during workouts while keeping you looking in style making it great for performance and looking good",
                 'price' => 20.00,
-                'color' => 'black',
+                'colour' => 'black',
                 'mens' => true,
-                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
                 'stock' => rand(1,50)
 
             ]),
@@ -146,31 +149,63 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Terrain Cargo Pants',
                 'description' => "Are you an outdoor enthusiast? Then the Terrain Cargo Pants are perfect for you.They feature adjustable cuffs for a tailored fit keeping them durable but lightweight",
                 'price' => 32.99,
-                'color' =>'beige',
+                'colour' =>'beige',
                 'mens' => true,
-                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
                 'stock' => rand(1,50)
-            
+
 
             ]),
             new Product ([
                 'name' => 'Comfort Active Trousers',
                 'description' => "Whether you're lounging or training.The Comfort Active Trousers provide unmatched softness and flexibility for your daily routine.",
                 'price' => 25.50,
-                'color' => 'black',
+                'colour' => 'black',
                 'mens' => true,
-                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
                 'stock' => rand (1,50)
             ]),
             new Product ([
                 'name' => 'Core Fit Track Pants',
                 'description' => "A peak athlete needs clothes that can match their peak performance. The Core Fit Track pants are built for athletes.Their breathable material and secure fit ensure peak performance in any activity.",
-                
+                'price' => 27.00,
+                'colour' => 'blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
+                'stock' => rand (1,50)
             ])
 
         ];
         foreach ($products as $product) {
             $product->save();
+        }
+    }
+    private function addImages(): void {
+        // image names generated using uuid v4
+        $images = [
+            new ProductImage([
+                'product_id' => 1,
+                'image_name' => 'e962817a-cc88-4939-b985-29d8c6709dbc.png'
+            ]),
+            new ProductImage([
+                'product_id' => 2,
+                'image_name' => 'b227d00e-7254-4502-9f0c-0b2384797932.png'
+            ]),
+            new ProductImage([
+                'product_id' => 3,
+                'image_name' => 'c20ab3a3-b904-4450-8292-2bd5036757ec.png'
+            ]),
+            new ProductImage([
+                'product_id' => 4,
+                'image_name' => '7db446c4-8537-41b6-a1ee-e7068bfb8bc8.png'
+            ]),
+            new ProductImage([
+                'product_id' => 5,
+                'image_name' => '68313941-69f1-4bf9-bb02-de3a64caa29f.png'
+            ])
+        ];
+        foreach ($images as $image) {
+            $image->save();
         }
     }
 }
