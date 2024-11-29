@@ -23,6 +23,6 @@ class ProductLister extends Controller
                 $products = $products->sortByDesc($sortBy);
             }
             // return the list of products
-            return $products;
+            return $products->toArray();
     }
 }
