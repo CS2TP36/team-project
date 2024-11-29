@@ -28,6 +28,13 @@
         </ul>
     </div>
 
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
+
     <div id=catogery-divider>
         <p>Gender</p>
     </div>

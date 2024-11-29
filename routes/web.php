@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisterController;
+
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
 
 // redirects any route site access to the home page at /home
 Route::redirect('/', '/home');
@@ -26,6 +30,7 @@ Route::get('/register', function () {
     return view('pages.register');
 });
 
+
 Route::get('/contact', function () {
     return view('pages.contact');
 });
@@ -33,3 +38,5 @@ Route::get('/contact', function () {
 Route::get('/products', function () {
     return view('pages.products');
 });
+
+
