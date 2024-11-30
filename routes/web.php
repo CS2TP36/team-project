@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ShowProduct;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -48,7 +49,4 @@ Route::get('/products', function () {
 });
 
 // Show the product page
-Route::get('/product', function () {
-    return view('pages.product');
-});
-
+Route::get('/product/{id}', [ShowProduct::class, 'show'])->name('product.show');
