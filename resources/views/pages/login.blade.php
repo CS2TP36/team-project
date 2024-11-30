@@ -3,7 +3,7 @@
     Login
 @endsection
 @section('content')
-<body>
+
     <div class="login">
         <h2>Login</h2>
 
@@ -52,5 +52,5 @@
             </form>
         </div>
     </div>
-</body>
+
 @endsection
