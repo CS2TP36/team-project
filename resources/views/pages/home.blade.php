@@ -21,7 +21,8 @@
 
     <div id="category-section">
         <ul>
-            <li id="select-catogeries"><img src="{{asset('images/coat.jpg')}}"> <a href="#">Coats</a></li>
+            <li id="select-catogeries"><img src="{{asset('images/coat.jpg')}}"> <a href="#">Jackets</a></li>
+            <li id="select-catogeries"><img src="{{asset('images/hoodies.jpg')}}"> <a href="#">Hoodies</a></li>
             <li id="select-catogeries"><img src="{{asset('images/Joggers.jpg')}}"> <a href="#">Joggers</a></li>
             <li id="select-catogeries"><img src="{{asset('images/shoes.jpg')}}"> <a href="#">Trainers</a></li>
             <li id="select-catogeries"><img src="{{asset('images/shirt.jpg')}}"> <a href="#">Shirts</a></li>

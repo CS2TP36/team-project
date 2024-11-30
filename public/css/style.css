@@ -1,4 +1,15 @@
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .navbar {
     justify-content: space-evenly;
     align-items: center;
@@ -81,6 +92,59 @@
 }
 
 
+.footer-list {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+.footer-list a {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-check {
+    justify-content: space-between;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    box-sizing: border-box;
+    bottom: 0;
+
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.footerprime-media-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+
+.footerprime-list img {
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+}
+
+
+
+
+/* This is the CSS for the home page*/
 
 #banner {
     width: 100%;
@@ -121,56 +185,6 @@
 
 
 
-.footer-list {
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    display: block;
-    padding: 10px;
-}
-
-.footer-list a {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.footer-check {
-    justify-content: space-between;
-    width: 100%;
-    background-color: #333;
-    padding: 20px;
-    height: 300px;
-    display: flex;
-    box-sizing: border-box;
-
-
-}
-
-.footer1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.footerprime-media-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 10px;
-}
-
-
-.footerprime-list img {
-    height: 40px;
-    width: 40px;
-    text-decoration: none;
-}
-
-
  #catogery-divider {
     background: black;
     align-items: center;
@@ -190,24 +204,29 @@
 #catogery-section {
     box-sizing: border-box;
     flex-wrap: wrap;
+    display: flex;
 }
 
 #category-section ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-between;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 
 }
 
 #category-section ul li {
     margin: 10px;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 #select-catogeries img {
-    width: 400px;
+    width: 300px;
     height: auto;
     display: block;
     margin-bottom: 5px;
@@ -215,6 +234,7 @@
     border-color: #000;
     border: 10px solid black;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 #select-catogeries a {
@@ -227,61 +247,19 @@
     border-color: #000;
     border: 10px solid black;
     background-color: #757474;
+    flex-wrap: wrap;
 
 }
 
 #gender-section ul {
     list-style-type: none;
-    padding: 0;
     display: flex; 
-    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
 }
 
 
-
-.category-selector {
-    list-style: none;
-    padding: 0;
-}
-
-.category {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.category-buttons {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-    gap: 10px;
-}
-
-
-input[type="radio"] {
-    accent-color: #007BFF;
-    cursor: pointer;
-}
-
-label {
-    cursor: pointer;
-    color: #333;
-}
-
-.filter-btn {
-    background-color: hsl(0, 0%, 0%);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.filter-btn:hover {
-    background-color: #333;
-}
 
 
 /* CSS for Login Page */
@@ -420,4 +398,97 @@ label {
         font-size: 0.9em;
     }
 }
+
+/* This is the CSS for the Products page*/
+
+.Products-Filter-Container{
+    display: flex;
+}
+
+.Filter-Page{
+    margin-left:10px;
+    border-radius : 15px;
+    align-items: left;
+    padding-top: 40px;
+    padding-left: 20px;
+
+}
+
+#products-list {
+padding-left: 50px;
+padding-top: 50px;
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+box-sizing: border-box;
+max-height: 80px;
+justify-content: space-evenly; 
+    
+}
+
+.product-item {
+    text-align: center;
+    width: 300px;
+    background-color: #c0bbbb;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    justify-content: space-evenly; 
+
+}
+
+
+.category-selector {
+    list-style: none;
+    padding: 10px;
+
+}
+
+.line-break{
+    background-color: #000;
+    height: 2px;
+    
+}
+
+.category {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.category-buttons {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    gap: 10px;
+}
+
+
+input[type="radio"] {
+    accent-color: #333F;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+    color: #000000;
+}
+
+.filter-btn {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #333;
+}
+
 
