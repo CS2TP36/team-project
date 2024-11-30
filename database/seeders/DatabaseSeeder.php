@@ -400,6 +400,9 @@ class DatabaseSeeder extends Seeder
     private function addImages(): void {
         // image names generated using uuid v4
         $images = [
+            
+            //mens hoodies
+            
             new ProductImage([
                 'product_id' => 1,
                 'image_name' => 'e962817a-cc88-4939-b985-29d8c6709dbc.png'
@@ -416,10 +419,169 @@ class DatabaseSeeder extends Seeder
                 'product_id' => 4,
                 'image_name' => '7db446c4-8537-41b6-a1ee-e7068bfb8bc8.png'
             ]),
+           
+           //mens shoes
             new ProductImage([
                 'product_id' => 5,
                 'image_name' => '68313941-69f1-4bf9-bb02-de3a64caa29f.png'
+            ]),
+            new ProductImage([
+                'product_id' => 6,
+                'image_name' => '52e26d0e-de3d-4c3f-b1ee-2dfc6be84fd1.png'
+            ]),
+            new ProductImage([
+                'product_id' => 7,
+                'image_name' => '62aaf67e-8e3a-41b0-9eeb-79ccb3c193c8.png'
+            ]),
+            new ProductImage([
+                'product_id' => 8,
+                'image_name' => '36872fff-bb0e-40e7-ae3a-7b176b5190cc.png'
+
+                //Mens trousers
+            ]),
+            new ProductImage([
+                'product_id' => 9,
+                'image_name' => 'a5f65a82-00c8-4ece-8b87-0b89052cd11b.png'
+            ]),
+            new ProductImage([
+                'product_id' => 10,
+                'image_name' => '84604438-69cf-4d03-ae92-4b25ebc66f26.png'
+            ]),
+            new ProductImage([
+                'product_id' => 11,
+                'image_name' => '5a708f52-ff68-4d53-8c15-a5506420c4d7.png'
+            ]),
+            new ProductImage([
+                'product_id' => 12,
+                'image_name' => 'a95f0f34-8173-48d7-b5ba-c5e5b3c0d3a9.png'
+            ]),
+
+             //men shirts
+             new ProductImage([
+                'product_id' => 13,
+                'image_name' => '3fc06f19-2ec2-4dec-9e1e-ae809bfb1fba.png'
+            ]),
+            new ProductImage([
+                'product_id' => 14,
+                'image_name' => '87d1e39e-f346-496b-8c07-c20acfda991e.png'
+            ]),
+            new ProductImage([
+                'product_id' => 15,
+                'image_name' => 'a8666449-d191-459e-82c3-4d7a861924a7.png'
+            ]),
+            new ProductImage([
+                'product_id' => 16,
+                'image_name' => 'ed603ff9-c1d2-4db5-be02-54708a0c8f7b.png'
+            ]),
+
+              //men jackets
+              new ProductImage([
+                'product_id' => 17,
+                'image_name' => 'd7609c18-ec0e-4b3d-995e-3f146918ac5c.png'
+            ]),
+            new ProductImage([
+                'product_id' => 18,
+                'image_name' => 'f49faaf0-8dae-45da-ba13-119428361c97.png'
+            ]),
+            new ProductImage([
+                'product_id' => 19,
+                'image_name' => '5f281151-52d7-4b11-9101-acb04b590662.png'
+            ]),
+            new ProductImage([
+                'product_id' => 20,
+                'image_name' => '76c5447f-d930-4764-a47e-9d5d397a94af.png'
+            ]),
+
+             //women hoodies
+             new ProductImage([
+                'product_id' => 21,
+                'image_name' => '555bd9f0-bd75-488d-80b6-55dc783448c5.png'
+            ]),
+            new ProductImage([
+                'product_id' => 22,
+                'image_name' => '7e2ffadb-6442-475a-a8ce-ef9f7fb6374d.png'
+            ]),
+            new ProductImage([
+                'product_id' => 23,
+                'image_name' => '375fd25a-384b-436a-85d1-0db9842c740f.png'
+            ]),
+            new ProductImage([
+                'product_id' => 24,
+                'image_name' => 'fff8e702-fc7b-41ae-be5e-7d293b5aaffb.png'
+            ]),
+
+            //womens shoes
+            new ProductImage([
+                'product_id' => 25,
+                'image_name' => 'ae5fb361-7240-4670-b242-1f57c23db89a.png'
+            ]),
+            new ProductImage([
+                'product_id' => 26,
+                'image_name' => '09ebcc7d-8037-4021-8652-4e65e25b006d.png'
+            ]),
+            new ProductImage([
+                'product_id' => 27,
+                'image_name' => 'e8863339-57a2-4e0e-abb8-8296fbe8b750.png'
+            ]),
+            new ProductImage([
+                'product_id' => 28,
+                'image_name' => '5f75e511-4e5d-43cb-9716-afa55cdbc48e.png'
+            ]),
+
+            //womens trousers
+            new ProductImage([
+                'product_id' => 29,
+                'image_name' => 'a5056cf7-30f2-49f8-a08d-c0f511e614b3.png'
+            ]),
+            new ProductImage([
+                'product_id' => 30,
+                'image_name' => 'e9ff5aa5-97aa-4af3-9b19-157c50d51e1b.png'
+            ]),
+            new ProductImage([
+                'product_id' => 31,
+                'image_name' => 'edea456e-eb22-49de-9731-6ab4ece4d7d9.png'
+            ]),
+            new ProductImage([
+                'product_id' => 32,
+                'image_name' => '237476b3-e816-4331-8920-3ea2cb636924.png'
+            ]),
+
+            //womens shirts
+            new ProductImage([
+                'product_id' => 33,
+                'image_name' => 'c5e578ab-6199-4762-b30e-7c0a1887f34b.png'
+            ]),
+            new ProductImage([
+                'product_id' => 34,
+                'image_name' => '77b5bdfa-75e1-4aff-a027-47bb32a7f48e.png'
+            ]),  
+            new ProductImage([
+                'product_id' => 35,
+                'image_name' => '9aa2e9c7-96fb-40d3-8ca0-3a494e4fb534.png'
+            ]),  
+            new ProductImage([
+                'product_id' => 36,
+                'image_name' => 'c788c441-5b74-4fc1-a003-ddfd3eee5e44.png'
+            ]), 
+
+             //womens jackets
+             new ProductImage([
+                'product_id' => 37,
+                'image_name' => '2f2b7296-07ea-4624-83cc-8710f3a0e9f7.png'
+            ]), 
+            new ProductImage([
+                'product_id' => 38,
+                'image_name' => '5e16aace-64bb-4906-9567-619c205d7b7a.png'
+            ]), 
+            new ProductImage([
+                'product_id' => 39,
+                'image_name' => '634c7a24-99bd-4849-8f5e-5ae1033f07d8.png'
+            ]), 
+            new ProductImage([
+                'product_id' => 40,
+                'image_name' => 'cc302463-ad88-4423-8959-f7b486db2d22.png'
             ])
+
         ];
         foreach ($images as $image) {
             $image->save();
