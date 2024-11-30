@@ -2,41 +2,44 @@
 @section('title')
     Product
 @endsection
+@php
+    use App\Models\Product;
+@endphp
 @section('content')
     <div class="product">
-        
-        <div class = "left-container"> 
+
+        <div class = "left-container">
             <!-- Image of the product -->
-            <img src="images/coat.jpg" height="800" width = "800"></img>
+            <img src="{{ asset($product->getMainImage()) }}" height="800" width = "800"></img>
         </div>
-        
+
         <div class = "right-container">
             <div class = "product-info">
                 <!-- Title/Name of the product -->
-                <h2>Really Nice and Intersting Product Name</h2>
+                <h2>{{$product['name']}}</h2>
                 <!-- Price of the product -->
-                <h2>£1000</h2>
+                <h2>£{{$product['price']}}</h2>
             </div>
 
-            <div class = "size-selection"> 
+            <div class = "size-selection">
                 <p>Choose size</p>
                 <!-- Three buttons, S, M, L -->
                 <button type="button">S</button>
                 <button type="button">M</button>
                 <button type="button">L</button>
             </div>
-        
+
             <div class = "purchase-options">
                 <!-- Two buttons, add to basket and add to wishlist -->
                 <button type="button">Add to Basket</button>
                 <button type="button">Add to Wishlist</button>
             </div>
-            
-            <div class = "detailed-info"> 
+
+            <div class = "detailed-info">
                 <!-- Nav bar containing Product Info and Review-->
                 <nav></nav>
                 <!-- Description of the product -->
-                <p></p>
+                <p>{{$product['description']}}</p>
             </div>
         </div>
     </div>
