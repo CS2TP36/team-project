@@ -380,6 +380,67 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Shirts')->first()->id,
                 'stock' => rand (1,50)
             ]),
+            new products ([
+                'name ' => 'Elevate long sleeve top',
+                'description'=> "The Elevate long sleeve top offers sun protection and breathability,perfect for outdoor activities.",
+                'price' => 16.99,
+                'color' => 'pink',
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+
+            ]),
+            new product ([
+                'name' => 'Balance crop tee',
+                'description'=>"acheive effortless style with Balance crop tee,designied for a flattering fit and unrestricted movement.",
+                'price'=> 28.00,
+                'color' => 'blue',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock'=> rand(1,50)
+
+            ]),
+            // coats women
+            new product ([
+                'name'=>'Motion flex parka',
+                'description' => "look chill and stay protected with Motion flex parka , offering a removable hood and multiple pockets.",
+                'price'=> 45.99,
+                'color' => 'black',
+                'mens'=> false ,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock'=> rand (1,50)
+
+            ]),
+            new product ([
+                'name' => 'Thermal fit jacket ',
+                'description'=> "stay warm without bulk with the Thermal fit jacket , designed with thermal insulation and a tailored fit",
+                'price' => 45.00,
+                'color'=> 'beige',
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock'=> rand (1,50)
+
+            ]),
+            new product ([
+                'name'=> 'Active sheild rain coat',
+                'description'=> "keep dry during rainy runs with the Active sheild rain coat ,craffted with breathable and waterproof material.",
+                'price' => 38.50,
+                'color'=> 'orange',
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+
+            ]),
+            new product ([
+                'name'=>'All season windbreaker',
+                'description'=> "sheild yourself from the elements with the All seaon wind breaker , featuring water-repellent fabric and adjustable cuffs.",
+                'price'=> 29.99,
+                'color'=>'beige/pink'
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+                
+            ])
 
 
 
