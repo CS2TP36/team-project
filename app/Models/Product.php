@@ -49,7 +49,7 @@ class Product extends Model
         foreach ($productImages as $image) {
             $imageNames[] = $image->getAttribute('image_name');
         }
-        // Generate a new array of asset links to each image
+        // Generate a new array of paths to each image
         $imageLinks = [];
         foreach ($imageNames as $imageName) {
             $imageLinks[] = "images/productImage/" . $imageName;
