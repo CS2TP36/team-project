@@ -5,7 +5,6 @@
 <div id = "aboutus">
 
 <h1> About Us </h1>
-<h2>Learn more about us</h2>
 <h2>Who we are</h2>
 
 <p>We are a dedicated team, passionate about providing high-quality sportswear and gear.
