@@ -8,9 +8,9 @@
         </ul>
         <ul class="footerprime-media-container">
             <li class="footerprime-list"><a href="https://x.com/"><img src="{{asset('images/twitter-removebg-preview.png')}}" alt="Twitter"></a></li>
-            <li class="footerprime-list"><a href="https://facebook.com"><img src="{{asset('images/facebook-logo.png')}}" alt="Facebook"></a></li>
-            <li class="footerprime-list"><a href="https://instagram.com"><img src="{{asset('images/instagram-logo.png')}}" alt="Instagram"></a></li>
-        </ul>
+            <li class="footerprime-list"><a href="https://facebook.com"><img src="{{asset('images/111.png')}}" alt="Facebook"></a></li>
+            <li class="footerprime-list"><a href="https://instagram.com"><img src="{{asset('images/instagram-logo-transparent-background-2.png')}}" alt="Instagram"></a></li>
+        </ul>                                      
     </div>
     <div>
         <ul>
@@ -23,8 +23,8 @@
         <ul>
             <li class="footer-list">Page Directs</a></li>
             <li class="footer-list"><a href="/login">Sign in </a></li>
-            <li class="footer-list">Orders and Payements </a></li>
-            <li class="footer-list">Student Discounts </a></li>
+            <li class="footer-list">Orders and Payments </a></li>
+            
         </ul>
     </div>
 </footer>
