@@ -285,26 +285,7 @@ html, body {
     justify-content: center;
     gap: 100px;
 }
-
-
-
-
 /* CSS for Login Page */
-/*.login {
-    background-color: #757474;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 50px;
-    padding: 15px;
-    color: white;
-    h2 {
-        font-family:sans-serif;
-        color: white;
-        font-size: 40px;
-    }
-}*/
 .login {
     display: block;
     padding-left: 25px;
@@ -517,7 +498,7 @@ label {
 .filter-btn:hover {
     background-color: #333;
 }
-
+/* CSS for the Product Page*/
 .product {
     background-color: white;
     font-family: Arial, sans-serif;
@@ -533,14 +514,6 @@ label {
         width: 800px;
         height: 800px;
     }
-
-/* CSS for about us page*/
-
-
-
-
-
-
 }
 .right-container {
     flex: 1;
