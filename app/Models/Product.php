@@ -35,8 +35,8 @@ class Product extends Model
         return $this->hasMany(ProductImage::class);
     }
 
-    // A function which returns all the images for the current product as assets (put straight into href)
-    public function getImageLinks(): array {
+    // A function which returns all the image paths for the current product as assets (put straight into href)
+    public function getImagePaths(): array {
         // Gets the current product id
         $pid = $this->getAttribute('id');
         /*
@@ -52,14 +52,14 @@ class Product extends Model
         // Generate a new array of asset links to each image
         $imageLinks = [];
         foreach ($imageNames as $imageName) {
-            $imageLinks[] = asset("images/productImage/" . $imageName);
+            $imageLinks[] = "images/productImage/" . $imageName;
         }
         // Return the images so they can be used by the individual product page (could also be used by the products page with a [0] but that seems inefficient.)
         return $imageLinks;
     }
 
     // A function which returns the first image
-    public function getMainImage() {
-        return $this->getImageLinks()[0];
+    public function getMainImage(): string {
+        return $this->getImagePaths()[0];
     }
 }
