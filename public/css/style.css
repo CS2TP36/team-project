@@ -938,193 +938,192 @@ label {
         }
     }
 }
-/* basket page */
+.basket {
+    /* basket page */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-    padding-top: 30px;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 18px;
-    text-align: center;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
 
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #fff;
+        color: #333;
+        line-height: 1.6;
+        padding-top: 30px;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 18px;
+        text-align: center;
+    }
 
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-section::after {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table th, table td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    background-color: #333;
-    color: white;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-}
-
-table tr:nth-child(even) {
-    background-color: #f4f4f4;
-}
-
-table td {
-    font-size: 1rem;
-}
-
-table input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-table td a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-table td a:hover {
-    text-decoration: underline;
-}
-
-div h3 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-div input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-div button {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-div button:hover {
-    background-color: #444;
-}
-
-div p {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-div strong {
-    font-size: 1.3rem;
-    color: #333;
-}
-
-div button {
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-div button:hover {
-    background-color: #444;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 5px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 758px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 
-    table td, table th {
-        font-size: 0.8rem;
-        padding: 8px;
+    section::after {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
-    div input[type="text"], div button {
-        font-size: 1rem;
+    table {
         width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
     }
 
-    div p, div strong {
+    table th, table td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #333;
+        color: white;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f4f4f4;
+    }
+
+    table td {
         font-size: 1rem;
+    }
+
+    table input[type="number"] {
+        width: 50px;
+        padding: 5px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    table td a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    table td a:hover {
+        text-decoration: underline;
+    }
+
+    div h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    div input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    div button {
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    div button:hover {
+        background-color: #444;
+    }
+
+    div p {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    div strong {
+        font-size: 1.3rem;
+        color: #333;
+    }
+
+    div button {
+        background-color: #333;
+        color: white;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    div button:hover {
+        background-color: #444;
     }
 
     footer {
-        font-size: 0.8rem;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 5px;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 758px) {
+        header h1 {
+            font-size: 2rem;
+        }
+
+        table td, table th {
+            font-size: 0.8rem;
+            padding: 8px;
+        }
+
+        div input[type="text"], div button {
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        div p, div strong {
+            font-size: 1rem;
+        }
+
+        footer {
+            font-size: 0.8rem;
+        }
     }
 }
