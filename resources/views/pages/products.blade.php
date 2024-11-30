@@ -163,6 +163,7 @@
             <div class="product-item">
                 <h3>{{ $product['name'] }}</h3>
                 <p>£{{ $product['price'] }}</p>
+                <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}">
                 <!-- images might work now with $product->getMainImage() -->
             </div>
         @endforeach
