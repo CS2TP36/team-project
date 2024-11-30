@@ -19,6 +19,7 @@
             </div>
 
             <div class = "size-selection"> 
+                <p>Choose size</p>
                 <!-- Three buttons, S, M, L -->
                 <button type="button">S</button>
                 <button type="button">M</button>
@@ -30,13 +31,13 @@
                 <button type="button">Add to Basket</button>
                 <button type="button">Add to Wishlist</button>
             </div>
-        </div>
-
-        <div class = "detailed-info"> 
-            <!-- Nav bar containing Product Info and Review-->
-            <nav></nav>
-            <!-- Description of the product -->
-            <p></p>
+            
+            <div class = "detailed-info"> 
+                <!-- Nav bar containing Product Info and Review-->
+                <nav></nav>
+                <!-- Description of the product -->
+                <p></p>
+            </div>
         </div>
     </div>
 @endsection

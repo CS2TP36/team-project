@@ -3,7 +3,6 @@
     Login
 @endsection
 @section('content')
-
     <div class="login">
         <h2>Login</h2>
 
@@ -52,5 +51,4 @@
             </form>
         </div>
     </div>
-
 @endsection

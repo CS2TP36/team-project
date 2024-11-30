@@ -490,21 +490,59 @@ label {
 .filter-btn:hover {
     background-color: #333;
 }
+
 .product {
-    background-color: pink;
-    left-container {
-        display: inline-flex;
-        border: 5px solid black;
-        margin: 50px;
-        img {
-            width: 800px;
-            height: 800px;
-        }
-    }
-    right-container {
-        display: inline-flex;
-        border: 5px solid blue;
-        margin: 50px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.left-container {
+    flex: 1;
+    max-width: 800px;
+    img {
+        width: 800px;
+        height: 800px;
     }
 }
+.right-container {
+    flex: 1;
+    max-width: 800px;
+    padding: 50px;
+    .size-selection {
+        max-width: 250px;
+        padding: 10px;
+        button {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid rgb(23, 23, 23);
+            background-color: rgb(23, 23, 23);
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
 
+        button:hover {
+            background-color: black;
+        }
+    }
+
+    .purchase-options {
+        button {
+            width: 550px;
+            padding: 10px;
+            border: 1px solid rgb(23, 23, 23);
+            background-color: rgb(23, 23, 23);
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+    }
+}
