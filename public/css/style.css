@@ -1,4 +1,197 @@
+.contact {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.8;
+        background-color: #757474;
+        color: #101010;
+        padding: 0;
+        margin: 0;
+    }
+
+    .banner {
+        background-image: url('images/output\ 90\).jpg');
+        background-size: 100% auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: #fff;
+        text-align: center;
+        padding: 80px 0;
+        margin: 0;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid #fff;
+        border-top: 2px solid #fff;
+        position: relative;
+    }
+
+    .banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+
+        z-index: 0;
+    }
+
+    .banner h1 {
+        z-index: 1;
+        color: rgb(250, 245, 245);
+        background: rgba(0, 0, 0, 0.3);
+        padding: 15px 30px;;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 3rem;
+        text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
+        display:inline-block;
+    }
+
+    .contactInfo {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        margin: 25px auto;
+        width: 90%;
+        max-width: 900px;
+    }
+
+    .contactInfo h2 {
+        color: #161515;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .contactInfo ul.info {
+        list-style: none;
+        margin-top: 20px;
+    }
+
+    .contactInfo ul.info li {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    .contactInfo ul.info li span {
+        display: block;
+        margin-top: 7px;
+    }
+
+    .contactInfo ul.info li img {
+        width: 20px;
+        height: 22px;
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 25px;
+    }
+
+    form label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #161515;
+    }
+
+    form input, form textarea, form select {
+        width: 100%;
+        padding: 12px 15px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    form input[type="submit"], form input[type="reset"] {
+        width: auto;
+        background-color: #757474;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    form input[type="submit"]:hover, form input[type="reset"]:hover {
+        background-color: #5a5a5a;
+    }
+
+    .social-links {
+        text-align: center;
+        padding: 25px;
+        background-color: #ececec;
+        margin-top: 50px;
+        border-radius: 10px;
+    }
+
+    .social-links h2 {
+        font-size: 26px;
+        margin-bottom: 14px;
+        color: #444;
+    }
+
+    .social-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-links ul li {
+        display: inline-block;
+    }
+
+    .social-links ul li a img {
+        width: 35px;
+        height: auto;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-links ul li a img:hover {
+        transform: scale(1.15);
+        filter: brightness(1.2);
+    }
+
+    @media (max-width: 768px) {
+        .banner {
+            font-size: 1.5rem;
+            padding: 15px 10px;
+        }
+
+        .contactInfo, form, .social-media {
+            width: 90%;
+            padding: 15px;
+        }
+
+        .contactInfo h2, form label {
+            font-size: 1.4rem;
+        }
+
+        .social-links ul li a img {
+            width: 30px;
+        }
+    }
+}
 /* Styling for the container*/
 #aboutus{
     background-color: #f9f9f9;
@@ -156,14 +349,14 @@ html, body {
     height: 300px;
     margin-top: auto;
   }
-  
+
   .footer-media-container {
     display: flex;
     justify-content: center;
     gap: 40px;
     margin-top: 10px;
   }
-  
+
   .footerprime-list img {
     height: 40px;
     width: 40px;
