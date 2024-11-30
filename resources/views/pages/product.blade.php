@@ -10,7 +10,7 @@
 
         <div class = "left-container">
             <!-- Image of the product -->
-            <img src="{{ asset($product->getMainImage()) }}" height="800" width = "800"></img>
+            <img src="{{ asset($product->getMainImage()) }}"></img>
         </div>
 
         <div class = "right-container">
