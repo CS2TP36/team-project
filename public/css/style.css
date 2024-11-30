@@ -540,5 +540,52 @@ label {
     .detailed-info {
         border: 1px solid #ccc;
     }
+
+/* CSS for about us page*/
+
+
+/* Styling for the container*/
+#aboutus{
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    max-width: 800px; /*keep the width restricted so readability is improved */
+    padding: 20px; /* add some spacing in the container (keeps text away from edges) */
+    margin: 0 auto;
+    border-radius: 8px; /*round the cornres*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Styling for h1 elements */
+#aboutus h1{
+    color: #333;
+    margin-bottom: 10px; /* add some spacing */
+    font-size: 2em; /* make h1 text the largest*/
+    text-align: center;
+}
+
+/* styling for h2 elements */
+#aboutus h2 {
+    color: #555;
+    margin-top: 20px; /* add spacing above */
+    margin-bottom: 10px; /*add spacing below */
+    font-size: 1.5em; /*make h2 text smaller than h1 */
+}
+
+/* Styling for p elements */
+#aboutus p{
+color: #666 ;
+font-size: 1em; /* paragraph text made the smallest*/
+margin-bottom: 15px; /* add spacing */
+
+
+}
+
+
+
+
+
+
+
 }
 
