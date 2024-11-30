@@ -1,14 +1,55 @@
 
+/* Styling for the container*/
+#aboutus{
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    max-width: 800px; /*keep the width restricted so readability is improved */
+    padding: 20px; /* add some spacing in the container (keeps text away from edges) */
+    margin: 0 auto;
+    border-radius: 8px; /*round the cornres*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Styling for h1 elements */
+#aboutus h1{
+    color: #333;
+    margin-bottom: 10px; /* add some spacing */
+    font-size: 2em; /* make h1 text the largest*/
+    text-align: center;
+}
+
+/* styling for h2 elements */
+#aboutus h2 {
+    color: #555;
+    margin-top: 20px; /* add spacing above */
+    margin-bottom: 10px; /*add spacing below */
+    font-size: 1.5em; /*make h2 text smaller than h1 */
+}
+
+/* Styling for p elements */
+#aboutus p{
+    color: #666 ;
+    font-size: 1em; /* paragraph text made the smallest*/
+    margin-bottom: 15px; /* add spacing */
+}
+
+
+
+
 html, body {
     height: 100%;
     margin: 0;
-}
+  }
 
-body {
+  body {
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
+  }
+
+  main {
+    flex-grow: 1;
+  }
 
 .navbar {
     justify-content: space-evenly;
@@ -108,39 +149,25 @@ body {
 }
 
 .footer-check {
+    display: flex;
     justify-content: space-between;
-    width: 100%;
     background-color: #333;
     padding: 20px;
     height: 300px;
-    display: flex;
-    box-sizing: border-box;
-    bottom: 0;
-
-}
-
-.footer1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.footerprime-media-container {
+    margin-top: auto;
+  }
+  
+  .footer-media-container {
     display: flex;
     justify-content: center;
     gap: 40px;
     margin-top: 10px;
-}
-
-
-.footerprime-list img {
+  }
+  
+  .footerprime-list img {
     height: 40px;
     width: 40px;
-    text-decoration: none;
-}
-
+  }
 
 
 
@@ -253,7 +280,7 @@ body {
 
 #gender-section ul {
     list-style-type: none;
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
@@ -294,7 +321,7 @@ body {
         border: 1px solid #ccc;
         padding: 20px;
         width: 600px;
-        
+
         label {
             display: block;
         }
@@ -422,8 +449,8 @@ flex-wrap: wrap;
 gap: 40px;
 box-sizing: border-box;
 max-height: 80px;
-justify-content: space-evenly; 
-    
+justify-content: space-evenly;
+
 }
 
 .product-item {
@@ -433,7 +460,7 @@ justify-content: space-evenly;
     padding: 20px;
     border-radius: 10px;
     display: block;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
 
 }
 
@@ -447,7 +474,7 @@ justify-content: space-evenly;
 .line-break{
     background-color: #000;
     height: 2px;
-    
+
 }
 
 .category {
@@ -506,6 +533,14 @@ label {
         width: 800px;
         height: 800px;
     }
+
+/* CSS for about us page*/
+
+
+
+
+
+
 }
 .right-container {
     flex: 1;
