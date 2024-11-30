@@ -2,9 +2,9 @@
 @section('title','Contact Us')
 @section('script','js/contact.js')
 @section('content')
-    <div id="contact">
+    <div class="contact">
         <div class="banner">
-            <h1>Contact Us - We're here to help!</h1>  //this is my contact us page
+            <h1>Contact Us - We're here to help!</h1>
         </div>
 
         <div class="container">

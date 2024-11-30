@@ -1,4 +1,4 @@
-.contact {
+#contact {
     * {
         margin: 0;
         padding: 0;
@@ -192,6 +192,7 @@
         }
     }
 }
+
 /* Styling for the container*/
 #aboutus{
     background-color: #f9f9f9;
