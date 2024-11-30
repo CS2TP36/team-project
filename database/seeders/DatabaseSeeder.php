@@ -380,7 +380,7 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Shirts')->first()->id,
                 'stock' => rand (1,50)
             ]),
-            new products ([
+            new Product([
                 'name ' => 'Elevate long sleeve top',
                 'description'=> "The Elevate long sleeve top offers sun protection and breathability,perfect for outdoor activities.",
                 'price' => 16.99,
@@ -390,7 +390,7 @@ class DatabaseSeeder extends Seeder
                 'stock' => rand (1,50)
 
             ]),
-            new product ([
+            new Product ([
                 'name' => 'Balance crop tee',
                 'description'=>"acheive effortless style with Balance crop tee,designied for a flattering fit and unrestricted movement.",
                 'price'=> 28.00,
@@ -401,56 +401,46 @@ class DatabaseSeeder extends Seeder
 
             ]),
             // coats women
-            new product ([
+            new Product ([
                 'name'=>'Motion flex parka',
                 'description' => "look chill and stay protected with Motion flex parka , offering a removable hood and multiple pockets.",
                 'price'=> 45.99,
                 'color' => 'black',
                 'mens'=> false ,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
                 'stock'=> rand (1,50)
 
             ]),
-            new product ([
+            new Product ([
                 'name' => 'Thermal fit jacket ',
                 'description'=> "stay warm without bulk with the Thermal fit jacket , designed with thermal insulation and a tailored fit",
                 'price' => 45.00,
                 'color'=> 'beige',
                 'mens'=> false,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
                 'stock'=> rand (1,50)
 
             ]),
-            new product ([
+            new Product ([
                 'name'=> 'Active sheild rain coat',
                 'description'=> "keep dry during rainy runs with the Active sheild rain coat ,craffted with breathable and waterproof material.",
                 'price' => 38.50,
                 'color'=> 'orange',
                 'mens'=> false,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
                 'stock' => rand (1,50)
 
             ]),
-            new product ([
+            new Product ([
                 'name'=>'All season windbreaker',
                 'description'=> "sheild yourself from the elements with the All seaon wind breaker , featuring water-repellent fabric and adjustable cuffs.",
                 'price'=> 29.99,
-                'color'=>'beige/pink'
+                'color'=>'beige/pink',
                 'mens'=> false,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
                 'stock' => rand (1,50)
-                
+
             ])
-
-
-
-
-
-
-
-
-
-
 
 
         ];
@@ -461,9 +451,9 @@ class DatabaseSeeder extends Seeder
     private function addImages(): void {
         // image names generated using uuid v4
         $images = [
-            
+
             //mens hoodies
-            
+
             new ProductImage([
                 'product_id' => 1,
                 'image_name' => 'e962817a-cc88-4939-b985-29d8c6709dbc.png'
@@ -480,7 +470,7 @@ class DatabaseSeeder extends Seeder
                 'product_id' => 4,
                 'image_name' => '7db446c4-8537-41b6-a1ee-e7068bfb8bc8.png'
             ]),
-           
+
            //mens shoes
             new ProductImage([
                 'product_id' => 5,
@@ -615,29 +605,29 @@ class DatabaseSeeder extends Seeder
             new ProductImage([
                 'product_id' => 34,
                 'image_name' => '77b5bdfa-75e1-4aff-a027-47bb32a7f48e.png'
-            ]),  
+            ]),
             new ProductImage([
                 'product_id' => 35,
                 'image_name' => '9aa2e9c7-96fb-40d3-8ca0-3a494e4fb534.png'
-            ]),  
+            ]),
             new ProductImage([
                 'product_id' => 36,
                 'image_name' => 'c788c441-5b74-4fc1-a003-ddfd3eee5e44.png'
-            ]), 
+            ]),
 
              //womens jackets
              new ProductImage([
                 'product_id' => 37,
                 'image_name' => '2f2b7296-07ea-4624-83cc-8710f3a0e9f7.png'
-            ]), 
+            ]),
             new ProductImage([
                 'product_id' => 38,
                 'image_name' => '5e16aace-64bb-4906-9567-619c205d7b7a.png'
-            ]), 
+            ]),
             new ProductImage([
                 'product_id' => 39,
                 'image_name' => '634c7a24-99bd-4849-8f5e-5ae1033f07d8.png'
-            ]), 
+            ]),
             new ProductImage([
                 'product_id' => 40,
                 'image_name' => 'cc302463-ad88-4423-8959-f7b486db2d22.png'
