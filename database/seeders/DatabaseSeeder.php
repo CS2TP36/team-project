@@ -58,8 +58,7 @@ class DatabaseSeeder extends Seeder
         // A list of products
         // Copied from document provided by Muhammad Khan on Trello
         $products = [
-            // Mens
-            //   Hoodies
+            // Mens Hoodies
             new Product([
                 'name' => 'Athletic Pro Hoodie',
                 'description' => "Staying comfortable during workouts is possible with the Athletic Pro Hoodie. Made from soft fabric and sweat resistant technology, this hoodie is perfect for gym sessions or casual outings keeping you athletic wherever you are.",
@@ -96,7 +95,7 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Hoodies')->first()->id,
                 'stock' => rand(1, 50)
             ]),
-            //   Shoes
+            //  Mens Shoes
             new Product([
                 'name' => 'Velocity Running Shoes',
                 'description' => "Push past your limits with the Velocity Running Shoes. Designed for ultimate performance, these shoes feature breathable material and enhanced grip for various terrains letting you above and beyond.",
@@ -134,7 +133,7 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Shoes')->first()->id,
                 'stock' => rand(1,50)
             ]),
-            // Trousers
+            // Mens Trousers
             new Product ([
                 'name' => 'Dynamic Fit Joggers',
                 'description' => "The Dynamic Fit Joggers are made from stretchable fabric , offering maximum mobility and comfort during workouts while keeping you looking in style making it great for performance and looking good",
@@ -173,7 +172,225 @@ class DatabaseSeeder extends Seeder
                 'mens' => true,
                 'category_id' => Category::all()->where('name','Trousers')->first()->id,
                 'stock' => rand (1,50)
-            ])
+            ]),
+
+            //Mens Shirts
+            new Product ([
+                'name' => 'Performance Tee',
+                'description' => "Maximize your performance with this sleek Performance Tee which allows it to be Ideal for gym sessions or casual outings. ",
+                'price' => 20.00,
+                'colour' => 'black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'Horizon Polo Shirt',
+                'description' => "If you want both elegance and comfort we got your back with the Horizon Polo Shirt. Don’t compromises on either as Its breathable fabric makes it perfect for sports or smart-casual wear. ",
+                'price' => 28.99 ,
+                'colour' => 'White/Blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'ProCool Compression Shirt',
+                'description' => "Enhance your workouts with the ProCool Compression Shirt with Its stretchy material its able to provides support and reduces muscle fatigue so you can squeeze out every gain from your hardwork. ",
+                'price' => 22.99,
+                'colour' => 'Black/Blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'ActiveWear Long Sleeve',
+                'description' => "Staying warm doesn’t always mean more layers. Maintain your flexibility with the ActiveWear Long Sleeve. Ideal for cool weather activities, this shirt ensures maximum comfort and mobility as well as ensuring you don’t get cold. ",
+                'price' => 25.99,
+                'colour' => 'Black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+
+            //Mens Jackets
+            new Product ([
+                'name' => 'All-Weather Sports Jacket',
+                'description' => "The All-Weather Sports Jacket is a windproof and waterproof jacket designed for outdoor training sessions which as its name suggests , can withstand all types of weather. ",
+                'price' => 35.00,
+                'colour' => 'Black/White',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'Trailblazer Puffer Coat',
+                'description' => "The Trailblazer Puffer Coat is lightweight yet insulated puffer coat which allows the wearer to keep warm without compromising mobility which makes it perfect for winter sports. ",
+                'price' => 48.99,
+                'colour' => 'Green',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'Summit Windbreaker',
+                'description' => "If you want a lightweight and breathable windbreaker, the summit windbreaker is ideal, it provides protection against wind and light rain making the best option for runners or anyone who enjoys the outdoors. ",
+                'price' => 35.99,
+                'colour' => 'Black/Grey',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'ArticPro Training Coat',
+                'description' => "Don’t let cold weather stop your plans with our ArcticPro Training Coat. Its premium insulation and ergonomic design ensure maximum comfort and style but most importantly keeping you warm so you can focus on what really matters. ",
+                'price' => 40.00,
+                'colour' => 'Black/Red',
+                'mens' => true,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+
+            // Womens Hoodies
+            new Product ([
+                'name' => 'Luxe Fleece Hoodie',
+                'description' => "Upgrade your wardrobe with our Luxe Fleece Hoodie. Features a plush interior and stylish drawstrings for ultimate comfort. ",
+                'price' => 19.99,
+                'colour' => 'Pink',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'TechStretch Hoodie',
+                'description' => "Made with moisture-wicking fabric, this hoodie offers stretch for flexibility and optimal movement. ",
+                'price' => 24.50,
+                'colour' => 'Green',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'Performance Zip-Up Hoodie',
+                'description' => "Lightweight and versatile, this hoodie is perfect for layering during warm-ups or chilly workouts. ",
+                'price' => 29.99,
+                'colour' => 'Grey',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'All-Weather Training Hoodie',
+                'description' => "Built for performance, the All-Weather Training Hoodie offers water-resistant fabric and a fitted hood for outdoor training. ",
+                'price' => 45.00,
+                'colour' => 'Light Blue',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            //Womens Shoes
+            new Product ([
+                'name' => 'SwiftRun Trainers',
+                'description' => "Run faster and feel lighter with SwiftRun Trainers, engineered for support and cushioning during intense workouts. ",
+                'price' => 25.99,
+                'colour' => 'Pink/Blue/Yellow/White',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'ActiveGrip Sneakers',
+                'description' => "Perfect for gym and outdoor sports, the ActiveGrip Sneakers provide superior grip and arch support for all-day wear. ",
+                'price' => 48.50,
+                'colour' => 'Black/White',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'FlexStep Running Shoes',
+                'description' => "Experience unmatched comfort with FlexStep Running Shoes, featuring breathable mesh and a shock-absorbing sole. ",
+                'price' => 32.00,
+                'colour' => 'Blue/Pink',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'Endurance Pro Running Shoes',
+                'description' => "Push your limits with Endurance Pro Running Shoes, featuring a reinforced arch and shock-absorbing soles. ",
+                'price' => 32.00,
+                'colour' => 'Black/Red',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            //Womens trousers
+            new Product ([
+                'name' => 'HighRise Compression Leggings',
+                'description' => "Designed for performance, these leggings provide muscle support and a flattering high-rise fit. ",
+                'price' => 39.99,
+                'colour' => 'Black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'ThermaJog Joggers',
+                'description' => "Perfect for cool weather, these joggers feature thermal insulation and a soft fleece interior. ",
+                'price' => 28.50,
+                'colour' => 'Dark-Grey',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'SportLuxe Sweatpants',
+                'description' => "Feel luxurious in SportLuxe Sweatpants, combining style and comfort for a laid-back yet chic look. ",
+                'price' => 35.00,
+                'colour' => 'Grey',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'ActiveTrail Hiking Trousers',
+                'description' => "Durable and breathable, these trousers are made for hiking and outdoor activities, with water-repellent fabric. ",
+                'price' => 29.00,
+                'colour' => 'Blue',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            //Womens shirts
+            new Product ([
+                'name' => 'FitPro Tank Top',
+                'description' => "Beat the heat with the FitPro Tank Top, featuring lightweight fabric and a racerback design for maximum airflow. ",
+                'price' => 24.99,
+                'colour' => 'Black/Pink',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+            new Product ([
+                'name' => 'CoreActive T-Shirt',
+                'description' => "Stay cool and dry during workouts with CoreActive T-Shirt, made from sweat-wicking fabric for enhanced performance. ",
+                'price' => 29.50,
+                'colour' => 'Black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock' => rand (1,50)
+            ]),
+
+
+
+
+
+
+
+
+
+
+
 
         ];
         foreach ($products as $product) {
