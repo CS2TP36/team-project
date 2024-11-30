@@ -1,6 +1,9 @@
 @extends('layouts.page')
 @section('title','About Us')
 @section('content')
+
+<div id = "aboutus">
+
 <h1> About Us </h1>
 <h2>Learn more about us</h2>
 <h2>Who we are</h2>
@@ -30,4 +33,6 @@
     could create something bigger than ourselves.
 </p>
 
+
+</div>
 @endsection
