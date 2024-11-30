@@ -490,5 +490,55 @@ label {
 .filter-btn:hover {
     background-color: #333;
 }
+.product {
+    display: block;
+    padding-left: 300px;
+    padding-right: 300px;
+    .product-info {
+        font-family: Arial, Helvetica, sans-serif;
+        flex-direction: column;
+        display: inline-flex;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 600px;
+    }
+    .size-selection {
+        border: 1px solid #ccc;
+        button {
+            width: 100%;
+            max-width: 50px;
+            padding: 10px;
+            border: 1px solid rgb(23, 23, 23);
+            background-color: rgb(23, 23, 23);
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
 
+        button:hover {
+            background-color: black;
+        }
+    }
+    .purchase-options {
+        border: 1px solid #ccc;
+        button {
+            width: 100%;
+            max-width: 522px;
+            padding: 10px;
+            border: 1px solid rgb(23, 23, 23);
+            background-color: rgb(23, 23, 23);
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+    }
+    .detailed-info {
+        border: 1px solid #ccc;
+    }
+}
 
