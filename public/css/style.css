@@ -230,6 +230,13 @@
 
 }
 
+#gender-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: space-evenly; 
+}
+
 
 
 .category-selector {

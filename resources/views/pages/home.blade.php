@@ -31,6 +31,7 @@
     <div id=catogery-divider>
         <p>Gender</p>
     </div>
+    
     <div id="gender-section">
         <ul>
             <li id="select-catogeries"><img src="{{asset('images/Man.jpg')}}"> <a href="#">Men</a></li>
