@@ -25,44 +25,52 @@
             <div class = "Filter-Page">
                 <ul class="category-selector">
                     <li class="category">Sort By</li>
-                    <li class="category-buttons">
-                        <input type="radio" id="popular" name="sort-by">
-                        <label for="popular">Most Popular</label>
-                    </li>
-                    <li class="category-buttons">
-                        <input type="radio" id="low-to-high" name="sort-by">
-                        <label for="low-to-high">Price (Low To High)</label>
-                    </li>
-                    <li class="category-buttons">
-                        <input type="radio" id="high-to-low"  value = "1">
-                        <label for="high-to-low">Price (High To Low)</label>
-                    </li>
+                    <ul class="category-selector">
+                        <li class="category">Sort By</li>
+                        <li class="category-buttons">
+                            <input type="radio" id="low-to-high" name="sort-by" value="low-to-high">
+                            <label for="low-to-high">Price (Low To High)</label>
+                        </li>
+                        <li class="category-buttons">
+                            <input type="radio" id="high-to-low" name="sort-by" value="high-to-low">
+                            <label for="high-to-low">Price (High To Low)</label>
+                        </li>
+                        <li class="category-buttons">
+                            <input type="radio" id="alphabetical-a-to-z" name="sort-by" value="a-to-z">
+                            <label for="alphabetical-a-to-z">Alphabet (A-Z)</label>
+                        </li>
+                        <li class="category-buttons">
+                            <input type="radio" id="alphabetical-z-to-a" name="sort-by" value="z-to-a">
+                            <label for="alphabetical-z-to-a">Alphabet (Z-A)</label>
+                        </li>
+                    </ul>
 
-                </ul>
+                
+                
 
                 <div class = "line-break"></div>
 
                 <ul class="category-selector">
-                        <li class="category">Clothes Category</li>
-                        <li class="category-buttons">
-                            <input type="radio" id="coats" name="clothes-category">
-                            <label for="coats">Coats</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="hoodies" name="clothes-category">
-                            <label for="hoodies">Hoodies</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="trousers" name="clothes-category">
-                            <label for="trousers">Trousers</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="shirts" name="clothes-category">
-                            <label for="shirts">Shirts</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="shoes" name="clothes-category">
-                            <label for="shoes">Shoes</label>
+                    <li class="category">Clothes Category</li>
+                    <li class="category-buttons">
+                        <input type="radio" id="coats" name="clothes-category">
+                        <label for="coats">Coats</label>
+                    </li>
+                    <li class="category-buttons">
+                        <input type="radio" id="hoodies" name="clothes-category">
+                        <label for="hoodies">Hoodies</label>
+                    </li>
+                    <li class="category-buttons">
+                        <input type="radio" id="trousers" name="clothes-category">
+                        <label for="trousers">Trousers</label>
+                    </li>
+                    <li class="category-buttons">
+                        <input type="radio" id="shirts" name="clothes-category">
+                        <label for="shirts">Shirts</label>
+                    </li>
+                    <li class="category-buttons">
+                        <input type="radio" id="shoes" name="clothes-category">
+                        <label for="shoes">Shoes</label>
                         </li>
                 </ul>
 
@@ -75,7 +83,7 @@
                         <label for="mens">Mens</label>
                     </li>
                     <li class="category-buttons">
-                        <input type="radio" id="women" name="gender">
+                        <input type="radio" id="womens" name="gender">
                         <label for="women">Women</label>
                     </li>
                 </ul>
@@ -181,45 +189,52 @@
     </div>
 </form>
 <script>
+
     function applyFilters() {
         const gender = document.querySelector('input[name="gender"]:checked');
-        let genderVal = null;
+        let genderVal = 2;
         if (gender) {
-            genderVal = (gender.id === "mens" ? 1 : 0);
+            genderVal = (gender.id === "mens" ? 1 : (gender.id === "womens" ? "0" : 2));
         }
 
+
         const sortBy = document.querySelector('input[name="sort-by"]:checked');
-        let priceFilt = null;
+        let priceFilt = "0";
         if (sortBy) {
-            priceFilt = (sortBy.id === 'low-to-high' ? '0' : '1');
+            priceFilt = (sortBy.id === 'high-to-low' ? "0" : 1);
         }
+
+        
+
+
 
         let clothesCategoryValue = null;
         const clothesCategory = document.querySelector('input[name="clothes-category"]:checked');
         if (clothesCategory) {
             switch (clothesCategory.id) {
                 case 'coats':
-                    clothesCategoryValue = 1;
-                    break;
-                case 'hoodies':
-                    clothesCategoryValue = 2;
-                    break;
-                case 'trousers':
-                    clothesCategoryValue = 3;
-                    break;
-                case 'shirts':
                     clothesCategoryValue = 4;
                     break;
-                case 'shoes':
+                case 'hoodies':
+                    clothesCategoryValue = 3;
+                    break;
+                case 'trousers':
+                    clothesCategoryValue = 2;
+                    break;
+                case 'shirts':
                     clothesCategoryValue = 5;
+                    break;
+                case 'shoes':
+                    clothesCategoryValue = 1;
                     break;
             }
         }
-
-        const url= `/products/${genderVal || ''}/name/${priceFilt || ''}/${clothesCategoryValue || ''}`;
-        window.open(url )
+        
+        
+            
+        const url= `/products/${genderVal || ''}/price/${priceFilt || ''}/${clothesCategoryValue || ''}`;
+        window.open(url)
     }
-
 </script>
 
 @endsection
