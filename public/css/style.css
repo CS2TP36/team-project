@@ -3,7 +3,8 @@
 background-color: #f9f9f9;
 font-family: Arial, sans-serif;
 max-width: 800px; /* keep width restricted*/
-padding: 20px; /*cntre the container */
+padding: 20px; /*add spacing*/
+margin: 0 auto; /* cntre the container*/
 border-radius: 8px; /*round the corners */
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 line-height: 1.6;
@@ -24,6 +25,7 @@ font-size: 1em; /* paragraph text smaller */
 margin-bottom: 15px; /* add spacing below */
 }
 
+/*styling for button */
 #account-page button{
 background-color: black;
 color: #fff;
