@@ -45,8 +45,8 @@ Route::get('/contact', function () {
 });
 
 // Show the Account page
-Route::get('/myaccount', function () {
-    return view('pages.myaccount');
+Route::get('/account', function () {
+    return view('pages.account');
 });
 
 
