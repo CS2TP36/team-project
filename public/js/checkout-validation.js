@@ -1,4 +1,5 @@
-
+const billingForm = document.getElementById('billing-form');  
+const paymentForm = document.getElementById('payment-form');
 
 let billingInfo = {
     region: document.getElementById('region'),
@@ -36,7 +37,7 @@ function validateBillingInfo() {
     let isValid = true;
 
     // Validate Region
-    if (!billingInfo.region || !billingInfo.region.value) {
+    if (!billingInfo.region.value) {
         displayError(billingInfo.region, "Region is required.");
         isValid = false;
     } else {
@@ -44,7 +45,7 @@ function validateBillingInfo() {
     }
 
     // Validate Full Name
-    if (!billingInfo.fullName || !billingInfo.fullName.value.trim()) {
+    if (!billingInfo.fullName.value.trim()) {
         displayError(billingInfo.fullName, "Full name is required.");
         isValid = false;
     } else {
@@ -52,7 +53,7 @@ function validateBillingInfo() {
     }
 
     // Validate Address
-    if (!billingInfo.address || !billingInfo.address.value.trim()) {
+    if (!billingInfo.address.value.trim()) {
         displayError(billingInfo.address, "Street address is required.");
         isValid = false;
     } else {
@@ -60,7 +61,7 @@ function validateBillingInfo() {
     }
 
     // Validate Postcode
-    if (!billingInfo.postcode || !billingInfo.postcode.value.trim()) {
+    if (!billingInfo.postcode.value.trim()) {
         displayError(billingInfo.postcode, "Postcode is required.");
         isValid = false;
     } else {
@@ -68,7 +69,7 @@ function validateBillingInfo() {
     }
 
     // Validate Phone Number
-    if (!billingInfo.phone || !billingInfo.phone.value.trim()) {
+    if (!billingInfo.phone.value.trim()) {
         displayError(billingInfo.phone, "Phone number is required.");
         isValid = false;
     } else {
@@ -77,7 +78,6 @@ function validateBillingInfo() {
 
     return isValid;
 }
-
 
 function validatePaymentInfo() {
     let isValid = true;
