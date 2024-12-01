@@ -1,4 +1,5 @@
 
+
 let billingInfo = {
     region: document.getElementById('region'),
     fullName: document.getElementById('full-name'),
@@ -76,6 +77,7 @@ function validateBillingInfo() {
 
     return isValid;
 }
+
 
 function validatePaymentInfo() {
     let isValid = true;
