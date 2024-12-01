@@ -55,7 +55,7 @@
                 <p>Subtotal: £88.49</p>
                 <p>Shipping: Free</p>
                 <p><strong>Total: £88.49</strong></p>
-                <button>Proceed to Checkout</button>
+                <a href="/checkout"><button>Proceed to Checkout</button></a>
             </div>
         </section>
     </div>
