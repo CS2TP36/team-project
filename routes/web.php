@@ -50,3 +50,13 @@ Route::get('/products', function () {
 
 // Show the product page
 Route::get('/product/{id}', [ShowProduct::class, 'show'])->name('product.show');
+
+// Show the basket page
+Route::get('/basket', function () {
+    return view('pages.basket');
+});
+
+// Show the checkout page
+Route::get('/checkout', function () {
+    return view('pages.checkout');
+});

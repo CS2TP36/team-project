@@ -6,7 +6,7 @@
             <input class="search-bar" type="search" placeholder="Search Here"> </input>
             <ul>
                 <li class=prime-list><a href="#"></a>Account</li>
-                <li class=prime-list><a href="#"></a>Trolley</li>
+                <li class=prime-list><a href="/basket">Trolley</a></li>
             </ul>
         </div>
     </nav>

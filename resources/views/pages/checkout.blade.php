@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Sportswear Shop</title>
-</head>
-<body>
-    <div class="checkout-container">
-        <header class="checkout-header">
-            <h1>Checkout</h1>
-        </header>
-
+@extends('layouts.page')
+@section('title', 'Checkout')
+@section('script', 'js/checkout-validation.js')
+@section('content')
+    <div class="checkout">
+        <h1>Checkout</h1>
         <section class="billing-info" id="billing-info-section">
             <h2>Billing Information</h2>
             <form id="billing-form">
@@ -90,5 +83,4 @@
             <p>Your order has been successfully placed. Thank you for shopping with us!</p>
         </section>
     </div>
-    </body>
-</html>
+@endsection
