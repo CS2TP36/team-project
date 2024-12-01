@@ -611,6 +611,14 @@
 
 
 
+
+
+
+
+
+
+/* This is the CSS For the Nav bar and footer*/
+
 html, body {
     height: 100%;
     margin: 0;
@@ -626,23 +634,22 @@ html, body {
   }
 
 .navbar {
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background: #000000;
     padding-left: 15px;
     padding-right: 15px;
     height: 120px;
-    display: flex;
+
 }
 
 
 .search-bar {
-    width: 800px;
+    width: 600px;
     padding: 14px;
     border-radius: 28px;
     background: #f6f6f6;
-    justify-content: center;
-    margin-left: 190px;
+    margin-left: 180px;
 
 }
 
@@ -650,12 +657,13 @@ html, body {
 .navbardiv {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
+    justify-content: center;
+    gap: 300px;
 }
 
 .second-nav {
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background: #757474;
     padding-left: 15px;
@@ -676,20 +684,23 @@ html, body {
 .logo {
     display: inline-block;
     height: 100px;
+    width: 120px;
 }
 
 .prime-list{
-
+    gap: 30px;
     display: inline-block;
-    color: white;
-    font-size: 25px;
+    padding-right: 30px;
+    margin-right: 20px;
+    list-style: none;
+    text-decoration: none;
 }
 .prime-list a{
     color: white;
     font-size:25px;
     font-weight: bold;
-    margin-right: 25px;
     list-style: none;
+    text-decoration: none;
 }
 
 .subprime-list{
@@ -720,6 +731,7 @@ html, body {
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
+   
 }
 
 .footer-check {
@@ -729,19 +741,35 @@ html, body {
     padding: 20px;
     height: 300px;
     margin-top: auto;
+    
   }
 
-  .footer-media-container {
+.footer-media-container {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: center; 
+    gap: 20px; 
     margin-top: 10px;
-  }
+    text-decoration: none;
+    list-style: none;
+}
 
   .footerprime-list img {
     height: 40px;
     width: 40px;
+    list-style: none;
+
   }
+
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+   
+}
+
+
+
 
 
 
@@ -859,6 +887,14 @@ html, body {
     justify-content: center;
     gap: 100px;
 }
+
+
+
+
+
+
+
+
 /* CSS for Login Page */
 .login {
     display: block;
@@ -981,45 +1017,56 @@ html, body {
     }
 }
 
-/* This is the CSS for the Products page*/
+/* This is the CSS for the Product Lists page*/
 
 .Products-Filter-Container{
     display: flex;
+    width: 100%;
 }
 
 .Filter-Page{
-    margin-left:10px;
+    margin-left:auto;
+    margin-right: auto;
     border-radius : 15px;
     align-items: left;
     padding-top: 40px;
-    padding-left: 20px;
 
 }
 
 #products-list {
-padding-left: 50px;
-padding-top: 50px;
-display: flex;
-flex-wrap: wrap;
-gap: 40px;
-box-sizing: border-box;
-max-height: 80px;
-justify-content: space-evenly;
-
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    box-sizing: border-box;
+    max-width: 100%;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-item {
     text-align: center;
-    width: 300px;
     background-color: #c0bbbb;
     padding: 20px;
     border-radius: 10px;
     display: block;
     justify-content: space-evenly;
-
+    margin-bottom: 20px;
 }
 
 
+
+.product-details{
+    margin-top: 10px; 
+}
+
+.product-link{
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+
+}
 .category-selector {
     list-style: none;
     padding: 10px;
@@ -1072,6 +1119,24 @@ label {
 .filter-btn:hover {
     background-color: #333;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CSS for the Product Page*/
 .product {
     background-color: white;
@@ -1088,6 +1153,16 @@ label {
         width: 800px;
         height: 800px;
     }
+
+
+
+/* CSS for about us page*/
+
+
+
+
+
+
 }
 .right-container {
     flex: 1;
