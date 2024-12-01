@@ -33,6 +33,11 @@
                         <input type="radio" id="low-to-high" name="sort-by">
                         <label for="low-to-high">Price (Low To High)</label>
                     </li>
+                    <li class="category-buttons">
+                        <input type="radio" id="high-to-low"  value = "1">
+                        <label for="high-to-low">Price (High To Low)</label>
+                    </li>
+
                 </ul>
 
                 <div class = "line-break"></div>
@@ -176,45 +181,46 @@
     </div>
 </form>
 <script>
-            function applyFilters() {
+    function applyFilters() {
+        const gender = document.querySelector('input[name="gender"]:checked');
+        let genderVal = null;
+        if (gender) {
+            genderVal = (gender.id === "mens" ? 1 : 0);
+        }
 
+        const sortBy = document.querySelector('input[name="sort-by"]:checked');
+        let priceFilt = null;
+        if (sortBy) {
+            priceFilt = (sortBy.id === 'low-to-high' ? '0' : '1');
+        }
 
-                const gender = document.querySelector('input[name="gender"]:checked');
-                let genderVal = null;
-                if (gender) {
-                    genderVal = (gender.id === "mens" ? true : false);
-                }
-
-                let clothesCategoryValue = null;
-                const clothesCategory = document.querySelector('input[name="clothes-category"]:checked');
-                if (clothesCategory) {
-                    switch (clothesCategory.id) {
-                        case 'coats':
-                            clothesCategoryValue = 1;
-                            break;
-                        case 'hoodies':
-                            clothesCategoryValue = 2;
-                            break;
-                        case 'trousers':
-                            clothesCategoryValue = 3;
-                            break;
-                        case 'shirts':
-                            clothesCategoryValue = 4;
-                            break;
-                        case 'shoes':
-                            clothesCategoryValue = 5;
-                            break;
-                    }
-                }
-
-                const sortBy = document.querySelector('input[name="sort-by"]:checked');
-                if (sortBy) {
-                    priceFilt = (sortBy.id === 'low-to-high' ? 'true' : 'false');
-                }
-                alert(clothesCategoryValue)
-
+        let clothesCategoryValue = null;
+        const clothesCategory = document.querySelector('input[name="clothes-category"]:checked');
+        if (clothesCategory) {
+            switch (clothesCategory.id) {
+                case 'coats':
+                    clothesCategoryValue = 1;
+                    break;
+                case 'hoodies':
+                    clothesCategoryValue = 2;
+                    break;
+                case 'trousers':
+                    clothesCategoryValue = 3;
+                    break;
+                case 'shirts':
+                    clothesCategoryValue = 4;
+                    break;
+                case 'shoes':
+                    clothesCategoryValue = 5;
+                    break;
             }
-        </script>
+        }
+
+        const url= `/products/${genderVal || ''}/name/${priceFilt || ''}/${clothesCategoryValue || ''}`;
+        window.open(url )
+    }
+
+</script>
 
 @endsection
 
