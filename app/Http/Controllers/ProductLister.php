@@ -25,5 +25,9 @@ class ProductLister extends Controller
             // return the list of products
             return $products;
     }
+    // function for getting the args from the url and passing them back to the page
+    public function show(bool $mens=true, string $sortBy="id", bool $ascending=true, string $catFilter="") {
+        // returns the sanitised args to the page
+        return view('pages.products', ['mens' => $mens, 'ascending' => $ascending, 'sortBy' => $sortBy, 'catFilter' => $catFilter]);
+    }
 }
- 
