@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductLister;
 use App\Http\Controllers\ShowProduct;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
@@ -44,9 +45,7 @@ Route::get('/contact', function () {
 });
 
 // Show the products page
-Route::get('/products', function () {
-    return view('pages.products');
-});
+Route::get('/products/{mens}/{sortBy}/{ascending}/{catFilter}', [ProductLister::class, 'show'])->name('products.show');
 
 // Show the product page
 Route::get('/product/{id}', [ShowProduct::class, 'show'])->name('product.show');

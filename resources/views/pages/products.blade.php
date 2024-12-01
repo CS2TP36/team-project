@@ -60,7 +60,7 @@
                             <label for="shoes">Shoes</label>
                         </li>
                 </ul>
-                
+
                 <div class = "line-break"></div>
 
                 <ul class="category-selector">
@@ -159,7 +159,7 @@
             </div>
         </form>
 
-        @php($products = ProductLister::get())
+        @php($products = ProductLister::get($mens, $sortBy, $ascending, $catfilter))
         <div id="products-list">
             @foreach($products as $product)
                 <div class="product-item">
@@ -177,15 +177,15 @@
 </form>
 <script>
             function applyFilters() {
-                
-        
+
+
                 const gender = document.querySelector('input[name="gender"]:checked');
                 let genderVal = null;
                 if (gender) {
-                    genderVal = (gender.id === "mens" ? true : false); 
+                    genderVal = (gender.id === "mens" ? true : false);
                 }
-        
-                let clothesCategoryValue = null;  
+
+                let clothesCategoryValue = null;
                 const clothesCategory = document.querySelector('input[name="clothes-category"]:checked');
                 if (clothesCategory) {
                     switch (clothesCategory.id) {
@@ -206,13 +206,13 @@
                             break;
                     }
                 }
-        
+
                 const sortBy = document.querySelector('input[name="sort-by"]:checked');
                 if (sortBy) {
                     priceFilt = (sortBy.id === 'low-to-high' ? 'true' : 'false');
                 }
                 alert(clothesCategoryValue)
-        
+
             }
         </script>
 
