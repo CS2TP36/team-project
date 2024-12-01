@@ -1,3 +1,44 @@
+/* styling for the container*/
+#account-page {
+background-color: #f9f9f9;
+font-family: Arial, sans-serif;
+max-width: 800px; /* keep width restricted*/
+padding: 20px; /*cntre the container */
+border-radius: 8px; /*round the corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+line-height: 1.6;
+}
+
+/* styling for h1 elements */
+#account-page h1{
+    color: #333;
+    margin-bottom: 10px; /* add spacing below */
+    font-size: 2em; /*make h1 text the largest */
+    text-align: center;
+}
+
+/* styling for p elements */
+#account-page p{
+color: #666;
+font-size: 1em; /* paragraph text smaller */
+margin-bottom: 15px; /* add spacing below */
+}
+
+#account-page button{
+background-color: black;
+color: #fff;
+padding: 10px; /*add padding*/
+border: none;
+border-radius: 5px; /* round corners*/
+cursor: pointer;
+font-size: 1em;
+}
+
+/*styling when hovering */
+#account-page button:hover {
+    background-color: red; /* red on hover */
+}
+
 /* CSS for Basket Page*/
 .basket {
     * {

@@ -44,9 +44,19 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
+// Show the Account page
+Route::get('/account', function () {
+    return view('pages.account');
+});
+
+
+
+
+
+
 // Show the products page
 // for example http://site/products/0/name/1 -> returns page with womens products sorted by name ascending
-Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}', [ProductLister::class, 'show'])->name('products.show');
+Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
 
 // Show the product page
 Route::get('/product/{id}', [ShowProduct::class, 'show'])->name('product.show');

@@ -13,8 +13,8 @@
     <nav class="second-nav">
         <div class="second-navdiv">
             <ul>
-                <li class=subprime-list><a href=""></a>Men</li>
-                <li class=subprime-list><a href="#"></a>Women</li>
+                <li class=subprime-list><a href="/products/1">Men</a></li>
+                <li class=subprime-list><a href="/products/0">Women</a></li>
             </ul>
         </div>
     </nav>
