@@ -82,6 +82,5 @@
             <h2>Order Placed Successfully!</h2>
             <p>Your order has been successfully placed. Thank you for shopping with us!</p>
         </section>
-        <script src="js/checkout-validation.js" defer></script>
     </div>
 @endsection
