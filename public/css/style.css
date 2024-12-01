@@ -673,11 +673,11 @@ html, body {
 .search-bar {
     width: 600px;
     padding: 14px;
-    border-radius: 28px;
+    border-radius: 15px;
     background: #f6f6f6;
     margin-left: 180px;
 
-}
+}   
 
 .navbardiv {
     display: flex;
@@ -708,8 +708,8 @@ html, body {
 
 .logo {
     display: inline-block;
-    height: 100px;
-    width: 120px;
+    height: 120px;
+    width: 130px;
 }
 
 .prime-list{
@@ -735,12 +735,16 @@ html, body {
     text-align: center;
     display: inline-block;
     padding: 40px;
+    list-style: none;
+    text-decoration: none;
 }
 
 .subprime-list a{
     color: white;
     font-size:25px;
     font-weight: bold;
+    list-style: none;
+    text-decoration: none;
 }
 
 .footer-list {
@@ -1068,6 +1072,7 @@ html, body {
     border-radius: 10px;
     display: block;
     justify-content: space-evenly;
+    max-height: 420px;
     margin-bottom: 20px;
 }
 
