@@ -1,22 +1,19 @@
-// Retrieve billing and payment elements safely
 let billingInfo = {
-    region: document.getElementById('region') || null,
-    fullName: document.getElementById('full-name') || null,
-    address: document.getElementById('address') || null,
-    postcode: document.getElementById('postcode') || null,
-    phone: document.getElementById('phone') || null
+    region: document.getElementById('region'),
+    fullName: document.getElementById('full-name'),
+    address: document.getElementById('address'),
+    postcode: document.getElementById('postcode'),
+    phone: document.getElementById('phone')
 };
 
 let paymentInfo = {
-    nameOnCard: document.getElementById('name-on-card') || null,
-    cardNumber: document.getElementById('card-number') || null,
-    expiryDate: document.getElementById('expiry-date') || null,
-    cvv: document.getElementById('cvv') || null
+    nameOnCard: document.getElementById('name-on-card'),
+    cardNumber: document.getElementById('card-number'),
+    expiryDate: document.getElementById('expiry-date'),
+    cvv: document.getElementById('cvv')
 };
 
-// Display error message
 function displayError(inputElement, message) {
-    if (!inputElement) return; // Ensure element exists
     let errorSpan = inputElement.parentElement.querySelector('.error-message');
     if (!errorSpan) {
         errorSpan = document.createElement('span');
@@ -27,20 +24,17 @@ function displayError(inputElement, message) {
     inputElement.classList.add('error');
 }
 
-// Clear error message
 function clearError(inputElement) {
-    if (!inputElement) return; // Ensure element exists
     const errorSpan = inputElement.parentElement.querySelector('.error-message');
     if (errorSpan) errorSpan.remove();
     inputElement.classList.remove('error');
 }
 
-// Validate Billing Info
 function validateBillingInfo() {
     let isValid = true;
 
     // Validate Region
-    if (billingInfo.region && !billingInfo.region.value.trim()) {
+    if (!billingInfo.region.value) {
         displayError(billingInfo.region, "Region is required.");
         isValid = false;
     } else {
@@ -48,7 +42,7 @@ function validateBillingInfo() {
     }
 
     // Validate Full Name
-    if (billingInfo.fullName && !billingInfo.fullName.value.trim()) {
+    if (!billingInfo.fullName.value.trim()) {
         displayError(billingInfo.fullName, "Full name is required.");
         isValid = false;
     } else {
@@ -56,7 +50,7 @@ function validateBillingInfo() {
     }
 
     // Validate Address
-    if (billingInfo.address && !billingInfo.address.value.trim()) {
+    if (!billingInfo.address.value.trim()) {
         displayError(billingInfo.address, "Street address is required.");
         isValid = false;
     } else {
@@ -64,7 +58,7 @@ function validateBillingInfo() {
     }
 
     // Validate Postcode
-    if (billingInfo.postcode && !billingInfo.postcode.value.trim()) {
+    if (!billingInfo.postcode.value.trim()) {
         displayError(billingInfo.postcode, "Postcode is required.");
         isValid = false;
     } else {
@@ -72,7 +66,7 @@ function validateBillingInfo() {
     }
 
     // Validate Phone Number
-    if (billingInfo.phone && !billingInfo.phone.value.trim()) {
+    if (!billingInfo.phone.value.trim()) {
         displayError(billingInfo.phone, "Phone number is required.");
         isValid = false;
     } else {
@@ -82,12 +76,11 @@ function validateBillingInfo() {
     return isValid;
 }
 
-// Validate Payment Info
 function validatePaymentInfo() {
     let isValid = true;
 
     // Validate Name on Card
-    if (paymentInfo.nameOnCard && !paymentInfo.nameOnCard.value.trim()) {
+    if (!paymentInfo.nameOnCard.value.trim()) {
         displayError(paymentInfo.nameOnCard, "Name on card is required.");
         isValid = false;
     } else {
@@ -95,7 +88,7 @@ function validatePaymentInfo() {
     }
 
     // Validate Card Number
-    if (paymentInfo.cardNumber && !paymentInfo.cardNumber.value.trim()) {
+    if (!paymentInfo.cardNumber.value.trim()) {
         displayError(paymentInfo.cardNumber, "Card number is required.");
         isValid = false;
     } else {
@@ -103,7 +96,7 @@ function validatePaymentInfo() {
     }
 
     // Validate Expiry Date
-    if (paymentInfo.expiryDate && !paymentInfo.expiryDate.value.trim()) {
+    if (!paymentInfo.expiryDate.value.trim()) {
         displayError(paymentInfo.expiryDate, "Expiry date is required.");
         isValid = false;
     } else {
@@ -111,7 +104,7 @@ function validatePaymentInfo() {
     }
 
     // Validate CVV
-    if (paymentInfo.cvv && !paymentInfo.cvv.value.trim()) {
+    if (!paymentInfo.cvv.value.trim()) {
         displayError(paymentInfo.cvv, "CVV is required.");
         isValid = false;
     } else {
@@ -121,7 +114,6 @@ function validatePaymentInfo() {
     return isValid;
 }
 
-// Navigate to the next section
 function nextSection(section) {
     if (section === 'payment') {
         if (validateBillingInfo()) {
@@ -136,7 +128,6 @@ function nextSection(section) {
     }
 }
 
-// Navigate back to the payment section
 function backToPayment() {
     document.getElementById('order-summary-section').style.display = 'none';
     document.getElementById('payment-method-section').style.display = 'block';
