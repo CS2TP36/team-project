@@ -159,7 +159,7 @@
             </div>
         </form>
 
-        @php($products = ProductLister::get($mens, $sortBy, $ascending, $catfilter))
+        @php($products = ProductLister::get($mens, $sortBy, $ascending, $catFilter))
         <div id="products-list">
             @foreach($products as $product)
                 <div class="product-item">

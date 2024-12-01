@@ -26,22 +26,8 @@ class ProductLister extends Controller
             return $products;
     }
     // function for getting the args from the url and passing them back to the page
-    public function show(string $mens, string $sortBy, string $ascending, string $catFilter="") {
-        // if unset set default values
-        if ($mens = ""){
-            $mens = 1;
-        } else {
-            $mens = filter_var($mens, FILTER_VALIDATE_BOOLEAN);
-        }
-        if ($ascending = ""){
-            $ascending = 1;
-        } else {
-            $ascending = filter_var($ascending, FILTER_VALIDATE_BOOLEAN);
-        }
-        if ($sortBy = "") {
-            $sortBy = "id";
-        }
+    public function show(bool $mens=true, string $sortBy="id", bool $ascending=true, string $catFilter="") {
         // returns the sanitised args to the page
-        return view('pages.products', ['$mens' => $mens, '$ascending' => $ascending, '$sortBy' => $sortBy, '$catFilter' => $catFilter]);
+        return view('pages.products', ['mens' => $mens, 'ascending' => $ascending, 'sortBy' => $sortBy, 'catFilter' => $catFilter]);
     }
 }
