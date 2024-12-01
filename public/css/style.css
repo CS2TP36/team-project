@@ -1,12 +1,10 @@
+/* CSS for Basket Page*/
 .basket {
-    /* basket page */
-
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-
 
     body {
         font-family: 'Arial', sans-serif;
@@ -22,7 +20,6 @@
         padding: 18px;
         text-align: center;
     }
-
 
     header h1 {
         font-size: 2.5rem;
@@ -188,10 +185,8 @@
     }
 }
 
+/*CSS for Checkout Page*/
 .checkout {
-
-    /* Checkout Page */
-
     body {
         font-family: 'Arial', sans-serif;
         background-color: #f4f4f4;
@@ -378,6 +373,7 @@
     }
 }
 
+/*CSS for Contact Page*/
 .contact {
     * {
         margin: 0;
@@ -608,17 +604,7 @@
     margin-bottom: 15px; /* add spacing */
 }
 
-
-
-
-
-
-
-
-
-
 /* This is the CSS For the Nav bar and footer*/
-
 html, body {
     height: 100%;
     margin: 0;
@@ -643,7 +629,6 @@ html, body {
 
 }
 
-
 .search-bar {
     width: 600px;
     padding: 14px;
@@ -652,7 +637,6 @@ html, body {
     margin-left: 180px;
 
 }
-
 
 .navbardiv {
     display: flex;
@@ -695,6 +679,7 @@ html, body {
     list-style: none;
     text-decoration: none;
 }
+
 .prime-list a{
     color: white;
     font-size:25px;
@@ -716,7 +701,6 @@ html, body {
     font-size:25px;
     font-weight: bold;
 }
-
 
 .footer-list {
     color: white;
@@ -753,25 +737,19 @@ html, body {
     list-style: none;
 }
 
-  .footerprime-list img {
+.footerprime-list img {
     height: 40px;
     width: 40px;
     list-style: none;
+}
 
-  }
-
-  .footer1 {
+.footer1 {
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: space-between;
    
 }
-
-
-
-
-
 
 /* This is the CSS for the home page*/
 
@@ -782,13 +760,11 @@ html, body {
     max-height: 600px;
 }
 
-
 #banner-container {
     position: relative;
     width: 100%;
     max-height: 600px;
 }
-
 
 #text-banner {
     position: absolute;
@@ -801,7 +777,6 @@ html, body {
     font-weight: bold;
 }
 
-
 #text-banner a {
     display: inline-block;
     margin-top: 15px;
@@ -811,8 +786,6 @@ html, body {
     text-decoration: none;
     border-radius: 8px;
 }
-
-
 
  #catogery-divider {
     background: black;
@@ -888,65 +861,70 @@ html, body {
     gap: 100px;
 }
 
-
-
-
-
-
-
-
 /* CSS for Login Page */
 .login {
-    display: block;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
     padding-left: 25px;
     padding-right: 25px;
     h2 {
         text-align: left;
-        margin-bottom: 20px;
-    }
-     .existing-customers, .new-customers {
-        font-family: Arial, Helvetica, sans-serif;
-        flex-direction: column;
-        display: inline-flex;
-        margin: 0 auto;
-        border: 1px solid #ccc;
-        padding: 20px;
-        width: 600px;
-
-        label {
-            display: block;
-        }
-
-        input {
-            width: 100%;
-            max-width: 500px;
-            border: 1px solid black;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            width: 100%;
-            max-width: 522px;
-            padding: 10px;
-            border: 1px solid rgb(23, 23, 23);
-            background-color: rgb(23, 23, 23);
-            color: white;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: black;
-        }
-
-        a {
-            text-decoration: underline;
-            text-align: left;
-            color: Black;
-        }
+        margin-left: 5px;
+        margin-bottom: 5px;
     }
 }
+
+.login-sections {
+    display: flex;
+    flex-direction: row;
+}
+
+.existing-customers, .new-customers {
+    flex: 1;
+    max-width: 650px;
+    padding: 5px;
+    label {
+        display: block;
+    }
+
+    input {
+        width: 100%;
+        max-width: 500px;
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 522px;
+        padding: 10px;
+        border: 1px solid rgb(23, 23, 23);
+        background-color: rgb(23, 23, 23);
+        color: white;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    button:hover {
+        background-color: black;
+    }
+
+    a {
+        text-decoration: underline;
+        text-align: left;
+        color: Black;
+    }
+}
+
+.new-customers {
+    margin-bottom: 10px;
+    p {
+        margin-left: 10px;
+    }
+}
+
+/*CSS for Register Page*/
 .register {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -1017,7 +995,7 @@ html, body {
     }
 }
 
-/* This is the CSS for the Product Lists page*/
+/*CSS for the Product Lists page*/
 
 .Products-Filter-Container{
     display: flex;
@@ -1054,8 +1032,6 @@ html, body {
     justify-content: space-evenly;
     margin-bottom: 20px;
 }
-
-
 
 .product-details{
     margin-top: 10px; 
@@ -1120,23 +1096,6 @@ label {
     background-color: #333;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CSS for the Product Page*/
 .product {
     background-color: white;
@@ -1153,16 +1112,6 @@ label {
         width: 800px;
         height: 800px;
     }
-
-
-
-/* CSS for about us page*/
-
-
-
-
-
-
 }
 .right-container {
     flex: 1;
