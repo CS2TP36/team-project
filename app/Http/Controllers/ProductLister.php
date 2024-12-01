@@ -33,6 +33,7 @@ class ProductLister extends Controller
                         break;
                     case 4:
                         $products = $products->where('price', '>', 45);
+                        break;
                 }
             }
             // sort by field and direction

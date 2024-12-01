@@ -16,7 +16,7 @@
     </section>
 
     <div id=catogery-divider>
-        <p>Catogeries</p>
+        <p>Categories</p>
     </div>
 
     <div id="category-section">
