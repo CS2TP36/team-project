@@ -1041,6 +1041,18 @@ html, body {
 
 /*CSS for the Product Lists page*/
 
+#product-text-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
 .Products-Filter-Container{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
