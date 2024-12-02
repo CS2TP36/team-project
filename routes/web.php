@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AccountController;
 use App\Http\Controllers\ProductLister;
+use App\Http\Controllers\ProductSearcher;
 use App\Http\Controllers\ShowProduct;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
@@ -48,11 +49,6 @@ Route::get('/contact', function () {
 // Show the Account page
 Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
-
-
-
-
-
 // Show the products page
 // for example http://site/products/0/name/1 -> returns page with womens products sorted by name ascending
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
@@ -69,3 +65,5 @@ Route::get('/basket', function () {
 Route::get('/checkout', function () {
     return view('pages.checkout');
 });
+
+Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('products.search');

@@ -46,6 +46,12 @@ class ProductSearcher extends Controller
         return false;
 
     }
+    // does the routing for search stuff
+
+    function show(String $searchTerm="") {
+        $products = self::search($searchTerm);
+        return view('pages.products', ['products' => $products]);
+    }
 
 
 }
