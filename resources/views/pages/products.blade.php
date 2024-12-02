@@ -151,7 +151,7 @@
 
             // deals with sorting
             const sortBy = document.querySelector('input[name="sort-by"]:checked');
-            let filtDirection = "0";
+            let filtDirection = "1";
             if (sortBy) {
                 // check if they are sorting by price or name
                 if (priceHigh.checked || priceLow.checked) {
