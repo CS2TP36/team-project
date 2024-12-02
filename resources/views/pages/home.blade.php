@@ -5,6 +5,7 @@
 
 
 @section('content')
+<div class= "home">
     <section>
         <div id="banner-container">
             <img src="{{asset('images/Hero-banner.jpeg')}}" id="banner">
@@ -39,4 +40,5 @@
             <li id="select-catogeries"><img src="{{asset('images/Woman.jpg')}}"> <a href="/products/0">Women</a></li>
         </ul>
     </div>
+</div>
 @endsection
