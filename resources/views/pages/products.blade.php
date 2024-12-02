@@ -172,7 +172,7 @@
             </div>
     </form>
 
-    @php($products = ProductLister::get($mens, $sortBy, $ascending, $catFilter))
+    @php($products = ProductLister::get($mens, $sortBy, $ascending, $catFilter, $priceFilter))
     <div id="products-list">
         @foreach($products as $product)
             <div class="product-item">
@@ -247,7 +247,7 @@
 
             // generate the url
             const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}`;
-            window.open(url)
+            window.open(url);
         }
     </script>
 

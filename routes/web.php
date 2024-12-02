@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AccountController;
 use App\Http\Controllers\ProductLister;
 use App\Http\Controllers\ShowProduct;
 use Illuminate\Support\Facades\Route;
@@ -45,9 +46,7 @@ Route::get('/contact', function () {
 });
 
 // Show the Account page
-Route::get('/account', function () {
-    return view('pages.account');
-});
+Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
 
 
