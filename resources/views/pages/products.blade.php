@@ -5,9 +5,8 @@
     <section>
         <div id="banner-container">
             <img src="{{asset('images/products-banner.png')}}" id="banner">
-            <div id="text-banner">
+            <div id="product-text-banner">
                 <p>Our Products</p>
-                <p>The finest selection of clothings, produced for the finest of people</p>
             </div>
         </div>
     </section>
