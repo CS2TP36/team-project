@@ -9,6 +9,7 @@
     <link href=" {{ asset('css/style.css') }}" rel="stylesheet">
     <!-- A place where scripts can be imported -->
     <script src="@yield('script')"></script>
+    <script src="{{ asset('js/searchbar.js') }}"></script>
 </head>
 
 <body>
