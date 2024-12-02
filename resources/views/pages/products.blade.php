@@ -25,7 +25,6 @@
         <div class=Products-Filter-Container>
             <div class="Filter-Page">
                 <ul class="category-selector">
-                    <li class="category">Sort By</li>
                     <ul class="category-selector">
                         <li class="category">Sort By</li>
                         <li class="category-buttons">
@@ -45,7 +44,6 @@
                             <label for="alphabetical-z-to-a">Alphabet (Z-A)</label>
                         </li>
                     </ul>
-
 
                     <div class="line-break"></div>
 
@@ -109,7 +107,6 @@
                         </li>
                     </ul>
 
-
                     <ul class="category-selector">
                         <li>
                             <button class="filter-btn" onclick="applyFilters()">Apply Filter</button>
@@ -135,12 +132,11 @@
     </div>
     </form>
     <script>
-
         function applyFilters() {
             // get the elements for price sorting
             let priceHigh = document.getElementById('high-to-low');
             let priceLow = document.getElementById('low-to-high');
-            // sorts by name as defualt
+            // sorts by name as default
             let sortField = "name";
 
             // deals with the  gender selector
@@ -209,8 +205,6 @@
                         break;
                 }
             }
-
-
 
             // generate the url
             const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}/${priceFilter}`;
