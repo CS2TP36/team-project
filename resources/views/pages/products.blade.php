@@ -15,6 +15,7 @@
     <div id=catogery-divider>
         <p>Products</p>
     </div>
+
     <!--
          Look at \App\Http\Controllers\ProductLister::get
          Should return a list of products and do all the sorting for you
