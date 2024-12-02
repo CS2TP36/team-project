@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AccountController;
 use App\Http\Controllers\ProductLister;
+use App\Http\Controllers\ProductSearcher;
 use App\Http\Controllers\ShowProduct;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
@@ -64,3 +65,5 @@ Route::get('/basket', function () {
 Route::get('/checkout', function () {
     return view('pages.checkout');
 });
+
+Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('products.search');
