@@ -1,4 +1,10 @@
-let searchBar = document.getElementById("search-bar");
 function search() {
-    console.log(searchBar.valueOf());
+    // get the content of the search bar
+    console.log(document.getElementById('search-bar').value);
+    let searchTerm = document.getElementById('search-bar').value;
+    // convert space to #
+    searchTerm = searchTerm.replace(' ', '#');
+    searchTerm = searchTerm.replace('\\', '');
+    const url = `/search/${searchTerm}`;
+    window.open(url);
 }

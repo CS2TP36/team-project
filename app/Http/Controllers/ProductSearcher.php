@@ -17,7 +17,7 @@ class ProductSearcher extends Controller
         // iterate through all the products to see if they meet the search criteria
         foreach($products as $product){
             // checks for both title and description
-            if (($this->stringSearch($searchTerm, $product->name)) or ($this->stringSearch($searchTerm, $product->description))) {
+            if (($this->stringSearch($searchTerm, $product['name'])) or ($this->stringSearch($searchTerm, $product['description']) or ($this->stringSearch($searchTerm, $product['colour'])))) {
                 // adds it if match is found
                 $toReturn[] = $product;
             }
@@ -49,6 +49,8 @@ class ProductSearcher extends Controller
     // does the routing for search stuff
 
     function show(String $searchTerm="") {
+        // converts the # back to spaces
+        $searchTerm = str_replace("#", " ", $searchTerm);
         $products = self::search($searchTerm);
         return view('pages.products', ['products' => $products]);
     }
