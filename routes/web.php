@@ -48,11 +48,6 @@ Route::get('/contact', function () {
 // Show the Account page
 Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
-
-
-
-
-
 // Show the products page
 // for example http://site/products/0/name/1 -> returns page with womens products sorted by name ascending
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
