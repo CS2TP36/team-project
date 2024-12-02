@@ -17,7 +17,7 @@ class ProductSearcher extends Controller
         // iterate through all the products to see if they meet the search criteria
         foreach($products as $product){
             // checks for both title and description
-            if (($this->stringSearch($searchTerm, $product->name)) or ($this->stringSearch($searchTerm, $product->description))) {
+            if (($this->stringSearch($searchTerm, $product['name'])) or ($this->stringSearch($searchTerm, $product['description']) or ($this->stringSearch($searchTerm, $product['colour'])))) {
                 // adds it if match is found
                 $toReturn[] = $product;
             }
