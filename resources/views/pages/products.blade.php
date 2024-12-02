@@ -137,20 +137,20 @@
                     <ul class="category-selector">
                         <li class="category">Price</li>
                         <li class="category-buttons">
-                            <input type="radio" id="price-0-50" name="price">
-                            <label for="price-0-50">£0 to £50</label>
+                            <input type="radio" id="price-0-25" name="price">
+                            <label for="price-0-25">£0 to £25</label>
                         </li>
                         <li class="category-buttons">
-                            <input type="radio" id="price-50-100" name="price">
-                            <label for="price-50-100">£50 to £100</label>
+                            <input type="radio" id="price-25-35" name="price">
+                            <label for="price-25-35">£25 to £35</label>
                         </li>
                         <li class="category-buttons">
-                            <input type="radio" id="price-100-150" name="price">
-                            <label for="price-100-150">£100 to £150</label>
+                            <input type="radio" id="price-35-45" name="price">
+                            <label for="price-35-45">£35 to £45</label>
                         </li>
                         <li class="category-buttons">
-                            <input type="radio" id="price-150-250" name="price">
-                            <label for="price-150-250">£150 to £250</label>
+                            <input type="radio" id="price-45+" name="price">
+                            <label for="price-45+">£45+</label>
                         </li>
                     </ul>
 
@@ -172,7 +172,6 @@
             </div>
     </form>
 
-    @php($products = ProductLister::get($mens, $sortBy, $ascending, $catFilter, $priceFilter))
     <div id="products-list">
         @foreach($products as $product)
             <div class="product-item">
@@ -223,7 +222,7 @@
             }
 
             // sets the correct category
-            let clothesCategoryValue = null;
+            let clothesCategoryValue = "0";
             const clothesCategory = document.querySelector('input[name="clothes-category"]:checked');
             if (clothesCategory) {
                 switch (clothesCategory.id) {
@@ -245,8 +244,30 @@
                 }
             }
 
+            // deals with the price filter selectors
+            let priceFilter = "0";
+            const priceFilters = document.querySelector('input[name="price"]:checked');
+            if (priceFilters) {
+                switch (priceFilters.id) {
+                    case 'price-0-25':
+                        priceFilter = 1;
+                        break;
+                    case 'price-25-35':
+                        priceFilter = 2;
+                        break;
+                    case 'price-35-45':
+                        priceFilter = 3;
+                        break;
+                    case 'price-45+':
+                        priceFilter = 4;
+                        break;
+                }
+            }
+
+
+
             // generate the url
-            const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}`;
+            const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}/${priceFilter}`;
             window.open(url);
         }
     </script>

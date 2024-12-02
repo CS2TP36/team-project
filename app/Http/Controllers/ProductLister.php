@@ -47,7 +47,8 @@ class ProductLister extends Controller
     }
     // function for getting the args from the url and passing them back to the page
     public function show(int $mens=2, string $sortBy="id", bool $ascending=true, int $catFilter=0, int $priceFilter=0) {
+        $products = self::get($mens, $sortBy, $ascending, $catFilter, $priceFilter);
         // returns the sanitised args to the page
-        return view('pages.products', ['mens' => $mens, 'ascending' => $ascending, 'sortBy' => $sortBy, 'catFilter' => $catFilter, 'priceFilter' => $priceFilter]);
+        return view('pages.products', ['products' => $products]);
     }
 }
