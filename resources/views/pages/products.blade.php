@@ -89,52 +89,6 @@
                     <div class="line-break"></div>
 
                     <ul class="category-selector">
-                        <li class="category">Size</li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-5" name="size">
-                            <label for="size-5">5</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-6" name="size">
-                            <label for="size-6">6</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-7" name="size">
-                            <label for="size-7">7</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-8" name="size">
-                            <label for="size-8">8</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-9" name="size">
-                            <label for="size-9">9</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-10" name="size">
-                            <label for="size-10">10</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-11" name="size">
-                            <label for="size-11">11</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-12" name="size">
-                            <label for="size-12">12</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-13" name="size">
-                            <label for="size-13">13</label>
-                        </li>
-                        <li class="category-buttons">
-                            <input type="radio" id="size-14" name="size">
-                            <label for="size-14">14</label>
-                        </li>
-                    </ul>
-
-                    <div class="line-break"></div>
-
-                    <ul class="category-selector">
                         <li class="category">Price</li>
                         <li class="category-buttons">
                             <input type="radio" id="price-0-25" name="price">
@@ -154,15 +108,6 @@
                         </li>
                     </ul>
 
-                    <div class="line-break"></div>
-
-                    <ul class="category-selector">
-                        <li class="category">On Sale</li>
-                        <li class="category-buttons">
-                            <input type="radio" id="discounted-items" name="sale">
-                            <label for="discounted-items">Discounted Items</label>
-                        </li>
-                    </ul>
 
                     <ul class="category-selector">
                         <li>
