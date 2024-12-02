@@ -419,13 +419,13 @@ font-size: 1em;
 /*CSS for Contact Page*/
 .contact {
     * {
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
     body {
-        font-family: 'Arial', sans-serif;
         line-height: 1.8;
         background-color: #757474;
         color: #101010;
@@ -615,7 +615,7 @@ font-size: 1em;
 /* Styling for the container*/
 #aboutus{
     background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     max-width: 800px; /*keep the width restricted so readability is improved */
     padding: 20px; /* add some spacing in the container (keeps text away from edges) */
     margin: 0 auto;
@@ -663,50 +663,50 @@ html, body {
   }
 
 .navbar {
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
     align-items: center;
     background: #000000;
     padding-left: 15px;
     padding-right: 15px;
     height: 120px;
+    
+    .navbardiv {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        gap: 300px;
+    }
 
+    #search-bar {
+        width: 600px;
+        padding: 14px;
+        border-radius: 15px;
+        background: #f6f6f6;
+        margin-left: 180px;
+    } 
+    
+    .second-nav {
+        justify-content: space-evenly;
+        align-items: center;
+        background: #757474;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 70px;
+        display: flex;
+    }
+    
+    .second-navdiv{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        justify-content:center;
+    }   
 }
 
-.search-bar {
-    width: 600px;
-    padding: 14px;
-    border-radius: 15px;
-    background: #f6f6f6;
-    margin-left: 180px;
 
-}   
-
-.navbardiv {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    gap: 300px;
-}
-
-.second-nav {
-    justify-content: space-evenly;
-    align-items: center;
-    background: #757474;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 70px;
-    display: flex;
-}
-
-.second-navdiv{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    justify-content:center;
-
-}
 
 .logo {
     display: inline-block;
