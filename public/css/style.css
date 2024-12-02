@@ -1158,7 +1158,11 @@ label {
         width: 800px;
         height: 800px;
     }
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
 }
+
 .right-container {
     flex: 1;
     max-width: 800px;
