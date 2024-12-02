@@ -2,7 +2,7 @@
 @section('title','About Us')
 @section('content')
 
-<div id = "aboutus">
+<div class = "aboutus">
 
 <h1> About Us </h1>
 <h2>Who we are</h2>

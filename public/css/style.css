@@ -613,38 +613,38 @@ font-size: 1em;
 }
 
 /* Styling for the container*/
-#aboutus{
-    background-color: #f9f9f9;
+.aboutus{
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 800px; /*keep the width restricted so readability is improved */
     padding: 20px; /* add some spacing in the container (keeps text away from edges) */
     margin: 0 auto;
-    border-radius: 8px; /*round the cornres*/
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    line-height: 1.6;
-}
+    /*border-radius: 8px; /*round the cornres*/
+    /*box-shadow: 0 4px 8px #4D4D4D;*/
+    /*line-height: 1.6;*/
 
-/* Styling for h1 elements */
-#aboutus h1{
-    color: #333;
-    margin-bottom: 10px; /* add some spacing */
-    font-size: 2em; /* make h1 text the largest*/
-    text-align: center;
-}
+    /* Styling for h1 elements */
+    h1 {
+        color: black;
+        margin-bottom: 10px; /* add some spacing */
+        font-size: 2em; /* make h1 text the largest*/
+        text-align: center;
+    }
 
-/* styling for h2 elements */
-#aboutus h2 {
-    color: #555;
-    margin-top: 20px; /* add spacing above */
-    margin-bottom: 10px; /*add spacing below */
-    font-size: 1.5em; /*make h2 text smaller than h1 */
-}
+    /* styling for h2 elements */
+    h2 {
+        color: black;
+        margin-top: 20px; /* add spacing above */
+        margin-bottom: 10px; /*add spacing below */
+        font-size: 1.5em; /*make h2 text smaller than h1 */
+    }
 
-/* Styling for p elements */
-#aboutus p{
-    color: #666 ;
-    font-size: 1em; /* paragraph text made the smallest*/
-    margin-bottom: 15px; /* add spacing */
+    /* Styling for p elements */
+    p {
+        color: black;
+        font-size: 1em; /* paragraph text made the smallest*/
+        margin-bottom: 15px; /* add spacing */
+    }
 }
 
 /* This is the CSS For the Nav bar and footer*/
@@ -662,6 +662,7 @@ html, body {
     flex-grow: 1;
   }
 
+/* CSS for navbar*/
 .navbar {
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
@@ -679,6 +680,12 @@ html, body {
         gap: 300px;
     }
 
+    .logo {
+        display: inline-block;
+        height: 120px;
+        width: 130px;
+    }
+
     #search-bar {
         width: 600px;
         padding: 14px;
@@ -687,82 +694,58 @@ html, body {
         margin-left: 180px;
     } 
     
-    .second-nav {
-        justify-content: space-evenly;
-        align-items: center;
-        background: #757474;
-        padding-left: 15px;
-        padding-right: 15px;
-        height: 70px;
-        display: flex;
-    }
+    .prime-list {
+        gap: 30px;
+        display: inline-block;
+        padding-right: 30px;
+        margin-right: 20px;
+        list-style: none;
+        text-decoration: none;
+
+        a {
+            color: white;
+            font-size:25px;
+            font-weight: bold;
+            list-style: none;
+            text-decoration: none;
+        }
+    }   
+}
+
+.second-nav {
+    justify-content: space-evenly;
+    align-items: center;
+    background: #757474;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 70px;
+    display: flex;
     
-    .second-navdiv{
+    .second-navdiv {
         display: flex;
         align-items: center;
         width: 100%;
         text-align: center;
         justify-content:center;
     }   
-}
-
-
-
-.logo {
-    display: inline-block;
-    height: 120px;
-    width: 130px;
-}
-
-.prime-list{
-    gap: 30px;
-    display: inline-block;
-    padding-right: 30px;
-    margin-right: 20px;
-    list-style: none;
-    text-decoration: none;
-}
-
-.prime-list a{
-    color: white;
-    font-size:25px;
-    font-weight: bold;
-    list-style: none;
-    text-decoration: none;
-}
-
-.subprime-list{
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    display: inline-block;
-    padding: 40px;
-    list-style: none;
-    text-decoration: none;
-}
-
-.subprime-list a{
-    color: white;
-    font-size:25px;
-    font-weight: bold;
-    list-style: none;
-    text-decoration: none;
-}
-
-.footer-list {
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    display: block;
-    padding: 10px;
-}
-
-.footer-list a {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    text-decoration: none;
-   
+    
+    .subprime-list {
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        display: inline-block;
+        padding: 40px;
+        list-style: none;
+        text-decoration: none;
+    
+        a {
+            color: white;
+            font-size:25px;
+            font-weight: bold;
+            list-style: none;
+            text-decoration: none;
+        }
+    }
 }
 
 .footer-check {
@@ -773,7 +756,36 @@ html, body {
     height: 300px;
     margin-top: auto;
     
-  }
+.footer-list {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    padding: 10px;
+
+    a {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+}
+
+
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+   
+}
 
 .footer-media-container {
     display: flex;
@@ -790,13 +802,7 @@ html, body {
     list-style: none;
 }
 
-.footer1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: space-between;
-   
-}
+
 
 /* This is the CSS for the home page*/
 
