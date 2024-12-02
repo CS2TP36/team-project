@@ -5,7 +5,6 @@
 
     <div id="account-page">
 
-
     <h1>My Account</h1>
     <hr>
     <p><strong>Name:</strong> {{$user['first_name']}} {{$user['last_name']}}</p>
