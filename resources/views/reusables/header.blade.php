@@ -2,7 +2,7 @@
     <nav class="navbar">
         <div class="navbardiv">
             <a href="/home"><img src="{{ asset('images/Logo.JPG') }}" class="logo" alt="logo"></a>
-            <input  id="search-bar" type="search" placeholder="Search Here" onsearch="search()"> </input>
+            <input id="search-bar" type="search" placeholder="Search Here" onsearch="search()"> </input>
             <ul>
                 <li class=prime-list><a href="/account">Account</a></li>
                 <li class=prime-list><a href="/basket">Basket</a></li>

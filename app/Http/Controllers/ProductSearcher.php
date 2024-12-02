@@ -49,6 +49,8 @@ class ProductSearcher extends Controller
     // does the routing for search stuff
 
     function show(String $searchTerm="") {
+        // converts the # back to spaces
+        $searchTerm = str_replace("#", " ", $searchTerm);
         $products = self::search($searchTerm);
         return view('pages.products', ['products' => $products]);
     }
