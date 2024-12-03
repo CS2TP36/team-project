@@ -737,7 +737,54 @@ class DatabaseSeeder extends Seeder
             new ProductImage([
                 'product_id' => 40,
                 'image_name' => 'cc302463-ad88-4423-8959-f7b486db2d22.jpg'
-            ])
+            ]),
+            new ProductImage([
+                'product_id' => 41,
+                'image_name' => 'd06f30ef-8629-43be-9118-24850641bc69.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 42,
+                'image_name' => '1aff6d07-c83f-4882-959a-b4fa2ed5a19a.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 43,
+                'image_name' => '5cdacfef-3345-4f60-a86e-000aad07f190.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 44,
+                'image_name' => 'eb911df8-a8b8-4f66-86f7-dc6eec271139.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 45,
+                'image_name' => 'aa7b194c-99d9-4b16-872a-fb240eb8b095.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 46,
+                'image_name' => 'e6342a03-7a66-4f5d-af11-fd6136ebab02.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 47,
+                'image_name' => '8573ac4b-e2c8-4ea3-8909-f60126839a3c.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 48,
+                'image_name' => '61e944f1-5fbe-4b44-aaee-fa5b60190a82.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 49,
+                'image_name' => '084f1eba-31c6-47d6-aaee-b07d0a003649.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 50,
+                'image_name' => 'e10299f4-3a87-40e5-bece-498c95630579.jpg'
+            ]),
+
+
+
+
+
+
+
 
         ];
         foreach ($images as $image) {
