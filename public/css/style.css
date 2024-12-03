@@ -440,7 +440,7 @@ font-size: 1em;
         background-repeat: no-repeat;
         color: #fff;
         text-align: center;
-        padding: 80px 0;
+        padding: 40px 0;
         margin: 0;
         font-size: 2.5rem;
         letter-spacing: 1px;
@@ -449,6 +449,8 @@ font-size: 1em;
         border-bottom: 2px solid #fff;
         border-top: 2px solid #fff;
         position: relative;
+        width: 100%;
+    
     }
 
     .banner::before {
@@ -458,22 +460,25 @@ font-size: 1em;
         left: 0;
         width: 100%;
         height: 70%;
-
         z-index: 0;
     }
 
     .banner h1 {
         z-index: 1;
         color: rgb(250, 245, 245);
-        background: rgba(0, 0, 0, 0.3);
+        background: rgb(0, 0, 0);
         padding: 15px 30px;;
         border-radius: 8px;
         font-weight: bold;
         font-size: 3rem;
-        text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
         display:inline-block;
+        align-items: center;
     }
 
+    .contact-header{
+        align-items: center;
+        text-align: center;
+    }
     .contactInfo {
         background-color: #fff;
         padding: 25px;
@@ -482,12 +487,16 @@ font-size: 1em;
         margin: 25px auto;
         width: 90%;
         max-width: 900px;
+        align-items: center;
+        
     }
 
     .contactInfo h2 {
         color: #161515;
-        font-size: 1.8rem;
+        font-size: 44px;
         margin-bottom: 15px;
+        align-items: center;
+        text-align: center;
     }
 
     .contactInfo ul.info {
@@ -498,6 +507,7 @@ font-size: 1em;
     .contactInfo ul.info li {
         margin-bottom: 15px;
         font-size: 1.1rem;
+        font-size: 20px;
     }
 
     .contactInfo ul.info li span {
@@ -539,7 +549,7 @@ font-size: 1em;
 
     form input[type="submit"], form input[type="reset"] {
         width: auto;
-        background-color: #757474;
+        background-color: #000000;
         color: white;
         border: none;
         cursor: pointer;
@@ -550,7 +560,7 @@ font-size: 1em;
     }
 
     form input[type="submit"]:hover, form input[type="reset"]:hover {
-        background-color: #5a5a5a;
+        background-color: #000000;
     }
 
     .social-links {
@@ -713,10 +723,9 @@ html, body {
 }
 
 .second-nav {
-    font-family: Arial, Helvetica, sans-serif;
     justify-content: space-evenly;
     align-items: center;
-    background: #4D4D4D;
+    background: #757474;
     padding-left: 15px;
     padding-right: 15px;
     height: 70px;
@@ -750,36 +759,44 @@ html, body {
 }
 
 .footer-check {
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: #333;
     padding: 20px;
     height: 300px;
     margin-top: auto;
     
-    .footer1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: space-between;
-    }
+.footer-list {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    padding: 10px;
 
-    .footer-list {
+    a {
         color: white;
         font-size: 25px;
-        text-align: center;
-        display: block;
-        padding: 10px;
-
-        a {
-            color: white;
-            font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+        font-weight: bold;
+        text-decoration: none;
     }
+
 }
+
+
+
+
+}
+
+
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+   
+}
+
 .footer-media-container {
     display: flex;
     justify-content: center; 
@@ -794,6 +811,8 @@ html, body {
     width: 40px;
     list-style: none;
 }
+
+
 
 /* This is the CSS for the home page*/
 
@@ -810,41 +829,41 @@ html, body {
     max-height: 600px;
 }
 
-#text-banner { 
+#text-banner {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     font-weight: bold;
-    
-    a {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: #4D4D4D;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-    }
+}
+
+#text-banner a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #757474;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
 }
 
  #catogery-divider {
-    font-family: Arial, Helvetica, sans-serif;
     background: black;
     align-items: center;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
-    
-    p {
-        color: white;
-        text-align: center;
-        font-size: 35px;
-    }
+
+}
+
+#catogery-divider p {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+
 }
 
 #catogery-section {
@@ -854,7 +873,6 @@ html, body {
 }
 
 #category-section ul {
-    font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -863,6 +881,7 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 50px;
+
 }
 
 #category-section ul li {
@@ -877,7 +896,7 @@ html, body {
     display: block;
     margin-bottom: 5px;
     border-radius: 20px;
-    border-color: black;
+    border-color: #000;
     border: 10px solid black;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -887,17 +906,17 @@ html, body {
     text-align: center;
     display: block;
     text-decoration: none;
-    color: black;
+    color: #000;
     font-size: 40px;
     border-radius: 20px;
-    border-color: black;
+    border-color: #000;
     border: 10px solid black;
-    background-color: #6D6D6D;
+    background-color: #757474;
     flex-wrap: wrap;
+
 }
 
 #gender-section ul {
-    font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -944,21 +963,21 @@ html, body {
         width: 100%;
         max-width: 522px;
         padding: 10px;
-        border: 1px solid black;
-        background-color: black;
+        border: 1px solid rgb(23, 23, 23);
+        background-color: rgb(23, 23, 23);
         color: white;
         cursor: pointer;
         margin-bottom: 10px;
     }
 
     button:hover {
-        background-color: #4D4D4D;
+        background-color: black;
     }
 
     a {
         text-decoration: underline;
         text-align: left;
-        color: black;
+        color: Black;
     }
 }
 
@@ -978,25 +997,22 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     margin: 0;
 
     h2 {
         text-align: left;
-        margin-top: 20px;
         margin-left: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     form {
         width: 100%;
         max-width: 500px;
-        padding-top: 10px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-bottom: 10px;
+        padding: 25px;
         background-color: white;
-        /*border: 1px solid #D9D9D9;*/
-        /*box-shadow: 0 4px 8px black;*/
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .input-group {
@@ -1022,15 +1038,15 @@ html, body {
     button {
         width: 100%;
         padding: 10px;
-        background-color: black;
+        background-color: rgb(23, 23, 23);
         color: white;
-        border: 1px solid black;
+        border: 1px solid rgb(23, 23, 23);
         cursor: pointer;
         margin-top: 10px;
     }
 
     button:hover {
-        background-color: #4D4D4D;
+        background-color: black;
     }
 
     .error {
@@ -1041,20 +1057,7 @@ html, body {
 
 /*CSS for the Product Lists page*/
 
-#product-text-banner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 60px;
-    font-weight: bold;
-    font-family: Arial;
-}
-
 .Products-Filter-Container{
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     width: 100%;
 }
@@ -1082,7 +1085,7 @@ html, body {
 
 .product-item {
     text-align: center;
-    background-color: #D9D9D9;
+    background-color: #c0bbbb;
     padding: 20px;
     border-radius: 10px;
     display: block;
@@ -1098,7 +1101,7 @@ html, body {
 .product-link{
     list-style: none;
     text-decoration: none;
-    color:  black;
+    color: #000;
 
 }
 .category-selector {
@@ -1108,7 +1111,7 @@ html, body {
 }
 
 .line-break{
-    background-color: black;
+    background-color: #000;
     height: 2px;
 
 }
@@ -1130,17 +1133,17 @@ html, body {
 
 
 input[type="radio"] {
-    accent-color: #4D4D4D;
+    accent-color: #333F;
     cursor: pointer;
 }
 
 label {
     cursor: pointer;
-    color: black;
+    color: #000000;
 }
 
 .filter-btn {
-    background-color: black;
+    background-color: hsl(0, 0%, 0%);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -1151,7 +1154,7 @@ label {
 }
 
 .filter-btn:hover {
-    background-color: #4D4D4D;
+    background-color: #333;
 }
 
 /* CSS for the Product Page*/
@@ -1170,11 +1173,7 @@ label {
         width: 800px;
         height: 800px;
     }
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
 }
-
 .right-container {
     flex: 1;
     max-width: 800px;
@@ -1186,15 +1185,15 @@ label {
             width: 50px;
             height: 50px;
             padding: 10px;
-            border: 1px solid black;
-            background-color: black;
+            border: 1px solid rgb(23, 23, 23);
+            background-color: rgb(23, 23, 23);
             color: white;
             cursor: pointer;
             margin-bottom: 10px;
         }
 
         button:hover {
-            background-color: #4D4D4D;
+            background-color: black;
         }
     }
 
@@ -1202,15 +1201,15 @@ label {
         button {
             width: 550px;
             padding: 10px;
-            border: 1px solid black;
-            background-color: black;
+            border: 1px solid rgb(23, 23, 23);
+            background-color: rgb(23, 23, 23);
             color: white;
             cursor: pointer;
             margin-bottom: 10px;
         }
 
         button:hover {
-            background-color: #4D4D4D;
+            background-color: black;
         }
     }
 }

@@ -13,23 +13,15 @@
                     <h2>Contact Info</h2>
                     <ul class="info">
                         <li>
-                            <strong>Address:</strong><br>
-                            Aston Street<br>
-                            90<br>
-                            B9020
-                        </li>
-                        <li>
-                            <strong>Email:</strong><br>
-                            <a href="mailto:sportwear@gmail.com">sportwear@gmail.com</a>
-                        </li>
-                        <li>
-                            <strong>Phone:</strong><br>
-                            0121 898 919
+                            <strong>Address:</strong> 90 Aston Street<br> 
+                            <strong>Post Code:</strong>B9 020 <br> 
+                            <strong>Email:</strong> <a href="mailto:sportwear@gmail.com">Sportwear@gmail.com</a><br>
+                            <strong>Phone:</strong> 0121 898 919
                         </li>
                     </ul>
                 </div>
 
-                <h1>Contact Me</h1>
+                <h1 class = "contact-header">Contact Me</h1>
 
                 <form action="none" onsubmit="validateContactForm(event)">
 
