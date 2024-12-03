@@ -1,7 +1,8 @@
 /* styling for the container*/
 
 html, body {
-    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
     margin: 0;
   }
 
@@ -11,7 +12,8 @@ html, body {
   }
   
   main {
-    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
     flex-grow: 1;
   }
 
@@ -181,23 +183,7 @@ html, body {
             font-size: 1.3rem;
             color: black;
         }
-    
-        div button {
-            background-color: black;
-            color: white;
-            padding: 15px 20px;
-            font-size: 1.2rem;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-    
-        div button:hover {
-            background-color: #4D4D4D;
-        }
-    
+
         footer {
             background-color: black;
             color: white;
@@ -207,23 +193,8 @@ html, body {
             bottom: 0;
             width: 100%;
             font-size: 0.9rem;
-        button {
-            width: 50px;
-            height: 50px;
-            padding: 10px;
-            border: 1px solid black;
-            background-color: black;
-            color: white;
-            cursor: pointer;
-            margin-bottom: 10px;
         }
-
-        button:hover {
-            background-color: #4D4D4D;
-        }}
         
-        
-
         footer a {
             color: white;
             text-decoration: none;
@@ -786,6 +757,7 @@ html, body {
         
         .footer1 {
             display: flex;
+            flex-shrink: 0;
             flex-direction: column;
             align-items: center; 
             justify-content: space-between;
@@ -1424,22 +1396,6 @@ font-size: 1em;
         color: black;
     }
 
-    div button {
-        background-color: black;
-        color: white;
-        padding: 15px 20px;
-        font-size: 1.2rem;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        margin-top: 20px;
-        transition: background-color 0.3s ease;
-    }
-
-    div button:hover {
-        background-color: #4D4D4D;
-    }
-
     footer {
         background-color: black;
         color: white;
@@ -1450,7 +1406,7 @@ font-size: 1em;
         width: 100%;
         font-size: 0.9rem;
     }
-
+    
     footer a {
         color: white;
         text-decoration: none;
@@ -1486,6 +1442,7 @@ font-size: 1em;
         }
     }
 }
+
 
 /*CSS for Checkout Page*/
 .checkout {
