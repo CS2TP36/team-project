@@ -446,11 +446,12 @@ class DatabaseSeeder extends Seeder
                 'stock' => rand(1, 50)
 
             ]),
+            // The new ones
             new Product ([
                 'name' => 'performance tech hoodie',
                 'description'=> "A lightweight, breathable hoodie with moisture-wicking fabric and an athletic fit, perfect for workouts or casual wear.",
                 'price'=> 20.00,
-                'color'=> 'blue',
+                'colour'=> 'blue',
                 'mens'=> true,
                 'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
                 'stock'=> rand (1,50)
@@ -460,7 +461,7 @@ class DatabaseSeeder extends Seeder
                 'name'=>'trail runner pro shoes',
                 'description'=> "Durable trail running shoes with high-grip soles, shock absorption, and water resistance for all-terrain adventures.",
                 'price'=> 30.00,
-                'color'=> 'black',
+                'colour'=> 'black',
                 'mens'=> true,
                 'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
                 'stock'=> rand (1,50)
@@ -470,7 +471,7 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'flexfit training joggers',
                 'description'=>"Stretchable, sweat-proof joggers with zippered pockets and reinforced knees, designed for high-impact sports or gym sessions.",
                 'price'=>30.00,
-                'color'=> 'grey',
+                'colour'=> 'grey',
                 'mens'=> true,
                 'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
                 'stock'=> rand (1,50)
@@ -480,7 +481,7 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'active cool compression shirt',
                 'description'=> "A quick-dry, anti-odor compression shirt that provides muscle support and keeps you comfortable during intense workouts",
                 'price'=>20.00,
-                'color'=> 'black',
+                'colour'=> 'black',
                 'mens'=> true ,
                 'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
                 'stock'=> rand (1,50)
@@ -490,7 +491,7 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'thermosheild sports jacket',
                 'description'=> "An insulated, windproof, and waterproof sports jacket that offers warmth and protection for outdoor activities in cold weather.",
                 'price'=> 25.00,
-                'color'=> 'yellow',
+                'colour'=> 'yellow',
                 'mens'=> true,
                 'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
                 'stock'=> rand (1,50)
@@ -500,7 +501,7 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'energy flow zip hoodie',
                 'description'=> "A sleek, fitted hoodie with thumbholes, breathable mesh panels, and quick-dry fabric for workouts or athleisure.",
                 'price'=> 20.00,
-                'color'=>'blue',
+                'colour'=>'blue',
                 'mens'=> false,
                 'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
                 'stock'=> rand (1,50)
@@ -510,7 +511,7 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'pulse track running shoes',
                 'description'=> "Lightweight running shoes with cushioned soles, arch support, and stylish design for optimal performance and comfort.",
                 'price'=> 25.00,
-                'color'=> 'black',
+                'colour'=> 'black',
                 'mens'=> false,
                 'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
                 'stock'=> rand (1,50)
@@ -519,7 +520,7 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'powerflex workout leggings',
                 'description'=> "High-waisted leggings with four-way stretch, moisture-wicking fabric, and a hidden pocket for active lifestyles.",
                 'price'=> 20.00,
-                'color'=> 'purple',
+                'colour'=> 'purple',
                 'mens'=> false,
                 'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
                 'stock'=> rand (1,50)
@@ -528,7 +529,7 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'breathe fit sports tee',
                 'description'=> "A breathable, soft tee with sweat-wicking technology and a flattering fit to enhance performance and comfort.",
                 'price'=> 20.00,
-                'color'=> ' grey',
+                'colour'=> ' grey',
                 'mens'=> false,
                 'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
                 'stock'=> rand (1,50)
@@ -538,11 +539,10 @@ class DatabaseSeeder extends Seeder
                 'name'=> 'All weather performance jacket',
                 'description'=> "A lightweight, water-resistant jacket with reflective details, adjustable hood, and a feminine fit for outdoor sports.",
                 'price'=> 20.00,
-                'color'=>'black/pink',
+                'colour'=>'black/pink',
                 'mens'=>false,
                 'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
                 'stock'=> rand (1,50)
-
             ]),
 
 
