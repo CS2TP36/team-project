@@ -8,10 +8,10 @@ use App\Http\Controllers\ProductLister;
 class ProductSearcher extends Controller
 {
     // Returns a list of products which meet the search term
-    public function search(String $searchTerm = "", bool $mens = true): array
+    public function search(String $searchTerm = ""): array
     {
         // gets all the products in an array
-        $products = ProductLister::get($mens);
+        $products = ProductLister::get();
         // create a blank array
         $toReturn = [];
         // iterate through all the products to see if they meet the search criteria
