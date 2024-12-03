@@ -7,7 +7,7 @@
 @endphp
 @section('content')
     <div class="product">
-
+        
         <div class = "left-container">
             <!-- Image of the product -->
             <img src="{{ asset($product->getMainImage()) }}"></img>

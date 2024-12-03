@@ -24,7 +24,7 @@
             <li class="footer-list">Page Directs</a></li>
             <li class="footer-list"><a href="/login">Sign in </a></li>
             <li class="footer-list">Orders and Payments </a></li>
-            
+            <li class="footer-list"><button id="theme-toggle">Toggle Theme</button></li>
         </ul>
     </div>
 </footer>

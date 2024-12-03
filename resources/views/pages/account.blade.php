@@ -1,8 +1,6 @@
 @extends('layouts.page')
 @section('title','Account')
 @section('content')
-
-
     <div id="account-page">
 
     <h1>My Account</h1>
