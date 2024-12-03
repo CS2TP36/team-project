@@ -440,7 +440,7 @@ font-size: 1em;
         background-repeat: no-repeat;
         color: #fff;
         text-align: center;
-        padding: 80px 0;
+        padding: 40px 0;
         margin: 0;
         font-size: 2.5rem;
         letter-spacing: 1px;
@@ -465,15 +465,21 @@ font-size: 1em;
     .banner h1 {
         z-index: 1;
         color: rgb(250, 245, 245);
-        background: rgba(0, 0, 0, 0.3);
+        background: rgb(0, 0, 0);
         padding: 15px 30px;;
         border-radius: 8px;
         font-weight: bold;
         font-size: 3rem;
-        text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
         display:inline-block;
+        align-items: center;
+        
     }
 
+    .contact-header{
+        align-items: center;
+        text-align: center;
+        padding-top: 10px;
+    }
     .contactInfo {
         background-color: #fff;
         padding: 25px;
@@ -482,12 +488,15 @@ font-size: 1em;
         margin: 25px auto;
         width: 90%;
         max-width: 900px;
+        align-items: center;
     }
 
     .contactInfo h2 {
         color: #161515;
-        font-size: 1.8rem;
         margin-bottom: 15px;
+        font-size: 44px;
+        align-items: center;
+        text-align: center;
     }
 
     .contactInfo ul.info {
@@ -497,7 +506,7 @@ font-size: 1em;
 
     .contactInfo ul.info li {
         margin-bottom: 15px;
-        font-size: 1.1rem;
+        font-size: 20px;
     }
 
     .contactInfo ul.info li span {
@@ -539,7 +548,7 @@ font-size: 1em;
 
     form input[type="submit"], form input[type="reset"] {
         width: auto;
-        background-color: #757474;
+        background-color: #000000;
         color: white;
         border: none;
         cursor: pointer;
@@ -550,7 +559,7 @@ font-size: 1em;
     }
 
     form input[type="submit"]:hover, form input[type="reset"]:hover {
-        background-color: #5a5a5a;
+        background-color: #000000;
     }
 
     .social-links {
