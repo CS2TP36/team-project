@@ -95,6 +95,16 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Hoodies')->first()->id,
                 'stock' => rand(1, 50)
             ]),
+            new product ([
+                'name'=>'performance tech hoodie',
+                'description'=> "A lightweight, breathable hoodie with moisture-wicking fabric and an athletic fit, perfect for workouts or casual wear.",
+                'price'=> 20.00,
+                'color'=> 'blue',
+                'mens'=> true,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock'=> rand (1,50)
+
+            ]),
             //  Mens Shoes
             new Product([
                 'name' => 'Velocity Running Shoes',
@@ -132,6 +142,16 @@ class DatabaseSeeder extends Seeder
                 'mens' => true,
                 'category_id' => Category::all()->where('name','Shoes')->first()->id,
                 'stock' => rand(1,50)
+            ]),
+            new product ([
+                'name'=>'trail runner pro shoes',
+                'descrition'=> "Durable trail running shoes with high-grip soles, shock absorption, and water resistance for all-terrain adventures.",
+                'price'=> 29.99,
+                'color'=> 'black/orange',
+                'mens'=> true,
+                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'stock'=> rand (1,50)
+
             ]),
             // Mens Trousers
             new Product ([
@@ -173,6 +193,16 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Trousers')->first()->id,
                 'stock' => rand (1,50)
             ]),
+            new product ([
+                'name'=> 'flex fit training joggers',
+                'description'=> " Stretchable, sweat-proof joggers with zippered pockets and reinforced knees, designed for high-impact sports or gym sessions.",
+                'price'=> 20.00,
+                'color'=> 'grey',
+                'mens'=> true,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
+                'stock' => rand (1,50)
+                
+            ]),
 
             //Mens Shirts
             new Product ([
@@ -210,6 +240,17 @@ class DatabaseSeeder extends Seeder
                 'mens' => true,
                 'category_id' => Category::all()->where('name','Shirts')->first()->id,
                 'stock' => rand (1,50)
+            ]),
+            new product ([
+                'name'=> 'active cool compression shirt',
+                'dscription'=>"A quick-dry, anti-odor compression shirt that provides muscle support and keeps you comfortable during intense workouts",
+                'price'=> 25.99,
+                'color'=>'black',
+                'mens'=> true,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock'=> rand (1,50)
+
+
             ]),
 
             //Mens Jackets
@@ -249,6 +290,16 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Jackets')->first()->id,
                 'stock' => rand (1,50)
             ]),
+            new product ([
+                'name'=> 'Thermosheild sports jacket',
+                'description'=>"An insulated, windproof, and waterproof sports jacket that offers warmth and protection for outdoor activities in cold weather.",
+                'price'=> 30.00,
+                'color'=>'yellow',
+                'mens'=>true,
+                'category_id' => Category::all()->where('name','Jackets')->first()->id,
+                'stock'=> rand (1,50)
+
+            ]),
 
             // Womens Hoodies
             new Product ([
@@ -287,6 +338,15 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Hoodies')->first()->id,
                 'stock' => rand (1,50)
             ]),
+            new product ([
+                'name'=> 'energy flow zip hoodie'
+                'description'=> "A sleek, fitted hoodie with thumbholes, breathable mesh panels, and quick-dry fabric for workouts or athleisure.",
+                'price'=> 20.00,
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Hoodies')->first()->id,
+                'stock'=> rand (1,50)
+
+            ]),
             //Womens Shoes
             new Product ([
                 'name' => 'SwiftRun Trainers',
@@ -324,6 +384,16 @@ class DatabaseSeeder extends Seeder
                 'category_id' => Category::all()->where('name','Shoes')->first()->id,
                 'stock' => rand (1,50)
             ]),
+            new product ([
+                'name'=>'pulse track running shoes'
+                'description'=>"Lightweight running shoes with cushioned soles, arch support, and stylish design for optimal performance and comfort.",
+                'price'=> 32.00,
+                'color'=> 'black',
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Shoes')->first()->id,
+                'stock'=> rand (1,50)
+
+            ]),
             //Womens trousers
             new Product ([
                 'name' => 'HighRise Compression Leggings',
@@ -360,6 +430,17 @@ class DatabaseSeeder extends Seeder
                 'mens' => false,
                 'category_id' => Category::all()->where('name','Trousers')->first()->id,
                 'stock' => rand (1,50)
+            ]),
+            new product ([
+                'name'=>'powerflex workout leggings',
+                'description'=> " High-waisted leggings with four-way stretch, moisture-wicking fabric, and a hidden pocket for active lifestyles.",
+                'price'=>20.00,
+                'color'=> 'purple',
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Trousers')->first()->id,
+                'stock'=> rand (1,50)
+
+
             ]),
             //Womens shirts
             new Product ([
@@ -400,6 +481,16 @@ class DatabaseSeeder extends Seeder
                 'stock'=> rand(1,50)
 
             ]),
+            new product ([
+                'name' => 'breathe fit sports tee',
+                'description'=>"A breathable, soft tee with sweat-wicking technology and a flattering fit to enhance performance and comfort.",
+                'price'=>20.00,
+                'color' => 'grey',
+                'mens'=> false,
+                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'stock'=> rand (1,50)
+
+            ]),
             // coats women
             new product ([
                 'name'=>'Motion flex parka',
@@ -407,7 +498,7 @@ class DatabaseSeeder extends Seeder
                 'price'=> 45.99,
                 'color' => 'black',
                 'mens'=> false ,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','jackets')->first()->id,
                 'stock'=> rand (1,50)
 
             ]),
@@ -417,7 +508,7 @@ class DatabaseSeeder extends Seeder
                 'price' => 45.00,
                 'color'=> 'beige',
                 'mens'=> false,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','jackets')->first()->id,
                 'stock'=> rand (1,50)
 
             ]),
@@ -427,7 +518,7 @@ class DatabaseSeeder extends Seeder
                 'price' => 38.50,
                 'color'=> 'orange',
                 'mens'=> false,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','jackets')->first()->id,
                 'stock' => rand (1,50)
 
             ]),
@@ -435,12 +526,23 @@ class DatabaseSeeder extends Seeder
                 'name'=>'All season windbreaker',
                 'description'=> "sheild yourself from the elements with the All seaon wind breaker , featuring water-repellent fabric and adjustable cuffs.",
                 'price'=> 29.99,
-                'color'=>'beige/pink'
+                'color'=>'beige/pink',
                 'mens'=> false,
-                'category_id' => Category::all()->where('name','Shirts')->first()->id,
+                'category_id' => Category::all()->where('name','jackets')->first()->id,
                 'stock' => rand (1,50)
-                
+
+            ]),
+            new product ([
+                'name'=> 'All weather performance jacket',
+                'description'=> "A lightweight, water-resistant jacket with reflective details, adjustable hood, and a feminine fit for outdoor sports.",
+                'price'=>29.99,
+                'color'=>'black/pink',
+                'mens' => false,
+                'category_id' => Category::all()->where('name','jackets')->first()->id,
+                'stock'=> rand (1,50)
+
             ])
+
 
 
 
