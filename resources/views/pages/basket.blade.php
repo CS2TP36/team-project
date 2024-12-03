@@ -8,24 +8,17 @@
         <table>
             <thead>
                 <tr>
-                    <th>Remove</th>
                     <th>Image</th>
                     <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th>Remove</th>
                     <th>Subtotal</th>
                 </tr>
             </thead>
             <tbody>
                 @forelse($basket as $id => $item)
                     <tr>
-                        <td>
-                            <form action="{{ route('basket.remove', $id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">Remove</button>
-                            </form>
-                        </td>
                         <td><img src="{{ $item['image'] }}" alt="{{ $item['name'] }}" width="50"></td>
                         <td>{{ $item['name'] }}</td>
                         <td>£{{ number_format($item['price'], 2) }}</td>
@@ -35,6 +28,13 @@
                                 @method('PATCH')
                                 <input type="number" name="quantity" value="{{ $item['quantity'] }}">
                                 <button type="submit">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="{{ route('basket.remove', $id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Remove</button>
                             </form>
                         </td>
                         <td>£{{ number_format($item['price'] * $item['quantity'], 2) }}</td>
@@ -57,4 +57,7 @@
     </section>
 </div>
 @endsection
+
+
+
 
