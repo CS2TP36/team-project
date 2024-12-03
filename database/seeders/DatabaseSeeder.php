@@ -777,15 +777,7 @@ class DatabaseSeeder extends Seeder
             new ProductImage([
                 'product_id' => 50,
                 'image_name' => 'e10299f4-3a87-40e5-bece-498c95630579.jpg'
-            ]),
-
-
-
-
-
-
-
-
+            ])
         ];
         foreach ($images as $image) {
             $image->save();
