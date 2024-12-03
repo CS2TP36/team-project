@@ -29,11 +29,18 @@
                 <button type="button">L</button>
             </div>
 
-            <div class = "purchase-options">
-                <!-- Two buttons, add to basket and add to wishlist -->
-                <button type="button">Add to Basket</button>
-                <button type="button">Add to Wishlist</button>
-            </div>
+            <div class="purchase-options">
+    <!-- Add to Basket -->
+    <form action="{{ route('basket.add') }}" method="POST">
+        @csrf
+        <input type="hidden" name="product_id" value="{{ $product->id }}">
+        <input type="hidden" name="quantity" value="1"> <!-- Default to 1, can be dynamic -->
+        <button type="submit">Add to Basket</button>
+    </form>
+
+    <!-- Add to Wishlist -->
+    <button type="button">Add to Wishlist</button>
+</div>
 
             <div class = "detailed-info">
                 <!-- Nav bar containing Product Info and Review-->

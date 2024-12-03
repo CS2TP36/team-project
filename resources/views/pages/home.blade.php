@@ -1,9 +1,5 @@
 @extends('layouts.page')
-@section('title')
-    Best SportsWear
-@endsection
-
-
+@section('title', 'Best SportsWear')
 @section('content')
 <div class= "home">
     <section>
