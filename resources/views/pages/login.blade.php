@@ -27,17 +27,17 @@
                 @endif
 
                 <form method="POST" action="{{ route('login.authenticate') }}">
-                    @csrf 
+                    @csrf
 
                     <label for="email">Email *</label><br>
                     <input type="email" id="email" name="email" value="{{ old('email') }}" required/><br>
-                
+
                     <label for="password">Password *</label><br>
                     <input type="password" id="password" name="password" required/><br>
-                
+
                     <button type="submit">Sign In</button>
                 </form>
-                <a href="#"><p>Forgotten your password?</p></a>
+                <a href="/forgot-pass"><p>Forgotten your password?</p></a>
             </div>
 
             <div class="new-customers">
