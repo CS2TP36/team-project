@@ -2,37 +2,26 @@
 @section('title', 'Forgot-pass')
 @section('content')
 
-<div class="Forgot-Pass">
+<div class="reset">
         <h2>Reset Your Password</h2>
 
         <div class="reset-sections">
-            <div class="">
+            <div class= "existing-customers">
                 <h3>Forgot your password? Please enter your email address below: </h3>
 
-                @if ($errors->any())
                     <div class="error-messages">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
                     </div>
-                @endif
 
-                @if (session('error'))
                     <div class="error-message">
-                        <p>{{ session('error') }}</p>
                     </div>
-                @endif
 
-                <form method="POST" action="{{ route('login.authenticate') }}">
-                    @csrf 
+                <form method="POST" action="">
 
                     <label for="email">Email *</label><br>
                     <input type="email" id="email" name="email" value="{{ old('email') }}" required/><br>
                 
 
-                    <button type="submit">Sign In</button>
+                    <button type="submit">Submit Email</button>
                 </form>
             </div>
                 </form>
