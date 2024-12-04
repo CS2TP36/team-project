@@ -10,7 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BasketController;
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // Show the registration form
@@ -24,7 +24,6 @@ Route::redirect('/', '/home');
 
 // Handles the account page
 Route::get('/account', [AccountController::class, 'show'])->middleware('auth');
-
 
 // Show the home page
 Route::get('/home', function () {
@@ -76,13 +75,13 @@ Route::get('/checkout', function () {
 
 Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('products.search');
 
-// Shows the Basket index 
+// Shows the Basket index
 Route::get('/basket', [BasketController::class, 'index'])->name('basket.index');
 
-// Add items to the Basket 
+// Add items to the Basket
 Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add');
 
-//Updates the quantity of an item in the Basket 
+//Updates the quantity of an item in the Basket
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
 
 // Deletes a product from the Basket
