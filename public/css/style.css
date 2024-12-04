@@ -1374,21 +1374,32 @@ font-size: 1em;
     div button {
         background-color: black;
         color: white;
-        padding: 10px 15px;
+        font-size: 1rem;
+        padding: 8px 10px;
+        margin: -10px auto 0;
         border: none;
-        border-radius: 5px;
+        border-radius: 4px;
         cursor: pointer;
+        position: relative;
+        top: -9px;
         font-size: 1rem;
         transition: background-color 0.3s ease;
     }
 
     div button:hover {
         background-color: #4D4D4D;
+        border-color: #ccc;
     }
 
     div p {
         font-size: 1.1rem;
         color: black;
+        line-height: 1.5;
+        margin: 10px 0;
+        padding: 6px 9px;
+        justify-content: space-between;
+        border-radius: 5px;
+
     }
 
     div strong {
