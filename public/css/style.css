@@ -18,8 +18,6 @@ main {
 }
 
 .light-theme {
-    /*background-color: white;*/
-    
     /*CSS for Account Page*/
     .account-page {
         background-color: white;
@@ -64,7 +62,7 @@ font-size: 1em;
         }
     }
 
-    /* CSS for Basket Page*/
+    /*CSS for Basket Page*/
     .basket {
         * {
             font-family: Arial, Helvetica, sans-serif;
@@ -265,21 +263,18 @@ font-size: 1em;
             box-shadow: 0 4px 8px black;
         }
     
-        header.checkout-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-    
-        header h1 {
+        h1 {
             font-size: 28px;
             font-weight: bold;
             color: black;
+            padding-left: 10px;
         }
     
-        header h2 {
+        h2 {
             font-size: 20px;
             color: black;
             margin-bottom: 20px;
+            padding-left: 10px;
         }
     
         .form-group {
@@ -646,9 +641,11 @@ font-size: 1em;
         max-width: 800px; /*keep the width restricted so readability is improved */
         padding: 20px; /* add some spacing in the container (keeps text away from edges) */
         margin: 0 auto;
-        /*border-radius: 8px; /*round the cornres*/
-        /*box-shadow: 0 4px 8px #4D4D4D;*/
-        /*line-height: 1.6;*/
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px; /*round the cornres*/
+        box-shadow: 0 4px 8px #4D4D4D;
+        line-height: 1.6;
     
         /* Styling for h1 elements */
         h1 {
@@ -894,7 +891,7 @@ font-size: 1em;
         gap: 50px;
     }
     
-    #category-section ul button {
+    #category-section ul li {
         margin: 10px;
         box-sizing: border-box;
         flex-wrap: wrap;
@@ -1168,7 +1165,6 @@ font-size: 1em;
         margin: 5px 0;
         gap: 10px;
     }
-    
     
     input[type="radio"] {
         accent-color: #4D4D4D;
@@ -1546,9 +1542,9 @@ font-size: 1em;
 
     /*CSS for Checkout Page*/
     .checkout {
+        font-family: Arial, Helvetica, sans-serif;
     body {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: white;
         color: black;
         margin: 0;
         padding: 0;
@@ -1557,27 +1553,23 @@ font-size: 1em;
     .checkout-container {
         max-width: 900px;
         margin: 40px auto;
-        background: white;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px black;
     }
 
-    header.checkout-header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    header h1 {
+    h1 {
         font-size: 28px;
         font-weight: bold;
-        color: black;
+        color: white;
+        padding-left: 10px;
     }
 
-    header h2 {
+    h2 {
         font-size: 20px;
-        color: black;
+        color: white;
         margin-bottom: 20px;
+        padding-left: 10px;
     }
 
     .form-group {
@@ -1587,7 +1579,7 @@ font-size: 1em;
 
     .form-group label {
         font-weight: 600;
-        color: black;
+        color: white;
         margin-bottom: 8px;
         font-size: 16px;
         display: block;
@@ -1939,18 +1931,20 @@ font-size: 1em;
 
     /*CSS for About Us*/
     .aboutus{
-    background-color: white;
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 800px; /*keep the width restricted so readability is improved */
     padding: 20px; /* add some spacing in the container (keeps text away from edges) */
     margin: 0 auto;
-    /*border-radius: 8px; /*round the cornres*/
-    /*box-shadow: 0 4px 8px #4D4D4D;*/
-    /*line-height: 1.6;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /*round the cornres*/
+    box-shadow: 0 4px 8px black;
+    line-height: 1.6;
 
     /* Styling for h1 elements */
     h1 {
-        color: black;
+        color: white;
         margin-bottom: 10px; /* add some spacing */
         font-size: 2em; /* make h1 text the largest*/
         text-align: center;
@@ -1958,7 +1952,7 @@ font-size: 1em;
 
     /* styling for h2 elements */
     h2 {
-        color: black;
+        color: white;
         margin-top: 20px; /* add spacing above */
         margin-bottom: 10px; /*add spacing below */
         font-size: 1.5em; /*make h2 text smaller than h1 */
@@ -1966,7 +1960,7 @@ font-size: 1em;
 
     /* Styling for p elements */
     p {
-        color: black;
+        color: white;
         font-size: 1em; /* paragraph text made the smallest*/
         margin-bottom: 15px; /* add spacing */
     }
@@ -2241,8 +2235,9 @@ font-size: 1em;
     justify-content: center;
     gap: 100px;
     }
-/* CSS for Login Page */
-.login {
+    
+    /* CSS for Login Page */
+    .login {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 300px;
@@ -2253,14 +2248,14 @@ font-size: 1em;
         margin-left: 5px;
         margin-bottom: 5px;
     }
-}
+    }
 
-.login-sections {
+    .login-sections {
     display: flex;
     flex-direction: row;
-}
+    }
 
-.existing-customers, .new-customers {
+    .existing-customers, .new-customers {
     flex: 1;
     max-width: 650px;
     padding: 5px;
@@ -2296,18 +2291,18 @@ font-size: 1em;
         text-align: left;
         color: black;
     }
-}
+    }
 
-.new-customers {
+    .new-customers {
     margin-left: 35px;
     margin-bottom: 10px;
     p {
         margin-left: 10px;
     }
-}
+    }
 
-/*CSS for Register Page*/
-.register {
+    /*CSS for Register Page*/
+    .register {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     display: flex;
@@ -2373,11 +2368,10 @@ font-size: 1em;
         color: red;
         font-size: 0.9em;
     }
-}
+    }
 
-/*CSS for the Product Lists page*/
-
-#product-text-banner {
+    /*CSS for the Product Lists page*/
+    #product-text-banner {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2387,24 +2381,24 @@ font-size: 1em;
     font-size: 60px;
     font-weight: bold;
     font-family: Arial;
-}
+    }
 
-.Products-Filter-Container{
+    .Products-Filter-Container{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     width: 100%;
-}
+    }
 
-.Filter-Page{
+    .Filter-Page{
     margin-left:auto;
     margin-right: auto;
     border-radius : 15px;
     align-items: left;
     padding-top: 40px;
 
-}
+    }
 
-#products-list {
+    #products-list {
     padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2414,9 +2408,9 @@ font-size: 1em;
     justify-items: center;
     margin-left: auto;
     margin-right: auto;
-}
+    }
 
-.product-item {
+    .product-item {
     text-align: center;
     background-color: #D9D9D9;
     padding: 20px;
@@ -2425,57 +2419,57 @@ font-size: 1em;
     justify-content: space-evenly;
     max-height: 420px;
     margin-bottom: 20px;
-}
+    }
 
-.product-details{
+    .product-details{
     margin-top: 10px; 
-}
+    }
 
-.product-link{
+    .product-link{
     list-style: none;
     text-decoration: none;
     color:  black;
 
-}
+    }
 
-.category-selector {
+    .category-selector {
     list-style: none;
     padding: 10px;
 
-}
+    }
 
-.line-break{
+    .line-break{
     background-color: black;
     height: 2px;
 
-}
+    }
 
-.category {
+    .category {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
     padding: 5px;
     text-align: left;
-}
+    }
 
-.category-buttons {
+    .category-buttons {
     display: flex;
     align-items: center;
     margin: 5px 0;
     gap: 10px;
-}
+    }
 
-input[type="radio"] {
+    input[type="radio"] {
     accent-color: #4D4D4D;
     cursor: pointer;
-}
+    }
 
-label {
+    label {
     cursor: pointer;
     color: black;
-}
+    }
 
-.filter-btn {
+    .filter-btn {
     background-color: black;
     color: white;
     border: none;
@@ -2484,10 +2478,10 @@ label {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
+    }
 
-.filter-btn:hover {
+    .filter-btn:hover {
     background-color: #4D4D4D;
-}
+    }
 }
 
