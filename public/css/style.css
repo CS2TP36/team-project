@@ -4,62 +4,66 @@ html, body {
     min-height: 100%;
     max-height: 100%;
     margin: 0;
-  }
+}
 
-  body {
+body {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  main {
+main {
     min-height: 100%;
     max-height: 100%;
     flex-grow: 1;
-  }
+}
 
 .light-theme {
-    #account-page {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 800px; /* keep width restricted*/
-    padding: 20px; /*add spacing*/
-    margin: 0 auto; /* cntre the container*/
-    border-radius: 8px; /*round the corners */
-    box-shadow: 0 4px 8px black;
-    line-height: 1.6;
-    }
+    /*background-color: white;*/
     
-    /* styling for h1 elements */
-    #account-page h1{
-        color: black;
-        margin-bottom: 10px; /* add spacing below */
-        font-size: 2em; /*make h1 text the largest */
-        text-align: center;
-    }
+    /*CSS for Account Page*/
+    .account-page {
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 800px; /* keep width restricted*/
+        padding: 20px; /*add spacing*/
+        margin: 0 auto; /* cntre the container*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px; /*round the corners */
+        box-shadow: 0 4px 8px black;
+        line-height: 1.6;
     
-    /* styling for p elements */
-    #account-page p{
+        /* styling for h1 elements */
+        h1{
     color: black;
-    font-size: 1em; /* paragraph text smaller */
-    margin-bottom: 15px; /* add spacing below */
+    margin-bottom: 10px; /* add spacing below */
+    font-size: 2em; /*make h1 text the largest */
+    text-align: center;
+        }
+        /* styling for p elements */
+        p{
+color: black;
+font-size: 1em; /* paragraph text smaller */
+margin-bottom: 15px; /* add spacing below */
+        }
+
+        /*styling for button */
+        button{
+background-color: black;
+color: white;
+padding: 10px; /*add padding*/
+border: none;
+border-radius: 5px; /* round corners*/
+cursor: pointer;
+font-size: 1em;
+        }
+
+        /*styling when hovering */
+        button:hover {
+    background-color: #4D4D4D; /* red on hover */
+        }
     }
-    
-    /*styling for button */
-    #account-page button{
-    background-color: black;
-    color: white;
-    padding: 10px; /*add padding*/
-    border: none;
-    border-radius: 5px; /* round corners*/
-    cursor: pointer;
-    font-size: 1em;
-    }
-    
-    /*styling when hovering */
-    #account-page button:hover {
-        background-color: #4D4D4D; /* red on hover */
-    }
-    
+
     /* CSS for Basket Page*/
     .basket {
         * {
@@ -162,28 +166,39 @@ html, body {
         div button {
             background-color: black;
             color: white;
-            padding: 10px 15px;
+            font-size: 1rem;
+            padding: 8px 10px;
+            margin: -10px auto 0;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
+            position: relative;
+            top: -9px;
             font-size: 1rem;
             transition: background-color 0.3s ease;
         }
     
         div button:hover {
             background-color: #4D4D4D;
+            border-color: #ccc;
         }
     
         div p {
             font-size: 1.1rem;
             color: black;
+            line-height: 1.5;
+            margin: 10px 0;
+            padding: 6px 9px;
+            justify-content: space-between;
+            border-radius: 5px;
+    
         }
     
         div strong {
             font-size: 1.3rem;
             color: black;
         }
-
+    
         footer {
             background-color: black;
             color: white;
@@ -624,7 +639,7 @@ html, body {
         }
     }
     
-    /* Styling for the container*/
+    /*CSS for About Us Page*/
     .aboutus{
         background-color: white;
         font-family: Arial, Helvetica, sans-serif;
@@ -746,6 +761,7 @@ html, body {
         }
     }
     
+    /*CSS for Footer*/
     .footer-check {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
@@ -808,7 +824,7 @@ html, body {
         list-style: none;
     }
     
-    /* This is the CSS for the home page*/
+    /*CSS for Home Page*/
     
     #banner {
         width: 100%;
@@ -2106,21 +2122,21 @@ font-size: 1em;
     list-style: none;
     }
 
-/*CSS for Home page*/
-#banner {
+    /*CSS for Home page*/
+    #banner {
     width: 100%;
     position: relative;
     object-fit: cover;
     max-height: 600px;
-}
+    }
 
-#banner-container {
+    #banner-container {
     position: relative;
     width: 100%;
     max-height: 600px;
-}
+    }
 
-#text-banner { 
+    #text-banner { 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2140,9 +2156,9 @@ font-size: 1em;
         text-decoration: none;
         border-radius: 8px;
     }
-}
+    }
 
-#catogery-divider {
+    #catogery-divider {
     font-family: Arial, Helvetica, sans-serif;
     background: black;
     align-items: center;
@@ -2155,15 +2171,15 @@ font-size: 1em;
         text-align: center;
         font-size: 35px;
     }
-}
+    }
 
-#catogery-section {
+    #catogery-section {
     box-sizing: border-box;
     flex-wrap: wrap;
     display: flex;
-}
+    }
 
-#category-section ul {
+    #category-section ul {
     font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
     padding: 0;
@@ -2173,15 +2189,15 @@ font-size: 1em;
     align-items: center;
     justify-content: center;
     gap: 50px;
-}
+    }
 
-#category-section ul li {
+    #category-section ul li {
     margin: 10px;
     box-sizing: border-box;
     flex-wrap: wrap;
-}
+    }
 
-#select-catogeries img {
+    #select-catogeries img {
     width: 300px;
     height: auto;
     display: block;
@@ -2191,14 +2207,14 @@ font-size: 1em;
     box-sizing: border-box;
     flex-wrap: wrap;
     transition: background-color 0.4s, transform 0.4s;
-}
+    }
 
-#select-catogeries img:hover {
+    #select-catogeries img:hover {
     background-color: rgb(153, 148, 148);
     transform: scale(1.04);
-}
+    }
 
-#select-catogeries a {
+    #select-catogeries a {
     text-align: center;
     display: block;
     text-decoration: none;
@@ -2209,25 +2225,22 @@ font-size: 1em;
     background-color: #000000;
     flex-wrap: wrap;
     transition: background-color 0.4s;
-}
+    }
 
-#select-catogeries a:hover {
+    #select-catogeries a:hover {
     background-color: rgb(153, 148, 148);
     color: black;
     transform: scale(1.0);
-}
+    }
 
-}
-
-#gender-section ul {
+    #gender-section ul {
     font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
-}
-
+    }
 /* CSS for Login Page */
 .login {
     background-color: white;
@@ -2424,6 +2437,7 @@ font-size: 1em;
     color:  black;
 
 }
+
 .category-selector {
     list-style: none;
     padding: 10px;
@@ -2451,7 +2465,6 @@ font-size: 1em;
     gap: 10px;
 }
 
-
 input[type="radio"] {
     accent-color: #4D4D4D;
     cursor: pointer;
@@ -2476,125 +2489,5 @@ label {
 .filter-btn:hover {
     background-color: #4D4D4D;
 }
-
-/* CSS for the Product Page*/
-.product {
-    background-color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: row;
-    padding-left: 250px;
-    padding-right: 250px;
 }
-.left-container {
-    flex: 1;
-    max-width: 800px;
-    img {
-        width: 800px;
-        height: 800px;
-    }
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-}
-
-.right-container {
-    flex: 1;
-    max-width: 800px;
-    padding: 50px;
-    .size-selection {
-        max-width: 250px;
-        padding: 10px;
-        button {
-            width: 50px;
-            height: 50px;
-            padding: 10px;
-            border: 1px solid black;
-            background-color: black;
-            color: white;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: #4D4D4D;
-        }
-    }
-
-    .purchase-options {
-        button {
-            width: 550px;
-            padding: 10px;
-            border: 1px solid black;
-            background-color: black;
-            color: white;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: #4D4D4D;
-        }
-    }
-}
-
- /*CSS for Forgot Password Page*/
- .reset {
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 300px;
-    padding-left: 25px;
-    padding-right: 25px;
-    h2 {
-        text-align: left;
-        margin-left: 5px;
-        margin-bottom: 5px;
-    }
-
-    .reset-sections {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .existing-customers {
-        flex: 1;
-        max-width: 650px;
-        padding: 5px;
-        label {
-            display: block;
-        }
-        margin-bottom: 10px;
-    }
-
-    input {
-        width: 100%;
-        max-width: 500px;
-        border: 1px solid black;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    button {
-        width: 100%;
-        max-width: 522px;
-        padding: 10px;
-        border: 1px solid black;
-        background-color: black;
-        color: white;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
-
-    button:hover {
-        background-color: #4D4D4D;
-    }
-
-    a {
-        text-decoration: underline;
-        text-align: left;
-        color: black;
-    }
-}
-}
-
 
