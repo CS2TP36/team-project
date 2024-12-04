@@ -944,15 +944,18 @@ font-size: 1em;
     
     /* CSS for Login Page */
     .login {
-        background-color: white;
         font-family: Arial, Helvetica, sans-serif;
+        max-width: 1400px;
         margin-left: 300px;
+        margin-bottom: 20px;
         padding-left: 25px;
         padding-right: 25px;
+
         h2 {
             text-align: left;
             margin-left: 5px;
             margin-bottom: 5px;
+            padding-top: 20px;
         }
     }
     
@@ -1011,12 +1014,10 @@ font-size: 1em;
     /*CSS for Register Page*/
     .register {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0;
     
         h2 {
             text-align: left;
@@ -1031,7 +1032,8 @@ font-size: 1em;
             padding-top: 10px;
             padding-left: 25px;
             padding-right: 25px;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
             background-color: white;
             /*border: 1px solid #D9D9D9;*/
             /*box-shadow: 0 4px 8px black;*/
@@ -2238,97 +2240,105 @@ font-size: 1em;
     
     /* CSS for Login Page */
     .login {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 300px;
-    padding-left: 25px;
-    padding-right: 25px;
-    h2 {
-        text-align: left;
-        margin-left: 5px;
-        margin-bottom: 5px;
-    }
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+        color: white;
+        max-width: 1400px;
+        margin-left: 300px;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        h2 {
+            text-align: left;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            padding-top: 20px;
+        }
     }
 
     .login-sections {
-    display: flex;
-    flex-direction: row;
+        display: flex;
+        flex-direction: row;
     }
 
     .existing-customers, .new-customers {
-    flex: 1;
-    max-width: 650px;
-    padding: 5px;
-    label {
-        display: block;
-    }
+        flex: 1;
+        max-width: 650px;
+        padding: 5px;
+        
+        label {
+            display: block;
+            color: white;
+        }
 
-    input {
-        width: 100%;
-        max-width: 500px;
-        border: 1px solid black;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+        input {
+            color: white;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
 
-    button {
-        width: 100%;
-        max-width: 522px;
-        padding: 10px;
-        border: 1px solid black;
-        background-color: black;
-        color: white;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
+        button {
+            width: 100%;
+            max-width: 522px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: #4D4D4D;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
 
-    button:hover {
-        background-color: #4D4D4D;
-    }
+        button:hover {
+            background-color: #4D4D4D;
+        }
 
-    a {
-        text-decoration: underline;
-        text-align: left;
-        color: black;
-    }
+        a {
+            text-decoration: underline;
+            text-align: left;
+            color: white;
+        }
     }
 
     .new-customers {
-    margin-left: 35px;
-    margin-bottom: 10px;
-    p {
-        margin-left: 10px;
-    }
+        margin-left: 35px;
+        margin-bottom: 10px;
+        p {
+            margin-left: 10px;
+        }
     }
 
     /*CSS for Register Page*/
     .register {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    h2 {
-        text-align: left;
-        margin-top: 20px;
-        margin-left: 5px;
-        margin-bottom: 5px;
-    }
+        h2 {
+            text-align: left;
+            margin-top: 20px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
 
-    form {
-        width: 100%;
-        max-width: 500px;
-        padding-top: 10px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-bottom: 10px;
-        background-color: white;
-        /*border: 1px solid #D9D9D9;*/
-        /*box-shadow: 0 4px 8px black;*/
-    }
+        form {
+            background-color: black;
+            width: 100%;
+            max-width: 500px;
+            padding-top: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+            /*border: 1px solid #D9D9D9;*/
+            /*box-shadow: 0 4px 8px black;*/
+        }
 
     .input-group {
         display: flex;
@@ -2337,6 +2347,7 @@ font-size: 1em;
     }
 
     label {
+        color: white;
         font-size: 14px;
         margin: 5px 0;
         display: block;
@@ -2353,7 +2364,7 @@ font-size: 1em;
     button {
         width: 100%;
         padding: 10px;
-        background-color: black;
+        background-color: #4D4D4D;
         color: white;
         border: 1px solid black;
         cursor: pointer;
@@ -2385,6 +2396,7 @@ font-size: 1em;
 
     .Products-Filter-Container{
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
     display: flex;
     width: 100%;
     }
@@ -2433,13 +2445,13 @@ font-size: 1em;
     }
 
     .category-selector {
+    background-color: black;
     list-style: none;
     padding: 10px;
-
     }
 
     .line-break{
-    background-color: black;
+    background-color: white;
     height: 2px;
 
     }
@@ -2470,7 +2482,7 @@ font-size: 1em;
     }
 
     .filter-btn {
-    background-color: black;
+    background-color: #4D4D4D;
     color: white;
     border: none;
     padding: 10px 20px;
