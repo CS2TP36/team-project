@@ -51,6 +51,9 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
+Route::get('/forgot-pass', function () {
+    return view('pages.forgot-pass');
+});
 // Show the Account page
 Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
