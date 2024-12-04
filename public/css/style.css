@@ -878,7 +878,7 @@ html, body {
         gap: 50px;
     }
     
-    #category-section ul li {
+    #category-section ul button {
         margin: 10px;
         box-sizing: border-box;
         flex-wrap: wrap;
@@ -890,23 +890,34 @@ html, body {
         display: block;
         margin-bottom: 5px;
         border-radius: 20px;
-        border-color: black;
-        border: 10px solid black;
+        border: 5px solid black;
         box-sizing: border-box;
         flex-wrap: wrap;
+        transition: background-color 0.4s, transform 0.4s;
+    }
+    
+    #select-catogeries img:hover {
+        background-color: rgb(153, 148, 148);
+        transform: scale(1.04);
     }
     
     #select-catogeries a {
         text-align: center;
         display: block;
         text-decoration: none;
-        color: black;
+        color: rgb(255, 255, 255);
         font-size: 40px;
         border-radius: 20px;
-        border-color: black;
-        border: 10px solid black;
-        background-color: #6D6D6D;
+        border: 5px solid black;
+        background-color: #000000;
         flex-wrap: wrap;
+        transition: background-color 0.4s;
+    }
+    
+    #select-catogeries a:hover {
+        background-color: rgb(153, 148, 148);
+        color: black;
+        transform: scale(1.0);
     }
     
     #gender-section ul {
@@ -2172,23 +2183,36 @@ font-size: 1em;
     display: block;
     margin-bottom: 5px;
     border-radius: 20px;
-    border-color: black;
-    border: 10px solid black;
+    border: 5px solid black;
     box-sizing: border-box;
     flex-wrap: wrap;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+#select-catogeries img:hover {
+    background-color: rgb(153, 148, 148);
+    transform: scale(1.04);
 }
 
 #select-catogeries a {
     text-align: center;
     display: block;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 40px;
     border-radius: 20px;
-    border-color: black;
-    border: 10px solid black;
-    background-color: #6D6D6D;
+    border: 5px solid black;
+    background-color: #000000;
     flex-wrap: wrap;
+    transition: background-color 0.4s;
+}
+
+#select-catogeries a:hover {
+    background-color: rgb(153, 148, 148);
+    color: black;
+    transform: scale(1.0);
+}
+
 }
 
 #gender-section ul {
