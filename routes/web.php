@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AccountController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductLister;
 use App\Http\Controllers\ProductSearcher;
 use App\Http\Controllers\ShowProduct;
@@ -86,3 +87,5 @@ Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('
 
 // Deletes a product from the Basket
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
