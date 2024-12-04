@@ -25,7 +25,6 @@ Route::redirect('/', '/home');
 // Handles the account page
 Route::get('/account', [AccountController::class, 'show'])->middleware('auth');
 
-
 // Show the home page
 Route::get('/home', function () {
     return view('pages.home');
