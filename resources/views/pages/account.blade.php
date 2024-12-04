@@ -9,7 +9,7 @@
         <p><strong>Email:</strong> {{$user['email']}}</p>
         <hr>
         <button type="button">Change password</button>
-        <button type="button">Signout</button>
+        <a href="/logout"><button type="button">Sign out</button></a>
     </div>
 @endsection
 
