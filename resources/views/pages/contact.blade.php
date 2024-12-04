@@ -58,9 +58,7 @@
                     <li><a href="https://twitter.com/"><img src="images/R.png" alt="Twitter"></a></li>
                     <li><a href="https://www.linkedin.com/"><img src="images/linkedIn_PNG8.png" alt="LinkedIn"></a></li>
                 </ul>
-                <label for="rating">Please Rate our Service</label><br>
-                <input type="range" id="rating" name="rating" min="1" max="10" step="1">
-            </div>
+                
         </div>
     </div>
 @endsection
