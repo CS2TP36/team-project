@@ -3,13 +3,16 @@
 @section('content')
 <div class="basket">
     <h1>Basket</h1>
+
+    <h2>Your Basket</h2>
     <section>
-        <h2>Your Basket</h2>
+    
         <table>
             <thead>
                 <tr>
                     <th>Image</th>
                     <th>Product</th>
+                    <th>size</th>
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Remove</th>
@@ -48,6 +51,7 @@
         </table>
 
         <div>
+        <div class="basket-summary">
             <h3>Basket Totals</h3>
             <p>Subtotal: £{{ number_format($total, 2) }}</p>
             <p>Shipping: Free</p>
@@ -57,7 +61,5 @@
     </section>
 </div>
 @endsection
-
-
 
 
