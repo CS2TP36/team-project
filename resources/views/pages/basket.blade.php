@@ -16,6 +16,7 @@
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Remove</th>
+                    <th>Subtotal</th>
                 </tr>
             </thead>
             <tbody>
