@@ -1032,10 +1032,10 @@ font-size: 1em;
     .login {
         font-family: Arial, Helvetica, sans-serif;
         max-width: 1400px;
-        margin-left: 300px;
-        margin-bottom: 20px;
         padding-left: 25px;
         padding-right: 25px;
+        align-items: center;
+        margin: 0 auto;
 
         h2 {
             text-align: left;
@@ -1095,6 +1095,39 @@ font-size: 1em;
             margin-left: 10px;
         }
     }
+    @media (max-width: 768px) {
+        .login {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    
+        .login-sections {
+            flex-direction: column;
+        }
+    
+        .existing-customers, .new-customers {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    
+        input {
+            width: 70%;
+            max-width: 350px;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .new-customers {
+            margin-left: 0;
+        }
+    
+        button {
+            max-width: 100%;
+        }
+    }
+    
+    
   
     
     /*CSS for Register Page*/
@@ -2468,7 +2501,7 @@ font-size: 1em;
         }
 
         input {
-            color: black;
+            color: white;
             width: 100%;
             max-width: 500px;
             border: 1px solid black;
