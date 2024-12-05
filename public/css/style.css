@@ -825,6 +825,7 @@ font-size: 1em;
                 text-decoration: none;
             }
         }
+        
     }
     
     /*CSS for Footer*/
@@ -903,6 +904,8 @@ font-size: 1em;
         position: relative;
         width: 100%;
         max-height: 600px;
+        display: flex;
+        flex-wrap: wrap;
     }
     
     #text-banner { 
@@ -915,16 +918,18 @@ font-size: 1em;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 50px;
         font-weight: bold;
+    }
         
-        a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #4D4D4D;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
+    #text-banner a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #4D4D4D;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+
+        
     }
     
      #catogery-divider {
@@ -1010,6 +1015,18 @@ font-size: 1em;
         justify-content: center;
         gap: 100px;
     }
+    @media (max-width: 768px) {
+        #text-banner {
+            font-size: 25px;
+        }
+        #select-catogeries a {
+            font-size: 20px;
+        }
+        #select-catogeries img {
+            width: 200px;
+        }
+    }
+    
     
     /* CSS for Login Page */
     .login {
@@ -1166,11 +1183,11 @@ font-size: 1em;
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
         width: 100%;
+        justify-content: center;
+        gap: 120px;
     }
     
     .Filter-Page{
-        margin-left:auto;
-        margin-right: auto;
         border-radius : 15px;
         align-items: left;
         padding-top: 40px;
@@ -1185,8 +1202,6 @@ font-size: 1em;
         box-sizing: border-box;
         max-width: 100%;
         justify-items: center;
-        margin-left: auto;
-        margin-right: auto;
     }
     
     .product-item {
@@ -1261,6 +1276,36 @@ font-size: 1em;
     .filter-btn:hover {
         background-color: #4D4D4D;
     }
+    @media (max-width: 768px) {
+        #product-text-banner {
+            font-size: 25px;
+        }
+    
+        .Products-Filter-Container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .Filter-Page {
+            max-width: 500px;
+            padding-top: 20px;
+        }
+    
+        #products-list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            
+        }
+    
+        .product-item {
+            max-height: 400px;
+            padding: 10px;
+        }
+    
+        .category-selector {
+            padding: 10px;
+        }
+    }
     
     /* CSS for the Product Page*/
     .product {
@@ -1269,6 +1314,7 @@ font-size: 1em;
         flex-direction: row;
         padding-left: 250px;
         padding-right: 250px;
+        justify-content: center;
     }
     .left-container {
         flex: 1;
@@ -1277,6 +1323,7 @@ font-size: 1em;
         img {
             width: 800px;
             height: 800px;
+            object-fit: contain;
         }
         margin-top: 20px;
         margin-right: 20px;
@@ -1326,6 +1373,7 @@ font-size: 1em;
                 background-color: #4D4D4D;
             }
         }
+        
     }
 
     /*CSS for Forgot Password Page*/
@@ -2276,6 +2324,7 @@ font-size: 1em;
     position: relative;
     width: 100%;
     max-height: 600px;
+    display: flex;
     }
 
     #text-banner { 
@@ -2545,6 +2594,7 @@ font-size: 1em;
     color: white;
     display: flex;
     width: 100%;
+    position: relative;
     }
 
     .Filter-Page{
