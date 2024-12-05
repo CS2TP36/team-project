@@ -859,6 +859,18 @@ font-size: 1em;
                 font-weight: bold;
                 text-decoration: none;
             }
+
+            button {
+                font-size: 25px;
+                width: 200px;
+                height: 50px;
+                padding: 10px;
+                border: 1px solid black;
+                background-color: #4D4D4D;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
         }
 
         button {
@@ -873,7 +885,7 @@ font-size: 1em;
         }
 
         button:hover {
-            background-color: #4D4D4D;
+            background-color: #2D2D2D;
         }
     }
     .footer-media-container {
@@ -2311,6 +2323,18 @@ font-size: 1em;
             font-weight: bold;
             text-decoration: none;
         }
+
+        button {
+            font-size: 25px;
+            width: 200px;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: #4D4D4D;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
     }
 
     button {
@@ -2325,7 +2349,7 @@ font-size: 1em;
     }
 
     button:hover {
-        background-color: #4D4D4D;
+        background-color: #2D2D2D;
     }
     }
 
