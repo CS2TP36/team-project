@@ -288,7 +288,7 @@ font-size: 1em;
         background-color: #000;
         color: white;
         font-size: 1rem;
-        
+
         padding: 12px 20px;
         border: none;
         border-radius: 3px;
@@ -1882,7 +1882,7 @@ font-size: 1em;
     body {
         line-height: 1.8;
         background-color: #757474;
-        color: #101010;
+        color: white;
         padding: 0;
         margin: 0;
     }
@@ -1935,7 +1935,7 @@ font-size: 1em;
         padding-top: 10px;
     }
     .contactInfo {
-        background-color: #fff;
+        background-color: #2D2D2D;
         padding: 25px;
         border-radius: 10px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -1943,10 +1943,11 @@ font-size: 1em;
         width: 90%;
         max-width: 900px;
         align-items: center;
+        color: white;
     }
 
     .contactInfo h2 {
-        color: #161515;
+        color: white;
         margin-bottom: 15px;
         font-size: 44px;
         align-items: center;
@@ -1956,6 +1957,7 @@ font-size: 1em;
     .contactInfo ul.info {
         list-style: none;
         margin-top: 20px;
+        
     }
 
     .contactInfo ul.info li {
@@ -1976,7 +1978,7 @@ font-size: 1em;
     }
 
     form {
-        background-color: #fff;
+        background-color: #2D2D2D;
         padding: 25px;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -1986,7 +1988,7 @@ font-size: 1em;
     form label {
         font-size: 1rem;
         font-weight: 600;
-        color: #161515;
+        color: white;
     }
 
     form input, form textarea, form select {
@@ -1995,15 +1997,15 @@ font-size: 1em;
         margin-top: 8px;
         margin-bottom: 15px;
         border-radius: 8px;
-        border: 1px solid #ddd;
+        border: 1px solid #2D2D2D;
         font-size: 1rem;
-        color: #333;
+        color: #2D2D2D;
     }
 
     form input[type="submit"], form input[type="reset"] {
         width: auto;
-        background-color: #000000;
-        color: white;
+        background-color: #2D2D2D;
+        color: rgb(252, 244, 244);
         border: none;
         cursor: pointer;
         padding: 12px 25px;
@@ -2013,13 +2015,13 @@ font-size: 1em;
     }
 
     form input[type="submit"]:hover, form input[type="reset"]:hover {
-        background-color: #000000;
+        background-color: #2D2D2D;
     }
 
     .social-links {
         text-align: center;
         padding: 25px;
-        background-color: #ececec;
+        background-color: #2D2D2D;
         margin-top: 50px;
         border-radius: 10px;
     }
@@ -2027,7 +2029,7 @@ font-size: 1em;
     .social-links h2 {
         font-size: 26px;
         margin-bottom: 14px;
-        color: #444;
+        color: #f8f7f7;
     }
 
     .social-links ul {
