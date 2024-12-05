@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AccountController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductLister;
 use App\Http\Controllers\ProductSearcher;
@@ -70,9 +71,7 @@ Route::get('/basket', function () {
 });
 
 // Show the checkout page
-Route::get('/checkout', function () {
-    return view('pages.checkout');
-});
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
 
 Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('products.search');
 
@@ -89,3 +88,4 @@ Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
