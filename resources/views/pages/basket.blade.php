@@ -17,39 +17,38 @@
                     <th>Quantity</th>
                     <th>Remove</th>
                     <th>Subtotal</th>
+
                 </tr>
             </thead>
             <tbody>
-    @forelse($basketItems as $item)
-        <tr>
-            <td><img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}" width="50"></td>
-            <td>{{ $item->product->name }}</td>
-            <td>{{ $item->size }}</td> <!-- Display size -->
-            <td>£{{ number_format($item->product->price, 2) }}</td>
-            <td>
-                <form action="{{ route('basket.update', $item->id) }}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <input type="number" name="quantity" value="{{ $item->quantity }}">
-                    <button type="submit">Update</button>
-                </form>
-            </td>
-            <td>
-                <form action="{{ route('basket.remove', $item->id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit">Remove</button>
-                </form>
-            </td>
-            <td>£{{ number_format($item->product->price * $item->quantity, 2) }}</td>
-        </tr>
-    @empty
-        <tr>
-            <td colspan="7">Your basket is empty!</td>
-        </tr>
-    @endforelse
-</tbody>
-
+                @forelse($basket as $id => $item)
+                    <tr>
+                        <td><img src="{{ $item['image'] }}" alt="{{ $item['name'] }}" width="50"></td>
+                        <td>{{ $item['name'] }}</td>
+                        <td>£{{ number_format($item['price'], 2) }}</td>
+                        <td>
+                            <form action="{{ route('basket.update', $id) }}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <input type="number" name="quantity" value="{{ $item['quantity'] }}">
+                                <button type="submit">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="{{ route('basket.remove', $id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                        <td>£{{ number_format($item['price'] * $item['quantity'], 2) }}</td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="6">Your basket is empty!</td>
+                    </tr>
+                @endforelse
+            </tbody>
         </table>
 
         <div>
@@ -63,5 +62,7 @@
     </section>
 </div>
 @endsection
+
+
 
 
