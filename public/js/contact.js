@@ -1,11 +1,11 @@
 function validateContactForm(event) {
     event.preventDefault();
 
-    const fullName = document.getElementById('Fullname').value.trim();
+    const fullName = document.getElementById('name').value.trim();
 
     const userEmail = document.getElementById('email').value.trim();
 
-    const userPhone = document.getElementById('Phone').value.trim();
+    const userPhone = document.getElementById('phone').value.trim();
 
     const userMessage = document.getElementById('message').value.trim();
 
@@ -20,7 +20,7 @@ function validateContactForm(event) {
         return false;
     }
 
-    let phoneRegex; //i got 3 countries chnage so ech country is different
+    let phoneRegex; // I got 3 countries change so ech country is different
 
     const userCountry = document.getElementById('country').value;
 
@@ -52,3 +52,4 @@ function validateContactForm(event) {
 
     alert(`Thank you, ${fullName}! Your message has been sent.`);
     document.querySelector("form").submit();
+}

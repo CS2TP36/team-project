@@ -26,6 +26,6 @@ class ContactController extends Controller
             ]);
             $contactItem->save();
         }
-        return back();
+        return redirect('/home')->with('message', 'Thanks for contacting us!');
     }
 }

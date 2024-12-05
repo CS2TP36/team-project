@@ -13,8 +13,8 @@
                     <h2>Contact Info</h2>
                     <ul class="info">
                         <li>
-                            <strong>Address:</strong> 90 Aston Street<br> 
-                            <strong>Post Code:</strong> B9 020 <br> 
+                            <strong>Address:</strong> 90 Aston Street<br>
+                            <strong>Post Code:</strong> B9 020 <br>
                             <strong>Email:</strong> <a href="mailto:sportwear@gmail.com">Sportwear@gmail.com</a><br>
                             <strong>Phone:</strong> 0121 898 919
                         </li>
@@ -23,7 +23,7 @@
 
                 <h1 class = "contact-header">Contact Me</h1>
 
-                <form action="none" onsubmit="validateContactForm(event)">
+                <form method="POST" action="/contact" onsubmit="validateContactForm(event)">
 
                     <label for="name">Full Name</label><br>
                     <input type="text" name="name" id="name" placeholder="Full Name" required><br>
@@ -31,8 +31,8 @@
                     <label for="email">Your Email</label><br>
                     <input type="email" name="email" id="email" placeholder="include@" required><br>
 
-                    <label for="subject">Contact Number</label><br>
-                    <input type="text" name="subject" id="subject" placeholder="+44" required><br>
+                    <label for="phone">Contact Number</label><br>
+                    <input type="text" name="phone" id="phone" placeholder="+44" required><br>
 
                     <label for="country">Country</label>
                     <select name="country" id="country">
@@ -58,7 +58,7 @@
                     <li><a href="https://twitter.com/"><img src="images/R.png" alt="Twitter"></a></li>
                     <li><a href="https://www.linkedin.com/"><img src="images/linkedIn_PNG8.png" alt="LinkedIn"></a></li>
                 </ul>
-                
+
         </div>
     </div>
 @endsection
