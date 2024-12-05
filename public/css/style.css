@@ -1036,6 +1036,7 @@ font-size: 1em;
         padding-right: 25px;
         align-items: center;
         margin: 0 auto;
+        margin-bottom: 30px;
 
         h2 {
             text-align: left;
@@ -1111,20 +1112,17 @@ font-size: 1em;
         }
     
         input {
-            width: 70%;
-            max-width: 350px;
+            max-width: 100%;
             border: 1px solid black;
             padding: 10px;
             margin-bottom: 10px;
+            width: 200px;
         }
     
         .new-customers {
             margin-left: 0;
         }
     
-        button {
-            max-width: 100%;
-        }
     }
     
     
@@ -1224,6 +1222,7 @@ font-size: 1em;
         border-radius : 15px;
         align-items: left;
         padding-top: 40px;
+        text-align: left;
     
     }
     
@@ -1261,6 +1260,7 @@ font-size: 1em;
     .category-selector {
         list-style: none;
         padding: 10px;
+        text-align: left;
     
     }
     
@@ -1309,7 +1309,7 @@ font-size: 1em;
     .filter-btn:hover {
         background-color: #4D4D4D;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1928px) {
         #product-text-banner {
             font-size: 25px;
         }
@@ -1322,6 +1322,7 @@ font-size: 1em;
         .Filter-Page {
             max-width: 500px;
             padding-top: 20px;
+
         }
     
         #products-list {
@@ -1335,9 +1336,7 @@ font-size: 1em;
             padding: 10px;
         }
     
-        .category-selector {
-            padding: 10px;
-        }
+
     }
     
     /* CSS for the Product Page*/
@@ -2358,7 +2357,8 @@ font-size: 1em;
     width: 100%;
     max-height: 600px;
     display: flex;
-    }
+    flex-wrap: wrap;   
+ }
 
     #text-banner { 
     position: absolute;
@@ -2465,17 +2465,30 @@ font-size: 1em;
     justify-content: center;
     gap: 100px;
     }
+    @media (max-width: 768px) {
+        #text-banner {
+            font-size: 25px;
+        }
+        #select-catogeries a {
+            font-size: 20px;
+        }
+        #select-catogeries img {
+            width: 200px;
+        }
+    }
+    
     
     /* CSS for Login Page */
     .login {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         color: white;
         max-width: 1400px;
-        margin-left: 300px;
-        margin-bottom: 20px;
         padding-left: 25px;
         padding-right: 25px;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
 
         h2 {
             text-align: left;
@@ -2536,6 +2549,37 @@ font-size: 1em;
         margin-bottom: 10px;
         p {
             margin-left: 10px;
+        }
+    }
+    @media (max-width: 768px) {
+        .login {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    
+        .login-sections {
+            flex-direction: column;
+        }
+    
+        .existing-customers, .new-customers {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    
+        input {
+            width: 70%;
+            max-width: 350px;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .new-customers {
+            margin-left: 0;
+        }
+    
+        button {
+            max-width: 100%;
         }
     }
 
@@ -2610,120 +2654,148 @@ font-size: 1em;
     }
 
     /*CSS for the Product Lists page*/
+    
     #product-text-banner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 60px;
-    font-weight: bold;
-    font-family: Arial;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+        font-family: Arial;
     }
-
+    
     .Products-Filter-Container{
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    display: flex;
-    width: 100%;
-    position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 120px;
     }
-
+    
     .Filter-Page{
-    margin-left:auto;
-    margin-right: auto;
-    border-radius : 15px;
-    align-items: left;
-    padding-top: 40px;
-
+        border-radius : 15px;
+        align-items: left;
+        padding-top: 40px;
+        text-align: left;
+    
     }
-
+    
     #products-list {
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    box-sizing: border-box;
-    max-width: 100%;
-    justify-items: center;
-    margin-left: auto;
-    margin-right: auto;
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        box-sizing: border-box;
+        max-width: 100%;
+        justify-items: center;
     }
-
+    
     .product-item {
-    text-align: center;
-    background-color: #D9D9D9;
-    padding: 20px;
-    border-radius: 10px;
-    display: block;
-    justify-content: space-evenly;
-    max-height: 420px;
-    margin-bottom: 20px;
+        text-align: center;
+        background-color: #D9D9D9;
+        padding: 20px;
+        border-radius: 10px;
+        display: block;
+        justify-content: space-evenly;
+        max-height: 420px;
+        margin-bottom: 20px;
     }
-
+    
     .product-details{
-    margin-top: 10px; 
+        margin-top: 10px; 
     }
-
+    
     .product-link{
-    list-style: none;
-    text-decoration: none;
-    color:  black;
-
+        list-style: none;
+        text-decoration: none;
+        color:  black;
+    
     }
-
     .category-selector {
-    background-color: black;
-    list-style: none;
-    padding: 10px;
+        list-style: none;
+        padding: 10px;
+        text-align: left;
+    
     }
-
+    
     .line-break{
-    background-color: white;
-    height: 2px;
-
+        background-color: black;
+        height: 2px;
+    
     }
-
+    
     .category {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding: 5px;
-    text-align: left;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-align: left;
     }
-
+    
     .category-buttons {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-    gap: 10px;
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        gap: 10px;
     }
-
+    
     input[type="radio"] {
-    accent-color: #4D4D4D;
-    cursor: pointer;
+        accent-color: #4D4D4D;
+        cursor: pointer;
     }
-
+    
     label {
-    cursor: pointer;
-    color: black;
+        cursor: pointer;
+        color: black;
     }
-
+    
     .filter-btn {
-    background-color: #4D4D4D;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .filter-btn:hover {
+        background-color: #4D4D4D;
+    }
+    @media (max-width: 1928px) {
+        #product-text-banner {
+            font-size: 25px;
+        }
+    
+        .Products-Filter-Container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .Filter-Page {
+            max-width: 500px;
+            padding-top: 20px;
+
+        }
+    
+        #products-list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            
+        }
+    
+        .product-item {
+            max-height: 400px;
+            padding: 10px;
+        }
+    
+
     }
 
-    .filter-btn:hover {
-    background-color: #4D4D4D;
-    }
 
      /* CSS for the Product Page*/
      .product {
@@ -2733,6 +2805,7 @@ font-size: 1em;
         flex-direction: row;
         padding-left: 250px;
         padding-right: 250px;
+        justify-content: center;
     }
 
     .left-container {
@@ -2742,6 +2815,7 @@ font-size: 1em;
         img {
             width: 800px;
             height: 800px;
+            object-fit: contain;
         }
         margin-top: 20px;
         margin-right: 20px;
