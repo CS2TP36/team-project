@@ -7,7 +7,7 @@
 @endphp
 @section('content')
     <div class="product">
-        
+
         <div class = "left-container">
             <!-- Image of the product -->
             <img src="{{ asset($product->getMainImage()) }}"></img>
@@ -43,8 +43,9 @@
         <button type="submit">Add to Basket</button>
     </form>
 
-    <!-- Add to Wishlist -->
+    <!-- Add to Wishlist
     <button type="button">Add to Wishlist</button>
+    -->
 </div>
 
 <script>
