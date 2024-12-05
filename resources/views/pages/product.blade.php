@@ -21,14 +21,13 @@
                 <h2>£{{$product['price']}}</h2>
             </div>
 
-           <!-- <div class = "size-selection">
+            <!--<div class = "size-selection">
                 <p>Choose size</p>
                 ( Three buttons, S, M, L )
                 <button type="button">S</button>
                 <button type="button">M</button>
                 <button type="button">L</button>
-            </div> --> 
-
+            </div> -->
             <div class="purchase-options">
     <!-- Add to Basket -->
     <form action="{{ route('basket.add') }}" method="POST">
@@ -37,12 +36,10 @@
         <input type="hidden" name="size" id="size" value="">
         <label for="quantity">Quantity:</label>
         <input type="number" id="quantity" name="quantity" value="1" min="1">
-
         <p>Choose size:</p>
-        <button type="button" onclick="selectSize('S')">S</button>
-        <button type="button" onclick="selectSize('M')">M</button>
-        <button type="button" onclick="selectSize('L')">L</button>
-
+        <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
+        <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
+        <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
         <button type="submit">Add to Basket</button>
     </form>
 
