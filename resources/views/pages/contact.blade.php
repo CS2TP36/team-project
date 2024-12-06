@@ -15,7 +15,7 @@
                         <li>
                             <strong>Address:</strong> 90 Aston Street<br>
                             <strong>Post Code:</strong> B9 020 <br>
-                            <strong>Email:</strong> <a href="mailto:sportwear@gmail.com">Sportwear@gmail.com</a><br>
+                            <strong>Email:</strong> <a href="mailto:support@thesportswear.website">support@thesportswear.website</a><br>
                             <strong>Phone:</strong> 0121 898 919
                         </li>
                     </ul>
