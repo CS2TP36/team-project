@@ -24,6 +24,7 @@
                 <h1 class = "contact-header">Contact Me</h1>
 
                 <form method="POST" action="/contact" onsubmit="validateContactForm(event)">
+                    @csrf
 
                     <label for="name">Full Name</label><br>
                     <input type="text" name="name" id="name" placeholder="Full Name" required><br>
@@ -33,14 +34,6 @@
 
                     <label for="phone">Contact Number</label><br>
                     <input type="text" name="phone" id="phone" placeholder="+44" required><br>
-
-                    <label for="country">Country</label>
-                    <select name="country" id="country">
-                        <option value="US">United States</option>
-                        <option value="GB">Great Britain</option>
-                        <option value="EURO">Europe</option>
-                    </select>
-                    <br>
 
                     <label for="message">Message</label><br>
                     <textarea name="message" id="message" cols="10" rows="7" placeholder="Start Typing Here" required></textarea><br>
