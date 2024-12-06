@@ -11,9 +11,14 @@ class Basket extends Model
 
     protected $fillable = ['user_id', 'session_id', 'product_id', 'size', 'quantity'];
 
-    public function product()
+    public function product(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Product::class);
+    }
+    public function getTotalPrice(): float|int
+    {
+        $singularPrice = $this->product()['price'];
+        return $this['quantity'] * $singularPrice;
     }
 }
 

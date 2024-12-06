@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // A place to temporarily store all the form values from the different forms
+    let valuesToSend = {
+        region: null,
+        fullName: null,
+        address: null,
+        postcode: null,
+        phone: null,
+        nameOnCard: null,
+        cardNumber: null,
+        expiryDate: null,
+        cvv: null
+    }
     // Safely access billing elements
     const billingInfo = {
         region: document.getElementById('region'),
@@ -15,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         expiryDate: document.getElementById('expiry-date'),
         cvv: document.getElementById('cvv')
     };
+
+    // getting all the next buttons as elements
+    const buttons = {
+        billing: document.getElementById('next-to-payment'),
+        payment: document.getElementById('next-to-summary'),
+        summary: document.getElementById('place-order-btn'),
+    }
 
     // Utility functions for error display
     function displayError(inputElement, message) {
@@ -112,6 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return isValid;
+    }
+    // puts all previous items into a single form and submits them
+    function placeOrder() {
+        let form = document.getElementById('order-form');
+        document.getEl
+        form.submit();
     }
 
     // Navigate to the next section
