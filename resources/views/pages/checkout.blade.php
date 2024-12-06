@@ -71,7 +71,7 @@
         </section>
 
         <section class="order-summary" id="order-summary-section" style="display: none;">
-            <form id="order-form" method="POST" action="{{route()}}">
+            <form id="order-form" method="POST" action="{{route('checkout.checkout')}}">
                 @csrf
                 <h2>Order Summary</h2>
                 <ul id="order-items"></ul>

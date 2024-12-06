@@ -14,7 +14,7 @@ class AccountController extends Controller
             return redirect('/login');
         }
 
-        // Retrievesn the user from the Auth
+        // Retrieves the user from the Auth
         $user = Auth::user();
 
         // Passes user to view

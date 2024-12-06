@@ -89,3 +89,4 @@ Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name(
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
+Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.checkout');
