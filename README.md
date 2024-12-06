@@ -1,5 +1,6 @@
 # CS2TP Team Project
 ### Team number:  36
+Site currently available at https://thesportswear.website/
 ## About
 Team members:
 - [Hamad Afzal](https://github.com/LOKI-HGR)
