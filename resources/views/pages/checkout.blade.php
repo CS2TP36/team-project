@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group">
                         <label for="postcode">Postcode</label>
-                        <input type="text" id="postcode" name="postcode" placeholder="HI" required aria-label="Postcode">
+                        <input type="text" id="postcode" name="postcode" placeholder="123 456" required aria-label="Postcode">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
