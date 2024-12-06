@@ -132,10 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return isValid;
     }
-    // puts all previous items into a single form and submits them
+    // puts all previous items into a single invisible form and submits them
     function placeOrder() {
         let form = document.getElementById('order-form');
-        document.getEl
+        let inputs = document.getElementsByName('final-value');
+        inputs[0].value = valuesToSend.region;
+        inputs[1].value = valuesToSend.fullName;
+        inputs[2].value = valuesToSend.address;
+        inputs[3].value = valuesToSend.postcode;
+        inputs[4].value = valuesToSend.phone;
+        inputs[5].value = valuesToSend.nameOnCard;
+        inputs[6].value = valuesToSend.cardNumber;
+        inputs[7].value = valuesToSend.expiryDate;
+        inputs[8].value = valuesToSend.cvv;
         form.submit();
     }
 
