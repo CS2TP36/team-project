@@ -21,7 +21,6 @@
             <label for="email">Confirm</label><br>
             <input type="password" id="confirm_password" name="passwords" required/><br>
 
-
             <button type="submit">Change Password</button>
         </form>
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AccountController;
+use App\Http\Controllers\Auth\PassChangeController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductLister;
@@ -39,6 +40,9 @@ Route::get('/test', function () {
 
 // Show the login page
 Route::get('/login', function () {
+    if (\Illuminate\Support\Facades\Auth::check()) {
+        return redirect('/home');
+    }
     return view('pages.login');
 });
 
@@ -90,3 +94,5 @@ Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name(
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.checkout');
+
+Route::get('/change-pass', [PassChangeController::class, 'show'])->name('change-pass.show');
