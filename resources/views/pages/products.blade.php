@@ -20,7 +20,7 @@
          Should return a list of products and do all the sorting for you
          if you give it the right parameters.
     -->
-    <form method="GET" action="">
+    <form method="GET" action="" id="productFilterForm">
         <div class=Products-Filter-Container>
             <div class="Filter-Page">
                 <ul class="category-selector">
@@ -131,7 +131,9 @@
     </div>
     </form>
     <script>
-        function applyFilters() {
+        document.getElementById('productFilterForm').addEventListener('submit', function(event) {
+            // stops it from doing something that breaks everything
+            event.preventDefault();
             // get the elements for price sorting
             let priceHigh = document.getElementById('high-to-low');
             let priceLow = document.getElementById('low-to-high');
@@ -207,8 +209,8 @@
 
             // generate the url
             const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}/${priceFilter}`;
-            window.open(url);
-        }
+            location.href = url;
+        });
     </script>
 
 @endsection
