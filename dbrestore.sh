@@ -1,3 +1,2 @@
-touch ./database/database.sqlite && rm ./database/database.sqlite
-php artisan migrate --force
+php artisan migrate:refresh
 php artisan db:seed
