@@ -6,11 +6,7 @@
             <li class="footer-list">Open Hours: 6:00 - 23:00</li>
             <li class="footer-list">Follow Our Socials</li>
         </ul>
-        <ul class="footer-media-container">
-            <li class="footerprime-list"><a href="https://x.com/" target= "_blank"><img src="{{asset('images/twitter-removebg-preview.png')}}" alt="Twitter"></a></li>
-            <li class="footerprime-list"><a href="https://facebook.com" target="_blank"><img src="{{asset('images/111.png')}}" alt="Facebook"></a></li>
-            <li class="footerprime-list"><a href="https://instagram.com" target="_blank"><img src="{{asset('images/instagram-logo-transparent-background-2.png')}}" alt="Instagram"></a></li>
-        </ul>
+
     </div>
     <div>
         <ul>
