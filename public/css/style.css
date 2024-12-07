@@ -2200,7 +2200,7 @@ font-size: 1em;
 
     /* Styling for p elements */
     p {
-        color: rgb(95, 10, 10);
+        color: white;
         font-size: 1em; /* paragraph text made the smallest*/
         margin-bottom: 15px; /* add spacing */
     }
@@ -2211,7 +2211,7 @@ font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
     align-items: center;
-    background: #6d0b0b;
+    background: #000000;
     padding-left: 15px;
     padding-right: 15px;
     height: 120px;
@@ -2234,7 +2234,7 @@ font-size: 1em;
         width: 600px;
         padding: 14px;
         border-radius: 15px;
-        background: #f6f6f6;
+        background: #580909;
         margin-left: 180px;
     } 
     
