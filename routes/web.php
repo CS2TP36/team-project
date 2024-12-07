@@ -96,3 +96,5 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.checkout');
 
 Route::get('/change-pass', [PassChangeController::class, 'show'])->name('change-pass.show');
+
+Route::post('/change-pass', [PassChangeController::class, 'change'])->name('change-pass.change');
