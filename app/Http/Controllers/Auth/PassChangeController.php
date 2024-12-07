@@ -24,12 +24,17 @@ class PassChangeController extends Controller
         }
         // validate the passwords
         $validated = $request->validate([
-            'password' => 'required|string|min:8|confirmed'
+            'password' => 'required|string|min:8|confirmed',
+            'password_confirmation' => 'required|string|min:8|same:password',
         ]);
         // gets the current user
-        $user = Auth::user();
+        $user = $request->user();
         // changes the password
-        $user['password'] = Hash::make($validated['password']);
+        $user->password = Hash::make($validated['password']);
+        $user->save();
+        if ($validated) {
+            return redirect('/home');
+        }
         return back()->withErrors('passChange', 'Something went wrong');
     }
 }
