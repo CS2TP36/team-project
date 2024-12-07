@@ -36,10 +36,10 @@
                     <input type="text" name="phone" id="phone" placeholder="+44" required><br>
 
                     <label for="message">Message</label><br>
-                    <textarea name="message" id="message" cols="10" rows="7" placeholder="Start Typing Here" required></textarea><br>
+                    <textarea name="message" id="message" cols="10" rows="7" placeholder="Start Typing Here" required style="resize: none"></textarea><br>
 
-                    <input type="submit" value="Submit">
                     <input type="reset" value="Erase All">
+                    <input type="submit" value="Submit">
                 </form>
             </div>
 
