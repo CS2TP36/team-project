@@ -1405,6 +1405,7 @@ main {
         font-size: 60px;
         font-weight: bold;
         font-family: Arial;
+        flex-wrap: wrap;
     }
 
     .Products-Filter-Container {
@@ -1413,6 +1414,7 @@ main {
         width: 100%;
         justify-content: center;
         gap: 120px;
+        flex-wrap: wrap;
     }
 
     .Filter-Page {
@@ -1426,7 +1428,7 @@ main {
     #products-list {
         padding-top: 50px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         box-sizing: border-box;
         max-width: 100%;
@@ -1508,35 +1510,7 @@ main {
         background-color: #4D4D4D;
     }
 
-    @media (max-width: 768px) {
-        #product-text-banner {
-            font-size: 25px;
-        }
-
-        .Products-Filter-Container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .Filter-Page {
-            max-width: 500px;
-            padding-top: 20px;
-
-        }
-
-        #products-list {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-
-        }
-
-        .product-item {
-            max-height: 400px;
-            padding: 10px;
-        }
-
-
-    }
+    
 
     /* CSS for the Product Page*/
 
@@ -3054,6 +3028,7 @@ main {
         width: 100%;
         justify-content: center;
         gap: 120px;
+        flex-wrap: wrap;
 
         li, label {
             color: white;
@@ -3071,7 +3046,7 @@ main {
     #products-list {
         padding-top: 50px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         box-sizing: border-box;
         max-width: 100%;
