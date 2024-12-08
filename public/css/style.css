@@ -154,7 +154,7 @@ main {
         * {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 5px;
             margin-top: 10px;
             box-sizing: border-box;
         }
@@ -1820,7 +1820,7 @@ main {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             margin-bottom: 10px;
-            padding: 0;
+            padding: 5px;
             box-sizing: border-box;
             color: white; /* basket and your basket white */
         }
@@ -1891,7 +1891,7 @@ main {
             padding: 5px;
             font-size: 1rem;
             border-radius: 5px;
-            border: 1px solid #F2F2F2;
+            border: 1px solid #060606;
         }
 
         table td a {
@@ -2067,7 +2067,27 @@ main {
             color: rgb(248, 246, 246);
 
         }
-
+        /* change colour for update and remove below  */
+        button:nth-of-type(1) {
+            background-color: rgb(11, 10, 10);
+            color: rgb(255, 255, 255);
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            
+        }
+        
+        button:nth-of-type(2) {
+            background-color: rgb(22, 21, 21);
+            color: rgb(247, 243, 243);
+            border: none;
+            cursor: pointer;
+            padding: 9px 14px;
+            border-radius: 6px;
+            
+        }
+        
 
     }
 
