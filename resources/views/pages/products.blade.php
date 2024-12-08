@@ -115,6 +115,11 @@
     </form>
 
     <div id="products-list">
+        @if(isset($message))
+            <div id="message">
+                <p>{{$message}}</p>
+            </div
+        @endif
         @foreach($products as $product)
             <div class="product-item">
                 <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link">
