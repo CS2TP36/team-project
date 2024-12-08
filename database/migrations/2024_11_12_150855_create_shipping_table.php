@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Order;
 
 return new class extends Migration {
     /**
@@ -13,7 +14,7 @@ return new class extends Migration {
         Schema::create('shipping', function (Blueprint $table) {
             $table->id();
             $table->date('shipping_date');
-            $table->date('delivery_date')->nullable();  // Allow NULL for delivery_date
+            $table->date('delivery_date');
             $table->string('home_address');
             $table->string('tracking_number');
             $table->timestamps();
