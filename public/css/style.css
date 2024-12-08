@@ -252,6 +252,10 @@ main {
             margin-bottom: 10px;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         div button {
             background-color: black;
             color: white;
@@ -1879,7 +1883,7 @@ main {
         }
 
         table tr:nth-child(even) {
-            background-color: #F2F2F2;
+            background-color: #4D4D4D;
         }
 
         table td {
@@ -1918,6 +1922,14 @@ main {
             border: 1px solid white;
             border-radius: 5px;
             margin-bottom: 10px;
+        }
+        
+        input {
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         div button {
@@ -2059,7 +2071,6 @@ main {
             transition: background-color 0.3s ease;
 
         }
-
 
         .basket-summary p,
         .basket-summary h3 {
