@@ -32,17 +32,17 @@ main {
         line-height: 1.6;
     
         /* styling for h1 elements */
-        h1{
-    color: black;
-    margin-bottom: 10px; /* add spacing below */
-    font-size: 2em; /*make h1 text the largest */
-    text-align: center;
+        h1 {
+            color: black;
+            margin-bottom: 10px; /* add spacing below */
+            font-size: 2em; /*make h1 text the largest */
+            text-align: center;
         }
         /* styling for p elements */
-        p{
-color: black;
-font-size: 1em; /* paragraph text smaller */
-margin-bottom: 15px; /* add spacing below */
+        p {
+            color: black;
+            font-size: 1em; /* paragraph text smaller */
+            margin-bottom: 15px; /* add spacing below */
         }
 
         /*styling for button */
@@ -62,8 +62,8 @@ font-size: 1em;
         }
     }
 
-   /* CSS for Basket Page*/
-   .basket {
+    /* CSS for Basket Page*/
+    .basket {
     * {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
@@ -311,7 +311,7 @@ font-size: 1em;
     }
     
     
-}
+    }
     
     /*CSS for Checkout Page*/
     .checkout {
@@ -784,6 +784,13 @@ font-size: 1em;
                 list-style: none;
                 text-decoration: none;
             }
+
+            /*Hover for Account and Basket*/
+            a:hover {
+                text-decoration: underline;
+                color: white;
+                transform: scale(1.0);
+            }
         }   
     }
     @media (max-width: 768px) {
@@ -823,7 +830,6 @@ font-size: 1em;
         
     }
     
-    
     .second-nav {
         font-family: Arial, Helvetica, sans-serif;
         justify-content: space-evenly;
@@ -858,6 +864,13 @@ font-size: 1em;
                 list-style: none;
                 text-decoration: none;
             }
+
+            /*Hover for Men and Women*/
+            a:hover {
+                text-decoration: underline;
+                color: white;
+                transform: scale(1.0);
+            }
         }
         
     }
@@ -885,6 +898,13 @@ font-size: 1em;
                 font-size: 25px;
                 font-weight: bold;
                 text-decoration: none;
+            }
+
+            /*Hover*/
+            a:hover {
+                text-decoration: underline;
+                color: white;
+                transform: scale(1.0);
             }
 
             button {
@@ -987,10 +1007,15 @@ font-size: 1em;
         color: white;
         text-decoration: none;
         border-radius: 8px;
-
-        
     }
-    
+
+    /*Hover for Shop Now, Colour needs amending*/
+    #text-banner a:hover {
+        background-color: #2D2D2D;
+        color: black;
+        transform: scale(1.0);
+    }
+
      #catogery-divider {
         font-family: Arial, Helvetica, sans-serif;
         background: black;
@@ -2413,6 +2438,13 @@ margin: 0;
             list-style: none;
             text-decoration: none;
         }
+
+        /*Hover for Men and Women*/
+        a:hover {
+            text-decoration: underline;
+            color: white;
+            transform: scale(1.0);
+        }
     }
     }
     
@@ -2527,6 +2559,13 @@ margin: 0;
         text-decoration: none;
         border-radius: 8px;
     }
+
+    /*Hover for Shop Now, Colour needs amending*/
+    a:hover {
+        background-color: #2D2D2D;
+        color: black;
+        transform: scale(1.0);
+    }
     }
 
     #catogery-divider {
@@ -2628,7 +2667,7 @@ margin: 0;
     /* CSS for Login Page */
     .login {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: rgb(0, 0, 0);
+        background-color: black;
         color: white;
         max-width: 1400px;
         padding-left: 25px;
@@ -2661,7 +2700,7 @@ margin: 0;
         }
 
         input {
-            color: white;
+            color: black;
             width: 100%;
             max-width: 500px;
             border: 1px solid black;
@@ -2681,7 +2720,7 @@ margin: 0;
         }
 
         button:hover {
-            background-color: #4D4D4D;
+            background-color: #2D2D2D;
         }
 
         a {
@@ -2791,7 +2830,7 @@ margin: 0;
     }
 
     button:hover {
-        background-color: #4D4D4D;
+        background-color: #2D2D2D;
     }
 
     .error {
@@ -2820,6 +2859,10 @@ margin: 0;
         width: 100%;
         justify-content: center;
         gap: 120px;
+
+        li, label {
+            color: white;
+        }
     }
     
     .Filter-Page{
@@ -2838,6 +2881,8 @@ margin: 0;
         box-sizing: border-box;
         max-width: 100%;
         justify-items: center;
+
+
     }
     
     .product-item {
@@ -2849,6 +2894,9 @@ margin: 0;
         justify-content: space-evenly;
         max-height: 420px;
         margin-bottom: 20px;
+        h3,p {
+            color: white;
+        }
     }
     
     .product-details{
@@ -2985,16 +3033,6 @@ margin: 0;
             button {
                 width: 50px;
                 height: 50px;
-                padding: 10px;
-                border: 1px solid black;
-                background-color: black;
-                color: white;
-                cursor: pointer;
-                margin-bottom: 10px;
-            }
-    
-            button:hover {
-                background-color: #2D2D2D;
             }
         }
     
@@ -3010,7 +3048,11 @@ margin: 0;
             }
     
             button:hover {
-                background-color: #4D4D4D;
+                background-color: #2D2D2D;
+            }
+
+            label {
+                color: white;
             }
         }
     }
