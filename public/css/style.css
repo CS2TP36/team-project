@@ -19,6 +19,7 @@ main {
 
 .light-theme {
     /*CSS for Account Page*/
+
     .account-page {
         background-color: white;
         font-family: Arial, Helvetica, sans-serif;
@@ -32,13 +33,16 @@ main {
         line-height: 1.6;
 
         /* styling for h1 elements */
+
         h1 {
             color: black;
             margin-bottom: 10px; /* add spacing below */
             font-size: 2em; /*make h1 text the largest */
             text-align: center;
         }
+
         /* styling for p elements */
+
         p {
             color: black;
             font-size: 1em; /* paragraph text smaller */
@@ -46,24 +50,27 @@ main {
         }
 
         /*styling for button */
-        button{
-background-color: black;
-color: white;
-padding: 10px; /*add padding*/
-border: none;
-border-radius: 5px; /* round corners*/
-cursor: pointer;
-font-size: 1em;
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px; /*add padding*/
+            border: none;
+            border-radius: 5px; /* round corners*/
+            cursor: pointer;
+            font-size: 1em;
         }
 
         /*styling when hovering */
+
         button:hover {
-    background-color: #4D4D4D; /* red on hover */
+            background-color: #4D4D4D; /* red on hover */
         }
     }
 
     /* CSS for change password page */
     /*  styling for change password container */
+
     .change {
         background-color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
@@ -141,258 +148,261 @@ font-size: 1em;
         }
     }
 
-   /* CSS for Basket Page*/
-   .basket {
-    * {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    /* CSS for Basket Page*/
 
-    body {
-        background-color: white;
-        color: black;
-        line-height: 1.6;
-        padding-top: 30px;
-    }
+    .basket {
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
 
-    header {
-        background-color: rgb(12, 12, 12);
-        color: white;
-        padding: 10px;
-        text-align: center;
-    }
+        body {
+            background-color: white;
+            color: black;
+            line-height: 1.6;
+            padding-top: 30px;
+        }
 
-    header h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
+        header {
+            background-color: rgb(12, 12, 12);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
 
-    section::after {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 30px;
-        background-color: white;
-        box-shadow: 0 4px 8px black;
-        border-radius: 8px;
-    }
-
-    table {
-        width: 83.3%;
-        border-collapse: collapse;
-        margin-left: 10px auto;
-        margin-bottom: 20px;
-    }
-
-    table th, table td {
-        padding: 15px;
-        text-align: center;
-        border-bottom: 1px solid white;
-    }
-
-    table th {
-        background-color: rgb(7, 7, 7);
-        padding: 10px 5px;
-        color: white;
-        width: auto;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-    }
-
-    table tr:nth-child(even) {
-        background-color: #F2F2F2;
-    }
-
-    table td {
-        font-size: 1rem;
-    }
-
-    table input[type="number"] {
-        width: 50px;
-        padding: 5px;
-        font-size: 1rem;
-        border-radius: 5px;
-        border: 1px solid #F2F2F2;
-    }
-
-    table td a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    table td a:hover {
-        text-decoration: underline;
-    }
-
-    div h3 {
-        color: black;
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    div input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-        border: 1px solid white;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-
-    div button {
-        background-color: black;
-        color: white;
-        font-size: 1rem;
-        padding: 8px 10px;
-        margin: -10px auto 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        position: relative;
-        top: -9px;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-    }
-
-    div button:hover {
-        background-color: #4D4D4D;
-        border-color: #ccc;
-    }
-
-    div p {
-        font-size: 1.1rem;
-        color: black;
-        line-height: 1.5;
-        margin: 10px 0;
-        padding: 6px 9px;
-        justify-content: space-between;
-        border-radius: 5px;
-
-    }
-
-    div strong {
-        font-size: 1.3rem;
-        color: black;
-    }
-
-
-    footer {
-        background-color: black;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        font-size: 0.9rem;
-    }
-
-    footer a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        margin: 0 5px;
-    }
-
-    footer a:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 758px) {
         header h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
-        table td, table th {
-            font-size: 0.8rem;
-            padding: 8px;
+        section::after {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 4px 8px black;
+            border-radius: 8px;
         }
 
-        div input[type="text"], div button {
+        table {
+            width: 83.3%;
+            border-collapse: collapse;
+            margin-left: 10px auto;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid white;
+        }
+
+        table th {
+            background-color: rgb(7, 7, 7);
+            padding: 10px 5px;
+            color: white;
+            width: auto;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #F2F2F2;
+        }
+
+        table td {
             font-size: 1rem;
+        }
+
+        table input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #F2F2F2;
+        }
+
+        table td a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        table td a:hover {
+            text-decoration: underline;
+        }
+
+        div h3 {
+            color: black;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        div input[type="text"] {
             width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
 
-        div p, div strong {
+        div button {
+            background-color: black;
+            color: white;
             font-size: 1rem;
+            padding: 8px 10px;
+            margin: -10px auto 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            top: -9px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
         }
+
+        div button:hover {
+            background-color: #4D4D4D;
+            border-color: #ccc;
+        }
+
+        div p {
+            font-size: 1.1rem;
+            color: black;
+            line-height: 1.5;
+            margin: 10px 0;
+            padding: 6px 9px;
+            justify-content: space-between;
+            border-radius: 5px;
+
+        }
+
+        div strong {
+            font-size: 1.3rem;
+            color: black;
+        }
+
 
         footer {
-            font-size: 0.8rem;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9rem;
         }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 758px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            table td, table th {
+                font-size: 0.8rem;
+                padding: 8px;
+            }
+
+            div input[type="text"], div button {
+                font-size: 1rem;
+                width: 100%;
+            }
+
+            div p, div strong {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+
+        .basket-summary {
+
+            max-width: 400px;
+            position: relative;
+            top: 40px;
+            float: right;
+            top: -10px;
+            right: 15px;
+            margin: 0 20px 0 0;
+            padding: 20px;
+
+            background-color: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .basket-summary h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .basket-summary p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .basket-summary p strong {
+            font-size: 1.3rem;
+            color: #000;
+        }
+
+        .basket-summary a button {
+
+            background-color: #000;
+            color: white;
+            font-size: 1rem;
+
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            outline: none;
+            transition: background-color 0.3s ease;
+
+        }
+
+
+        .basket-summary p,
+        .basket-summary h3 {
+            margin-bottom: 9px;
+
+        }
+
+
     }
-    .basket-summary {
-
-        max-width: 400px;
-        position: relative;
-        top: 40px;
-        float: right;
-        top: -10px;
-        right: 15px;
-        margin:  0 20px 0 0 ;
-        padding: 20px;
-
-        background-color: white;
-        border: 1px solid #e1e1e1;
-        border-radius: 4px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        color: #333;
-    }
-
-    .basket-summary h3 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    .basket-summary p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        border-bottom:1px solid #ccc ;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-    }
-
-    .basket-summary p strong {
-        font-size: 1.3rem;
-        color: #000;
-    }
-
-    .basket-summary a button {
-
-        background-color: #000;
-        color: white;
-        font-size: 1rem;
-
-        padding: 12px 20px;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-        outline: none;
-        transition: background-color 0.3s ease;
-
-    }
-
-
-
-    .basket-summary p,
-    .basket-summary h3 {
-        margin-bottom: 9px;
-
-    }
-
-
-}
 
     /*CSS for Checkout Page*/
+
     .checkout {
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -578,6 +588,7 @@ font-size: 1em;
     }
 
     /*CSS for Contact Page*/
+
     .contact {
         * {
             font-family: Arial, Helvetica, sans-serif;
@@ -631,16 +642,17 @@ font-size: 1em;
             border-radius: 8px;
             font-weight: bold;
             font-size: 3rem;
-            display:inline-block;
+            display: inline-block;
             align-items: center;
 
         }
 
-        .contact-header{
+        .contact-header {
             align-items: center;
             text-align: center;
             padding-top: 10px;
         }
+
         .contactInfo {
             background-color: #fff;
             padding: 25px;
@@ -783,7 +795,8 @@ font-size: 1em;
     }
 
     /*CSS for About Us Page*/
-    .aboutus{
+
+    .aboutus {
         background-color: white;
         font-family: Arial, Helvetica, sans-serif;
         max-width: 800px; /*keep the width restricted so readability is improved */
@@ -796,6 +809,7 @@ font-size: 1em;
         line-height: 1.6;
 
         /* Styling for h1 elements */
+
         h1 {
             color: black;
             margin-bottom: 10px; /* add some spacing */
@@ -804,6 +818,7 @@ font-size: 1em;
         }
 
         /* styling for h2 elements */
+
         h2 {
             color: black;
             margin-top: 20px; /* add spacing above */
@@ -812,6 +827,7 @@ font-size: 1em;
         }
 
         /* Styling for p elements */
+
         p {
             color: black;
             font-size: 1em; /* paragraph text made the smallest*/
@@ -820,6 +836,7 @@ font-size: 1em;
     }
 
     /* CSS for navbar*/
+
     .navbar {
         font-family: Arial, Helvetica, sans-serif;
         background: #000000;
@@ -858,24 +875,25 @@ font-size: 1em;
 
             a {
                 color: white;
-                font-size:25px;
+                font-size: 25px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
             }
 
             /*Hover for Account and Basket*/
+
             a:hover {
                 text-decoration: underline;
                 color: white;
                 transform: scale(1.0);
             }
-        }   
+        }
     }
+
     @media (max-width: 768px) {
         .navbar {
             height: 90px;
-
 
 
             .navbardiv {
@@ -886,9 +904,11 @@ font-size: 1em;
                 height: 90px;
                 width: 90px;
             }
+
             #search-bar {
                 flex-grow: 1;
             }
+
             .prime-list {
                 display: inline-block;
                 list-style: none;
@@ -897,19 +917,19 @@ font-size: 1em;
 
                 a {
                     color: white;
-                    font-size:15px;
+                    font-size: 15px;
                     font-weight: bold;
                     list-style: none;
                     text-decoration: none;
                 }
 
-        }
+            }
         }
 
 
     }
-    
-    
+
+
     .second-nav {
         font-family: Arial, Helvetica, sans-serif;
         justify-content: space-evenly;
@@ -925,7 +945,7 @@ font-size: 1em;
             align-items: center;
             width: 100%;
             text-align: center;
-            justify-content:center;
+            justify-content: center;
         }
 
         .subprime-list {
@@ -939,13 +959,14 @@ font-size: 1em;
 
             a {
                 color: white;
-                font-size:25px;
+                font-size: 25px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
             }
 
             /*Hover for Men and Women*/
+
             a:hover {
                 text-decoration: underline;
                 color: white;
@@ -956,6 +977,7 @@ font-size: 1em;
     }
 
     /*CSS for Footer*/
+
     .footer-check {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
@@ -981,6 +1003,7 @@ font-size: 1em;
             }
 
             /*Hover*/
+
             a:hover {
                 text-decoration: underline;
                 color: white;
@@ -999,7 +1022,6 @@ font-size: 1em;
                 margin-bottom: 10px;
             }
         }
-
 
 
         button:hover {
@@ -1090,13 +1112,14 @@ font-size: 1em;
     }
 
     /*Hover for Shop Now, Colour needs amending*/
+
     #text-banner a:hover {
         background-color: #2D2D2D;
         color: black;
         transform: scale(1.0);
     }
 
-     #catogery-divider {
+    #catogery-divider {
         font-family: Arial, Helvetica, sans-serif;
         background: black;
         align-items: center;
@@ -1179,13 +1202,16 @@ font-size: 1em;
         justify-content: center;
         gap: 100px;
     }
+
     @media (max-width: 768px) {
         #text-banner {
             font-size: 25px;
         }
+
         #select-catogeries a {
             font-size: 20px;
         }
+
         #select-catogeries img {
             width: 200px;
         }
@@ -1193,6 +1219,7 @@ font-size: 1em;
 
 
     /* CSS for Login Page */
+
     .login {
         font-family: Arial, Helvetica, sans-serif;
         max-width: 1400px;
@@ -1219,6 +1246,7 @@ font-size: 1em;
         flex: 1;
         max-width: 650px;
         padding: 5px;
+
         label {
             display: block;
         }
@@ -1256,10 +1284,12 @@ font-size: 1em;
     .new-customers {
         margin-left: 35px;
         margin-bottom: 10px;
+
         p {
             margin-left: 10px;
         }
     }
+
     @media (max-width: 768px) {
         .login {
             padding-left: 15px;
@@ -1290,9 +1320,8 @@ font-size: 1em;
     }
 
 
-
-
     /*CSS for Register Page*/
+
     .register {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
@@ -1374,7 +1403,7 @@ font-size: 1em;
         font-family: Arial;
     }
 
-    .Products-Filter-Container{
+    .Products-Filter-Container {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
         width: 100%;
@@ -1382,8 +1411,8 @@ font-size: 1em;
         gap: 120px;
     }
 
-    .Filter-Page{
-        border-radius : 15px;
+    .Filter-Page {
+        border-radius: 15px;
         align-items: left;
         padding-top: 40px;
         text-align: left;
@@ -1411,16 +1440,17 @@ font-size: 1em;
         margin-bottom: 20px;
     }
 
-    .product-details{
+    .product-details {
         margin-top: 10px;
     }
 
-    .product-link{
+    .product-link {
         list-style: none;
         text-decoration: none;
-        color:  black;
+        color: black;
 
     }
+
     .category-selector {
         list-style: none;
         padding: 10px;
@@ -1428,7 +1458,7 @@ font-size: 1em;
 
     }
 
-    .line-break{
+    .line-break {
         background-color: black;
         height: 2px;
 
@@ -1473,6 +1503,7 @@ font-size: 1em;
     .filter-btn:hover {
         background-color: #4D4D4D;
     }
+
     @media (max-width: 768px) {
         #product-text-banner {
             font-size: 25px;
@@ -1504,6 +1535,7 @@ font-size: 1em;
     }
 
     /* CSS for the Product Page*/
+
     .product {
         font-family: Arial, sans-serif;
         display: flex;
@@ -1512,15 +1544,18 @@ font-size: 1em;
         padding-right: 250px;
         justify-content: center;
     }
+
     .left-container {
         flex: 1;
         max-width: 800px;
         max-height: 800px;
+
         img {
             width: 800px;
             height: 800px;
             object-fit: contain;
         }
+
         margin-top: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
@@ -1536,7 +1571,7 @@ font-size: 1em;
         padding-left: 50px;
         padding-right: 50px;
 
-        .line-break{
+        .line-break {
             background-color: black;
             width: 500px -50px;
             height: 2px;
@@ -1546,6 +1581,7 @@ font-size: 1em;
         .size-selection {
             max-width: 50px;
             padding: 10px;
+
             button {
                 width: 50px;
                 height: 50px;
@@ -1581,12 +1617,14 @@ font-size: 1em;
     }
 
     /*CSS for Forgot Password Page*/
+
     .reset {
         background-color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
         margin-left: 300px;
         padding-left: 25px;
         padding-right: 25px;
+
         h2 {
             text-align: left;
             margin-left: 5px;
@@ -1602,9 +1640,11 @@ font-size: 1em;
             flex: 1;
             max-width: 650px;
             padding: 5px;
+
             label {
                 display: block;
             }
+
             margin-bottom: 10px;
         }
 
@@ -1642,52 +1682,59 @@ font-size: 1em;
 .dark-theme {
     background-color: #2D2D2D;
     /*CSS for Account Page*/
+
     .account-page {
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 800px; /* keep width restricted*/
-    padding: 20px; /*add spacing*/
-    margin: 0 auto; /* cntre the container*/
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px; /*round the corners */
-    box-shadow: 0 4px 8px black;
-    line-height: 1.6;
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 800px; /* keep width restricted*/
+        padding: 20px; /*add spacing*/
+        margin: 0 auto; /* cntre the container*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px; /*round the corners */
+        box-shadow: 0 4px 8px black;
+        line-height: 1.6;
 
 
-    /* styling for h1 elements */
-    h1{
-    color: white;
-    margin-bottom: 10px; /* add spacing below */
-    font-size: 2em; /*make h1 text the largest */
-    text-align: center;
-    }
-    /* styling for p elements */
-    p{
-color: white;
-font-size: 1em; /* paragraph text smaller */
-margin-bottom: 15px; /* add spacing below */
-    }
+        /* styling for h1 elements */
 
-    /*styling for button */
-    button{
-background-color: #4D4D4D;
-color: white;
-padding: 10px; /*add padding*/
-border: none;
-border-radius: 5px; /* round corners*/
-cursor: pointer;
-font-size: 1em;
-    }
+        h1 {
+            color: white;
+            margin-bottom: 10px; /* add spacing below */
+            font-size: 2em; /*make h1 text the largest */
+            text-align: center;
+        }
 
-    /*styling when hovering */
-    button:hover {
-    background-color: #2D2D2D; 
-    }
+        /* styling for p elements */
+
+        p {
+            color: white;
+            font-size: 1em; /* paragraph text smaller */
+            margin-bottom: 15px; /* add spacing below */
+        }
+
+        /*styling for button */
+
+        button {
+            background-color: #4D4D4D;
+            color: white;
+            padding: 10px; /*add padding*/
+            border: none;
+            border-radius: 5px; /* round corners*/
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        /*styling when hovering */
+
+        button:hover {
+            background-color: #2D2D2D;
+        }
     }
 
     /* CSS for change password page */
     /*  styling for change password container */
+
     .change {
         background-color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
@@ -1766,25 +1813,27 @@ font-size: 1em;
     }
 
 
-
     /* CSS for Basket Page*/
+
     .basket {
         * {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
+            margin-bottom: 10px;
             padding: 0;
             box-sizing: border-box;
+            color: white; /* basket and your basket white */
         }
 
         body {
-            background-color: white;
-            color: black;
+            background-color: rgb(248, 246, 246);
+            color: rgb(252, 248, 248);
             line-height: 1.6;
             padding-top: 30px;
         }
 
         header {
-            background-color: rgb(12, 12, 12);
+            background-color: rgb(247, 241, 241);
             color: white;
             padding: 10px;
             text-align: center;
@@ -1794,14 +1843,16 @@ font-size: 1em;
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 10px;
+
         }
+
 
         section::after {
             max-width: 1200px;
             margin: 0 auto;
             padding: 30px;
             background-color: white;
-            box-shadow: 0 4px 8px black;
+            box-shadow: 0 4px 8px rgb(10, 10, 10);
             border-radius: 8px;
         }
 
@@ -1951,6 +2002,7 @@ font-size: 1em;
                 font-size: 0.8rem;
             }
         }
+
         .basket-summary {
 
             max-width: 400px;
@@ -1959,10 +2011,10 @@ font-size: 1em;
             float: right;
             top: -10px;
             right: 15px;
-            margin:  0 20px 0 0 ;
+            margin: 0 20px 0 0;
             padding: 20px;
 
-            background-color: #2D2D2D;
+            background-color: #050505;
             border: 1px solid #0a0a0a;
             border-radius: 4px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -1972,27 +2024,28 @@ font-size: 1em;
         .basket-summary h3 {
             font-size: 1.5rem;
             font-weight: bold;
-
+            color: white;
             margin-bottom: 15px;
         }
 
         .basket-summary p {
             font-size: 1.2rem;
             line-height: 1.6;
-            border-bottom:1px solid #ccc ;
+            border-bottom: 1px solid #ccc;
             margin-bottom: 10px;
             padding-bottom: 10px;
+            color: white;
         }
 
         .basket-summary p strong {
             font-size: 1.3rem;
-            color: #000;
+            color: #f1efef;
         }
 
         .basket-summary a button {
 
-            background-color: #000;
-            color: white;
+            background-color: #4D4D4D;
+            color: rgb(249, 243, 243);
             font-size: 1rem;
             padding: 12px 20px;
             border: none;
@@ -2008,11 +2061,10 @@ font-size: 1em;
         }
 
 
-
         .basket-summary p,
         .basket-summary h3 {
             margin-bottom: 9px;
-            color: white;
+            color: rgb(248, 246, 246);
 
         }
 
@@ -2020,737 +2072,752 @@ font-size: 1em;
     }
 
     /*CSS for Checkout Page*/
+
     .checkout {
         font-family: Arial, Helvetica, sans-serif;
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        color: black;
-        margin: 0;
-        padding: 0;
-    }
 
-    .checkout-container {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px black;
-    }
-
-    h1 {
-        font-size: 28px;
-        font-weight: bold;
-        color: white;
-        padding-left: 10px;
-    }
-
-    h2 {
-        font-size: 20px;
-        color: white;
-        margin-bottom: 20px;
-        padding-left: 10px;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-    .form-group label {
-        font-weight: 600;
-        color: white;
-        margin-bottom: 8px;
-        font-size: 16px;
-        display: block;
-    }
-
-    .form-group input,
-    .form-group select {
-        width: 100%;
-        padding: 12px;
-        font-size: 14px;
-        border: 1px solid #D9D9D9;
-        border-radius: 6px;
-        background-color: #F9F9F9;
-        color: #4D4D4D;
-        box-sizing: border-box;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus {
-        outline: none;
-        border-color: black;
-        background-color: white;
-    }
-
-    .form-group input::placeholder,
-    .form-group select {
-        color: black;
-    }
-
-    /* Error Styles */
-
-    .form-group .error-message {
-        color: red;
-        font-size: 12px;
-        margin-top: 5px;
-        font-weight: bold;
-        position: absolute;
-        bottom: -18px;
-        left: 0;
-    }
-
-    .form-group input.error,
-    .form-group select.error {
-        border-color: red;
-        background-color: #F9D9D9;
-    }
-
-    /* Buttons */
-
-    button {
-        background-color: black;
-        color: white;
-        font-size: 16px;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    button:hover {
-        background-color: black;
-        transform: scale(1.05);
-    }
-
-    button:active {
-        background-color: #4D4D4D;
-        transform: scale(0.98);
-    }
-
-    .total {
-        font-size: 18px;
-        font-weight: bold;
-        text-align: right;
-        margin-top: 20px;
-        color: black;
-    }
-
-    .order-summary {
-        margin-bottom: 40px;
-    }
-
-    .order-summary ul {
-        padding: 0;
-        list-style: none;
-        font-size: 16px;
-    }
-
-    .order-summary ul li {
-        padding: 8px 0;
-        border-bottom: 1px solid #D9D9D9;
-        margin-bottom: 8px;
-    }
-
-    .order-summary .total {
-        font-size: 20px;
-        font-weight: bold;
-        color: black;
-    }
-
-    @media (max-width: 768px) {
-        .checkout-container {
-            padding: 15px;
-            margin: 20px;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
         }
 
-        header h1 {
-            font-size: 24px;
+        .checkout-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px black;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            padding-left: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+            font-size: 16px;
+            display: block;
         }
 
         .form-group input,
         .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #D9D9D9;
+            border-radius: 6px;
+            background-color: #F9F9F9;
+            color: #4D4D4D;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: black;
+            background-color: white;
+        }
+
+        .form-group input::placeholder,
+        .form-group select {
+            color: black;
+        }
+
+        /* Error Styles */
+
+        .form-group .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: bold;
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+        }
+
+        .form-group input.error,
+        .form-group select.error {
+            border-color: red;
+            background-color: #F9D9D9;
+        }
+
+        /* Buttons */
+
+        button {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: black;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #4D4D4D;
+            transform: scale(0.98);
+        }
+
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+            color: black;
+        }
+
+        .order-summary {
+            margin-bottom: 40px;
+        }
+
+        .order-summary ul {
+            padding: 0;
+            list-style: none;
             font-size: 16px;
         }
 
-        button {
-            width: 100%;
-            padding: 14px;
-            font-size: 18px;
+        .order-summary ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #D9D9D9;
+            margin-bottom: 8px;
         }
 
         .order-summary .total {
-            font-size: 22px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        header h1 {
-            font-size: 22px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
         }
 
-        .form-group input,
-        .form-group select {
-            font-size: 14px;
+        @media (max-width: 768px) {
+            .checkout-container {
+                padding: 15px;
+                margin: 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .form-group input,
+            .form-group select {
+                font-size: 16px;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px;
+                font-size: 18px;
+            }
+
+            .order-summary .total {
+                font-size: 22px;
+            }
         }
 
-        button {
-            font-size: 16px;
-            padding: 12px;
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            .form-group input,
+            .form-group select {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 12px;
+            }
         }
-    }
     }
 
     /*CSS for Contact Page*/
     .contact {
-    * {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-        line-height: 1.8;
-        background-color: #757474;
-        color: white;
-        padding: 0;
-        margin: 0;
-    }
+        body {
+            line-height: 1.8;
+            background-color: #070707;
+            color: white;
+            padding: 0;
+            margin: 0;
+        }
 
-    .banner {
-        background-image: url('images/output\ 90\).jpg');
-        background-size: 100% auto;
-        background-position: center center;
-        background-repeat: no-repeat;
-        color: #fff;
-        text-align: center;
-        padding: 40px 0;
-        margin: 0;
-        font-size: 2.5rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-bottom: 2px solid #fff;
-        border-top: 2px solid #fff;
-        position: relative;
-    }
-
-    .banner::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 70%;
-
-        z-index: 0;
-    }
-
-    .banner h1 {
-        z-index: 1;
-        color: rgb(250, 245, 245);
-        background: rgb(0, 0, 0);
-        padding: 15px 30px;;
-        border-radius: 8px;
-        font-weight: bold;
-        font-size: 3rem;
-        display:inline-block;
-        align-items: center;
-
-    }
-
-    .contact-header{
-        align-items: center;
-        text-align: center;
-        padding-top: 10px;
-    }
-    .contactInfo {
-        background-color: #2D2D2D;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        margin: 25px auto;
-        width: 90%;
-        max-width: 900px;
-        align-items: center;
-        color: white;
-    }
-
-    .contactInfo h2 {
-        color: white;
-        margin-bottom: 15px;
-        font-size: 44px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .contactInfo ul.info {
-        list-style: none;
-        margin-top: 20px;
-
-    }
-
-    .contactInfo ul.info li {
-        margin-bottom: 15px;
-        font-size: 20px;
-    }
-
-    .contactInfo ul.info li span {
-        display: block;
-        margin-top: 7px;
-    }
-
-    .contactInfo ul.info li img {
-        width: 20px;
-        height: 22px;
-        vertical-align: middle;
-        margin-right: 12px;
-    }
-
-    form {
-        background-color: #2D2D2D;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        margin-top: 25px;
-    }
-
-    form label {
-        font-size: 1rem;
-        font-weight: 600;
-        color: white;
-    }
-
-    form input, form textarea, form select {
-        width: 100%;
-        padding: 12px 15px;
-        margin-top: 8px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        border: 1px solid #2D2D2D;
-        font-size: 1rem;
-        color: #2D2D2D;
-    }
-
-    form input[type="submit"], form input[type="reset"] {
-        width: auto;
-        background-color: #2D2D2D;
-        color: rgb(252, 244, 244);
-        border: none;
-        cursor: pointer;
-        padding: 12px 25px;
-        font-size: 1.1rem;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-    }
-
-    form input[type="submit"]:hover, form input[type="reset"]:hover {
-        background-color: #2D2D2D;
-    }
-
-    .social-links {
-        text-align: center;
-        padding: 25px;
-        background-color: #2D2D2D;
-        margin-top: 50px;
-        border-radius: 10px;
-    }
-
-    .social-links h2 {
-        font-size: 26px;
-        margin-bottom: 14px;
-        color: #f8f7f7;
-    }
-
-    .social-links ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .social-links ul li {
-        display: inline-block;
-    }
-
-    .social-links ul li a img {
-        width: 35px;
-        height: auto;
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .social-links ul li a img:hover {
-        transform: scale(1.15);
-        filter: brightness(1.2);
-    }
-
-    @media (max-width: 768px) {
         .banner {
-            font-size: 1.5rem;
-            padding: 15px 10px;
+            background-image: url('images/output\ 90\).jpg');
+            background-size: 100% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+            border-top: 2px solid #fff;
+            position: relative;
         }
 
-        .contactInfo, form, .social-media {
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+
+            z-index: 0;
+        }
+
+        .banner h1 {
+            z-index: 1;
+            color: rgb(250, 245, 245);
+            background: rgb(0, 0, 0);
+            padding: 15px 30px;;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 3rem;
+            display:inline-block;
+            align-items: center;
+
+        }
+
+        .contact-header{
+            align-items: center;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .contactInfo {
+            background-color: #050505;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin: 25px auto;
             width: 90%;
-            padding: 15px;
+            max-width: 900px;
+            align-items: center;
+            color: white;
         }
 
-        .contactInfo h2, form label {
-            font-size: 1.4rem;
+        .contactInfo h2 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 44px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contactInfo ul.info {
+            list-style: none;
+            margin-top: 20px;
+
+        }
+
+        .contactInfo ul.info li {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .contactInfo ul.info li span {
+            display: block;
+            margin-top: 7px;
+        }
+
+        .contactInfo ul.info li img {
+            width: 20px;
+            height: 22px;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+
+        form {
+            background-color: #030303;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 25px;
+        }
+
+        form label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 12px 15px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #4D4D4D;
+            font-size: 1rem;
+            color: #4D4D4D;
+            background-color: white;
+        }
+
+
+        form input[type="submit"], form input[type="reset"] {
+            width: auto;
+            background-color: #4D4D4D;
+            color: rgb(253, 253, 253);
+            border: none;
+            cursor: pointer;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover, form input[type="reset"]:hover {
+            background-color: #2D2D2D;
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 25px;
+            background-color: #2D2D2D;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .social-links h2 {
+            font-size: 26px;
+            margin-bottom: 14px;
+            color: #f8f7f7;
+        }
+
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links ul li {
+            display: inline-block;
         }
 
         .social-links ul li a img {
-            width: 30px;
+            width: 35px;
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .social-links ul li a img:hover {
+            transform: scale(1.15);
+            filter: brightness(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                font-size: 1.5rem;
+                padding: 15px 10px;
+            }
+
+            .contactInfo, form, .social-media {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .contactInfo h2, form label {
+                font-size: 1.4rem;
+            }
+
+            .social-links ul li a img {
+                width: 30px;
+            }
         }
     }
-    }
-
     /*CSS for About Us*/
-    .aboutus{
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 800px; /*keep the width restricted so readability is improved */
-    padding: 20px; /* add some spacing in the container (keeps text away from edges) */
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px; /*round the cornres*/
-    box-shadow: 0 4px 8px black;
-    line-height: 1.6;
 
-    /* Styling for h1 elements */
-    h1 {
-        color: white;
-        margin-bottom: 10px; /* add some spacing */
-        font-size: 2em; /* make h1 text the largest*/
-        text-align: center;
-    }
+    .aboutus {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 800px; /*keep the width restricted so readability is improved */
+        padding: 20px; /* add some spacing in the container (keeps text away from edges) */
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px; /*round the cornres*/
+        box-shadow: 0 4px 8px black;
+        line-height: 1.6;
 
-    /* styling for h2 elements */
-    h2 {
-        color: white;
-        margin-top: 20px; /* add spacing above */
-        margin-bottom: 10px; /*add spacing below */
-        font-size: 1.5em; /*make h2 text smaller than h1 */
-    }
+        /* Styling for h1 elements */
 
-    /* Styling for p elements */
-    p {
-        color: white;
-        font-size: 1em; /* paragraph text made the smallest*/
-        margin-bottom: 15px; /* add spacing */
-    }
+        h1 {
+            color: white;
+            margin-bottom: 10px; /* add some spacing */
+            font-size: 2em; /* make h1 text the largest*/
+            text-align: center;
+        }
+
+        /* styling for h2 elements */
+
+        h2 {
+            color: white;
+            margin-top: 20px; /* add spacing above */
+            margin-bottom: 10px; /*add spacing below */
+            font-size: 1.5em; /*make h2 text smaller than h1 */
+        }
+
+        /* Styling for p elements */
+
+        p {
+            color: white;
+            font-size: 1em; /* paragraph text made the smallest*/
+            margin-bottom: 15px; /* add spacing */
+        }
     }
 
     /*CSS for navbar*/
+
     .navbar {
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-between;
-    align-items: center;
-    background: #000000;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 120px;
-
-    .navbardiv {
-        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        justify-content: center;
-        gap: 300px;
-    }
-
-    .logo {
-        display: inline-block;
+        background: #000000;
+        padding-left: 15px;
+        padding-right: 15px;
         height: 120px;
-        width: 130px;
-    }
 
-    #search-bar {
-        width: 600px;
-        padding: 14px;
-        border-radius: 15px;
-        background: #f6f6f6;
-        margin-left: 180px;
-    }
+        .navbardiv {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            gap: 300px;
+        }
 
-    .prime-list {
-        gap: 30px;
-        display: inline-block;
-        padding-right: 30px;
-        margin-right: 20px;
-        list-style: none;
-        text-decoration: none;
+        .logo {
+            display: inline-block;
+            height: 120px;
+            width: 130px;
+        }
 
-        a {
-            color: white;
-            font-size:25px;
-            font-weight: bold;
+        #search-bar {
+            width: 600px;
+            padding: 14px;
+            border-radius: 15px;
+            background: #f6f6f6;
+            margin-left: 180px;
+        }
+
+        .prime-list {
+            gap: 30px;
+            display: inline-block;
+            padding-right: 30px;
+            margin-right: 20px;
             list-style: none;
             text-decoration: none;
+
+            a {
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+                list-style: none;
+                text-decoration: none;
+            }
         }
-    }
     }
 
     .second-nav {
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-evenly;
-    align-items: center;
-    background: #4D4D4D;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 70px;
-    display: flex;
-
-    .second-navdiv {
-        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: space-evenly;
         align-items: center;
-        width: 100%;
-        text-align: center;
-        justify-content:center;
-    }
+        background: #4D4D4D;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 70px;
+        display: flex;
 
-    .subprime-list {
-        color: white;
-        font-size: 25px;
-        text-align: center;
-        display: inline-block;
-        padding: 40px;
-        list-style: none;
-        text-decoration: none;
+        .second-navdiv {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
 
-        a {
+        .subprime-list {
             color: white;
-            font-size:25px;
-            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+            display: inline-block;
+            padding: 40px;
             list-style: none;
             text-decoration: none;
-        }
 
-        /*Hover for Men and Women*/
-        a:hover {
-            text-decoration: underline;
-            color: white;
-            transform: scale(1.0);
+            a {
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+                list-style: none;
+                text-decoration: none;
+            }
+
+            /*Hover for Men and Women*/
+
+            a:hover {
+                text-decoration: underline;
+                color: white;
+                transform: scale(1.0);
+            }
         }
-    }
     }
 
     /*CSS for Footer*/
+
     .footer-check {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    padding: 20px;
-    height: 300px;
-    margin-top: auto;
-
-    .footer1 {
+        font-family: Arial, Helvetica, sans-serif;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: space-between;
-    }
+        background-color: black;
+        padding: 20px;
+        height: 300px;
+        margin-top: auto;
 
-    .footer-list {
-        color: white;
-        font-size: 25px;
-        text-align: center;
-        display: block;
-        padding: 10px;
+        .footer1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-        a {
+        .footer-list {
             color: white;
             font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
+            text-align: center;
+            display: block;
+            padding: 10px;
+
+            a {
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            button {
+                font-size: 25px;
+                width: 200px;
+                height: 50px;
+                padding: 10px;
+                border: 1px solid black;
+                background-color: #4D4D4D;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
         }
 
         button {
-            font-size: 25px;
-            width: 200px;
+            width: 50px;
             height: 50px;
             padding: 10px;
             border: 1px solid black;
-            background-color: #4D4D4D;
+            background-color: black;
             color: white;
             cursor: pointer;
             margin-bottom: 10px;
         }
-    }
 
-    button {
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        border: 1px solid black;
-        background-color: black;
-        color: white;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
-
-    button:hover {
-        background-color: #2D2D2D;
-    }
+        button:hover {
+            background-color: #2D2D2D;
+        }
     }
 
     .footer-media-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-    text-decoration: none;
-    list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+        text-decoration: none;
+        list-style: none;
     }
 
     .footerprime-list img {
-    height: 40px;
-    width: 40px;
-    list-style: none;
+        height: 40px;
+        width: 40px;
+        list-style: none;
     }
 
     /*CSS for Home page*/
+
     #banner {
-    width: 100%;
-    position: relative;
-    object-fit: cover;
-    max-height: 600px;
+        width: 100%;
+        position: relative;
+        object-fit: cover;
+        max-height: 600px;
     }
 
     #banner-container {
-    position: relative;
-    width: 100%;
-    max-height: 600px;
-    display: flex;
-    flex-wrap: wrap;
- }
+        position: relative;
+        width: 100%;
+        max-height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     #text-banner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-
-    a {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: #4D4D4D;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
         color: white;
-        text-decoration: none;
-        border-radius: 8px;
-    }
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        font-weight: bold;
 
-    /*Hover for Shop Now, Colour needs amending*/
-    a:hover {
-        background-color: #2D2D2D;
-        color: black;
-        transform: scale(1.0);
-    }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4D4D4D;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        /*Hover for Shop Now, Colour needs amending*/
+
+        a:hover {
+            background-color: #2D2D2D;
+            color: black;
+            transform: scale(1.0);
+        }
     }
 
     #catogery-divider {
-    font-family: Arial, Helvetica, sans-serif;
-    background: black;
-    align-items: center;
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        background: black;
+        align-items: center;
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
 
-    p {
-        color: white;
-        text-align: center;
-        font-size: 35px;
-    }
+        p {
+            color: white;
+            text-align: center;
+            font-size: 35px;
+        }
     }
 
     #catogery-section {
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    display: flex;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        display: flex;
     }
 
     #category-section ul {
-    font-family: Arial, Helvetica, sans-serif;
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
     }
 
     #category-section ul li {
-    margin: 10px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+        margin: 10px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
     }
 
     #select-catogeries img {
-    width: 300px;
-    height: auto;
-    display: block;
-    margin-bottom: 5px;
-    border-radius: 20px;
-    border: 5px solid black;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    transition: background-color 0.4s, transform 0.4s;
+        width: 300px;
+        height: auto;
+        display: block;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        border: 5px solid black;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        transition: background-color 0.4s, transform 0.4s;
     }
 
     #select-catogeries img:hover {
-    background-color: rgb(153, 148, 148);
-    transform: scale(1.04);
+        background-color: rgb(153, 148, 148);
+        transform: scale(1.04);
     }
 
     #select-catogeries a {
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    border-radius: 20px;
-    border: 5px solid black;
-    background-color: #000000;
-    flex-wrap: wrap;
-    transition: background-color 0.4s;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        border-radius: 20px;
+        border: 5px solid black;
+        background-color: #000000;
+        flex-wrap: wrap;
+        transition: background-color 0.4s;
     }
 
     #select-catogeries a:hover {
-    background-color: rgb(153, 148, 148);
-    color: black;
-    transform: scale(1.0);
+        background-color: rgb(153, 148, 148);
+        color: black;
+        transform: scale(1.0);
     }
 
     #gender-section ul {
-    font-family: Arial, Helvetica, sans-serif;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
     }
+
     @media (max-width: 768px) {
         #text-banner {
             font-size: 25px;
         }
+
         #select-catogeries a {
             font-size: 20px;
         }
+
         #select-catogeries img {
             width: 200px;
         }
@@ -2758,6 +2825,7 @@ font-size: 1em;
 
 
     /* CSS for Login Page */
+
     .login {
         font-family: Arial, Helvetica, sans-serif;
         background-color: black;
@@ -2826,10 +2894,12 @@ font-size: 1em;
     .new-customers {
         margin-left: 35px;
         margin-bottom: 10px;
+
         p {
             margin-left: 10px;
         }
     }
+
     @media (max-width: 768px) {
         .login {
             padding-left: 15px;
@@ -2863,6 +2933,7 @@ font-size: 1em;
     }
 
     /*CSS for Register Page*/
+
     .register {
         font-family: Arial, Helvetica, sans-serif;
         color: white;
@@ -2891,45 +2962,45 @@ font-size: 1em;
             /*box-shadow: 0 4px 8px black;*/
         }
 
-    .input-group {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
+        .input-group {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
 
-    label {
-        color: white;
-        font-size: 14px;
-        margin: 5px 0;
-        display: block;
-    }
+        label {
+            color: white;
+            font-size: 14px;
+            margin: 5px 0;
+            display: block;
+        }
 
-    input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid black;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-    }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
 
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: #4D4D4D;
-        color: white;
-        border: 1px solid black;
-        cursor: pointer;
-        margin-top: 10px;
-    }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4D4D4D;
+            color: white;
+            border: 1px solid black;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-    button:hover {
-        background-color: #2D2D2D;
-    }
+        button:hover {
+            background-color: #2D2D2D;
+        }
 
-    .error {
-        color: red;
-        font-size: 0.9em;
-    }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
     }
 
     /*CSS for the Product Lists page*/
@@ -2946,7 +3017,7 @@ font-size: 1em;
         font-family: Arial;
     }
 
-    .Products-Filter-Container{
+    .Products-Filter-Container {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
         width: 100%;
@@ -2958,8 +3029,8 @@ font-size: 1em;
         }
     }
 
-    .Filter-Page{
-        border-radius : 15px;
+    .Filter-Page {
+        border-radius: 15px;
         align-items: left;
         padding-top: 40px;
         text-align: left;
@@ -2987,21 +3058,23 @@ font-size: 1em;
         justify-content: space-evenly;
         max-height: 420px;
         margin-bottom: 20px;
-        h3,p {
+
+        h3, p {
             color: white;
         }
     }
 
-    .product-details{
+    .product-details {
         margin-top: 10px;
     }
 
-    .product-link{
+    .product-link {
         list-style: none;
         text-decoration: none;
-        color:  black;
+        color: black;
 
     }
+
     .category-selector {
         list-style: none;
         padding: 10px;
@@ -3009,7 +3082,7 @@ font-size: 1em;
 
     }
 
-    .line-break{
+    .line-break {
         background-color: black;
         height: 2px;
 
@@ -3054,6 +3127,7 @@ font-size: 1em;
     .filter-btn:hover {
         background-color: #4D4D4D;
     }
+
     @media (max-width: 768px) {
         #product-text-banner {
             font-size: 25px;
@@ -3085,8 +3159,9 @@ font-size: 1em;
     }
 
 
-     /* CSS for the Product Page*/
-     .product {
+    /* CSS for the Product Page*/
+
+    .product {
         background-color: #2D2D2D;
         font-family: Arial, sans-serif;
         display: flex;
@@ -3100,11 +3175,13 @@ font-size: 1em;
         flex: 1;
         max-width: 800px;
         max-height: 800px;
+
         img {
             width: 800px;
             height: 800px;
             object-fit: contain;
         }
+
         margin-top: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
@@ -3127,10 +3204,11 @@ font-size: 1em;
             height: 2px;
             margin-bottom: 20px;
         }
-        
+
         .size-selection {
             max-width: 50px;
             padding: 10px;
+
             button {
                 width: 50px;
                 height: 50px;
@@ -3141,12 +3219,12 @@ font-size: 1em;
                 cursor: pointer;
                 margin-bottom: 10px;
             }
-    
+
             button:hover {
                 background-color: #2D2D2D;
             }
         }
-        
+
         .purchase-options {
             button {
                 width: 500px;
@@ -3169,12 +3247,14 @@ font-size: 1em;
     }
 
     /*CSS for Forgot Password Page*/
+
     .reset {
         background-color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
         margin-left: 300px;
         padding-left: 25px;
         padding-right: 25px;
+
         h2 {
             text-align: left;
             margin-left: 5px;
@@ -3190,9 +3270,11 @@ font-size: 1em;
             flex: 1;
             max-width: 650px;
             padding: 5px;
+
             label {
                 display: block;
             }
+
             margin-bottom: 10px;
         }
 
