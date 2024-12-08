@@ -30,7 +30,7 @@
                 <form action="{{ route('basket.update', $item->id) }}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <input type="number" name="quantity" value="{{ $item->quantity }}">
+                    <input type="number" name="quantity" value="{{ $item->quantity }}" min="1" max= "10">
                     <button type="submit">Update</button>
                 </form>
             </td>

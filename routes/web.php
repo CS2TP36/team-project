@@ -14,44 +14,95 @@ use App\Http\Controllers\BasketController;
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+// Show the registration form
 Route::get('/register', [RegisterController::class, 'create'])->name('register.create');
+
+// Handle registration form submission
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+// Redirect any route access to the home page at /home
+Route::redirect('/', '/home');
+
+// Handles the account page
+Route::get('/account', [AccountController::class, 'show'])->middleware('auth');
+
+// Show the home page
+Route::get('/home', function () {
+    return view('pages.home');
+});
+
+// Page can be accessed at site/test
+Route::get('/test', function () {
+    return view('pages.test');
+});
+
+// Show the login page
 Route::get('/login', function () {
     if (\Illuminate\Support\Facades\Auth::check()) {
         return redirect('/home');
     }
     return view('pages.login');
-})->name('login');
+});
 
-// Home and static pages
-Route::redirect('/', '/home');
-Route::get('/home', function () {
-    return view('pages.home');
-})->name('home');
+// Show the about us page
 Route::get('/aboutus', function () {
     return view('pages.aboutus');
-})->name('aboutus');
+});
+
+// Show the contact page
 Route::get('/contact', function () {
     return view('pages.contact');
-})->name('contact');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+});
 
-// Account management
-Route::get('/account', [AccountController::class, 'show'])->middleware('auth')->name('account.show');
-Route::get('/change-pass', [PassChangeController::class, 'show'])->name('change-pass.show');
-Route::post('/change-pass', [PassChangeController::class, 'change'])->name('change-pass.change');
+Route::get('/forgot-pass', function () {
+    return view('pages.forgot-pass');
+});
+// Show the Account page
+Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
-// Product-related routes
+// Show the products page
+// for example http://site/products/0/name/1 -> returns page with womens products sorted by name ascending
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
+
+// Show the product page
 Route::get('/product/{id}', [ShowProduct::class, 'show'])->name('product.show');
+
+// Show the basket page
+Route::get('/basket', function () {
+    return view('pages.basket');
+});
+
+// Show the checkout page
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
+
 Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('products.search');
 
-// Basket Routes
+// Shows the Basket index
 Route::get('/basket', [BasketController::class, 'index'])->name('basket.index');
+
+// Add items to the Basket
 Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add');
+
+//Updates the quantity of an item in the Basket
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
+
+// Deletes a product from the Basket
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
 
-// Checkout Routes
-Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth')->name('checkout.index');
-Route::post('/checkout', [CheckoutController::class, 'checkout'])->middleware('auth')->name('checkout.checkout');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.checkout');
+
+Route::get('/change-pass', [PassChangeController::class, 'show'])->name('change-pass.show');
+
+Route::post('/change-pass', [PassChangeController::class, 'change'])->name('change-pass.change');
+
+Route::get('/terms-conditions', function () {
+    return view('pages.terms-conditions');
+});
+
+Route::get('/success', function () {
+    return view('pages.success');
+});

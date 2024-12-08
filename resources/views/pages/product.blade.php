@@ -17,7 +17,7 @@
                 <!-- Title/Name of the product -->
                 <h2>{{$product['name']}}</h2>
                 <!-- Price of the product -->
-                <h2>£{{$product['price']}}</h2>
+                <h2>£{{number_format($product['price'], 2)}}</h2>
             </div>
             <!--<div class = "size-selection">
                 <p>Choose size</p>
@@ -32,12 +32,19 @@
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <input type="hidden" name="size" id="size" value="">
+                    <div class="line-break"></div>
+
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1"> ({{$product['stock']}} in stock)
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10"> ({{$product['stock']}} in stock)
+
+
                     <p>Choose size:</p>
                     <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
                     <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
                     <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
+
+
+
                     <button type="submit">Add to Basket</button>
                 </form>
                 <!-- Add to Wishlist
@@ -46,6 +53,17 @@
             </div>
 
             <script>
+                const buttons = document.querySelectorAll(".size-selection");
+
+                buttons.forEach(button => {
+                    button.addEventListener("click", () => {
+                        buttons.forEach(btn => {
+                            btn.style.backgroundColor = "#4D4D4D";
+                        });
+                        button.style.backgroundColor = "#1D1D1D";
+                    });
+                });
+
                 function selectSize(size) {
                     document.getElementById('size').value = size;
                 }
