@@ -98,3 +98,7 @@ Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkou
 Route::get('/change-pass', [PassChangeController::class, 'show'])->name('change-pass.show');
 
 Route::post('/change-pass', [PassChangeController::class, 'change'])->name('change-pass.change');
+
+Route::get('/terms-conditions', function () {
+    return view('pages.terms-conditions');
+});

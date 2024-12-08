@@ -3,18 +3,13 @@
 @section ('content')
 <div class = "Terms and Conditions">
     <section>
-        <div id ="text-container"> 
+        <div id ="text-container">
             <p> TERMS AND CONDITIONS<P>
-        
+
         <div>
             <section>
 
 
-
-
-
-
-
-
 <div>
-            
+
+@endsection

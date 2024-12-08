@@ -11,7 +11,7 @@
         <ul>
             <li class="footer-list"><a href="/aboutus">About Us</a></li>
             <li class="footer-list">Privacy</li>
-            <li class="footer-list">Terms and condition</li>
+            <li class="footer-list"><a href="/terms-conditions">Terms and condition</a></li>
         </ul>
     </div>
     <div>
