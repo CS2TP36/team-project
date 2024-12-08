@@ -35,7 +35,7 @@
         <input type="hidden" name="product_id" value="{{ $product->id }}">
         <input type="hidden" name="size" id="size" value="">
         <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1">
+        <input type="number" id="quantity" name="quantity" value="1" min="1"> ({{$product['stock']}} in stock)
         <p>Choose size:</p>
         <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
         <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
@@ -57,13 +57,14 @@
             <div class = "detailed-info">
                 <!-- Nav bar containing Product Info and Review-->
                 <nav></nav>
+
                 <!-- Description of the product -->
                 <p><strong>Description:</strong></p>
                 <p id="show_description">{{$product['description']}}</p>
                 <br>
                 <p id="show_colour"><strong>Colour: </strong>{{$product['colour']}}</p>
                 <br>
-                <p id="show_id"><strong>Item number: </strong>{{$product['id']}}</p>
+                <p id="show_id"><strong>Item ID: </strong>{{$product['id']}}</p>
             </div>
         </div>
     </div>
