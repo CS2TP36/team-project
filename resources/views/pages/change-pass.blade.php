@@ -23,7 +23,7 @@
             <label for="password">New Password</label><br>
             <input type="password" id="password" name="password" required/><br>
             <label for="password_confirmation">Confirm</label><br>
-            <input type="password" id="password_confirmation" name="password" required/><br>
+            <input type="password" id="password_confirmation" name="password_confirmation" required/><br>
 
             <button type="submit">Change Password</button>
         </form>
