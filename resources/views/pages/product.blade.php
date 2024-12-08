@@ -35,7 +35,7 @@
                     <div class="line-break"></div>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1"> ({{$product['stock']}} in stock)
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10"> ({{$product['stock']}} in stock)
 
 
                     <p>Choose size:</p>
