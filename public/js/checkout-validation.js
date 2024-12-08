@@ -1,154 +1,171 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let valuesToSend = {};
-
-    // Access billing and payment fields
-    const billingFields = {
+    // A place to temporarily store all the form values from the different forms
+    let valuesToSend = {
+        region: null,
+        fullName: null,
+        address: null,
+        postcode: null,
+        phone: null,
+        nameOnCard: null,
+        cardNumber: null,
+        expiryDate: null,
+        cvv: null
+    }
+    // Safely access billing elements
+    const billingInfo = {
         region: document.getElementById('region'),
         fullName: document.getElementById('full-name'),
         address: document.getElementById('address'),
         postcode: document.getElementById('postcode'),
-        phone: document.getElementById('phone'),
+        phone: document.getElementById('phone')
     };
 
-    const paymentFields = {
-        nameOnCard: document.getElementById('card-name'),
+    // Safely access payment elements
+    const paymentInfo = {
+        nameOnCard: document.getElementById('name-on-card'),
         cardNumber: document.getElementById('card-number'),
         expiryDate: document.getElementById('expiry-date'),
-        cvv: document.getElementById('cvv'),
+        cvv: document.getElementById('cvv')
     };
 
-    // Regular expression for MM/YY format validation (expiry date)
-    const expiryDatePattern = /^(0[1-9]|1[0-2])\/[0-9]{2}$/;
+    // getting all the next buttons as elements
+    const buttons = {
+        billing: document.getElementById('next-to-payment'),
+        payment: document.getElementById('next-to-summary'),
+        summary: document.getElementById('place-order-btn'),
+    }
 
-    // Function to validate individual fields
-    const validateFields = (fields) => {
+    // Utility functions for error display
+    function displayError(inputElement, message) {
+        if (!inputElement) return; // Prevent errors if inputElement is null
+        let errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (!errorSpan) {
+            errorSpan = document.createElement('span');
+            errorSpan.className = 'error-message';
+            inputElement.parentElement.appendChild(errorSpan);
+        }
+        errorSpan.textContent = message;
+        inputElement.classList.add('error');
+    }
+
+    function clearError(inputElement) {
+        if (!inputElement) return; // Prevent errors if inputElement is null
+        const errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (errorSpan) errorSpan.remove();
+        inputElement.classList.remove('error');
+    }
+
+    // Validate billing info
+    function validateBillingInfo() {
         let isValid = true;
-        for (let key in fields) {
-            const field = fields[key];
-            if (!field.value.trim()) {
-                field.classList.add('error');
-                isValid = false;
-            } else {
-                field.classList.remove('error');
-            }
 
-            // Additional validation for expiry date field (MM/YY format)
-            if (key === 'expiryDate' && !expiryDatePattern.test(field.value.trim())) {
-                field.classList.add('error');
-                isValid = false;
-            }
-        }
-        return isValid;
-    };
-
-    // Function to handle section change (Next/Back)
-    window.nextSection = (sectionId) => {
-        const currentSection = document.querySelector('.checkout > section:not([style*="display: none"])');
-        let isValid = false;
-
-        // Validate the current section before moving to the next one
-        if (currentSection === document.getElementById('billing-info-section')) {
-            isValid = validateFields(billingFields);
-        } else if (currentSection === document.getElementById('payment-method-section')) {
-            isValid = validateFields(paymentFields);
-        }
-
-        // Only move to the next section if valid
-        if (isValid) {
-            currentSection.style.display = 'none';
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    };
-
-    // Function to handle "Back" button action
-    window.backToSection = (sectionId) => {
-        document.querySelectorAll('.checkout > section').forEach(section => section.style.display = 'none');
-        document.getElementById(sectionId).style.display = 'block';
-    };
-
-    // Handling the Place Order button click
-    document.getElementById('place-order-btn').addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent form submission for validation
-
-        // Copy billing fields values and map to corresponding hidden input IDs
-        Object.keys(billingFields).forEach((key) => {
-            const value = billingFields[key].value.trim();
-            valuesToSend[key] = value;
-            
-            // Map the billing key to its corresponding hidden input ID
-            let hiddenInputId;
-            switch (key) {
-                case 'region':
-                    hiddenInputId = 'region-input';
-                    break;
-                case 'fullName':
-                    hiddenInputId = 'name-input';
-                    break;
-                case 'address':
-                    hiddenInputId = 'address-input';
-                    break;
-                case 'postcode':
-                    hiddenInputId = 'postcode-input';
-                    break;
-                case 'phone':
-                    hiddenInputId = 'phone-input';
-                    break;
-                default:
-                    hiddenInputId = `${key}-input`; // Default pattern if needed
-                    break;
-            }
-
-            // Update the corresponding hidden input value
-            const hiddenInput = document.getElementById(hiddenInputId);
-            if (hiddenInput) {
-                hiddenInput.value = value;
-            } else {
-                console.error(`Hidden input not found for key: ${hiddenInputId}`);
-            }
-        });
-
-        // Copy payment fields values and map to corresponding hidden input IDs
-        Object.keys(paymentFields).forEach((key) => {
-            const value = paymentFields[key].value.trim();
-            valuesToSend[key] = value;
-
-            // Map the payment key to its corresponding hidden input ID
-            let hiddenInputId;
-            switch (key) {
-                case 'nameOnCard':
-                    hiddenInputId = 'card-name-input';
-                    break;
-                case 'cardNumber':
-                    hiddenInputId = 'card-number-input';
-                    break;
-                case 'expiryDate':
-                    hiddenInputId = 'expiry-date-input';
-                    break;
-                case 'cvv':
-                    hiddenInputId = 'cvv-input';
-                    break;
-                default:
-                    hiddenInputId = `${key}-input`; // Default pattern if needed
-                    break;
-            }
-
-            // Update the corresponding hidden input value
-            const hiddenInput = document.getElementById(hiddenInputId);
-            if (hiddenInput) {
-                hiddenInput.value = value;
-            } else {
-                console.error(`Hidden input not found for key: ${hiddenInputId}`);
-            }
-        });
-
-        // Validate all fields before submitting
-        const allValid = validateFields(billingFields) && validateFields(paymentFields);
-        if (allValid) {
-            // If valid, submit the order form
-            document.getElementById('order-form').submit();
+        // Validate each field with null checks
+        if (billingInfo.region && !billingInfo.region.value.trim()) {
+            displayError(billingInfo.region, "Region is required.");
+            isValid = false;
         } else {
-            // Optionally, show a message to the user that some fields are missing
-            alert('Please complete all required fields before submitting.');
+            clearError(billingInfo.region);
         }
-    });
+
+        if (billingInfo.fullName && !billingInfo.fullName.value.trim()) {
+            displayError(billingInfo.fullName, "Full name is required.");
+            isValid = false;
+        } else {
+            clearError(billingInfo.fullName);
+        }
+
+        if (billingInfo.address && !billingInfo.address.value.trim()) {
+            displayError(billingInfo.address, "Address is required.");
+            isValid = false;
+        } else {
+            clearError(billingInfo.address);
+        }
+
+        if (billingInfo.postcode && !billingInfo.postcode.value.trim()) {
+            displayError(billingInfo.postcode, "Postcode is required.");
+            isValid = false;
+        } else {
+            clearError(billingInfo.postcode);
+        }
+
+        if (billingInfo.phone && !billingInfo.phone.value.trim()) {
+            displayError(billingInfo.phone, "Phone number is required.");
+            isValid = false;
+        } else {
+            clearError(billingInfo.phone);
+        }
+
+        return isValid;
+    }
+
+    // Validate payment info
+    function validatePaymentInfo() {
+        let isValid = true;
+
+        if (paymentInfo.nameOnCard && !paymentInfo.nameOnCard.value.trim()) {
+            displayError(paymentInfo.nameOnCard, "Name on card is required.");
+            isValid = false;
+        } else {
+            clearError(paymentInfo.nameOnCard);
+        }
+
+        if (paymentInfo.cardNumber && !paymentInfo.cardNumber.value.trim()) {
+            displayError(paymentInfo.cardNumber, "Card number is required.");
+            isValid = false;
+        } else {
+            clearError(paymentInfo.cardNumber);
+        }
+
+        if (paymentInfo.expiryDate && !paymentInfo.expiryDate.value.trim()) {
+            displayError(paymentInfo.expiryDate, "Expiry date is required.");
+            isValid = false;
+        } else {
+            clearError(paymentInfo.expiryDate);
+        }
+
+        if (paymentInfo.cvv && !paymentInfo.cvv.value.trim()) {
+            displayError(paymentInfo.cvv, "CVV is required.");
+            isValid = false;
+        } else {
+            clearError(paymentInfo.cvv);
+        }
+
+        return isValid;
+    }
+    // puts all previous items into a single invisible form and submits them
+    function placeOrder() {
+        let form = document.getElementById('order-form');
+        let inputs = document.getElementsByName('final-value');
+        inputs[0].value = valuesToSend.region;
+        inputs[1].value = valuesToSend.fullName;
+        inputs[2].value = valuesToSend.address;
+        inputs[3].value = valuesToSend.postcode;
+        inputs[4].value = valuesToSend.phone;
+        inputs[5].value = valuesToSend.nameOnCard;
+        inputs[6].value = valuesToSend.cardNumber;
+        inputs[7].value = valuesToSend.expiryDate;
+        inputs[8].value = valuesToSend.cvv;
+        form.submit();
+    }
+
+    // Navigate to the next section
+    window.nextSection = (section) => {
+        if (section === 'payment') {
+            if (validateBillingInfo()) {
+                document.getElementById('billing-info-section').style.display = 'none';
+                document.getElementById('payment-method-section').style.display = 'block';
+            }
+        } else if (section === 'summary') {
+            if (validatePaymentInfo()) {
+                document.getElementById('payment-method-section').style.display = 'none';
+                document.getElementById('order-summary-section').style.display = 'block';
+            }
+        }
+    };
+
+    // Navigate back to the payment section
+    window.backToPayment = () => {
+        document.getElementById('order-summary-section').style.display = 'none';
+        document.getElementById('payment-method-section').style.display = 'block';
+    };
 });

@@ -36,12 +36,6 @@ class Order extends Model
 
     public function shipping()
     {
-    return $this->belongsTo(Shipping::class);
-    }
-
-
-    public function calculateTotal(): float|int
-    {
-        return $this->individualOrders->sum(fn($item) => $item->getSubtotal());
+        return $this->hasOne(Shipping::class);
     }
 }
