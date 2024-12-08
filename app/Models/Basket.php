@@ -15,10 +15,15 @@ class Basket extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
     public function getTotalPrice(): float|int
     {
-        $singularPrice = $this->product['price'];
-        return $this['quantity'] * $singularPrice;
+        $singularPrice = $this->product->price ?? 0;
+        return $this->quantity * $singularPrice;
+    }
+
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(User::class); 
     }
 }
-
