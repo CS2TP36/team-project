@@ -60,6 +60,11 @@ class Product extends Model
 
     // A function which returns the first image
     public function getMainImage(): string {
-        return $this->getImagePaths()[0];
+        try {
+            return $this->getImagePaths()[0];
+        } catch (\Exception $e) {
+            // if there aren't any images or something breaks just don't return one
+            return '';
+        }
     }
 }

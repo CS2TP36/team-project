@@ -20,7 +20,7 @@
          Should return a list of products and do all the sorting for you
          if you give it the right parameters.
     -->
-    <form method="GET" action="">
+    <form method="GET" action="" id="productFilterForm">
         <div class=Products-Filter-Container>
             <div class="Filter-Page">
                 <ul class="category-selector">
@@ -115,14 +115,19 @@
     </form>
 
     <div id="products-list">
+        @if(isset($message))
+            <div id="message">
+                <p>{{$message}}</p>
+            </div
+        @endif
         @foreach($products as $product)
             <div class="product-item">
                 <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link">
                     <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}" class="product-image"
-                         style="width: 300px; height: 300px;">
+                         style="width: 300px; height: 300px;"></img>
                     <div class="product-details">
                         <h3>{{ $product['name'] }}</h3>
-                        <p>£{{ $product['price'] }}</p>
+                        <p>£{{ number_format($product['price'],2) }}</p>
                     </div>
                 </a>
             </div>
@@ -131,7 +136,9 @@
     </div>
     </form>
     <script>
-        function applyFilters() {
+        document.getElementById('productFilterForm').addEventListener('submit', function(event) {
+            // stops it from doing something that breaks everything
+            event.preventDefault();
             // get the elements for price sorting
             let priceHigh = document.getElementById('high-to-low');
             let priceLow = document.getElementById('low-to-high');
@@ -207,8 +214,8 @@
 
             // generate the url
             const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}/${priceFilter}`;
-            window.open(url);
-        }
+            location.href = url;
+        });
     </script>
 
 @endsection

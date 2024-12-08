@@ -1,62 +1,67 @@
 @extends('layouts.page')
-@section('title','Basket')
+@section('title', 'Basket')
 @section('content')
-    <div class="basket">
-        <h1>Basket</h1>
-        <section>
-            <h2>Your Basket</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Remove</th>
-                        <th>Image</th>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="#">Remove</a></td>
-                        <td><img src="" alt="Athletic Pro Hoodie" width="50"></td>
-                        <td>Athletic Pro Hoodie</td>
-                        <td>£25.99</td>
-                        <td><input type="number" value="1"></td>
-                        <td>£25.99</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Remove</a></td>
-                        <td><img src="" alt="Trailblazer Pullover Hoodie" width="50"></td>
-                        <td>Trailblazer Pullover Hoodie</td>
-                        <td>£30.00</td>
-                        <td><input type="number" value="1"></td>
-                        <td>£30.00</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">Remove</a></td>
-                        <td><img src="" alt="Apex Trainers" width="50"></td>
-                        <td>Apex Trainers</td>
-                        <td>£32.50</td>
-                        <td><input type="number" value="1"></td>
-                        <td>£32.50</td>
-                    </tr>
-                </tbody>
-            </table>
+<div class="basket">
+    <h1>Basket</h1>
 
-            <div>
-                <h3>Apply Coupon</h3>
-                <input type="text" placeholder="Enter your coupon here ">
-                <button>Apply</button>
-            </div>
+    <h2>Your Basket</h2>
+    <section>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>size</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+    @forelse($basketItems as $item)
+        <tr>
+            <td><img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}" width="50"></td>
+            <td>{{ $item->product->name }}</td>
+            <td>{{ $item->size }}</td> <!-- Display size -->
+            <td>£{{ number_format($item->product->price, 2) }}</td>
+            <td>
+                <form action="{{ route('basket.update', $item->id) }}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <input type="number" name="quantity" value="{{ $item->quantity }}" min="1" max= "10">
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+            <td>
+                <form action="{{ route('basket.remove', $item->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Remove</button>
+                </form>
+            </td>
+            <td>£{{ number_format($item->product->price * $item->quantity, 2) }}</td>
+        </tr>
+    @empty
+        <tr>
+            <td colspan="7">Your basket is empty!</td>
+        </tr>
+    @endforelse
+</tbody>
 
-            <div>
-                <h3> Basket Totals</h3>
-                <p>Subtotal: £88.49</p>
-                <p>Shipping: Free</p>
-                <p><strong>Total: £88.49</strong></p>
-                <a href="/checkout"><button>Proceed to Checkout</button></a>
-            </div>
-        </section>
-    </div>
+        </table>
+
+        <div>
+        <div class="basket-summary">
+            <h3>Basket Totals</h3>
+            <p>Subtotal: £{{ number_format($total, 2) }}</p>
+            <p>Shipping: Free</p>
+            <p><strong>Total: £{{ number_format($total, 2) }}</strong></p>
+            <a href="/checkout"><button>Proceed to Checkout</button></a>
+        </div>
+    </section>
+</div>
 @endsection
+
+

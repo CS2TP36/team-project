@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProductLister;
+use function PHPUnit\Framework\isEmpty;
+
 // A class to assist with searching for products with a keyword
 class ProductSearcher extends Controller
 {
@@ -52,6 +54,9 @@ class ProductSearcher extends Controller
         // converts the # back to spaces
         $searchTerm = str_replace("#", " ", $searchTerm);
         $products = self::search($searchTerm);
+        if (!$products) {
+            return view('pages.products', ['products' => $products, 'message' => "No products found"]);
+        }
         return view('pages.products', ['products' => $products]);
     }
 

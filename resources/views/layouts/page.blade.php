@@ -10,9 +10,9 @@
     <!-- A place where scripts can be imported -->
     <script src="@yield('script')"></script>
     <script src="{{ asset('js/searchbar.js') }}"></script>
+    <script src="{{ asset('js/theme.js') }}"></script>
 </head>
-
-<body>
+<body class="dark-theme">
 <!-- utilises a consistent header -->
 @include("reusables.header")
 <main>

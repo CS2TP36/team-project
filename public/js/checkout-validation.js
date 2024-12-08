@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // A place to temporarily store all the form values from the different forms
+    let valuesToSend = {
+        region: null,
+        fullName: null,
+        address: null,
+        postcode: null,
+        phone: null,
+        nameOnCard: null,
+        cardNumber: null,
+        expiryDate: null,
+        cvv: null
+    }
     // Safely access billing elements
     const billingInfo = {
         region: document.getElementById('region'),
@@ -15,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         expiryDate: document.getElementById('expiry-date'),
         cvv: document.getElementById('cvv')
     };
+
+    // getting all the next buttons as elements
+    const buttons = {
+        billing: document.getElementById('next-to-payment'),
+        payment: document.getElementById('next-to-summary'),
+        summary: document.getElementById('place-order-btn'),
+    }
 
     // Utility functions for error display
     function displayError(inputElement, message) {
@@ -112,6 +131,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return isValid;
+    }
+    // puts all previous items into a single invisible form and submits them
+    function placeOrder() {
+        let form = document.getElementById('order-form');
+        let inputs = document.getElementsByName('final-value');
+        inputs[0].value = valuesToSend.region;
+        inputs[1].value = valuesToSend.fullName;
+        inputs[2].value = valuesToSend.address;
+        inputs[3].value = valuesToSend.postcode;
+        inputs[4].value = valuesToSend.phone;
+        inputs[5].value = valuesToSend.nameOnCard;
+        inputs[6].value = valuesToSend.cardNumber;
+        inputs[7].value = valuesToSend.expiryDate;
+        inputs[8].value = valuesToSend.cvv;
+        form.submit();
     }
 
     // Navigate to the next section

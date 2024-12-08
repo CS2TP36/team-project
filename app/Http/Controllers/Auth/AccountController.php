@@ -3,20 +3,21 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
-    public function show(){
-        $userid = Session::get('user_id');
-        // if not logged in redirect to login
-        if ($userid == null){
+    public function show()
+    {
+        // Uses laravel Auth to check if the user is logged in
+        if (!Auth::check()) {
             return redirect('/login');
         }
-        // otherwise go to account page with user passed as a variable
-        $user = User::all()->where('id', $userid)->first();
+
+        // Retrieves the user from the Auth
+        $user = Auth::user();
+
+        // Passes user to view
         return view('pages.account', ['user' => $user]);
     }
 }

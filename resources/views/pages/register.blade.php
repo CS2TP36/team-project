@@ -42,13 +42,11 @@
             <label for="password_confirmation">Confirm Password:</label>
             <input type="password" id="password_confirmation" name="password_confirmation" required>
             <span id="confirmPasswordError" class="error"></span>
-
-
-
+            
+            
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" required pattern="^\+44\d{10,13}$" placeholder="e.g., +44 1234 567890">
-            <span id="phoneError" class="error"></span>
-
+            <input type="tel" id="phone" name="phone" required pattern="^\+44\d{10,13}$" placeholder="e.g., +44 1234 567890 (Needs to be UK)">  
+            <span id="phoneError" class="error"></span>  
 
 
             <label for="address">Address:</label>
