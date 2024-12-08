@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable(); // for users that a logged in 
-            $table->string('session_id')->nullable(); //for guest on wbe 
+            $table->unsignedBigInteger('user_id')->nullable(); // for users that a logged in
+            $table->string('session_id')->nullable(); //for guest on wbe
             $table->unsignedBigInteger('product_id');
             $table->string('size')->nullable();
             $table->integer('quantity')->default(1);
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('basket');
+        Schema::dropIfExists('baskets');
     }
 };
