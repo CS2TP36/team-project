@@ -45,7 +45,7 @@
             
             
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" required pattern="^[\d\s\-\+\(\)]*$" placeholder="Enter your phone number">
+            <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" placeholder="Enter your 3-15 Digit Phone Number">
             <span id="phoneError" class="error"></span>
 
 
