@@ -1,3 +1,4 @@
+@use(Illuminate\Support\Facades\Auth)
 <footer class="footer-check">
         <ul>
             <li class="footer-list"><a href="/contact">Contact: 0121 010 0111</a></li>
@@ -16,7 +17,7 @@
     <div>
         <ul>
             <li class="footer-list">Page Directs</li>
-            <li class="footer-list"><a href="/login">Sign in </a></li>
+            <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign in @else <a href="/logout"> Sign out @endif</a></li>
             <li class="footer-list">Orders and Payments</li>
             <li class="footer-list"><button id="theme-toggle">Toggle Theme</button></li>
         </ul>
