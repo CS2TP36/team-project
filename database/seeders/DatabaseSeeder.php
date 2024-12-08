@@ -74,12 +74,6 @@ this hoodie keeps you looking and feeling athletic wherever you are. It features
 Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Green
-
-Product Code
-001-AP-HOOD
 ",
                 'price' => 25.99,
                 'colour' => 'Green',
@@ -98,12 +92,6 @@ fit ensures all-day comfort, while the bold mountain graphic highlights your adv
 Care & Material
 60% Cotton, 40% Polyester
 Machine washable
-
-Colour
-Grey
-
-Product Code
-002-TB-HOOD
 ",
                 'price' => 30.00,
                 'colour' => 'Grey',
@@ -122,12 +110,6 @@ bold, modern look. Ideal for sports or relaxed casual outings.
 Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Red/Black
-
-Product Code
-003-US-HOOD
 ",
                 'price' => 35.50,
                 'colour' => 'Red',
@@ -146,13 +128,6 @@ and versatility for your everyday routine.
 Care & Material
 Sustainably Sourced Cotton Blend
 Machine washable
-
-
-Colour
-Mint Green
-
-Product Code
-004-EF-HOOD
 ",
                 'price' => 28.99,
                 'colour' => 'Green',
@@ -174,11 +149,6 @@ Care & Material
 Synthetic Upper with Rubber Sole
 Wipe clean with a damp cloth
 
-Colour
-Green/Blue
-
-Product Code
-006-VEL-SHOE
 ",
                 'price' => 35.00,
                 'colour' => 'Green / Blue',
@@ -198,11 +168,6 @@ Care & Material
 Mesh Upper with Rubber Sole
 Wipe clean with a damp cloth
 
-Colour
-Red/Blue
-
-Product Code
-007-APX-TRN
 ",
                 'price' => 32.50,
                 'colour' => 'Red / Blue',
@@ -213,21 +178,14 @@ Product Code
             new Product ([
                 'name' => 'Trail Master Hiking Shoes',
 'description' =>
- "Product Info
+"Product Info
 Tackle any terrain with the Trail Master Hiking Shoes. Built with high-grip soles, shock
 absorption, and water-resistant materials, these durable shoes provide comfort and 
 stability for all your outdoor adventures.
 
-
- Care & Material
+Care & Material
 Water-Resistant Synthetic Upper with Rubber Sole
 Wipe clean with a damp cloth
-
-Colour
-Brown/Orange
-
-Product Code
-008-TM-HIKE
 ",
                 'price' => 35.99,
                 'colour' => 'Brown/Blue',
@@ -246,13 +204,7 @@ and a modern design for maximum versatility.
 
 Care & Material
 Mesh Upper with Rubber Sole
-
 Wipe clean with a damp cloth
-Colour
-Red/Black
-
-Product Code
-009-FC-SNK
 ",
                 'price' => 29.99,
                 'colour' => 'red',
@@ -264,21 +216,14 @@ Product Code
             new Product ([
                 'name' => 'Dynamic Fit Joggers',
                 'description' =>
- "Product Info
+"Product Info
 The Dynamic Fit Joggers are made for movement and style. Crafted with stretchable,
 moisture-wicking fabric, these joggers offer a tapered fit and adjustable waistband for
 maximum comfort during workouts or casual wear.
 
-
 Care & Material
 95% Polyester, 5% Elastane
-
 Machine washable
-Colour
-Black
-
-Product Code
-010-DF-JOG
 ",
                 'price' => 20.00,
                 'colour' => 'black',
@@ -290,20 +235,14 @@ Product Code
             new Product ([
                 'name' => 'Terrain Cargo Pants',
                 'description' => 
- "Product Info
+"Product Info
 Gear up for adventure with the Terrain Cargo Pants, designed for durability and 
 practicality. Featuring adjustable cuffs and multiple pockets, these lightweight pants
- offer maximum versatility for outdoor activities.
+offer maximum versatility for outdoor activities.
 
- Care & Material
+Care & Material
 65% Cotton, 35% Polyester
 Machine washable
-
-Colour
-Beige
-
-Product Code
-011-TR-CARGO
 ",
                 'price' => 32.99,
                 'colour' => 'beige',
@@ -319,17 +258,11 @@ Product Code
 "Product Info
 The Comfort Active Trousers offer unmatched softness and flexibility for training, 
 lounging, or daily routines. With a streamlined fit and secure pockets, these trousers
- balance functionality and style.
+balance functionality and style.
 
- Care & Material
+Care & Material
 90% Cotton, 10% Elastane
 Machine washable
-
-Colour
-Black
-
-Product Code
-012-CA-TRS
 ",
                 'price' => 25.50,
                 'colour' => 'black',
@@ -349,12 +282,6 @@ and tapered fit, they deliver peak functionality and mobility for training or ca
 Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Blue
-
-Product Code
-014-CF-TRK
 ",
                 'price' => 27.00,
                 'colour' => 'blue',
@@ -373,12 +300,6 @@ Maximize your performance with the Performance Tee, a sleek and versatile additi
 Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Black
-
-Product Code
-016-PT-TEE
 ",
                 'price' => 20.00,
                 'colour' => 'black',
@@ -393,18 +314,12 @@ Product Code
 Stay elegant and comfortable with the Horizon Polo Shirt, a perfect blend of style and 
 functionality. Featuring breathable fabric and a modern gradient design, this polo is 
 ideal for sports or smart-casual occasions. The classic collar and tailored fit provide a
- polished look while ensuring all-day comfort.
+polished look while ensuring all-day comfort.
 
- Care & Material
+Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Blue/White Gradient
-
-Product Code
-017-HZ-POLO
- ",
+",
                 'price' => 28.99,
                 'colour' => 'White/Blue',
                 'mens' => true,
@@ -418,19 +333,13 @@ Product Code
 Take your workouts to the next level with the ProCool Compression Shirt, designed to 
 enhance performance and support recovery. Made with stretchy, moisture-wicking 
 fabric, this shirt provides a snug fit that reduces muscle fatigue and maximizes gains
- from every session. Its sleek design and breathable material keep you comfortable 
- during intense training.
+from every session. Its sleek design and breathable material keep you comfortable 
+during intense training.
 
- Care & Material
+Care & Material
 90% Polyester, 10% Elastane
 Machine washable
-
-Colour
-Black/Blue
-
-Product Code
-018-PC-COMP
- ",
+",
                 'price' => 22.99,
                 'colour' => 'Black/Blue',
                 'mens' => true,
@@ -442,19 +351,13 @@ Product Code
                 'description' => 
 "Product Info
 Stay warm without sacrificing mobility with the ActiveWear Long Sleeve. Perfect for
- cool-weather activities, this lightweight shirt provides insulation while maintaining 
- flexibility. Its moisture-wicking fabric ensures comfort, keeping you dry and focused 
- during your workout or outdoor adventures.
+cool-weather activities, this lightweight shirt provides insulation while maintaining 
+flexibility. Its moisture-wicking fabric ensures comfort, keeping you dry and focused 
+during your workout or outdoor adventures.
 
- Care & Material
+Care & Material
 100% Polyester
-
 Machine washable
-Colour
-Black
-
-Product Code
-019-AW-LS
 ",
                 'price' => 25.99,
                 'colour' => 'Black',
@@ -470,20 +373,14 @@ Product Code
  "Product Info
 Train without limits with the All-Weather Sports Jacket, engineered to withstand all 
 conditions. This windproof and waterproof jacket keeps you protected during outdoor
- training sessions, ensuring you stay comfortable and focused no matter the weather. 
- Featuring a lightweight design, adjustable hood, and secure zippered pockets, it's the 
- ultimate companion for your active lifestyle.
+training sessions, ensuring you stay comfortable and focused no matter the weather. 
+Featuring a lightweight design, adjustable hood, and secure zippered pockets, it's the 
+ultimate companion for your active lifestyle.
 
- Care & Material
+Care & Material
 100% Polyester
 Machine washable
-
-Colour
-White/Grey
-
-Product Code
-021-AW-JKT
- ",
+",
                 'price' => 35.00,
                 'colour' => 'Black/White',
                 'mens' => true,
@@ -504,14 +401,7 @@ Care & Material
 Outer: 100% Polyester
 Insulation: Synthetic Fill
 Machine washable
-
-Colour
-Olive Green
-
-Product Code
-022-TB-COAT
-
- ",
+",
                 'price' => 48.99,
                 'colour' => 'Green',
                 'mens' => true,
@@ -521,21 +411,15 @@ Product Code
             new Product ([
                 'name' => 'Summit Windbreaker',
                 'description' => 
-" Product Info
+"Product Info
 The Summit Windbreaker is the ultimate choice for outdoor enthusiasts and runners 
 seeking lightweight and breathable protection. Designed to shield against wind and light
- rain, this windbreaker ensures you stay comfortable during your adventures. Featuring 
- an adjustable hood, zippered pockets, and a sleek fit, it’s perfect for active pursuits or casual outdoor wear.
+rain, this windbreaker ensures you stay comfortable during your adventures. Featuring 
+an adjustable hood, zippered pockets, and a sleek fit, it’s perfect for active pursuits or casual outdoor wear.
 
  Care & Material
 100% Nylon
 Machine washable
-
-Colour
-Grey/Black
-
-Product Code
-023-SM-WIND
 ",
                 'price' => 35.99,
                 'colour' => 'Black/Grey',
@@ -548,21 +432,15 @@ Product Code
                 'description' =>
 "Product Info
 Face the cold with confidence in the ArcticPro Training Coat, designed to keep you
- warm without compromising on comfort or style. Featuring premium insulation and an
-  ergonomic design, this coat ensures you stay focused on your outdoor activities, no 
-  matter the weather. With multiple secure pockets, a water-resistant finish, and a 
-  windproof hood, it’s built for performance and functionality in extreme conditions.
+warm without compromising on comfort or style. Featuring premium insulation and an
+ergonomic design, this coat ensures you stay focused on your outdoor activities, no 
+matter the weather. With multiple secure pockets, a water-resistant finish, and a 
+windproof hood, it’s built for performance and functionality in extreme conditions.
 
 Care & Material
 Outer: 100% Polyester
 Insulation: Synthetic Fill
-
 Machine washable
-Colour
-Black with Red Accents
-
-Product Code
-024-AP-COAT
 ",
                 'price' => 40.00,
                 'colour' => 'Black/Red',
@@ -577,20 +455,14 @@ Product Code
                 'description' => 
 "Product Info
 Elevate your casual style with the Luxe Fleece Hoodie, designed for ultimate comfort
- and sophistication. Featuring a plush interior and stylish drawstrings, this hoodie 
- provides a cozy feel while maintaining a fashionable look. Perfect for lounging or casual 
- outings, it’s a versatile addition to your wardrobe.
+and sophistication. Featuring a plush interior and stylish drawstrings, this hoodie 
+provides a cozy feel while maintaining a fashionable look. Perfect for lounging or casual 
+outings, it’s a versatile addition to your wardrobe.
 
- Care & Material
+Care & Material
 60% Cotton, 40% Polyester
 Machine washable
-
-Colour
-Blush Pink
-
-Product Code
-026-LX-HOOD
- ",
+",
                 'price' => 19.99,
                 'colour' => 'Pink',
                 'mens' => false,
@@ -609,13 +481,7 @@ and unrestricted motion, making it a must-have for your active wardrobe.
 Care & Material
 90% Polyester, 10% Elastane
 Machine washable
-
-Colour
-Lime Green
-
-Product Code
-027-FM-HOOD
- ",
+",
                 'price' => 24.50,
                 'colour' => 'Green',
                 'mens' => false,
@@ -634,13 +500,7 @@ this hoodie combines functionality and style effortlessly.
 Care & Material
 88% Polyester, 12% Spandex
 Machine washable
-
-Colour
-Heather Grey
-
-Product Code
-028-PF-HOOD
- ",
+",
                 'price' => 29.99,
                 'colour' => 'Grey',
                 'mens' => false,
@@ -660,13 +520,7 @@ or evening workouts.
 Care & Material
 95% Polyester, 5% Spandex
 Machine washable
-
-Colour
-Light Grey with Red Interior
-
-Product Code
-029-AW-HOOD
- ",
+",
                 'price' => 45.00,
                 'colour' => 'Light Blue',
                 'mens' => false,
@@ -686,13 +540,7 @@ responsive sole, they ensure optimal performance and style for your active lifes
 Care & Material
 Mesh Upper with Rubber Sole
 Wipe clean with a damp cloth
-
-Colour
-Pink/Blue with Neon Green Accents
-
-Product Code
-031-SR-TRAIN
- ",
+",
                 'price' => 25.99,
                 'colour' => 'Pink/Blue/Yellow/White',
                 'mens' => false,
@@ -711,12 +559,6 @@ they seamlessly combine performance with style for any activity.
 Care & Material
 Textile Upper with Rubber Sole
 Wipe clean with a damp cloth
-
-Colour
-Black/White
-
-Product Code
-032-AG-SNK
 ",
                 'price' => 48.50,
                 'colour' => 'Black/White',
@@ -727,7 +569,7 @@ Product Code
             new Product ([
                 'name' => 'FlexStep Running Shoes',
                 'description' =>
- "Product Info
+"Product Info
 Experience comfort and performance with the FlexStep Running Shoes, designed for
 runners who demand the best. Featuring a breathable mesh upper for enhanced airflow
 and a shock-absorbing sole for smooth strides, these shoes keep you light and 
@@ -737,12 +579,6 @@ functionality with stylish design.
 Care & Material
 Mesh Upper with Rubber Sole
 Wipe clean with a damp cloth
-
-Colour
-Pink/White with Aqua Blue Accents
-
-Product Code
-033-FS-RUN
 ",
                 'price' => 32.00,
                 'colour' => 'Blue/Pink',
@@ -763,13 +599,7 @@ throughout your workout.
 Care & Material
 Mesh Upper with Rubber Sole
 Wipe clean with a damp cloth
-
-Colour
-Burgundy with Pink and Grey Accents
-
-Product Code
-034-EP-RUN
- ",
+",
                 'price' => 32.00,
                 'colour' => 'Black/Red',
                 'mens' => false,
@@ -783,20 +613,14 @@ Product Code
 "Product Info
 Take your workouts to the next level with the HighRise Compression Leggings, 
 designed for both performance and style. Featuring a high-rise fit for a flattering
- silhouette and muscle support for enhanced endurance, these leggings are perfect for
+silhouette and muscle support for enhanced endurance, these leggings are perfect for
 training sessions or everyday wear. The moisture-wicking fabric keeps you dry and 
 comfortable throughout your activities.
 
 Care & Material
 88% Polyester, 12% Spandex
 Machine washable
-
-Colour
-Black
-
-Product Code
-036-HR-LEGGINGS
- ",
+",
                 'price' => 39.99,
                 'colour' => 'Black',
                 'mens' => false,
@@ -816,12 +640,6 @@ lounging.
 Care & Material
 60% Cotton, 40% Polyester
 Machine washable
-
-Colour
-Heather Grey
-
-Product Code
-037-TJ-JOG
  ",
                 'price' => 28.50,
                 'colour' => 'Dark-Grey',
@@ -835,20 +653,14 @@ Product Code
  "Product Info
 Elevate your casual wardrobe with the SportLuxe Sweatpants, where style meets 
 comfort. Crafted from ultra-soft fabric, these sweatpants offer a relaxed fit for ultimate
- ease while maintaining a chic, laid-back look. Perfect for lounging or casual outings, 
- they feature an adjustable drawstring waistband and spacious side pockets for added 
- functionality.
+ease while maintaining a chic, laid-back look. Perfect for lounging or casual outings, 
+they feature an adjustable drawstring waistband and spacious side pockets for added 
+functionality.
 
- Care & Material
+Care & Material
 70% Cotton, 30% Polyester
 Machine washable
-
-Colour
-Light Grey
-
-Product Code
-038-SL-SWEATPANTS
- ",
+",
                 'price' => 35.00,
                 'colour' => 'Grey',
                 'mens' => false,
@@ -867,13 +679,7 @@ and a flexible fit, they provide practicality and freedom of movement for any tr
 Care & Material
 65% Nylon, 35% Spandex
 Machine washable
-
-Colour
-Teal
-
-Product Code
-039-AT-TROUSERS
- ",
+",
                 'price' => 29.00,
                 'colour' => 'Blue',
                 'mens' => false,
@@ -884,7 +690,7 @@ Product Code
             new Product ([
                 'name' => 'FitPro Tank Top',
                 'description' =>
- "Product Info
+"Product Info
 Stay cool and comfortable with the FitPro Tank Top, designed for optimal airflow and 
 freedom of movement. Featuring lightweight fabric and a racerback design, this tank top 
 is perfect for workouts, yoga, or casual wear. Its sleek and breathable style keeps you 
@@ -893,12 +699,6 @@ feeling fresh, no matter how intense your activity.
 Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Pink and Black (Set of 2)
-
-Product Code
-041-FP-TANK
 ",
                 'price' => 24.99,
                 'colour' => 'Black/Pink',
@@ -918,14 +718,8 @@ make it perfect for gym sessions or casual wear.
 
 Care & Material
 100% Polyester
-
 Machine washable
-Colour
-Black
-
-Product Code
-042-CA-TEE
- ",
+",
                 'price' => 29.50,
                 'colour' => 'Black',
                 'mens' => false,
@@ -941,15 +735,9 @@ Top. Designed with breathable fabric and built-in sun protection, this top keeps
 cool and safe under the sun. Its lightweight and versatile style makes it ideal for hikes,
  runs, or casual outings.
 
- Care & Material
+Care & Material
 85% Polyester, 15% Cotton
 Machine washable
-
-Colour
-Blush Pink
-
-Product Code
-043-EL-TOP
 ",
                 'price' => 16.99,
                 'colour' => 'pink',
@@ -963,19 +751,13 @@ Product Code
                 'description' =>
 "Product Info
 Achieve effortless style and comfort with the Balance Crop Tee, perfect for workouts or
- casual wear. Featuring a flattering cropped fit and breathable fabric, this tee ensures 
- unrestricted movement and a modern look. Its vibrant graphic design adds a bold 
- touch, making it a standout piece for your active wardrobe.
+casual wear. Featuring a flattering cropped fit and breathable fabric, this tee ensures 
+unrestricted movement and a modern look. Its vibrant graphic design adds a bold 
+touch, making it a standout piece for your active wardrobe.
 
- Care & Material
+Care & Material
 92% Polyester, 8% Spandex
 Machine washable
-
-Colour
-Teal with Pink Accents
-
-Product Code
-044-BC-TEE
 ",
                 'price' => 28.00,
                 'colour' => 'blue',
@@ -999,11 +781,6 @@ Outer: 100% Polyester
 Insulation: Synthetic Fill
 
 Machine washable
-Colour
-Black
-
-Product Code
-046-MF-PARKA
 ",
                 'price' => 45.99,
                 'colour' => 'black',
@@ -1024,13 +801,7 @@ while the lightweight construction ensures ease of movement. Perfect for cold-we
 Care & Material
 Outer: 100% Polyester
 Insulation: Synthetic Fill
-
 Machine washable
-Colour
-Beige
-
-Product Code
-047-TF-JACKET
 ",
                 'price' => 45.00,
                 'colour' => 'beige',
@@ -1049,14 +820,9 @@ dry and comfortable while ensuring unrestricted movement. Featuring an adjustabl
 hood, secure pockets, and a cinched waist for a flattering fit, it’s the perfect companion
  for wet-weather adventures.
 
- Care & Material
+Care & Material
 100% Polyester
 Machine washable
-Colour
-Bright Orange
-
-Product Code
-048-AS-COAT
 ",
                 'price' => 38.50,
                 'colour' => 'orange',
@@ -1070,19 +836,13 @@ Product Code
                 'description' =>
 "Product Info
 Stay protected in any weather with the AllSeason Windbreaker, designed to shield you
- from wind and light rain. Featuring water-repellent fabric and adjustable cuffs, this 
- windbreaker provides a secure and comfortable fit. With a lightweight design and 
- vibrant accents, it’s perfect for outdoor activities and everyday wear.
+from wind and light rain. Featuring water-repellent fabric and adjustable cuffs, this 
+windbreaker provides a secure and comfortable fit. With a lightweight design and 
+vibrant accents, it’s perfect for outdoor activities and everyday wear.
 
- Care & Material
+Care & Material
 100% Nylon
 Machine washable
-
-Colour
-Beige with Pink Accents
-
-Product Code
-049-AS-WIND
 ",
                 'price' => 29.99,
                 'colour' => 'beige/pink',
@@ -1103,12 +863,6 @@ workouts or casual wear, ensuring style and performance wherever you go.
 Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Blue
-
-Product Code
-005-PF-HOOD
 ",
                 'price'=> 20.00,
                 'colour'=> 'blue',
@@ -1129,12 +883,6 @@ finish ensures your feet stay dry, even in challenging conditions.
 Care & Material
 Synthetic Upper with Rubber Sole
 Wipe clean with a damp cloth
-
-Colour
-Orange/Black
-
-Product Code
-013-TRP-SHOE
 ",
                 'price'=> 30.00,
                 'colour'=> 'black',
@@ -1156,12 +904,6 @@ during tough workouts.
 Care & Material
 90% Polyester, 10% Elastane
 Machine washable
-
-Colour
-Grey/Black
-
-Product Code
-015-FF-JOG
 ",
                 'price'=>30.00,
                 'colour'=> 'grey',
@@ -1183,12 +925,6 @@ sessions or outdoor activities.
 Care & Material
 88% Polyester, 12% Elastane
 Machine washable
-
-Colour
-Dark Grey/Yellow Accents
-
-Product Code
-020-QD-COMP
 ",
                 'price'=>20.00,
                 'colour'=> 'black',
@@ -1211,12 +947,6 @@ Care & Material
 Outer: 100% Polyester
 Insulation: Synthetic Fill
 Machine washable
-
-Colour
-Neon Yellow/Navy
-
-Product Code
-025-TS-JKT
 ",
                 'price'=> 25.00,
                 'colour'=> 'yellow',
@@ -1238,12 +968,6 @@ versatile essential for your wardrobe.
 Care & Material
 92% Polyester, 8% Spandex
 Machine washable
-
-Colour
-Navy with Light Grey Accents
-
-Product Code
-030-EF-HOOD
 ",
                 'price'=> 20.00,
                 'colour'=>'blue',
@@ -1264,12 +988,6 @@ Perfect for both training sessions and casual wear, they combine functionality w
 Care & Material
 Mesh Upper with Rubber Sole
 Wipe clean with a damp cloth
-
-Colour
-Black with White and Red Accents
-
-Product Code
-035-PT-RUN
 ",
                 'price'=> 25.00,
                 'colour'=> 'black',
@@ -1290,12 +1008,6 @@ perfect for workouts or casual wear.
 Care & Material
 87% Nylon, 13% Spandex
 Machine washable
-
-Colour
-Purple with Black Accents
-
-Product Code
-040-PF-LEGGINGS
 ",
                 'price'=> 20.00,
                 'colour'=> 'purple',
@@ -1315,12 +1027,6 @@ enhancing movement, making it a perfect addition to your fitness wardrobe.
 Care & Material
 95% Polyester, 5% Elastane
 Machine washable
-
-Colour
-Heather Blue
-
-Product Code
-045-PF-TEE
 ",
                 'price'=> 20.00,
                 'colour'=> ' grey',
@@ -1342,12 +1048,6 @@ choice for any activity.
 Care & Material
 100% Polyester
 Machine washable
-
-Colour
-Burgundy with Navy and Pink Accents
-
-Product Code
-050-AWP-JACKET
 ",
                 'price'=> 20.00,
                 'colour'=>'black/pink',
