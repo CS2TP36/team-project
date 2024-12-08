@@ -37,7 +37,9 @@
 
                     <button type="submit">Sign In</button>
                 </form>
+                <!--
                 <a href="/forgot-pass"><p>Forgotten your password?</p></a>
+                -->
             </div>
 
             <div class="new-customers">
