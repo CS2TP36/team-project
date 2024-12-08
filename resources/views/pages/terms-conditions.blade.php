@@ -41,8 +41,6 @@
                 <li>Use the website in a manner that could damage, disable, overburden, or impair our services.</li>
             </ul>
 
-            <h2>Products and Services</h2>
-            <p>All products and services listed on the website are subject to availability. We reserve the right to discontinue any product or service at any time. Prices for products are subject to change without notice.</p>
 
             <h2>Limitation of Liability</h2>
             <p>In no event shall Sportwares, nor any of its officers, directors, and employees, be held liable for anything arising out of or in any way connected with your use of this website, whether such liability is under contract, tort, or otherwise.</p>
