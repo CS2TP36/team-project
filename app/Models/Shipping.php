@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use app\Models\Order;
+use App\Models\Order;
 
 class Shipping extends Model
 {
