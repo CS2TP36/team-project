@@ -58,12 +58,12 @@
                 <!-- Nav bar containing Product Info and Review-->
                 <nav></nav>
                 <!-- Description of the product -->
-                <p>Description: </p>
+                <p><strong>Description:</strong></p>
                 <p id="show_description">{{$product['description']}}</p>
                 <br>
-                <p id="show_colour">Colour: {{$product['colour']}}</p>
+                <p id="show_colour"><strong>Colour: </strong>{{$product['colour']}}</p>
                 <br>
-                <p id="show_id">Item number: {{$product['id']}}</p>
+                <p id="show_id"><strong>Item number: </strong>{{$product['id']}}</p>
             </div>
         </div>
     </div>
