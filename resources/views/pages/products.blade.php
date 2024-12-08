@@ -127,7 +127,7 @@
                          style="width: 300px; height: 300px;"></img>
                     <div class="product-details">
                         <h3>{{ $product['name'] }}</h3>
-                        <p>£{{ $product['price'] }}</p>
+                        <p>£{{ number_format($product['price'],2) }}</p>
                     </div>
                 </a>
             </div>
