@@ -25,4 +25,9 @@ class IndividualOrder extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    public function getSubtotal(): float|int
+    {
+        return $this->quantity * $this->price; // Added helper to calculate subtotal
+    }
 }
