@@ -813,7 +813,7 @@ Machine washable
             ]),
             // The new ones
             new Product ([
-                'name' => 'performance tech hoodie',
+                'name' => 'Performance tech hoodie',
                 'description'=>
 "Designed for active lifestyles, the Performance Tech Hoodie offers lightweight,
 breathable comfort. Featuring moisture-wicking fabric and an athletic fit, it’s perfect for
@@ -831,7 +831,7 @@ Machine washable
 
             ]),
             new Product ([
-                'name'=>'trail runner pro shoes',
+                'name'=>'Trail runner pro shoes',
                 'description'=>
 "Take your outdoor adventures to the next level with the Trail Runner Pro Shoes.
 Designed with durable construction, high-grip soles, and shock-absorbing technology,
@@ -850,7 +850,7 @@ Wipe clean with a damp cloth
 
             ]),
             new Product ([
-                'name'=> 'flexfit training joggers',
+                'name'=> 'Flexfit training joggers',
                 'description'=>
 "Push your limits with the FlexFit Training Joggers, designed for high-impact
 sports and intense gym sessions. These joggers feature stretchable, sweat-proof
@@ -870,7 +870,7 @@ Machine washable
 
             ]),
             new Product ([
-                'name'=> 'active cool compression shirt',
+                'name'=> 'Active cool compression shirt',
                 'description'=>
  "Stay fresh and supported during intense workouts with the Quick-Dry Compression
 Shirt. Featuring advanced quick-dry and anti-odor technology, this shirt keeps you
@@ -890,7 +890,7 @@ Machine washable
 
             ]),
             new Product ([
-                'name'=> 'thermosheild sports jacket',
+                'name'=> 'Thermosheild sports jacket',
                 'description'=>
 "Stay warm and protected in the ThermoShield Sports Jacket, designed for outdoor
 activities in cold and challenging weather. This insulated, windproof, and waterproof
@@ -911,7 +911,7 @@ Machine washable
 
             ]),
             new Product ([
-                'name'=> 'energy flow zip hoodie',
+                'name'=> 'Energy flow zip hoodie',
                 'description'=>
 "The Energy Flow Zip Hoodie combines style and functionality, making it perfect for
  workouts or athleisure. Featuring quick-dry fabric, breathable mesh panels, and
@@ -931,7 +931,7 @@ Machine washable
 
             ]),
             new Product ([
-                'name'=> 'pulse track running shoes',
+                'name'=> 'Pulse track running shoes',
                 'description'=>
 "Achieve peak performance with the Pulse Track Running Shoes, designed for comfort
 and style. These lightweight running shoes feature cushioned soles for smooth strides,
@@ -949,7 +949,7 @@ Wipe clean with a damp cloth
                 'stock'=> rand (1,50)
             ]),
             new Product ([
-                'name'=> 'powerflex workout leggings',
+                'name'=> 'Powerflex workout leggings',
                 'description'=>
 "The PowerFlex Workout Leggings are designed for active lifestyles, combining
 functionality and comfort. Featuring a high-waisted fit for support and a flattering
@@ -968,7 +968,7 @@ Machine washable
                 'stock'=> rand (1,50)
             ]),
             new Product ([
-                'name'=> 'breathe fit sports tee',
+                'name'=> 'Breathe fit sports tee',
                 'description'=>
 "Experience unmatched comfort with the Performance Fit Tee, crafted for active
 lifestyles. Featuring sweat-wicking technology and a breathable, soft fabric, this tee

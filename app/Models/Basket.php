@@ -17,7 +17,7 @@ class Basket extends Model
     }
     public function getTotalPrice(): float|int
     {
-        $singularPrice = $this->product()['price'];
+        $singularPrice = $this->product['price'];
         return $this['quantity'] * $singularPrice;
     }
 }

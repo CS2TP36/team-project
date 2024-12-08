@@ -1,9 +1,21 @@
 @extends('layouts.page')
+@use('Illuminate\Support\Facades\Auth')
+@use('App\Models\Basket')
 @section('title', 'Checkout')
 @section('script', 'js/checkout-validation.js')
 @section('content')
     <div class="checkout">
         <h1>Checkout</h1>
+        @if($errors)
+            <div id="errors">
+                <ul>
+                @foreach($errors as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+                </ul>
+            </div>
+
+        @endif
         <section class="billing-info" id="billing-info-section">
             <h2>Billing Information</h2>
             <form id="billing-form">
@@ -74,8 +86,15 @@
             <form id="order-form" method="POST" action="{{route('checkout.checkout')}}">
                 @csrf
                 <h2>Order Summary</h2>
-                <ul id="order-items"></ul>
-                <p class="total">Total: £<span id="total-price">0.00</span></p>
+                <ul id="order-items">
+                    @php($total = 0)
+                    @foreach(Basket::all()->where('user_id', Auth::getUser()['id']) as $basketItem)
+                        @php($total += $basketItem->getTotalPrice())
+                        <li class="order-item">{{$basketItem['name']}}, £{{$basketItem->product['price']}} x {{$basketItem['quantity']}}</li>
+                    @endforeach
+                </ul>
+
+                <p class="total">Total: £<span id="total-price">{{ $total }}</span></p>
 
                 <input name="final-value" type="hidden" id="region">
                 <input name="final-value" type="hidden" id="name">
@@ -87,7 +106,7 @@
                 <input name="final-value" type="hidden" id="expiry-date">
                 <input name="final-value" type="hidden" id="cvv">
 
-                <button type="button" id="place-order-btn" onclick="placeOrder()">Place Order</button>
+                <button type="button" id="place-order-btn">Place Order</button>
                 <button type="button" id="back-to-payment" onclick="backToPayment()">Back</button>
             </form>
         </section>
