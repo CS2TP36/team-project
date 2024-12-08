@@ -65,9 +65,8 @@ class DatabaseSeeder extends Seeder
             // Mens Hoodies
             new Product([
                 'name' => 'Athletic Pro Hoodie',
-                'description' => 
-"Product Info
-Stay comfortable and focused with the Athletic Pro Hoodie, designed for gym sessions
+                'description' =>
+"Stay comfortable and focused with the Athletic Pro Hoodie, designed for gym sessions
 and casual outings. Made with ultra-soft, breathable fabric and sweat-resistant technology,
 this hoodie keeps you looking and feeling athletic wherever you are. It features an adjustable hood, ribbed cuffs, and a front kangaroo pocket for convenience.
 
@@ -83,10 +82,9 @@ Machine washable
             ]),
             new Product([
                 'name' => 'Trailblazer Pullover Hoodie',
-                'description' => 
-"Product Info
-The Trailblazer Pullover Hoodie is built for adventure and comfort. Featuring a soft 
-fleece lining, this hoodie provides warmth on chilly mornings and hikes. Its relaxed 
+                'description' =>
+"The Trailblazer Pullover Hoodie is built for adventure and comfort. Featuring a soft
+fleece lining, this hoodie provides warmth on chilly mornings and hikes. Its relaxed
 fit ensures all-day comfort, while the bold mountain graphic highlights your adventurous spirit.
 
 Care & Material
@@ -102,9 +100,8 @@ Machine washable
             new Product([
                 'name' => 'Urban Style Zip-Up Hoodie',
 'description' =>
-"Product Info
-Elevate your streetwear game with the Urban Style Zip-Up Hoodie. Made from durable 
-fabric, it features a full zip closure, an adjustable hood, and sleek black accents for a 
+"Elevate your streetwear game with the Urban Style Zip-Up Hoodie. Made from durable
+fabric, it features a full zip closure, an adjustable hood, and sleek black accents for a
 bold, modern look. Ideal for sports or relaxed casual outings.
 
 Care & Material
@@ -119,9 +116,8 @@ Machine washable
             ]),
             new Product([
                 'name' => 'EcoFit Hoodie',
-'description' => 
-"Product Info
-Stay sustainable and stylish with the EcoFit Hoodie, made from eco-friendly materials.
+'description' =>
+"Stay sustainable and stylish with the EcoFit Hoodie, made from eco-friendly materials.
 Its breathable, lightweight fabric is perfect for jogging, yoga, or casual wear, offering both comfort
 and versatility for your everyday routine.
 
@@ -139,10 +135,9 @@ Machine washable
             //  Mens Shoes
             new Product([
                 'name' => 'Velocity Running Shoes',
-'description' => 
-"Product Info
-The Velocity Running Shoes are engineered for performance and comfort. With 
-breathable mesh, enhanced grip soles, and lightweight construction, these shoes are 
+'description' =>
+"The Velocity Running Shoes are engineered for performance and comfort. With
+breathable mesh, enhanced grip soles, and lightweight construction, these shoes are
 perfect for running on various terrains, helping you go the extra mile.
 
 Care & Material
@@ -158,9 +153,8 @@ Wipe clean with a damp cloth
             ]),
             new Product ([
                 'name' => 'Apex Trainers',
-'description' => 
-"Product Info
-The Apex Trainers combine comfort and style, making them ideal for workouts or
+'description' =>
+"The Apex Trainers combine comfort and style, making them ideal for workouts or
 casual wear. Featuring advanced cushioning, lightweight materials, and a bold design,
 these trainers deliver excellent support for all-day activity.
 
@@ -178,9 +172,8 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'Trail Master Hiking Shoes',
 'description' =>
-"Product Info
-Tackle any terrain with the Trail Master Hiking Shoes. Built with high-grip soles, shock
-absorption, and water-resistant materials, these durable shoes provide comfort and 
+"Tackle any terrain with the Trail Master Hiking Shoes. Built with high-grip soles, shock
+absorption, and water-resistant materials, these durable shoes provide comfort and
 stability for all your outdoor adventures.
 
 Care & Material
@@ -196,9 +189,8 @@ Wipe clean with a damp cloth
             ]),
             new Product ([
                 'name' => 'Flex Court Sneakers',
-'description' => 
-"Product Info
-Stay agile and stylish with the FlexCourt Sneakers, perfect for indoor sports and 
+'description' =>
+"Stay agile and stylish with the FlexCourt Sneakers, perfect for indoor sports and
 streetwear. These lightweight sneakers feature breathable uppers, cushioned support,
 and a modern design for maximum versatility.
 
@@ -216,8 +208,7 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'Dynamic Fit Joggers',
                 'description' =>
-"Product Info
-The Dynamic Fit Joggers are made for movement and style. Crafted with stretchable,
+"The Dynamic Fit Joggers are made for movement and style. Crafted with stretchable,
 moisture-wicking fabric, these joggers offer a tapered fit and adjustable waistband for
 maximum comfort during workouts or casual wear.
 
@@ -234,9 +225,8 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'Terrain Cargo Pants',
-                'description' => 
-"Product Info
-Gear up for adventure with the Terrain Cargo Pants, designed for durability and 
+                'description' =>
+"Gear up for adventure with the Terrain Cargo Pants, designed for durability and
 practicality. Featuring adjustable cuffs and multiple pockets, these lightweight pants
 offer maximum versatility for outdoor activities.
 
@@ -254,9 +244,8 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'Comfort Active Trousers',
-                'description' => 
-"Product Info
-The Comfort Active Trousers offer unmatched softness and flexibility for training, 
+                'description' =>
+"The Comfort Active Trousers offer unmatched softness and flexibility for training,
 lounging, or daily routines. With a streamlined fit and secure pockets, these trousers
 balance functionality and style.
 
@@ -272,11 +261,10 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'Core Fit Track Pants',
-                'description' => 
-"Product Info
-Elevate your performance with the CoreFit Track Pants, designed for athletes who 
-demand comfort and style. Crafted from breathable material, these track pants ensure 
-you stay cool and focused during any activity. Featuring a secure drawstring waistband 
+                'description' =>
+"Elevate your performance with the CoreFit Track Pants, designed for athletes who
+demand comfort and style. Crafted from breathable material, these track pants ensure
+you stay cool and focused during any activity. Featuring a secure drawstring waistband
 and tapered fit, they deliver peak functionality and mobility for training or casual wear.
 
 Care & Material
@@ -293,9 +281,8 @@ Machine washable
             //Mens Shirts
             new Product ([
                 'name' => 'Performance Tee',
-                'description' => 
-"Product Info
-Maximize your performance with the Performance Tee, a sleek and versatile addition to your wardrobe. Designed for gym sessions or casual outings, this tee features lightweight, breathable fabric that keeps you cool and comfortable. The streamlined fit ensures effortless movement and a modern, athletic look.
+                'description' =>
+"Maximize your performance with the Performance Tee, a sleek and versatile addition to your wardrobe. Designed for gym sessions or casual outings, this tee features lightweight, breathable fabric that keeps you cool and comfortable. The streamlined fit ensures effortless movement and a modern, athletic look.
 
 Care & Material
 100% Polyester
@@ -309,10 +296,9 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'Horizon Polo Shirt',
-                'description' => 
-"Product Info
-Stay elegant and comfortable with the Horizon Polo Shirt, a perfect blend of style and 
-functionality. Featuring breathable fabric and a modern gradient design, this polo is 
+                'description' =>
+"Stay elegant and comfortable with the Horizon Polo Shirt, a perfect blend of style and
+functionality. Featuring breathable fabric and a modern gradient design, this polo is
 ideal for sports or smart-casual occasions. The classic collar and tailored fit provide a
 polished look while ensuring all-day comfort.
 
@@ -328,12 +314,11 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'ProCool Compression Shirt',
-                'description' => 
-"Product Info
-Take your workouts to the next level with the ProCool Compression Shirt, designed to 
-enhance performance and support recovery. Made with stretchy, moisture-wicking 
+                'description' =>
+"Take your workouts to the next level with the ProCool Compression Shirt, designed to
+enhance performance and support recovery. Made with stretchy, moisture-wicking
 fabric, this shirt provides a snug fit that reduces muscle fatigue and maximizes gains
-from every session. Its sleek design and breathable material keep you comfortable 
+from every session. Its sleek design and breathable material keep you comfortable
 during intense training.
 
 Care & Material
@@ -348,11 +333,10 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'ActiveWear Long Sleeve',
-                'description' => 
-"Product Info
-Stay warm without sacrificing mobility with the ActiveWear Long Sleeve. Perfect for
-cool-weather activities, this lightweight shirt provides insulation while maintaining 
-flexibility. Its moisture-wicking fabric ensures comfort, keeping you dry and focused 
+                'description' =>
+"Stay warm without sacrificing mobility with the ActiveWear Long Sleeve. Perfect for
+cool-weather activities, this lightweight shirt provides insulation while maintaining
+flexibility. Its moisture-wicking fabric ensures comfort, keeping you dry and focused
 during your workout or outdoor adventures.
 
 Care & Material
@@ -370,11 +354,10 @@ Machine washable
             new Product ([
                 'name' => 'All-Weather Sports Jacket',
                 'description' =>
- "Product Info
-Train without limits with the All-Weather Sports Jacket, engineered to withstand all 
+ "Train without limits with the All-Weather Sports Jacket, engineered to withstand all
 conditions. This windproof and waterproof jacket keeps you protected during outdoor
-training sessions, ensuring you stay comfortable and focused no matter the weather. 
-Featuring a lightweight design, adjustable hood, and secure zippered pockets, it's the 
+training sessions, ensuring you stay comfortable and focused no matter the weather.
+Featuring a lightweight design, adjustable hood, and secure zippered pockets, it's the
 ultimate companion for your active lifestyle.
 
 Care & Material
@@ -389,12 +372,11 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'Trailblazer Puffer Coat',
-                'description' => 
-"Product Info
-Stay warm and mobile with the Trailblazer Puffer Coat, a lightweight yet insulated 
-outerwear solution. Designed to keep you cozy without restricting movement, this coat 
-is perfect for winter sports or outdoor adventures. Featuring a water-resistant finish, 
-detachable faux fur-lined hood, and multiple secure pockets, it combines functionality 
+                'description' =>
+"Stay warm and mobile with the Trailblazer Puffer Coat, a lightweight yet insulated
+outerwear solution. Designed to keep you cozy without restricting movement, this coat
+is perfect for winter sports or outdoor adventures. Featuring a water-resistant finish,
+detachable faux fur-lined hood, and multiple secure pockets, it combines functionality
 with style for cold-weather wear.
 
 Care & Material
@@ -410,11 +392,10 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'Summit Windbreaker',
-                'description' => 
-"Product Info
-The Summit Windbreaker is the ultimate choice for outdoor enthusiasts and runners 
+                'description' =>
+"The Summit Windbreaker is the ultimate choice for outdoor enthusiasts and runners
 seeking lightweight and breathable protection. Designed to shield against wind and light
-rain, this windbreaker ensures you stay comfortable during your adventures. Featuring 
+rain, this windbreaker ensures you stay comfortable during your adventures. Featuring
 an adjustable hood, zippered pockets, and a sleek fit, it’s perfect for active pursuits or casual outdoor wear.
 
  Care & Material
@@ -430,11 +411,10 @@ Machine washable
             new Product ([
                 'name' => 'ArticPro Training Coat',
                 'description' =>
-"Product Info
-Face the cold with confidence in the ArcticPro Training Coat, designed to keep you
+"Face the cold with confidence in the ArcticPro Training Coat, designed to keep you
 warm without compromising on comfort or style. Featuring premium insulation and an
-ergonomic design, this coat ensures you stay focused on your outdoor activities, no 
-matter the weather. With multiple secure pockets, a water-resistant finish, and a 
+ergonomic design, this coat ensures you stay focused on your outdoor activities, no
+matter the weather. With multiple secure pockets, a water-resistant finish, and a
 windproof hood, it’s built for performance and functionality in extreme conditions.
 
 Care & Material
@@ -452,11 +432,10 @@ Machine washable
             // Womens Hoodies
             new Product ([
                 'name' => 'Luxe Fleece Hoodie',
-                'description' => 
-"Product Info
-Elevate your casual style with the Luxe Fleece Hoodie, designed for ultimate comfort
-and sophistication. Featuring a plush interior and stylish drawstrings, this hoodie 
-provides a cozy feel while maintaining a fashionable look. Perfect for lounging or casual 
+                'description' =>
+"Elevate your casual style with the Luxe Fleece Hoodie, designed for ultimate comfort
+and sophistication. Featuring a plush interior and stylish drawstrings, this hoodie
+provides a cozy feel while maintaining a fashionable look. Perfect for lounging or casual
 outings, it’s a versatile addition to your wardrobe.
 
 Care & Material
@@ -472,10 +451,9 @@ Machine washable
             new Product ([
                 'name' => 'TechStretch Hoodie',
                 'description' =>
-"Product Info
-Stay active and comfortable with the FlexMove Hoodie, designed for flexibility and 
-optimal movement. Made with moisture-wicking fabric, this hoodie keeps you dry and 
-focused during workouts or casual wear. Its stretchy construction ensures a perfect fit 
+"Stay active and comfortable with the FlexMove Hoodie, designed for flexibility and
+optimal movement. Made with moisture-wicking fabric, this hoodie keeps you dry and
+focused during workouts or casual wear. Its stretchy construction ensures a perfect fit
 and unrestricted motion, making it a must-have for your active wardrobe.
 
 Care & Material
@@ -491,10 +469,9 @@ Machine washable
             new Product ([
                 'name' => 'Performance Zip-Up Hoodie',
                 'description' =>
-"Product Info
-The Performance Zip-Up Hoodie is your ideal companion for layering during warm-ups
+"The Performance Zip-Up Hoodie is your ideal companion for layering during warm-ups
 or chilly workouts. Lightweight and versatile, it features breathable fabric and a sleek fit,
-ensuring you stay comfortable and focused. Perfect for active sessions or casual wear, 
+ensuring you stay comfortable and focused. Perfect for active sessions or casual wear,
 this hoodie combines functionality and style effortlessly.
 
 Care & Material
@@ -509,12 +486,11 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'All-Weather Training Hoodie',
-                'description' => 
-"Product Info
-Conquer the elements with the All-Weather Training Hoodie, designed for outdoor 
+                'description' =>
+"Conquer the elements with the All-Weather Training Hoodie, designed for outdoor
 performance in any condition. Featuring water-resistant fabric and a fitted hood, this
 hoodie keeps you dry and comfortable during intense training sessions. Reflective
-accents add visibility in low-light conditions, making it perfect for early morning 
+accents add visibility in low-light conditions, making it perfect for early morning
 or evening workouts.
 
 Care & Material
@@ -530,11 +506,10 @@ Machine washable
             //Womens Shoes
             new Product ([
                 'name' => 'SwiftRun Trainers',
-                'description' => 
-"Product Info
-Take your workouts to the next level with the SwiftRun Trainers, designed for speed
+                'description' =>
+"Take your workouts to the next level with the SwiftRun Trainers, designed for speed
 and comfort. These trainers feature advanced cushioning and support to keep you light
-on your feet during intense runs or training sessions. With a breathable upper and a 
+on your feet during intense runs or training sessions. With a breathable upper and a
 responsive sole, they ensure optimal performance and style for your active lifestyle.
 
 Care & Material
@@ -549,11 +524,10 @@ Wipe clean with a damp cloth
             ]),
             new Product ([
                 'name' => 'ActiveGrip Sneakers',
-'description' => 
-"Product Info
-Stay supported and steady with the ActiveGrip Sneakers, perfect for gym sessions and
+'description' =>
+"Stay supported and steady with the ActiveGrip Sneakers, perfect for gym sessions and
 outdoor sports. These sneakers feature superior grip and enhanced arch support,
-ensuring all-day comfort and stability. With a modern design and durable construction, 
+ensuring all-day comfort and stability. With a modern design and durable construction,
 they seamlessly combine performance with style for any activity.
 
 Care & Material
@@ -569,11 +543,10 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'FlexStep Running Shoes',
                 'description' =>
-"Product Info
-Experience comfort and performance with the FlexStep Running Shoes, designed for
+"Experience comfort and performance with the FlexStep Running Shoes, designed for
 runners who demand the best. Featuring a breathable mesh upper for enhanced airflow
-and a shock-absorbing sole for smooth strides, these shoes keep you light and 
-supported during every run. Perfect for training sessions or casual walks, they combine 
+and a shock-absorbing sole for smooth strides, these shoes keep you light and
+supported during every run. Perfect for training sessions or casual walks, they combine
 functionality with stylish design.
 
 Care & Material
@@ -589,10 +562,9 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'Endurance Pro Running Shoes',
                 'description' =>
-"Product Info
-Push your limits with the Endurance Pro Running Shoes, engineered for durability
-and peak performance. Featuring a reinforced arch for superior support and shock-absorbing 
-soles for reduced impact, these shoes are perfect for long-distance runs 
+"Push your limits with the Endurance Pro Running Shoes, engineered for durability
+and peak performance. Featuring a reinforced arch for superior support and shock-absorbing
+soles for reduced impact, these shoes are perfect for long-distance runs
 or high-intensity training. With a breathable mesh upper, they ensure comfort and airflow
 throughout your workout.
 
@@ -610,11 +582,10 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'HighRise Compression Leggings',
                 'description' =>
-"Product Info
-Take your workouts to the next level with the HighRise Compression Leggings, 
+"Take your workouts to the next level with the HighRise Compression Leggings,
 designed for both performance and style. Featuring a high-rise fit for a flattering
 silhouette and muscle support for enhanced endurance, these leggings are perfect for
-training sessions or everyday wear. The moisture-wicking fabric keeps you dry and 
+training sessions or everyday wear. The moisture-wicking fabric keeps you dry and
 comfortable throughout your activities.
 
 Care & Material
@@ -630,11 +601,10 @@ Machine washable
             new Product ([
                 'name' => 'ThermaJog Joggers',
                 'description' =>
-"Product Info
-Stay cozy and stylish with the ThermaJog Joggers, perfect for cool-weather activities. 
-Designed with thermal insulation and a soft fleece interior, these joggers provide 
-exceptional warmth and comfort. The sleek fit and adjustable drawstring waistband 
-ensure a secure and flattering look, making them ideal for outdoor adventures or 
+"Stay cozy and stylish with the ThermaJog Joggers, perfect for cool-weather activities.
+Designed with thermal insulation and a soft fleece interior, these joggers provide
+exceptional warmth and comfort. The sleek fit and adjustable drawstring waistband
+ensure a secure and flattering look, making them ideal for outdoor adventures or
 lounging.
 
 Care & Material
@@ -650,11 +620,10 @@ Machine washable
             new Product ([
                 'name' => 'SportLuxe Sweatpants',
                 'description' =>
- "Product Info
-Elevate your casual wardrobe with the SportLuxe Sweatpants, where style meets 
+ "Elevate your casual wardrobe with the SportLuxe Sweatpants, where style meets
 comfort. Crafted from ultra-soft fabric, these sweatpants offer a relaxed fit for ultimate
-ease while maintaining a chic, laid-back look. Perfect for lounging or casual outings, 
-they feature an adjustable drawstring waistband and spacious side pockets for added 
+ease while maintaining a chic, laid-back look. Perfect for lounging or casual outings,
+they feature an adjustable drawstring waistband and spacious side pockets for added
 functionality.
 
 Care & Material
@@ -670,10 +639,9 @@ Machine washable
             new Product ([
                 'name' => 'ActiveTrail Hiking Trousers',
                 'description' =>
- "Product Info
-Tackle the great outdoors with the ActiveTrail Hiking Trousers, built for durability and
-comfort. Designed with breathable, water-repellent fabric, these trousers keep you dry 
-and comfortable during hikes or outdoor adventures. Featuring multiple secure pockets 
+ "Tackle the great outdoors with the ActiveTrail Hiking Trousers, built for durability and
+comfort. Designed with breathable, water-repellent fabric, these trousers keep you dry
+and comfortable during hikes or outdoor adventures. Featuring multiple secure pockets
 and a flexible fit, they provide practicality and freedom of movement for any trail.
 
 Care & Material
@@ -690,10 +658,9 @@ Machine washable
             new Product ([
                 'name' => 'FitPro Tank Top',
                 'description' =>
-"Product Info
-Stay cool and comfortable with the FitPro Tank Top, designed for optimal airflow and 
-freedom of movement. Featuring lightweight fabric and a racerback design, this tank top 
-is perfect for workouts, yoga, or casual wear. Its sleek and breathable style keeps you 
+"Stay cool and comfortable with the FitPro Tank Top, designed for optimal airflow and
+freedom of movement. Featuring lightweight fabric and a racerback design, this tank top
+is perfect for workouts, yoga, or casual wear. Its sleek and breathable style keeps you
 feeling fresh, no matter how intense your activity.
 
 Care & Material
@@ -708,10 +675,9 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'CoreActive T-Shirt',
-                'description' => 
-"Product Info
-Enhance your performance with the CoreActive T-Shirt, designed to keep you cool and
-dry during workouts. Made with sweat-wicking fabric, this t-shirt ensures maximum 
+                'description' =>
+"Enhance your performance with the CoreActive T-Shirt, designed to keep you cool and
+dry during workouts. Made with sweat-wicking fabric, this t-shirt ensures maximum
 comfort and breathability for any activity. Its lightweight construction and classic fit
 make it perfect for gym sessions or casual wear.
 
@@ -729,9 +695,8 @@ Machine washable
             new Product([
                 'name' => 'Elevate long sleeve top',
                 'description' =>
-"Product Info
-Stay comfortable and protected during outdoor activities with the Elevate Long Sleeve 
-Top. Designed with breathable fabric and built-in sun protection, this top keeps you 
+"Stay comfortable and protected during outdoor activities with the Elevate Long Sleeve
+Top. Designed with breathable fabric and built-in sun protection, this top keeps you
 cool and safe under the sun. Its lightweight and versatile style makes it ideal for hikes,
  runs, or casual outings.
 
@@ -749,10 +714,9 @@ Machine washable
             new Product ([
                 'name' => 'Balance crop tee',
                 'description' =>
-"Product Info
-Achieve effortless style and comfort with the Balance Crop Tee, perfect for workouts or
-casual wear. Featuring a flattering cropped fit and breathable fabric, this tee ensures 
-unrestricted movement and a modern look. Its vibrant graphic design adds a bold 
+"Achieve effortless style and comfort with the Balance Crop Tee, perfect for workouts or
+casual wear. Featuring a flattering cropped fit and breathable fabric, this tee ensures
+unrestricted movement and a modern look. Its vibrant graphic design adds a bold
 touch, making it a standout piece for your active wardrobe.
 
 Care & Material
@@ -770,8 +734,7 @@ Machine washable
             new Product ([
                 'name' => 'Motion flex parka',
                 'description' =>
-"Product Info
-Stay chic and cozy with the MotionFlex Parka, designed for ultimate style and
+"Stay chic and cozy with the MotionFlex Parka, designed for ultimate style and
 functionality. Featuring a removable faux fur-lined hood and multiple secure pockets,
 this parka offers practicality without compromising elegance. Its insulated design keeps
 you warm in cold weather, making it a perfect choice for both urban and outdoor adventures.
@@ -792,9 +755,8 @@ Machine washable
             new Product ([
                 'name' => 'Thermal fit jacket ',
                 'description' =>
- "Product Info
-Stay cozy without the bulk in the ThermalFit Jacket, designed with advanced thermal 
-insulation for warmth and comfort. Its tailored fit provides a sleek, modern silhouette, 
+ "Stay cozy without the bulk in the ThermalFit Jacket, designed with advanced thermal
+insulation for warmth and comfort. Its tailored fit provides a sleek, modern silhouette,
 while the lightweight construction ensures ease of movement. Perfect for cold-weather
  outings, this jacket offers a refined look while keeping you protected from the elements.
 
@@ -812,11 +774,10 @@ Machine washable
             ]),
             new Product ([
                 'name' => 'Active sheild rain coat',
-                'description' => 
-"Product Info
-Brave the rain in style with the ActiveShield Rain Coat, designed for rainy runs and
+                'description' =>
+"Brave the rain in style with the ActiveShield Rain Coat, designed for rainy runs and
 outdoor activities. Made with breathable and waterproof material, this coat keeps you
-dry and comfortable while ensuring unrestricted movement. Featuring an adjustable 
+dry and comfortable while ensuring unrestricted movement. Featuring an adjustable
 hood, secure pockets, and a cinched waist for a flattering fit, it’s the perfect companion
  for wet-weather adventures.
 
@@ -834,10 +795,9 @@ Machine washable
             new Product ([
                 'name' => 'All season windbreaker',
                 'description' =>
-"Product Info
-Stay protected in any weather with the AllSeason Windbreaker, designed to shield you
-from wind and light rain. Featuring water-repellent fabric and adjustable cuffs, this 
-windbreaker provides a secure and comfortable fit. With a lightweight design and 
+"Stay protected in any weather with the AllSeason Windbreaker, designed to shield you
+from wind and light rain. Featuring water-repellent fabric and adjustable cuffs, this
+windbreaker provides a secure and comfortable fit. With a lightweight design and
 vibrant accents, it’s perfect for outdoor activities and everyday wear.
 
 Care & Material
@@ -854,9 +814,8 @@ Machine washable
             // The new ones
             new Product ([
                 'name' => 'performance tech hoodie',
-                'description'=> 
-"Product Info
-Designed for active lifestyles, the Performance Tech Hoodie offers lightweight,
+                'description'=>
+"Designed for active lifestyles, the Performance Tech Hoodie offers lightweight,
 breathable comfort. Featuring moisture-wicking fabric and an athletic fit, it’s perfect for
 workouts or casual wear, ensuring style and performance wherever you go.
 
@@ -873,11 +832,10 @@ Machine washable
             ]),
             new Product ([
                 'name'=>'trail runner pro shoes',
-                'description'=> 
-"Product Info
-Take your outdoor adventures to the next level with the Trail Runner Pro Shoes. 
-Designed with durable construction, high-grip soles, and shock-absorbing technology, 
-these shoes deliver exceptional comfort and stability on any terrain. A water-resistant 
+                'description'=>
+"Take your outdoor adventures to the next level with the Trail Runner Pro Shoes.
+Designed with durable construction, high-grip soles, and shock-absorbing technology,
+these shoes deliver exceptional comfort and stability on any terrain. A water-resistant
 finish ensures your feet stay dry, even in challenging conditions.
 
 Care & Material
@@ -894,10 +852,9 @@ Wipe clean with a damp cloth
             new Product ([
                 'name'=> 'flexfit training joggers',
                 'description'=>
-"Product Info
-Push your limits with the FlexFit Training Joggers, designed for high-impact 
-sports and intense gym sessions. These joggers feature stretchable, sweat-proof 
-fabric for maximum comfort and durability. Zippered pockets keep your 
+"Push your limits with the FlexFit Training Joggers, designed for high-impact
+sports and intense gym sessions. These joggers feature stretchable, sweat-proof
+fabric for maximum comfort and durability. Zippered pockets keep your
 essentials secure, while reinforced knees provide extra protection and longevity
 during tough workouts.
 
@@ -915,11 +872,10 @@ Machine washable
             new Product ([
                 'name'=> 'active cool compression shirt',
                 'description'=>
- "Product Info
-Stay fresh and supported during intense workouts with the Quick-Dry Compression 
+ "Stay fresh and supported during intense workouts with the Quick-Dry Compression
 Shirt. Featuring advanced quick-dry and anti-odor technology, this shirt keeps you
-comfortable and odor-free. The snug compression fit provides excellent muscle 
-support, reducing fatigue and enhancing performance. Ideal for high-intensity training 
+comfortable and odor-free. The snug compression fit provides excellent muscle
+support, reducing fatigue and enhancing performance. Ideal for high-intensity training
 sessions or outdoor activities.
 
 Care & Material
@@ -935,12 +891,11 @@ Machine washable
             ]),
             new Product ([
                 'name'=> 'thermosheild sports jacket',
-                'description'=> 
-"Product Info
-Stay warm and protected in the ThermoShield Sports Jacket, designed for outdoor 
+                'description'=>
+"Stay warm and protected in the ThermoShield Sports Jacket, designed for outdoor
 activities in cold and challenging weather. This insulated, windproof, and waterproof
-jacket ensures maximum warmth while keeping you shielded from the elements. With 
-its adjustable hood, secure zippered pockets, and durable construction, it’s perfect for 
+jacket ensures maximum warmth while keeping you shielded from the elements. With
+its adjustable hood, secure zippered pockets, and durable construction, it’s perfect for
 hiking, training, or any cold-weather adventure.
 
 Care & Material
@@ -958,10 +913,9 @@ Machine washable
             new Product ([
                 'name'=> 'energy flow zip hoodie',
                 'description'=>
-"Product Info
-The Energy Flow Zip Hoodie combines style and functionality, making it perfect for
+"The Energy Flow Zip Hoodie combines style and functionality, making it perfect for
  workouts or athleisure. Featuring quick-dry fabric, breathable mesh panels, and
-thumbholes for added comfort, this sleek and fitted hoodie ensures unrestricted 
+thumbholes for added comfort, this sleek and fitted hoodie ensures unrestricted
 movement while keeping you cool and dry. Ideal for active days or casual outings, it’s a
 versatile essential for your wardrobe.
 
@@ -979,8 +933,7 @@ Machine washable
             new Product ([
                 'name'=> 'pulse track running shoes',
                 'description'=>
-"Product Info
-Achieve peak performance with the Pulse Track Running Shoes, designed for comfort
+"Achieve peak performance with the Pulse Track Running Shoes, designed for comfort
 and style. These lightweight running shoes feature cushioned soles for smooth strides,
 reinforced arch support for stability, and a modern design that keeps you looking sharp.
 Perfect for both training sessions and casual wear, they combine functionality with flair.
@@ -998,11 +951,10 @@ Wipe clean with a damp cloth
             new Product ([
                 'name'=> 'powerflex workout leggings',
                 'description'=>
-"Product Info
-The PowerFlex Workout Leggings are designed for active lifestyles, combining 
+"The PowerFlex Workout Leggings are designed for active lifestyles, combining
 functionality and comfort. Featuring a high-waisted fit for support and a flattering
  silhouette, these leggings are made with four-way stretch and moisture-wicking fabric
-to keep you moving comfortably. A hidden pocket adds convenience, making them 
+to keep you moving comfortably. A hidden pocket adds convenience, making them
 perfect for workouts or casual wear.
 
 Care & Material
@@ -1018,10 +970,9 @@ Machine washable
             new Product ([
                 'name'=> 'breathe fit sports tee',
                 'description'=>
-"Product Info
-Experience unmatched comfort with the Performance Fit Tee, crafted for active 
+"Experience unmatched comfort with the Performance Fit Tee, crafted for active
 lifestyles. Featuring sweat-wicking technology and a breathable, soft fabric, this tee
-keeps you cool and dry during workouts. Its flattering fit ensures effortless style while 
+keeps you cool and dry during workouts. Its flattering fit ensures effortless style while
 enhancing movement, making it a perfect addition to your fitness wardrobe.
 
 Care & Material
@@ -1038,11 +989,10 @@ Machine washable
             new Product ([
                 'name'=> 'All weather performance jacket',
                 'description'=>
-"Product Info
-Conquer the outdoors with the All-Weather Performance Jacket, crafted for
+"Conquer the outdoors with the All-Weather Performance Jacket, crafted for
 lightweight protection and style. Featuring water-resistant fabric, reflective details for
- visibility, and an adjustable hood, this jacket is perfect for outdoor sports and 
-adventures. Its feminine fit ensures both comfort and elegance, making it a versatile 
+ visibility, and an adjustable hood, this jacket is perfect for outdoor sports and
+adventures. Its feminine fit ensures both comfort and elegance, making it a versatile
 choice for any activity.
 
 Care & Material
