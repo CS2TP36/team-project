@@ -1883,7 +1883,7 @@ main {
         }
 
         table tr:nth-child(even) {
-            background-color: #F2F2F2;
+            background-color: #4D4D4D;
         }
 
         table td {
