@@ -70,7 +70,7 @@ class CheckoutController extends Controller
 
             DB::commit();
 
-            return redirect()->route('order.success', ['order' => $order->id]);
+            return view('pages.success')->with(['orderNumber' => $order['id'], 'trackingNumber' => $shipping['tracking_number']]);
 
         } catch (\Exception $e) {
             DB::rollBack();
