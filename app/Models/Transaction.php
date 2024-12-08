@@ -10,20 +10,16 @@ class Transaction extends Model
 {
     use HasFactory;
 
-    //The table associated with the model
-    protected $table = 'transaction';
+    protected $table = 'transactions';  // Fixing table name
 
-    // The attributes that are mass assignable.
     protected $fillable = [
         'transaction_amount',
         'transaction_info',
         'transaction_status',
     ];
 
-    //Get the order associated with the transaction.
-
     public function order()
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsTo(Order::class, 'transaction_id');
     }
 }
