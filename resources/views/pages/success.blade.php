@@ -4,7 +4,7 @@
     <!-- checks if there is an order and tracking number provided -->
     @if(isset($orderNumber) and  isset($trackingNumber))
         <div id="order-success">
-            <h1>Order PLaced</h1>
+            <h1>Order Placed</h1>
             <p>Order number: {{ $orderNumber }}</p>
             <br>
             <p>Tracking number: {{$trackingNumber}}</p>
