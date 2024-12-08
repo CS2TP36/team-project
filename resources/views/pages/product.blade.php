@@ -33,12 +33,18 @@
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <input type="hidden" name="size" id="size" value="">
                     <div class="line-break"></div>
+                    
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" name="quantity" value="1" min="1"> ({{$product['stock']}} in stock)
+                    
+                    
                     <p>Choose size:</p>
                     <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
                     <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
                     <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
+                    
+                    
+                    
                     <button type="submit">Add to Basket</button>
                 </form>
                 <!-- Add to Wishlist

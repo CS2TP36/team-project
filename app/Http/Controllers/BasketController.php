@@ -13,7 +13,6 @@ class BasketController extends Controller
     {
         $baskets = Basket::query();
     
-        // Filter by user or session
         if ($request->user()) {
             $baskets->where('user_id', $request->user()->id);
         } else {
@@ -27,10 +26,21 @@ class BasketController extends Controller
         return view('pages.basket', compact('basketItems', 'total'));
     }
     
-    // Add item to basket
+    // Add item into basket
     public function add(Request $request)
 {
-    $product = Product::find($request->product_id);
+    $validated = $request->validate([
+        'product_id' => 'required|exists:products,id',
+        'quantity' => 'required|integer|min:1',
+        'size' => 'required|in:S,M,L',
+    ], [
+        'size.required' => 'Please Choose a size.',
+        'size.in' => 'The selected size is not Selected.Please Choose Size S, M, or L.',
+    ]);
+
+
+
+    $product = Product::find($validated['product_id']);
 
     if (!$product) {
         return redirect()->back()->withErrors('Product not found!');
@@ -38,14 +48,16 @@ class BasketController extends Controller
 
     $basket = Basket::query();
 
-    // Find by user or session
-    if ($request->user()) {
+        if ($request->user()) {
         $basket->where('user_id', $request->user()->id);
     } else {
         $basket->where('session_id', $request->session()->getId());
     }
 
-    $existingItem = $basket->where('product_id', $product->id)->where('size', $request->size)->first();
+    $existingItem = $basket
+    ->where('product_id', $product->id)
+    ->where('size', $validated['size'])
+    ->first();
 
     if ($existingItem) {
         $existingItem->increment('quantity', $request->quantity ?? 1);
@@ -54,8 +66,8 @@ class BasketController extends Controller
             'user_id' => $request->user()->id ?? null,
             'session_id' => $request->session()->getId(),
             'product_id' => $product->id,
-            'size' => $request->size,
-            'quantity' => $request->quantity ?? 1,
+            'size' => $validated['size'],
+            'quantity' => $validated['quantity'],
         ]);
     }
 
