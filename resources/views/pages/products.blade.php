@@ -124,7 +124,7 @@
             <div class="product-item">
                 <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link">
                     <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}" class="product-image"
-                         style="width: 300px; height: 300px;">
+                         style="width: 300px; height: 300px;"></img>
                     <div class="product-details">
                         <h3>{{ $product['name'] }}</h3>
                         <p>£{{ $product['price'] }}</p>

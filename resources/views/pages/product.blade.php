@@ -32,6 +32,7 @@
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <input type="hidden" name="size" id="size" value="">
+                    <div class="line-break"></div>
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" name="quantity" value="1" min="1"> ({{$product['stock']}} in stock)
                     <p>Choose size:</p>
@@ -46,6 +47,17 @@
             </div>
 
             <script>
+                const buttons = document.querySelectorAll(".size-selection");
+                
+                buttons.forEach(button => {
+                    button.addEventListener("click", () => {
+                        buttons.forEach(btn => {
+                            btn.style.backgroundColor = "#4D4D4D";
+                        });
+                        button.style.backgroundColor = "#1D1D1D";
+                    });
+                });
+                
                 function selectSize(size) {
                     document.getElementById('size').value = size;
                 }
