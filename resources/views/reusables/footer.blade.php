@@ -1,5 +1,4 @@
 <footer class="footer-check">
-    <div class="footer1">
         <ul>
             <li class="footer-list"><a href="/contact">Contact: 0121 010 0111</a></li>
             <li class="footer-list">Address: Aston University</li>
@@ -7,7 +6,6 @@
             <li class="footer-list">Follow Our Socials</li>
         </ul>
 
-    </div>
     <div>
         <ul>
             <li class="footer-list"><a href="/aboutus">About Us</a></li>
