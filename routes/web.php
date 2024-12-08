@@ -102,7 +102,3 @@ Route::post('/change-pass', [PassChangeController::class, 'change'])->name('chan
 Route::get('/terms-conditions', function () {
     return view('pages.terms-conditions');
 });
-
-Route::get('/success', function () {
-    return view('pages.success');
-});
