@@ -9,6 +9,7 @@ use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->addProducts();
         // Add images
         $this->addImages();
+        // Add test user
+        $this->testAccount();
     }
 
     private function addCategories()
@@ -1242,5 +1245,20 @@ Machine washable
         foreach ($images as $image) {
             $image->save();
         }
+    }
+    // Create a test account
+    function testAccount()
+    {
+        $user = User::create([
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+            'email' => 'test@account.com',
+            'password' => Hash::make('password'),
+            'phone_number' => '+447111111111',
+            'home_address' => 'Test home address',
+            'postcode' => '',
+            'role' => 'user'
+        ]);
+        $user->save();
     }
 }
