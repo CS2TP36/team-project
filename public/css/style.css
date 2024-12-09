@@ -2522,6 +2522,10 @@ main {
             padding-left: 10px;
         }
 
+        legend {
+            color: white;
+        }
+
         .form-group {
             margin-bottom: 20px;
             position: relative;
