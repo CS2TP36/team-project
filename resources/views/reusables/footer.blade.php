@@ -9,16 +9,16 @@
 
     <div>
         <ul><!--list for about us/terms-->
-            <li class="footer-list"><a href="/terms-conditions">Terms and condition</a></li><!--links to the terms and conditions-->
+            <li class="footer-list"><a href="/terms-conditions">Terms and Conditions</a></li><!--links to the terms and conditions-->
             <li class="footer-list"><a>Wishlist</a></li><!--links to about us-->
-            <li class="footer-list"><a>Track my order</a></li><!--links to about us-->
+            <li class="footer-list"><a>Track My Order</a></li><!--links to about us-->
             <li class="footer-list"><a>Delivery and Returns</a></li><!--links to about us-->
         </ul>
     </div>
 
     <div>
         <ul><!--list for signing in and toggle themee-->
-            <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign in @else <a href="/logout"> Sign out @endif</a></li><!--sign in -->
+            <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign In @else <a href="/logout"> Sign Out @endif</a></li><!--sign in -->
             <li class="footer-list"><a href="https://www.instagram.com/">Follow Us</a></li><!--links to the terms and conditions-->
             <li class="footer-list"><a>Student Discount</a></li><!--links to the terms and conditions-->
             <li class="footer-list"><button id="theme-toggle">Toggle Theme</button></li><!--dark mode/light mode toggle theme-->
