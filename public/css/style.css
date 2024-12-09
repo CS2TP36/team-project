@@ -1293,7 +1293,7 @@ main {
         padding-right: 25px;
         align-items: center;
         margin: 0 auto;
-        margin-bottom: 30px;
+        margin-bottom: 160px;
 
         h2 {
             text-align: left;
@@ -1369,15 +1369,16 @@ main {
         .existing-customers, .new-customers {
             max-width: 100%;
             margin-bottom: 30px;
+
+            input {
+                max-width: 100%;
+                border: 1px solid black;
+                padding: 10px;
+                margin-bottom: 10px;
+                width: 94%;
+            }
         }
 
-        noinput {
-            max-width: 100%;
-            border: 1px solid black;
-            padding: 10px;
-            margin-bottom: 10px;
-            width: 200px;
-        }
 
         .new-customers {
             margin-left: 0;
@@ -3026,7 +3027,7 @@ main {
         padding-right: 25px;
         align-items: center;
         margin: 0 auto;
-        margin-bottom: 30px;
+        margin-bottom: 160px;
 
         h2 {
             text-align: left;
