@@ -1211,7 +1211,7 @@ main {
         gap: 50px;
     }
 
-    #category-section ul li {
+    #category-section li {
         margin: 10px;
         box-sizing: border-box;
         flex-wrap: wrap;
@@ -1260,6 +1260,7 @@ main {
         flex-wrap: wrap;
         justify-content: center;
         gap: 100px;
+        padding: 0;
     }
 
     @media (max-width: 768px) {
@@ -1273,6 +1274,12 @@ main {
 
         #select-catogeries img {
             width: 200px;
+        }
+        #catogery-divider {
+            p {
+                font-size: 25px;  
+            }
+            
         }
     }
 
@@ -1364,7 +1371,7 @@ main {
             margin-bottom: 30px;
         }
 
-        input {
+        noinput {
             max-width: 100%;
             border: 1px solid black;
             padding: 10px;
@@ -1470,6 +1477,7 @@ main {
         gap: 120px;
         flex-wrap: wrap;
         padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .Filter-Page {
@@ -1573,7 +1581,7 @@ main {
         }
 
         .Products-Filter-Container {
-            padding-top: 80px;
+            padding-top: 50px;
         }
 
         .Filter-Page {
@@ -1633,6 +1641,60 @@ main {
 
 
     }
+
+    @media (max-width: 768px) {
+        #product-text-banner {
+            font-size: 15px;
+        }
+
+        .Products-Filter-Container {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .Filter-Page {
+            max-width: 500px;
+            font-size: 15px;
+
+        }
+
+        #products-list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+
+        }
+
+        .product-item {
+            max-height: 300px;
+            max-width: 190px;
+            padding: 1px;
+        }
+        .product-image{
+            height: 180px;
+            width: 170px;
+        }
+        .product-details{
+            font-size: 10px;
+        }
+        .line-break {
+            background-color: black;
+            height: 2px;
+            flex-grow: 1;
+    
+        }
+
+
+        
+
+
+    }
+
+    
+    
+    
+    
 
     
 
