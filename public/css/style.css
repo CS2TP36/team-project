@@ -3056,7 +3056,6 @@ main {
     .product-item {
         text-align: center;
         background-color: #777777;
-        border-radius: 10px;
         display: block;
         justify-content: space-evenly;
         max-height: 420px;
