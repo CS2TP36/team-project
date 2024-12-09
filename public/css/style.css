@@ -1974,7 +1974,7 @@ main {
     /*  styling for change password container */
 
     .change {
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(18,18,18);
         font-family: Arial, Helvetica, sans-serif;
         margin: 50px auto; /* centre the container */
         max-width: 600px;
@@ -1983,7 +1983,7 @@ main {
         /* h2 styling */
 
         h2 {
-            color: #333;
+            color: white;
             font-size: 1.6em;
             text-align: left;
             margin: 0 0 15px 5px; /* add spacing */
@@ -2001,7 +2001,7 @@ main {
 
         .reset-sections h3 {
             font-size: 1.2em;
-            color: #555;
+            color: white;
             margin-bottom: 15px;
         }
 
@@ -2010,7 +2010,7 @@ main {
         .reset-sections input {
             width: 100%;
             max-width: 500px;
-            border: 1px solid black;
+            border: 1px solid white;
             padding: 10px;
             margin-bottom: 10px;
         }
@@ -2022,8 +2022,8 @@ main {
             width: 100%;
             max-width: 522px;
             padding: 10px;
-            border: 1px solid black;
-            background-color: black;
+            border: 1px solid white;
+            background-color: white;
             color: white;
             cursor: pointer;
             margin-bottom: 10px;
@@ -2032,7 +2032,7 @@ main {
         /* atyling for hover */
 
         reset-sections button:hover {
-            background-color: #4D4D4D
+            background-color:  #6D6D6D
         }
 
 
