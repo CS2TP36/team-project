@@ -480,13 +480,12 @@ main {
     /*CSS for Checkout Page*/
 
     .checkout {
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: white;
-            color: black;
-            margin: 0;
-            padding: 0;
-        }
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: black;
+        margin: 0;
+        padding: 0;
+
 
         .checkout-container {
             max-width: 900px;
