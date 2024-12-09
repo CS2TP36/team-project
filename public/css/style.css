@@ -3141,7 +3141,7 @@ main {
 
    
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1280px) {
         #product-text-banner {
             font-size: 25px;
         }
