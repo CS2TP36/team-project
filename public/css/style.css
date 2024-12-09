@@ -148,6 +148,23 @@ main {
         }
     }
 
+    @media (max-width: 768px){
+        .account-page {
+            min-width: 200px;
+            margin: 20px;
+            margin-bottom: 100px;
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+        }
+
+        
+    }
+
+
+
     /* CSS for Basket Page*/
 
     .basket {
@@ -942,7 +959,7 @@ main {
 
             a {
                 color: white;
-                font-size: 25px;
+                font-size: 25px;                              
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
@@ -2032,6 +2049,7 @@ main {
             margin-bottom: 5px;
         }
     }
+
 
 
     /* CSS for Basket Page*/
@@ -3453,7 +3471,7 @@ main {
 
     }
 
-}  
+
 
 
     /* CSS for the Product Page*/
@@ -3606,3 +3624,4 @@ main {
     }
 
 
+}
