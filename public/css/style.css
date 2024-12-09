@@ -1854,6 +1854,82 @@ main {
 
     }
 
+    @media (max-width: 768px) {
+        .product {
+            font-family: Arial, sans-serif;
+            display: inline-block;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+    
+        .left-container {
+            flex: 1;
+            max-width: 300px;
+            max-height: 200px;
+            margin: 0;
+            padding: 0;
+    
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+            }
+    
+        }
+    
+        .right-container {
+            color: black;
+            flex: 1;
+            max-width: 200px;
+            margin: 0;
+            padding: 0;
+    
+            .line-break {
+                background-color: black;
+                width: 20px;
+                height: 2px;
+                margin-bottom: 20px;
+            }
+    
+            .size-selection {
+                max-width: 40px;
+                padding: 10px;
+    
+                button {
+                    width: 20px;
+                    height: 50px;
+                    padding: 10px;
+                    border: 1px solid black;
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+    
+                button:hover {
+                    background-color: #4D4D4D;
+                }
+            }
+    
+            .purchase-options {
+                button {
+                    width: 80px;
+                    padding: 10px;
+                    border: 1px solid black;
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+    
+                button:hover {
+                    background-color: #4D4D4D;
+                }
+            }
+        }
+    }
+
+
     /*CSS for Forgot Password Page*/
 
     .reset {
@@ -3801,6 +3877,80 @@ main {
 
             label {
                 color: white;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .product {
+            font-family: Arial, sans-serif;
+            display: inline-block;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+    
+        .left-container {
+            flex: 1;
+            max-width: 300px;
+            max-height: 200px;
+            margin: 0;
+            padding: 0;
+    
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+            }
+    
+        }
+    
+        .right-container {
+            color: black;
+            flex: 1;
+            max-width: 200px;
+            margin: 0;
+            padding: 0;
+    
+            .line-break {
+                background-color: black;
+                width: 20px;
+                height: 2px;
+                margin-bottom: 20px;
+            }
+    
+            .size-selection {
+                max-width: 40px;
+                padding: 10px;
+    
+                button {
+                    width: 20px;
+                    height: 50px;
+                    padding: 10px;
+                    border: 1px solid black;
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+    
+                button:hover {
+                    background-color: #4D4D4D;
+                }
+            }
+    
+            .purchase-options {
+                button {
+                    width: 80px;
+                    padding: 10px;
+                    border: 1px solid black;
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+    
+                button:hover {
+                    background-color: #4D4D4D;
+                }
             }
         }
     }
