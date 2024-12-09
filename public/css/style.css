@@ -1838,7 +1838,7 @@ main {
 
         .purchase-options {
             button {
-                width: 100px;
+                width: 500px;
                 padding: 10px;
                 border: 1px solid black;
                 background-color: black;
@@ -1854,81 +1854,6 @@ main {
 
     }
 
-    @media (max-width: 768px) {
-        .product{
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-        }
-            .left-container {
-                flex: 1;
-                max-width: 800px;
-                display: flex;
-                flex-direction: row;
-                max-height: 400px;
-
-                
-                flex-wrap: wrap;
-                img {
-                    width: 300px;
-                    height: 300px;
-                    object-fit: contain;
-                    margin-left: 30px;
-                    
-                    
-                }
-            }
-
-            .right-container {
-                max-width: 300px;
-                min-width: 100px;
-                margin-top: 20px;
-                padding-top: 0;
-                margin-bottom: 50px;
-                width: 100px;
-                flex: 1;
-                flex-direction: column;
-
-
-            }
-
-            .product-info{
-                font-size: 12px;
-            }
-
-            .purchase-options{
-                font-size: 12px;
-            }
-            
-            .detailed-info{
-                font-size: 12px;
-            }
-
-            .purchase-options {
-                width: 50px;
-                display: flex;
-            }
-
-            .size-selection {
-                max-width: 20px;
-                padding: 10px;
-
-                button {
-                    border: 1px solid black;
-                    background-color: black;
-                    color: white;
-                    cursor: pointer;
-                    width: 20px;
-
-                }
-            }
-            #show_description{
-                width: 100px;
-                left: 100%;
-                margin: 0;
-            }
-    }
     /*CSS for Forgot Password Page*/
 
     .reset {
@@ -3878,82 +3803,6 @@ main {
                 color: white;
             }
         }
-    }
-
-    @media (max-width: 768px) {
-        .product{
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-        }
-            .left-container {
-                flex: 1;
-                max-width: 800px;
-                display: flex;
-                flex-direction: row;
-                max-height: 400px;
-
-                
-                flex-wrap: wrap;
-                img {
-                    width: 300px;
-                    height: 300px;
-                    object-fit: contain;
-                    margin-left: 30px;
-                    
-                    
-                }
-            }
-
-            .right-container {
-                max-width: 300px;
-                min-width: 100px;
-                margin-top: 20px;
-                padding-top: 0;
-                margin-bottom: 50px;
-                width: 100px;
-                flex: 1;
-                flex-direction: column;
-
-
-            }
-
-            .product-info{
-                font-size: 12px;
-            }
-
-            .purchase-options{
-                font-size: 12px;
-            }
-            
-            .detailed-info{
-                font-size: 12px;
-            }
-
-            .purchase-options {
-                width: 50px;
-                display: flex;
-            }
-
-            .size-selection {
-                max-width: 20px;
-                padding: 10px;
-
-                button {
-                    border: 1px solid black;
-                    background-color: black;
-                    color: white;
-                    cursor: pointer;
-                    width: 20px;
-
-                }
-            }
-            #show_description{
-                width: 100px;
-                left: 100%;
-                margin: 0;
-            }
     }
 
     /*CSS for Forgot Password Page*/
