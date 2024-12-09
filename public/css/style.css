@@ -3134,6 +3134,51 @@ main {
         background-color: #4D4D4D;
     }
 
+    .product-image {
+        height: 300px;
+        width: 300px;
+        
+    }
+
+
+    @media (max-width: 1280px) {
+        #product-text-banner {
+            font-size: 25px;
+        }
+
+        .Products-Filter-Container {
+            align-items: center;
+            gap: 80px;
+        }
+
+        .Filter-Page {
+            max-width: 500px;
+            padding-top: 20px;
+            top: 100%;
+
+        }
+
+        #products-list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+
+        }
+
+        .product-item {
+            max-height: 300px;
+            padding: 10px;
+        }
+        .product-image {
+            height: 200px;
+            width: 200px;
+            
+        }
+        .product-details {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        
+
     @media (max-width: 768px) {
         #product-text-banner {
             font-size: 25px;
@@ -3163,6 +3208,8 @@ main {
 
 
     }
+
+}  
 
 
     /* CSS for the Product Page*/
