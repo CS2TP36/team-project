@@ -1405,7 +1405,6 @@ main {
         font-size: 60px;
         font-weight: bold;
         font-family: Arial;
-        flex-wrap: wrap;
     }
 
     .Products-Filter-Container {
@@ -1415,18 +1414,17 @@ main {
         justify-content: center;
         gap: 120px;
         flex-wrap: wrap;
+        padding-top: 80px;
     }
 
     .Filter-Page {
         border-radius: 15px;
         align-items: left;
-        padding-top: 40px;
         text-align: left;
 
     }
 
     #products-list {
-        padding-top: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
@@ -1438,12 +1436,11 @@ main {
     .product-item {
         text-align: center;
         background-color: whitesmoke;
-        padding: 20px;
-        border-radius: 10px;
         display: block;
         justify-content: space-evenly;
         max-height: 420px;
         margin-bottom: 20px;
+        padding-bottom: 20px;
     }
 
     .product-details {
@@ -1481,7 +1478,7 @@ main {
     .category-buttons {
         display: flex;
         align-items: center;
-        margin: 5px 0;
+        margin: 5px ;
         gap: 10px;
     }
 
@@ -1505,9 +1502,51 @@ main {
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
+    .product-image {
+        height: 300px;
+        width: 300px;
+        
+    }
 
     .filter-btn:hover {
         background-color: #4D4D4D;
+    }
+
+    @media (max-width: 1340px) {
+        #product-text-banner {
+            font-size: 25px;
+        }
+
+        .Products-Filter-Container {
+            padding-top: 80px;
+        }
+
+        .Filter-Page {
+            max-width: 500px;
+            padding-top: 20px;
+
+        }
+
+        #products-list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+
+        }
+
+        .product-item {
+            max-height: 400px;
+        }
+        .product-image {
+            height: 280px;
+            width: 280px;
+            
+        }
+        .product-details{
+            font-size: 15px;
+        }
+            
+
+
     }
 
     
@@ -3029,6 +3068,8 @@ main {
         justify-content: center;
         gap: 120px;
         flex-wrap: wrap;
+        padding-top: 80px;
+        padding-bottom: 20px;
 
         li, label {
             color: white;
@@ -3139,7 +3180,7 @@ main {
 
    
 
-    @media (max-width: 1280px) {
+    @media (max-width: 1340px) {
         #product-text-banner {
             font-size: 25px;
         }
@@ -3327,5 +3368,5 @@ main {
             color: black;
         }
     }
-}
+
 
