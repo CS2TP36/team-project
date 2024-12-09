@@ -13,7 +13,7 @@
         <p>To access certain features, you must create an account. You are responsible for maintaining the confidentiality of your account credentials.
         You agree to provide accurate and complete information during registration and to update it as necessary.
         We reserve the right to suspend or terminate accounts that violate these terms.</p>
-        <h2> Product info and Availabilty </h2>
+        <h2> Product info and Availability </h2>
         <p> All products are described as accurately as possible. However, we do not guarantee that descriptions, images, or other content are error-free or complete.
         Product availability is subject to change without notice. We reserve the right to limit quantities or discontinue products.
         Prices are subject to change at any time but will be honored at the rate displayed during checkout.</P>
@@ -29,7 +29,7 @@
         <p>We are committed to protecting your privacy. Please review our Privacy Policy to understand our practices regarding your personal information.</p>
 
         <h2>Intellectual Property</h2>
-        <p>Unless otherwise stated, Sportwares owns the intellectual property rights for all material on this website. All intellectual property rights are reserved. You may view and/or print pages for personal use subject to restrictions set in these terms and conditions.</p>
+        <p>Unless otherwise stated, SportsWear owns the intellectual property rights for all material on this website. All intellectual property rights are reserved. You may view and/or print pages for personal use subject to restrictions set in these terms and conditions.</p>
 
         <h2>Prohibited Activities</h2>
         <p>While using our website, you agree not to:</p>
@@ -41,17 +41,17 @@
 
 
         <h2>Limitation of Liability</h2>
-        <p>In no event shall Sportwares, nor any of its officers, directors, and employees, be held liable for anything arising out of or in any way connected with your use of this website, whether such liability is under contract, tort, or otherwise.</p>
+        <p>In no event shall SportsWear, nor any of its officers, directors, and employees, be held liable for anything arising out of or in any way connected with your use of this website, whether such liability is under contract, tort, or otherwise.</p>
 
         <h2>Indemnification</h2>
-        <p>You agree to indemnify and hold harmless Sportwares and its affiliates from and against any and all claims, liabilities, damages, and expenses arising from your use of the website.</p>
+        <p>You agree to indemnify and hold harmless SportsWear and its affiliates from and against any and all claims, liabilities, damages, and expenses arising from your use of the website.</p>
 
         <h2>Termination</h2>
         <p>We may terminate or suspend your access to the website at any time, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these terms.</p>
 
         <h2>Governing Law</h2>
-        <p>These terms and conditions are governed by and construed in accordance with the laws of the country in which Sportwares operates.</p>
+        <p>These terms and conditions are governed by and construed in accordance with the laws of the country in which SportsWear operates.</p>
 
-        <p>If you have any questions about these terms and conditions, please contact us at support@sportwares.com.</p>
+        <p>If you have any questions about these terms and conditions, please contact us at <a href="mailto:legal@thesportswear.website">legal@thesportswear.website</a></p>
 </div>
 @endsection
