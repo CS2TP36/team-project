@@ -5,7 +5,7 @@ function search() {
     // convert space to #
     searchTerm = searchTerm.replace(' ', '#');
     searchTerm = searchTerm.replace('\\', '');
-
+    // runs the search in a new window
     const url = `/search/${searchTerm}`;
     if (searchTerm !== '') {
         window.open(url);

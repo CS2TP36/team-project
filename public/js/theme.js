@@ -9,6 +9,7 @@ function toggleTheme() {
     } else {
         setTheme("light");
     }
+    // swaps between 2 css structures
     const body = document.body;
     body.classList.toggle("light-theme");
     body.classList.toggle("dark-theme");

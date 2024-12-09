@@ -213,6 +213,7 @@
 
             // generate the url
             const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}/${priceFilter}`;
+            // swap current page for filtered url
             location.href = url;
         });
     </script>
