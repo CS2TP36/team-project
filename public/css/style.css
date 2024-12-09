@@ -3038,13 +3038,11 @@ main {
     .Filter-Page {
         border-radius: 15px;
         align-items: left;
-        padding-top: 40px;
         text-align: left;
 
     }
 
     #products-list {
-        padding-top: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
@@ -3141,52 +3139,15 @@ main {
     }
 
 
-    @media (max-width: 1280px) {
+   
+
+    @media (max-width: 1200px) {
         #product-text-banner {
             font-size: 25px;
         }
 
         .Products-Filter-Container {
-            align-items: center;
-            gap: 80px;
-        }
 
-        .Filter-Page {
-            max-width: 500px;
-            padding-top: 20px;
-            top: 100%;
-
-        }
-
-        #products-list {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-
-        }
-
-        .product-item {
-            max-height: 300px;
-            padding: 10px;
-        }
-        .product-image {
-            height: 200px;
-            width: 200px;
-            
-        }
-        .product-details {
-            margin-top: 10px;
-            font-size: 12px;
-        }
-        
-
-    @media (max-width: 768px) {
-        #product-text-banner {
-            font-size: 25px;
-        }
-
-        .Products-Filter-Container {
-            flex-direction: column;
-            align-items: center;
         }
 
         .Filter-Page {
