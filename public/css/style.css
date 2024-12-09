@@ -315,14 +315,15 @@ main {
             text-decoration: underline;
         }
 
-        @media (max-width: 758px) {
+        @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
             }
 
             table td, table th {
-                font-size: 0.8rem;
-                padding: 8px;
+                font-size: 0.55rem;
+                padding: 4px;
+                width: 50%;
             }
 
             div input[type="text"], div button {
@@ -337,6 +338,7 @@ main {
             footer {
                 font-size: 0.8rem;
             }
+            
         }
 
         .basket-summary {
@@ -400,6 +402,58 @@ main {
         .basket-summary h3 {
             margin-bottom: 9px;
 
+        }
+        @media (max-width: 768px) {
+            .basket-summary{
+                max-width: 200px;
+                position: relative;
+                float: right;
+                right: 15px;
+                max-height: 200px;
+                background-color: white;
+                border: 1px solid #e1e1e1;
+                border-radius: 4px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                margin-bottom: 200px;
+            }
+            .basket-summary h3 {
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 1px;
+            }
+    
+            .basket-summary p {
+                font-size: 10px;
+                line-height: 1.6;
+                border-bottom: 1px solid #ccc;
+                padding: 0;
+            }
+    
+            .basket-summary p strong {
+                font-size: 10px;
+                color: #000;
+            }
+    
+            .basket-summary a button {
+    
+                background-color: #000;
+                color: white;
+                font-size: 10px;
+                width: 80px;
+                padding: 0;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                display: block;
+                height: 30px;
+                text-align: center;
+                margin: 0;
+                outline: none;
+                transition: background-color 0.3s ease;
+                margin-bottom: 10px;
+    
+            }
         }
 
 
@@ -962,7 +1016,7 @@ main {
             }
 
             .logo {
-                height: 90px;
+                height: 88px;
                 width: 90px;
             }
 
@@ -977,17 +1031,19 @@ main {
             }
 
             .prime-list {
-                display: inline-block;
+                display: flex;
                 list-style: none;
                 text-decoration: none;
+                gap: 10px;
 
 
                 a {
                     color: white;
-                    font-size: 15px;
+                    font-size: 13px;
                     font-weight: bold;
                     list-style: none;
                     text-decoration: none;
+                    
                 }
 
             }
@@ -1979,6 +2035,7 @@ main {
 
 
     /* CSS for Basket Page*/
+    
 
     .basket {
         * {
@@ -2152,7 +2209,7 @@ main {
             text-decoration: underline;
         }
 
-        @media (max-width: 758px) {
+        @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
             }
@@ -2160,6 +2217,7 @@ main {
             table td, table th {
                 font-size: 0.8rem;
                 padding: 8px;
+                width: 300px;
             }
 
             div input[type="text"], div button {
