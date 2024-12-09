@@ -11,7 +11,6 @@ use App\Models\Basket;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use App\Models\IndividualOrder;
 
 class CheckoutController extends Controller
 {
@@ -93,13 +92,13 @@ class CheckoutController extends Controller
                 if (!$basketItem->product || !$basketItem->product->price) {
                     throw new \Exception('Basket item product or price is missing');
                 }
-    
+
                 IndividualOrder::create([
                     'order_id' => $order->id,
                     'product_id' => $basketItem->product_id,
                     'quantity' => $basketItem->quantity,
-                    'price' => $basketItem->product->price, 
-                    'size' => $basketItem->size, 
+                    'price' => $basketItem->product->price,
+                    'size' => $basketItem->size,
                 ]);
             }
 
@@ -123,11 +122,11 @@ class CheckoutController extends Controller
                 'line' => $e->getLine(),
                 'trace' => $e->getTraceAsString()
             ]);
-        
+
             // Redirect back with an error message
             return redirect()->route('checkout.checkout')->withErrors('An error occurred. Please try again later.');
 
         }
-        
+
     }
 }
