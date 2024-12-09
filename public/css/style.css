@@ -3165,12 +3165,12 @@ main {
             max-height: 400px;
         }
         .product-image {
-            height: 200px;
-            width: 200px;
+            height: 280px;
+            width: 280px;
             
         }
         .product-details{
-            font-size: 10px;
+            font-size: 15px;
         }
             
 
