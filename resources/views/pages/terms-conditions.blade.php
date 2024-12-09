@@ -3,6 +3,7 @@
 @section('content')
 <div class="aboutus">
         <h1> TERMS AND CONDITIONS</h1>
+        <h2 style="color: red">THIS IS NOT A REAL WEBSITE, ANYTHING YOU TRY TO ORDER WILL NOT ARRIVE</h2>
 
         <p>These Terms and Conditions outline the rules and regulations for the use of our e-commerce platform. By accessing or using our website, you agree to comply with and be bound by these terms.</p>
         <h2>General Terms</h2>
