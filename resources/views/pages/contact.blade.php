@@ -21,7 +21,7 @@
                     </ul>
                 </div>
 
-                <h1 class = "contact-header">Contact Me</h1>
+                <h1 class = "contact-header">Contact Us</h1>
 
                 <form method="POST" action="/contact" onsubmit="validateContactForm(event)">
                     @csrf
