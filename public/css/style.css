@@ -2029,6 +2029,10 @@ main {
             margin-bottom: 10px;
         }
 
+        .reset-sections label{
+            color: white;
+        }
+
         /* atyling for hover */
 
         reset-sections button:hover {
