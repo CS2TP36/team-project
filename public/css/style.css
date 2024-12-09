@@ -503,7 +503,14 @@ main {
             padding-left: 10px;
         }
 
-        h2 {
+        .billing-info h2 {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .payment-method h2 {
             font-size: 20px;
             color: black;
             margin-bottom: 20px;
@@ -598,7 +605,15 @@ main {
         }
 
         .order-summary {
+            margin-left: 15px;
+            margin-right: 15px;
             margin-bottom: 40px;
+        }
+
+        .order-summary h2 {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 20px;
         }
 
         .order-summary ul {
@@ -2515,7 +2530,14 @@ main {
             padding-left: 10px;
         }
 
-        h2 {
+        .billing-info h2 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .payment-method h2 {
             font-size: 20px;
             color: white;
             margin-bottom: 20px;
@@ -2614,7 +2636,16 @@ main {
         }
 
         .order-summary {
+            margin-left: 15px;
+            margin-right: 15px;
             margin-bottom: 40px;
+            color: white;
+        }
+
+        .order-summary h2 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
         }
 
         .order-summary ul {
@@ -2632,7 +2663,7 @@ main {
         .order-summary .total {
             font-size: 20px;
             font-weight: bold;
-            color: black;
+            color: white;
         }
 
         @media (max-width: 768px) {
