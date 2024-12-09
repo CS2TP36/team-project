@@ -76,6 +76,8 @@ Route::get('/basket', function () {
 
 // Show the checkout page
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+
 
 Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('products.search');
 
