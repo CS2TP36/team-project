@@ -2,7 +2,7 @@
 @section('title','products')
 @use('App\Http\Controllers\ProductLister')
 @section('content')
-    <section><!--creates a banner container to contain our banner--> 
+    <section><!--creates a banner container to contain our banner-->
         <div id="banner-container"><!--creates ID for our banner-->
             <img src="{{asset('images/products-banner.png')}}" id="banner"><!--links to our banner-->
             <div id="product-text-banner"><!--id for banner-->
@@ -120,7 +120,7 @@
                 <p>{{$message}}</p><!--displays the message-->
             </div
         @endif
-        @foreach($products as $product) 
+        @foreach($products as $product)
             <div class="product-item"> <!--for each of the products in the products catogery it iterates through it and  present it in the webpage-->
                 <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link"><!--gets the product id and the link to the product details page-->
                     <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}" class="product-image"></img><!--get the image for each of the products-->
@@ -130,7 +130,7 @@
                     </div>
                 </a>
             </div>
-        @endforeach<!--ends the iteration loop-->
+        @endforeach <!--ends the iteration loop-->
     </div>
     </div>
     </form>

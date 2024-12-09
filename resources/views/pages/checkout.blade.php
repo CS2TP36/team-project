@@ -96,7 +96,7 @@
                 @php($total = 0)
                 @foreach(Basket::where('user_id', Auth::id())->get() as $basketItem)
                     @php($total += $basketItem->getTotalPrice())
-                    <li class="order-item">{{ $basketItem->product->name }} - £{{ $basketItem->product->price }} x {{ $basketItem->quantity }}</li>
+                    <li class="order-item">{{ $basketItem->product->name }}: £{{number_format($basketItem->product->price,2) }} x {{ $basketItem->quantity }}</li>
                 @endforeach
             </ul>
             <p class="total">Total: £<span id="total-price">{{ number_format($total, 2) }}</span></p>
