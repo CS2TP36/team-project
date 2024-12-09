@@ -2023,7 +2023,7 @@ main {
             max-width: 522px;
             padding: 10px;
             border: 1px solid white;
-            background-color: white;
+            background-color: #4D4D4D;
             color: white;
             cursor: pointer;
             margin-bottom: 10px;
@@ -2033,7 +2033,7 @@ main {
             color: white;
         }
 
-        /* atyling for hover */
+        /* styling for hover */
 
         reset-sections button:hover {
             background-color:  #6D6D6D
