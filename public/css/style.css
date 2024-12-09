@@ -3056,7 +3056,6 @@ main {
     .product-item {
         text-align: center;
         background-color: #777777;
-        padding: 20px;
         border-radius: 10px;
         display: block;
         justify-content: space-evenly;
@@ -3157,15 +3156,23 @@ main {
         }
 
         #products-list {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
 
         }
 
         .product-item {
             max-height: 400px;
-            padding: 10px;
         }
+        .product-image {
+            height: 200px;
+            width: 200px;
+            
+        }
+        .product-details{
+            font-size: 10px;
+        }
+            
 
 
     }
