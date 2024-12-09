@@ -3460,7 +3460,7 @@ main {
         }
     }
 
-    /*CSS for the Product Lists page*/
+    /*CSS for the Products Lists page*/
 
     #product-text-banner {
         position: absolute;
@@ -3482,7 +3482,7 @@ main {
         gap: 120px;
         flex-wrap: wrap;
         padding-top: 80px;
-        padding-bottom: 20px;
+        padding-bottom: 80px;
 
         li, label {
             color: white;
@@ -3514,6 +3514,7 @@ main {
         justify-content: space-evenly;
         max-height: 420px;
         margin-bottom: 20px;
+        padding-bottom: 20px;
 
         h3, p {
             color: white;
@@ -3555,7 +3556,7 @@ main {
     .category-buttons {
         display: flex;
         align-items: center;
-        margin: 5px 0;
+        margin: 5px ;
         gap: 10px;
     }
 
@@ -3573,7 +3574,7 @@ main {
         background-color: black;
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 15px;
         font-size: 16px;
         cursor: pointer;
         border-radius: 5px;
