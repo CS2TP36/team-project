@@ -1,9 +1,9 @@
 @extends('layouts.page')
 @section('title', 'Best SportsWear')
 @section('content')
-<div class= "home">
+<div class= "home"><!--creates the home class-->
     <section>
-        <div id="banner-container">
+        <div id="banner-container"><!--creates the banner container-->
             <img src="{{asset('images/Hero-banner.jpeg')}}" id="banner">
             <div id="text-banner">
                 <p>The Best Quality For The Best Price</p>
@@ -12,17 +12,17 @@
         </div>
     </section>
 
-    <div id=catogery-divider>
+    <div id=catogery-divider><!--divide the sections-->
         <p>Categories</p>
     </div>
 
-    <div id="category-section">
+    <div id="category-section"> <!--shows the sections for each catogery-->
         <ul>
-            <li id="select-catogeries"><img src="{{asset('images/coat.jpg')}}"> <a href="/products/2/name/1/4">Jackets</a></li>
-            <li id="select-catogeries"><img src="{{asset('images/hoodies.jpg')}}"> <a href="/products/2/name/1/3">Hoodies</a></li>
-            <li id="select-catogeries"><img src="{{asset('images/Joggers.jpg')}}"> <a href="/products/2/name/1/2">Joggers</a></li>
-            <li id="select-catogeries"><img src="{{asset('images/shoes.jpg')}}"> <a href="/products/2/name/1/1">Trainers</a></li>
-            <li id="select-catogeries"><img src="{{asset('images/shirt.jpg')}}"> <a href="/products/2/name/1/5">Shirts</a></li>
+            <li id="select-catogeries"><img src="{{asset('images/coat.jpg')}}"> <a href="/products/2/name/1/4">Jackets</a></li><!--links to coats-->
+            <li id="select-catogeries"><img src="{{asset('images/hoodies.jpg')}}"> <a href="/products/2/name/1/3">Hoodies</a></li><!--links to hoodies-->
+            <li id="select-catogeries"><img src="{{asset('images/Joggers.jpg')}}"> <a href="/products/2/name/1/2">Joggers</a></li><!--links joggers -->
+            <li id="select-catogeries"><img src="{{asset('images/shoes.jpg')}}"> <a href="/products/2/name/1/1">Trainers</a></li><!--links to shoes -->
+            <li id="select-catogeries"><img src="{{asset('images/shirt.jpg')}}"> <a href="/products/2/name/1/5">Shirts</a></li><!--links to shirts-->
         </ul>
     </div>
 
@@ -30,11 +30,11 @@
         <p>Gender</p>
     </div>
 
-    <div id="gender-section">
+    <div id="gender-section"><!--shows the section for genders-->
         <ul>
-            <li id="select-catogeries"><img src="{{asset('images/Man.jpg')}}"> <a href="/products/1">Men</a></li>
-            <li id="select-catogeries"><img src="{{asset('images/Woman.jpg')}}"> <a href="/products/0">Women</a></li>
+            <li id="select-catogeries"><img src="{{asset('images/Man.jpg')}}"> <a href="/products/1">Men</a></li><!--links for men-->
+            <li id="select-catogeries"><img src="{{asset('images/Woman.jpg')}}"> <a href="/products/0">Women</a></li><!--links for women-->
         </ul>
     </div>
 </div>
-@endsection
+@endsection<!--ends section layout-->
