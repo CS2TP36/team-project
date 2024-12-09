@@ -160,7 +160,7 @@ main {
 
         }
 
-        
+
     }
 
 
@@ -356,7 +356,7 @@ main {
             footer {
                 font-size: 0.8rem;
             }
-            
+
         }
 
         .basket-summary {
@@ -440,21 +440,21 @@ main {
                 font-weight: bold;
                 margin-bottom: 1px;
             }
-    
+
             .basket-summary p {
                 font-size: 10px;
                 line-height: 1.6;
                 border-bottom: 1px solid #ccc;
                 padding: 0;
             }
-    
+
             .basket-summary p strong {
                 font-size: 10px;
                 color: #000;
             }
-    
+
             .basket-summary a button {
-    
+
                 background-color: #000;
                 color: white;
                 font-size: 10px;
@@ -470,7 +470,7 @@ main {
                 outline: none;
                 transition: background-color 0.3s ease;
                 margin-bottom: 10px;
-    
+
             }
         }
 
@@ -904,11 +904,12 @@ main {
 
         /* Styling for p elements */
 
-        p {
+        p, li {
             color: black;
             font-size: 1em; /* paragraph text made the smallest*/
             margin-bottom: 15px; /* add spacing */
         }
+
     }
 
     /* CSS for navbar*/
@@ -919,7 +920,7 @@ main {
         height: 120px;
         display: flex;
         flex-wrap: wrap;
-        
+
 
         .navbardiv {
             display: flex;
@@ -960,7 +961,7 @@ main {
 
             a {
                 color: white;
-                font-size: 25px;                              
+                font-size: 25px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
@@ -976,7 +977,7 @@ main {
         }
     }
 
-   
+
 
 
     .second-nav {
@@ -1061,25 +1062,25 @@ main {
                     font-weight: bold;
                     list-style: none;
                     text-decoration: none;
-                    
+
                 }
 
             }
         }
         .second-nav {
             height: 50px;
-    
+
             .second-navdiv {
                 gap: 10px;
             }
-    
+
             .subprime-list {
                 font-size: 15px;
                 display: inline-block;
                 padding: 20px;
                 list-style: none;
                 text-decoration: none;
-    
+
                 a {
                     color: white;
                     font-size: 15px;
@@ -1087,16 +1088,16 @@ main {
                     list-style: none;
                     text-decoration: none;
                 }
-    
+
                 /*Hover for Men and Women*/
-    
+
                 a:hover {
                     text-decoration: underline;
                     color: white;
                     transform: scale(1.0);
                 }
             }
-    
+
         }
 
 
@@ -1111,7 +1112,7 @@ main {
         background-color: black;
         justify-content: space-evenly;
         margin-top: auto;
-        
+
         ul {
             padding: 0;
         }
@@ -1159,9 +1160,9 @@ main {
     }
 
     @media (max-width: 768px) {
-        .footer-check { 
+        .footer-check {
             font-size: 10px;
-            
+
             .footer-list {
                 font-size: 10px;
 
@@ -1171,15 +1172,15 @@ main {
                     font-weight: bold;
                     text-decoration: none;
                 }
-    
+
                 /*Hover*/
-    
+
                 a:hover {
                     text-decoration: underline;
                     color: white;
                     transform: scale(1.0);
                 }
-    
+
                 button {
                     font-size: 7px;
                     width: 50px;
@@ -1191,15 +1192,15 @@ main {
                     margin-bottom: 10px;
                 }
             }
-    
-    
+
+
             button:hover {
                 background-color: #2D2D2D;
             }
-            
+
         }
 
-  
+
 
 
 
@@ -1351,9 +1352,9 @@ main {
         }
         #catogery-divider {
             p {
-                font-size: 25px;  
+                font-size: 25px;
             }
-            
+
         }
     }
 
@@ -1643,7 +1644,7 @@ main {
     .product-image {
         height: 300px;
         width: 300px;
-        
+
     }
 
     .filter-btn:hover {
@@ -1677,12 +1678,12 @@ main {
         .product-image {
             height: 280px;
             width: 280px;
-            
+
         }
         .product-details{
             font-size: 15px;
         }
-            
+
 
 
     }
@@ -1757,21 +1758,21 @@ main {
             background-color: black;
             height: 2px;
             flex-grow: 1;
-    
+
         }
 
 
-        
+
 
 
     }
 
-    
-    
-    
-    
 
-    
+
+
+
+
+
 
     /* CSS for the Product Page*/
 
@@ -1862,40 +1863,40 @@ main {
             padding-left: 10px;
             padding-top: 10px;
         }
-    
+
         .left-container {
             flex: 1;
             max-width: 300px;
             max-height: 200px;
             margin: 0;
             padding: 0;
-    
+
             img {
                 width: 200px;
                 height: 200px;
                 object-fit: contain;
             }
-    
+
         }
-    
+
         .right-container {
             color: black;
             flex: 1;
             max-width: 200px;
             margin: 0;
             padding: 0;
-    
+
             .line-break {
                 background-color: black;
                 width: 20px;
                 height: 2px;
                 margin-bottom: 20px;
             }
-    
+
             .size-selection {
                 max-width: 40px;
                 padding: 10px;
-    
+
                 button {
                     width: 20px;
                     height: 50px;
@@ -1906,12 +1907,12 @@ main {
                     cursor: pointer;
                     margin-bottom: 10px;
                 }
-    
+
                 button:hover {
                     background-color: #4D4D4D;
                 }
             }
-    
+
             .purchase-options {
                 button {
                     width: 80px;
@@ -1922,7 +1923,7 @@ main {
                     cursor: pointer;
                     margin-bottom: 10px;
                 }
-    
+
                 button:hover {
                     background-color: #4D4D4D;
                 }
@@ -2143,13 +2144,13 @@ main {
 
         }
 
-        
+
     }
 
 
 
     /* CSS for Basket Page*/
-    
+
 
     .basket {
         * {
@@ -2255,7 +2256,7 @@ main {
             border-radius: 5px;
             margin-bottom: 10px;
         }
-        
+
         input {
             color: black;
         }
@@ -2346,7 +2347,7 @@ main {
             footer {
                 font-size: 0.8rem;
             }
-            
+
         }
 
         .basket-summary {
@@ -2420,9 +2421,9 @@ main {
             cursor: pointer;
             padding: 10px 15px;
             border-radius: 5px;
-            
+
         }
-        
+
         button:nth-of-type(2) {
             background-color: rgb(22, 21, 21);
             color: rgb(247, 243, 243);
@@ -2430,7 +2431,7 @@ main {
             cursor: pointer;
             padding: 9px 14px;
             border-radius: 6px;
-            
+
         }
         @media (max-width: 768px) {
             .basket-summary{
@@ -2451,21 +2452,21 @@ main {
                 font-weight: bold;
                 margin-bottom: 1px;
             }
-    
+
             .basket-summary p {
                 font-size: 10px;
                 line-height: 1.6;
                 border-bottom: 1px solid #ccc;
                 padding: 0;
             }
-    
+
             .basket-summary p strong {
                 font-size: 10px;
                 color: #000;
             }
-    
+
             .basket-summary a button {
-    
+
                 background-color: #000;
                 color: white;
                 font-size: 10px;
@@ -2481,10 +2482,10 @@ main {
                 outline: none;
                 transition: background-color 0.3s ease;
                 margin-bottom: 10px;
-    
+
             }
         }
-        
+
 
     }
 
@@ -2916,7 +2917,7 @@ main {
 
         /* Styling for p elements */
 
-        p {
+        p, li {
             color: white;
             font-size: 1em; /* paragraph text made the smallest*/
             margin-bottom: 15px; /* add spacing */
@@ -2931,7 +2932,7 @@ main {
         height: 120px;
         display: flex;
         flex-wrap: wrap;
-        
+
 
         .navbardiv {
             display: flex;
@@ -2972,7 +2973,7 @@ main {
 
             a {
                 color: white;
-                font-size: 25px;                              
+                font-size: 25px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
@@ -2988,7 +2989,7 @@ main {
         }
     }
 
-   
+
 
 
     .second-nav {
@@ -3073,25 +3074,25 @@ main {
                     font-weight: bold;
                     list-style: none;
                     text-decoration: none;
-                    
+
                 }
 
             }
         }
         .second-nav {
             height: 50px;
-    
+
             .second-navdiv {
                 gap: 10px;
             }
-    
+
             .subprime-list {
                 font-size: 15px;
                 display: inline-block;
                 padding: 20px;
                 list-style: none;
                 text-decoration: none;
-    
+
                 a {
                     color: white;
                     font-size: 15px;
@@ -3099,16 +3100,16 @@ main {
                     list-style: none;
                     text-decoration: none;
                 }
-    
+
                 /*Hover for Men and Women*/
-    
+
                 a:hover {
                     text-decoration: underline;
                     color: white;
                     transform: scale(1.0);
                 }
             }
-    
+
         }
     }
 
@@ -3120,7 +3121,7 @@ main {
         background-color: black;
         justify-content: space-evenly;
         margin-top: auto;
-        
+
         ul {
             padding: 0;
         }
@@ -3167,9 +3168,9 @@ main {
         }
     }
     @media (max-width: 768px) {
-        .footer-check { 
+        .footer-check {
             font-size: 10px;
-            
+
             .footer-list {
                 font-size: 10px;
 
@@ -3179,15 +3180,15 @@ main {
                     font-weight: bold;
                     text-decoration: none;
                 }
-    
+
                 /*Hover*/
-    
+
                 a:hover {
                     text-decoration: underline;
                     color: white;
                     transform: scale(1.0);
                 }
-    
+
                 button {
                     font-size: 7px;
                     width: 50px;
@@ -3199,16 +3200,16 @@ main {
                     margin-bottom: 10px;
                 }
             }
-    
-    
+
+
             button:hover {
                 background-color: #2D2D2D;
             }
-            
+
         }
     }
 
-    
+
 
 
 
@@ -3257,7 +3258,7 @@ main {
         color: black;
         transform: scale(1.0);
     }
-    
+
     #catogery-divider {
         font-family: Arial, Helvetica, sans-serif;
         background: black;
@@ -3357,9 +3358,9 @@ main {
         }
         #catogery-divider {
             p {
-                font-size: 25px;  
+                font-size: 25px;
             }
-            
+
         }
     }
 
@@ -3669,11 +3670,11 @@ main {
     .product-image {
         height: 300px;
         width: 300px;
-        
+
     }
 
 
-   
+
 
     @media (max-width: 1340px) {
         #product-text-banner {
@@ -3702,12 +3703,12 @@ main {
         .product-image {
             height: 280px;
             width: 280px;
-            
+
         }
         .product-details{
             font-size: 15px;
         }
-            
+
 
 
     }
@@ -3782,11 +3783,11 @@ main {
             background-color: black;
             height: 2px;
             flex-grow: 1;
-    
+
         }
 
 
-        
+
 
 
     }
@@ -3894,42 +3895,42 @@ main {
             strong {
                 color:white;
             }
-    
+
         }
-    
+
         .left-container {
             flex: 1;
             max-width: 300px;
             max-height: 200px;
             margin: 0;
             padding: 0;
-    
+
             img {
                 width: 200px;
                 height: 200px;
                 object-fit: contain;
             }
-    
+
         }
-    
+
         .right-container {
             color: black;
             flex: 1;
             max-width: 200px;
             margin: 0;
             padding: 0;
-    
+
             .line-break {
                 background-color: black;
                 width: 20px;
                 height: 2px;
                 margin-bottom: 20px;
             }
-    
+
             .size-selection {
                 max-width: 40px;
                 padding: 10px;
-    
+
                 button {
                     width: 20px;
                     height: 50px;
@@ -3940,12 +3941,12 @@ main {
                     cursor: pointer;
                     margin-bottom: 10px;
                 }
-    
+
                 button:hover {
                     background-color: #4D4D4D;
                 }
             }
-    
+
             .purchase-options {
                 color: white;
                 button {
@@ -3958,12 +3959,12 @@ main {
                     margin-bottom: 10px;
                     margin-right: 5px;
                 }
-    
+
                 button:hover {
                     background-color: #4D4D4D;
                 }
             }
-            
+
             #show_description{
                 color: white;
             }
