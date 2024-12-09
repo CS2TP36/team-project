@@ -2022,6 +2022,7 @@ main {
             width: 100%;
             max-width: 522px;
             padding: 10px;
+            border: 1px solid #4D4D4D;
             background-color: #4D4D4D;
             color: white;
             cursor: pointer;
