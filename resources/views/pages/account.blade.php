@@ -10,6 +10,7 @@
         <hr>
         <a href="/change-pass"><button type="button">Change password</button></a>
         <a href="/logout"><button type="button">Sign out</button></a>
+        <!-- need to add a link to the orders page at /orders -->
     </div>
 @endsection
 

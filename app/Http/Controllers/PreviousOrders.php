@@ -17,7 +17,7 @@ class PreviousOrders extends Controller
         return view('pages.previous-orders');
     }
     function getPreviousOrders(User $user) {
-        $orders = Order::all()->where('user_id', $user);
+        $orders = Order::all()->where('user_id', $user["id"]);
         return $orders;
     }
 }
