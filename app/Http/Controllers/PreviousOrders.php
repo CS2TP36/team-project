@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,7 @@ class PreviousOrders extends Controller
         return view('pages.previous-orders');
     }
     function getPreviousOrders(User $user) {
-
+        $orders = Order::all()->where('user_id', $user);
+        return $orders;
     }
 }
