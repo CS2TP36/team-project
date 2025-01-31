@@ -11,6 +11,7 @@
     <script src="@yield('script')"></script>
     <script src="{{ asset('js/searchbar.js') }}"></script>
     <script src="{{ asset('js/theme.js') }}"></script>
+    @yield("head")
 </head>
 <body class="dark-theme">
 <!-- utilises a consistent header -->
