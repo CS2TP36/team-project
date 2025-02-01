@@ -1,6 +1,7 @@
 <footer class="container">
+    <hr>
     <small>
         Currently in admin mode. Want to buy? Go to
-        <a href="{{ route('home') }}">store</a>.
+        <a href="/home">store</a>.
     </small>
 </footer>

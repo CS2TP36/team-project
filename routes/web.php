@@ -41,9 +41,6 @@ Route::get('/test', function () {
 });
 */
 
-Route::get('/admin', function () {
-    return view('pages.admin.account');
-});
 
 // Show the login page
 Route::get('/login', function () {
@@ -113,3 +110,14 @@ Route::get('/terms-conditions', function () {
 });
 
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
+
+// admin routes
+
+// by default go to admin account page
+Route::get('/admin', function () {
+    return redirect(route('admin.account'));
+})->name('admin');
+
+Route::get('/admin/account', function () {
+    return view('pages.admin.account');
+})->name('admin.account');
