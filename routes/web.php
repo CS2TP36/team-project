@@ -41,6 +41,9 @@ Route::get('/test', function () {
 });
 */
 
+Route::get('/admin', function () {
+    return view('pages.admin.account');
+});
 
 // Show the login page
 Route::get('/login', function () {
