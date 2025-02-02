@@ -121,3 +121,7 @@ Route::get('/admin', function () {
 Route::get('/admin/account', function () {
     return view('pages.admin.account');
 })->name('admin.account');
+
+Route::get('/admin/reports', function () {
+    return view('pages.admin.stock-reports');
+})->name('admin.reports');
