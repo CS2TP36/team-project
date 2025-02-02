@@ -18,5 +18,4 @@
             <li><button class="secondary">@if(Auth::check()) Sign out @else Login @endif</button></li>
         </ul>
     </nav>
-    <hr>
 </header>
