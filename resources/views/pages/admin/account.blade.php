@@ -4,7 +4,7 @@
 @section("content")
     <article>
         @if(Auth::check())
-        <h3>Account</h3>
+            <h3>Account</h3>
             <p>Name: {{ Auth::getUser()["first_name"] . " " . Auth::getUser()["last_name"]}}</p>
             <p>Email: {{ Auth::getUser()["email"] }}</p>
         @else

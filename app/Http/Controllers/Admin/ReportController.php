@@ -36,7 +36,6 @@ class ReportController extends Controller
                 $warning[1] .= $rateOfSale . " sales/day";
             }
 
-
             // adds the warning to the array if product has one
             if ($warning[1]) {
                 $warnings[] = $warning;
@@ -63,5 +62,18 @@ class ReportController extends Controller
             $total += $order->quantity;
         }
         return $total / 14;
+    }
+    // a function to estimate the number of days till stock reaches zero
+    static function daysTillZero($product): int
+    {
+        // get the current stock
+        $stock = $product->stock;
+        // get the rate of sale
+        $rateOfSale = self::rateOfSale($product);
+        if ($rateOfSale <= 0) {
+            return -1;
+        }
+        // calculate the number of days until stock is 0
+        return $stock / $rateOfSale;
     }
 }
