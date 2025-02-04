@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Auth\AccountController;
 use App\Http\Controllers\Auth\PassChangeController;
 use App\Http\Controllers\CheckoutController;
@@ -125,3 +126,5 @@ Route::get('/admin/account', function () {
 Route::get('/admin/reports', function () {
     return view('pages.admin.stock-reports');
 })->name('admin.reports');
+
+Route::post('/admin/slevels', [ReportController::class, 'stockLevelForm'])->name('admin.reports.stockLevelForm');

@@ -23,7 +23,8 @@
     </article>
     <article>
         <h4>Stock Levels</h4>
-        <form>
+        <form method="POST" action="{{ route('admin.reports.stockLevelForm') }}">
+            @csrf
             <select name="product" onchange="this.form.submit()">
                 <option value="0">Select a product</option>
                 @foreach($products as $product)
@@ -33,7 +34,7 @@
             @if(isset($slevels))
                 @php
                     //TODO: implement the form passing product id to controller
-                    $product = Product::all()->where("id",$slevels);
+                    $product = Product::all()->where("id", $slevels);
                     $rateOfSale = ReportController::rateOfSale($product);
                     $daysTillZero = ReportController::daysTillZero($product);
                     // set the values to "Insufficient data" if they are negative

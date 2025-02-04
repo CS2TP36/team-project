@@ -76,4 +76,12 @@ class ReportController extends Controller
         // calculate the number of days until stock is 0
         return $stock / $rateOfSale;
     }
+    // return the page with selected product id from the form.
+    function stockLevelForm(Request $request){
+        $request->validate([
+            'product' => 'required',
+        ]);
+        $pid = $request["product"];
+        return back()->with('slevels', $pid);
+    }
 }
