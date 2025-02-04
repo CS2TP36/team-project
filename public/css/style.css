@@ -958,6 +958,7 @@ main {
         .searchbar-container {
             position: relative;
             display: flex;
+            padding-right: 10px;
         }
 
         #search-bar {
