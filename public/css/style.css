@@ -951,8 +951,9 @@ main {
 
         .logo {
             height: 60px;
-            width: auto;
+            width: 250px;
             padding: 8px;
+
         }
 
         .searchbar-container {
@@ -1003,7 +1004,7 @@ main {
         font-family: Arial, Helvetica, sans-serif;
         align-items: center;
         background: #4D4D4D;
-        height: 70px;
+        height: 38px;
         display: flex;
 
         .second-navdiv {
@@ -1021,7 +1022,6 @@ main {
 
         .subprime-list {
             color: white;
-            font-size: 25px;
             text-align: center;
             display: inline-block;
             padding: 40px;
@@ -1030,7 +1030,7 @@ main {
 
             a {
                 color: white;
-                font-size: 25px;
+                font-size: 15px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
@@ -1231,7 +1231,7 @@ main {
         width: 100%;
         position: relative;
         object-fit: cover;
-        max-height: 600px;
+        max-height: 450px;
     }
 
     #banner-container {
@@ -3034,7 +3034,7 @@ main {
     .second-nav {
         font-family: Arial, Helvetica, sans-serif;
         align-items: center;
-        background: #4D4D4D;
+        background: #93959b;
         height: 70px;
         display: flex;
 
@@ -3052,16 +3052,15 @@ main {
           }
 
         .subprime-list {
-            color: white;
             font-size: 25px;
             text-align: center;
             display: inline-block;
-            padding: 40px;
+            padding: 60px;
             list-style: none;
             text-decoration: none;
 
             a {
-                color: white;
+                color: rgb(0, 0, 0);
                 font-size: 25px;
                 font-weight: bold;
                 list-style: none;
