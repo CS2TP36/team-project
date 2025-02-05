@@ -57,6 +57,7 @@ main {
 
 .light-theme {
     /*CSS for Account Page*/
+    background-color: #ffffff;
 
     .account-page {
         background-color: white;
@@ -1288,7 +1289,7 @@ main {
         position: absolute;
         left: 10%;
         transform: translate(-50%, -50%);
-        color: white;
+        color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 70px;
         font-weight: bold;
@@ -1318,7 +1319,7 @@ main {
         background: black;
         width: 100%;
         padding-bottom: 20px;
-        padding-top: 1px;
+        padding-top: 2px;
         height: 50px;
 
 
@@ -1360,11 +1361,12 @@ main {
         height: auto;
         display: block;
         margin-bottom: 5px;
-        border-radius: 20px;
-        border: 5px solid black;
+        border-radius: 15px;
+        border: 4px solid black;
         box-sizing: border-box;
         flex-wrap: wrap;
         transition: background-color 0.4s, transform 0.4s;
+        background-color: #daeaf4;
     }
 
     #select-catogeries img:hover {
