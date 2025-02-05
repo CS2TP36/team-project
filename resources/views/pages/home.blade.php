@@ -8,7 +8,7 @@
             <div id="text-banner">
             <p>Dream</p>
             <p>Aspire Higher</p>
-            <p>Achieve your Destiny</p>
+            <p>Achieve Your Destiny</p>
                 <!--<p>The Best Quality For The Best Price</p> -->
                 <!--<a href="/products">Shop Now</a>-->
             </div>
