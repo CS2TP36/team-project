@@ -17,7 +17,7 @@ main {
     flex-grow: 1;
 }
 
-@keyframes fadeIn {
+@keyframes fadein {
     0% {
         opacity: 0;
     }
@@ -42,6 +42,16 @@ main {
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes fadeleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -1263,7 +1273,7 @@ main {
         position: relative;
         object-fit: cover;
         max-height: 550px;
-        animation: fadedown 1.5s ease-out forwards;
+        animation: fadein 1s ease-out forwards;
     }
 
     #banner-container {
@@ -1276,13 +1286,13 @@ main {
 
     #text-banner {
         position: absolute;
-        top: 50%;
-        left: 25%;
+        left: 10%;
         transform: translate(-50%, -50%);
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 70px;
         font-weight: bold;
+        animation: fadeleft 1s ease-out forwards;
     }
 
     #text-banner a {
@@ -1308,13 +1318,15 @@ main {
         background: black;
         align-items: center;
         width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
+        padding-bottom: 20px;
+        padding-top: 5px;
+        height: 50px;
 
         p {
             color: white;
             text-align: center;
-            font-size: 35px;
+            font-size: 25px;
+            
         }
     }
 
@@ -3309,6 +3321,7 @@ main {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 50px;
         font-weight: bold;
+        animation: fa duration timing-function delay iteration-count direction fill-mode;
     }
     #text-banner a {
         display: inline-block;
@@ -3615,7 +3628,6 @@ main {
 
     #product-text-banner {
         position: absolute;
-        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
