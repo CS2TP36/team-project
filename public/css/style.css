@@ -17,6 +17,34 @@ main {
     flex-grow: 1;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .light-theme {
     /*CSS for Account Page*/
 
@@ -934,6 +962,8 @@ main {
         height: 70px;
         display: flex;
         flex-wrap: wrap;
+        opacity: 0;
+        animation: fadedown 0.5s ease-out forwards;
 
 
         .navbardiv {
@@ -941,7 +971,7 @@ main {
             align-items: center;
             width: 100%;
             justify-content: center;
-            gap: 600px;
+            gap: 900px;
 
         }
         ul {
@@ -1003,16 +1033,16 @@ main {
     .second-nav {
         font-family: Arial, Helvetica, sans-serif;
         align-items: center;
-        background: #4D4D4D;
+        background: #ffffff;
         height: 38px;
         display: flex;
+        animation: fadedown 0.5s ease-out forwards;
 
         .second-navdiv {
             display: flex;
-            align-items: center;
             width: 100%;
-            text-align: center;
             justify-content: center;
+            height: 38px;
 
         }
         ul {
@@ -1021,15 +1051,16 @@ main {
           }
 
         .subprime-list {
-            color: white;
             text-align: center;
             display: inline-block;
-            padding: 40px;
             list-style: none;
-            text-decoration: none;
+            text-decoration: none;  
+            padding-top: 10px;
+            padding-right: 80px;
+            padding-left: 80px;
 
             a {
-                color: white;
+                color: rgb(0, 0, 0);
                 font-size: 15px;
                 font-weight: bold;
                 list-style: none;
@@ -1231,7 +1262,8 @@ main {
         width: 100%;
         position: relative;
         object-fit: cover;
-        max-height: 450px;
+        max-height: 550px;
+        animation: fadeIn 1.5s ease-out forwards;
     }
 
     #banner-container {
@@ -1245,12 +1277,11 @@ main {
     #text-banner {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 25%;
         transform: translate(-50%, -50%);
-        text-align: center;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 50px;
+        font-size: 70px;
         font-weight: bold;
     }
 
