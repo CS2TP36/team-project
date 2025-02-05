@@ -29,15 +29,15 @@
         </ul>
     </div>
 
-    <!--<div id=catogery-divider>
-        <p>Gender</p>
+    <div id=catogery-divider>
+        <p>Featured Products</p>
     </div>
 
-    <div id="gender-section"><!--shows the section for genders
-        <ul>
+    <div id="gender-section">
+        <!-- <ul>
             <li id="select-catogeries"><img src="{{asset('images/Man.jpg')}}"> <a href="/products/1">Men</a></li>
             <li id="select-catogeries"><img src="{{asset('images/Woman.jpg')}}"> <a href="/products/0">Women</a></li>
-        </ul>
+        </ul>-->
     </div>
-</div> -->
+</div> 
 @endsection
