@@ -12,7 +12,7 @@
             <li class="footer-list"><a href="/terms-conditions">Terms and Conditions</a></li><!--links to the terms and conditions-->
             <li class="footer-list"><a>Wishlist</a></li><!--links to about us-->
             <li class="footer-list"><a>Track My Order</a></li><!--links to about us-->
-            <li class="footer-list"><a>Delivery and Returns</a></li><!--links to about us-->
+            <li class="footer-list"><a href="{{ route("delivery.returns") }}">Delivery and Returns</a></li><!--links to about us-->
         </ul>
     </div>
 
