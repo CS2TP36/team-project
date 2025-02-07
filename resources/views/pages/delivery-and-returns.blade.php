@@ -20,4 +20,4 @@
                 <li><strong>Next Day Delivery</strong> (order by 9 PM): £5.99</li>
                 <li><strong>Free Delivery</strong> on orders over £75</li>
             </ul>
-          
+@endsection
