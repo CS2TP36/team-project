@@ -207,8 +207,6 @@ main {
 
     }
 
-
-
     /* CSS for Basket Page*/
 
     .basket {
@@ -1893,13 +1891,6 @@ main {
 
     }
 
-
-
-
-
-
-
-
     /* CSS for the Product Page*/
 
     .product {
@@ -1909,9 +1900,8 @@ main {
         padding-left: 250px;
         padding-right: 250px;
         justify-content: center;
-    }
 
-    .left-container {
+        .left-container {
         flex: 1;
         max-width: 800px;
         max-height: 800px;
@@ -1925,9 +1915,9 @@ main {
         margin-top: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
-    }
+        }
 
-    .right-container {
+        .right-container {
         color: black;
         flex: 1;
         max-width: 1000px;
@@ -1980,9 +1970,9 @@ main {
             }
         }
 
-    }
-
-    @media (max-width: 768px) {
+        }
+        
+        @media (max-width: 768px) {
         .product {
             font-family: Arial, sans-serif;
             display: inline-block;
@@ -2055,7 +2045,12 @@ main {
                 }
             }
         }
-    }
+        }
+}
+
+    
+
+   
 
 
     /*CSS for Forgot Password Page*/
