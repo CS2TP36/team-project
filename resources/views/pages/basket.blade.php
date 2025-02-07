@@ -4,7 +4,7 @@
 <div class="basket">
     <h1>Basket</h1>
 
-    <h2>Your Basket</h2>
+    <h2>Your basket</h2>
     <section>
     
         <table>

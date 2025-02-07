@@ -128,3 +128,9 @@ Route::get('/admin/reports', function () {
 })->name('admin.reports');
 
 Route::post('/admin/slevels', [ReportController::class, 'stockLevelForm'])->name('admin.reports.stockLevelForm');
+
+
+// delivery and returns
+Route::get('/delivery-and-returns', function () {
+    return view('pages.delivery-and-returns');
+})->name('delivery.returns');
