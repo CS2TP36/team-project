@@ -17,7 +17,7 @@
     </div>
 
     <div>
-        <ul><!--list for signing in and toggle themee-->
+        <ul><!--list for signing in and toggle theme-->
             <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign In @else <a href="/logout"> Sign Out @endif</a></li><!--sign in -->
             <li class="footer-list"><a href="https://www.instagram.com/">Follow Us</a></li><!--links to the terms and conditions-->
             <li class="footer-list"><a>Student Discount</a></li><!--links to the terms and conditions-->

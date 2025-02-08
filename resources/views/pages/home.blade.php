@@ -1,5 +1,6 @@
 @extends('layouts.page')
 @section('title', 'Best SportsWear')
+@use(App\Http\Controllers\FeaturedProductController)
 @section('content')
 <div class= "home"><!--creates the home class-->
     <section>
@@ -29,8 +30,15 @@
         </ul>
     </div>
 
+    @php($featuredProducts = FeaturedProductController::getFeaturedProducts())
     <div id=catogery-divider>
         <p>Featured Products</p>
+        <!-- TODO: rename this container and work out what ur doing with it -->
+        <div class="whateveryouendupcallingit">
+            @foreach($featuredProducts as $product)
+                <!-- TODO: Do something with each individual product in here (should give 12 products) -->
+            @endforeach
+        </div>
     </div>
 
     <div id="gender-section">
@@ -39,5 +47,5 @@
             <li id="select-catogeries"><img src="{{asset('images/Woman.jpg')}}"> <a href="/products/0">Women</a></li>
         </ul>-->
     </div>
-</div> 
+</div>
 @endsection
