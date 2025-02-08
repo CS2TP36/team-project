@@ -1,6 +1,7 @@
 /* styling for the container*/
 
-html, body {
+html,
+body {
     min-height: 100%;
     max-height: 100%;
     margin: 0;
@@ -21,6 +22,7 @@ main {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -31,24 +33,29 @@ main {
         opacity: 0;
         transform: translateY(-100%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 @keyframes fadeup {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 @keyframes fadeleft {
     0% {
         opacity: 0;
         transform: translateX(-100%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -63,16 +70,21 @@ main {
 }
 
 .light-theme {
+
     /*CSS for Account Page*/
     .account-page {
         background-color: var(--background-color);
         font-family: Arial, Helvetica, sans-serif;
-        max-width: 800px; /* keep width restricted*/
-        padding: 20px; /*add spacing*/
-        margin: 0 auto; /* cntre the container*/
+        max-width: 800px;
+        /* keep width restricted*/
+        padding: 20px;
+        /*add spacing*/
+        margin: 0 auto;
+        /* cntre the container*/
         margin-top: 10px;
         margin-bottom: 10px;
-        border-radius: 8px; /*round the corners */
+        border-radius: 8px;
+        /*round the corners */
         box-shadow: 0 4px 8px black;
         line-height: 1.6;
 
@@ -80,8 +92,10 @@ main {
 
         h1 {
             color: black;
-            margin-bottom: 10px; /* add spacing below */
-            font-size: 2em; /*make h1 text the largest */
+            margin-bottom: 10px;
+            /* add spacing below */
+            font-size: 2em;
+            /*make h1 text the largest */
             text-align: center;
         }
 
@@ -89,8 +103,10 @@ main {
 
         p {
             color: black;
-            font-size: 1em; /* paragraph text smaller */
-            margin-bottom: 15px; /* add spacing below */
+            font-size: 1em;
+            /* paragraph text smaller */
+            margin-bottom: 15px;
+            /* add spacing below */
         }
 
         /*styling for button */
@@ -98,9 +114,11 @@ main {
         button {
             background-color: black;
             color: white;
-            padding: 10px; /*add padding*/
+            padding: 10px;
+            /*add padding*/
             border: none;
-            border-radius: 5px; /* round corners*/
+            border-radius: 5px;
+            /* round corners*/
             cursor: pointer;
             font-size: 1em;
         }
@@ -108,7 +126,8 @@ main {
         /*styling when hovering */
 
         button:hover {
-            background-color: #4D4D4D; /* red on hover */
+            background-color: #4D4D4D;
+            /* red on hover */
         }
     }
 
@@ -118,7 +137,8 @@ main {
     .change {
         background-color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
-        margin: 50px auto; /* centre the container */
+        margin: 50px auto;
+        /* centre the container */
         max-width: 600px;
         padding: 25px;
 
@@ -128,7 +148,8 @@ main {
             color: #333;
             font-size: 1.6em;
             text-align: left;
-            margin: 0 0 15px 5px; /* add spacing */
+            margin: 0 0 15px 5px;
+            /* add spacing */
         }
 
         /* styling for reset sections */
@@ -136,7 +157,8 @@ main {
         .reset-sections {
             display: flex;
             margin-bottom: 20px;
-            flex-direction: column; /* stack vertical */
+            flex-direction: column;
+            /* stack vertical */
         }
 
         /* h3 header styling */
@@ -192,7 +214,7 @@ main {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         .account-page {
             min-width: 200px;
             margin: 20px;
@@ -255,7 +277,8 @@ main {
             margin-bottom: 20px;
         }
 
-        table th, table td {
+        table th,
+        table td {
             padding: 15px;
             text-align: center;
             border-bottom: 1px solid white;
@@ -380,18 +403,21 @@ main {
                 font-size: 2rem;
             }
 
-            table td, table th {
+            table td,
+            table th {
                 font-size: 0.55rem;
                 padding: 4px;
                 width: 50%;
             }
 
-            div input[type="text"], div button {
+            div input[type="text"],
+            div button {
                 font-size: 1rem;
                 width: 100%;
             }
 
-            div p, div strong {
+            div p,
+            div strong {
                 font-size: 1rem;
             }
 
@@ -463,8 +489,9 @@ main {
             margin-bottom: 9px;
 
         }
+
         @media (max-width: 768px) {
-            .basket-summary{
+            .basket-summary {
                 max-width: 200px;
                 position: relative;
                 float: right;
@@ -477,6 +504,7 @@ main {
                 color: #333;
                 margin-bottom: 200px;
             }
+
             .basket-summary h3 {
                 font-size: 12px;
                 font-weight: bold;
@@ -727,49 +755,50 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
 
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: black;
-        }
-        
-        h2 {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #222;
-            margin-top: 40px;
-        }
-        
-        p, ul {
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        
-        ul {
-            padding-left: 20px;
-        }
-        
-        .disclaimer {
-            color: red;
-            text-align: center;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .terms-container h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: black;
+    }
+
+    .terms-container h2 {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #222;
+        margin-top: 40px;
+    }
+
+    .terms-container p,
+    .terms-container ul {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .terms-container ul {
+        padding-left: 20px;
+    }
+
+    .terms-container .disclaimer {
+        color: red;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .terms-container .fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .terms-container .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     /*CSS for Contact Page*/
@@ -823,7 +852,8 @@ main {
             z-index: 1;
             color: rgb(250, 245, 245);
             background: rgb(0, 0, 0);
-            padding: 15px 30px;;
+            padding: 15px 30px;
+            ;
             border-radius: 8px;
             font-weight: bold;
             font-size: 3rem;
@@ -893,7 +923,9 @@ main {
             color: #161515;
         }
 
-        form input, form textarea, form select {
+        form input,
+        form textarea,
+        form select {
             width: 100%;
             padding: 12px 15px;
             margin-top: 8px;
@@ -904,7 +936,8 @@ main {
             color: #333;
         }
 
-        form input[type="submit"], form input[type="reset"] {
+        form input[type="submit"],
+        form input[type="reset"] {
             width: auto;
             background-color: #000000;
             color: white;
@@ -916,7 +949,8 @@ main {
             transition: background-color 0.3s ease;
         }
 
-        form input[type="submit"]:hover, form input[type="reset"]:hover {
+        form input[type="submit"]:hover,
+        form input[type="reset"]:hover {
             background-color: #000000;
         }
 
@@ -964,12 +998,15 @@ main {
                 padding: 15px 10px;
             }
 
-            .contactInfo, form, .social-media {
+            .contactInfo,
+            form,
+            .social-media {
                 width: 90%;
                 padding: 15px;
             }
 
-            .contactInfo h2, form label {
+            .contactInfo h2,
+            form label {
                 font-size: 1.4rem;
             }
 
@@ -984,12 +1021,15 @@ main {
     .aboutus {
         background-color: white;
         font-family: Arial, Helvetica, sans-serif;
-        max-width: 800px; /*keep the width restricted so readability is improved */
-        padding: 20px; /* add some spacing in the container (keeps text away from edges) */
+        max-width: 800px;
+        /*keep the width restricted so readability is improved */
+        padding: 20px;
+        /* add some spacing in the container (keeps text away from edges) */
         margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 20px;
-        border-radius: 8px; /*round the cornres*/
+        border-radius: 8px;
+        /*round the cornres*/
         box-shadow: 0 4px 8px #4D4D4D;
         line-height: 1.6;
 
@@ -997,8 +1037,10 @@ main {
 
         h1 {
             color: black;
-            margin-bottom: 10px; /* add some spacing */
-            font-size: 2em; /* make h1 text the largest*/
+            margin-bottom: 10px;
+            /* add some spacing */
+            font-size: 2em;
+            /* make h1 text the largest*/
             text-align: center;
         }
 
@@ -1006,17 +1048,23 @@ main {
 
         h2 {
             color: black;
-            margin-top: 20px; /* add spacing above */
-            margin-bottom: 10px; /*add spacing below */
-            font-size: 1.5em; /*make h2 text smaller than h1 */
+            margin-top: 20px;
+            /* add spacing above */
+            margin-bottom: 10px;
+            /*add spacing below */
+            font-size: 1.5em;
+            /*make h2 text smaller than h1 */
         }
 
         /* Styling for p elements */
 
-        p, li {
+        p,
+        li {
             color: black;
-            font-size: 1em; /* paragraph text made the smallest*/
-            margin-bottom: 15px; /* add spacing */
+            font-size: 1em;
+            /* paragraph text made the smallest*/
+            margin-bottom: 15px;
+            /* add spacing */
         }
 
     }
@@ -1041,10 +1089,11 @@ main {
             gap: 900px;
 
         }
+
         ul {
             margin: 0;
             padding: 0;
-          }
+        }
 
         .logo {
             height: 60px;
@@ -1069,17 +1118,17 @@ main {
             display: flex;
         }
 
-        .search-logo{
+        .search-logo {
             position: absolute;
             height: 20px;
             right: 270px;
             padding-top: 8px;
         }
 
-        .user-logo{
+        .user-logo {
             height: 36px;
         }
-        
+
 
         .prime-list {
             display: flex;
@@ -1088,9 +1137,9 @@ main {
             margin-left: 15px;
 
 
-            
 
-            
+
+
         }
     }
 
@@ -1112,16 +1161,17 @@ main {
             height: 38px;
 
         }
+
         ul {
             margin: 0;
             padding: 0;
-          }
+        }
 
         .subprime-list {
             text-align: center;
             display: inline-block;
             list-style: none;
-            text-decoration: none;  
+            text-decoration: none;
             padding-top: 10px;
             padding-right: 80px;
             padding-left: 80px;
@@ -1144,9 +1194,11 @@ main {
         }
 
     }
+
     @media (max-width: 768px) {
         .navbar {
             height: 90px;
+
             .navbardiv {
                 gap: 10px;
             }
@@ -1162,7 +1214,8 @@ main {
                 margin-left: 0px;
                 padding: 10px;
             }
-            .ul{
+
+            .ul {
                 margin: 0;
             }
 
@@ -1184,6 +1237,7 @@ main {
 
             }
         }
+
         .second-nav {
             height: 50px;
 
@@ -1386,8 +1440,8 @@ main {
             font-weight: bold;
             text-decoration: underline;
             text-decoration-thickness: 5px;
-            text-underline-offset: 15px; 
-            
+            text-underline-offset: 15px;
+
         }
     }
 
@@ -1474,6 +1528,7 @@ main {
         #select-catogeries img {
             width: 200px;
         }
+
         #catogery-divider {
             p {
                 font-size: 25px;
@@ -1507,7 +1562,8 @@ main {
         flex-direction: row;
     }
 
-    .existing-customers, .new-customers {
+    .existing-customers,
+    .new-customers {
         flex: 1;
         max-width: 650px;
         padding: 5px;
@@ -1565,7 +1621,8 @@ main {
             flex-direction: column;
         }
 
-        .existing-customers, .new-customers {
+        .existing-customers,
+        .new-customers {
             max-width: 100%;
             margin-bottom: 30px;
 
@@ -1741,7 +1798,7 @@ main {
     .category-buttons {
         display: flex;
         align-items: center;
-        margin: 5px ;
+        margin: 5px;
         gap: 10px;
     }
 
@@ -1765,6 +1822,7 @@ main {
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
+
     .product-image {
         height: 300px;
         width: 300px;
@@ -1799,12 +1857,14 @@ main {
         .product-item {
             max-height: 400px;
         }
+
         .product-image {
             height: 280px;
             width: 280px;
 
         }
-        .product-details{
+
+        .product-details {
             font-size: 15px;
         }
 
@@ -1871,13 +1931,16 @@ main {
             max-width: 190px;
             padding: 1px;
         }
-        .product-image{
+
+        .product-image {
             height: 180px;
             width: 170px;
         }
-        .product-details{
+
+        .product-details {
             font-size: 10px;
         }
+
         .line-break {
             background-color: black;
             height: 2px;
@@ -2058,6 +2121,7 @@ main {
         .left-container {
             flex: 1;
             border: 1px solid blue;
+
             img {
                 object-fit: contain;
             }
@@ -2067,29 +2131,21 @@ main {
             flex: 1;
             color: black;
             border: 1px solid orangered;
-             
+
             .line-break {
                 background-color: black;
             }
 
             .size-selection {
-                button {
+                button {}
 
-                }
-
-                button:hover {
-
-                }
+                button:hover {}
             }
 
             .purchase-options {
-                button {
+                button {}
 
-                }
-
-                button:hover {
-
-                }
+                button:hover {}
             }
         }
     }
@@ -2164,12 +2220,16 @@ main {
     .account-page {
         background-color: black;
         font-family: Arial, Helvetica, sans-serif;
-        max-width: 800px; /* keep width restricted*/
-        padding: 20px; /*add spacing*/
-        margin: 0 auto; /* cntre the container*/
+        max-width: 800px;
+        /* keep width restricted*/
+        padding: 20px;
+        /*add spacing*/
+        margin: 0 auto;
+        /* cntre the container*/
         margin-top: 10px;
         margin-bottom: 10px;
-        border-radius: 8px; /*round the corners */
+        border-radius: 8px;
+        /*round the corners */
         box-shadow: 0 4px 8px black;
         line-height: 1.6;
 
@@ -2178,8 +2238,10 @@ main {
 
         h1 {
             color: white;
-            margin-bottom: 10px; /* add spacing below */
-            font-size: 2em; /*make h1 text the largest */
+            margin-bottom: 10px;
+            /* add spacing below */
+            font-size: 2em;
+            /*make h1 text the largest */
             text-align: center;
         }
 
@@ -2187,8 +2249,10 @@ main {
 
         p {
             color: white;
-            font-size: 1em; /* paragraph text smaller */
-            margin-bottom: 15px; /* add spacing below */
+            font-size: 1em;
+            /* paragraph text smaller */
+            margin-bottom: 15px;
+            /* add spacing below */
         }
 
         /*styling for button */
@@ -2196,9 +2260,11 @@ main {
         button {
             background-color: #4D4D4D;
             color: white;
-            padding: 10px; /*add padding*/
+            padding: 10px;
+            /*add padding*/
             border: none;
-            border-radius: 5px; /* round corners*/
+            border-radius: 5px;
+            /* round corners*/
             cursor: pointer;
             font-size: 1em;
         }
@@ -2214,9 +2280,10 @@ main {
     /*  styling for change password container */
 
     .change {
-        background-color: rgb(18,18,18);
+        background-color: rgb(18, 18, 18);
         font-family: Arial, Helvetica, sans-serif;
-        margin: 50px auto; /* centre the container */
+        margin: 50px auto;
+        /* centre the container */
         max-width: 600px;
         padding: 25px;
 
@@ -2226,7 +2293,8 @@ main {
             color: white;
             font-size: 1.6em;
             text-align: left;
-            margin: 0 0 15px 5px; /* add spacing */
+            margin: 0 0 15px 5px;
+            /* add spacing */
         }
 
         /* styling for reset sections */
@@ -2234,7 +2302,8 @@ main {
         .reset-sections {
             display: flex;
             margin-bottom: 20px;
-            flex-direction: column; /* stack vertical */
+            flex-direction: column;
+            /* stack vertical */
         }
 
         /* h3 header styling */
@@ -2269,14 +2338,14 @@ main {
             margin-bottom: 10px;
         }
 
-        .reset-sections label{
+        .reset-sections label {
             color: white;
         }
 
         /* styling for hover */
 
         reset-sections button:hover {
-            background-color:  #6D6D6D
+            background-color: #6D6D6D
         }
 
 
@@ -2294,7 +2363,7 @@ main {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         .account-page {
             min-width: 200px;
             margin: 20px;
@@ -2321,7 +2390,8 @@ main {
             margin-bottom: 10px;
             padding: 5px;
             box-sizing: border-box;
-            color: white; /* basket and your basket white */
+            color: white;
+            /* basket and your basket white */
         }
 
         body {
@@ -2362,7 +2432,8 @@ main {
             margin-bottom: 20px;
         }
 
-        table th, table td {
+        table th,
+        table td {
             padding: 15px;
             text-align: center;
             border-bottom: 1px solid white;
@@ -2491,18 +2562,21 @@ main {
                 font-size: 2rem;
             }
 
-            table td, table th {
+            table td,
+            table th {
                 font-size: 0.55rem;
                 padding: 4px;
                 width: 50%;
             }
 
-            div input[type="text"], div button {
+            div input[type="text"],
+            div button {
                 font-size: 1rem;
                 width: 100%;
             }
 
-            div p, div strong {
+            div p,
+            div strong {
                 font-size: 1rem;
             }
 
@@ -2575,6 +2649,7 @@ main {
             color: rgb(248, 246, 246);
 
         }
+
         /* change colour for update and remove below  */
         button:nth-of-type(1) {
             background-color: rgb(11, 10, 10);
@@ -2595,8 +2670,9 @@ main {
             border-radius: 6px;
 
         }
+
         @media (max-width: 768px) {
-            .basket-summary{
+            .basket-summary {
                 max-width: 200px;
                 position: relative;
                 float: right;
@@ -2609,6 +2685,7 @@ main {
                 color: #333;
                 margin-bottom: 200px;
             }
+
             .basket-summary h3 {
                 font-size: 12px;
                 font-weight: bold;
@@ -2907,20 +2984,22 @@ main {
             z-index: 1;
             color: rgb(250, 245, 245);
             background: rgb(0, 0, 0);
-            padding: 15px 30px;;
+            padding: 15px 30px;
+            ;
             border-radius: 8px;
             font-weight: bold;
             font-size: 3rem;
-            display:inline-block;
+            display: inline-block;
             align-items: center;
 
         }
 
-        .contact-header{
+        .contact-header {
             align-items: center;
             text-align: center;
             padding-top: 10px;
         }
+
         .contactInfo {
             background-color: #050505;
             padding: 25px;
@@ -2978,7 +3057,9 @@ main {
             color: white;
         }
 
-        form input, form textarea, form select {
+        form input,
+        form textarea,
+        form select {
             width: 100%;
             padding: 12px 15px;
             margin-top: 8px;
@@ -2991,7 +3072,8 @@ main {
         }
 
 
-        form input[type="submit"], form input[type="reset"] {
+        form input[type="submit"],
+        form input[type="reset"] {
             width: auto;
             background-color: #4D4D4D;
             color: rgb(253, 253, 253);
@@ -3003,7 +3085,8 @@ main {
             transition: background-color 0.3s ease;
         }
 
-        form input[type="submit"]:hover, form input[type="reset"]:hover {
+        form input[type="submit"]:hover,
+        form input[type="reset"]:hover {
             background-color: #2D2D2D;
         }
 
@@ -3051,12 +3134,15 @@ main {
                 padding: 15px 10px;
             }
 
-            .contactInfo, form, .social-media {
+            .contactInfo,
+            form,
+            .social-media {
                 width: 90%;
                 padding: 15px;
             }
 
-            .contactInfo h2, form label {
+            .contactInfo h2,
+            form label {
                 font-size: 1.4rem;
             }
 
@@ -3065,17 +3151,21 @@ main {
             }
         }
     }
+
     /*CSS for About Us*/
 
     .aboutus {
         background-color: black;
         font-family: Arial, Helvetica, sans-serif;
-        max-width: 800px; /*keep the width restricted so readability is improved */
-        padding: 20px; /* add some spacing in the container (keeps text away from edges) */
+        max-width: 800px;
+        /*keep the width restricted so readability is improved */
+        padding: 20px;
+        /* add some spacing in the container (keeps text away from edges) */
         margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 20px;
-        border-radius: 8px; /*round the cornres*/
+        border-radius: 8px;
+        /*round the cornres*/
         box-shadow: 0 4px 8px black;
         line-height: 1.6;
 
@@ -3083,8 +3173,10 @@ main {
 
         h1 {
             color: white;
-            margin-bottom: 10px; /* add some spacing */
-            font-size: 2em; /* make h1 text the largest*/
+            margin-bottom: 10px;
+            /* add some spacing */
+            font-size: 2em;
+            /* make h1 text the largest*/
             text-align: center;
         }
 
@@ -3092,17 +3184,23 @@ main {
 
         h2 {
             color: white;
-            margin-top: 20px; /* add spacing above */
-            margin-bottom: 10px; /*add spacing below */
-            font-size: 1.5em; /*make h2 text smaller than h1 */
+            margin-top: 20px;
+            /* add spacing above */
+            margin-bottom: 10px;
+            /*add spacing below */
+            font-size: 1.5em;
+            /*make h2 text smaller than h1 */
         }
 
         /* Styling for p elements */
 
-        p, li {
+        p,
+        li {
             color: white;
-            font-size: 1em; /* paragraph text made the smallest*/
-            margin-bottom: 15px; /* add spacing */
+            font-size: 1em;
+            /* paragraph text made the smallest*/
+            margin-bottom: 15px;
+            /* add spacing */
         }
     }
 
@@ -3125,10 +3223,11 @@ main {
             gap: 200px;
 
         }
+
         ul {
             margin: 0;
             padding: 0;
-          }
+        }
 
         .logo {
             height: 120px;
@@ -3189,10 +3288,11 @@ main {
             justify-content: center;
 
         }
+
         ul {
             margin: 0;
             padding: 0;
-          }
+        }
 
         .subprime-list {
             font-size: 25px;
@@ -3220,9 +3320,11 @@ main {
         }
 
     }
+
     @media (max-width: 768px) {
         .navbar {
             height: 90px;
+
             .navbardiv {
                 gap: 10px;
             }
@@ -3238,7 +3340,8 @@ main {
                 margin-left: 0px;
                 padding: 10px;
             }
-            .ul{
+
+            .ul {
                 margin: 0;
             }
 
@@ -3260,6 +3363,7 @@ main {
 
             }
         }
+
         .second-nav {
             height: 50px;
 
@@ -3348,6 +3452,7 @@ main {
             background-color: #2D2D2D;
         }
     }
+
     @media (max-width: 768px) {
         .footer-check {
             font-size: 10px;
@@ -3423,6 +3528,7 @@ main {
         font-weight: bold;
         animation: fa duration timing-function delay iteration-count direction fill-mode;
     }
+
     #text-banner a {
         display: inline-block;
         margin-top: 15px;
@@ -3538,6 +3644,7 @@ main {
         #select-catogeries img {
             width: 200px;
         }
+
         #catogery-divider {
             p {
                 font-size: 25px;
@@ -3573,7 +3680,8 @@ main {
         flex-direction: row;
     }
 
-    .existing-customers, .new-customers {
+    .existing-customers,
+    .new-customers {
         flex: 1;
         max-width: 650px;
         padding: 5px;
@@ -3633,7 +3741,8 @@ main {
             flex-direction: column;
         }
 
-        .existing-customers, .new-customers {
+        .existing-customers,
+        .new-customers {
             max-width: 100%;
             margin-bottom: 30px;
 
@@ -3747,7 +3856,8 @@ main {
         padding-top: 80px;
         padding-bottom: 80px;
 
-        li, label {
+        li,
+        label {
             color: white;
         }
     }
@@ -3779,7 +3889,8 @@ main {
         margin-bottom: 20px;
         padding-bottom: 20px;
 
-        h3, p {
+        h3,
+        p {
             color: white;
         }
     }
@@ -3819,7 +3930,7 @@ main {
     .category-buttons {
         display: flex;
         align-items: center;
-        margin: 5px ;
+        margin: 5px;
         gap: 10px;
     }
 
@@ -3881,12 +3992,14 @@ main {
         .product-item {
             max-height: 400px;
         }
+
         .product-image {
             height: 280px;
             width: 280px;
 
         }
-        .product-details{
+
+        .product-details {
             font-size: 15px;
         }
 
@@ -3953,13 +4066,16 @@ main {
             max-width: 190px;
             padding: 1px;
         }
-        .product-image{
+
+        .product-image {
             height: 180px;
             width: 170px;
         }
-        .product-details{
+
+        .product-details {
             font-size: 10px;
         }
+
         .line-break {
             background-color: black;
             height: 2px;
@@ -4063,6 +4179,7 @@ main {
             }
         }
     }
+
     @media (max-width: 768px) {
         .product {
             font-family: Arial, sans-serif;
@@ -4070,11 +4187,13 @@ main {
             padding-left: 10px;
             padding-top: 10px;
             color: white;
+
             h2 {
                 color: white;
             }
+
             strong {
-                color:white;
+                color: white;
             }
 
         }
@@ -4130,6 +4249,7 @@ main {
 
             .purchase-options {
                 color: white;
+
                 button {
                     width: 80px;
                     padding: 10px;
@@ -4146,14 +4266,15 @@ main {
                 }
             }
 
-            #show_description{
+            #show_description {
                 color: white;
             }
 
-            #show_colour{
+            #show_colour {
                 color: white;
             }
-            #show_id{
+
+            #show_id {
                 color: white;
             }
         }
