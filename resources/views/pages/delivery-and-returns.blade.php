@@ -2,8 +2,9 @@
 
 @section('title', 'Delivery and Returns')
 
+<!-- Link to a script that doesnt exist? -->
 @section('script')
-    <script src="{{ asset('/js/delivery-and-returns.js') }}"></script>
+    {{ asset('js/delivery-and-returns.js') }}
 @endsection
 
 @section('content')
