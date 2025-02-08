@@ -724,10 +724,6 @@ main {
         margin: 0;
         padding: 0;
         color: #333;
-    }
-
-    /* Container for the terms */
-    .terms-container {
         width: 60%;
         margin: 0 auto;
         padding: 50px 0;
