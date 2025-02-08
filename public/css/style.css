@@ -1893,7 +1893,7 @@ main {
 
     /* CSS for the Product Page*/
 
-    .product {
+    /*.product {
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: row;
@@ -1902,73 +1902,73 @@ main {
         justify-content: center;
 
         .left-container {
-        flex: 1;
-        max-width: 800px;
-        max-height: 800px;
+            flex: 1;
+            max-width: 800px;
+            max-height: 800px;
 
-        img {
-            width: 800px;
-            height: 800px;
-            object-fit: contain;
-        }
+            img {
+                width: 800px;
+                height: 800px;
+                object-fit: contain;
+            }
 
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        }
-
-        .right-container {
-        color: black;
-        flex: 1;
-        max-width: 1000px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding-top: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
-
-        .line-break {
-            background-color: black;
-            width: 500px -50px;
-            height: 2px;
+            margin-top: 20px;
+            margin-right: 20px;
             margin-bottom: 20px;
         }
 
-        .size-selection {
-            max-width: 50px;
-            padding: 10px;
+        .right-container {
+            color: black;
+            flex: 1;
+            max-width: 1000px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
 
-            button {
-                width: 50px;
-                height: 50px;
-                padding: 10px;
-                border: 1px solid black;
+            .line-break {
                 background-color: black;
-                color: white;
-                cursor: pointer;
-                margin-bottom: 10px;
+                width: 500px -50px;
+                height: 2px;
+                margin-bottom: 20px;
             }
 
-            button:hover {
-                background-color: #4D4D4D;
-            }
-        }
-
-        .purchase-options {
-            button {
-                width: 500px;
+            .size-selection {
+                max-width: 50px;
                 padding: 10px;
-                border: 1px solid black;
-                background-color: black;
-                color: white;
-                cursor: pointer;
-                margin-bottom: 10px;
+
+                button {
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px;
+                    border: 1px solid black;
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+
+                button:hover {
+                    background-color: #4D4D4D;
+                }
             }
 
-            button:hover {
-                background-color: #4D4D4D;
+            .purchase-options {
+                button {
+                    width: 500px;
+                    padding: 10px;
+                    border: 1px solid black;
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+
+                button:hover {
+                    background-color: #4D4D4D;
+                }
             }
-        }
 
         }
         
@@ -2046,12 +2046,53 @@ main {
             }
         }
         }
-}
+    }*/
 
-    
+    .product {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 1px solid purple;
 
-   
+        .left-container {
+            flex: 1;
+            border: 1px solid blue;
+            img {
+                object-fit: contain;
+            }
+        }
 
+        .right-container {
+            flex: 1;
+            color: black;
+            border: 1px solid orangered;
+             
+            .line-break {
+                background-color: black;
+            }
+
+            .size-selection {
+                button {
+
+                }
+
+                button:hover {
+
+                }
+            }
+
+            .purchase-options {
+                button {
+
+                }
+
+                button:hover {
+
+                }
+            }
+        }
+    }
 
     /*CSS for Forgot Password Page*/
 
