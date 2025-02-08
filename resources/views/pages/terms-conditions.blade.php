@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('title', 'Terms and Conditions')
 @section('script')
-    {{ asset('/js/terms-conditions.js') }}
+    <script src="{{ asset('/js/terms-conditions.js') }}"></script>
 @endsection
 @section('content')
 <div class="terms-container">
@@ -11,12 +11,13 @@
     <div class="fade-in">
         <h2>User Agreements</h2>
         <p>By accessing and using this website, you agree to abide by the following terms and conditions: </p>
-        <li>You must be at least 18 years old or have the consent of a legal guardian to use this website.</li>
-        <li>We reserve the right to update or modify these terms at any time. Changes will take effect immediately upon posting.</li>
-        <li>Your continued use of the website after any updates constitutes acceptance of the revised terms.</li>
-        <li>You agree to use this website lawfully and not engage in any activities that may harm, disrupt, or compromise the security of the platform.</li>
-        <li>We may suspend or terminate access to the website at our discretion if a user is found to be violating these terms.
-        </li>
+        <ul>
+            <li>You must be at least 18 years old or have the consent of a legal guardian to use this website.</li>
+            <li>We reserve the right to update or modify these terms at any time. Changes will take effect immediately upon posting.</li>
+            <li>Your continued use of the website after any updates constitutes acceptance of the revised terms.</li>
+            <li>You agree to use this website lawfully and not engage in any activities that may harm, disrupt, or compromise the security of the platform.</li>
+            <li>We may suspend or terminate access to the website at our discretion if a user is found to be violating these terms.</li>
+        </ul>
     </div>
 
     <div class="fade-in">
@@ -111,7 +112,7 @@
 
     <div class="fade-in">
         <h2>If this does not Help</h2>
-        <p>If you have any questions, check out our FAQ page which may resolve your issue, if not contact us using our contact page and will get back to you ASAP.</a></p>
+        <p>If you have any questions, check out our FAQ page which may resolve your issue, if not contact us using our contact page and will get back to you ASAP.</p>
     </div>
 </div>
 @endsection

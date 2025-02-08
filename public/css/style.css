@@ -716,6 +716,72 @@ main {
         }
     }
 
+     /* General Page Styling */
+     .terms-container {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    /* Container for the terms */
+    .terms-container {
+        width: 60%;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    /* Title Styling */
+    .terms-container h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: black;
+    }
+
+    /* Disclaimer Styling */
+    .disclaimer {
+        color: red;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    /* Heading Styles */
+    .terms-container h2 {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #222;
+        margin-top: 40px;
+    }
+
+    /* Paragraphs & List Styling */
+    .terms-container p, 
+    .terms-container ul {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .terms-container ul {
+        padding-left: 20px;
+    }
+
+    /* Fade-in Effect */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
  
     /*CSS for Contact Page*/
 
