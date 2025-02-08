@@ -748,55 +748,71 @@ main {
     }
 
     /* CSS for Terms and Conditions Page */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+    }
 
     .terms-container {
-        font-family: Arial, Helvetica, sans-serif;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px;
+        max-width: 800px;
+        margin: 40px auto;
+        background: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
     }
 
-    .terms-container h1 {
+    h1 {
         text-align: center;
         font-size: 2.5em;
-        margin-bottom: 10px;
-        color: black;
+        margin-bottom: 20px;
+        color: #111;
     }
 
-    .terms-container h2 {
+    h2 {
         font-size: 1.8em;
         font-weight: bold;
         color: #222;
-        margin-top: 40px;
+        margin-top: 30px;
+        text-align: left;
     }
 
-    .terms-container p,
-    .terms-container ul {
+    p,
+    ul {
         font-size: 1.1em;
         color: #555;
         margin-bottom: 20px;
+        text-align: left;
+        line-height: 1.6;
     }
 
-    .terms-container ul {
-        padding-left: 20px;
+    ul {
+        padding-left: 40px;
     }
 
-    .terms-container .disclaimer {
+    .disclaimer {
         color: red;
         text-align: center;
         font-size: 1.3em;
         font-weight: bold;
-        margin-bottom: 40px;
+        margin-top: 30px;
     }
 
-    .terms-container .fade-in {
+    /* Fade-in animation for dynamic effects */
+    .fade-in {
         opacity: 0;
         transform: translateY(40px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
-    .terms-container .fade-in.show {
+    .fade-in.show {
         opacity: 1;
         transform: translateY(0);
     }
