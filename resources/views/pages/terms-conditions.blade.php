@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('title', 'Terms and Conditions')
 @section('script')
-    <script src="{{ asset('/js/terms-conditions.js') }}"></script>
+    {{ asset('/js/terms-conditions.js') }}
 @endsection
 @section('content')
 <div class="terms-container">
