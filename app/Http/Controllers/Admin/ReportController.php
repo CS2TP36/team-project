@@ -79,7 +79,7 @@ class ReportController extends Controller
     // return the page with selected product id from the form.
     function stockLevelForm(Request $request){
         $request->validate([
-            'product' => 'required',
+            'product' => 'required|exists:products,id',
         ]);
         $pid = $request["product"];
         return back()->with('slevels', $pid);

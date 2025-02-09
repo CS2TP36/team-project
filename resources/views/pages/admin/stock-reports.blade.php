@@ -31,10 +31,10 @@
                     <option value="{{ $product["id"] }}">{{ $product["name"] }}</option>
                 @endforeach
             </select>
-            @if(isset($slevels))
+            @if(session("slevels"))
                 @php
                     //TODO: implement the form passing product id to controller
-                    $product = Product::all()->where("id", $slevels);
+                    $product = Product::all()->where("id", session("slevels"))->first();
                     $rateOfSale = ReportController::rateOfSale($product);
                     $daysTillZero = ReportController::daysTillZero($product);
                     // set the values to "Insufficient data" if they are negative
