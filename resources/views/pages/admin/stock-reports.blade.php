@@ -33,7 +33,7 @@
             </select>
             @if(session("slevels"))
                 @php
-                    //TODO: implement the form passing product id to controller
+                    // get the product from the session and run necessary calculations
                     $product = Product::all()->where("id", session("slevels"))->first();
                     $rateOfSale = ReportController::rateOfSale($product);
                     $daysTillZero = ReportController::daysTillZero($product);
@@ -46,10 +46,13 @@
                     }
                 @endphp
                 <!-- Output the values to the page -->
-                <h5>{{ $product->name }}</h5>
+                <h5><a href="/product/{{ $product->id }}">{{ $product->name }}</a></h5>
                 <p>Current stock level: {{ $product->stock }}</p>
                 <p>Rate of sale: {{ $rateOfSale }}</p>
                 <p>Estimated days till out of stock: {{ $daysTillZero }}</p>
+                @if($rateOfSale == 0)
+                    <p style="color: red">Nobody wants to buy this, maybe reduce price?</p>
+                @endif
             @endif
         </form>
     </article>
