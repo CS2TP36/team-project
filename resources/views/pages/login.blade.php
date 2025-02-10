@@ -34,7 +34,7 @@
 
                     <label for="password">Password *</label><br>
                     <input type="password" id="password" name="password" required/><br>
-
+                    <input type="hidden" name="redirect" id="redirect" value="@if(isset($redirect)){{$redirect}}@endif"/>
                     <button type="submit">Sign In</button>
                 </form>
                 <!--

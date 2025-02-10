@@ -42,14 +42,8 @@ Route::get('/test', function () {
 });
 */
 
-
-// Show the login page
-Route::get('/login', function () {
-    if (\Illuminate\Support\Facades\Auth::check()) {
-        return redirect('/home');
-    }
-    return view('pages.login');
-});
+// Show the login page (optionally redirect to provided page after successful login)
+Route::get('/login/{redirect?}', [LoginController::class, 'show'])->name('login.show');
 
 // Show the about us page
 Route::get('/aboutus', function () {
