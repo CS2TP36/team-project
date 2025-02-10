@@ -1062,6 +1062,10 @@ main {
 
         }
 
+        .logo:hover {
+            opacity: 0.7;
+        }
+
         .searchbar-container {
             position: relative;
             display: flex;
@@ -1087,6 +1091,10 @@ main {
 
         .user-logo{
             height: 36px;
+        }
+
+        .user-logo:hover {
+            opacity: 0.7;
         }
         
 
@@ -1147,7 +1155,7 @@ main {
 
             a:hover {
                 text-decoration: underline;
-                color: white;
+                color:#88a4ad;
                 transform: scale(1.0);
             }
         }
@@ -1378,11 +1386,11 @@ main {
         color: white;
         font-family: Arial, Helvetica, sans-serif;
 
-        
+            
         a{
             display: inline-block;
-            padding-right: 20px;
-            padding-left: 20px;
+            padding-right: 40px;
+            padding-left: 40px;
             padding-bottom: 10px;
             padding-top: 10px;
             background-color: #ffffff;
@@ -1390,12 +1398,15 @@ main {
             text-decoration: none;
             border-radius: 8px;
             margin-bottom: 20px;
-            
+                
+            }
+
         }
     
-    
-        
-    }
+        #home-slogan a:hover {
+            background-color: #88a4ad; 
+            color: black; 
+        }
 
     #home-slogan p {
         margin: 0;
