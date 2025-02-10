@@ -11,13 +11,17 @@
             <p>Aspire Higher.</p>
             <p>Achieve Your Destiny.</p>
                 <!--<p>The Best Quality For The Best Price</p> -->
-                <!--<a href="/products">Shop Now</a>-->
             </div>
         </div>
     </section>
 
+    <div id=home-slogan><!--divide the sections-->
+        <p>  Unleash Your Potential. Embrace Greatness </p>
+        <a href="/products">Shop Now</a>
+    </div>
+
     <div id=catogery-divider><!--divide the sections-->
-        <p>Browse Our Categories</p>
+        <p>  Browse Our Categories  </p>
     </div>
 
     <div id="category-section"> <!--shows the sections for each catogery-->
@@ -30,6 +34,8 @@
         </ul>
     </div>
 
+
+
     @php($featuredProducts = FeaturedProductController::getFeaturedProducts())
     <div id=catogery-divider>
         <p>Featured Products</p>
@@ -41,11 +47,15 @@
         </div>
     </div>
 
-    <div id="gender-section">
-        <!-- <ul>
+    <!-- <div id="gender-section">
+        <ul>
             <li id="select-catogeries"><img src="{{asset('images/Man.jpg')}}"> <a href="/products/1">Men</a></li>
             <li id="select-catogeries"><img src="{{asset('images/Woman.jpg')}}"> <a href="/products/0">Women</a></li>
-        </ul>-->
+        </ul>
+    </div>-->
+
+    <div id="parallax-container">
+        <div id="parallax" style="background-image: url('{{ asset('images/area.png') }}');"></div>
     </div>
 </div>
 @endsection
