@@ -1495,6 +1495,62 @@ main {
         padding: 0;
     }
 
+    .featured-item-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10% auto;
+    }
+    .featured-item-container{
+        display: flex;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .featured-item-container::-webkit-scrollbar{
+        display: none;
+    }
+
+
+    .featured-item{
+        display: grid;
+        text-align: center;
+        grid-template-columns: auto auto auto ;
+        grid-gap: 25px;
+        padding: 15px;
+        flex: none;
+
+    }
+    .featured-link{
+        list-style: none;
+        text-decoration: none;
+        color: black;
+    }
+
+    .featured-details{
+        font-size: 20px;
+        
+    }
+    .featured-image{
+        height: 300px;
+        width: 300px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 5px;
+    }
+
+
+    .back-button, .next-button{
+        height: 50px;
+        width: 50px;
+        margin: 40px;
+
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+
     #parallax-container{
         margin: 0 auto;
         padding: 25px;
