@@ -1406,7 +1406,8 @@ main {
     #catogery-divider {
         font-family: Arial, Helvetica, sans-serif;
         width: auto;
-        margin: 0 auto;
+        margin-top: 45px;
+        margin-bottom: 55px;
         text-align: center;
         animation: fadeup 1s ease-out;
 
@@ -1414,7 +1415,7 @@ main {
 
         p {
             color: rgb(0, 0, 0);
-            font-size: 40px;
+            font-size: 20px;
             font-weight: bold;
             text-decoration: underline;
             text-decoration-thickness: 5px;
@@ -1427,6 +1428,8 @@ main {
         box-sizing: border-box;
         flex-wrap: wrap;
         display: flex;
+        margin-top: 5px;
+        margin-bottom: 15px;
     }
 
     #category-section ul {
@@ -1438,8 +1441,8 @@ main {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 50px;
         animation: fadeup 1s ease-out;
+        
     }
 
     #category-section li {
@@ -1449,12 +1452,9 @@ main {
     }
 
     #select-catogeries img {
-        width: 300px;
-        height: auto;
+        width: 350px;
+        height: 350px;
         display: block;
-        margin-bottom: 5px;
-        border-radius: 15px;
-        border: 4px solid black;
         box-sizing: border-box;
         flex-wrap: wrap;
         transition: background-color 0.4s, transform 0.4s;
@@ -1462,8 +1462,8 @@ main {
     }
 
     #select-catogeries img:hover {
-        background-color: rgb(136, 149, 219);
-        transform: scale(1.04);
+        opacity: 0.7; 
+
     }
 
     #select-catogeries a {
@@ -1472,17 +1472,16 @@ main {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-size: 40px;
-        border-radius: 20px;
-        border: 5px solid black;
         background-color: #000000;
         flex-wrap: wrap;
         transition: background-color 0.4s;
+        padding-bottom: 5px;
+
     }
 
     #select-catogeries a:hover {
-        background-color: rgb(153, 148, 148);
-        color: black;
-        transform: scale(1.0);
+        opacity: 0.7; 
+
     }
 
     #gender-section ul {
@@ -1499,7 +1498,6 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 10% auto;
     }
     .featured-item-container{
         display: flex;
