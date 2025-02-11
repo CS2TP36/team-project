@@ -40,7 +40,7 @@
                     $daysTillZero = ReportController::daysTillZero($product);
                     // set the values to "Insufficient data" if they are negative
                     if ($daysTillZero < 0) {
-                        $daysTillZero = "Insufficient data";
+                        $daysTillZero = "Never";
                     }
                     if ($rateOfSale < 0) {
                         $rateOfSale = "Insufficient data";
