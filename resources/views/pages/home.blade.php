@@ -72,6 +72,18 @@
         </div>
 
 
+        <div id=catogery-divider>
+            <p>What Can You Expect From Us?</p>
+        </div>
+
+        <div id = home-gurantee-container>
+            <ul id = home-guarantee> 
+                <li id = guarantee-list><img src="{{asset('images/clothing-icon.png')}}"> <h3> 100% High Quality Clothing</h3> All of our clothing is built from the finest of fabric that have tended to with excellent care. Every apparel we craft, is a result of our dedicated passion towards providing our customers with the highest standard of sports fashion available.</li>
+                <li id = guarantee-list><img src="{{asset('images/refund-icon.png')}}"> <h3> Guaranteed Easy Free Returns </h3> Are you not happy wiht one of our clothing apparels? No worries then, at Sportswear we have an open and free refund policy, where if you do not like a piece of clothing apparel you bought from us, you can also refund it and send us the clothes back.</li>
+                <li id = guarantee-list><img src="{{asset('images/delivery-truck.png')}}"> <h3> Ultra Fast & Reliable Shipping</h3>We take pride in our ultra fast shipping system that we have put in place, whenever you may order clothing apparel we have a guarantee of providing you with the delievry within 4 working days. We have a delivery accuracy rating of 99%.</li>
+            </ul>
+        </div>
+
     
 
     <!-- <div id="gender-section">
