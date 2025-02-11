@@ -11,7 +11,7 @@ class AccountController extends Controller
     {
         // Uses laravel Auth to check if the user is logged in
         if (!Auth::check()) {
-            return redirect('/login');
+            return redirect('/login/account');
         }
 
         // Retrieves the user from the Auth

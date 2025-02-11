@@ -12,7 +12,7 @@ class PreviousOrders extends Controller
 {
     function show() {
         if (!Auth::check()) {
-            return redirect('/login');
+            return redirect('/login/previous-orders');
         }
         return view('pages.previous-orders');
     }
