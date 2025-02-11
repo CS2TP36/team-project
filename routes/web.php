@@ -128,3 +128,8 @@ Route::post('/admin/slevels', [ReportController::class, 'stockLevelForm'])->name
 Route::get('/delivery-and-returns', function () {
     return view('pages.delivery-and-returns');
 })->name('delivery.returns');
+
+// Show the review page
+Route::get('/review', function () {
+    return view('pages.review');
+});
