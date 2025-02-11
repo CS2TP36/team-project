@@ -1417,8 +1417,8 @@ main {
     #catogery-divider {
         font-family: Arial, Helvetica, sans-serif;
         width: auto;
-        margin-top: 45px;
-        margin-bottom: 55px;
+        margin-top: 55px;
+        margin-bottom: 35px;
         text-align: center;
         animation: fadeup 1s ease-out;
 
@@ -1441,6 +1441,7 @@ main {
         display: flex;
         margin-top: 5px;
         margin-bottom: 15px;
+
     }
 
     #category-section ul {
@@ -1482,16 +1483,23 @@ main {
         display: block;
         text-decoration: none;
         color: rgb(255, 255, 255);
-        font-size: 40px;
         background-color: #000000;
         flex-wrap: wrap;
         transition: background-color 0.4s;
-        padding-bottom: 5px;
+
+        
 
     }
 
     #select-catogeries a:hover {
         opacity: 0.7; 
+
+    }
+
+    #select-catogeries h4 {
+        font-size: 25px;
+        padding: 15px;
+        margin: 0;
 
     }
 
@@ -1514,9 +1522,11 @@ main {
         display: flex;
         overflow: hidden;
         overflow-x: scroll;
+        
     }
     .featured-item-container::-webkit-scrollbar{
         display: none;
+        
     }
 
 
@@ -1524,33 +1534,43 @@ main {
         display: grid;
         text-align: center;
         grid-template-columns: auto auto auto ;
-        grid-gap: 25px;
-        padding: 15px;
+        grid-gap: 15px;
+        padding: 40px;
         flex: none;
+        
 
+
+    }
+
+    .featured-item:hover{
+        opacity: 0.7;
     }
     .featured-link{
         list-style: none;
         text-decoration: none;
-        color: black;
+        color: rgb(255, 255, 255);
+        
     }
 
     .featured-details{
-        font-size: 20px;
+        font-size: 15px;
+        background-color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: -22px;
+        padding:  10px;
         
     }
     .featured-image{
         height: 300px;
         width: 300px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 5px;
+        
+
     }
 
 
     .back-button, .next-button{
-        height: 50px;
-        width: 50px;
+        height: 90px;
+        width: 80px;
         margin: 40px;
 
         img{

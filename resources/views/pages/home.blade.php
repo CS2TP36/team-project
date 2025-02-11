@@ -27,11 +27,11 @@
 
     <div id="category-section"> <!--shows the sections for each catogery-->
         <ul>
-            <li id="select-catogeries"> <a href="/products/2/name/1/4"> <img src="{{asset('images/jacket-pic.jpg')}}"> Jackets</a></li><!--links to coats-->
-            <li id="select-catogeries"> <a href="/products/2/name/1/3"> <img src="{{asset('images/hoodie-pic.jpg')}}"> Hoodies</a></li><!--links to hoodies-->
-            <li id="select-catogeries"> <a href="/products/2/name/1/2"> <img src="{{asset('images/trouser-pic.jpg')}}"> Joggers</a></li><!--links joggers -->
-            <li id="select-catogeries"> <a href="/products/2/name/1/1"><img src="{{asset('images/shoe-pic.jpg')}}"> Trainers</a></li><!--links to shoes -->
-            <li id="select-catogeries"> <a href="/products/2/name/1/5"> <img src="{{asset('images/shirt-pic.jpg')}}"> Shirts</a></li><!--links to shirts-->
+            <li id="select-catogeries"> <a href="/products/2/name/1/4"> <img src="{{asset('images/jacket-pic.jpg')}}"> <h4>Jackets</h4></a></li><!--links to coats-->
+            <li id="select-catogeries"> <a href="/products/2/name/1/3"> <img src="{{asset('images/hoodie-pic.jpg')}}"><h4> Hoodies</h4></a></h4></li><!--links to hoodies-->
+            <li id="select-catogeries"> <a href="/products/2/name/1/2"> <img src="{{asset('images/trouser-pic.jpg')}}"> <h4>Joggers</h4></a></li><!--links joggers -->
+            <li id="select-catogeries"> <a href="/products/2/name/1/1"><img src="{{asset('images/shoe-pic.jpg')}}"> <h4>Trainers</h4></a></li><!--links to shoes -->
+            <li id="select-catogeries"> <a href="/products/2/name/1/5"> <img src="{{asset('images/shirt-pic.jpg')}}"><h4> Shirts</h4></a></li><!--links to shirts-->
         </ul>
     </div>
 
