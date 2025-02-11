@@ -1656,6 +1656,8 @@ main {
         #home-gurantee-container{
             display: flex;
             justify-content: center;
+            background-color: #d5d4d4;
+            margin-bottom: 50px;
         }
 
         #home-guarantee{
