@@ -103,6 +103,10 @@ class CheckoutController extends Controller
             }
 
             foreach ($basket as $basketItem) {
+                // to reduce the stock level of hte given item
+                $product = $basketItem->product;
+                $product->quantity -= $basketItem->quantity;
+                // then delete the item from the basket
                 $basketItem->delete();
             }
 
