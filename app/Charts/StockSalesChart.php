@@ -35,7 +35,7 @@ class StockSalesChart
 
         // returns the built chart with the required data
         return (new OriginalLineChart)
-            ->setTitle('Recent Sales for ' . $product->name)
+            ->setTitle('Daily Stock levels for ' . $product->name)
             ->setSubtitle('Last 14 days')
             ->addData('Stock level', $stockLevel)
             ->setXAxisOption(new XAxisOption($last14days));

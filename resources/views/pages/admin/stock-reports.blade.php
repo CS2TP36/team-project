@@ -1,5 +1,6 @@
 @use (App\Http\Controllers\Admin\ReportController)
 @use (App\Models\Product)
+@use(App\Charts\StockSalesChart)
 @php
     $warnings = ReportController::getWarnings();
     $products = Product::all()->sortBy("name");
@@ -53,8 +54,24 @@
                 @if($rateOfSale == 0)
                     <p style="color: red">Nobody wants to buy this, maybe reduce price?</p>
                 @endif
+                <h4>Stock level graph</h4>
+                @if($product["created_at"] < now()->subDays(13))
+                    @php
+                        // get the product from the session
+                        $product = Product::all()->where("id", session("slevels"))->first();
+                        // build the chart for the product
+                        $chart = (new StockSalesChart)->build($product);
+                    @endphp
+                    {!! $chart->container() !!}
+                    <script src="{{ $chart->cdn() }}"></script>
+                    {!! $chart->script() !!}
+                @else
+                    <p>Product too new for a graph</p>
+                @endif
             @endif
         </form>
+
     </article>
+
 
 @endsection
