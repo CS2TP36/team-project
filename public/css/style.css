@@ -1537,6 +1537,7 @@ main {
         grid-gap: 15px;
         padding: 40px;
         flex: none;
+        padding-top: 0;
         
 
 
@@ -1592,9 +1593,8 @@ main {
     
     #parallax-container{
         margin: 0 auto;
-        padding: 25px;
         width: 100%;
-        height: 400px; 
+        height: 500px; 
         overflow: hidden;
         position: relative;
         }
@@ -1607,9 +1607,51 @@ main {
         height: 100%;
         position: absolute;
         object-fit: cover;
+        filter: brightness(60%);
         }
         
-    
+        #parallax-info {
+            position: absolute;
+            transform: translateX(-50%);
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 22px;
+            top: 20%;
+            left: 50%;
+            background-color: rgba(62, 71, 102, 0.377);
+            padding-bottom: 60px;
+        }
+        
+        #parallax-info h3 {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        #parallax-info p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        
+        #parallax-info a {
+            font-size: 20px;
+            color: #000000;
+            padding: 20px;
+            margin-top: 15px;
+            background-color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+
+        }
+        
+        #parallax-info a:hover {
+            background-color: #88a4ad;
+            color: rgb(0, 0, 0);
+        }
 
     @media (max-width: 768px) {
         #text-banner {
