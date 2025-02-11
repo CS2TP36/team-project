@@ -2330,6 +2330,36 @@ main {
             color: black;
         }
     }
+
+    .review {
+        font-family: Arial, sans-serif;
+        padding-left: 250px;
+        padding-right: 250px;
+        justify-content: center;
+        color: black;
+
+        h1 {
+
+        }
+
+        p {
+
+        }
+
+        button {
+            width: 80px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #4D4D4D;
+        }
+    }
 }
 
 .dark-theme {
