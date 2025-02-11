@@ -1482,8 +1482,8 @@ main {
         text-align: center;
         display: block;
         text-decoration: none;
-        color: rgb(255, 255, 255);
-        background-color: #000000;
+        color: rgb(0, 0, 0);
+        background-color: #d5d4d4;
         flex-wrap: wrap;
         transition: background-color 0.4s;
 
@@ -1548,13 +1548,13 @@ main {
     .featured-link{
         list-style: none;
         text-decoration: none;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         
     }
 
     .featured-details{
         font-size: 15px;
-        background-color: #000;
+        background-color: #d5d4d4;
         font-family: Arial, Helvetica, sans-serif;
         margin-top: -22px;
         padding:  10px;
