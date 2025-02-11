@@ -1522,12 +1522,22 @@ main {
         display: flex;
         overflow: hidden;
         overflow-x: scroll;
+        padding-bottom: 10px;
         
     }
-    .featured-item-container::-webkit-scrollbar{
-        display: none;
-        
+
+    .featured-item-container::-webkit-scrollbar {
+        height: 10px; 
+        background: #d4d2d2; 
+        border-radius: 5px;
     }
+
+    .featured-item-container::-webkit-scrollbar-thumb {
+        background: #000000; 
+        border-radius: 5px;
+        max-width: 50px; 
+    }
+    
 
 
     .featured-item{
@@ -1535,7 +1545,7 @@ main {
         text-align: center;
         grid-template-columns: auto auto auto ;
         grid-gap: 15px;
-        padding: 40px;
+        padding: 20px;
         flex: none;
         padding-top: 0;
         
@@ -1582,12 +1592,13 @@ main {
     }
 
     .next-button{
-        margin-left: 40px;
+        margin-right: 120px;
         padding-left: 20px;
     }
 
     .back-button{
-        padding-right: 20px
+        padding-right: 20px;
+        margin-left: 120px
     }
 
     
@@ -1666,19 +1677,22 @@ main {
             text-align: center;
             list-style-type: none;
             padding-bottom: 40px;
-            font-size: 20px;
+            font-size: 16px;
             font-family: 'Arial', sans-serif;
-
+           
 
         }
+
+        
+        
 
         #guarantee-list{
             max-width: 400px;
             padding: 20px;
 
                 img{
-                    width: 300px;
-                    height: 300px;
+                    width: 250px;
+                    height: 250px;
                 }
 
         }
@@ -2331,7 +2345,6 @@ main {
         }
     }
 
-    /*CSS for Review Page*/    
     .review {
         font-family: Arial, sans-serif;
         padding-left: 250px;
@@ -2359,22 +2372,6 @@ main {
 
         button:hover {
             background-color: #4D4D4D;
-        }
-
-        .rating {
-        display: inline-flex; /* Arrange stars horizontally */
-        }
-      
-        .star {
-            font-size: 3rem;
-            color: #ccc; /* Default color (empty star) */
-            cursor: pointer; /* Indicate interactivity */
-            transition: color 0.2s ease; /* Smooth color transition */
-        }
-      
-        .star:hover, 
-        .star.active {
-            color: gold; /* Highlight on hover and when active */
         }
     }
 }
