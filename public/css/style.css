@@ -2331,6 +2331,7 @@ main {
         }
     }
 
+    /*CSS for Review Page*/    
     .review {
         font-family: Arial, sans-serif;
         padding-left: 250px;
@@ -2358,6 +2359,22 @@ main {
 
         button:hover {
             background-color: #4D4D4D;
+        }
+
+        .rating {
+        display: inline-flex; /* Arrange stars horizontally */
+        }
+      
+        .star {
+            font-size: 3rem;
+            color: #ccc; /* Default color (empty star) */
+            cursor: pointer; /* Indicate interactivity */
+            transition: color 0.2s ease; /* Smooth color transition */
+        }
+      
+        .star:hover, 
+        .star.active {
+            color: gold; /* Highlight on hover and when active */
         }
     }
 }
