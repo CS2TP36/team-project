@@ -84,6 +84,17 @@
             </ul>
         </div>
 
+        <div id=catogery-divider>
+            <p>Check Out Some Of Our Reviews</p>
+        </div>
+
+        <div id = home-review-container>
+            <div id = home-review-wrapper> 
+                <img src="{{asset('images/Review1.png')}}" id = review-pic>
+                <img src="{{asset('images/Review2.png')}}" id = review-pic>
+                <img src="{{asset('images/Review3.png')}}" id = review-pic >
+            </div>
+        </div>
     
 
     <!-- <div id="gender-section">
