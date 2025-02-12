@@ -7,7 +7,7 @@ use Mailgun\Mailgun;
 // a class for sending emails
 class Emailer
 {
-    public $name;
+    public string $name;
     // name goes to the sender address {name}@something
     function __construct($name)
     {
@@ -20,7 +20,7 @@ class Emailer
             $mg = Mailgun::create(env('MAILGUN_SECRET'), "https://api.eu.mailgun.net");
             // send email
             $mg->messages()->send('mail.thesportswear.website', [
-                'from' => $name . "mail.thesportswear.website",
+                'from' => $this->name . "mail.thesportswear.website",
                 'to' => $to,
                 'subject' => $subject,
                 'text' => $message
