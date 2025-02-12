@@ -11,3 +11,7 @@ function search() {
         window.location.href = url;
     }
 }
+
+document.getElementById('search-icon').addEventListener('click', function() {
+    search();
+});

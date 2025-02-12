@@ -1,3 +1,4 @@
+
 <header>
     <nav class="navbar"> <!--Creates the navbar class creating a container-->
         <div class="navbardiv"><!--Is the div which will contain all the items that are present on the logo-->
@@ -6,7 +7,7 @@
                 <li class=prime-list><!--class holds the account and basket links-->
                     <div class="searchbar-container">
                         <input id="search-bar" type="search" placeholder="Search SportsWear" onsearch="search()">
-                        <img src="{{ asset('images/search.PNG') }}" class="search-logo" alt="search-logo">
+                        <img src="{{ asset('images/search.PNG') }}" class="search-logo" alt="Search Icon" id="search-icon" onclick="search()">
                     </div>
                     <a href="/account"><img src="{{ asset('images/Account.png') }}" class="user-logo" ></a> <!--links to account page-->
                     <a href="/home"><img src="{{ asset('images/Hearts.png') }}" class="user-logo" > </a>
