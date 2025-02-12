@@ -1,5 +1,5 @@
 @use(Illuminate\Support\Facades\Auth)
-<footer class="footer-check"><!--creates the footer class container that holds all the items inside as well acts as the container-->
+<footer class="footer-container"><!--creates the footer class container that holds all the items inside as well acts as the container-->
         <ul><!--list for contacting us-->
             <li class="footer-list"><a href="/contact">Customer Service</a></li><!--links to the contact page-->
             <li class="footer-list"><a href="/contact">Contact Page</a></li><!--links to the contact page-->
