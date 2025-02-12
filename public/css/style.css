@@ -1380,7 +1380,6 @@ main {
             width: 50px;
             height: 50px;
         }
-    }
 
     @media (max-width: 768px) {
         .footer-check {
@@ -2337,10 +2336,10 @@ main {
             margin-right: 20px;
             cursor: pointer;
             padding-bottom: 4px;
-            position: relative;
             /* For positioning the pseudo-element */
-            transition: color 0.3s ease;
+            position: relative;
             /* Smooth color transition */
+            transition: color 0.3s ease;
         }
 
         nav li::after {
@@ -2348,39 +2347,35 @@ main {
             content: "";
             position: absolute;
             left: 0;
-            bottom: -2px;
             /* Adjust position below the text */
-            width: 0;
+            bottom: -2px;
             /* Initially hidden */
+            width: 0;
             height: 2px;
-            background-color: transparent;
             /* Initially transparent */
-            transition: width 0.3s ease, background-color 0.3s ease;
+            background-color: transparent;
             /* Smooth transitions */
+            transition: width 0.3s ease, background-color 0.3s ease;
         }
 
-        nav li.active,
-        nav li:hover {
+        nav li.active, nav li:hover {
             color: blueviolet;
-            /* Example active/hover color */
         }
 
-        nav li.active::after,
-        nav li:hover::after {
-            width: 100%;
+        nav li.active::after, nav li:hover::after {
             /* Show underline on active/hover */
+            width: 100%;
             background-color: blueviolet;
-            /* Example underline color */
         }
 
         .content-section {
+            /* Hide all non-active sections by default */
             display: none;
-            /* Hide all sections by default */
         }
 
         .content-section.active {
-            display: block;
             /* Show the active section */
+            display: block; 
         }
     }
 
@@ -2572,33 +2567,28 @@ main {
 
         .line-break {
             margin-top: 15px;
-            outline: 1px solid black;
         }
 
-        .star {
+        /*Might change how this looks*/
+        .star { 
             font-size: 3rem;
-            color: #ccc;
-            /* Default color (empty star) */
+            color: #4D4D4D;
             cursor: pointer;
-            /* Indicate interactivity */
         }
 
-        .star:hover,
-        .star.active {
+        .star:hover, .star.active {
             color: gold;
             /* Highlight on hover and when active */
         }
 
-        input[type="text"],
-        textarea {
+        input[type="text"], textarea {
             border: 1px solid black;
             padding: 10px;
             outline: none;
             /*Disables default browser outline on focus*/
         }
 
-        input[type="text"]:focus,
-        textarea:focus {
+        input[type="text"]:focus, textarea:focus {
             box-shadow: 0 0 10px gold;
             border-color: gold;
         }
