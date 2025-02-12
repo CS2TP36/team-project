@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 <section>
-<div class ="page-about">
+<div class ="about-page">
         <div id="banner-container">
             <div id="overlay"></div>
             <img src="images/Banner2.PNG" id="banner" alt="About Us Banner">
