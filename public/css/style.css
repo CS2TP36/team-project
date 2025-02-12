@@ -2272,7 +2272,6 @@ main {
     }
 
     .right-container {
-        color: black;
         flex: 1;
         max-width: 1000px;
         margin-top: 20px;
@@ -2403,7 +2402,6 @@ main {
         }
 
         .right-container {
-            color: black;
             flex: 1;
             max-width: 200px;
             margin: 0;
@@ -2452,6 +2450,7 @@ main {
                 }
             }
         }
+
     }
 
 
