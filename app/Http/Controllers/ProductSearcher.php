@@ -43,7 +43,12 @@ class ProductSearcher extends Controller
                     return true;
                 }
             }
+            // also check for substrings
+            if (str_contains(strtolower($subject), strtolower($searchWord))) {
+                return true;
+            }
         }
+
         // return false if nothing is found
         return false;
 
