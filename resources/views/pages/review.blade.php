@@ -2,12 +2,16 @@
 @section('title','Review')
 @section('content')
 <div class="review">
-    <!-- Need a form submission --> 
     <h1>Create Review</h1>
+    <!-- Need a form submission --> 
+
+    <form method="POST" action="/review" onsubmit="validateReviewForm(event)">
+
+    </form>
     <!-- Image + Name of Product -->
     <img></img>
     <p></p>
-    <br>
+    <div class="line-break"><br></div>
     <h2>Overall rating</h2>
     <!-- Stars -->
     <div class="rating" data-rating="0">
@@ -18,15 +22,15 @@
         <span class="star" data-value="5">&#9734;</span>    
     </div>
     <script src="{{ asset('js/rating.js') }}"></script>
-    <br>
+    <div class="line-break"><br></div>
     <h2>Add a headline</h2>
     <!-- Input for headline -->
-    <input></input>
-    <br>
+    <input type="text" placeholder="What's most important to know?"></input>
+    <div class="line-break"><br></div>
     <h2>Add a written review</h2>
     <!-- Input for review -->
-    <input></input>
-    <br>
+    <textarea name="message" id="message" cols="10" rows="7" placeholder="What did you like or dislike? What did you use this product for?" required style="resize: none"></textarea>
+    <div class="line-break"><br></div>
     <p>We will notify you via email as soon as your review is processed.<p>
     <!-- Submit button -->
     <button>Submit</button> 

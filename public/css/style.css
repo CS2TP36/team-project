@@ -2243,6 +2243,51 @@ main {
             }
         }
 
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+          
+        nav li {
+            display: inline;
+            font-weight: bold;
+            margin-right: 20px;
+            cursor: pointer;
+            padding-bottom: 4px;
+            position: relative; /* For positioning the pseudo-element */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+          
+        nav li::after { /* Pseudo-element for the underline */
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px; /* Adjust position below the text */
+            width: 0; /* Initially hidden */
+            height: 2px;
+            background-color: transparent; /* Initially transparent */
+            transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+        }
+          
+          nav li.active,
+          nav li:hover {
+            color: blueviolet; /* Example active/hover color */
+          }
+          
+          nav li.active::after,
+          nav li:hover::after {
+            width: 100%; /* Show underline on active/hover */
+            background-color: blueviolet; /* Example underline color */
+          }
+
+          .content-section {
+            display: none; /* Hide all sections by default */
+          }
+          
+          .content-section.active {
+            display: block; /* Show the active section */
+          }          
     }
 
     @media (max-width: 768px) {
@@ -2385,22 +2430,41 @@ main {
 
     .review {
         font-family: Arial, sans-serif;
-        padding-left: 250px;
-        padding-right: 250px;
+        min-width: 33vw;
+        padding-left: 33vw;
+        padding-right: 33vw;
         justify-content: center;
         color: black;
+        border: black 1px solid;
 
         h1 {
-
+            font-size: 2em;
         }
 
         p {
+            min-width: 33vw;
+            font-size: 1em;
+        }
 
+        input {
+            width: 33vw;
+            min-width: 33vw;
+            font-size: 1em;
+        }
+
+        textarea {
+            width: 33vw;
+            max-width: 33vw;
+            border: 1px solid black;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            color: black;
         }
 
         button {
             width: 80px;
             padding: 10px;
+            font-size: 1em;
             border: 1px solid black;
             background-color: black;
             color: white;
@@ -2410,6 +2474,33 @@ main {
 
         button:hover {
             background-color: #4D4D4D;
+        }
+
+        .line-break {
+            margin-top: 15px;
+            outline: 1px solid black;
+        }
+
+        .star {
+            font-size: 3rem;
+            color: #ccc; /* Default color (empty star) */
+            cursor: pointer; /* Indicate interactivity */
+          }
+          
+        .star:hover, 
+        .star.active {
+            color: gold; /* Highlight on hover and when active */
+        }
+
+        input[type="text"], textarea {
+            border: 1px solid black; 
+            padding: 10px;
+            outline: none; /*Disables default browser outline on focus*/
+          }
+          
+        input[type="text"]:focus, textarea:focus {
+            box-shadow: 0 0 10px gold;
+            border-color: gold;
         }
     }
 }
