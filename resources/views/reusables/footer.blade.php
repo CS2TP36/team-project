@@ -29,9 +29,9 @@
     <div>
         <ul><!--list for signing in and toggle theme-->
             <li class="footer-title">Follow Us</li>
-            <li class="footer-list"></li>
-            <li class="footer-list"></li>
-            <li class="footer-list"></li>
+            <li class="footer-list"> <a href="https://www.facebook.com/"> <img src="{{asset('images/Facebook.png')}}" id = social-pic></li>
+            <li class="footer-list"> <a href="https://www.instagram.com/"> <img src="{{asset('images/x.png')}}" id = social-pic></li>
+            <li class="footer-list"> <a href="https://x.com/"> <img src="{{asset('images/Insta.png')}}" id = social-pic></li>
         </ul>
     </div>
     
