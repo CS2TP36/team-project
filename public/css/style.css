@@ -1782,19 +1782,21 @@ main {
 
     }
 
-    #home-review-container {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 50px;
+        #home-review-container{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px;
+           
 
-    }
+        }
 
 
-    #review-pic {
-        width: 600px;
-        height: 300px;
+        #review-pic {
+            width: 400px;
+            height: 200px;
+            padding: 40px;
 
-    }
+        }
 
 
     @media (max-width: 768px) {

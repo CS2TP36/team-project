@@ -8,6 +8,6 @@ function search() {
     // runs the search in a new window
     const url = `/search/${searchTerm}`;
     if (searchTerm !== '') {
-        window.open(url);
+        window.location.href = url;
     }
 }
