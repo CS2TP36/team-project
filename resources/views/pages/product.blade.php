@@ -4,6 +4,9 @@
 @endsection
 @php
     use App\Models\Product;
+    // add to the popularity value of the product on viewing
+    $product['popularity'] = $product['popularity'] + 1;
+    $product->save();
 @endphp
 @section('content')
     <div class="product">
@@ -63,7 +66,7 @@
                     <br>
                     <p id="show_id"><strong>Item ID: </strong>{{$product['id']}}</p>
                 </section>
-                        
+
                 <section id = "review" class = "content-section">
                         <p><strong>Reviews:</strong></p>
                         <p>Customer reviews will be displayed here.</p>
@@ -72,5 +75,5 @@
 
             <script src="{{ asset('js/underline.js') }}"></script>
         </div>
-    </div>    
+    </div>
 @endsection
