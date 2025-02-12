@@ -2369,15 +2369,14 @@ label {
     margin-bottom: 20px;
 }
 
-.right-container {
-    color: black;
-    flex: 1;
-    max-width: 1000px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    .right-container {
+        flex: 1;
+        max-width: 1000px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
 
     .line-break {
         background-color: black;
@@ -2504,12 +2503,11 @@ label {
 
     }
 
-    .right-container {
-        color: black;
-        flex: 1;
-        max-width: 200px;
-        margin: 0;
-        padding: 0;
+        .right-container {
+            flex: 1;
+            max-width: 200px;
+            margin: 0;
+            padding: 0;
 
         .line-break {
             background-color: black;
@@ -2549,12 +2547,13 @@ label {
                 margin-bottom: 10px;
             }
 
-            button:hover {
-                background-color: #4D4D4D;
+                button:hover {
+                    background-color: #4D4D4D;
+                }
             }
         }
+
     }
-}
 
 
 /*CSS for Forgot Password Page*/
