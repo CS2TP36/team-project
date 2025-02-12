@@ -1063,17 +1063,16 @@ main {
         #banner-container {
             position: relative;
             width: 100%;
-            height: 962px;
+            height: 650px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
             overflow: hidden; 
         }
 
         #banner {
             width: 100%;
             height: 100%;
-            object-fit: contain;
         }
 
         #text-banner {
@@ -1088,14 +1087,11 @@ main {
         .content-container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            max-width: 1100px;
-            width: 90%;
-            margin: 50px auto;
-            background: white;
-            padding: 50px;
+            justify-content: center;
+            max-width: auto;
+            width: 100%;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 600px;
         }
 
         .content-container:nth-child(even) {
@@ -1103,7 +1099,7 @@ main {
         }
 
         .section-image {
-            width: 45%;
+            width: 500px;
             border-radius: 10px;
             object-fit: cover;
         }
@@ -1176,7 +1172,7 @@ main {
         }
 
         section {
-            min-height: 100vh;
+            min-height: 50vh;
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -1185,6 +1181,8 @@ main {
         section.show {
             opacity: 1;
             transform: translateY(0);
+            padding: 0;
+            margin: 0;
         }
 
         @media (max-width: 768px) {

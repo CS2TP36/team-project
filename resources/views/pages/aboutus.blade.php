@@ -6,7 +6,6 @@
 @section('content')
 <div class = "aboutus">
 
-    <section>
         <div id="banner-container">
             <div id="overlay"></div>
             <img src="images/Banner2.PNG" id="banner" alt="About Us Banner">
@@ -15,7 +14,6 @@
                 <p>Dream, Aspire Higher, Achieve Your Destiny.</p>
             </div>
         </div>
-    </section>
 
     <!-- About Us Section -->
     <section class="content-container">
