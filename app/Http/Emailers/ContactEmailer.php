@@ -17,7 +17,7 @@ class ContactEmailer extends Emailer
         // set all the details for the email
         $to = $contactItem->email;
         $subject = 'SportsWear - Thanks for contacting us!';
-        $message = 'Hello ' . $contactItem->name . ', we have received your message and will get back to you as soon as possible.\n Message contents: ' . $contactItem->message;
+        $message = 'Hello ' . $contactItem->name . ', we have received your message and will get back to you as soon as possible. Your message: ' . $contactItem->message;
         // send the email
         return $this->sendEmail($to, $subject, $message);
     }
