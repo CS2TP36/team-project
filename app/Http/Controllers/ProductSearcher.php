@@ -57,7 +57,7 @@ class ProductSearcher extends Controller
 
     function show(String $searchTerm="") {
         // converts the # back to spaces
-        $searchTerm = str_replace("#", " ", $searchTerm);
+        $searchTerm = str_replace("%20", " ", $searchTerm);
         $products = self::search($searchTerm);
         if (!$products) {
             return view('pages.products', ['products' => $products, 'message' => "No products found"]);
