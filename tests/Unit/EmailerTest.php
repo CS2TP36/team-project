@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\Http\Emailer;
+use App\Http\Emailers\Emailer;
 use PHPUnit\Framework\TestCase;
 
 class EmailerTest extends TestCase
