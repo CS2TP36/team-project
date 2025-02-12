@@ -8,7 +8,7 @@
 
         <div id="banner-container">
             <div id="overlay"></div>
-            <img src="images/Banner2.PNG" id="banner" alt="About Us Banner">
+            <img src="images/BannerW.PNG" id="banner" alt="About Us Banner">
             <div id="text-banner">
                 </br></br></br>
                 <p>Dream, Aspire Higher, Achieve Your Destiny.</p>
