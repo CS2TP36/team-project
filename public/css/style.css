@@ -2129,6 +2129,9 @@ main {
     border-radius: 15px;
     align-items: left;
     text-align: left;
+    position: sticky;
+    height: fit-content;
+    top: 10px;
 
 }
 
