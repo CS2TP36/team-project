@@ -1,13 +1,14 @@
 @extends('layouts.page')
 @section('title','About Us')
 @section('script')
-    {{ asset('/js/terms-conditions.js') }}
+    {{ asset('/js/aboutUs.js') }}
 @endsection
 @section('content')
 <section>
+<div class ="page-about">
         <div id="banner-container">
             <div id="overlay"></div>
-            <img src="Banner2.PNG" id="banner" alt="About Us Banner">
+            <img src="images/Banner2.PNG" id="banner" alt="About Us Banner">
             <div id="text-banner">
                 </br></br></br>
                 <p>Dream, Aspire Higher, Achieve Your Destiny.</p>
@@ -17,7 +18,7 @@
 
     <!-- About Us Section -->
     <section class="content-container">
-        <img src="About.PNG" class="section-image" alt="About Us Image">
+        <img src="images/About.PNG" class="section-image" alt="About Us Image">
         <div class="text">
             <h2>About Us</h2>
             <p>At Sportswear, we are dedicated to providing top-tier athletic gear that combines comfort, durability,
@@ -34,7 +35,7 @@
 
     <!-- Mission Section -->
     <section class="content-container">
-        <img src="Mission.PNG" class="section-image" alt="Mission Image">
+        <img src="images/Mission.PNG" class="section-image" alt="Mission Image">
         <div class="text">
             <h2>Our Mission</h2>
             <p>At Sportswear, our mission is to fill the gap in the market for athletic apparel that combines
@@ -54,7 +55,7 @@
 
     <!-- Sportswear Origin -->
     <section class="content-container">
-        <img src="Origin.PNG" class="section-image" alt="Origin Image">
+        <img src="images/Origin.PNG" class="section-image" alt="Origin Image">
         <div class="text">
             <h2>Sportswear Origin</h2>
             <p>Sportswear was founded in 2024 by a group of passionate athletes, designers, and innovators who saw a gap
@@ -72,7 +73,7 @@
 
     <!-- What Sets Us Apart -->
     <section class="content-container">
-        <img src="Unique.PNG" class="section-image" alt="Unique Image">
+        <img src="images/Unique.PNG" class="section-image" alt="Unique Image">
         <div class="text">
             <h2>What Sets Us Apart</h2>
             <p>At Sportswear, we believe in more than just making high-quality gear we’re redefining what athletic
@@ -107,10 +108,10 @@
         <a href="#">Shop Now</a>
         <p>Follow Us</p>
         <ul>
-            <li><a href="#"><img src="111.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="instagram-logo-transparent-background-2.png" alt="Instagram"></a></li>
-            <li><a href="#"><img src="R.png" alt="Twitter"></a></li>
-            <li><a href="#"><img src="linkedIn_PNG8.png" alt="LinkedIn"></a></li>
+            <li><a href="#"><img src="images/111.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images/instagram-logo-transparent-background-2.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/R.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="images/linkedIn_PNG8.png" alt="LinkedIn"></a></li>
         </ul>
     </section>
 @endsection
