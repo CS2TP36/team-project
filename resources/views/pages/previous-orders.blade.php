@@ -53,7 +53,7 @@
                         <div class="order-items">
                             <div class="item">
                                 <!--item 1 of second order details-->
-                                <img src="productImage/8573ac4b-e2c8-4ea3-8909-f60126839a3c.jpg">
+                                <img src="{{asset("images/productImage/8573ac4b-e2c8-4ea3-8909-f60126839a3c.jpg")}}">
                                 <div class="item-details">
                                     <p class="item-name">Pulse Track Running Shoes</p>
                                     <p class="item-price">£20.00</p>
@@ -62,7 +62,7 @@
 
                             <!-- item 2 of second order-->
                             <div class="item">
-                                <img src="productImage\68313941-69f1-4bf9-bb02-de3a64caa29f.jpg">
+                                <img src="{{asset("images/productImage/68313941-69f1-4bf9-bb02-de3a64caa29f.jpg")}}">
                                 <div class="item-details">
                                     <p class="item-name">Velocity Running Shoes </p>
                                     <p class="item-price">£35.00</p>
