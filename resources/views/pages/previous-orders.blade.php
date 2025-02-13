@@ -16,21 +16,20 @@
                     @foreach($orders as $order)
                         <div class="order">
                             <div class="order-info">
-
-                                <!--order details(date,price and dispatched date using dummy data for now) -->
                                 <p class="order-date">Order placed: {{ $order["created_at"] }}</p>
                                 <p class="dispatch-to">Dispatched to: {{ Shipping::all()->where('id', $order["shipping_id"])->first()["delivery_address"] }}</p>
                                 <p class="order-price">Total: {{ $order->calculateTotal() }}</p>
                             </div>
 
                             <div class="order-items">
-
-                                <!-- Order 1 details-->
-                                <img src="productImage/1aff6d07-c83f-4882-959a-b4fa2ed5a19a.jpg">
-                                <div class="item-details">
-                                    <p class="item-name">Trail Runner Pro Shoes</p>
-                                    <p class="item-price">£20.00</p>
-                                </div>
+                                @foreach($order->individualOrders as $individualOrder)
+                                    <!-- Order 1 details-->
+                                    <img src="{{$individualOrder->product->getMainImage()}}">
+                                    <div class="item-details">
+                                        <p class="item-name">{{$individualOrder->product->name}}</p>
+                                        <p class="item-price">{{$individualOrder->getSubtotal}}</p>
+                                    </div>
+                                @endforeach
                             </div>
 
                             <div class="order-actions">
