@@ -2261,6 +2261,10 @@ transition: background-color 0.3s ease, transform 0.2s ease; /* transition for h
     padding-bottom: 20px;
 }
 
+.product-item:hover {
+    opacity: 0.7;
+}
+
 .product-details {
     margin-top: 10px;
 }
@@ -2271,6 +2275,7 @@ transition: background-color 0.3s ease, transform 0.2s ease; /* transition for h
     color: black;
 
 }
+
 
 .category-selector {
     list-style: none;
