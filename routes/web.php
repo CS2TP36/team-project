@@ -73,6 +73,16 @@ Route::get('/basket', function () {
     return view('pages.basket');
 });
 
+// Show the previous orders page
+Route::get('/previous-orders', function () {
+    return view('pages.previous-orders');
+});
+
+
+
+
+
+
 // Show the checkout page
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');

@@ -252,9 +252,110 @@ main {
 
     }
 
+/* CSS for previous orders page (light mode) */
+#previous-orders {
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 30px auto; /*centre the container with margin */
+    padding: 20px; /* added padding inside the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add shadwo around the container*/
+}
+
+/*h1 styling */
+h1{
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*orders*/
+.orders-list{
+    margin-top: 20px; /*add margin from top for spacing*/
+}
+
+/* styling for each order*/
+.order{
+background-color: #f9f9f9;
+border-radius: 8px; /*rounded corners*/
+padding: 20px;
+margin-bottom: 15px; /*add spacign between orders*/
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /* add a lighter shadow for contrast*/
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+transition: background-color 0.3s ease; /* transition for background*/
+}
+
+.order:hover{
+    background-color: #f1f1f1; /* change background on hover */
+}
+
+.order-info{
+    flex:1;
+    min-width: 200px;
+}
+
+.order-info p{
+    margin: 5px 0; /*spacing between the text*/
+}
+
+.order-items {
+    display: flex;
+    flex-direction: column; /*stack itms vertically*/
+    flex:2;
+    max-width: 300px;
+}
+
+.order-items img {
+    width: 100px;  /* fixed width for images */
+    height: 100px;   /* fixed height for images*/
+    object-fit: cover; 
+    margin-bottom: 10px;  /* Add space between image and item deets */
+}
+
+.item-details {
+    text-align: left;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: #555;
+}
+
+/*buttons and actions*/
+.order-actions{
+    flex:1;
+    display: flex; /* flexbox for button layout */
+    justify-content: space-between; /* space between buttons*/
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.order-actions .button{
+background-color: #FFCC00; /* bright yellow(cann be changed) */
+padding:10px 20px;
+border:none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease; /* transition for hover effect */
+}
+
+.order-actions .button:hover {
+    background-color: #FFA500; /* turns orange when hovering( this can be changed)*/
+    transform: scale(1.05); /* add enlarging effect when hovering */
+}
+
+/* Add spacing after the filter selector */
+.filter {
+    margin-bottom: 20px;
+}
 
 
-    /* CSS for Basket Page*/
+/* CSS for Basket Page*/
 
     .basket {
         * {
