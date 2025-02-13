@@ -17,7 +17,7 @@
 
     <!-- About Us Section -->
     <section class="content-container">
-        <img src="images/About.PNG" class="section-image" alt="About Us Image">
+        <img src="images/About-.PNG" class="section-image" alt="About Us Image">
         <div class="text">
             <h2>About Us</h2>
             <p>At Sportswear, we are dedicated to providing top-tier athletic gear that combines comfort, durability,
@@ -34,7 +34,7 @@
 
     <!-- Mission Section -->
     <section class="content-container">
-        <img src="images/Mission.PNG" class="section-image" alt="Mission Image">
+        <img src="images/Mission-.PNG" class="section-image" alt="Mission Image">
         <div class="text">
             <h2>Our Mission</h2>
             <p>At Sportswear, our mission is to fill the gap in the market for athletic apparel that combines
@@ -72,7 +72,7 @@
 
     <!-- What Sets Us Apart -->
     <section class="content-container">
-        <img src="images/Unique.PNG" class="section-image" alt="Unique Image">
+        <img src="images/Unique-.PNG" class="section-image" alt="Unique Image">
         <div class="text">
             <h2>What Sets Us Apart</h2>
             <p>At Sportswear, we believe in more than just making high-quality gear we’re redefining what athletic
