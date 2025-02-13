@@ -74,12 +74,7 @@ Route::get('/basket', function () {
 });
 
 // Show the previous orders page
-Route::get('/previous-orders', function () {
-    return view('pages.previous-orders');
-});
-
-
-
+Route::get('/previous-orders', [PreviousOrders::class, 'show'])->name('previous-orders.show');
 
 
 
