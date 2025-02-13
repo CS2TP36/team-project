@@ -1,5 +1,5 @@
 @extends('layouts.page')
-@section('title','products')
+@section('title','Products')
 @use('App\Http\Controllers\ProductLister')
 @section('content')
     <section><!--creates a banner container to contain our banner-->
