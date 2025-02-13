@@ -11,6 +11,7 @@
             <img src="images/Banner5.PNG" id="banner" alt="About Us Banner">
             <div id="text-banner">
                 </br></br></br>
+                <p>About SportsWear</p>
                 <p>Dream, Aspire Higher, Achieve Your Destiny.</p>
             </div>
         </div>
