@@ -56,8 +56,8 @@
                 </ul>
             </nav>
 
-            <div id = "detailed-info">
-                <section id = "product-info" class = "content-section active">
+            <div id="detailed-info">
+                <section id="product-info" class="content-section active">
                     <!-- Description of the product -->
                     <p><strong>Description:</strong></p>
                     <p id="show_description">{{$product['description']}}</p>
@@ -67,7 +67,7 @@
                     <p id="show_id"><strong>Item ID: </strong>{{$product['id']}}</p>
                 </section>
 
-                <section id = "review" class = "content-section">
+                <section id="review" class="content-section">
                         <p><strong>Reviews:</strong></p>
                         <p>Customer reviews will be displayed here.</p>
                 </section>
