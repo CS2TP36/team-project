@@ -1255,7 +1255,7 @@ transition: background-color 0.3s ease, transform 0.2s ease; /* transition for h
             display: inline-block;
             margin-top: 20px;
             padding: 15px 30px;
-            background: red;
+            background: darkblue;
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
