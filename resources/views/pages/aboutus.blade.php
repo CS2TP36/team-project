@@ -8,28 +8,29 @@
 
         <div id="banner-container">
             <div id="overlay"></div>
-            <img src="images/Banner5.PNG" id="banner" alt="About Us Banner">
+            <img src="images/About-Pic.PNG" id="banner" alt="About Us Banner">
             <div id="text-banner">
                 </br></br></br>
-                <p>About SportsWear</p>
-                <p>Dream, Aspire Higher, Achieve Your Destiny.</p>
+                <p id="product-text-banner">About SportsWear</p>
             </div>
         </div>
+
+
+        
 
     <!-- About Us Section -->
     <section class="content-container">
         <img src="images/About-.PNG" class="section-image" alt="About Us Image">
         <div class="text">
-            <h2>About Us</h2>
+            <h2>What Is SportsWear?</h2>
             <p>At Sportswear, we are dedicated to providing top-tier athletic gear that combines comfort, durability,
                 and
                 performance.
                 Our goal is to empower athletes of all levels to reach their full potential while looking and feeling
                 their
                 best.
-                We believe that the right gear can inspire greatness—whether you are training hard or pushing your
-                limits on
-                game day.</p>
+                We believe that the right gear can further inspire yourself whether you are training hard or pushing your
+                limits on game day.</p>
         </div>
     </section>
 
@@ -111,7 +112,7 @@
             <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a></li>
             <li><a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a></li>
             <li><a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a></li>
-            <li><a href="https://www.linkedin.com/"><img src="images/linkedIn_PNG8.png" alt="LinkedIn"></a></li>
+            <li><a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a></li>
         </ul>
     </section>
 </div>
