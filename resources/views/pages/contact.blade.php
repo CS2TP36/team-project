@@ -17,6 +17,7 @@
                 <li><strong>📧 Email:</strong> <a href="mailto:support@thesportswear.website">support@thesportswear.website</a></li>
                 <li><strong>📞 Phone:</strong> 0121 898 919</li>
             </ul>
+            <img src="{{ asset('images/logo-contact.png') }}" class = contact-us-brand> </img>
         </div>
 
         <div class="contact-form">

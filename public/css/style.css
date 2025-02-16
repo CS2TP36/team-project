@@ -1069,6 +1069,13 @@ main {
         padding-right: 20px;
     }
 
+    .contact-us-brand{
+        width: 250px;
+        height: 250px;
+        margin-top: 50px;
+
+    }
+
     .contact-details h2 {
         font-size: 2rem;
         margin-bottom: 10px;
