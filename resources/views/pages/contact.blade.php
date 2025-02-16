@@ -10,7 +10,6 @@
     </div>
 
     <div class="contact-container">
-        <!-- Left Side: Contact Info -->
         <div class="contact-details">
             <h2>Contact Info</h2>
             <ul>
@@ -20,7 +19,6 @@
             </ul>
         </div>
 
-        <!-- Right Side: Contact Form -->
         <div class="contact-form">
             <h2>Contact Form</h2>
             <form method="POST" action="/contact" onsubmit="validateContactForm(event)">
@@ -51,7 +49,6 @@
         </div>
     </div>
 
-    <!-- Social Media Links -->
     <div class="social-section">
         <h2>Check us Out we also listen here! </h2>
         <div class="social-icons">
