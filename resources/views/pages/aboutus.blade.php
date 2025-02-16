@@ -16,23 +16,9 @@
         </div>
 
 
-        
 
     <!-- About Us Section -->
-    <section class="content-container">
-        <img src="images/About-.PNG" class="section-image" alt="About Us Image">
-        <div class="text">
-            <h2>What Is SportsWear?</h2>
-            <p>At Sportswear, we are dedicated to providing top-tier athletic gear that combines comfort, durability,
-                and
-                performance.
-                Our goal is to empower athletes of all levels to reach their full potential while looking and feeling
-                their
-                best.
-                We believe that the right gear can further inspire yourself whether you are training hard or pushing your
-                limits on game day.</p>
-        </div>
-    </section>
+    
 
     <!-- Mission Section -->
     <section class="content-container">
@@ -53,6 +39,21 @@
             </p>
         </div>
     </section>
+
+    <section class="content-container">
+            <img src="images/About-.PNG" class="section-image" alt="About Us Image">
+            <div class="text">
+                <h2>What Can SportsWear Provide?</h2>
+                <p>At Sportswear, we are dedicated to providing top-tier athletic gear that combines comfort, durability,
+                    and
+                    performance.
+                    Our goal is to empower athletes of all levels to reach their full potential while looking and feeling
+                    their
+                    best.
+                    We believe that the right gear can further inspire yourself whether you are training hard or pushing your
+                    limits on game day.</p>
+            </div>
+        </section>
 
     <!-- Sportswear Origin -->
     <section class="content-container">

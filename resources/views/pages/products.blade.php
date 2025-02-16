@@ -12,7 +12,7 @@
     </section>
 
     <div id=catogery-divider><!--Used to divide sections-->
-        <p>Products</p>
+        <p>Browse Our Products</p>
     </div>
 
     <!--

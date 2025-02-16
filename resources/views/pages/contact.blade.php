@@ -13,7 +13,7 @@
         <div class="contact-details">
             <h2>Contact Info</h2>
             <ul>
-                <li><strong>📍 Location:</strong> Manchester, England</li>
+                <li><strong>📍 Location:</strong> Birmingham, England</li>
                 <li><strong>📧 Email:</strong> <a href="mailto:support@thesportswear.website">support@thesportswear.website</a></li>
                 <li><strong>📞 Phone:</strong> 0121 898 919</li>
             </ul>
