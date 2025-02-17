@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class LoginController extends Controller
 {
@@ -19,23 +20,22 @@ class LoginController extends Controller
             'password' => 'required|string',
             'redirect' => 'string|nullable',
         ]);
-        // get the redirect from the request
-        if(isset($credentials['redirect'])) {
-            $redirect = "/" . $credentials['redirect'];
-        } else {
-            $redirect = '/home';
-        }
-        // remove redirect from credentials before auth check
+
+        $redirect = isset($credentials['redirect']) ? "/" . $credentials['redirect'] : '/home';
+        
         unset($credentials['redirect']);
-        // Attempt to log the user in
+        
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            // redirect to specified page
+            
+            Log::info('User Logged In:', ['id' => Auth::id(), 'email' => Auth::user() ? Auth::user()->email : 'N/A']);
+            
+            session(['user_id' => Auth::id()]);
+            session()->save();
+            
             return redirect()->intended($redirect)->with('success', 'Login successful!');
-
         }
 
-        // Return back with an error if authentication fails
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->withInput();
@@ -47,20 +47,24 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
-
+        
+        session()->forget('user_id');
+        
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
         return redirect('/login')->with('success', 'Logged out successfully!');
     }
 
-    // controller to get the login page
-    public function show($redirect = 'account') {
-        // just redirect if already logged in
+    /**
+     * Controller to get the login page.
+     */
+    public function show($redirect = 'account') 
+    {
         if (Auth::check()) {
             return redirect($redirect);
         }
-        // return the login page with redirect in session
+        
         return view('pages.login', ['redirect' => $redirect]);
     }
 }
