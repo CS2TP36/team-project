@@ -41,7 +41,31 @@
                     <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
 
                     <button type="submit">Add to Basket</button>
-                    <button type="button">Add to Wishlist</button>
+                    
+                </form>
+
+                <!-- Add to Wishlist -->
+                <form action="{{ route('wishlist.add') }}" method="POST">
+                    @csrf
+                    <!-- Hidden fields for product ID and size -->
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <input type="hidden" name="size" id="size" value="">
+
+                    <div class="line-break"></div>
+
+                    <!-- Quantity selection -->
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                    ({{ $product->stock }} in stock)
+
+                    <p>Choose size:</p>
+                    <!-- Size selection buttons -->
+                    <button class="size-selection" type="button" onclick="selectSize('S')">S</button>
+                    <button class="size-selection" type="button" onclick="selectSize('M')">M</button>
+                    <button class="size-selection" type="button" onclick="selectSize('L')">L</button>
+
+                    <!-- Submit button -->
+                    <button type="submit">Add to Wishlist</button>
                 </form>
             </div>
 
