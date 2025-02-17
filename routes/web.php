@@ -47,6 +47,19 @@ Route::get('/account', [AccountController::class, 'show'])->name('account.show')
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
 Route::get('/product/{id?}', [ShowProduct::class, 'show'])->name('product.show');
 
+// Show the previous orders page
+Route::get('/previous-orders', [PreviousOrders::class, 'show'])->name('previous-orders.show');
+
+
+
+// Show the checkout page
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+
+
+Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('products.search');
+
+// Shows the Basket index
 Route::get('/basket', [BasketController::class, 'index'])->name('basket.index');
 Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add');
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
@@ -91,7 +104,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('/admin/products/{product}', [ProductManagementController::class, 'destroy'])->name('admin.products.destroy');
 });
 
-
-Route::get('/', function () {
-    return view('pages.home'); 
-})->name('home');
+// Show the review page
+Route::get('/review', function () {
+    return view('pages.review');
+});
