@@ -14,7 +14,7 @@ return new class extends Migration {
         Schema::create('product_images', function (Blueprint $table) {
             $table->id();
             // The product which the image relates to (indexed so it can be easily found)
-            $table->foreignIdFor(Product::class)->index()->constrained();
+            $table->foreignIdFor(Product::class)->index()->constrained()->onDelete('cascade');
             // The name of the related image file inside the images folder
             $table->string('image_name');
             $table->timestamps();
