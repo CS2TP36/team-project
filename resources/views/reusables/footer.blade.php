@@ -14,7 +14,7 @@
             <li class="footer-list"><a href="/aboutus">About Us</a></li>
             <li class="footer-list"><a href="/terms-conditions">Terms and Conditions</a></li><!--links to the terms and conditions-->
             <li class="footer-list"><a href = "/student">Student Discount</a></li><!--links to about us-->
-            <li class="footer-list"><a>Privacy Policy</a></li><!--links to about us-->
+            <li class="footer-list"><a href="{{ route('privacy') }}">Privacy Policy</a></li><!--links to about us-->
         </ul>
     </div>
 
@@ -34,5 +34,5 @@
             <li class="footer-list"> <a href="https://x.com/"> <img src="{{asset('images/Insta.png')}}" id = social-pic></li>
         </ul>
     </div>
-    
+
 </footer>
