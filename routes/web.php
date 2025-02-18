@@ -109,3 +109,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::get('/review/{productId}', [ReviewController::class, 'show'])->name('review.show');
 
 Route::post('/review/add', [ReviewController::class, 'add'])->name('review.add');
+
+Route::get('/privacy-policy', function () {
+    return view('pages.privacy');
+})->name('privacy');
