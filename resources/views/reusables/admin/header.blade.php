@@ -1,4 +1,3 @@
-@use(Illuminate\Support\Facades\Auth)
 <header class="container">
     <hgroup>
         <h1>Sportswear</h1>
@@ -7,18 +6,21 @@
     <nav>
         <ul>
             <li><a href="{{ route('admin.account') }}">Account</a></li>
-            <li><a href="#">Manage Products</a></li>
             <li><a href="{{ route('admin.reports') }}">Stock Reports</a></li>
             @if(Auth::check())
-            <li><a href="#">Manage Users</a></li>
+                <li><a href="{{ route('admin.products.index') }}" class="btn btn-primary">Manage Products</a></li>
+                <li><a href="#">Manage Users</a></li>
             @endif
             <li><a href="#">User messages</a></li>
         </ul>
         <!-- dont need to question why this button became a form, it was necessary -->
-        <form action="@if(!Auth::check())/login/admin" @else{{ route("logout") }}" method="GET"@endif>
+        <form action="{{ Auth::check() ? route('logout') : '/login/admin' }}" method="GET">
             <ul>
-                <li><button onclick="this.form.submit()" class="secondary">@if(Auth::check()) Sign out @else Login @endif</button></li>
+                <li><button onclick="this.form.submit()" class="secondary">
+                    {{ Auth::check() ? 'Sign out' : 'Login' }}
+                </button></li>
             </ul>
         </form>
+
     </nav>
 </header>
