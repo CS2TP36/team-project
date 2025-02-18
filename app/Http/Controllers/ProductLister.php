@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ProductLister extends Controller
 {
     // function which gets filtered items from the database, then sorts them and finally returns them in an array.
-    public static function get(int $mens=2, string $sortBy="id", bool $ascending=true, int $catFilter=0, int $priceFilter=0) {
+    public static function get(int $mens=2, string $sortBy="name", bool $ascending=true, int $catFilter=0, int $priceFilter=0) {
             // get all the products from the db from selected gender
             if ($mens!=2) {
                 $products = Product::all()->where('mens', $mens);
@@ -46,7 +46,7 @@ class ProductLister extends Controller
             return $products;
     }
     // function for getting the args from the url and passing them back to the page
-    public function show(int $mens=2, string $sortBy="id", bool $ascending=true, int $catFilter=0, int $priceFilter=0) {
+    public function show(int $mens=2, string $sortBy="name", bool $ascending=true, int $catFilter=0, int $priceFilter=0) {
         $products = self::get($mens, $sortBy, $ascending, $catFilter, $priceFilter);
         // checks if there are any products before returning
         if (!$products) {

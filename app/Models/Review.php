@@ -13,7 +13,8 @@ class Review extends Model
         'user_id',
         'product_id',
         'rating',
-        'review'
+        'review',
+        'title'
     ];
 
     // returns user for given review

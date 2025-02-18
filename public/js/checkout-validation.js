@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let valuesToSend = {};
-
-    // Access billing and payment fields
-    const billingFields = {
+    const billingInfo = {
         region: document.getElementById('region'),
         fullName: document.getElementById('full-name'),
         address: document.getElementById('address'),
@@ -10,145 +7,116 @@ document.addEventListener('DOMContentLoaded', () => {
         phone: document.getElementById('phone'),
     };
 
-    const paymentFields = {
+    const paymentInfo = {
         nameOnCard: document.getElementById('card-name'),
         cardNumber: document.getElementById('card-number'),
         expiryDate: document.getElementById('expiry-date'),
         cvv: document.getElementById('cvv'),
     };
 
-    // Regular expression for MM/YY format validation (expiry date)
-    const expiryDatePattern = /^(0[1-9]|1[0-2])\/[0-9]{2}$/;
+    // Map field keys to user-friendly names
+    const fieldNames = {
+        region: 'Region',
+        fullName: 'Full Name',
+        address: 'Street Address',
+        postcode: 'Postcode',
+        phone: 'Phone Number',
+        nameOnCard: 'Name on Card',
+        cardNumber: 'Card Number',
+        expiryDate: 'Expiry Date',
+        cvv: 'CVV',
+    };
 
-    // Function to validate individual fields
-    const validateFields = (fields) => {
+    // Error handling functions
+    const displayError = (inputElement, message) => {
+        let errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (!errorSpan) {
+            errorSpan = document.createElement('span');
+            errorSpan.className = 'error-message';
+            inputElement.parentElement.appendChild(errorSpan);
+        }
+        errorSpan.textContent = message;
+        inputElement.classList.add('error');
+    };
+
+    const clearError = (inputElement) => {
+        const errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (errorSpan) errorSpan.remove();
+        inputElement.classList.remove('error');
+    };
+
+    // Validation functions
+    const validateFields = (fields, fieldNames) => {
         let isValid = true;
+
         for (let key in fields) {
             const field = fields[key];
+            const fieldName = fieldNames[key]; // Get the user-friendly field name
             if (!field.value.trim()) {
-                field.classList.add('error');
+                displayError(field, `${fieldName} is required.`);
                 isValid = false;
             } else {
-                field.classList.remove('error');
+                clearError(field);
             }
 
-            // Additional validation for expiry date field (MM/YY format)
-            if (key === 'expiryDate' && !expiryDatePattern.test(field.value.trim())) {
-                field.classList.add('error');
-                isValid = false;
+            // Additional validation for expiry date
+            if (key === 'expiryDate') {
+                const expiryDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+                if (!expiryDatePattern.test(field.value.trim())) {
+                    displayError(field, `${fieldName} must be in MM/YY format.`);
+                    isValid = false;
+                }
             }
         }
+
         return isValid;
     };
 
-    // Function to handle section change (Next/Back)
+    // Section navigation
     window.nextSection = (sectionId) => {
         const currentSection = document.querySelector('.checkout > section:not([style*="display: none"])');
         let isValid = false;
 
-        // Validate the current section before moving to the next one
-        if (currentSection === document.getElementById('billing-info-section')) {
-            isValid = validateFields(billingFields);
-        } else if (currentSection === document.getElementById('payment-method-section')) {
-            isValid = validateFields(paymentFields);
+        if (currentSection.id === 'billing-info-section') {
+            isValid = validateFields(billingInfo, fieldNames);
+        } else if (currentSection.id === 'payment-method-section') {
+            isValid = validateFields(paymentInfo, fieldNames);
         }
 
-        // Only move to the next section if valid
         if (isValid) {
             currentSection.style.display = 'none';
             document.getElementById(sectionId).style.display = 'block';
         }
     };
 
-    // Function to handle "Back" button action
     window.backToSection = (sectionId) => {
-        document.querySelectorAll('.checkout > section').forEach(section => section.style.display = 'none');
+        document.querySelectorAll('.checkout > section').forEach((section) => {
+            section.style.display = 'none';
+        });
         document.getElementById(sectionId).style.display = 'block';
     };
 
-    // Handling the Place Order button click
+    // Handling the Place Order button
     document.getElementById('place-order-btn').addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent form submission for validation
+        event.preventDefault();
 
-        // Copy billing fields values and map to corresponding hidden input IDs
-        Object.keys(billingFields).forEach((key) => {
-            const value = billingFields[key].value.trim();
-            valuesToSend[key] = value;
-            
-            // Map the billing key to its corresponding hidden input ID
-            let hiddenInputId;
-            switch (key) {
-                case 'region':
-                    hiddenInputId = 'region-input';
-                    break;
-                case 'fullName':
-                    hiddenInputId = 'name-input';
-                    break;
-                case 'address':
-                    hiddenInputId = 'address-input';
-                    break;
-                case 'postcode':
-                    hiddenInputId = 'postcode-input';
-                    break;
-                case 'phone':
-                    hiddenInputId = 'phone-input';
-                    break;
-                default:
-                    hiddenInputId = `${key}-input`; // Default pattern if needed
-                    break;
-            }
+        const allValid =
+            validateFields(billingInfo, fieldNames) && validateFields(paymentInfo, fieldNames);
 
-            // Update the corresponding hidden input value
-            const hiddenInput = document.getElementById(hiddenInputId);
-            if (hiddenInput) {
-                hiddenInput.value = value;
-            } else {
-                console.error(`Hidden input not found for key: ${hiddenInputId}`);
-            }
-        });
-
-        // Copy payment fields values and map to corresponding hidden input IDs
-        Object.keys(paymentFields).forEach((key) => {
-            const value = paymentFields[key].value.trim();
-            valuesToSend[key] = value;
-
-            // Map the payment key to its corresponding hidden input ID
-            let hiddenInputId;
-            switch (key) {
-                case 'nameOnCard':
-                    hiddenInputId = 'card-name-input';
-                    break;
-                case 'cardNumber':
-                    hiddenInputId = 'card-number-input';
-                    break;
-                case 'expiryDate':
-                    hiddenInputId = 'expiry-date-input';
-                    break;
-                case 'cvv':
-                    hiddenInputId = 'cvv-input';
-                    break;
-                default:
-                    hiddenInputId = `${key}-input`; // Default pattern if needed
-                    break;
-            }
-
-            // Update the corresponding hidden input value
-            const hiddenInput = document.getElementById(hiddenInputId);
-            if (hiddenInput) {
-                hiddenInput.value = value;
-            } else {
-                console.error(`Hidden input not found for key: ${hiddenInputId}`);
-            }
-        });
-
-        // Validate all fields before submitting
-        const allValid = validateFields(billingFields) && validateFields(paymentFields);
         if (allValid) {
-            // If valid, submit the order form
+            // Map values to hidden inputs
+            const valuesToSend = { ...billingInfo, ...paymentInfo };
+
+            for (let [key, field] of Object.entries(valuesToSend)) {
+                const hiddenInput = document.getElementById(`${key}-input`);
+                if (hiddenInput) {
+                    hiddenInput.value = field.value.trim();
+                }
+            }
+
             document.getElementById('order-form').submit();
         } else {
-            // Optionally, show a message to the user that some fields are missing
-            alert('Please complete all required fields before submitting.');
+            alert('Please correct the errors before submitting.');
         }
     });
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Emailers\ContactEmailer;
 use App\Models\ContactItem;
 use Illuminate\Http\Request;
 
@@ -29,6 +30,9 @@ class ContactController extends Controller
                 'message' => $contactForm['message']
             ]);
             $contactItem->save();
+            // sends a confirmation email
+            $contactEmailer = new ContactEmailer();
+            $contactEmailer->sendConfirmation($contactItem);
         }
         return redirect('/home')->with('message', 'Thanks for contacting us!');
     }

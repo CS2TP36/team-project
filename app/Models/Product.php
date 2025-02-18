@@ -7,6 +7,12 @@ use App\Models\Category;
 
 class Product extends Model
 {
+    protected $casts = [
+        'category_id' => 'integer',
+        'price' => 'decimal:2',
+        'mens' => 'boolean'
+    ];
+    
     protected $table = 'products';
     protected $primaryKey = 'id';
     public $timestamps = true;

@@ -1,25 +1,38 @@
 @use(Illuminate\Support\Facades\Auth)
-<footer class="footer-check">
-        <ul>
-            <li class="footer-list"><a href="/contact">Contact: 0121 010 0111</a></li>
-            <li class="footer-list">Address: Aston University</li>
-            <li class="footer-list">Open Hours: 6:00 - 23:00</li>
-            <li class="footer-list">Follow Our Socials</li>
+<footer class="footer-container"><!--creates the footer class container that holds all the items inside as well acts as the container-->
+        <ul><!--list for contacting us-->
+            <li class="footer-title">Customer Service</li><!--links to the contact page-->
+            <li class="footer-list"><a href="/contact">Contact Us</a></li><!--links to the contact page-->
+            <li class="footer-list"><a href="/delivery-and-returns">Return Policy</a></li><!--links to about us-->
+            <li class="footer-list"><a href="/aboutus">Shipping Information</a></li>
+            <li class="footer-list"><a href="/aboutus">FAQ</a></li>
         </ul>
 
     <div>
-        <ul>
+        <ul><!--list for about us/terms-->
+            <li class="footer-title">Company Info</li>
             <li class="footer-list"><a href="/aboutus">About Us</a></li>
-            <li class="footer-list">Privacy</li>
-            <li class="footer-list"><a href="/terms-conditions">Terms and condition</a></li>
+            <li class="footer-list"><a href="/terms-conditions">Terms and Conditions</a></li><!--links to the terms and conditions-->
+            <li class="footer-list"><a href = "/student">Student Discount</a></li><!--links to about us-->
+            <li class="footer-list"><a>Privacy Policy</a></li><!--links to about us-->
+        </ul>
+    </div>
+
+    <div>
+        <ul><!--list for signing in and toggle theme-->
+            <li class="footer-title">Account Info</li>
+            <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign In @else <a href="/logout"> Sign Out @endif</a></li><!--sign in -->
+            <li class="footer-list"><a href="/wishlist">Wishlist</a></li>
+            <li class="footer-list"><button id="theme-toggle">Toggle Theme</button></li><!--dark mode/light mode toggle theme-->
         </ul>
     </div>
     <div>
-        <ul>
-            <li class="footer-list">Page Directs</li>
-            <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign in @else <a href="/logout"> Sign out @endif</a></li>
-            <li class="footer-list">Orders and Payments</li>
-            <li class="footer-list"><button id="theme-toggle">Toggle Theme</button></li>
+        <ul><!--list for signing in and toggle theme-->
+            <li class="footer-title">Follow Us</li>
+            <li class="footer-list"> <a href="https://www.facebook.com/"> <img src="{{asset('images/Facebook.png')}}" id = social-pic></li>
+            <li class="footer-list"> <a href="https://www.instagram.com/"> <img src="{{asset('images/x.png')}}" id = social-pic></li>
+            <li class="footer-list"> <a href="https://x.com/"> <img src="{{asset('images/Insta.png')}}" id = social-pic></li>
         </ul>
     </div>
+    
 </footer>
