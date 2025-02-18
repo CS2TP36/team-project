@@ -2878,6 +2878,124 @@ label {
     }
 }
 
+/* General Layout */
+.returns-container{
+    font-family: Arial, sans-serif;
+    color: #090909;
+    background-color: #ff0707;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tabs Navigation */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-btn.active-tab {
+    background-color: #000;
+}
+
+.tab-btn:hover {
+    background-color: #555;
+}
+
+/* Content Sections */
+.content-section {
+    background-color: #f9f9f9;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+/* Description Text */
+.return-description, .delivery-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* List Items */
+.list-group-item {
+    font-size: 20px;
+    padding: 40px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button Styles */
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Icon Styles */
+.section-icon {
+    width: 100px;
+    height: 42px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
 .dark-theme {
     background-color: #2D2D2D;
     /*CSS for Account Page*/

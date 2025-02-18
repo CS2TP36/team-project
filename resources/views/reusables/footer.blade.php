@@ -3,7 +3,7 @@
         <ul><!--list for contacting us-->
             <li class="footer-title">Customer Service</li><!--links to the contact page-->
             <li class="footer-list"><a href="/contact">Contact Us</a></li><!--links to the contact page-->
-            <li class="footer-list"><a href="/aboutus">Return Policy</a></li><!--links to about us-->
+            <li class="footer-list"><a href="/delivery-and-returns">Return Policy</a></li><!--links to about us-->
             <li class="footer-list"><a href="/aboutus">Shipping Information</a></li>
             <li class="footer-list"><a href="/aboutus">FAQ</a></li>
         </ul>
