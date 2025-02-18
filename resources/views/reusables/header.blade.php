@@ -24,4 +24,13 @@
             </ul>
         </div>
     </nav>
+    <!-- kind of want a messages/error section here -->
+    <div class="message-area">
+        @if(session('message'))
+            <div class="message">{{ session('message') }}</div>
+        @endif
+        @if(session('error'))
+            <div class="error">{{ session('error') }}</div>
+        @endif
+    </div>
 </header>
