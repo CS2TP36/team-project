@@ -13,44 +13,65 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BasketController;
-use App\Http\Controllers\Admin\ProductManagementController;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\HomeController;
-
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
+
+// Show the registration form
 Route::get('/register', [RegisterController::class, 'create'])->name('register.create');
+
+// Handle registration form submission
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
+// Redirect any route access to the home page at /home
 Route::redirect('/', '/home');
 
+// Handles the account page
 Route::get('/account', [AccountController::class, 'show'])->middleware('auth');
 
+// Show the home page
 Route::get('/home', function () {
     return view('pages.home');
 });
 
+// Page can be accessed at site/test
+/*
+Route::get('/test', function () {
+    return view('pages.test');
+});
+*/
+
+// Show the login page (optionally redirect to provided page after successful login)
 Route::get('/login/{redirect?}', [LoginController::class, 'show'])->name('login.show');
+
+// Show the about us page
 Route::get('/aboutus', function () {
     return view('pages.aboutus');
 });
+
+// Show the contact page
 Route::get('/contact', function () {
     return view('pages.contact');
 });
+
 Route::get('/forgot-pass', function () {
     return view('pages.forgot-pass');
 });
+// Show the Account page
 Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
+// Show the products page
+// for example http://site/products/0/name/1 -> returns page with womens products sorted by name ascending
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
+
+// Show the product page, random product if no id given
 Route::get('/product/{id?}', [ShowProduct::class, 'show'])->name('product.show');
 
-// Show the previous orders page
-Route::get('/previous-orders', [PreviousOrders::class, 'show'])->name('previous-orders.show');
-
-
+// Show the basket page
+Route::get('/basket', function () {
+    return view('pages.basket');
+});
 
 // Show the checkout page
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
@@ -61,14 +82,22 @@ Route::get('/search/{searchTerm}', [ProductSearcher::class, 'show'])->name('prod
 
 // Shows the Basket index
 Route::get('/basket', [BasketController::class, 'index'])->name('basket.index');
+
+// Add items to the Basket
 Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add');
+
+//Updates the quantity of an item in the Basket
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
+
+// Deletes a product from the Basket
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
 Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.checkout');
 
 Route::get('/change-pass', [PassChangeController::class, 'show'])->name('change-pass.show');
+
 Route::post('/change-pass', [PassChangeController::class, 'change'])->name('change-pass.change');
 
 Route::get('/terms-conditions', function () {
@@ -77,6 +106,9 @@ Route::get('/terms-conditions', function () {
 
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
 
+// admin routes
+
+// by default go to admin account page
 Route::get('/admin', function () {
     return redirect(route('admin.account'));
 })->name('admin');
@@ -91,20 +123,8 @@ Route::get('/admin/reports', function () {
 
 Route::post('/admin/slevels', [ReportController::class, 'stockLevelForm'])->name('admin.reports.stockLevelForm');
 
+
+// delivery and returns
 Route::get('/delivery-and-returns', function () {
     return view('pages.delivery-and-returns');
 })->name('delivery.returns');
-
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/products', [ProductManagementController::class, 'index'])->name('admin.products.index');
-    Route::get('/admin/products/create', [ProductManagementController::class, 'create'])->name('admin.products.create');
-    Route::post('/admin/products', [ProductManagementController::class, 'store'])->name('admin.products.store');
-    Route::get('/admin/products/{product}/edit', [ProductManagementController::class, 'edit'])->name('admin.products.edit');
-    Route::put('/admin/products/{product}', [ProductManagementController::class, 'update'])->name('admin.products.update');
-    Route::delete('/admin/products/{product}', [ProductManagementController::class, 'destroy'])->name('admin.products.destroy');
-});
-
-// Show the review page
-Route::get('/review', function () {
-    return view('pages.review');
-});

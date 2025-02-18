@@ -7,14 +7,11 @@
         <link rel="stylesheet" href="{{ asset("pico/css/pico.min.css") }}">
         <title>@yield("title")</title>
     </head>
-    <body class="d-flex flex-column min-vh-100">
-    @include("reusables.admin.header")
-        <main class="container flex-grow-1">
-        @yield("content")
-    </main>
-
-    <footer class="mt-auto">
+    <body>
+        @include("reusables.admin.header")
+        <main class="container">
+            @yield("content")
+        </main>
         @include("reusables.admin.footer")
-    </footer>
     </body>
 </html>

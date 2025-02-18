@@ -18,8 +18,7 @@ return new class extends Migration {
             $table->string('colour');
             $table->text('description');
             $table->boolean('mens');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreignIDFor(Category::class)->constrained("categories");
             $table->integer('stock');
             $table->timestamps();
         });

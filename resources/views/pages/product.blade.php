@@ -4,9 +4,6 @@
 @endsection
 @php
     use App\Models\Product;
-    // add to the popularity value of the product on viewing
-    $product['popularity'] = $product['popularity'] + 1;
-    $product->save();
 @endphp
 @section('content')
     <div class="product">
@@ -23,7 +20,13 @@
                 <!-- Price of the product -->
                 <h2>£{{number_format($product['price'], 2)}}</h2>
             </div>
-
+            <!--<div class = "size-selection">
+                <p>Choose size</p>
+                ( Three buttons, S, M, L )
+                <button type="button">S</button>
+                <button type="button">M</button>
+                <button type="button">L</button>
+            </div> -->
             <div class="purchase-options">
                 <!-- Add to Basket -->
                 <form action="{{ route('basket.add') }}" method="POST">
@@ -35,45 +38,49 @@
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" name="quantity" value="1" min="1" max="10"> ({{$product['stock']}} in stock)
 
+
                     <p>Choose size:</p>
                     <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
                     <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
                     <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
 
+
+
                     <button type="submit">Add to Basket</button>
-                    <button type="button">Add to Wishlist</button>
                 </form>
+                <!-- Add to Wishlist
+                <button type="button">Add to Wishlist</button>
+                -->
             </div>
 
-            <script src="{{ asset('js/size-selection.js') }}"></script>
+            <script>
+                const buttons = document.querySelectorAll(".size-selection");
 
-            <!-- Nav bar containing Product Info and Review-->
-            <nav>
-                <ul>
-                    <!-- "Product Info" will be active (underlined) as soon as the page loads-->
-                    <li data-target="product-info" class="active">Product Info</li>
-                    <li data-target="review">Reviews</li>
-                </ul>
-            </nav>
+                buttons.forEach(button => {
+                    button.addEventListener("click", () => {
+                        buttons.forEach(btn => {
+                            btn.style.backgroundColor = "#4D4D4D";
+                        });
+                        button.style.backgroundColor = "#1D1D1D";
+                    });
+                });
 
-            <div id="detailed-info">
-                <section id="product-info" class="content-section active">
-                    <!-- Description of the product -->
-                    <p><strong>Description:</strong></p>
-                    <p id="show_description">{{$product['description']}}</p>
-                    <br>
-                    <p id="show_colour"><strong>Colour: </strong>{{$product['colour']}}</p>
-                    <br>
-                    <p id="show_id"><strong>Item ID: </strong>{{$product['id']}}</p>
-                </section>
+                function selectSize(size) {
+                    document.getElementById('size').value = size;
+                }
+            </script>
 
-                <section id="review" class="content-section">
-                        <p><strong>Reviews:</strong></p>
-                        <p>Customer reviews will be displayed here.</p>
-                </section>
+            <div class = "detailed-info">
+                <!-- Nav bar containing Product Info and Review-->
+                <nav></nav>
+                <!-- Description of the product -->
+                <p><strong>Description:</strong></p>
+                <p id="show_description">{{$product['description']}}</p>
+                <br>
+                <p id="show_colour"><strong>Colour: </strong>{{$product['colour']}}</p>
+                <br>
+                <p id="show_id"><strong>Item ID: </strong>{{$product['id']}}</p>
             </div>
-
-            <script src="{{ asset('js/underline.js') }}"></script>
         </div>
     </div>
 @endsection

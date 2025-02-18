@@ -28,11 +28,6 @@ class User extends Authenticatable
         'role'
     ];
 
-    public function isAdmin()
-    {
-        return $this->role === 'admin'; // Make sure your `role` column exists in the database.
-    }
-
     /**
      * The attributes that should be hidden for serialization.
      *

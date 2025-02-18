@@ -1,18 +1,18 @@
 @extends('layouts.page')
-@section('title','Products')
+@section('title','products')
 @use('App\Http\Controllers\ProductLister')
 @section('content')
     <section><!--creates a banner container to contain our banner-->
         <div id="banner-container"><!--creates ID for our banner-->
-            <img src="{{asset('images/product-banner.png')}}" id="banner"><!--links to our banner-->
+            <img src="{{asset('images/products-banner.png')}}" id="banner"><!--links to our banner-->
             <div id="product-text-banner"><!--id for banner-->
-                <p>Check Out Our Products</p>
+                <p>Our Products</p>
             </div>
         </div>
     </section>
 
     <div id=catogery-divider><!--Used to divide sections-->
-        <p>Browse Our Products</p>
+        <p>Products</p>
     </div>
 
     <!--

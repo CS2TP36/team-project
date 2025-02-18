@@ -43,12 +43,7 @@ class ProductSearcher extends Controller
                     return true;
                 }
             }
-            // also check for substrings
-            if (str_contains(strtolower($subject), strtolower($searchWord))) {
-                return true;
-            }
         }
-
         // return false if nothing is found
         return false;
 
@@ -57,7 +52,7 @@ class ProductSearcher extends Controller
 
     function show(String $searchTerm="") {
         // converts the # back to spaces
-        $searchTerm = str_replace("%20", " ", $searchTerm);
+        $searchTerm = str_replace("#", " ", $searchTerm);
         $products = self::search($searchTerm);
         if (!$products) {
             return view('pages.products', ['products' => $products, 'message' => "No products found"]);
