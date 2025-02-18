@@ -41,7 +41,7 @@
                     <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
 
                     <button type="submit">Add to Basket</button>
-                    
+
                 </form>
 
                 <!-- Add to Wishlist -->
@@ -49,7 +49,7 @@
                     @csrf
                     <!-- Hidden fields for product ID and size -->
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
-                    <input type="hidden" name="size" id="size" value="">
+                    <input type="hidden" name="size" id="wishsize" value="">
 
                     <div class="line-break"></div>
 
