@@ -49,4 +49,12 @@ class ReviewController extends Controller
         // return to product page with message
         return redirect()->route('product.show', ['id' => $request['product_id']])->with('message', 'Review added successfully');
     }
+    // returns a list of reviews for a product
+    static function getReviews($productId) {
+        // get all reviews for product
+        $reviews = Review::all()->where('product_id', $productId);
+        // TODO: could involve some sorting in the future
+        // return them
+        return $reviews;
+    }
 }

@@ -4,6 +4,7 @@
 @endsection
 @php
     use App\Models\Product;
+    use App\Http\Controllers\ReviewController;
     // add to the popularity value of the product on viewing
     $product['popularity'] = $product['popularity'] + 1;
     $product->save();
@@ -66,10 +67,19 @@
                     <br>
                     <p id="show_id"><strong>Item ID: </strong>{{$product['id']}}</p>
                 </section>
-
+                @php($reviews = ReviewController::getReviews($product->id))
                 <section id="review" class="content-section">
                         <p><strong>Reviews:</strong></p>
-                        <p>Customer reviews will be displayed here.</p>
+                        <!-- TODO: Probably want to rename classes and do some css to make look nice -->
+                        <div class="something">
+                            @foreach($reviews as $review)
+                                <div class="review">
+                                    <h2>{{$review['title']}}</h2>
+                                    <p>{{$review['review']}}</p>
+                                    <p>{{$review['rating']}}/5</p>
+                                </div>
+                            @endforeach
+                        </div>
                 </section>
             </div>
 
