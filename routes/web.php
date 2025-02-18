@@ -107,3 +107,5 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 // Show the review page
 Route::get('/review/{productId}', [ReviewController::class, 'show'])->name('review.show');
+
+Route::post('/review/add', [ReviewController::class, 'add'])->name('review.add');

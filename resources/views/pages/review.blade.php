@@ -4,7 +4,8 @@
     <div class="review">
         <h1>Create Review</h1>
         <!-- Need a form submission -->
-        <form method="POST" action="/review">
+        <form method="POST" action="{{ route('review.add') }}">
+            @csrf
             <!-- Image + Name of Product -->
             <img src="{{asset($product->getMainImage())}}" alt="Product Image">
             <p>{{$product->name}}</p>
@@ -22,7 +23,7 @@
             <div class="line-break"><br></div>
             <h2>Add a headline</h2>
             <!-- Input for headline -->
-            <input type="text" placeholder="What's most important to know?"></input>
+            <input type="text" placeholder="What's most important to know?" name="headline"></input>
             <div class="line-break"><br></div>
             <h2>Add a written review</h2>
             <!-- Input for review -->
@@ -31,8 +32,10 @@
                       style="resize: none"></textarea>
             <div class="line-break"><br></div>
             <p>We will notify you via email as soon as your review is processed.</p>
+            <input type="hidden" name="product_id" value="{{$product->id}}">
+            <input type="hidden" id="rating-holder" name="rating" value="0">
             <!-- Submit button -->
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 @endsection
