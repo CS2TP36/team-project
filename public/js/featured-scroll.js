@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     nextBtn.addEventListener("click", () => {
-        scrollContainer.scrollLeft += 1700;
+        scrollContainer.scrollLeft += 900;
     });
 
     backBtn.addEventListener("click", () => {
-        scrollContainer.scrollLeft -= 1700; 
+        scrollContainer.scrollLeft -= 900;
     });
 });

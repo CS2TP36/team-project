@@ -36,8 +36,8 @@
     </div>
 
     <div id="parallax-container">
-        <div id="parallax" style="background-image: url('{{ asset('images/Parallax.png') }}');"></div>
-        <div id = parallax-info>
+    <div id="parallax" style="background-image: url({{ asset("images/Parallax.png") }});"></div>
+    <div id = parallax-info>
             <h3>What Is SportsWear?</h3>
             <p> SportsWear is not just a clothing apparel. Its more than that, its a lifestyle, its about peformace, confidence, pushing past the limits to reach your dreams! We are a dedicated team, passionate about providing high-quality sportswear and gear. Our mission is to support athletes and fitness enthusiasts by offering products that combine style, performance and comfort.</p>
             <a href = /aboutus> Find out more! </a>
@@ -84,6 +84,17 @@
             </ul>
         </div>
 
+        <div id=catogery-divider>
+            <p>Check Out Some Of Our Reviews</p>
+        </div>
+
+        <div id = home-review-container>
+            <div id = home-review-wrapper> 
+                <img src="{{asset('images/Review1.png')}}" id = review-pic>
+                <img src="{{asset('images/Review2.png')}}" id = review-pic>
+                <img src="{{asset('images/Review3.png')}}" id = review-pic >
+            </div>
+        </div>
     
 
     <!-- <div id="gender-section">

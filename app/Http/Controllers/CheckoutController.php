@@ -103,6 +103,14 @@ class CheckoutController extends Controller
             }
 
             foreach ($basket as $basketItem) {
+                // to reduce the stock level of hte given item
+                $product = $basketItem->product;
+                $product['quantity'] = $product['quantity'] - $basketItem->quantity;
+                // add to popularity count (5 for each order)
+                $product['popularity'] = $product['popularity'] + (5 * $basketItem->quantity);
+                // save the product
+                $product->save();
+                // then delete the item from the basket
                 $basketItem->delete();
             }
 
