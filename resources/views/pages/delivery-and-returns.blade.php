@@ -57,20 +57,17 @@
     <div class="my-3">
      
     <ul class="list-group my-4">
-        <li class="list-group-item">
-            
+    <li class="list-group-item">
+        <strong>Standard Delivery</strong>: We aim to deliver within 4-7 working days. Cost: £4.49.
+    </li>
+    <li class="list-group-item">
+        <strong>Next Day Delivery</strong>: For quick service, items ordered by 7 PM will arrive the next working day. Cost: £6.49.
+    </li>
+    <li class="list-group-item">
+        <strong>Priority Express Delivery</strong>: Expect delivery within 2-3 business days. Cost: £5.49.
+    </li>
+</ul>
 
-            <ul class="list-group my-4">
-                <li class="list-group-item">
-                    <strong>Standard Delivery</strong>: We aim to deliver within 4-7 working days. Cost: &pound;4.49 (Free shipping for orders above £30).
-                </li>
-                <li class="list-group-item">
-                    <strong>Next Day Delivery</strong>: For quick service, items ordered by 7 PM will arrive the following working day. Cost: &pound;6.49.
-                </li>
-                <li class="list-group-item">
-                    <strong>Priority Express Delivery</strong>: Expect delivery within 2-3 business days. Cost: &pound;5.49.
-                </li>
-            </ul>
         </section>
 
         <!-- Returns Section -->
@@ -90,7 +87,7 @@
         <br><br>
         <strong>Return Policy:</strong> Any item may be returned within 28 days of order receipt.
         <br><br>
-        Returns via postal service cost &pound;2.50. Absent a printer? Oh, no! To make the procedure simpler, we provide printer-less choices.
+        Only the postal service is used to handle returns. The return details are with your box. For help, you can also get in touch with us directly.
         <br><br>
         <strong>Refunds:</strong> Following processing, refunds may take up to three to five business days to show up on your original payment method.
         <br><br>
