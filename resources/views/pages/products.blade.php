@@ -108,22 +108,27 @@
 
                     <ul class="category-selector"><!--The apply button filters-->
                         <li>
-                            <button class="filter-btn" onclick="applyFilters()">Apply Filter</button> <!--The apply button filters then proceeds to use js function-->
+                            <button class="filter-btn" onclick="applyFilters()">Apply Filter</button>
+                            <!--The apply button filters then proceeds to use js function-->
                         </li>
                     </ul>
             </div>
     </form>
 
     <div id="products-list"><!--products list id-->
-        @if(isset($message)) <!--checks if a message has been set and if it has then it displays it-->
+        @if(isset($message))
+            <!--checks if a message has been set and if it has then it displays it-->
             <div id="message">
                 <p>{{$message}}</p><!--displays the message-->
             </div
         @endif
         @foreach($products as $product)
-            <div class="product-item"> <!--for each of the products in the products catogery it iterates through it and  present it in the webpage-->
-                <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link"><!--gets the product id and the link to the product details page-->
-                    <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}" class="product-image"></img><!--get the image for each of the products-->
+            <div class="product-item">
+                <!--for each of the products in the products catogery it iterates through it and  present it in the webpage-->
+                <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link">
+                    <!--gets the product id and the link to the product details page-->
+                    <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}"
+                         class="product-image"></img><!--get the image for each of the products-->
                     <div class="product-details"><!--creates the  product details class -->
                         <h3>{{ $product['name'] }}</h3><!--Tprints the products name-->
                         <p>£{{ number_format($product['price'],2) }}</p><!--prints the price-->
@@ -135,7 +140,88 @@
     </div>
     </form>
     <script>
-        document.getElementById('productFilterForm').addEventListener('submit', function(event) {
+        // trying to make options persistent in the form to show which filters are applied
+        document.addEventListener('DOMContentLoaded', function () {
+            // get the path from the current url
+            let path = (new URL(window.location)).pathname;
+            // debug
+            console.log(path);
+            // split the path by /
+            path = path.split("/");
+            // remove first 2 elements
+            path.shift();
+            path.shift();
+            //debug
+            path.forEach(function (item) {
+                console.log(item);
+            })
+            console.log(path);
+            //get length
+            let pathLen = path.length;
+            // fill in filters for as long as list goes
+            if (pathLen > 0) {
+                if (path[0] === "1"){
+                    document.getElementById('mens').checked = true;
+                } else if (path[0] === "0") {
+                    document.getElementById('womens').checked = true;
+                }
+                // sort by
+                if (pathLen > 2) {
+                    if (path[1] === "price") {
+                        if (path[2] === "1") {
+                            document.getElementById('low-to-high').checked = true;
+                        } else {
+                            document.getElementById('high-to-low').checked = true;
+                        }
+                    } else if (path[1] === "name") {
+                        if (path[2] === "1") {
+                            document.getElementById('alphabetical-a-to-z').checked = true;
+                        } else {
+                            document.getElementById('alphabetical-z-to-a').checked = true;
+                        }
+                    }
+                    // categories
+                    if (pathLen > 3) {
+                        switch (path[3]) {
+                            case "4":
+                                document.getElementById('coats').checked = true;
+                                break;
+                            case "3":
+                                document.getElementById('hoodies').checked = true;
+                                break;
+                            case "2":
+                                document.getElementById('trousers').checked = true;
+                                break;
+                            case "1":
+                                document.getElementById('shoes').checked = true;
+                                break;
+                            case "5":
+                                document.getElementById('shirts').checked = true;
+                        }
+                        // price filter
+                        if (pathLen > 4) {
+                            switch (path[4]){
+                                case "1":
+                                    document.getElementById('price-0-25').checked = true;
+                                    break;
+                                case "2":
+                                    document.getElementById('price-25-35').checked = true;
+                                    break;
+                                case "3":
+                                    document.getElementById('price-35-45').checked = true;
+                                    break;
+                                case "4":
+                                    document.getElementById('price-45+').checked = true;
+                            }
+                        }
+                    }
+                }
+            }
+
+        });
+
+        // function for submission
+        document.getElementById('productFilterForm').addEventListener('submit', function (event) {
             // stops it from doing something that breaks everything
             event.preventDefault();
             // get the elements for price sorting
