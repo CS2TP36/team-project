@@ -212,6 +212,7 @@
                                     break;
                                 case "4":
                                     document.getElementById('price-45+').checked = true;
+                                    break;
                             }
                         }
                     }
