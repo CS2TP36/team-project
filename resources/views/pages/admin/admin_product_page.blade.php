@@ -10,6 +10,19 @@
         ➕ Add New Product
     </a>
 </div>
+<div class="container mb-4">
+    <form method="GET" action="{{ route('admin.products.index') }}" class="d-flex align-items-center gap-3">
+        <label for="category" class="form-label mb-0">Filter by Category:</label>
+        <select id="category" name="category" class="form-select w-auto" onchange="this.form.submit()">
+            <option value="all" {{ request('category') == 'all' ? 'selected' : '' }}>All Categories</option>
+            @foreach($categories as $category)
+                <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
+                    {{ $category->name }}
+                </option>
+            @endforeach
+        </select>
+    </form>
+</div>
 </div>
         <table class="table table-striped table-hover mt-3">
     <thead class="table-dark">
