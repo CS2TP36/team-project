@@ -12,17 +12,16 @@
                     <!-- <div class="line-break"><br></div> -->
                     <li data-target="contact-details"><a href="#">Contact Details</a></li>
                     <!-- <div class="line-break"><br></div> -->
-                    <!-- need to add a link to the orders page at /orders -->
-                    <li data-target="user-orders"><a href="#">My Orders</a></li>
+                    <li data-target="user-orders"><a href="/orders">My Orders</a></li>
                     <!-- <div class="line-break"><br></div> -->
                     <li><a href="/change-pass">Change Password</a></li>
                     <!-- <div class="line-break"><br></div> -->
                     <li><a href="/logout">Sign Out</a></li>
                     <!-- <div class="line-break"><br></div> -->
                 </ul>
-            </aside>      
+            </aside>
         </div>
-        
+
         <div class="main-content">
             <section id="dashboard" class="content-section active">
                     <!-- Description of the product -->

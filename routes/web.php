@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PreviousOrders;
 use App\Http\Controllers\ProductLister;
 use App\Http\Controllers\ProductSearcher;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ShowProduct;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
@@ -111,6 +112,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 // Show the review page
-Route::get('/review', function () {
-    return view('pages.review');
-});
+Route::get('/review/{productId}', [ReviewController::class, 'show'])->name('review.show');
+
+Route::post('/review/add', [ReviewController::class, 'add'])->name('review.add');
+
+Route::get('/privacy-policy', function () {
+    return view('pages.privacy');
+})->name('privacy');

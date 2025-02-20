@@ -1,6 +1,7 @@
 @extends('layouts.page')
 @section('title','Products')
 @use('App\Http\Controllers\ProductLister')
+@section('script', asset("js/products-filter.js"))
 @section('content')
     <section><!--creates a banner container to contain our banner-->
         <div id="banner-container"><!--creates ID for our banner-->
@@ -35,7 +36,7 @@
                             <label for="high-to-low">Price (High To Low)</label>
                         </li>
                         <li class="category-buttons"><!--creates the buttons to click on the filter for each one-->
-                            <input type="radio" id="alphabetical-a-to-z" name="sort-by" value="a-to-z">
+                            <input type="radio" id="alphabetical-a-to-z" name="sort-by" value="a-to-z" checked="checked">
                             <label for="alphabetical-a-to-z">Alphabet (A-Z)</label>
                         </li>
                         <li class="category-buttons"><!--creates the buttons to click on the filter for each one-->
@@ -108,22 +109,27 @@
 
                     <ul class="category-selector"><!--The apply button filters-->
                         <li>
-                            <button class="filter-btn" onclick="applyFilters()">Apply Filter</button> <!--The apply button filters then proceeds to use js function-->
+                            <button class="filter-btn" onclick="applyFilters()">Apply Filter</button>
+                            <!--The apply button filters then proceeds to use js function-->
                         </li>
                     </ul>
             </div>
     </form>
 
     <div id="products-list"><!--products list id-->
-        @if(isset($message)) <!--checks if a message has been set and if it has then it displays it-->
+        @if(isset($message))
+            <!--checks if a message has been set and if it has then it displays it-->
             <div id="message">
                 <p>{{$message}}</p><!--displays the message-->
             </div
         @endif
         @foreach($products as $product)
-            <div class="product-item"> <!--for each of the products in the products catogery it iterates through it and  present it in the webpage-->
-                <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link"><!--gets the product id and the link to the product details page-->
-                    <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}" class="product-image"></img><!--get the image for each of the products-->
+            <div class="product-item">
+                <!--for each of the products in the products catogery it iterates through it and  present it in the webpage-->
+                <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link">
+                    <!--gets the product id and the link to the product details page-->
+                    <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}"
+                         class="product-image"></img><!--get the image for each of the products-->
                     <div class="product-details"><!--creates the  product details class -->
                         <h3>{{ $product['name'] }}</h3><!--Tprints the products name-->
                         <p>£{{ number_format($product['price'],2) }}</p><!--prints the price-->
@@ -134,89 +140,5 @@
     </div>
     </div>
     </form>
-    <script>
-        document.getElementById('productFilterForm').addEventListener('submit', function(event) {
-            // stops it from doing something that breaks everything
-            event.preventDefault();
-            // get the elements for price sorting
-            let priceHigh = document.getElementById('high-to-low');
-            let priceLow = document.getElementById('low-to-high');
-            // sorts by name as default
-            let sortField = "name";
-
-            // deals with the  gender selector
-            const gender = document.querySelector('input[name="gender"]:checked');
-            let genderVal = 2;
-            if (gender) {
-                genderVal = (gender.id === "mens" ? 1 : (gender.id === "womens" ? "0" : 2));
-            }
-
-            // deals with sorting
-            const sortBy = document.querySelector('input[name="sort-by"]:checked');
-            let filtDirection = "1";
-            if (sortBy) {
-                // check if they are sorting by price or name
-                if (priceHigh.checked || priceLow.checked) {
-                    // changes to price if sorting by price
-                    sortField = "price";
-                    // sets direction for sorting
-                    filtDirection = (sortBy.id === 'high-to-low' ? "0" : 1);
-                } else {
-                    // sets direction for sorting
-                    filtDirection = (sortBy.id === 'alphabetical-a-to-z' ? 1 : "0");
-                }
-
-            }
-
-            // sets the correct category
-            let clothesCategoryValue = "0";
-            const clothesCategory = document.querySelector('input[name="clothes-category"]:checked');
-            if (clothesCategory) {
-                switch (clothesCategory.id) {
-                    case 'coats':
-                        clothesCategoryValue = 4;
-                        break;
-                    case 'hoodies':
-                        clothesCategoryValue = 3;
-                        break;
-                    case 'trousers':
-                        clothesCategoryValue = 2;
-                        break;
-                    case 'shirts':
-                        clothesCategoryValue = 5;
-                        break;
-                    case 'shoes':
-                        clothesCategoryValue = 1;
-                        break;
-                }
-            }
-
-            // deals with the price filter selectors
-            let priceFilter = "0";
-            const priceFilters = document.querySelector('input[name="price"]:checked');
-            if (priceFilters) {
-                switch (priceFilters.id) {
-                    case 'price-0-25':
-                        priceFilter = 1;
-                        break;
-                    case 'price-25-35':
-                        priceFilter = 2;
-                        break;
-                    case 'price-35-45':
-                        priceFilter = 3;
-                        break;
-                    case 'price-45+':
-                        priceFilter = 4;
-                        break;
-                }
-            }
-
-            // generate the url
-            const url = `/products/${genderVal || ''}/${sortField || ''}/${filtDirection || ''}/${clothesCategoryValue || ''}/${priceFilter}`;
-            // swap current page for filtered url
-            location.href = url;
-        });
-    </script>
-
 @endsection
 

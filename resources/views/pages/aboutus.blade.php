@@ -8,7 +8,7 @@
 
         <div id="banner-container">
             <div id="overlay"></div>
-            <img src="images/About-Pic.PNG" id="banner" alt="About Us Banner">
+            <img src="images/About-Pic.png" id="banner" alt="About Us Banner">
             <div id="text-banner">
                 </br></br></br>
                 <p id="product-text-banner">About SportsWear</p>
@@ -18,11 +18,11 @@
 
 
     <!-- About Us Section -->
-    
+
 
     <!-- Mission Section -->
     <section class="content-container">
-        <img src="images/Mission-.PNG" class="section-image" alt="Mission Image">
+        <img src="images/Mission-.png" class="section-image" alt="Mission Image">
         <div class="text">
             <h2>Our Mission</h2>
             <p>At Sportswear, our mission is to fill the gap in the market for athletic apparel that combines
@@ -41,7 +41,7 @@
     </section>
 
     <section class="content-container">
-            <img src="images/About-.PNG" class="section-image" alt="About Us Image">
+            <img src="images/About-.png" class="section-image" alt="About Us Image">
             <div class="text">
                 <h2>What Can SportsWear Provide?</h2>
                 <p>At Sportswear, we are dedicated to providing top-tier athletic gear that combines comfort, durability,
@@ -57,7 +57,7 @@
 
     <!-- Sportswear Origin -->
     <section class="content-container">
-        <img src="images/Origin.PNG" class="section-image" alt="Origin Image">
+        <img src="images/Origin.png" class="section-image" alt="Origin Image">
         <div class="text">
             <h2>Sportswear Origin</h2>
             <p>Sportswear was founded in 2024 by a group of passionate athletes, designers, and innovators who saw a gap
@@ -75,7 +75,7 @@
 
     <!-- What Sets Us Apart -->
     <section class="content-container">
-        <img src="images/Unique-.PNG" class="section-image" alt="Unique Image">
+        <img src="images/Unique-.png" class="section-image" alt="Unique Image">
         <div class="text">
             <h2>What Sets Us Apart</h2>
             <p>At Sportswear, we believe in more than just making high-quality gear we’re redefining what athletic
@@ -110,7 +110,7 @@
         <a href="/products">Shop Now</a>
         <h2>Follow Us</h2>
         <ul>
-            <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a></li>
             <li><a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a></li>
             <li><a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a></li>
             <li><a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a></li>

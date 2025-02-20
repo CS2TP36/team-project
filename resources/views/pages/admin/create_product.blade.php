@@ -54,11 +54,11 @@
                 <input type="number" id="stock" name="stock" min="0" required>
             </div>
 
-            <div>
-                <label for="mens">Men's Product:</label>
-                <select id="mens" name="mens" required>
-                    <option value="1">Yes</option>
-                    <option value="0">No</option>
+            <div class="mb-3">
+                <label for="mens" class="form-label">Product Category</label>
+                <select id="mens" name="mens" class="form-select">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
                 </select>
             </div>
 

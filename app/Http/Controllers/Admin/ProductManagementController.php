@@ -14,11 +14,19 @@ use App\Models\ProductImage;
 
 class ProductManagementController extends Controller
 {
-    public function index()
-    {
-        $products = Product::paginate(10);
-        return view('pages.admin.admin_product_page', compact('products'));
+    public function index(Request $request)
+{
+    $categories = Category::all();
+    $query = Product::query();
+
+    if ($request->has('category') && $request->category != 'all') {
+        $query->where('category_id', $request->category);
     }
+
+    $products = $query->paginate(10);
+
+    return view('pages.admin.admin_product_page', compact('products', 'categories'));
+}
 
     public function create()
 {
