@@ -24,10 +24,10 @@
                             <div class="order-items">
                                 @foreach($order->individualOrders as $individualOrder)
                                     <!-- Order 1 details-->
-                                    <img src="{{$individualOrder->product->getMainImage()}}">
+                                    <img src="{{$individualOrder->product()->getMainImage()}}">
                                     <div class="item-details">
-                                        <p class="item-name">{{$individualOrder->product->name}}</p>
-                                        <p class="item-price">{{$individualOrder->getSubtotal}}</p>
+                                        <p class="item-name">{{$individualOrder->product()->name}}</p>
+                                        <p class="item-price">£{{ number_format($individualOrder->getSubtotal(), 2) }}</p>
                                     </div>
                                 @endforeach
                             </div>

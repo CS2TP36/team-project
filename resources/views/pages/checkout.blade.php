@@ -1,6 +1,6 @@
 @extends('layouts.page')
-@use('Illuminate\Support\Facades\Auth')
-@use('App\Models\Basket')
+@use(Illuminate\Support\Facades\Auth)
+@use(App\Models\Basket)
 
 @section('title', 'Checkout')
 @section('script', 'js/checkout-validation.js')
