@@ -5,7 +5,12 @@
 @section('content')
     <div class="container">
         <h1>Product Management</h1>
-        <a href="{{ route('admin.products.create') }}" class="btn btn-primary">Add New Product</a>
+        <div class="d-flex justify-content-center my-3">
+    <a href="{{ route('admin.products.create') }}" class="btn btn-primary btn-lg px-4 py-2 fw-bold">
+        ➕ Add New Product
+    </a>
+</div>
+</div>
         <table class="table table-striped table-hover mt-3">
     <thead class="table-dark">
         <tr>
