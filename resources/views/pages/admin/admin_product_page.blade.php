@@ -28,14 +28,20 @@
                         </td>
                         <td>£{{ number_format($product->price, 2) }}</td>
                         <td>{{ $product->category->name }}</td>
-                        <td>
-                            <a href="{{ route('admin.products.edit', $product) }}" class="btn btn-warning">Edit</a>
-                            <form action="{{ route('admin.products.destroy', $product) }}" method="POST" class="d-inline">
+
+                        <td class="d-flex align-items-center gap-2">
+                            <a href="{{ route('admin.products.edit', $product) }}" class="btn btn-sm btn-warning d-flex align-items-center">
+                                ✏️ Edit
+                            </a>
+                            <form action="{{ route('admin.products.destroy', $product) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">
+                                    Delete
+                                </button>
                             </form>
                         </td>
+                        
                     </tr>
                 @endforeach
             </tbody>
