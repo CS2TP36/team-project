@@ -21,7 +21,7 @@ class IndividualOrder extends Model
         return $this->belongsTo(Order::class);
     }
 
-    public function product()
+    public function product(): Product
     {
         return Product::all()->where('id', $this->product_id)->first();
     }

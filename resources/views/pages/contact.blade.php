@@ -22,7 +22,7 @@
 
         <div class="contact-form">
             <h2>Contact Form</h2>
-            <form method="POST" action="/contact" onsubmit="validateContactForm(event)">
+            <form method="POST" action="{{ route('contact.store') }}" onsubmit="validateContactForm(event)" id="contact-form">
                 @csrf
 
                 <div class="input-box">
