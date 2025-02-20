@@ -26,7 +26,7 @@
                                 <img src="{{ asset('images/productImage/' . $product->images->first()->image_name) }}" width="50">
                             @endif
                         </td>
-                        <td>${{ number_format($product->price, 2) }}</td>
+                        <td>£{{ number_format($product->price, 2) }}</td>
                         <td>{{ $product->category->name }}</td>
                         <td>
                             <a href="{{ route('admin.products.edit', $product) }}" class="btn btn-warning">Edit</a>
