@@ -18,5 +18,5 @@ function validateContactForm(event) {
     }
 
     alert(`Thanks, ${fullName}! Your message has been sent.`);
-    document.querySelector("form").submit();
+    document.getElementById("contact-form").submit();
 }

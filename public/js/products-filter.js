@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     document.getElementById('alphabetical-z-to-a').checked = true;
                 }
+            } else if (path[1] === "popularity") {
+                document.getElementById('popularity').checked = true;
             }
             // categories
             if (pathLen > 3) {
@@ -85,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // get the elements for price sorting
         let priceHigh = document.getElementById('high-to-low');
         let priceLow = document.getElementById('low-to-high');
+        let popularity = document.getElementById('popularity');
         // sorts by name as default
         let sortField = "name";
 
@@ -105,6 +108,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 sortField = "price";
                 // sets direction for sorting
                 filtDirection = (sortBy.id === 'high-to-low' ? "0" : 1);
+            } else if (popularity.checked) {
+                sortField = "popularity";
+                // sets direction for sorting
+                filtDirection = "0";
             } else {
                 // sets direction for sorting
                 filtDirection = (sortBy.id === 'alphabetical-a-to-z' ? 1 : "0");
