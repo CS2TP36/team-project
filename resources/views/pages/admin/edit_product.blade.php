@@ -15,7 +15,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="price">Price ($)</label>
+            <label for="price">Price (£)</label>
             <input type="number" name="price" id="price" class="form-control" step="0.01" value="{{ $product->price }}" required>
         </div>
 
