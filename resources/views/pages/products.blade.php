@@ -28,6 +28,10 @@
                     <ul class="category-selector">
                         <li class="category">Sort By</li><!--select catogery to filter by-->
                         <li class="category-buttons">
+                            <input type="radio" id="popularity" name="sort-by" value="popularity">
+                            <label for="popularity">Popularity</label>
+                        </li>
+                        <li class="category-buttons">
                             <input type="radio" id="low-to-high" name="sort-by" value="low-to-high">
                             <label for="low-to-high">Price (Low To High)</label>
                         </li>
