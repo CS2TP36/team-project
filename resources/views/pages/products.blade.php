@@ -36,7 +36,7 @@
                             <label for="high-to-low">Price (High To Low)</label>
                         </li>
                         <li class="category-buttons"><!--creates the buttons to click on the filter for each one-->
-                            <input type="radio" id="alphabetical-a-to-z" name="sort-by" value="a-to-z">
+                            <input type="radio" id="alphabetical-a-to-z" name="sort-by" value="a-to-z" checked="checked">
                             <label for="alphabetical-a-to-z">Alphabet (A-Z)</label>
                         </li>
                         <li class="category-buttons"><!--creates the buttons to click on the filter for each one-->
