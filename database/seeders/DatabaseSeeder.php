@@ -1014,7 +1014,15 @@ Machine washable
         foreach ($products as $product) {
             $product->save();
         }
-    }
+
+
+        // set the created_at date to 30 days ago
+        foreach ($products as $product) {
+        $product['created_at'] = now()->subDays(30);
+        $product->save();
+}
+
+ }
 
     private function addImages(): void
     {
