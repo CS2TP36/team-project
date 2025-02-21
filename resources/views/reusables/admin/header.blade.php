@@ -11,7 +11,7 @@
                 <li><a href="{{ route('admin.products.index') }}" class="btn btn-primary">Manage Products</a></li>
                 <li><a href="#">Manage Users</a></li>
             @endif
-            <li><a href="#">User messages</a></li>
+            <li><a href="{{ route('admin.messages') }}">User messages</a></li>
         </ul>
         <!-- dont need to question why this button became a form, it was necessary -->
         <form action="{{ Auth::check() ? route('logout') : '/login/admin' }}" method="GET">
