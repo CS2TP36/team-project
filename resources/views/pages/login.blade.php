@@ -37,9 +37,8 @@
                     <input type="hidden" name="redirect" id="redirect" value="@if(isset($redirect)){{$redirect}}@endif"/>
                     <button type="submit">Sign In</button>
                 </form>
-                <!--
+                <!-- TODO: Added this back in for testing may need css idk -->
                 <a href="/forgot-pass"><p>Forgotten your password?</p></a>
-                -->
             </div>
 
             <div class="new-customers">

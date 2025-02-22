@@ -1,32 +1,14 @@
 @extends('layouts.page')
-@section('title', 'Forgot-pass')
+@section('title', 'Forgot Password')
 @section('content')
-
-<div class="reset">
-        <h2>Reset Your Password</h2>
-
-        <div class="reset-sections">
-            <div class= "existing-customers">
-                <h3>Forgot your password? Please enter your email address below: </h3>
-
-                    <div class="error-messages">
-                    </div>
-
-                    <div class="error-message">
-                    </div>
-
-                <form method="POST" action="">
-
-                    <label for="email">Email *</label><br>
-                    <input type="email" id="email" name="email" value="{{ old('email') }}" required/><br>
-                
-
-                    <button type="submit">Submit Email</button>
-                </form>
-            </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    @endsection
+    <!-- TODO: Give this page some classes and css (frontend problem) (Try not to change field names)-->
+    <h1>Forgot Password</h1>
+    <form method="POST" action="{{ route('forgot-pass.change') }}">
+        <label for="email">Enter your email</label>
+        <input type="email" name="email" placeholder="Email" required>
+        <label for="firstInitial lastInitial">Enter your initials for first and last name</label>
+        <input type="text" name="firstInitial" placeholder="Your first initial" maxlength="1" minlength="1" onkeyup="this.value = this.value.toUpperCase();" required>
+        <input type="text" name="lastInitial" placeholder="Your last initial" maxlength="1" minlength="1" onkeyup="this.value = this.value.toUpperCase();" required>
+        <button type="submit">Submit</button>
+    </form>
+@endsection
