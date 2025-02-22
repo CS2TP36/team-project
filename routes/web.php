@@ -117,3 +117,7 @@ Route::get('/admin/messages/{page?}', [ContactController::class, 'show'])->name(
 
 Route::get('/forgot-pass', [ForgotPassController::class, 'show'])->name('forgot-pass.show');
 Route::post('/forgot-pass', [ForgotPassController::class, 'change'])->name('forgot-pass.change');
+
+Route::get('/faq', function () {
+    return view('pages.faq');
+});
