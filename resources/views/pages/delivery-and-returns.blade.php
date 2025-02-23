@@ -2,58 +2,25 @@
 
 @section('title', 'Delivery and Returns')
 
-@section('script')
-    <script src="{{ asset('js/delivery-and-returns.js') }}"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Event listeners for tab buttons
-            document.getElementById('tab-delivery').addEventListener('click', function () {
-                switchTab('delivery-info', 'tab-delivery');
-            });
-
-            document.getElementById('tab-returns').addEventListener('click', function () {
-                switchTab('return-info', 'tab-returns');
-            });
-
-            function switchTab(sectionId, tabId) {
-                // Hide all sections
-                document.querySelectorAll('.content-section').forEach(function (section) {
-                    section.style.display = 'none';
-                });
-
-                // Remove active class from all tabs
-                document.querySelectorAll('.tab-btn').forEach(function (tab) {
-                    tab.classList.remove('active-tab');
-                });
-
-                // Show the selected section and activate the selected tab
-                document.getElementById(sectionId).style.display = 'block';
-                document.getElementById(tabId).classList.add('active-tab');
-            }
-
-            // Initialize with Delivery tab active
-            switchTab('delivery-info', 'tab-delivery');
-        });
-    </script>
-@endsection
+@section('script', asset('js/delivery-and-returns.js'))
 
 @section('content')
     <div id="delivery-and-returns">
-    <div class="container my-5">
-        <h1 class="text-center">Delivery & Returns Information</h1>
-        <p class="text-center">Explore our various delivery and return services, designed to cater to your needs
-            worldwide.</p>
+        <div class="container my-5">
+            <h1 class="text-center">Delivery & Returns Information</h1>
+            <p class="text-center">Explore our various delivery and return services, designed to cater to your needs
+                worldwide.</p>
 
-        <!-- Tabs for Delivery and Returns -->
-        <div class="tabs-container text-center my-4">
-            <button id="tab-delivery" class="tab-btn active-tab">DELIVERY</button>
-            <button id="tab-returns" class="tab-btn">RETURNS</button>
-        </div>
+            <!-- Tabs for Delivery and Returns -->
+            <div class="tabs-container text-center my-4">
+                <button id="tab-delivery" class="tab-btn active-tab">DELIVERY</button>
+                <button id="tab-returns" class="tab-btn">RETURNS</button>
+            </div>
 
-        <!-- Delivery Section -->
-        <section id="delivery-info" class="content-section">
-            <h2>
-                <img src="{{ asset('images/delivery-truck.png') }}" alt="Delivery Logo" class="section-icon">
+            <!-- Delivery Section -->
+            <section id="delivery-info" class="content-section">
+                <h2>
+                    <img src="{{ asset('images/delivery-truck.png') }}" alt="Delivery Logo" class="section-icon">
                 Delivery Services
             </h2>
             <div class="my-3">
