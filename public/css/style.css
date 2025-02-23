@@ -2802,20 +2802,18 @@ main {
             }
         }
 
-        
-
         h1 {
             font-size: 2em;
         }
 
         p {
-            min-width: 33vw;
+            min-width: 320px;
             font-size: 1em;
         }
 
         input {
             width: 33vw;
-            min-width: 33vw;
+            min-width: 300px;
             font-size: 1em;
         }
 
@@ -2844,8 +2842,10 @@ main {
         }
 
         .line-break {
-            margin-top: 15px;
+            margin-top: 10px;
             outline: 1px solid black;
+            min-width: 320px;
+            max-width: 1300px;
         }
 
         .star {
@@ -2864,6 +2864,8 @@ main {
 
         input[type="text"],
         textarea {
+            min-width: 300px;
+            max-width: 1290px;
             border: 1px solid black;
             padding: 10px;
             outline: none;
