@@ -193,7 +193,7 @@ main {
                 font-size: 1em;
             }
 
-            .content-section {
+            .content-section { /* There is another class called the same name*/
                 display: none;
             }
 
@@ -2791,6 +2791,19 @@ main {
         justify-content: center;
         color: black;
         border: black 1px solid;
+
+        .odo2 {
+            display: flex;
+            align-items: center;
+            
+            img {
+                width: 25vw; 
+                max-width: 100px;
+                margin-right: 20px;
+            }
+        }
+
+        
 
         h1 {
             font-size: 2em;
