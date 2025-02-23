@@ -121,3 +121,11 @@ Route::post('/forgot-pass', [ForgotPassController::class, 'change'])->name('forg
 Route::get('/faq', function () {
     return view('pages.faq');
 });
+
+
+// show admin manage users
+Route::get('/admin/manage_users', function () {
+    return view('pages.admin.manage_users');
+})->name('admin.manage_users');
+
+
