@@ -7,7 +7,7 @@
         <form method="POST" action="{{ route('review.add') }}">
             @csrf
             <!-- Image + Name of Product -->
-            <div class="odo2">
+            <div class="review-image">
                 <img src="{{asset($product->getMainImage())}}" alt="Product Image">
                 <p>{{$product->name}}</p>
             </div>

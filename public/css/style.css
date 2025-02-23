@@ -2790,9 +2790,8 @@ main {
         padding-right: 33vw;
         justify-content: center;
         color: black;
-        border: black 1px solid;
 
-        .odo2 {
+        .review-image {
             display: flex;
             align-items: center;
             
