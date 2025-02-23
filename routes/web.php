@@ -125,7 +125,7 @@ Route::get('/faq', function () {
 
 // show admin manage users
 Route::get('/admin/manage-users', function () {
-    return view('pages.manage-users');
+    return view('pages.admin.manage-users');
 })->name('admin.manage-users');
 
 
