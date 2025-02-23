@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ManageUsersController;
 use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Auth\AccountController;
 use App\Http\Controllers\Auth\ForgotPassController;
@@ -122,10 +123,7 @@ Route::get('/faq', function () {
     return view('pages.faq');
 });
 
-
 // show admin manage users
-Route::get('/admin/manage-users', function () {
-    return view('pages.admin.manage-users');
-})->name('admin.manage-users');
+Route::get('/admin/manage-users', [ManageUsersController::class, 'show'])->name('admin.manage-users');
 
 
