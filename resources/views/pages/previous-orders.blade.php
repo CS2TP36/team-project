@@ -18,7 +18,7 @@
                             <div class="order-info">
                                 <p class="order-date">Order placed: {{ $order["created_at"] }}</p>
                                 <p class="dispatch-to">Dispatched to: {{ Shipping::all()->where('id', $order["shipping_id"])->first()["delivery_address"] }}</p>
-                                <p class="order-price">Total: {{ $order->calculateTotal() }}</p>
+                                <p class="order-price">Total: £{{ number_format($order->calculateTotal(),2) }}</p>
                             </div>
 
                             <div class="order-items">
