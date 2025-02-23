@@ -5,21 +5,14 @@
 @section('content')
     <div class="container">
         <h1>Manage Users</h1>
-        <div class="d-flex justify-content-center my-3">
-            <a href="#" class="btn btn-primary btn-lg px-4 py-2 fw-bold">
-                ➕ Add New User
-            </a>
-        </div>
-
         <div class="container mb-4">
-            <form method="GET" action="#" class="d-flex align-items-center gap-3">
+            <form method="GET" action="{{ route('admin.manage-users') }}" class="d-flex align-items-center gap-3">
                 <label for="role" class="form-label mb-0">Filter by Role:</label>
                 <select id="role" name="role" class="form-select w-auto" onchange="this.form.submit()">
-
                     <!-- filter for role options -->
-                    <option value="all">All Roles</option>
-                    <option value="admin">Admin</option>
-                    <option value="customer">Customer</option>
+                    <option value="all" @if($role === "all") selected @endif>All Roles</option>
+                    <option value="admin" @if($role === "admin") selected @endif>Admin</option>
+                    <option value="customer" @if($role === "customer") selected @endif>Customer</option>
                 </select>
             </form>
         </div>
