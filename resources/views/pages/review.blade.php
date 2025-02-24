@@ -7,8 +7,10 @@
         <form method="POST" action="{{ route('review.add') }}">
             @csrf
             <!-- Image + Name of Product -->
-            <img src="{{asset($product->getMainImage())}}" alt="Product Image">
-            <p>{{$product->name}}</p>
+            <div class="review-image">
+                <img src="{{asset($product->getMainImage())}}" alt="Product Image">
+                <p>{{$product->name}}</p>
+            </div>
             <div class="line-break"><br></div>
             <h2>Overall rating</h2>
             <!-- Stars -->

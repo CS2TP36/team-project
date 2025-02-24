@@ -36,4 +36,18 @@ class ContactController extends Controller
         }
         return redirect('/home')->with('message', 'Thanks for contacting us!');
     }
+
+    // a function to load the admin page
+    public function show($page = 1) {
+        // determines the number of messages to show per page
+        $perpage = 10;
+        // gets all the contact items
+        $contactItems = ContactItem::all();
+        $number = $contactItems->count();
+        // calculate total number of pages by rounding up
+        $pages = ceil($number / $perpage);
+        // reverse the order then get the 10 for the required page
+        $contactItems = $contactItems->reverse()->skip(($page - 1) * $perpage)->take($perpage);
+        return view('pages.admin.user-messages', ['contactItems' => $contactItems, 'pages' => $pages, 'page' => $page]);
+    }
 }

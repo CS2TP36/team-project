@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\ManageUsersController;
 use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Auth\AccountController;
+use App\Http\Controllers\Auth\ForgotPassController;
 use App\Http\Controllers\Auth\PassChangeController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
@@ -41,9 +43,7 @@ Route::get('/aboutus', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
-Route::get('/forgot-pass', function () {
-    return view('pages.forgot-pass');
-});
+
 Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
@@ -119,3 +119,17 @@ Route::post('/review/add', [ReviewController::class, 'add'])->name('review.add')
 Route::get('/privacy-policy', function () {
     return view('pages.privacy');
 })->name('privacy');
+
+Route::get('/admin/messages/{page?}', [ContactController::class, 'show'])->name('admin.messages');
+
+Route::get('/forgot-pass', [ForgotPassController::class, 'show'])->name('forgot-pass.show');
+Route::post('/forgot-pass', [ForgotPassController::class, 'change'])->name('forgot-pass.change');
+
+Route::get('/faq', function () {
+    return view('pages.faq');
+});
+
+// show admin manage users
+Route::get('/admin/manage-users', [ManageUsersController::class, 'show'])->name('admin.manage-users');
+
+
