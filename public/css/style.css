@@ -2052,8 +2052,10 @@ main {
         display: flex;
         justify-content: center;
         padding-bottom: 50px;
+    }
 
 /* CSS for forgotten password page */
+
 .forgot-password {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1400px;
@@ -2113,7 +2115,7 @@ main {
 }
 
 
-    }
+    
 
     #review-pic {
         width: 400px;
