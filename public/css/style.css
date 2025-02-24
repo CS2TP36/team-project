@@ -2070,6 +2070,7 @@ main {
         align-items: center;
         margin: 0 auto;
         margin-bottom: 160px;
+        border: 1px solid black;
 
         h1 {
             text-align: center;
@@ -2084,6 +2085,7 @@ main {
         max-width: 650px;
         padding: 5px;
         margin: 0 auto;
+        border: 1px solid red;
 
         label {
             display: block;
@@ -2850,36 +2852,52 @@ main {
         padding-left: 33vw;
         padding-right: 33vw;
         justify-content: center;
+        align-items: center;
+        margin: 0 auto;
         color: black;
+
+        h1 {
+            font-size: 2em;
+            min-width: 320px;
+        }
+    }
+
+    .review .review-form {
+        flex: 1;
+        max-width: 1350px;
+        padding: 5px;
+        margin: 0 auto;
 
         .review-image {
             display: flex;
             align-items: center;
 
             img {
-                width: 25vw;
+                width: 100%;
                 max-width: 100px;
                 margin-right: 20px;
             }
         }
-
-        h1 {
-            font-size: 2em;
+        
+        h2 {
+            min-width: 320px;
+            width: 100%;
         }
-
+        
         p {
             min-width: 320px;
+            width: 100%;
             font-size: 1em;
         }
 
         input {
-            width: 33vw;
+            width: 100%;
             min-width: 300px;
             font-size: 1em;
         }
 
         textarea {
-            width: 33vw;
+            width: 100%;
             max-width: 33vw;
             border: 1px solid black;
             font-family: Arial, sans-serif;
@@ -2902,11 +2920,17 @@ main {
             background-color: #4D4D4D;
         }
 
+        .rating {
+            min-width: 320px;
+            width: 100%;
+        }
+
         .line-break {
             margin-top: 10px;
             outline: 1px solid black;
+            width: 100%;
             min-width: 320px;
-            max-width: 1300px;
+            max-width: 1200px;
         }
 
         .star {
@@ -2925,8 +2949,9 @@ main {
 
         input[type="text"],
         textarea {
+            width: 100%;
             min-width: 300px;
-            max-width: 1290px;
+            max-width: 1200px;
             border: 1px solid black;
             padding: 10px;
             outline: none;
@@ -4862,7 +4887,7 @@ main {
         margin-left: 300px;
         padding-left: 25px;
         padding-right: 25px;
-
+        
         h2 {
             text-align: left;
             margin-left: 5px;
