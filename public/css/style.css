@@ -317,6 +317,7 @@ main {
     }
 
     /* CSS for previous orders page (light mode) */
+
     #previous-orders {
         background-color: #fff;
         max-width: 1200px;
@@ -329,6 +330,7 @@ main {
     }
 
     /*h1 styling */
+
     h1 {
         color: #333;
         font-size: 2.5rem;
@@ -337,12 +339,14 @@ main {
     }
 
     /*orders*/
+
     .orders-list {
         margin-top: 20px;
         /*add margin from top for spacing*/
     }
 
     /* styling for each order*/
+
     .order {
         background-color: #f9f9f9;
         border-radius: 8px;
@@ -405,6 +409,7 @@ main {
     }
 
     /*buttons and actions*/
+
     .order-actions {
         flex: 1;
         display: flex;
@@ -434,6 +439,7 @@ main {
     }
 
     /* Add spacing after the filter selector */
+
     .filter {
         margin-bottom: 20px;
     }
@@ -972,6 +978,7 @@ main {
     }
 
     /* Title Styling */
+
     .terms-container h1 {
         text-align: center;
         font-size: 2.5em;
@@ -980,6 +987,7 @@ main {
     }
 
     /* Disclaimer Styling */
+
     .disclaimer {
         color: red;
         text-align: center;
@@ -989,6 +997,7 @@ main {
     }
 
     /* Heading Styles */
+
     .terms-container h2 {
         font-size: 1.8em;
         font-weight: bold;
@@ -997,6 +1006,7 @@ main {
     }
 
     /* Paragraphs & List Styling */
+
     .terms-container p,
     .terms-container ul {
         font-size: 1.1em;
@@ -1009,6 +1019,7 @@ main {
     }
 
     /* Fade-in Effect */
+
     .fade-in {
         opacity: 0;
         transform: translateY(40px);
@@ -1021,8 +1032,8 @@ main {
     }
 
 
-
     /* Contact Page Styling */
+
     .contact-wrapper {
         font-family: 'Poppins', sans-serif;
         background: #f5f5f5;
@@ -1032,6 +1043,7 @@ main {
     }
 
     /* Header Section */
+
     .contact-header {
         margin-bottom: 30px;
     }
@@ -1049,6 +1061,7 @@ main {
     }
 
     /* Contact Container */
+
     .contact-container {
         display: flex;
         flex-wrap: wrap;
@@ -1063,13 +1076,14 @@ main {
     }
 
     /* Contact Details */
+
     .contact-details {
         flex: 1;
         min-width: 300px;
         padding-right: 20px;
     }
 
-    .contact-us-brand{
+    .contact-us-brand {
         width: 250px;
         height: 250px;
         margin-top: 50px;
@@ -1093,6 +1107,7 @@ main {
     }
 
     /* Contact Form */
+
     .contact-form {
         flex: 1;
         min-width: 300px;
@@ -1131,10 +1146,11 @@ main {
     }
 
     /* Submit Button */
+
     .btn-send {
         width: 100%;
         padding: 12px;
-        background:#4d4d4d;
+        background: #4d4d4d;
         color: white;
         font-size: 1.2rem;
         border: none;
@@ -1148,6 +1164,7 @@ main {
     }
 
     /* Social Media Section */
+
     .social-section {
         margin-top: 40px;
     }
@@ -1186,6 +1203,7 @@ main {
     }
 
     /* Hover Effect */
+
     .social-icons a:hover {
         transform: scale(1.1);
         background: rgba(255, 255, 255, 0.4);
@@ -1306,8 +1324,7 @@ main {
             display: inline-block;
             margin-top: 20px;
             padding: 15px 30px;
-            background: #88a4ad;
-            ;
+            background: #88a4ad;;
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
@@ -1448,13 +1465,8 @@ main {
             margin-left: 15px;
 
 
-
-
-
         }
     }
-
-
 
 
     .second-nav {
@@ -1583,7 +1595,6 @@ main {
         }
 
 
-
     }
 
     /*CSS for Footer*/
@@ -1647,6 +1658,7 @@ main {
         width: 50px;
         height: 50px;
     }
+
     @media (max-width: 768px) {
         .footer-check {
             font-size: 10px;
@@ -1687,9 +1699,6 @@ main {
             }
 
         }
-
-
-
 
 
     }
@@ -1777,7 +1786,6 @@ main {
         animation: fadeup 1s ease-out;
 
 
-
         p {
             color: rgb(0, 0, 0);
             font-size: 20px;
@@ -1842,7 +1850,6 @@ main {
         transition: background-color 0.4s;
 
 
-
     }
 
     #select-catogeries a:hover {
@@ -1901,7 +1908,6 @@ main {
         padding: 20px;
         flex: none;
         padding-top: 0;
-
 
 
     }
@@ -2054,68 +2060,66 @@ main {
         padding-bottom: 50px;
     }
 
-/* CSS for forgotten password page */
+    /* CSS for forgotten password page */
 
-.forgot-password {
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 1400px;
-    padding-left: 25px;
-    padding-right: 25px;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 160px;
+    .forgot-password {
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 1400px;
+        padding-left: 25px;
+        padding-right: 25px;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 160px;
 
- h1 {
-        text-align: center;
-        margin-left: 5px;
-        margin-bottom: 5px;
-        padding-top: 20px;
-    }
-}
-
-.forgot-password .forgot-password-form{
-    flex: 1;
-    max-width: 650px;
-    padding:5px;
-    margin: 0 auto; 
-
-    label{
-        display: block;
-        margin-bottom: 5px; 
+        h1 {
+            text-align: center;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            padding-top: 20px;
+        }
     }
 
-    input{
-        max-width: 500px;
-        width:100%;
-        padding: 10px;
-        border:1px solid black;
-        margin-bottom: 15px;
+    .forgot-password .forgot-password-form {
+        flex: 1;
+        max-width: 650px;
+        padding: 5px;
+        margin: 0 auto;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            max-width: 500px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+            cursor: pointer;
+            max-width: 522px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background-color: #4D4D4D;
+        }
+
+        a {
+            text-decoration: underline;
+            text-align: left;
+            color: black;
+        }
     }
 
-    button{
-        background-color: black;
-        color: white;
-        border: 1px solid black;
-        cursor: pointer;
-        max-width: 522px;
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    button:hover {
-        background-color: #4D4D4D;
-    }
-
-    a {
-        text-decoration: underline;
-        text-align: left;
-        color: black;
-    }
-}
-
-
-    
 
     #review-pic {
         width: 400px;
@@ -2484,7 +2488,6 @@ main {
         }
 
 
-
     }
 
     @media (max-width: 1238px) {
@@ -2562,9 +2565,6 @@ main {
             flex-grow: 1;
 
         }
-
-
-
 
 
     }
@@ -2939,6 +2939,7 @@ main {
             border-color: gold;
         }
     }
+
     #delivery-and-returns {
 
         /* I think all the stuff under here is for delivery and returns */
@@ -3236,7 +3237,6 @@ main {
     }
 
 
-
     /* CSS for Basket Page*/
 
 
@@ -3508,6 +3508,7 @@ main {
         }
 
         /* change colour for update and remove below  */
+
         button:nth-of-type(1) {
             background-color: rgb(11, 10, 10);
             color: rgb(255, 255, 255);
@@ -3858,8 +3859,6 @@ main {
     }
 
 
-
-
     .second-nav {
         font-family: Arial, Helvetica, sans-serif;
         align-items: center;
@@ -4081,9 +4080,6 @@ main {
 
         }
     }
-
-
-
 
 
     /*CSS for Home page*/
@@ -4553,8 +4549,6 @@ main {
     }
 
 
-
-
     @media (max-width: 1340px) {
         #product-text-banner {
             font-size: 25px;
@@ -4589,7 +4583,6 @@ main {
         .product-details {
             font-size: 15px;
         }
-
 
 
     }
@@ -4671,13 +4664,7 @@ main {
         }
 
 
-
-
-
     }
-
-
-
 
 
     /* CSS for the Product Page*/
