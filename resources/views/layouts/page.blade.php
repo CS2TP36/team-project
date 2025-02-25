@@ -11,6 +11,7 @@
     <script src="@yield('script')"></script>
     <script src="{{ asset('js/searchbar.js') }}"></script>
     <!-- <script src="{{ asset('js/theme.js') }}"></script> -->
+    <script src="{{ asset('js/darkmode.js') }}" defer></script>
 </head>
 <body>
 <!-- utilises a consistent header -->

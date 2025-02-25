@@ -92,11 +92,40 @@ main {
 }
 
 :root {
-    --bg_color: white;
+    --bg_colour: white;
+    --text-colour: black;
+}
+
+.dark-mode {
+    --bg_colour: black;
+    --text-colour: white;
+}
+
+#theme-toggle {
+    background-color: var(--bg_colour);
+    color: var(--text-colour);
+    width: 100%;
+
+    p {
+        font: 1em;
+    }
+}
+
+#theme-toggle p:last-child {
+    display: none;
+}
+
+.dark-mode #theme-toggle p:first-child {
+    display: none;
+}
+
+.dark-mode #theme-toggle p:last-child {
+    display: block;
 }
 
 body {
-    background-color: var(--bg_color);
+    background-color: var(--bg_colour);
+    color: var(--text-colour);
 }
     
     /*CSS for Account Page*/
