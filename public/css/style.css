@@ -137,7 +137,7 @@ body {
         padding-left: 5vw;
         padding-right: 5vw;
         justify-content: center;
-        color: black;
+        color: var(--text-colour);
         border: black 1px solid;
 
         .sidebar {
@@ -168,7 +168,7 @@ body {
 
             aside li a {
                 /* Style the <a> tag inside the <li> */
-                color: #333;
+                color: var(--text-colour);
                 /* Default link color */
                 text-decoration: none;
                 /* Remove default underline */
@@ -242,6 +242,9 @@ body {
 
     }
 
+    .dark-mode .account-page {
+        color: var(--text-colour)
+    }
     /* CSS for change password page */
     /*  styling for change password container */
 
