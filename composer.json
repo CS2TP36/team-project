@@ -9,7 +9,8 @@
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "mailgun/mailgun-php": "^4.3",
-        "marineusde/larapex-charts": "^1.4"
+        "marineusde/larapex-charts": "^1.4",
+        "picocss/pico": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
