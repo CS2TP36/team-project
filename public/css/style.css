@@ -97,6 +97,7 @@ main {
     --btn-bg-colour: black;
     --btn-text-colour: white; 
     --btn-hover-colour: #4D4D4D;
+    --input-text-colour: black;
 }
 
 .dark-mode {
@@ -106,6 +107,7 @@ main {
     --btn-bg-colour: #4D4D4D;
     --btn-text-colour: white;
     --btn-hover-colour: #2D2D2D;
+    --input-text-colour: black;
 }
 
 #theme-toggle {
@@ -2228,6 +2230,7 @@ body {
         input {
             width: 100%;
             max-width: 500px;
+            color: var(--input-text-colour);
             border: 1px solid black;
             padding: 10px;
             margin-bottom: 10px;
@@ -2645,7 +2648,6 @@ body {
         padding-top: 50px;
         padding-left: 50px;
         padding-right: 50px;
-        color: var(--text-colour);
 
         .line-break {
             background-color: var(--text-colour);
@@ -2657,14 +2659,14 @@ body {
         .size-selection {
             max-width: 50px;
             padding: 10px;
+            background-color: var(--btn-bg-colour);
+            color: var(--btn-text-colour);
 
             button {
                 width: 50px;
                 height: 50px;
                 padding: 10px;
                 border: 1px solid black;
-                background-color: var(--btn-bg-colour);
-                color: var(--btn-text-colour);
                 cursor: pointer;
                 margin-bottom: 10px;
             }
@@ -2684,7 +2686,7 @@ body {
                 padding: 10px;
                 border: 1px solid black;
                 background-color: var(--btn-bg-colour);
-                color: var(--btn-hover-colour);
+                color: var(--btn-text-colour);
                 cursor: pointer;
                 margin-bottom: 10px;
             }
@@ -3000,6 +3002,7 @@ body {
             width: 100%;
             min-width: 300px;
             max-width: 1200px;
+            color: var(--input-text-colour);
             border: 1px solid var(--text-colour);
             padding: 10px;
             outline: none;
