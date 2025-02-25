@@ -17,3 +17,4 @@ themeToggle.addEventListener("click", () => {
     darkmode =  localStorage.getItem("dark-mode")
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
+

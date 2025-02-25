@@ -92,17 +92,24 @@ main {
 }
 
 :root {
-    --bg_colour: white;
+    --bg-colour: white;
     --text-colour: black;
+    --btn-bg-colour: black;
+    --btn-text-colour: white; 
+    --btn-hover-colour: #4D4D4D;
 }
 
 .dark-mode {
-    --bg_colour: black;
+    --bg-colour: #2D2D2D; 
+    --alt-bg-colour: black;
     --text-colour: white;
+    --btn-bg-colour: #4D4D4D;
+    --btn-text-colour: white;
+    --btn-hover-colour: #2D2D2D;
 }
 
 #theme-toggle {
-    background-color: var(--bg_colour);
+    background-color: var(--bg-colour);
     color: var(--text-colour);
     width: 100%;
 
@@ -124,7 +131,7 @@ main {
 }
 
 body {
-    background-color: var(--bg_colour);
+    background-color: var(--bg-colour);
     color: var(--text-colour);
 }
     
@@ -235,16 +242,12 @@ body {
         }
 
         .line-break {
+            background-color: var(--text-colour);
             width: 100px;
             margin-top: 15px;
         }
-
-
     }
 
-    .dark-mode .account-page {
-        color: var(--text-colour)
-    }
     /* CSS for change password page */
     /*  styling for change password container */
 
@@ -2189,6 +2192,7 @@ body {
     /* CSS for Login Page */
 
     .login {
+        background-color: var(--alt-bg-colour);
         font-family: Arial, Helvetica, sans-serif;
         max-width: 1400px;
         padding-left: 25px;
@@ -2218,6 +2222,7 @@ body {
 
         label {
             display: block;
+            color: var(--text-colour);
         }
 
         input {
@@ -2233,20 +2238,20 @@ body {
             max-width: 522px;
             padding: 10px;
             border: 1px solid black;
-            background-color: black;
-            color: white;
+            background-color: var(--btn-bg-colour);
+            color: var(--btn-text-colour);
             cursor: pointer;
             margin-bottom: 10px;
         }
 
         button:hover {
-            background-color: #4D4D4D;
+            background-color: var(--btn-hover-colour);
         }
 
         a {
             text-decoration: underline;
             text-align: left;
-            color: black;
+            color: var(--text-colour);
         }
     }
 
@@ -2640,9 +2645,10 @@ body {
         padding-top: 50px;
         padding-left: 50px;
         padding-right: 50px;
+        color: var(--text-colour);
 
         .line-break {
-            background-color: black;
+            background-color: var(--text-colour);
             width: 500px -50px;
             height: 2px;
             margin-bottom: 20px;
@@ -2657,30 +2663,34 @@ body {
                 height: 50px;
                 padding: 10px;
                 border: 1px solid black;
-                background-color: black;
-                color: white;
+                background-color: var(--btn-bg-colour);
+                color: var(--btn-text-colour);
                 cursor: pointer;
                 margin-bottom: 10px;
             }
-
+ 
             button:hover {
-                background-color: #4D4D4D;
+                background-color: var(--btn-hover-colour);
             }
         }
 
         .purchase-options {
+            label {
+                color: var(--text-colour);
+            }
+
             button {
                 width: 500px;
                 padding: 10px;
                 border: 1px solid black;
-                background-color: black;
-                color: white;
+                background-color: var(--btn-bg-colour);
+                color: var(--btn-hover-colour);
                 cursor: pointer;
                 margin-bottom: 10px;
             }
 
             button:hover {
-                background-color: #4D4D4D;
+                background-color: var(--btn-hover-colour);
             }
         }
 
@@ -2773,7 +2783,7 @@ body {
             padding: 0;
 
             .line-break {
-                background-color: black;
+                background-color: var(--btn-bg-colour);
                 width: 20px;
                 height: 2px;
                 margin-bottom: 20px;
@@ -2788,14 +2798,14 @@ body {
                     height: 50px;
                     padding: 10px;
                     border: 1px solid black;
-                    background-color: black;
-                    color: white;
+                    background-color: var(--btn-bg-colour);
+                    color: var(--btn-text-colour);
                     cursor: pointer;
                     margin-bottom: 10px;
                 }
 
                 button:hover {
-                    background-color: #4D4D4D;
+                    background-color: var(--btn-hover-colour);
                 }
             }
 
@@ -2804,14 +2814,14 @@ body {
                     width: 80px;
                     padding: 10px;
                     border: 1px solid black;
-                    background-color: black;
-                    color: white;
+                    background-color: var(--btn-bg-colour);
+                    color: var(--btn-text-colour);
                     cursor: pointer;
                     margin-bottom: 10px;
                 }
 
                 button:hover {
-                    background-color: #4D4D4D;
+                    background-color: var(--btn-hover-colour);
                 }
             }
         }
@@ -2880,6 +2890,8 @@ body {
         }
     }
 
+    /* CSS for Review Page*/
+
     .review {
         font-family: Arial, sans-serif;
         min-width: 33vw;
@@ -2888,9 +2900,10 @@ body {
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        color: black;
+        color: var(--text-colour);
 
         h1 {
+            color: var(--text-colour);
             font-size: 2em;
             min-width: 320px;
         }
@@ -2936,7 +2949,7 @@ body {
             border: 1px solid black;
             font-family: Arial, sans-serif;
             font-size: 1rem;
-            color: black;
+            color: var(--text-colour);
         }
 
         button {
@@ -2944,14 +2957,14 @@ body {
             padding: 10px;
             font-size: 1em;
             border: 1px solid black;
-            background-color: black;
-            color: white;
+            background-color: var(--btn-bg-colour);
+            color: var(--btn-text-colour);
             cursor: pointer;
             margin-bottom: 10px;
         }
 
         button:hover {
-            background-color: #4D4D4D;
+            background-color: var(--btn-hover-colour);
         }
 
         .rating {
@@ -2961,7 +2974,8 @@ body {
 
         .line-break {
             margin-top: 10px;
-            outline: 1px solid black;
+            outline: 1px solid var(--text-colour);
+            background-color: var(--text-colour);
             width: 100%;
             min-width: 320px;
             max-width: 1200px;
@@ -2986,7 +3000,7 @@ body {
             width: 100%;
             min-width: 300px;
             max-width: 1200px;
-            border: 1px solid black;
+            border: 1px solid var(--text-colour);
             padding: 10px;
             outline: none;
             /*Disables default browser outline on focus*/
