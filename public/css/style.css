@@ -2642,6 +2642,7 @@ body {
 
     .right-container {
         flex: 1;
+        background-color: var(--alt-bg-colour);
         max-width: 1000px;
         margin-top: 20px;
         margin-bottom: 20px;
