@@ -72,8 +72,8 @@
                         <p><strong>Reviews:</strong></p>
                         <!-- TODO: Probably want to rename classes and do some css to make look nice -->
                         <div class="something">
-                            @foreach($reviews as $review)
-                                <div>
+                            @foreach($reviews->reverse() as $review)
+                                <div class="review">
                                     <h2>{{$review['title']}}</h2>
                                     <p>{{$review['review']}}</p>
                                     <p id="star-{{ $loop->index }}">{{$review['rating']}}</p> 
