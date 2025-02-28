@@ -73,7 +73,8 @@
                         <!-- TODO: Probably want to rename classes and do some css to make look nice -->
                         <div class="something">
                             @foreach($reviews->reverse() as $review)
-                                <h2>{{$review['title']}}</h2>
+                                <p><strong>User: Rikesh</strong></p>
+                                <p><strong>{{$review['title']}}</strong></p>
                                 <p>{{$review['review']}}</p>
                                 <p id="star-{{ $loop->index }}">{{$review['rating']}}</p> 
 
