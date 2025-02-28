@@ -5,6 +5,7 @@
 @php
     use App\Models\Product;
     use App\Http\Controllers\ReviewController;
+    use App\Models\User;
     // add to the popularity value of the product on viewing
     $product['popularity'] = $product['popularity'] + 1;
     $product->save();
@@ -73,13 +74,13 @@
                         <!-- TODO: Probably want to rename classes and do some css to make look nice -->
                         <div class="something">
                             @foreach($reviews->reverse() as $review)
-                                <p><strong>User: Rikesh</strong></p>
+                                <p><strong>User: {{ (User::get()->where('id', $review['user_id'])->first())['first_name'] }}</strong></p>
                                 <p><strong>{{$review['title']}}</strong></p>
                                 <p>{{$review['review']}}</p>
-                                <p id="star-{{ $loop->index }}">{{$review['rating']}}</p> 
+                                <p id="star-{{ $loop->index }}">{{$review['rating']}}</p>
 
                                 <script>
-                                    function displayStarRating(rating, starId) { 
+                                    function displayStarRating(rating, starId) {
                                         const starContainer = document.getElementById(starId);
                                         starContainer.innerHTML = '';
 
