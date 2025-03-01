@@ -30,7 +30,6 @@ class DiscountController extends Controller
         ]);
         // save it then return
         $discount->save();
-        return redirect('/admin')->with('message', 'Discount code added');
+        return redirect('/admin/account')->with('message', 'Discount code added');
     }
-
 }
