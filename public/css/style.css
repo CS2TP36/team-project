@@ -137,10 +137,6 @@ body {
     color: var(--text-colour);
 }
 
-.dark-mode .disclaimer {
-    color: #ff6666; 
-}
-
 .FAQ {
     background-color: #fff;
     color: #000;
@@ -1223,10 +1219,10 @@ h1 {
 .terms-container {
     font-family: "Arial", sans-serif;
     line-height: 1.6;
-    background-color: var(--bg-colour);
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    color: var(--text-colour);
+    color: #333;
     width: 60%;
     margin: 0 auto;
     padding: 50px 0;
@@ -1238,13 +1234,13 @@ h1 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: var(--text-colour);
+    color: black;
 }
 
 /* Disclaimer Styling */
 
 .disclaimer {
-    color: var(--warning-colour, red);
+    color: red;
     text-align: center;
     font-size: 1.3em;
     font-weight: bold;
@@ -1256,7 +1252,7 @@ h1 {
 .terms-container h2 {
     font-size: 1.8em;
     font-weight: bold;
-    color: var(--text-colour);
+    color: #222;
     margin-top: 40px;
 }
 
@@ -1265,7 +1261,7 @@ h1 {
 .terms-container p,
 .terms-container ul {
     font-size: 1.1em;
-    color: var(--text-colour);
+    color: #555;
     margin-bottom: 20px;
 }
 
