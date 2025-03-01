@@ -15,7 +15,7 @@
     <body class="d-flex flex-column min-vh-100">
         @include("reusables.admin.header")
         <main class="container flex-grow-1">
-        @yield("content")
+            @yield("content")
         </main>
         @include("reusables.admin.footer")
     </body>
