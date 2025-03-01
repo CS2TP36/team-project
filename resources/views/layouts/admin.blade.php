@@ -5,16 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="{{ asset('pico/css/pico.min.css') }}">
+        @if(@session('message'))
+            <script>
+                alert("{{ session('message') }}");
+            </script>
+        @endif
         <title>@yield("title")</title>
     </head>
     <body class="d-flex flex-column min-vh-100">
-    @include("reusables.admin.header")
+        @include("reusables.admin.header")
         <main class="container flex-grow-1">
         @yield("content")
-    </main>
-
-    <footer class="mt-auto">
+        </main>
         @include("reusables.admin.footer")
-    </footer>
     </body>
 </html>
