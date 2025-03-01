@@ -15,4 +15,9 @@ class DiscountCode extends Model
         }
         return false;
     }
+    // calculate the price after applying the discount
+    public function applyDiscount(float $originalPrice): float {
+        $multiplier = 1 - ($this->percent_off / 100);
+        return $originalPrice * $multiplier;
+    }
 }
