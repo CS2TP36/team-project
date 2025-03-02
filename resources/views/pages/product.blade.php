@@ -74,8 +74,9 @@
                         <!-- TODO: Probably want to rename classes and do some css to make look nice -->
                         <div class="something">
                             @foreach($reviews->reverse() as $review)
-                                <p><strong>User: {{ (User::get()->where('id', $review['user_id'])->first())['first_name'] }}</strong></p>
                                 <div class="line-break"></div>
+                                <p><strong>User: {{ (User::get()->where('id', $review['user_id'])->first())['first_name'] }}</strong></p>
+                                <!-- <div class="line-break"></div> -->
                                 <p><strong>{{$review['title']}}</strong></p>
                                 <p>{{$review['review']}}</p>
                                 <p id="star-{{ $loop->index }}">{{$review['rating']}}</p>
