@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\ManageUsersController;
 use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Auth\AccountController;
@@ -132,4 +133,5 @@ Route::get('/faq', function () {
 // show admin manage users
 Route::get('/admin/manage-users', [ManageUsersController::class, 'show'])->name('admin.manage-users');
 
-
+Route::get('/admin/discounts', [DiscountController::class, 'show'])->name('admin.discounts');
+Route::post('/admin/discounts', [DiscountController::class, 'add'])->name('admin.discounts.add');

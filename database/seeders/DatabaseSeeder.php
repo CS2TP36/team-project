@@ -3,8 +3,12 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\IndividualOrder;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\Shipping;
+use App\Models\Transaction;
 use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -26,9 +30,11 @@ class DatabaseSeeder extends Seeder
         $this->addImages();
         // Add test user
         $this->testAccount();
+        // Add some random orders (may take some time, comment out if no orders are needed)
+        $this->addOrders();
     }
 
-    private function addCategories()
+    private function addCategories(): void
     {
         //shoes, trousers, hoodies, jackets, shirts
         //creates a load of categories to add to the database.
@@ -60,7 +66,7 @@ class DatabaseSeeder extends Seeder
         }
     }
 
-    private function addProducts()
+    private function addProducts(): void
     {
         // A list of products
         // Copied from document provided by Muhammad Khan on Trello
@@ -1256,7 +1262,7 @@ Machine washable
     }
 
     // Create a test account
-    function testAccount()
+    private function testAccount(): void
     {
         $user = User::create([
             'first_name' => 'John',
@@ -1269,5 +1275,57 @@ Machine washable
             'role' => 'user'
         ]);
         $user->save();
+    }
+
+    // this makes a load of random orders for each product over the recent period (might take a while to run)
+    private function addOrders(): void
+    {
+        // get all the products
+        $products = Product::all();
+        // get a user to assign to the orders
+        $user = User::all()->first();
+        // iterate through all the products
+        foreach ($products as $product) {
+            // create orders for each day for the last few days
+            for ($day = now(); $day->gt(now()->subDays(16)); $day->subDays(1)) {
+                $quantity = rand(0, 3);
+                // create the shipping item
+                $shipping = Shipping::create([
+                    'shipping_date' => now(),
+                    'delivery_date' => null,
+                    'home_address' => "test address",
+                    'tracking_number' => rand(100000, 999999),
+                ]);
+                $shipping['created_at'] = $day;
+                $shipping->save();
+                // create a transaction for the order
+                $transaction = Transaction::create([
+                    'transaction_amount' => $product->price * $quantity,
+                    'transaction_info' => 'purchase',
+                    'transaction_status' => 'completed',
+                ]);
+                $transaction['created_at'] = $day;
+                $transaction->save();
+                $order = new Order([
+                    'user_id' => $user->id,
+                    'order_total_price' => $product->price * $quantity,
+                    'created_at' => $day,
+                    'order_status' => 'completed',
+                    'shipping_id' => $shipping->id,
+                    'transaction_id' => $transaction->id
+                ]);
+                $order['created_at'] = $day;
+                $order->save();
+                $individualOrder = new IndividualOrder([
+                    'order_id' => $order->id,
+                    'product_id' => $product->id,
+                    'quantity' => $quantity,
+                    'size' => 'M',
+                    'price' => $product->price
+                ]);
+                $individualOrder['created_at'] = $day;
+                $individualOrder->save();
+            }
+        }
     }
 }

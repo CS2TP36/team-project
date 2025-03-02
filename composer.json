@@ -9,7 +9,9 @@
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "mailgun/mailgun-php": "^4.3",
-        "marineusde/larapex-charts": "^1.4"
+        "marineusde/larapex-charts": "^1.4",
+        "picocss/pico": "^2.0",
+        "symfony/filesystem": "^7.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -38,7 +40,8 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php pico-symlink.php"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -51,6 +54,9 @@
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+        ],
+        "post-install-cmd": [
+            "@php pico-symlink.php"
         ]
     },
     "extra": {

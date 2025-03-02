@@ -5,6 +5,7 @@
 @php
     use App\Models\Product;
     use App\Http\Controllers\ReviewController;
+    use App\Models\User;
     // add to the popularity value of the product on viewing
     $product['popularity'] = $product['popularity'] + 1;
     $product->save();
@@ -96,12 +97,32 @@
                         <p><strong>Reviews:</strong></p>
                         <!-- TODO: Probably want to rename classes and do some css to make look nice -->
                         <div class="something">
-                            @foreach($reviews as $review)
-                                <div class="review">
-                                    <h2>{{$review['title']}}</h2>
-                                    <p>{{$review['review']}}</p>
-                                    <p>{{$review['rating']}}/5</p>
-                                </div>
+                            @foreach($reviews->reverse() as $review)
+                                <div class="line-break"></div>
+                                <p><strong>User: {{ (User::get()->where('id', $review['user_id'])->first())['first_name'] }}</strong></p>
+                                <!-- <div class="line-break"></div> -->
+                                <p><strong>{{$review['title']}}</strong></p>
+                                <p>{{$review['review']}}</p>
+                                <p id="star-{{ $loop->index }}">{{$review['rating']}}</p>
+
+                                <script>
+                                    function displayStarRating(rating, starId) {
+                                        const starContainer = document.getElementById(starId);
+                                        starContainer.innerHTML = '';
+
+                                        for (let i = 1; i <= 5; i++) {
+                                            const star = document.createElement('span');
+                                            if (i <= rating) {
+                                                star.textContent = '⭐';
+                                            } else {
+                                                star.textContent = '';
+                                            }
+                                            starContainer.appendChild(star);
+                                        }
+                                    }
+
+                                    displayStarRating(<?php echo $review['rating']; ?>, 'star-{{ $loop->index }}');
+                                </script>
                             @endforeach
                         </div>
                 </section>
