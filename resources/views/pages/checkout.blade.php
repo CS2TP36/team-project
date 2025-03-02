@@ -100,6 +100,8 @@
                 @endforeach
             </ul>
             <p class="total">Total: £<span id="total-price">{{ number_format($total, 2) }}</span></p>
+            <label for="discount_code">Discount Code (applied during transaction)</label>
+            <input type="text" name="discount_code">
 
             <!-- Hidden fields to pass billing and payment data -->
             <input type="hidden" name="region" id="region-input">

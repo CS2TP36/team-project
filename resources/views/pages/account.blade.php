@@ -2,48 +2,43 @@
 @section('title','Account')
 @section('content')
     <div class="account-page">
-        <!--<h1>My Account</h1>-->
-        <div class="sidebar">
-            <aside>
-                <h2>My Account</h2>
-                <div class="line-break"><br></div>
-                <ul>
-                    <li data-target="dashboard" class="active"><a href="#">Dashboard</a></li>
-                    <!-- <div class="line-break"><br></div> -->
-                    <li data-target="contact-details"><a href="#">Contact Details</a></li>
-                    <!-- <div class="line-break"><br></div> -->
-                    <li data-target="user-orders"><a href="/orders">My Orders</a></li>
-                    <!-- <div class="line-break"><br></div> -->
-                    <li><a href="/change-pass">Change Password</a></li>
-                    <!-- <div class="line-break"><br></div> -->
-                    <li><a href="/logout">Sign Out</a></li>
-                    <!-- <div class="line-break"><br></div> -->
-                </ul>
-            </aside>
-        </div>
+        <div class="container"> 
+            <h1>Your Account</h1>
+            <div class="grid">
+                <!-- Need to sort out this link -->
+                <a href="/details" class="card">
+                    <img src="images/details-icon.png" alt="Details"> 
+                    <div class="card-content">
+                        <h2>Your Details</h2>
+                        <p>First name, Last name, Email adddress</p>
+                    </div>
+                </a>
+            
+                <a href="/orders" class="card">
+                    <img src="images/orders-icon.png" alt="Orders"> 
+                    <div class="card-content">
+                        <h2>Your Orders</h2>
+                        <p>Track, return, cancel an order, download invoice or buy again</p>
+                    </div>
+                </a>
 
-        <div class="main-content">
-            <section id="dashboard" class="content-section active">
-                    <!-- Description of the product -->
-                    <p><strong>My Account</strong></p>
-                    <div class="line-break"><br></div>
-                    <p>??? will be displayed here.</p>
-            </section>
+                <!-- Need to sort out this link -->
+                <a href="#" class="card">
+                    <img src="images/addresses-icon.png" alt="Addresses">
+                    <div class="card-content">
+                        <h2>Your Addresses</h2>
+                        <p>Edit, remove or set default address</p>
+                    </div>
+                </a>
 
-            <section id="contact-details" class="content-section">
-                    <p><strong>Contact Details</strong></p>
-                    <div class="line-break"><br></div>
-                    <p>Contact Details will be displayed here.</p>
-                    <p><strong>Name:</strong> {{$user['first_name']}} {{$user['last_name']}}</p>
-                    <p><strong>Email:</strong> {{$user['email']}}</p>
-            </section>
-
-            <section id="user-orders" class="content-section">
-                    <p><strong>My Orders</strong></p>
-                    <div class="line-break"><br></div>
-                    <p>Previous Orders will be displayed here.</p>
-            </section>
-            <script src="{{ asset('js/sidebar-underline.js') }}"></script>
+                <a href="/change-pass" class="card">
+                    <img src="images/security-icon.png" alt="Security">
+                    <div class="card-content">
+                        <h2>Login & Security</h2>
+                        <p>Manage password, email and mobile number</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 @endsection

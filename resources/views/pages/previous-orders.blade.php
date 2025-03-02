@@ -13,7 +13,7 @@
             @if($orders->count() > 0)
                 <!--order list section -->
                 <div class="orders-list">
-                    @foreach($orders as $order)
+                    @foreach($orders->reverse() as $order)
                         <div class="order">
                             <div class="order-info">
                                 <p class="order-date">Order placed: {{ $order["created_at"] }}</p>
