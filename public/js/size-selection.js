@@ -11,4 +11,5 @@ buttons.forEach(button => {
 
 function selectSize(size) {
     document.getElementById('size').value = size;
+    document.getElementById('wishsize').value = size;
 }

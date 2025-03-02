@@ -20,6 +20,7 @@ use App\Http\Controllers\BasketController;
 use App\Http\Controllers\Admin\ProductManagementController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\WishlistController;
 
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
@@ -76,6 +77,11 @@ Route::post('/change-pass', [PassChangeController::class, 'change'])->name('chan
 Route::get('/terms-conditions', function () {
     return view('pages.terms-conditions');
 });
+
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+Route::post('/wishlist/add', [WishlistController::class, 'add'])->name('wishlist.add');
+Route::patch('/wishlist/update/{id}', [WishlistController::class, 'update'])->name('wishlist.update');
+Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
 
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
 

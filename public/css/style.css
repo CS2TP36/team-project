@@ -865,9 +865,307 @@ h1 {
         font-weight: bold;
     }
 
+
+    /* CSS for Wishlist Page */
+
+.wishlist {
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px;
+        margin-top: 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+        line-height: 1.6;
+        padding-top: 30px;
+    }
+
+    header {
+        background-color: rgb(12, 12, 12);
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    section::after {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: white;
+        box-shadow: 0 4px 8px black;
+        border-radius: 8px;
+    }
+
+    table {
+        width: 83.3%;
+        border-collapse: collapse;
+        margin-left: 10px auto;
+        margin-bottom: 20px;
+    }
+
+    table th,
+    table td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+
+    table th {
+        background-color: rgb(7, 7, 7);
+        padding: 10px 5px;
+        color: white;
+        width: auto;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #F2F2F2;
+    }
+
+    table td {
+        font-size: 1rem;
+    }
+
+    table input[type="number"] {
+        width: 50px;
+        padding: 5px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #F2F2F2;
+    }
+
+    table td a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
     table td a:hover {
         text-decoration: underline;
     }
+
+    div h3 {
+        color: black;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    div input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    div button {
+        background-color: black;
+        color: white;
+        font-size: 1rem;
+        padding: 8px 10px;
+        margin: -10px auto 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        top: -9px;
+        transition: background-color 0.3s ease;
+    }
+
+    div button:hover {
+        background-color: #4D4D4D;
+        border-color: #ccc;
+    }
+
+    div p {
+        font-size: 1.1rem;
+        color: black;
+        line-height: 1.5;
+        margin: 10px 0;
+        padding: 6px 9px;
+        justify-content: space-between;
+        border-radius: 5px;
+    }
+
+    div strong {
+        font-size: 1.3rem;
+        color: black;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 5px;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2rem;
+        }
+
+        table td,
+        table th {
+            font-size: 0.55rem;
+            padding: 4px;
+            width: 50%;
+        }
+
+        div input[type="text"],
+        div button {
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        div p,
+        div strong {
+            font-size: 1rem;
+        }
+
+        footer {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.wishlist-summary {
+    max-width: 400px;
+    position: relative;
+    top: -10px;
+    float: right;
+    right: 15px;
+    margin: 0 20px 20px 0;
+    padding: 20px;
+
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.wishlist-summary h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.wishlist-summary p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.wishlist-summary p strong {
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.wishlist-summary a button {
+    background-color: #000;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.wishlist-summary a button:hover {
+    background-color: #4D4D4D;
+}
+
+@media (max-width: 768px) {
+    .wishlist-summary {
+        max-width: 200px;
+        float: right;
+        right: 15px;
+        max-height: 200px;
+        background-color: white;
+        border: 1px solid #e1e1e1;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        color: #333;
+        margin-bottom: 200px;
+    }
+
+    .wishlist-summary h3 {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 1px;
+    }
+
+    .wishlist-summary p {
+        font-size: 10px;
+        line-height: 1.6;
+        border-bottom: 1px solid #ccc;
+        padding: 0;
+    }
+
+    .wishlist-summary p strong {
+        font-size: 10px;
+        color: #000;
+    }
+
+    .wishlist-summary a button {
+        background-color: #000;
+        color: white;
+        font-size: 10px;
+        width: 80px;
+        padding: 0;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        display: block;
+        height: 30px;
+        text-align: center;
+        margin: 0;
+        outline: none;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+    }
+}
+
 
     div h3 {
         color: black;
