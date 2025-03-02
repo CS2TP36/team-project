@@ -2775,7 +2775,7 @@ button:hover {
     justify-content: center;
     gap: 120px;
     flex-wrap: wrap;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 80px;
 }
 
@@ -2879,6 +2879,20 @@ label {
 
 .filter-btn:hover {
     background-color: #4D4D4D;
+}
+
+#breadcrumbs{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-right: 1150px;
+
+
+}
+
+#breadcrumb-list a{
+    text-decoration: none;
+    list-style: none;
+    color: #000;
 }
 
 @media (max-width: 1340px) {
