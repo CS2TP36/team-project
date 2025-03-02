@@ -2,6 +2,8 @@
 
 // trying to make options persistent in the form to show which filters are applied
 document.addEventListener('DOMContentLoaded', function () {
+    // get the breadcrumb list
+    let breadcrumb = document.getElementById('breadcrumb-list');
     // get the path from the current url
     let path = (new URL(window.location)).pathname;
     // debug
@@ -22,8 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (pathLen > 0) {
         if (path[0] === "1") {
             document.getElementById('mens').checked = true;
+            breadcrumb.innerHTML += "<a href='/products/1'>Mens > </a>";
         } else if (path[0] === "0") {
             document.getElementById('womens').checked = true;
+            breadcrumb.innerHTML += "<a href='/products/0'>Womens > </a>";
         }
         // sort by
         if (pathLen > 2) {
@@ -47,18 +51,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 switch (path[3]) {
                     case "4":
                         document.getElementById('coats').checked = true;
+                        breadcrumb.innerHTML += "Coats";
                         break;
                     case "3":
                         document.getElementById('hoodies').checked = true;
+                        breadcrumb.innerHTML += "Hoodies";
                         break;
                     case "2":
                         document.getElementById('trousers').checked = true;
+                        breadcrumb.innerHTML += "Trousers";
                         break;
                     case "1":
                         document.getElementById('shoes').checked = true;
+                        breadcrumb.innerHTML += "Shoes";
                         break;
                     case "5":
                         document.getElementById('shirts').checked = true;
+                        breadcrumb.innerHTML += "Shirts";
                 }
                 // price filter
                 if (pathLen > 4) {

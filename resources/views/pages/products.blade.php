@@ -16,6 +16,11 @@
         <p>Browse Our Products</p>
     </div>
 
+    <!-- a breadcrumb menu -->
+    <div id="breadcrumbs">
+        <p id="breadcrumb-list"><a href="/products">Products > </a></p>
+    </div>
+
     <!--
          Look at \App\Http\Controllers\ProductLister::get
          Should return a list of products and do all the sorting for you
