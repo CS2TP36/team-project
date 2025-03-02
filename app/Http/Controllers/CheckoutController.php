@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DiscountCode;
 use App\Models\IndividualOrder;
 use Illuminate\Http\Request;
 use App\Models\Order;
@@ -47,7 +46,7 @@ class CheckoutController extends Controller
 
             $values = $request->only([
                 'region', 'full_name', 'address', 'postcode', 'phone',
-                'card_name', 'card_number', 'expiry_date', 'cvv', 'discount_code'
+                'card_name', 'card_number', 'expiry_date', 'cvv'
             ]);
 
             // get relevent basket items
@@ -56,16 +55,6 @@ class CheckoutController extends Controller
             // get the total price
 
             $total = $basket->sum(fn($item) => $item->getTotalPrice());
-
-            // check if there is a discount code, if so apply it
-            if ($values['discount_code']) {
-                $discount = DiscountCode::where('code', $values['discount_code'])->first();
-                if ($discount && $discount->isValid()) {
-                    $total = $discount->applyDiscount($total);
-                }
-            }
-            // TODO: test if the above works after checkout page is reworked
-
             // create a new order
             $order = Order::create([
                 'user_id' => Auth::id(),

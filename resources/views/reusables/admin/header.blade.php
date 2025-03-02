@@ -10,7 +10,6 @@
             @if(Auth::check())
                 <li><a href="{{ route('admin.products.index') }}" class="btn btn-primary">Manage Products</a></li>
                 <li><a href="{{ route('admin.manage-users') }}">Manage Users</a></li>
-                <li><a href="{{ route('admin.discounts') }}">Create a Discount</a></li>
             @endif
             <li><a href="{{ route('admin.messages') }}">User messages</a></li>
         </ul>
@@ -22,5 +21,6 @@
                 </button></li>
             </ul>
         </form>
+
     </nav>
 </header>

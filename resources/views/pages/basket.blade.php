@@ -2,52 +2,62 @@
 @section('title', 'Basket')
 @section('content')
     <div class="basket">
-        <!-- <h1>Basket</h1> -->
-        <section class="basket-container">
-            <div class="basket-details">
-                <h2>Your Basket</h2>
-                <div class="line-break"></div>
+        <h1>Basket</h1>
+        <h2>Your basket</h2>
+        <section>
+            <table>
+                <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>size</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                    <th>Subtotal</th>
+                </tr>
+                </thead>
+                <tbody>
                 @forelse($basketItems as $item)
-                    <div class="basket-item">
-                        <div class="item-image">
-                            <img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}"></img>
-                            
-                            <form action="{{ route('basket.remove', $item->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">Remove</button>
-                            </form>
-                        </div>
-                        <div class="item-details">
-                            <p>{{ $item->product->name }}</p>
-                            <p><strong>£{{ number_format($item->product->price * $item->quantity, 2) }}</strong></p>
-                            <p>Size: {{ $item->size }}</p> <!-- Display size -->
-                        </div>
-
-                        <div class="item-quantity">
+                    <tr>
+                        <td><img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}" width="50">
+                        </td>
+                        <td>{{ $item->product->name }}</td>
+                        <td>{{ $item->size }}</td> <!-- Display size -->
+                        <td>£{{ number_format($item->product->price, 2) }}</td>
+                        <td>
                             <form action="{{ route('basket.update', $item->id) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
                                 <input type="number" name="quantity" value="{{ $item->quantity }}" min="1" max="10">
                                 <button type="submit">Update</button>
                             </form>
-                        </div>
-                    </div>
+                        </td>
+                        <td>
+                            <form action="{{ route('basket.remove', $item->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                        <td>£{{ number_format($item->product->price * $item->quantity, 2) }}</td>
+                    </tr>
                 @empty
-                    <p>Your basket is empty!</p>
+                    <tr>
+                        <td colspan="7">Your basket is empty!</td>
+                    </tr>
                 @endforelse
-            </div>
-
+                </tbody>
+            </table>
             <div class="basket-summary">
+                <h3>Basket Totals</h3>
                 <p>Subtotal: £{{ number_format($total, 2) }}</p>
-                <div class="line-break"></div>
                 <p>Shipping: Free</p>
-                <div class="line-break"></div>
                 <p><strong>Total: £{{ number_format($total, 2) }}</strong></p>
-                <div class="line-break"></div>
-                <a href="/checkout"><button>Proceed to Checkout</button></a>
+                <a href="/checkout">
+                    <button>Proceed to Checkout</button>
+                </a>
                 <!-- Probably should add something about reading terms and conditions before checkout -->
-                <p>We will use your information in accordance with our (<a href="/privacy-policy">Privacy Policy</a>). Updated January 2025</p>
             </div>
         </section>
     </div>
