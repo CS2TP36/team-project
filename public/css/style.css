@@ -2969,17 +2969,20 @@ label {
 #breadcrumbs{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-right: 1120px;
+    margin-right: 1170px;
 
+        a{
+            text-decoration: none;
+            list-style: none;
+            color: #000;
+            font-size: 18px;
+        }
 
+        P{
+            color: #000;
+            font-size: 18px;
+        }
 
-}
-
-#breadcrumb-list {
-    text-decoration: none;
-    list-style: none;
-    color: #000;
-    font-size: 18px;
 }
 
 

@@ -19,7 +19,7 @@
     <!-- a breadcrumb menu -->
      <div>
         <div id="breadcrumbs">
-            <a id="breadcrumb-list"  href="/products">Products > </a>
+            <p id="breadcrumb-list"><a href="/products">Products > </a></p>
         </div>
 
         <!--
