@@ -80,7 +80,6 @@ Route::get('/terms-conditions', function () {
 
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::post('/wishlist/add', [WishlistController::class, 'add'])->name('wishlist.add');
-Route::patch('/wishlist/update/{id}', [WishlistController::class, 'update'])->name('wishlist.update');
 Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
 
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');

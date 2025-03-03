@@ -41,6 +41,8 @@
                     <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
                     <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
                     <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
+                    
+                    <div class="line-break"></div>
 
                     <button type="submit">Add to Basket</button>
 
@@ -54,17 +56,6 @@
                     <input type="hidden" name="size" id="wishsize" value="">
 
                     <div class="line-break"></div>
-
-                    <!-- Quantity selection -->
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
-                    ({{ $product->stock }} in stock)
-
-                    <p>Choose size:</p>
-                    <!-- Size selection buttons -->
-                    <button class="size-selection" type="button" onclick="selectSize('S')">S</button>
-                    <button class="size-selection" type="button" onclick="selectSize('M')">M</button>
-                    <button class="size-selection" type="button" onclick="selectSize('L')">L</button>
 
                     <!-- Submit button -->
                     <button type="submit">Add to Wishlist</button>

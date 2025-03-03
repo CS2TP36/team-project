@@ -11,7 +11,7 @@ class WishlistItem extends Model
 
     protected $table = 'wishlist_items';
 
-    protected $fillable = ['user_id','session_id','product_id','size','quantity',];
+    protected $fillable = ['user_id', 'session_id', 'product_id', 'size'];
 
     public function product(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
