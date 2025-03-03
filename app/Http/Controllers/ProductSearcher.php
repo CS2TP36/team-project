@@ -65,5 +65,20 @@ class ProductSearcher extends Controller
         return view('pages.products', ['products' => $products]);
     }
 
-
+    function searchPreview(String $searchTerm="")
+    {
+        $products = ProductLister::get();
+        $toReturn = [];
+        foreach($products as $product){
+            // add to list if matches
+            if (str_contains(strtolower($product['name']), strtolower($searchTerm))) {
+                $toReturn[] = $product;
+            }
+            // stop if 3 found
+            if (sizeof($toReturn) > 2) {
+                break;
+            }
+        }
+        return json_encode($toReturn);
+    }
 }

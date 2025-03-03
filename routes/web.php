@@ -129,3 +129,5 @@ Route::get('/admin/manage-users', [ManageUsersController::class, 'show'])->name(
 
 Route::get('/admin/discounts', [DiscountController::class, 'show'])->name('admin.discounts');
 Route::post('/admin/discounts', [DiscountController::class, 'add'])->name('admin.discounts.add');
+
+Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPreview'])->name('search.preview');
