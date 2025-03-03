@@ -91,7 +91,7 @@
                             </li>
                             <li class="category-buttons"><!--creates the buttons to click on the filter for each one-->
                                 <input type="radio" id="womens" name="gender">
-                                <label for="women">Women</label>
+                                <label for="womens">Women</label>
                             </li>
                         </ul>
 
