@@ -361,12 +361,15 @@ body {
     font-family: Arial, sans-serif;
     justify-content: center;
     color: var(--text-colour);
-    /* border: black 1px solid; */
+    /* border: red 1px solid; */
 
     .container {
+        background-color: var(--alt-bg-colour);
         max-width: 1200px;
         margin: 0 auto;
-        margin-bottom: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 15px;
     }
     
     .grid {
@@ -409,10 +412,14 @@ body {
 /* CSS for Contact Details Page*/
 .contact-details {
     font-family: Arial, sans-serif;
-    width: 100%;
+    background-color: var(--alt-bg-colour);
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     color: var(--text-colour);
     /* border: 1px solid saddlebrown; */
     
@@ -427,7 +434,7 @@ body {
     flex: 1;
     width: 33vw;
     min-width: 500px;
-    max-width: 1000px;
+    max-width: 600px;
     padding: 5px;
     margin: 0 auto;
     /* border: 1px solid blue; */
@@ -470,7 +477,7 @@ body {
         max-width: 1200px;
     }
 
-    form input[type="text"] {
+    form input[type="text"], input[type="email"] {
         width: 100%;
         color: var(--input-text-colour);
         border: 1px solid var(--text-colour);
@@ -479,7 +486,7 @@ body {
         /*Disables default browser outline on focus*/
     }
 
-    form input[type="text"]:focus {
+    form input[type="text"]:focus, input[type="email"]:focus {
         box-shadow: 0 0 10px var(--box-shadow-color);
         border-color: var(--alt-border-color);
     }
