@@ -44,8 +44,6 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-Route::get('/account', [AccountController::class, 'show'])->name('account.show');
-
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
 Route::get('/product/{id?}', [ShowProduct::class, 'show'])->name('product.show');
 
@@ -131,3 +129,7 @@ Route::get('/admin/discounts', [DiscountController::class, 'show'])->name('admin
 Route::post('/admin/discounts', [DiscountController::class, 'add'])->name('admin.discounts.add');
 
 Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPreview'])->name('search.preview');
+
+// stuff for getting the various account pages defined via accountcontroller
+Route::get('/account', [AccountController::class, 'show'])->name('account.page');
+Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
