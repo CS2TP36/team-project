@@ -364,7 +364,7 @@ body {
     /* border: red 1px solid; */
 
     .container {
-        background-color: var(--alt-bg-colour);
+        background-color: var(--bg-colour);
         max-width: 1200px;
         margin: 0 auto;
         margin-top: 10px;
@@ -380,6 +380,7 @@ body {
     }
     
     .card {
+        background: var(--alt-bg-colour);
         display: flex;
         align-items: center;
         padding: 20px;
@@ -589,17 +590,17 @@ body {
 
 }
 
+/* CSS for Previous Orders Page */
+
 #previous-orders-body {
-    background-color: #f4f4f4;
+    background-color: var(--bg-colour);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* CSS for previous orders page (light mode) */
-
 #previous-orders {
-    background-color: #fff;
+    background-color: var(--alt-bg-colour);
     max-width: 1200px;
     margin: 30px auto;
     /*centre the container with margin */
@@ -612,7 +613,7 @@ body {
 /*h1 styling */
 
 h1 {
-    color: #333;
+    color: var(--text-colour);
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 20px;
@@ -628,7 +629,7 @@ h1 {
 /* styling for each order*/
 
 .order {
-    background-color: #f9f9f9;
+    background-color: var(--bg-colour);
     border-radius: 8px;
     /*rounded corners*/
     padding: 20px;
@@ -643,10 +644,10 @@ h1 {
     /* transition for background*/
 }
 
-.order:hover {
-    background-color: #f1f1f1;
+/* /* .order:hover {  
+    background-color: #010101;
     /* change background on hover */
-}
+/*}  */
 
 .order-info {
     flex: 1;
@@ -685,7 +686,7 @@ h1 {
 }
 
 .item-price {
-    color: #555;
+    color: var(--text-colour);
 }
 
 /*buttons and actions*/
