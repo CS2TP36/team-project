@@ -9,7 +9,7 @@
                             <img src="{{ asset('images/search.PNG') }}" class="search-logo" alt="Search Icon">
                     </form>
                     <a href="/account"><img src="{{ asset('images/Account.png') }}" class="user-logo" ></a> <!--links to account page-->
-                    <a href="/home"><img src="{{ asset('images/Hearts.png') }}" class="user-logo" > </a>
+                    <a href="/wishlist"><img src="{{ asset('images/Hearts.png') }}" class="user-logo" > </a>
                     <a href="/basket"><img src="{{ asset('images/Shop.png') }}" class="user-logo" > </a> <!--links to basket page-->
                 </li>
             </ul>
