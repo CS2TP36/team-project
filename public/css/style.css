@@ -144,8 +144,8 @@ body {
 }
 
 .FAQ {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
     padding: 40px 20px;
     margin: 0;
     padding: 0;
@@ -158,13 +158,13 @@ body {
         margin-bottom: 15px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: #000;
+        color: var(--text-colour);
     }
 
     .disclaimer {
         text-align: center;
         font-size: 1.2rem;
-        color: #444;
+        color: var(--text-colour);
         margin-bottom: 40px;
     }
 
@@ -177,7 +177,7 @@ body {
     }
 
     .faq-item {
-        background: #f9f9f9;
+        background: var(--alt-bg-colour);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -199,7 +199,7 @@ body {
         font-weight: bold;
         text-align: left;
         background: none;
-        color: black;
+        color: var(--text-colour);
         border: none;
         cursor: pointer;
         display: flex;
@@ -210,7 +210,7 @@ body {
     }
 
     .faq-question:hover {
-        color: #555;
+        color: var(--btn-hover-colour);
     }
 
     .arrow {
@@ -223,7 +223,7 @@ body {
         display: none;
         padding: 15px;
         font-size: 0.95rem;
-        color: #333;
+        color: var(--text-colour);
         border-top: 1px solid #ddd;
     }
 
@@ -241,8 +241,8 @@ body {
         display: inline-block;
         margin-top: 10px;
         padding: 8px 15px;
-        background: black;
-        color: white;
+        background: var(--alt-bg-colour);
+        color: var(--text-colour);
         font-weight: bold;
         text-decoration: none;
         border-radius: 5px;
@@ -250,7 +250,7 @@ body {
     }
 
     .faq-item a:hover {
-        background: #333;
+        background: var(--btn-hover-colour);
     }
 
     /* "If This Has Not Helped" Section */
@@ -259,7 +259,7 @@ body {
         text-align: center;
         margin-top: 50px;
         padding: 40px 20px;
-        background: #f1f1f1;
+        background: var(--alt-bg-colour);
         border-radius: 15px;
         max-width: 900px;
         margin-left: auto;
@@ -270,12 +270,12 @@ body {
     .FMI h2 {
         font-size: 1.8rem;
         margin-bottom: 10px;
-        color: #000;
+        color: var(--text-colour);
     }
 
     .FMI p {
         font-size: 1rem;
-        color: #333;
+        color: var(--text-colour);
         margin-bottom: 20px;
     }
 
@@ -1918,10 +1918,10 @@ h1 {
 .terms-container {
     font-family: "Arial", sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    /* background-color: var(--alt-bg-colour); */
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--text-colour);
     width: 60%;
     margin: 0 auto;
     padding: 50px 0;
@@ -1933,7 +1933,7 @@ h1 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: black;
+    color: var(--text-colour);
 }
 
 /* Disclaimer Styling */
@@ -1951,7 +1951,7 @@ h1 {
 .terms-container h2 {
     font-size: 1.8em;
     font-weight: bold;
-    color: #222;
+    color: var(--text-colour);
     margin-top: 40px;
 }
 
@@ -1960,7 +1960,7 @@ h1 {
 .terms-container p,
 .terms-container ul {
     font-size: 1.1em;
-    color: #555;
+    color: var(--text-colour);
     margin-bottom: 20px;
 }
 
@@ -2182,7 +2182,7 @@ h1 {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: var(--bg-colour);
 
     #banner {
         width: 100%;
@@ -2254,11 +2254,11 @@ h1 {
     .text p,
     .text ul {
         font-size: 1.1rem;
-        color: #333;
+        color: var(--text-colour);
     }
 
     #cta {
-        text-align: center;
+        text-align: cente   r;
         padding: 30px 20px;
         background: #222;
         color: white;
