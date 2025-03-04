@@ -24,7 +24,7 @@ class ManageUsersController extends Controller
         // if a role is specified filter the users
         if ($request) {
             $request->validate([
-                'role' => 'required|string|in:admin,customer,all'
+                'role' => 'string|in:admin,customer,all'
             ]);
             if ($request['role'] != 'all') {
                 $users = $users->where('role', $request['role']);
