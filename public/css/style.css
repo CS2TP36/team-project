@@ -867,7 +867,7 @@ h1 {
 
 /* CSS for Wishlist Page*/
 
-.wishlist {
+/* .wishlist {
     * {
         font-family: Arial, Helvetica, sans-serif;
         padding: 5px;
@@ -1057,9 +1057,9 @@ h1 {
             font-size: 0.8rem;
         }
     }
-}
+} */
 
-.wishlist-summary {
+/* .wishlist-summary {
     max-width: 400px;
     position: relative;
     top: -10px;
@@ -1108,13 +1108,13 @@ h1 {
     margin-top: 20px;
     outline: none;
     transition: background-color 0.3s ease;
-}
+} */
 
-.wishlist-summary a button:hover {
+/* .wishlist-summary a button:hover {
     background-color: #4D4D4D;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .wishlist-summary {
         max-width: 200px;
         float: right;
@@ -1163,10 +1163,10 @@ h1 {
         transition: background-color 0.3s ease;
         margin-bottom: 10px;
     }
-}
+} */
 
 
-    div h3 {
+    /* div h3 {
         color: black;
         margin-bottom: 10px;
         font-size: 1.2rem;
@@ -1221,13 +1221,13 @@ h1 {
         font-size: 1.3rem;
         color: black;
     }
-
+ */
 
     footer {
         background-color: black;
         color: white;
         padding: 20px;
-        text-align: center;
+        /* text-align: center; */
         position: relative;
         bottom: 0;
         width: 100%;
@@ -1274,7 +1274,7 @@ h1 {
 
     }
 
-    .basket-summary {
+    /* .basket-summary {
 
         max-width: 400px;
         position: relative;
@@ -1335,9 +1335,9 @@ h1 {
     .basket-summary h3 {
         margin-bottom: 9px;
 
-    }
+    } */
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         .basket-summary {
             max-width: 200px;
             position: relative;
@@ -1389,7 +1389,7 @@ h1 {
             margin-bottom: 10px;
 
         }
-    }
+    } */
 
 
 
