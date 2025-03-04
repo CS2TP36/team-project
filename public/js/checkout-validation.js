@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const billingInfo = {
-        region: document.getElementById('region'),
         fullName: document.getElementById('full-name'),
         address: document.getElementById('address'),
         postcode: document.getElementById('postcode'),
@@ -14,9 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         cvv: document.getElementById('cvv'),
     };
 
-    // Map field keys to user-friendly names
+    const shippingInfo = {
+        shippingOption: document.querySelector('input[name="shipping_option"]:checked'),
+    };
+
+    const discountInfo = {
+        applyDiscount: document.getElementById('apply-discount'),
+        discountCode: document.getElementById('discount_code'),
+    };
+
     const fieldNames = {
-        region: 'Region',
         fullName: 'Full Name',
         address: 'Street Address',
         postcode: 'Postcode',
@@ -27,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cvv: 'CVV',
     };
 
-    // Error handling functions
     const displayError = (inputElement, message) => {
         let errorSpan = inputElement.parentElement.querySelector('.error-message');
         if (!errorSpan) {
@@ -45,21 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
         inputElement.classList.remove('error');
     };
 
-    // Validation functions
     const validateFields = (fields, fieldNames) => {
         let isValid = true;
 
         for (let key in fields) {
             const field = fields[key];
-            const fieldName = fieldNames[key]; // Get the user-friendly field name
-            if (!field.value.trim()) {
+            const fieldName = fieldNames[key];
+            if (!field.value || !field.value.trim()) {
                 displayError(field, `${fieldName} is required.`);
                 isValid = false;
             } else {
                 clearError(field);
             }
 
-            // Additional validation for expiry date
             if (key === 'expiryDate') {
                 const expiryDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
                 if (!expiryDatePattern.test(field.value.trim())) {
@@ -72,48 +75,101 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     };
 
-    // Section navigation
-    window.nextSection = (sectionId) => {
-        const currentSection = document.querySelector('.checkout > section:not([style*="display: none"])');
-        let isValid = false;
+    const calculateTotal = () => {
+        let total = parseFloat(document.getElementById('total-price').textContent.replace(',', ''));
+        let shipping = 0;
+        let discount = 0;
 
-        if (currentSection.id === 'billing-info-section') {
-            isValid = validateFields(billingInfo, fieldNames);
-        } else if (currentSection.id === 'payment-method-section') {
-            isValid = validateFields(paymentInfo, fieldNames);
+        const shippingOption = document.querySelector('input[name="shipping_option"]:checked');
+        if (shippingOption) {
+            if (shippingOption.value === 'standard') shipping = 4.49;
+            else if (shippingOption.value === 'next_day') shipping = 6.49;
+            else if (shippingOption.value === 'priority') shipping = 5.49;
         }
 
-        if (isValid) {
-            currentSection.style.display = 'none';
-            document.getElementById(sectionId).style.display = 'block';
+        document.getElementById('shipping-price').textContent = shipping.toFixed(2);
+
+        if (discountInfo.applyDiscount.checked && discountInfo.discountCode.value.trim()) {
+            // Replace with your discount logic
+            discount = 0; // Example: replace with actual discount calculation
+            document.getElementById('discount-amount').textContent = discount.toFixed(2);
+        } else {
+            document.getElementById('discount-amount').textContent = '0.00';
         }
+
+        const grandTotal = total + shipping - discount;
+        document.getElementById('grand-total').textContent = grandTotal.toFixed(2);
     };
 
-    window.backToSection = (sectionId) => {
-        document.querySelectorAll('.checkout > section').forEach((section) => {
-            section.style.display = 'none';
+    document.querySelectorAll('.next-section').forEach(button => {
+        button.addEventListener('click', () => {
+            const currentSection = button.closest('.checkout-section');
+            const nextSectionId = button.dataset.next;
+            let isValid = true;
+
+            if (currentSection.id === 'billing-info-section') {
+                isValid = validateFields(billingInfo, fieldNames);
+            } else if (currentSection.id === 'payment-method-section') {
+                isValid = validateFields(paymentInfo, fieldNames);
+            } else if (currentSection.id === 'shipping-info-section') {
+                if (!document.querySelector('input[name="shipping_option"]:checked')) {
+                    displayError(document.querySelector('input[name="shipping_option"]'), 'Please select a shipping option.');
+                    isValid = false;
+                } else {
+                    clearError(document.querySelector('input[name="shipping_option"]'));
+                }
+            }
+
+            if (isValid) {
+                document.getElementById(nextSectionId).style.display = 'block';
+                if (nextSectionId === 'order-summary-section') {
+                    calculateTotal();
+                }
+            }
         });
-        document.getElementById(sectionId).style.display = 'block';
-    };
+    });
 
-    // Handling the Place Order button
+    document.querySelectorAll('.back-section').forEach(button => {
+        button.addEventListener('click', () => {
+            const currentSection = button.closest('.checkout-section');
+            const backSectionId = button.dataset.back;
+            currentSection.style.display = 'none';
+            document.getElementById(backSectionId).style.display = 'block';
+        });
+    });
+
+    discountInfo.applyDiscount.addEventListener('change', () => {
+        document.getElementById('discount-code-input').style.display = discountInfo.applyDiscount.checked ? 'block' : 'none';
+        calculateTotal();
+    });
+
+    document.querySelectorAll('input[name="shipping_option"]').forEach(radio => {
+        radio.addEventListener('change', calculateTotal);
+    });
+
     document.getElementById('place-order-btn').addEventListener('click', (event) => {
         event.preventDefault();
 
         const allValid =
-            validateFields(billingInfo, fieldNames) && validateFields(paymentInfo, fieldNames);
+            validateFields(billingInfo, fieldNames) &&
+            validateFields(paymentInfo, fieldNames) &&
+            document.querySelector('input[name="shipping_option"]:checked');
 
         if (allValid) {
-            // Map values to hidden inputs
-            const valuesToSend = { ...billingInfo, ...paymentInfo };
+            Object.assign(billingInfo, paymentInfo, { shippingOption: document.querySelector('input[name="shipping_option"]:checked') }, {discountCode: discountInfo.discountCode}, {applyDiscount: discountInfo.applyDiscount});
+
+            const valuesToSend = { ...billingInfo, ...paymentInfo, shippingOption: document.querySelector('input[name="shipping_option"]:checked'), discountCode: discountInfo.discountCode, applyDiscount: discountInfo.applyDiscount};
 
             for (let [key, field] of Object.entries(valuesToSend)) {
                 const hiddenInput = document.getElementById(`${key}-input`);
-                if (hiddenInput) {
-                    hiddenInput.value = field.value.trim();
+                if (hiddenInput && field) {
+                    hiddenInput.value = field.value ? field.value.trim() : field.value;
                 }
             }
 
+            document.getElementById('shipping-input').value = document.querySelector('input[name="shipping_option"]:checked').value;
+            document.getElementById('discount-code-input-final').value = discountInfo.discountCode.value;
+            document.getElementById('discount-applied-input').value = discountInfo.applyDiscount.checked ? 1 : 0;
             document.getElementById('order-form').submit();
         } else {
             alert('Please correct the errors before submitting.');
