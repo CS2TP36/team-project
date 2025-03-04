@@ -118,7 +118,7 @@ main {
     --alt-border-color: gold;
     --box-shadow-color: gold;
     --subnavbar-bg-color: #9b9b9b;
-    --text-banner-colour:  black;
+    --text-banner-colour:  rgb(0, 0, 0);
     --text-nav-colour:  black;
 }
 
@@ -3048,7 +3048,7 @@ button:hover {
     transform: translateX(-50%);
     font-family: 'Arial', sans-serif;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: var(--text-banner-colour);
     text-align: center;
     padding: 22px;
     top: 20%;
@@ -3400,7 +3400,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: var(--text-banner-colour);
     font-size: 60px;
     font-weight: bold;
     font-family: Arial;
@@ -3438,7 +3438,7 @@ button:hover {
 
 .product-item {
     text-align: center;
-    background-color: whitesmoke;
+    background-color: #d5d4d4;
     display: block;
     justify-content: space-evenly;
     max-height: 420px;
@@ -3495,7 +3495,7 @@ input[type="radio"] {
 
 label {
     cursor: pointer;
-    color: black;
+    color: var(--text-colour);
 }
 
 .filter-btn {
@@ -3522,17 +3522,17 @@ label {
 #breadcrumbs{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-right: 1170px;
+    margin-right: 1180px;
 
         a{
             text-decoration: none;
             list-style: none;
-            color: #000;
+            color: var(--text-colour);
             font-size: 18px;
         }
 
         P{
-            color: #000;
+            color: var(--text-colour);
             font-size: 18px;
         }
 

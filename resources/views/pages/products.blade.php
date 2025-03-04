@@ -5,7 +5,7 @@
 @section('content')
     <section><!--creates a banner container to contain our banner-->
         <div id="banner-container"><!--creates ID for our banner-->
-            <img src="{{asset('images/product-banner.png')}}" id="banner"><!--links to our banner-->
+            <img src="{{asset('images/products-page-banner.jpg')}}" id="banner"><!--links to our banner-->
             <div id="product-text-banner"><!--id for banner-->
                 <p>Check Out Our Products</p>
             </div>
