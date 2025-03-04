@@ -25,18 +25,6 @@
             <fieldset>
                 <legend>Billing Details</legend>
                 <div class="form-group">
-                    <label for="region">Region</label>
-                    <select id="region" name="region" required aria-label="Region">
-                        <option value="">Select Region</option>
-                        <option value="USA">USA</option>
-                        <option value="UK">United Kingdom</option>
-                        <option value="CA">Canada</option>
-                        <option value="AU">Australia</option>
-                        <option value="IN">India</option>
-                        <option value="FR">France</option>
-                    </select>
-                </div>
-                <div class="form-group">
                     <label for="full-name">Full Name</label>
                     <input type="text" id="full-name" name="full_name" placeholder="Bruce Wayne" required>
                 </div>
@@ -87,6 +75,7 @@
         </form>
     </section>
 
+
     <!-- Order Summary Section -->
     <section class="order-summary" id="order-summary-section" style="display: none;">
         <form id="order-form" method="POST" action="{{ route('checkout.checkout') }}">
@@ -116,6 +105,7 @@
 
             <button type="submit" id="place-order-btn">Place Order</button>
             <button type="button" id="back-to-payment" onclick="backToSection('payment-method-section')">Back</button>
+
         </form>
     </section>
 
