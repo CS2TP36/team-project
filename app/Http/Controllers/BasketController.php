@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product; // Pull Products stored in product model 
 use App\Models\Basket; // Pulls the Basket table 
+use App\Models\WishlistItem;//Pulls items from the Wishlist 
+
 
 class BasketController extends Controller
 {
@@ -70,6 +72,17 @@ class BasketController extends Controller
             'quantity' => $validated['quantity'],
         ]);
     }
+          // Removes the item from the wishlist after adding it to the basket
+        WishlistItem::where('product_id', $product->id)
+        ->where('size', $validated['size'])
+        ->where(function ($query) use ($request) {
+            if ($request->user()) {
+                $query->where('user_id', $request->user()->id);
+            } else {
+                $query->where('session_id', $request->session()->getId());
+            }
+        })
+        ->delete();
 
     return redirect()->route('basket.index')->with('success', 'Product added to basket!');
 }

@@ -41,13 +41,29 @@
                     <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
                     <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
                     <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
+                    
+                    <div class="line-break"></div>
 
                     <button type="submit">Add to Basket</button>
-                    <button type="button">Add to Wishlist</button>
+
+                </form>
+
+                <!-- Add to Wishlist -->
+                <form action="{{ route('wishlist.add') }}" method="POST">
+                    @csrf
+                    <!-- Hidden fields for product ID and size -->
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <input type="hidden" name="size" id="wishsize" value="">
+
+                    <div class="line-break"></div>
+
+                    <!-- Submit button -->
+                    <button type="submit">Add to Wishlist</button>
                 </form>
             </div>
 
             <script src="{{ asset('js/size-selection.js') }}"></script>
+
 
             <!-- Nav bar containing Product Info and Review-->
             <nav>

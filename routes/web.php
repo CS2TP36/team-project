@@ -20,6 +20,8 @@ use App\Http\Controllers\BasketController;
 use App\Http\Controllers\Admin\ProductManagementController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\WishlistController;
+
 
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
@@ -64,6 +66,12 @@ Route::get('/basket', [BasketController::class, 'index'])->name('basket.index');
 Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add');
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
+
+//wishlist stuff 
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+Route::post('/wishlist/add', [WishlistController::class, 'add'])->name('wishlist.add');
+Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
+
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.checkout');
