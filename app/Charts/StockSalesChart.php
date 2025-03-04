@@ -4,6 +4,7 @@ namespace App\Charts;
 
 use App\Models\IndividualOrder;
 use App\Models\Product;
+use Illuminate\Support\Facades\Artisan;
 use marineusde\LarapexCharts\Charts\LineChart AS OriginalLineChart;
 use marineusde\LarapexCharts\Options\XAxisOption;
 
@@ -21,7 +22,13 @@ class StockSalesChart
         // get number of sales from each of the last 14 days
         $salesPerDay = [];
         foreach ($last14days as $day) {
-            $salesPerDay[] = IndividualOrder::select("*")->where('product_id', $product->id)->whereDate('created_at', $day)->count();
+            $sales = IndividualOrder::select("*")->where('product_id', $product->id)->whereDate('created_at', $day)->get();
+            $quantity = 0;
+            // make sure to multiply by the quantity attached to each individualorder
+            foreach ($sales as $sale) {
+                $quantity += $sale['quantity'];
+            }
+            $salesPerDay[] = $quantity;
         } // [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
         // now roughly calculate the stock level for each of the last 14 days
         $salesPerDay = array_reverse($salesPerDay); // [14,13,12,11,10,9,8,7,6,5,4,3,2,1]

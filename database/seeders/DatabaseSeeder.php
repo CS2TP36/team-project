@@ -1289,6 +1289,10 @@ Machine washable
             // create orders for each day for the last few days
             for ($day = now(); $day->gt(now()->subDays(16)); $day->subDays(1)) {
                 $quantity = rand(0, 3);
+                // prevent the creation of zero orders
+                if ($quantity == 0) {
+                    continue;
+                }
                 // create the shipping item
                 $shipping = Shipping::create([
                     'shipping_date' => now(),
