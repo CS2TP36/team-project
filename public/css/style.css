@@ -101,6 +101,9 @@ main {
     --border-color: #ddd;
     --alt-border-color: gold;
     --box-shadow-color: gold;
+    --subnavbar-bg-color: #ffffff;
+    --text-banner-colour:  rgb(255, 255, 255);
+    --text-nav-colour:  rgb(168 204 204);
 }
 
 .dark-mode {
@@ -114,6 +117,9 @@ main {
     --border-color: #ddd;
     --alt-border-color: gold;
     --box-shadow-color: gold;
+    --subnavbar-bg-color: #9b9b9b;
+    --text-banner-colour:  black;
+    --text-nav-colour:  black;
 }
 
 #theme-toggle {
@@ -1344,7 +1350,6 @@ h1 {
     footer a {
         color: white;
         text-decoration: none;
-        font-weight: bold;
         margin: 0 5px;
     }
 
@@ -2529,7 +2534,7 @@ h1 {
 .second-nav {
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
-    background: #ffffff;
+    background-color: var(--subnavbar-bg-color);
     height: 38px;
     display: flex;
     animation: fadedown 0.5s ease-out forwards;
@@ -2557,7 +2562,7 @@ h1 {
         padding-left: 80px;
 
         a {
-            color: rgb(0, 0, 0);
+            color: var(--text-colour);
             font-size: 15px;
             font-weight: bold;
             list-style: none;
@@ -2568,7 +2573,7 @@ h1 {
 
         a:hover {
             text-decoration: underline;
-            color: #88a4ad;
+            color: var(--text-nav-colour);
             transform: scale(1.0);
         }
     }
@@ -2725,8 +2730,7 @@ button:hover {
 
             a {
                 color: white;
-                font-size: 10px;
-                font-weight: bold;
+                font-size: 10px;    
                 text-decoration: none;
             }
 
@@ -2782,7 +2786,7 @@ button:hover {
     position: absolute;
     left: 10%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
+    color: var(--text-banner-colour);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
     font-weight: bold;
@@ -2844,12 +2848,13 @@ button:hover {
 
 
     p {
-        color: rgb(0, 0, 0);
         font-size: 20px;
         font-weight: bold;
         text-decoration: underline;
         text-decoration-thickness: 5px;
         text-underline-offset: 15px;
+        color: var(--text-colour);
+        
 
     }
 }
@@ -3096,6 +3101,7 @@ button:hover {
     padding-bottom: 40px;
     font-size: 16px;
     font-family: 'Arial', sans-serif;
+    color: #000;
 
 
 }
