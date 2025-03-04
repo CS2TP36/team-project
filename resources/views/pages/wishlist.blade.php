@@ -23,6 +23,16 @@
                             <p><strong>£{{ number_format($item->product->price * $item->quantity, 2) }}</strong></p>
                             <p>Size: {{ $item->size }}</p> <!-- Display size -->
                         </div>
+
+                        <div class="add-basket">
+                            <form action="{{ route('basket.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{ $item->product->id }}">
+                                <input type="hidden" name="size" value="{{ $item->size }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit">Add to Basket</button>
+                            </form>
+                        </div>
                     </div>
                 @empty
                     <p>Your wishlist is empty!</p>

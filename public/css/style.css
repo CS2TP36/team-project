@@ -921,6 +921,20 @@ h1 {
                     width: 100px;
                     margin-bottom: 5px;
                 }
+
+                button {
+                    width: 65px;
+                    padding: 5px;
+                    border: 1px solid var(--btn-bg-colour);
+                    background-color: var(--btn-bg-colour);
+                    color: var(--btn-text-colour);
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+            
+                button:hover {
+                    background-color: var(--btn-hover-colour);
+                }
             }
 
             .item-details {
@@ -939,18 +953,20 @@ h1 {
                 }
             }
 
-            button {
-                width: 65px;
-                padding: 5px;
-                border: 1px solid var(--btn-bg-colour);
-                background-color: var(--btn-bg-colour);
-                color: var(--btn-text-colour);
-                cursor: pointer;
-                margin-bottom: 10px;
-            }
-        
-            button:hover {
-                background-color: var(--btn-hover-colour);
+            .add-basket {
+                button {
+                    width: 100px;
+                    padding: 5px;
+                    border: 1px solid var(--btn-bg-colour);
+                    background-color: var(--btn-bg-colour);
+                    color: var(--btn-text-colour);
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                }
+            
+                button:hover {
+                    background-color: var(--btn-hover-colour);
+                }
             }
         }
     }
