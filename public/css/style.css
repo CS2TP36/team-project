@@ -498,6 +498,14 @@ body {
         border-color: var(--alt-border-color);
     }
 }
+
+@media (max-width: 768px) {
+    .contact-details-form {
+        max-width: auto;
+    }
+
+}
+
 /* CSS for change password page */
 /*  styling for change password container */
 
@@ -2664,7 +2672,7 @@ h1 {
     .navbar {
         height: 90px;
         .navbardiv {
-            gap: 10px;
+            gap: 20px;
         }
 
         .logo {
@@ -2681,7 +2689,6 @@ h1 {
         #search-bar {
             width: 100px;
             flex-grow: 1;
-            margin-left: 20px;
             padding: 10px;
             font-size: 0px;
         }
