@@ -2557,7 +2557,6 @@ h1 {
     height: 38px;
     display: flex;
     animation: fadedown 0.5s ease-out forwards;
-    border-bottom: 2px solid #ddd;
 
     .second-navdiv {
         display: flex;
@@ -2602,6 +2601,7 @@ h1 {
 
 .message-area{
     text-align: center;
+    margin-top: 30px;
     width: 600px;
     align-items: center;
     justify-content: center;
@@ -2720,7 +2720,6 @@ h1 {
     justify-content: space-evenly;
     height: 350px;
     gap: 50px;
-    padding-bottom: 50px;
 }
 
 .footer-list {
@@ -2770,8 +2769,8 @@ button:hover {
 }
 
 #social-pic {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 @media (max-width: 768px) {
@@ -4136,13 +4135,6 @@ label {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
-        color: var(--text-colour);
-
-        
-    }
-
-    .text-center{
-        text-align: center;
     }
 
     /* Tabs Navigation */
@@ -4151,7 +4143,6 @@ label {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
-        
     }
 
     .tab-btn {
@@ -4164,7 +4155,6 @@ label {
         text-transform: uppercase;
         margin: 0 5px;
         transition: background-color 0.3s ease;
-        
     }
 
     .tab-btn.active-tab {
@@ -4253,5 +4243,9 @@ label {
     a:hover {
         text-decoration: underline;
     }
+}
+
+.click-collect{
+
 }
 
