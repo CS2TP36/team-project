@@ -500,8 +500,26 @@ body {
 }
 
 @media (max-width: 768px) {
+    .contact-details{
+        width: 300px;
+        padding: 0;
+        margin: 1.8rem;
+        align-items: center;
+        justify-content: center;
+    }
     .contact-details-form {
-        max-width: auto;
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+    }
+    .contact-details h1 {
+        font-size: 1.8rem;
+        margin-left: 30px;
+    }
+    .contact-details-form {
+        min-width: 320px;
+        max-width: 100%;
+        padding: 10px;
     }
 
 }
@@ -547,7 +565,7 @@ body {
     /* styling for forms */
 
     .reset-sections input {
-        width: 100%;
+        width: 95%;
         max-width: 500px;
         border: 1px solid black;
         padding: 10px;
@@ -781,7 +799,8 @@ h1 {
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-bottom: 10px;
+            margin: 0;
+            padding: 0;
 
             .item-image {
                 display: flex;
@@ -800,17 +819,17 @@ h1 {
             .item-details {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: left;
                 line-height: 0.5;
                 margin-right: 100px;
+
                 /* border: 1px solid lightgreen; */
 
-                p {
-                    min-width: 320px;
-                    width: 100%;
-                    font-size: 1em;
-                    line-height: 0.5;
-                }
+                    p {
+                        width: 350px;
+                        font-size: 1em;
+                        line-height: 1.5;
+                    }
             }
 
             .item-quantity {
@@ -818,7 +837,6 @@ h1 {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
 
                     input {
                         margin-bottom: 5px;
@@ -878,6 +896,39 @@ h1 {
     }
 }
 
+@media (max-width: 768px) {
+        .basket-container {
+            flex-direction: column;
+            padding: 10px;
+        }
+    
+        .basket-item {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+    
+
+    
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            width: 100%; 
+            margin-right: 0;
+            text-align: left; 
+
+                p{
+                    width: 100px;
+                    width: 100%; 
+                    font-size: 0.9em; 
+                    line-height: 1.2; 
+                }
+        }
+    
+}
+
+    
 
 /* CSS for Wishlist Page*/
 
