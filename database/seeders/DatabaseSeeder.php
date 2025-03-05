@@ -1926,7 +1926,7 @@ Machine washable, cold wash recommended
                 'price' => 80.00,
                 'colour' => 'beige',
                 'mens' => false,
-                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
                 'stock' => rand(1, 50)
             ])
 ];
