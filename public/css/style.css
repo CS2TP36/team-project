@@ -2602,7 +2602,6 @@ h1 {
 
 .message-area{
     text-align: center;
-    margin-top: 30px;
     width: 600px;
     align-items: center;
     justify-content: center;
@@ -2636,21 +2635,27 @@ h1 {
 @media (max-width: 768px) {
     .navbar {
         height: 90px;
-
         .navbardiv {
             gap: 10px;
         }
 
         .logo {
-            height: 88px;
-            width: 90px;
+            height: 60px;
+            width: 130px;
+        }
+        .user-logo{
+            height: 30px;
+        }
+        .search-logo {
+            right:80px;
         }
 
         #search-bar {
             width: 100px;
             flex-grow: 1;
-            margin-left: 0px;
+            margin-left: 20px;
             padding: 10px;
+            font-size: 0px;
         }
 
         .ul {
@@ -2677,21 +2682,21 @@ h1 {
     }
 
     .second-nav {
-        height: 50px;
+        height: 30px;
 
         .second-navdiv {
             gap: 10px;
         }
 
         .subprime-list {
-            font-size: 15px;
             display: inline-block;
-            padding: 20px;
             list-style: none;
             text-decoration: none;
+            padding-left:30px;
+            padding-right:30px;
 
             a {
-                color: white;
+                color: rgb(0, 0, 0);
                 font-size: 15px;
                 font-weight: bold;
                 list-style: none;
@@ -2707,6 +2712,10 @@ h1 {
             }
         }
 
+    }
+
+    .message-area{
+        height: auto;
     }
 
 

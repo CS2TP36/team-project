@@ -1,11 +1,13 @@
 @extends('layouts.page')
-@section('title', 'Click And Collect')
+@section('title','click')
+
+@endsection
 @section('content')
 
-<div class= "click-collect">
+<div class= "Sponsership">
     <section>
         <div id="banner-container">
-            <img src="{{asset('images/collection-banner.png')}}" id="banner">
+            <img src="{{asset('images/sponsership-banner.png')}}" >
             </div>
         </div>
     </section>
@@ -40,6 +42,6 @@
         <li><strong>Contact:</strong> Sportswear@gmail.com</li>
         <li><strong>Phone Number:</strong> 0121 326 1812</li>
     </ul>
-@endsection
+</div>
 
 @endsection
