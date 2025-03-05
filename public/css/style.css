@@ -3876,9 +3876,11 @@ label {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: row;
-    padding-left: 250px;
-    padding-right: 250px;
     justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+    
 }
 
 .left-container {
@@ -3889,7 +3891,7 @@ label {
     img {
         width: 800px;
         height: 800px;
-        object-fit: contain;
+        object-fit:contain;
     }
 
     margin-top: 20px;
@@ -4019,29 +4021,32 @@ label {
 @media (max-width: 768px) {
     .product {
         font-family: Arial, sans-serif;
-        display: inline-block;
-        padding-left: 10px;
-        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
     }
 
     .left-container {
-        flex: 1;
-        max-width: 300px;
-        max-height: 200px;
-        margin: 0;
-        padding: 0;
+        max-width: 100%;
 
         img {
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 400px;
             object-fit: contain;
+            margin: 0 20px 20px 20px;
         }
 
     }
+    #product-info{
+        margin-bottom: 50px;
+            p {
+                font-size: 0.7rem;
+            }
+    }
 
     .right-container {
-        flex: 1;
-        max-width: 200px;
+
+        max-width: 400px;
         margin: 0;
         padding: 0;
 
@@ -4057,6 +4062,7 @@ label {
             padding: 10px;
 
             button {
+                font-size: 10px;
                 width: 20px;
                 height: 50px;
                 padding: 10px;
@@ -4074,7 +4080,8 @@ label {
 
         .purchase-options {
             button {
-                width: 80px;
+                font-size: 10px;
+                width: 400px;
                 padding: 10px;
                 border: 1px solid black;
                 background-color: var(--btn-bg-colour);
