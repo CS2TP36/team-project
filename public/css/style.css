@@ -2523,7 +2523,7 @@ h1 {
         align-items: center;
         width: 100%;
         justify-content: center;
-        gap: 900px;
+        gap: 700px;
 
     }
 
@@ -2672,7 +2672,7 @@ h1 {
     .navbar {
         height: 90px;
         .navbardiv {
-            gap: 20px;
+            gap: 10px;
         }
 
         .logo {
@@ -2689,6 +2689,7 @@ h1 {
         #search-bar {
             width: 100px;
             flex-grow: 1;
+            margin-left: 20px;
             padding: 10px;
             font-size: 0px;
         }
