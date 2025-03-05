@@ -2557,6 +2557,7 @@ h1 {
     height: 38px;
     display: flex;
     animation: fadedown 0.5s ease-out forwards;
+    border-bottom: 2px solid #ddd;
 
     .second-navdiv {
         display: flex;
@@ -2769,8 +2770,8 @@ button:hover {
 }
 
 #social-pic {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 @media (max-width: 768px) {
