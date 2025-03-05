@@ -10,7 +10,7 @@
     </div>
 
     <div class="contact-container">
-        <div class="contact-details">
+        <div class="contact-page-details">
             <h2>Contact Info</h2>
             <ul>
                 <li><strong>📍 Location:</strong> Birmingham, England</li>
