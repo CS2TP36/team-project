@@ -709,7 +709,7 @@ h1 {
     /* Add space between image and item deets */
 }
 
-.item-details {
+.previous-item-details {
     text-align: left;
 }
 
@@ -824,12 +824,12 @@ h1 {
                 margin-right: 100px;
 
                 /* border: 1px solid lightgreen; */
+            }
 
-                    p {
-                        width: 350px;
-                        font-size: 1em;
-                        line-height: 1.5;
-                    }
+            .item-details p{
+                width: 350px;
+                font-size: 1em;
+                line-height: 1.5;
             }
 
             .item-quantity {
@@ -917,14 +917,11 @@ h1 {
             width: 100%; 
             margin-right: 0;
             text-align: left; 
+            width: 80px;
 
-                p{
-                    width: 100px;
-                    width: 100%; 
-                    font-size: 0.9em; 
-                    line-height: 1.2; 
-                }
         }
+
+
     
 }
 
