@@ -2640,8 +2640,8 @@ h1 {
         }
 
         .logo {
-            height: 60px;
-            width: 130px;
+            height: 40px;
+            width: 90px;
         }
         .user-logo{
             height: 30px;
@@ -2697,7 +2697,7 @@ h1 {
 
             a {
                 color: rgb(0, 0, 0);
-                font-size: 15px;
+                font-size: 12px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
@@ -2784,16 +2784,33 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .footer-check {
+    .footer-container {
         font-size: 10px;
+        justify-content: space-evenly;
+        gap: 10px;
+
+
+        ul{
+            padding-left: 0;
+            padding-bottom:0 ;
+            padding-top: 0;
+            padding-right: 5px;
+            margin: 0;
+        }
 
         .footer-list {
-            font-size: 10px;
+            font-size: 15px;
+            text-align: left;
+            
+
 
             a {
                 color: white;
                 font-size: 10px;    
                 text-decoration: none;
+                text-align: left;
+                padding: 0;
+                margin: 0;
             }
 
             /*Hover*/
@@ -2805,20 +2822,36 @@ button:hover {
             }
 
             button {
-                font-size: 7px;
-                width: 50px;
-                height: 35px;
                 border: 1px solid black;
                 background-color: #4D4D4D;
                 color: white;
                 cursor: pointer;
                 margin-bottom: 10px;
+                p{ 
+                    font-size: 7px;
+                }
             }
         }
 
 
         button:hover {
             background-color: #2D2D2D;
+        }
+
+        .footer-title{
+            font-size: 12px;
+            padding-top: 20px;
+            text-align: left;
+
+        }
+
+        #social-pic{
+            width: 20px;
+            height: 20px;
+        }
+
+        #theme-toggle{
+            width: 50%;
         }
 
     }
