@@ -83,6 +83,11 @@ Route::get('/terms-conditions', function () {
     return view('pages.terms-conditions');
 });
 
+Route::get('/click', function () {
+    return view('pages.click');
+});
+
+
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
 
 Route::get('/admin', function () {
