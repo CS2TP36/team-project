@@ -4260,7 +4260,7 @@ label {
 
     .returns-container {
         font-family: Arial, sans-serif;
-        color: #090909;
+        color: var(--text-colour);
         background-color: #ff0707;
         margin: 0;
         padding: 0;
@@ -4269,8 +4269,12 @@ label {
     }
 
     .container {
+        background-color: var(--alt-bg-colour);
         max-width: 1200px;
         margin: 0 auto;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
         padding: 20px;
     }
 
@@ -4285,8 +4289,8 @@ label {
     .tab-btn {
         padding: 10px 20px;
         font-weight: bold;
-        color: #fff;
-        background-color: #333;
+        color: var(--btn-text-colour);
+        background-color: var(--btn-bg-colour);
         border: none;
         cursor: pointer;
         text-transform: uppercase;
@@ -4295,17 +4299,17 @@ label {
     }
 
     .tab-btn.active-tab {
-        background-color: #000;
+        background-color: var(--btn-bg-colour);
     }
 
     .tab-btn:hover {
-        background-color: #555;
+        background-color: var(--btn-hover-colour);
     }
 
     /* Content Sections */
 
     .content-section {
-        background-color: #f9f9f9;
+        background-color: var(--bg-colour);
         padding: 25px 30px;
         border-radius: 8px;
         margin: 20px auto;
@@ -4317,7 +4321,7 @@ label {
     .section-heading {
         font-size: 24px;
         font-weight: bold;
-        color: #111;
+        color: var(--text-colour);
         text-transform: uppercase;
         border-bottom: 2px solid #333;
         margin-bottom: 15px;
@@ -4328,7 +4332,7 @@ label {
 
     .return-description, .delivery-description {
         font-size: 16px;
-        color: #555;
+        color: var(--text-colour);
         line-height: 1.6;
         text-align: justify;
     }
@@ -4339,7 +4343,7 @@ label {
         font-size: 20px;
         padding: 40px;
         margin-bottom: 10px;
-        background-color: #fff;
+        background-color: var(--bg-colour);
         border: 1px solid #ddd;
         border-radius: 4px;
     }
@@ -4350,7 +4354,7 @@ label {
         padding: 10px 20px;
         font-size: 16px;
         background-color: #007bff;
-        color: #fff;
+        color: var(--btn-text-colour);
         border: none;
         border-radius: 4px;
         cursor: pointer;
@@ -4365,7 +4369,7 @@ label {
 
     .section-icon {
         width: 100px;
-        height: 42px;
+        height: 100px;
         margin-right: 10px;
         vertical-align: middle;
     }
