@@ -4285,7 +4285,7 @@ label {
     .returns-container {
         font-family: Arial, sans-serif;
         color: var(--text-colour);
-        background-color: #ff0707;
+        background-color: var(--alt-bg-colour);
         margin: 0;
         padding: 0;
         line-height: 1.6;
@@ -4295,7 +4295,6 @@ label {
     .container {
         background-color: var(--alt-bg-colour);
         max-width: 1200px;
-        margin: 0 auto;
         margin: 0 auto;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -4394,7 +4393,6 @@ label {
     .section-icon {
         width: 100px;
         height: 100px;
-        margin-right: 10px;
         vertical-align: middle;
     }
 
