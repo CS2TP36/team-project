@@ -377,14 +377,14 @@ body {
         margin-bottom: 10px;
         padding: 15px;
     }
-    
+
     .grid {
         display: grid;
         /* border: 1px solid rebeccapurple; */
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
         gap: 20px;
     }
-    
+
     .card {
         background: var(--alt-bg-colour);
         display: flex;
@@ -395,18 +395,18 @@ body {
         border-radius: 8px;
         text-decoration: none;
     }
-    
+
     .card:hover {
         background-color: rgb(188, 185, 185);
         box-shadow: 0 0 10px var(--box-shadow-color);
         border-color: var(--alt-border-color);
     }
-    
+
     img {
         width: 50px;
         margin-right: 20px;
     }
-    
+
     h1 {
         color: var(--text-colour);
     }
@@ -429,7 +429,7 @@ body {
     align-items: center;
     color: var(--text-colour);
     /* border: 1px solid saddlebrown; */
-    
+
     h1 {
         color: var(--text-colour);
         font-size: 2em;
@@ -658,7 +658,7 @@ h1 {
     /* transition for background*/
 }
 
-/* /* .order:hover {  
+/* /* .order:hover {
     background-color: #010101;
     /* change background on hover */
 /*}  */
@@ -754,7 +754,7 @@ h1 {
         font-size: 2em;
         min-width: 320px;
     } */
-}  
+}
 
 .basket-container {
     display: flex;
@@ -804,7 +804,7 @@ h1 {
                 line-height: 0.5;
                 margin-right: 100px;
                 /* border: 1px solid lightgreen; */
-                
+
                 p {
                     min-width: 320px;
                     width: 100%;
@@ -835,7 +835,7 @@ h1 {
                 cursor: pointer;
                 margin-bottom: 10px;
             }
-        
+
             button:hover {
                 background-color: var(--btn-hover-colour);
             }
@@ -858,7 +858,7 @@ h1 {
             cursor: pointer;
             margin-bottom: 10px;
         }
-    
+
         button:hover {
             background-color: var(--btn-hover-colour);
         }
@@ -945,7 +945,7 @@ h1 {
                     cursor: pointer;
                     margin-bottom: 10px;
                 }
-            
+
                 button:hover {
                     background-color: var(--btn-hover-colour);
                 }
@@ -958,7 +958,7 @@ h1 {
                 line-height: 0.5;
                 margin-right: 100px;
                 /* border: 1px solid lightgreen; */
-                
+
                 p {
                     min-width: 320px;
                     width: 100%;
@@ -977,7 +977,7 @@ h1 {
                     cursor: pointer;
                     margin-bottom: 10px;
                 }
-            
+
                 button:hover {
                     background-color: var(--btn-hover-colour);
                 }
@@ -1515,9 +1515,9 @@ h1 {
 
 
 /*.basket {
-    
-    
-    
+
+
+
     * {
         font-family: Arial, Helvetica, sans-serif;
         padding: 5px;
@@ -2481,19 +2481,19 @@ h1 {
         .content-container:nth-child(even){
             flex-direction: column;
         }
-    
+
         .section-image {
             width: 80%;
             max-width: 300px;
             margin-bottom: 20px;
             margin-top: 100px;
         }
-    
+
         .text {
             width: 90%;
             padding: 15px;
         }
-    
+
         #text-banner {
             font-size: 1.3rem;
             top: 25%;
@@ -2666,9 +2666,9 @@ h1 {
     animation: fadein 1s ease-out forwards;
     border: 1px solid rgb(0, 0, 0);
     width: 100%;
-        
+
 }
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .navbar {
         height: 90px;
         .navbardiv {
@@ -2838,12 +2838,12 @@ button:hover {
         .footer-list {
             font-size: 15px;
             text-align: left;
-            
+
 
 
             a {
                 color: white;
-                font-size: 10px;    
+                font-size: 10px;
                 text-decoration: none;
                 text-align: left;
                 padding: 0;
@@ -2864,7 +2864,7 @@ button:hover {
                 color: white;
                 cursor: pointer;
                 margin-bottom: 10px;
-                p{ 
+                p{
                     font-size: 7px;
                 }
             }
@@ -2986,7 +2986,7 @@ button:hover {
         text-decoration-thickness: 5px;
         text-underline-offset: 15px;
         color: var(--text-colour);
-        
+
 
     }
 }
@@ -3268,16 +3268,16 @@ button:hover {
         background-color: #000;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
-    
-    
+
+
         a {
             display: inline-block;
             padding-right: 20px;
             padding-left: 20px;
             font-size: 15px;
-    
+
         }
-    
+
     }
 
     #select-catogeries a {
@@ -3293,12 +3293,12 @@ button:hover {
         margin-top: 50px;
             p {
                 font-size: 20px;
-                
+
 
         }
 
     }
-    
+
     #parallax-container {
         height: 500px;
     }
@@ -3810,12 +3810,12 @@ label {
         padding-top: 20px;
     }
 
-   
+
     #breadcrumbs{
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         margin: 0;
-        
+
 
             a{
                 text-decoration: none;
