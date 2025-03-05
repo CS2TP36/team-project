@@ -2516,15 +2516,15 @@ h1 {
     flex-wrap: wrap;
     opacity: 0;
     animation: fadedown 0.8s ease-out forwards;
+    width: 100%;
 
 
     .navbardiv {
         display: flex;
         align-items: center;
         width: 100%;
-        justify-content: center;
-        gap: 700px;
-
+        justify-content: space-between;
+        gap: 20px;
     }
 
     ul {
