@@ -2296,15 +2296,26 @@ h1 {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
+    .contact-wrapper {
+        padding: 30px 10px;
     }
 
-    .contact-details,
-    .contact-form {
-        width: 100%;
-        padding: 0;
+    .contact-header h1 {
+        font-size: 45px;
     }
+
+    .contact-header p {
+        font-size: 15px;
+    }
+
+    .contact-container {
+        padding: 50px;
+    }
+
+    .contact-form {
+        padding-left: 0;
+    }
+
 }
 
 /*CSS for About Us Page*/
