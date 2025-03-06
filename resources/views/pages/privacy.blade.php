@@ -1,29 +1,11 @@
-<head>
-    <title> Privacy Policy </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            padding: 20px;
-            line-height: 1.6;
+@extends('layouts.page')
+@section('title','Privacy Policy Page')
+@section('content') 
 
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
 <div class="container">
     <h1> Privacy Policy</h1>
     <p> Privacy Policy at Sportswear.com </p>
-
+    
     <h2>1.Introduction</h2>
     <p>Welcome to SportsWear. Your privacy is important to us, and we are committed to protecting any personal
         information you share with us. This Privacy Policy explains how we collect, use, and safeguard your personal
@@ -56,8 +38,9 @@
         mitigate risks and notify affected users as required by law.</p>
 
 </div>
-</body>
 
+
+@endsection
 
 
 
