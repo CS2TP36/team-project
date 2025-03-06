@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\DiscountController;
+use App\Http\Controllers\Admin\ManageUsersController;
 use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Auth\AccountController;
+use App\Http\Controllers\Auth\ForgotPassController;
 use App\Http\Controllers\Auth\PassChangeController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
@@ -17,6 +20,8 @@ use App\Http\Controllers\BasketController;
 use App\Http\Controllers\Admin\ProductManagementController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\WishlistController;
+
 
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
@@ -40,10 +45,6 @@ Route::get('/aboutus', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
-Route::get('/forgot-pass', function () {
-    return view('pages.forgot-pass');
-});
-Route::get('/account', [AccountController::class, 'show'])->name('account.show');
 
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
 Route::get('/product/{id?}', [ShowProduct::class, 'show'])->name('product.show');
@@ -66,6 +67,12 @@ Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add')
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
 
+//wishlist stuff 
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+Route::post('/wishlist/add', [WishlistController::class, 'add'])->name('wishlist.add');
+Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
+
+
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.checkout');
 
@@ -75,6 +82,11 @@ Route::post('/change-pass', [PassChangeController::class, 'change'])->name('chan
 Route::get('/terms-conditions', function () {
     return view('pages.terms-conditions');
 });
+
+Route::get('/click', function () {
+    return view('pages.click');
+});
+
 
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
 
@@ -113,3 +125,24 @@ Route::post('/review/add', [ReviewController::class, 'add'])->name('review.add')
 Route::get('/privacy-policy', function () {
     return view('pages.privacy');
 })->name('privacy');
+
+Route::get('/admin/messages/{page?}', [ContactController::class, 'show'])->name('admin.messages');
+
+Route::get('/forgot-pass', [ForgotPassController::class, 'show'])->name('forgot-pass.show');
+Route::post('/forgot-pass', [ForgotPassController::class, 'change'])->name('forgot-pass.change');
+
+Route::get('/faq', function () {
+    return view('pages.faq');
+});
+
+// show admin manage users
+Route::get('/admin/manage-users', [ManageUsersController::class, 'show'])->name('admin.manage-users');
+
+Route::get('/admin/discounts', [DiscountController::class, 'show'])->name('admin.discounts');
+Route::post('/admin/discounts', [DiscountController::class, 'add'])->name('admin.discounts.add');
+
+Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPreview'])->name('search.preview');
+
+// stuff for getting the various account pages defined via accountcontroller
+Route::get('/account', [AccountController::class, 'show'])->name('account.page');
+Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');

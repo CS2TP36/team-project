@@ -10,7 +10,7 @@
     </div>
 
     <div class="contact-container">
-        <div class="contact-details">
+        <div class="contact-page-details">
             <h2>Contact Info</h2>
             <ul>
                 <li><strong>📍 Location:</strong> Birmingham, England</li>
@@ -22,7 +22,7 @@
 
         <div class="contact-form">
             <h2>Contact Form</h2>
-            <form method="POST" action="/contact" onsubmit="validateContactForm(event)">
+            <form method="POST" action="{{ route('contact.store') }}" onsubmit="validateContactForm(event)" id="contact-form">
                 @csrf
 
                 <div class="input-box">
@@ -53,10 +53,10 @@
     <div class="social-section">
         <h2>Check us Out we also listen here! </h2>
         <div class="social-icons">
-            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a>
             <a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a>
             <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a>
-            <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a>
         </div>
     </div>
 </div>

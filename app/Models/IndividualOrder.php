@@ -21,9 +21,9 @@ class IndividualOrder extends Model
         return $this->belongsTo(Order::class);
     }
 
-    public function product()
+    public function product(): Product
     {
-        return $this->hasOne(Product::class);
+        return Product::all()->where('id', $this->product_id)->first();
     }
 
     public function getSubtotal(): float|int

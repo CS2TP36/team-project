@@ -10,24 +10,24 @@
     <div id="previous-orders-body">
         <div id="previous-orders">
             <h1>My Previous Orders</h1>
-            @if($orders)
+            @if($orders->count() > 0)
                 <!--order list section -->
                 <div class="orders-list">
-                    @foreach($orders as $order)
+                    @foreach($orders->reverse() as $order)
                         <div class="order">
                             <div class="order-info">
                                 <p class="order-date">Order placed: {{ $order["created_at"] }}</p>
                                 <p class="dispatch-to">Dispatched to: {{ Shipping::all()->where('id', $order["shipping_id"])->first()["delivery_address"] }}</p>
-                                <p class="order-price">Total: {{ $order->calculateTotal() }}</p>
+                                <p class="order-price">Total: £{{ number_format($order->calculateTotal(),2) }}</p>
                             </div>
 
                             <div class="order-items">
                                 @foreach($order->individualOrders as $individualOrder)
                                     <!-- Order 1 details-->
-                                    <img src="{{$individualOrder->product->getMainImage()}}">
-                                    <div class="item-details">
-                                        <p class="item-name">{{$individualOrder->product->name}}</p>
-                                        <p class="item-price">{{$individualOrder->getSubtotal}}</p>
+                                    <img src="{{$individualOrder->product()->getMainImage()}}">
+                                    <div class="previous-item-details">
+                                        <p class="item-name">{{$individualOrder->product()->name}}</p>
+                                        <p class="item-price">£{{ number_format($individualOrder->getSubtotal(), 2) }}</p>
                                     </div>
                                 @endforeach
                             </div>
@@ -40,45 +40,6 @@
                             </div>
                         </div>
                     @endforeach
-
-                    <!-- Order 2-->
-                    <div class="order">
-                        <div class="order-info">
-                            <p class="order-date">Order placed: 1st February 2025</p>
-                            <p class="dispatch-to">Dispatched to: 2 Aston Uni</p>
-                            <p class="order-price">Total: £55.00</p>
-                        </div>
-
-
-                        <div class="order-items">
-                            <div class="item">
-                                <!--item 1 of second order details-->
-                                <img src="{{asset("images/productImage/8573ac4b-e2c8-4ea3-8909-f60126839a3c.jpg")}}">
-                                <div class="item-details">
-                                    <p class="item-name">Pulse Track Running Shoes</p>
-                                    <p class="item-price">£20.00</p>
-                                </div>
-                            </div>
-
-                            <!-- item 2 of second order-->
-                            <div class="item">
-                                <img src="{{asset("images/productImage/68313941-69f1-4bf9-bb02-de3a64caa29f.jpg")}}">
-                                <div class="item-details">
-                                    <p class="item-name">Velocity Running Shoes </p>
-                                    <p class="item-price">£35.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- buttons for order 2-->
-                        <div class="order-actions">
-                            <button class="button">Buy again</button>
-                            <button class="button">Order Details</button>
-                            <button class="button">Leave a review</button>
-                        </div>
-                    </div>
-
-                </div>
             @else
                 <p>No previous orders found</p>
             @endif

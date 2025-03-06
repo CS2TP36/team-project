@@ -4,8 +4,8 @@
             <li class="footer-title">Customer Service</li><!--links to the contact page-->
             <li class="footer-list"><a href="/contact">Contact Us</a></li><!--links to the contact page-->
             <li class="footer-list"><a href="/delivery-and-returns">Return Policy</a></li><!--links to about us-->
-            <li class="footer-list"><a href="/aboutus">Shipping Information</a></li>
-            <li class="footer-list"><a href="/aboutus">FAQ</a></li>
+            <li class="footer-list"><a href="/delivery-and-returns">Shipping Information</a></li>
+            <li class="footer-list"><a href="/faq">FAQ</a></li>
         </ul>
 
     <div>
@@ -23,7 +23,7 @@
             <li class="footer-title">Account Info</li>
             <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign In @else <a href="/logout"> Sign Out @endif</a></li><!--sign in -->
             <li class="footer-list"><a href="/wishlist">Wishlist</a></li>
-            <li class="footer-list"><button id="theme-toggle">Toggle Theme</button></li><!--dark mode/light mode toggle theme-->
+            <li class="footer-list"><button id="theme-toggle"><p>Toggle Dark Theme</p><p>Toggle Light Theme</p></button></li><!--dark mode/light mode toggle theme-->
         </ul>
     </div>
     <div>

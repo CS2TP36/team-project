@@ -3,8 +3,12 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\IndividualOrder;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\Shipping;
+use App\Models\Transaction;
 use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -26,9 +30,11 @@ class DatabaseSeeder extends Seeder
         $this->addImages();
         // Add test user
         $this->testAccount();
+        // Add some random orders (may take some time, comment out if no orders are needed)
+        $this->addOrders();
     }
 
-    private function addCategories()
+    private function addCategories(): void
     {
         //shoes, trousers, hoodies, jackets, shirts
         //creates a load of categories to add to the database.
@@ -60,7 +66,7 @@ class DatabaseSeeder extends Seeder
         }
     }
 
-    private function addProducts()
+    private function addProducts(): void
     {
         // A list of products
         // Copied from document provided by Muhammad Khan on Trello
@@ -1009,11 +1015,933 @@ Machine washable
                 'stock' => rand(1, 50)
             ]),
 
+            new Product ([
+                'name' => 'Velocity Performance T-Shirt',
+                'description' =>
+                    "The Velocity Performance T-Shirt is engineered for athletes and fitness enthusiasts. Made from breathable, moisture-wicking fabric, 
+                    it keeps you cool and dry during intense workouts. The sleek, athletic fit enhances movement and flexibility, while the bold red stripe
+                     accents add a dynamic and stylish touch.
 
-        ];
-        foreach ($products as $product) {
+Care & Material
+90% Polyester, 10% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 25.00,
+                'colour' => 'black/red',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+            
+            new Product ([
+                'name' => 'Apex Grid Performance T-Shirt',
+                'description' =>
+                    "The Apex Grid Performance T-Shirt is designed for athletes seeking both style and functionality. Made with lightweight, moisture-wicking fabric, 
+                    it enhances airflow to keep you cool and dry during intense training.
+                     The geometric grid pattern gives a futuristic and energetic look, while the ergonomic fit allows maximum flexibility and movement.
+Care & Material
+88% Polyester, 12% Spandex
+Machine washable, cold wash recommended
+
+
+",
+                'price' => 28.00,
+                'colour' => 'blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Titan Compression Long Sleeve',
+                'description' =>
+                    "The Titan Compression Long Sleeve is built for performance and endurance. Designed with advanced compression technology, it enhances muscle support 
+                    and improves circulation, making it perfect for intense training and recovery.The sleek, body-contouring fit provides unrestricted movement, while 
+                    the breathable, moisture-wicking fabric keeps you cool and dry during workouts.
+Care & Material
+85% Polyester, 15% Spandex
+Machine washable, air dry recommended
+
+
+
+",
+                'price' => 32.00,
+                'colour' => 'grey',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'NeoStrike Compression T-Shirt',
+                'description' =>
+                    "The NeoStrike Compression T-Shirt is engineered for maximum performance and agility. Featuring high-stretch, moisture-wicking fabric, it keeps you cool, dry, 
+                    and comfortable during intense workouts. The ergonomic design enhances mobility, while the bold neon green and black accents create a striking,
+                     futuristic look. Perfect for gym sessions, running, and high-intensity training.
+Care & Material
+88% Polyester, 12% Spandex
+Machine washable, cold wash recommended
+",
+                'price' => 30.00,
+                'colour' => 'black/green/white',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Inferno Compression Long Sleeve',
+                'description' =>
+                    "The Inferno Compression Long Sleeve is built for intense workouts and high-performance training. Designed with heat-regulating, moisture-wicking fabric, 
+                    it keeps you cool and dry while providing optimal muscle support. The sleek gradient red-to-black design gives it a bold, fiery look, while the ergonomic fit 
+                    allows for unrestricted movement. Ideal for gym training, running, and outdoor activities.
+Care & Material
+85% Polyester, 15% Spandex
+Machine washable, air dry recommended
+",
+                'price' => 34.00,
+                'colour' => 'red/black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Shadowstrike Performance Hoodie',
+                'description' =>
+                    "The Shadowstrike Performance Hoodie combines style, comfort, and high-performance design. Made from premium moisture-wicking fabric, 
+                    it keeps you warm yet breathable during workouts or casual wear. The sleek black design with bold red accents adds a modern, athletic look, while the adjustable
+                     hood and zip-up front provide versatility.The fitted design ensures maximum flexibility and comfort, making it perfect for training, running, or everyday wear.
+Care & Material
+65% Polyester, 35% cotton
+Machine washable, tumble dry low
+",
+                'price' => 45.00,
+                'colour' => 'red/black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'SkyForge Athletic Hoodie',
+                'description' =>
+                    "The SkyForge Athletic Hoodie is designed for performance and comfort, perfect for training sessions or casual wear. Made with a lightweight 
+                    yet insulating fabric, it provides warmth without overheating. The sleek blue design with textured shoulder accents adds a modern touch, while 
+                    the adjustable hood and full-zip closure offer versatility. The ergonomic fit ensures full range of motion, making it ideal for active and everyday wear.
+Care & Material
+70% Polyester, 30% cotton
+Machine washable, tumble dry low
+",
+                'price' => 42.00,
+                'colour' => 'blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'StormFlex Performance Hoodie',
+                'description' =>
+                    "The StormFlex Performance Hoodie is built for versatility and comfort, making it ideal for both active and casual wear.
+                     Crafted with a premium, stretch-fit fabric, it provides warmth without restricting movement. The sleek grey design with subtle gradient accents 
+                     offers a modern, athletic look, while the full-zip closure and adjustable hood ensure maximum adaptability and style. 
+                    Whether you're hitting the gym, going for a run, or just relaxing, this hoodie delivers performance and style in one package.
+Care & Material
+68% Polyester, 32% cotton
+Machine washable, air dry recommended
+",
+                'price' => 44.00,
+                'colour' => 'grey',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Vortex Edge Pullover Hoodie',
+                'description' =>
+                    "The Vortex Edge Pullover Hoodie is designed for those who want to stand out while staying comfortable. Featuring a bold geometric design with striking neon green accents,
+                     this hoodie offers a modern and futuristic look. The soft fleece lining provides warmth and comfort, while the relaxed fit ensures all-day wearability. 
+                    The adjustable drawstring hood and ribbed cuffs add extra style and functionality, making it perfect for training, casual wear, or street fashion.
+Care & Material
+60% Cotton, 40% Polyester
+Machine washable, air dry recommended
+",
+                'price' => 46.00,
+                'colour' => 'black/white/green',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Inferno Flux Zip Hoodie',
+                'description' =>
+                    "The Inferno Flux Zip Hoodie is built for those who demand style and performance. With a striking red-to-black gradient design, this hoodie makes a bold statement 
+                    while offering premium comfort. The sleek, athletic fit ensures maximum flexibility, while the soft fleece interior provides warmth without bulk. Featuring a full-zip closure,
+                     adjustable hood, and ribbed cuffs, this hoodie is perfect for training, outdoor adventures, or casual wear.
+Care & Material
+65% Polyester, 35% Cotton
+Machine washable, air dry recommended
+",
+                'price' => 48.00,
+                'colour' => 'red',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'HyperEdge Running Shoes',
+                'description' =>
+                    "The HyperEdge Running Shoes are designed for next-level performance with a futuristic aesthetic. Featuring a breathable mesh upper, these shoes ensure
+                     maximum airflow and comfort during long runs or high-intensity workouts. The advanced cushioned sole provides shock absorption and superior traction,
+                      making it perfect for sports, training, and casual wear. 
+                    The bold blue, black, and neon green colorway adds a high-energy, modern look that stands out.
+Care & Material
+Mesh Upper with Rubber Sole
+Wipe clean with a damp cloth 
+
+",
+                'price' => 75.00,
+                'colour' => 'blue/black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Inferno Sprint Running Shoes',
+                'description' =>
+                    "The Inferno Sprint Running Shoes are built for speed, endurance, and style. Designed with a breathable mesh upper, these shoes provide maximum ventilation while 
+                    maintaining durability. The shock-absorbing cushioned sole ensures optimal traction and comfort for high-intensity training and running. 
+                    Featuring a bold black and red colorway, these shoes deliver a futuristic, aggressive look that’s perfect for athletes and sneaker enthusiasts alike.
+Care & Material
+Breathable performance mesh
+Wipe clean with a damp cloth 
+
+",
+                'price' => 78.00,
+                'colour' => 'red/black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Eclipse Runner Sneakers',
+                'description' =>
+                    "The Eclipse Runner Sneakers offer a sleek and minimalist design with high-performance comfort. The breathable mesh upper ensures ventilation
+                     and lightweight support, while the cushioned sole provides shock absorption and stability. Designed in a sophisticated white and grey colourway,
+                    these sneakers are versatile for sports, running, or casual wear. The streamlined aesthetic makes them a perfect blend of style and functionality.
+Care & Material
+Lightweight, breathable mesh
+Wipe clean with a damp cloth 
+
+",
+                'price' => 72.00,
+                'colour' => 'grey/white',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'BlazeStorm Running Shoes',
+                'description' =>
+                    "The BlazeStorm Running Shoes are built for speed, agility, and endurance. Featuring a breathable mesh upper, these shoes provide lightweight support 
+                    and ventilation for maximum performance. The high-traction cushioned outsole ensures superior grip and comfort, making them ideal for running, gym workouts, and casual wear. 
+                    The black and orange color scheme gives these shoes a bold, fiery aesthetic, perfect for those who want to stand out.
+Care & Material
+Mesh Upper with Rubber Sole
+Wipe clean with a damp cloth 
+
+",
+                'price' => 76.00,
+                'colour' => 'black/orange',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'TitanFlow Running Shoes',
+                'description' =>
+                    "The TitanFlow Running Shoes combine style, comfort, and high performance. Featuring a breathable mesh upper, 
+                    these shoes provide lightweight support and airflow, ensuring maximum comfort during workouts or everyday wear. The cushioned sole 
+                    absorbs impact for optimal traction and stability, making them ideal for running, training, and long-distance walking. 
+                    The navy blue and silver color scheme adds a sleek and versatile aesthetic, perfect for any occasion.
+Care & Material
+Mesh Upper with Rubber Sole
+Wipe clean with a damp cloth 
+
+",
+                'price' => 74.00,
+                'colour' => 'blue/black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'ShadowFlex Performance Joggers',
+                'description' =>
+                    "The ShadowFlex Performance Joggers are crafted for comfort, mobility, and a modern athletic look. Designed with a tapered slim fit, 
+                    these joggers offer flexibility and style for both workouts and casual wear. The elastic waistband with adjustable drawstrings provides 
+                    a secure and customizable fit, while the zippered side pockets offer convenience and security for essentials. 
+                    The lightweight, breathable fabric ensures all-day comfort, making them perfect for training, running, or everyday use.
+Care & Material
+85% Polyester, 15% Spandex
+Machine washable, cold wash recommended
+
+",
+                'price' => 50.00,
+                'colour' => 'black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Midnight Core Joggers',
+                'description' =>
+                    "The Midnight Core Joggers are designed for comfort, performance, and a classic athletic look. Featuring a relaxed fit with tapered legs,
+                     they offer maximum flexibility for both workouts and everyday wear. The elastic waistband with adjustable drawstrings ensures a secure and 
+                     customizable fit, while the zippered side pockets provide secure storage for essentials.
+                     Crafted from soft, breathable fabric, these joggers deliver all-day comfort with a modern touch.
+Care & Material
+80% Cotton, 20% Polyester
+Machine washable, tumble dry low
+
+",
+                'price' => 48.00,
+                'colour' => 'navy blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Titan Motion Joggers',
+                'description' =>
+                    "The Titan Motion Joggers are designed for athletic performance and streetwear appeal. Featuring a slim tapered fit, these 
+                    joggers provide a modern and stylish look while maintaining maximum comfort. The moisture-wicking fabric ensures breathability and flexibility,
+                     making them ideal for gym workouts, running, or casual wear. The black side panel accents add a sleek, sporty touch, while the zippered pockets
+                    provide secure storage for essentials.
+Care & Material
+78% Polyester, 22% Cotton
+Machine washable, tumble dry low
+
+",
+                'price' => 52.00,
+                'colour' => 'dark grey',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'AeroFlex Utility Joggers',
+                'description' =>
+                    "The AeroFlex Utility Joggers offer a sleek and functional design, perfect for active and casual lifestyles. Made from soft stretch fabric, these joggers 
+                    provide unmatched comfort and flexibility. The elastic waistband with adjustable drawstrings ensures a secure fit, while the zippered side pockets and 
+                    cargo-style detail add practical storage options. With a light grey base and black accents, these joggers bring a modern and versatile aesthetic to any outfit.
+Care & Material
+75% Polyester, 25% Cotton
+Machine washable, cold wash recommended
+
+",
+                'price' => 54.00,
+                'colour' => 'light grey',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+           
+            new Product ([
+                'name' => 'AeroFlex Utility Joggers',
+                'description' =>
+                    "The Crimson Velocity Joggers bring together bold style and athletic functionality. Featuring a slim tapered fit, these joggers provide optimal flexibility and comfort. 
+                    The elastic waistband with drawstrings allows for a custom fit, while the zippered pockets offer secure storage for essentials. Designed with breathable fabric, 
+                    they ensure all-day comfort, making them ideal for training, running, or casual wear. 
+                    The deep red with black accents adds a striking and modern aesthetic to any outfit.
+Care & Material
+80% Polyester, 20% Spandex
+Machine washable, air dry recommended
+
+",
+                'price' => 54.00,
+                'colour' => 'red',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Shadow Elite Performance Jacket',
+                'description' =>
+                    "The Shadow Elite Performance Jacket is designed for athletes and style-conscious individuals. Featuring a slim fit and a high-collar design, 
+                    this jacket provides a modern and dynamic look while ensuring maximum comfort and mobility. The full-zip front and zippered side pockets offer
+                     convenience and functionality, making it ideal for training, outdoor workouts, or casual wear. The lightweight, breathable fabric allows 
+                     for all-weather adaptability, keeping you comfortable in any setting.
+Care & Material
+90% Polyester, 10% Spandex
+Machine washable, air dry recommended
+
+",
+                'price' => 65.00,
+                'colour' => 'black',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Midnight Apex Training Jacket',
+                'description' =>
+                    "The Midnight Apex Training Jacket blends performance and modern style with its sleek, slim-fit design. Crafted from soft and breathable fabric, 
+                    it provides all-day comfort and flexibility for workouts, outdoor activities, or casual wear. The full-zip front, high collar, and zippered pockets
+                     add functionality and convenience,  making it perfect for layering or wearing solo. The navy blue with subtle white accents delivers a classic, 
+                     versatile aesthetic.
+Care & Material
+85% Polyester, 15% Spandex
+Machine washable, cold wash recommended
+
+",
+                'price' => 68.00,
+                'colour' => 'black/blue',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Inferno Bomber Jacket',
+                'description' =>
+                    "The Inferno Bomber Jacket combines modern style with functional warmth, making it perfect for training, casual wear, or layering in colder weather. 
+                    Designed with a relaxed fit, this jacket features a ribbed collar, cuffs, and hem for a snug and comfortable feel. The full-zip front and zippered side 
+                    pockets offer convenience and practicality, while the insulated fabric ensures warmth without bulk. The deep red and black colour scheme gives a bold,
+                     athletic look with a touch of streetwear edge.
+Care & Material
+85% Polyester, 15% Cotton
+Machine washable, tumble dry low
+
+",
+                'price' => 75.00,
+                'colour' => 'black/red',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'StormGuard Windbreaker Jacket',
+                'description' =>
+                    "The StormGuard Windbreaker Jacket is built for athletes and outdoor enthusiasts who need lightweight protection from the elements.
+                     Made with water-resistant and breathable fabric, this jacket keeps you dry and comfortable in unpredictable weather. The adjustable hood, 
+                     full-zip front, and zippered side pockets provide functionality and convenience, while the relaxed fit ensures easy movement. 
+                    The sleek white and black colour scheme gives it a modern and versatile look, perfect for training, running, or casual wear.
+Care & Material
+100% Polyester (Water-Resistant)
+Machine washable, air dry recommended
+
+",
+                'price' => 72.00,
+                'colour' => 'black/white',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Arctic Shield Puffer Jacket',
+                'description' =>
+                    "The Arctic Shield Puffer Jacket is built for extreme warmth and modern style. Designed with insulated padding and a quilted design, this jacket provides maximum
+                    heat retention while remaining lightweight and comfortable. The high collar and full-zip front offer extra protection against the cold, while the zippered side pockets
+                    provide secure storage. Crafted with water-resistant fabric, it ensures protection from wind and light rain, making it perfect for winter wear, outdoor adventures,
+                     and everyday use.
+Care & Material
+100% Polyester (Water-Resistant)
+Machine washable, air dry recommended
+
+",
+                'price' => 85.00,
+                'colour' => 'green',
+                'mens' => true,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Velocity Performance T-Shirt',
+                'description' =>
+                    "The Velocity Women's Performance T-Shirt is designed for active lifestyles, offering breathability, comfort, and a sleek fit. 
+                    The moisture-wicking fabric keeps you cool and dry, while the slim-fit design with a subtle scoop neckline ensures a flattering, modern silhouette. 
+                    The curved hem adds style and extra coverage, making this t-shirt perfect for workouts, running, or casual wear.
+Care & Material
+90% Polyester, 10% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 30.00,
+                'colour' => 'black/grey',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Nova Training T-Shirt',
+                'description' =>
+                    "The Nova Women's Training T-Shirt is designed for performance and versatility. Featuring moisture-wicking fabric, it keeps you cool and dry during 
+                    workouts or casual wear. The slim-fit design, scoop neckline, and curved hem create a flattering silhouette, while the lightweight, breathable material allows for
+                     maximum comfort and movement. The navy blue with white accents offers a classic and timeless look.
+Care & Material
+92% Polyester, 8% Spandex
+Machine washable, air dry recommended
+
+",
+                'price' => 28.00,
+                'colour' => 'blue/grey',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Blaze Active T-Shirt',
+                'description' =>
+                    "The Blaze Women's Active T-Shirt is designed for high-energy workouts and everyday comfort. Made with moisture-wicking, breathable fabric, 
+                    it keeps you cool and dry throughout the day. The slim-fit cut, scoop neckline, and curved hem provide a flattering and comfortable fit,
+                     while the bold deep red and black accents add a dynamic, stylish touch. Perfect for training, running, or casual wear.
+Care & Material
+88% Polyester, 12% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 28.00,
+                'colour' => 'red/black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Serenity Training T-Shirt',
+                'description' =>
+                    "The Serenity Women's Training T-Shirt offers a soft and elegant take on activewear. Designed with breathable, moisture-wicking fabric, 
+                    it keeps you cool and comfortable during workouts or casual outings. The slim-fit silhouette, scoop neckline, and curved hem provide a flattering, feminine look,
+                     while the white and pastel pink colour scheme adds a fresh and stylish aesthetic. Perfect for yoga, running, or everyday wear.
+Care & Material
+88% Polyester, 12% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 27.00,
+                'colour' => 'white/pink',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Titan Crop Top',
+                'description' =>
+                    "The Titan Women's Crop Top is a bold and sporty choice for those who want style and functionality in their activewear. Made with breathable, moisture-wicking fabric, 
+                    it keeps you cool and dry during workouts. The slim-fit cut, round neckline, and cropped length create a modern and flattering silhouette, while the dark green and black 
+                    colour scheme adds a powerful and athletic touch. Perfect for gym sessions, running, or casual streetwear looks.
+Care & Material
+88% Polyester, 12% Spandex
+Machine washable, air dry recommended
+
+",
+                'price' => 32.00,
+                'colour' => 'black/green',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'ShadowFlex Performance Hoodie',
+                'description' =>
+                    "The ShadowFlex Women's Performance Hoodie is designed for athletes and active lifestyles, offering a sleek, slim fit with breathable comfort. 
+                    The moisture-wicking fabric keeps you dry and comfortable, while the drawstring hood and curved hem provide a flattering and versatile look. 
+                    The long sleeves offer extra coverage, making it perfect for workouts, running, or layering for casual wear.
+Care & Material
+90% Polyester, 10% Spandex
+Machine washable, air dry recommended
+
+",
+                'price' => 55.00,
+                'colour' => 'black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'BlushWave Cropped Hoodie',
+                'description' =>
+                    "The BlushWave Women's Cropped Hoodie offers a modern and stylish take on casual athletic wear. Designed with a relaxed fit and slightly cropped length, this hoodie provides 
+                    a trendy and flattering silhouette. The soft, breathable fabric ensures all-day comfort, while the adjustable drawstring hood adds functionality. Perfect for layering, workouts, 
+                    or everyday casual wear, the pastel pink and white color scheme adds a chic and feminine touch.
+Care & Material
+80% Cotton, 20% Polyester
+Machine washable, cold wash recommended
+
+",
+                'price' => 50.00,
+                'colour' => 'pink/white',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Nova Zip-Up Hoodie',
+                'description' =>
+                    "The Nova Women's Zip-Up Hoodie is designed for athletic performance and casual versatility. Featuring a slim fit with a full-zip front, it offers comfort and 
+                    flexibility for everyday wear. The lightweight, breathable fabric keeps you cool and comfortable, while the zippered side pockets provide secure storage for 
+                    small essentials.The adjustable drawstring hood ensures extra coverage and protection, making it perfect for layering during workouts or outdoor activities.
+                    The navy blue and white color scheme adds a classic and stylish touch.
+Care & Material
+85% Polyester, 15% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 58.00,
+                'colour' => 'blue/white',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'CloudComfort Oversized Hoodie',
+                'description' =>
+                    "The CloudComfort Oversized Hoodie is perfect for effortless streetwear style and cozy comfort. Featuring a relaxed fit with a large drawstring hood, this hoodie
+                     provides a laid-back yet trendy aesthetic. The soft fleece fabric ensures maximum warmth and softness, while the ribbed cuffs and hem offer a secure fit. 
+                    The front kangaroo pocket adds functionality, making it an ideal choice for lounging, casual wear, or layering in colder weather. 
+                    The light grey with subtle black accents delivers a minimalist, versatile look.
+Care & Material
+85% Polyester, 15% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 60.00,
+                'colour' => 'grey',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Inferno Pullover Hoodie',
+                'description' =>
+                    "The Inferno Women's Pullover Hoodie is built for athletic performance and everyday wear, offering a sleek, slim fit with a high-collar hood for extra protection. 
+                    Made with stretchable, breathable fabric, it ensures flexibility and comfort, whether you're training or lounging. The ribbed cuffs and hem provide a secure fit, 
+                    while the front kangaroo pocket offers functionality and warmth. The deep red and black color scheme gives it a bold and sporty look, making it a must-have for
+                     active and casual wardrobes.
+Care & Material
+85% Polyester, 15% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 58.00,
+                'colour' => 'red/black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Hoodies')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'NovaStride Running Trainers',
+                'description' =>
+                    "The NovaStride Women's Running Trainers combine performance, comfort, and modern design. Featuring a breathable mesh upper, these trainers keep your feet cool and ventilated, 
+                    while the cushioned sole offers shock absorption and superior support for running and training. The lightweight yet durable construction ensures all-day comfort, making them 
+                    perfect for workouts,jogging, or everyday wear. The black and white color scheme delivers a sleek and versatile aesthetic.
+Care & Material
+Breathable mesh with reinforced overlays
+Wipe clean with a damp cloth
+
+",
+                'price' => 75.00,
+                'colour' => 'black/white',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'BlushStride  Running Trainers',
+                'description' =>
+                    "The BlushStride Women's Running Trainers blend performance and feminine style, making them perfect for both fitness and casual wear. Featuring a breathable mesh upper,
+                     these trainers keep your feet cool and fresh during workouts. The cushioned sole provides shock absorption and support, ensuring all-day comfort. With a sleek, lightweight build,
+                      they are ideal for running, gym sessions, or everyday walking. The pastel pink and white colour scheme adds a soft yet trendy aesthetic.
+Care & Material
+Breathable mesh with reinforced overlays
+Wipe clean with a damp cloth
+
+",
+                'price' => 72.00,
+                'colour' => 'pink/white',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Inferno Sprint Trainers',
+                'description' =>
+                    "The Inferno Sprint Women's Trainers are designed for high-performance workouts and bold style. With a breathable mesh upper, they keep your feet cool and ventilated even 
+                    during intense sessions. The cushioned sole absorbs impact, providing superior comfort and support for running, gym training, or all-day wear. 
+                    The deep red and black color scheme adds a striking, athletic edge, making them a standout choice for any active wardrobe.
+Care & Material
+Breathable mesh with reinforced overlays
+Wipe clean with a damp cloth
+
+",
+                'price' => 78.00,
+                'colour' => 'red/black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'TitanFlow Running Trainers',
+                'description' =>
+                    "The TitanFlow Women's Running Trainers offer a sleek, high-performance design for comfort and durability. Featuring a breathable mesh upper, these trainers ensure maximum 
+                    ventilation while keeping your feet supported and comfortable. The cushioned sole absorbs impact, making them perfect for running, gym workouts, or all-day wear. 
+                    The navy blue and silver color scheme adds a modern, stylish edge, perfect for both sports and casual outfits.
+Care & Material
+Breathable mesh with reinforced overlays
+Wipe clean with a damp cloth
+
+",
+                'price' => 76.00,
+                'colour' => 'blue/white',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+
+            new Product ([
+                'name' => 'CloudFlex Casual Sneakers',
+                'description' =>
+                    "The CloudFlex Women's Casual Sneakers offer a versatile, trendy design that’s perfect for everyday wear. With a sleek, low-top silhouette, these sneakers feature a 
+                    breathable knit upper that provides lightweight comfort and flexibility. The cushioned sole ensures all-day support, making them ideal for long walks, casual outings,
+                     or daily activities. The white and light grey colour scheme adds a minimalist and modern touch, making them easy to pair with any outfit.
+Care & Material
+Breathable knit fabric
+Wipe clean with a damp cloth
+
+",
+                'price' => 70.00,
+                'colour' => 'grey/white',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Shoes')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'LunaFlex High-Waisted Joggers',
+                'description' =>
+                    "The LunaFlex Women's High-Waisted Joggers offer comfort, performance, and a feminine edge. Designed with a slim, tapered fit, these joggers contour the body while 
+                    providing freedom of movement. The high-waisted elastic waistband with drawstrings ensures a secure and flattering fit, while the zippered side pockets add functionality. 
+                    Crafted from lightweight, breathable fabric, they are perfect for workouts, running, or casual wear.The black base with subtle pink accents adds a sleek yet stylish touch.
+Care & Material
+80% Polyester, 20% Spandex
+Machine washable, cold wash recommended
+
+",
+                'price' => 54.00,
+                'colour' => 'black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'RoseWave Joggers',
+                'description' =>
+                    "The RoseWave Women's Joggers offer a chic and feminine twist on classic athletic wear. Designed with a high-waisted fit and slim, tapered legs, these joggers provide both comfort 
+                    and style. The soft, breathable fabric ensures all-day wearability, while the zippered side pockets add functionality without bulk. The pastel pink and white color scheme brings a
+                    trendy, modern aesthetic, making these joggers perfect for gym sessions, casual outings, or lounging in style.
+Care & Material
+85% Cotton, 15% Polyester
+Machine washable, cold wash recommended
+
+",
+                'price' => 50.00,
+                'colour' => 'pink',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'SkyFlow Flared Pants',
+                'description' =>
+                    "The SkyFlow Women's Flared Pants bring together comfort, flexibility, and a stylish silhouette. Designed with a high-waisted fit and flared leg design, these pants create a modern,
+                     flattering look while providing ease of movement. The soft, stretchable fabric ensures all-day comfort, making them perfect for yoga, lounging, or casual wear.
+                     The navy blue and white colour combination offers a timeless and versatile aesthetic.
+Care & Material
+80% Polyester, 20% Spandex
+Machine washable, cold wash recommended
+
+",
+                'price' => 50.00,
+                'colour' => 'blue',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+
+            new Product ([
+                'name' => 'CloudEase Wide-Leg Pants',
+                'description' =>
+                    "The CloudEase Women's Wide-Leg Pants offer a relaxed yet stylish design, perfect for both active and casual wear. Featuring a high-waisted fit with an elastic 
+                    waistband and drawstrings, these pants provide a secure and adjustable fit. The soft, breathable fabric ensures all-day comfort, while the wide-leg cut adds a modern 
+                    and effortless touch. The light grey with subtle black accents creates a minimalist, versatile look, making them ideal for lounging, yoga, or everyday styling.
+Care & Material
+85% Cotton, 15% Polyester
+Machine washable, cold wash recommended
+
+",
+                'price' => 53.00,
+                'colour' => 'grey',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+           
+            new Product ([
+                'name' => 'Eclipse Performance Jacket',
+                'description' =>
+                    "The Eclipse Women's Performance Jacket is designed for athletic performance and sleek casual wear. Featuring a slim-fit silhouette, high collar, and full-zip front, 
+                    this jacket delivers a modern and versatile look. Made with lightweight, breathable fabric, it ensures all-day comfort and flexibility, whether you're training, traveling, 
+                    or layering for cooler weather. The zippered side pockets add secure storage for small essentials, while the black and gray color scheme keeps it stylish and timeless.
+Care & Material
+85% Cotton, 15% Spandex
+Machine washable, tumble dry low
+
+",
+                'price' => 65.00,
+                'colour' => 'black',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'BlushCore Cropped Puffer Jacket',
+                'description' =>
+                    "The BlushCore Women's Cropped Puffer Jacket offers fashion-forward warmth, perfect for layering in colder weather. Designed with a cropped fit, high collar, and full-zip front, 
+                    this jacket keeps you cozy while maintaining a sleek, trendy look. The elasticized cuffs provide a snug fit, while the lightweight insulated fabric ensures warmth without bulk. 
+                    The pastel pink and white color scheme adds a chic, modern touch, making it ideal for everyday styling.
+Care & Material
+100% Polyester (Insulated)
+Machine washable, air dry recommended
+
+",
+                'price' => 78.00,
+                'colour' => 'pink',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'StormRush Windbreaker',
+                'description' =>
+                    "The StormRush Women's Windbreaker is built for performance and everyday versatility. Made from lightweight, water-resistant fabric, this jacket provides protection against wind 
+                    and light rain while maintaining breathability. The zip-up front, high collar, and adjustable hood offer customized coverage, while the zippered side pockets ensure secure storage
+                     for essentials. The navy blue and white colour combination adds a bold, athletic touch, making it perfect for outdoor workouts, running, or casual wear.
+Care & Material
+100% Polyester (Insulated)
+Machine washable, air dry recommended
+
+",
+                'price' => 68.00,
+                'colour' => 'blue',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Inferno Fleece Jacket',
+                'description' =>
+                    "The Inferno Women's Fleece Jacket is designed for athletes and adventurers who need warmth and performance in one sleek package. Featuring a slim fit with a full-zip front and 
+                    high collar, this jacket provides insulation while remaining breathable. The soft fleece-lined fabric ensures cozy comfort in colder temperatures, while the zippered side pockets
+                     offer secure storage for essentials. The deep red and black color scheme adds a bold and sporty aesthetic, perfect for training, outdoor activities, or casual wear.
+Care & Material
+85% Polyester, 15% Fleece-Lined Cotton
+Machine washable, tumble dry low
+
+",
+                'price' => 72.00,
+                'colour' => 'black/red',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'Terra Quilted Jacket',
+                'description' =>
+                    "The Terra Women's Quilted Jacket is designed for style, warmth, and everyday versatility. Featuring a fitted silhouette with a high collar, this jacket provides a chic and modern 
+                    look while ensuring lightweight warmth. The snap-button front closure offers easy layering, while the zippered side pockets provide secure storage for essentials.
+                     The insulated quilted fabric delivers cozy comfort without bulk, making it ideal for cool-weather outings, casual wear, or layering over activewear.
+                     The olive green with subtle black accents adds a stylish and nature-inspired touch.
+Care & Material
+100% Polyester (Quilted Insulation)
+Machine washable, air dry recommended
+
+",
+                'price' => 80.00,
+                'colour' => 'green',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Jackets')->first()->id,
+                'stock' => rand(1, 50)
+            ]),
+
+            new Product ([
+                'name' => 'TerraFlex Cargo Joggers',
+                'description' =>
+                    "The TerraFlex Women's Cargo Joggers combine functionality, comfort, and effortless style. Designed with a high-waisted fit and relaxed silhouette, these joggers provide ultimate
+                     comfort for both active and casual wear. The elastic waistband with drawstrings ensures a customizable fit, while the multiple cargo pockets offer practical storage for small 
+                     essentials. The soft, breathable fabric makes them perfect for lounging, workouts, or streetwear-inspired outfits. The beige with subtle brown accents delivers a versatile and modern aesthetic.
+Care & Material
+80% Cotton, 20% Polyester
+Machine washable, cold wash recommended
+
+",
+                'price' => 80.00,
+                'colour' => 'beige',
+                'mens' => false,
+                'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
+                'stock' => rand(1, 50)
+            ])
+];
+        
+foreach ($products as $product) {
             $product->save();
         }
+
+
+        // set the created_at date to 30 days ago
+        foreach ($products as $product) {
+            $product['created_at'] = now()->subDays(30);
+            $product->save();
+        }
+
     }
 
     private function addImages(): void
@@ -1240,14 +2168,215 @@ Machine washable
             new ProductImage([
                 'product_id' => 50,
                 'image_name' => 'e10299f4-3a87-40e5-bece-498c95630579.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 51,
+                'image_name' => '6ff10a96-b0f7-48e7-8d00-945fff5bf96d.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 52,
+                'image_name' => '33f96b0a-3b53-422e-8bfe-06f0ec1b813e.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 53,
+                'image_name' => '6dd49b17-380c-4990-95ad-99b46479ded2.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 54,
+                'image_name' => '326050fd-1dd4-4e2c-b19b-e318c621346d.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 55,
+                'image_name' => '1aed8946-d205-452f-93d7-6f7fc3e58911.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 56,
+                'image_name' => '460e954a-bc4f-4572-a4fd-6c91216d57d4.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 57,
+                'image_name' => 'f205856d-b511-478d-9966-ea2448ecabe7.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 58,
+                'image_name' => '5a142be6-ff15-429d-b891-7cf6cf774078.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 59,
+                'image_name' => '4ef51ed4-22a8-478b-94f4-9487c0e8077d.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 60,
+                'image_name' => '625ebf56-118f-4c60-9031-4571094c02c7.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 61,
+                'image_name' => 'f7121676-c500-4832-abea-8c11d1c23c75.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 62,
+                'image_name' => 'a8c2e3f6-7bfb-4b73-ab83-88912a164dd4.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 63,
+                'image_name' => 'b854f2c9-b697-4685-9ff1-f02bf1425536.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 64,
+                'image_name' => '9527967f-f35a-4493-8081-31450f574dc0.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 65,
+                'image_name' => '76de743e-7b10-4862-a72b-cbeabfddb8c3.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 66,
+                'image_name' => '08ad6b70-26dd-44c4-a0ec-81d183fa4c99.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 67,
+                'image_name' => 'e6d7198c-b092-434a-bd21-8aaba3b93288.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 68,
+                'image_name' => 'f4eecb51-8af5-469b-a20d-fdc38b32f8cf.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 69,
+                'image_name' => 'f5552fd6-f10e-4c35-848a-a2ec6edc12ba.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 70,
+                'image_name' => 'e524be92-f73e-444c-b1b6-e01f16ca99ff.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 71,
+                'image_name' => 'd948015b-3912-4efe-9134-36c4f64670c3.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 72,
+                'image_name' => 'd871a3cb-0bc3-47d9-b257-501df2ca6c46.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 73,
+                'image_name' => '61773a18-03ba-4a3d-8575-d977fbfdd902.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 74,
+                'image_name' => '31e35f98-2166-4821-927b-ed16a3d116a0.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 75,
+                'image_name' => 'a94351fe-7ed5-41d9-8bb0-129020c4285e.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 76,
+                'image_name' => '2300f6bc-5370-405f-afe2-0c485bf8a7fd.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 77,
+                'image_name' => '24e355c0-9d39-4961-9816-6002c0ce83bf.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 78,
+                'image_name' => '1b09408b-2d80-421a-9ad0-a56ebb0178db.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 79,
+                'image_name' => '737380c3-d934-4213-84c7-260586ba779b.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 80,
+                'image_name' => 'c6a6dbc7-8012-4faa-af63-0cc52bf417f6.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 81,
+                'image_name' => '68d3ea47-87c0-49de-8bd6-97d67db4cb32.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 82,
+                'image_name' => '3e0552be-fe22-4f07-8708-67523a8a6eda.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 83,
+                'image_name' => '65448570-ac98-4dcb-96d5-e71dbcaecf20.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 84,
+                'image_name' => '37047713-0d20-4c22-8f1e-1d2a69c75b27.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 85,
+                'image_name' => 'e243083a-c841-47eb-b24e-1be5b0e8285c.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 86,
+                'image_name' => 'b0b67d6b-41b6-44ae-9708-9f7f856ee55c.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 87,
+                'image_name' => '94b089a0-04e4-4409-9a3f-91899017e45b.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 88,
+                'image_name' => '78dd974d-7dd2-438a-a320-918e13a37dff.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 89,
+                'image_name' => '90454c20-27c8-49b4-83d7-3e14a7222c06.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 90,
+                'image_name' => '265e626c-8258-4199-8451-a836b0647019.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 91,
+                'image_name' => '70c120c8-22cd-4b57-ba0c-58cd0aa5e8a8.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 92,
+                'image_name' => 'fb84940a-8c12-4592-8066-3551491daff8.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 93,
+                'image_name' => '284483d3-fd49-40fc-9adc-d9c6b5d733ad.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 94,
+                'image_name' => '66100771-1481-4f0b-9288-91ec5c2ddbb5.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 95,
+                'image_name' => '59b34289-dc1d-46ba-a719-67df9d3eca83.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 96,
+                'image_name' => 'd9661941-0dd0-4497-9158-f6db61c96b43.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 97,
+                'image_name' => 'f71c53dc-efff-41bd-8c94-6ca8c8b0a40a.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 98,
+                'image_name' => '41ec2749-a8af-4982-ae30-22ac7805fb25.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 99,
+                'image_name' => 'e9be203e-3655-49d4-a2fb-b1245704c2dc.jpg'
+            ]),
+            new ProductImage([
+                'product_id' => 100,
+                'image_name' => '49320394-0994-4ad4-ba39-11677c40549c.jpg'
             ])
         ];
         foreach ($images as $image) {
             $image->save();
         }
     }
+
     // Create a test account
-    function testAccount()
+    private function testAccount(): void
     {
         $user = User::create([
             'first_name' => 'John',
@@ -1260,5 +2389,61 @@ Machine washable
             'role' => 'user'
         ]);
         $user->save();
+    }
+
+    // this makes a load of random orders for each product over the recent period (might take a while to run)
+    private function addOrders(): void
+    {
+        // get all the products
+        $products = Product::all();
+        // get a user to assign to the orders
+        $user = User::all()->first();
+        // iterate through all the products
+        foreach ($products as $product) {
+            // create orders for each day for the last few days
+            for ($day = now(); $day->gt(now()->subDays(16)); $day->subDays(1)) {
+                $quantity = rand(0, 3);
+                // prevent the creation of zero orders
+                if ($quantity == 0) {
+                    continue;
+                }
+                // create the shipping item
+                $shipping = Shipping::create([
+                    'shipping_date' => now(),
+                    'delivery_date' => null,
+                    'home_address' => "test address",
+                    'tracking_number' => rand(100000, 999999),
+                ]);
+                $shipping['created_at'] = $day;
+                $shipping->save();
+                // create a transaction for the order
+                $transaction = Transaction::create([
+                    'transaction_amount' => $product->price * $quantity,
+                    'transaction_info' => 'purchase',
+                    'transaction_status' => 'completed',
+                ]);
+                $transaction['created_at'] = $day;
+                $transaction->save();
+                $order = new Order([
+                    'user_id' => $user->id,
+                    'order_total_price' => $product->price * $quantity,
+                    'created_at' => $day,
+                    'order_status' => 'completed',
+                    'shipping_id' => $shipping->id,
+                    'transaction_id' => $transaction->id
+                ]);
+                $order['created_at'] = $day;
+                $order->save();
+                $individualOrder = new IndividualOrder([
+                    'order_id' => $order->id,
+                    'product_id' => $product->id,
+                    'quantity' => $quantity,
+                    'size' => 'M',
+                    'price' => $product->price
+                ]);
+                $individualOrder['created_at'] = $day;
+                $individualOrder->save();
+            }
+        }
     }
 }

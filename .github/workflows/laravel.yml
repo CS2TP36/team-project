@@ -28,3 +28,6 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
+        php artisan migrate
+    - name: Seed Database
+      run: php artisan db:seed
