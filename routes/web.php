@@ -67,7 +67,7 @@ Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add')
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
 
-//wishlist stuff 
+//wishlist stuff
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::post('/wishlist/add', [WishlistController::class, 'add'])->name('wishlist.add');
 Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
@@ -146,3 +146,8 @@ Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPrevi
 // stuff for getting the various account pages defined via accountcontroller
 Route::get('/account', [AccountController::class, 'show'])->name('account.page');
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
+
+// temporary route for adeeb
+Route::get('/address-add', function () {
+    return view('pages.newaddresspage');
+});
