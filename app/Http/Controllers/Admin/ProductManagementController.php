@@ -32,12 +32,18 @@ class ProductManagementController extends Controller
 
     public function create()
     {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to access this page');
+        }
         $categories = Category::all(); // Fetch all categories
         return view('pages.admin.create_product', compact('categories'));
     }
 
     public function store(Request $request)
     {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to do whatever you are trying to do');
+        }
         $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric|min:0',
@@ -70,12 +76,18 @@ class ProductManagementController extends Controller
 
     public function edit(Product $product)
     {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to do whatever you are trying to do');
+        }
         return view('pages.admin.edit_product', compact('product'));
     }
 
 
     public function update(Request $request, Product $product)
     {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to do whatever you are trying to do');
+        }
         $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric|min:0',
@@ -89,6 +101,9 @@ class ProductManagementController extends Controller
 
     public function destroy(Product $product)
     {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to do whatever you are trying to do');
+        }
         ProductImage::where('product_id', $product->id)->delete();
 
         $product->delete();

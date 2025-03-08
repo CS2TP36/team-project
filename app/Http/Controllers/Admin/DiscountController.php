@@ -18,6 +18,9 @@ class DiscountController extends Controller
     }
     // to add the new code to the database
     function add(Request $request) {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to add a discount');
+        }
         // validate the request
         $request->validate([
             'start' => 'required|date',

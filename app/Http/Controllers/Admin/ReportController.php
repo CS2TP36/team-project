@@ -87,6 +87,9 @@ class ReportController extends Controller
     }
     // return the page with selected product id from the form.
     function stockLevelForm(Request $request){
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to do whatever you are trying to do');
+        }
         $request->validate([
             'product' => 'required|exists:products,id',
         ]);
