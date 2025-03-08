@@ -30,7 +30,7 @@ class User extends Authenticatable
 
     public function isAdmin()
     {
-        return $this->role === 'admin'; // Make sure your `role` column exists in the database.
+        return $this->role === 'admin';
     }
 
     /**

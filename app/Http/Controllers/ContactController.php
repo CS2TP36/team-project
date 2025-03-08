@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Emailers\ContactEmailer;
 use App\Models\ContactItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ContactController extends Controller
 {
@@ -39,6 +40,9 @@ class ContactController extends Controller
 
     // a function to load the admin page
     public function show($page = 1) {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to see this page');
+        }
         // determines the number of messages to show per page
         $perpage = 10;
         // gets all the contact items

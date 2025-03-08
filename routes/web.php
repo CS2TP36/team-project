@@ -23,7 +23,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WishlistController;
 
 
-
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -53,7 +52,6 @@ Route::get('/product/{id?}', [ShowProduct::class, 'show'])->name('product.show')
 Route::get('/previous-orders', [PreviousOrders::class, 'show'])->name('previous-orders.show');
 
 
-
 // Show the checkout page
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
@@ -67,7 +65,7 @@ Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add')
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
 
-//wishlist stuff 
+//wishlist stuff
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::post('/wishlist/add', [WishlistController::class, 'add'])->name('wishlist.add');
 Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
@@ -90,17 +88,11 @@ Route::get('/click', function () {
 
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
 
-Route::get('/admin', function () {
-    return redirect(route('admin.account'));
-})->name('admin');
+Route::get('/admin', [\App\Http\Controllers\Admin\AccountController::class, 'show'])->name('admin');
 
-Route::get('/admin/account', function () {
-    return view('pages.admin.account');
-})->name('admin.account');
+Route::get('/admin/account', [\App\Http\Controllers\Admin\AccountController::class, 'show'])->name('admin.account');
 
-Route::get('/admin/reports', function () {
-    return view('pages.admin.stock-reports');
-})->name('admin.reports');
+Route::get('/admin/reports', [ReportController::class, 'show'])->name('admin.reports');
 
 Route::post('/admin/slevels', [ReportController::class, 'stockLevelForm'])->name('admin.reports.stockLevelForm');
 
@@ -108,14 +100,14 @@ Route::get('/delivery-and-returns', function () {
     return view('pages.delivery-and-returns');
 })->name('delivery.returns');
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/products', [ProductManagementController::class, 'index'])->name('admin.products.index');
-    Route::get('/admin/products/create', [ProductManagementController::class, 'create'])->name('admin.products.create');
-    Route::post('/admin/products', [ProductManagementController::class, 'store'])->name('admin.products.store');
-    Route::get('/admin/products/{product}/edit', [ProductManagementController::class, 'edit'])->name('admin.products.edit');
-    Route::put('/admin/products/{product}', [ProductManagementController::class, 'update'])->name('admin.products.update');
-    Route::delete('/admin/products/{product}', [ProductManagementController::class, 'destroy'])->name('admin.products.destroy');
-});
+
+Route::get('/admin/products', [ProductManagementController::class, 'index'])->name('admin.products.index');
+Route::get('/admin/products/create', [ProductManagementController::class, 'create'])->name('admin.products.create');
+Route::post('/admin/products', [ProductManagementController::class, 'store'])->name('admin.products.store');
+Route::get('/admin/products/{product}/edit', [ProductManagementController::class, 'edit'])->name('admin.products.edit');
+Route::put('/admin/products/{product}', [ProductManagementController::class, 'update'])->name('admin.products.update');
+Route::delete('/admin/products/{product}', [ProductManagementController::class, 'destroy'])->name('admin.products.destroy');
+
 
 // Show the review page
 Route::get('/review/{productId}', [ReviewController::class, 'show'])->name('review.show');
@@ -146,3 +138,8 @@ Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPrevi
 // stuff for getting the various account pages defined via accountcontroller
 Route::get('/account', [AccountController::class, 'show'])->name('account.page');
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
+
+// temporary route for adeeb
+Route::get('/address-add', function () {
+    return view('pages.newaddresspage');
+});

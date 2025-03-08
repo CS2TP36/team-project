@@ -5,12 +5,15 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ManageUsersController extends Controller
 {
     // function to check if the user is allowed to manage users
     private function allowed(): bool {
-        // TODO: needs to check if user has permission to manage users first
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return false;
+        }
         return true;
     }
     // function to show the manage users page

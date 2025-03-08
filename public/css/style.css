@@ -102,8 +102,8 @@ main {
     --alt-border-color: gold;
     --box-shadow-color: gold;
     --subnavbar-bg-color: #ffffff;
-    --text-banner-colour:  rgb(255, 255, 255);
-    --text-nav-colour:  rgb(168 204 204);
+    --text-banner-colour: rgb(255, 255, 255);
+    --text-nav-colour: rgb(168 204 204);
 }
 
 .dark-mode {
@@ -118,8 +118,8 @@ main {
     --alt-border-color: gold;
     --box-shadow-color: gold;
     --subnavbar-bg-color: #9b9b9b;
-    --text-banner-colour:  rgb(0, 0, 0);
-    --text-nav-colour:  black;
+    --text-banner-colour: rgb(0, 0, 0);
+    --text-nav-colour: black;
 }
 
 #theme-toggle {
@@ -503,22 +503,25 @@ body {
 }
 
 @media (max-width: 768px) {
-    .contact-details{
+    .contact-details {
         width: 300px;
         padding: 0;
         margin: 1.8rem;
         align-items: center;
         justify-content: center;
     }
+
     .contact-details-form {
         margin: 10px;
         padding: 10px;
         width: 300px;
     }
+
     .contact-details h1 {
         font-size: 1.8rem;
         margin-left: 30px;
     }
+
     .contact-details-form {
         min-width: 320px;
         max-width: 100%;
@@ -820,7 +823,7 @@ h1 {
                 /* border: 1px solid lightgreen; */
             }
 
-            .item-details p{
+            .item-details p {
                 width: 350px;
                 font-size: 1em;
                 line-height: 1.5;
@@ -890,28 +893,27 @@ h1 {
 }
 
 @media (max-width: 768px) {
-        .basket-container {
-            flex-direction: column;
-            padding: 10px;
-        }
-    
-        .basket-item {
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-    
+    .basket-container {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-    
-        .item-details {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; 
-            width: 100%; 
-            margin-right: 0;
-            text-align: left; 
-            width: 80px;
-        }
+    .basket-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+
+    .item-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-right: 0;
+        text-align: left;
+        width: 80px;
+    }
 }
 
 /* CSS for Wishlist Page*/
@@ -1227,7 +1229,7 @@ footer a:hover {
         color: black;
     }
 
-    #discount-code-input{
+    #discount-code-input {
         margin-top: 10px;
     }
 
@@ -1250,7 +1252,7 @@ footer a:hover {
             width: 100%;
             padding: 14px;
             font-size: 18px;
-            margin-right:0px;
+            margin-right: 0px;
             margin-bottom: 5px;
         }
 
@@ -1636,7 +1638,7 @@ footer a:hover {
     }
 
     #cta {
-        text-align: cente   r;
+        text-align: cente r;
         padding: 30px 20px;
         background: #222;
         color: white;
@@ -1706,7 +1708,8 @@ footer a:hover {
             text-align: center;
             padding: 20px;
         }
-        .content-container:nth-child(even){
+
+        .content-container:nth-child(even) {
             flex-direction: column;
         }
 
@@ -1864,7 +1867,7 @@ footer a:hover {
 
 }
 
-.message-area{
+.message-area {
     text-align: center;
     width: 600px;
     align-items: center;
@@ -1874,7 +1877,7 @@ footer a:hover {
 
 }
 
-.error{
+.error {
     color: red;
     font-size: 25px;
     font-weight: bold;
@@ -1884,10 +1887,10 @@ footer a:hover {
     width: 100%;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.message{
+.message {
     color: var(--text-colour);
     font-size: 25px;
     font-weight: bold;
@@ -1896,9 +1899,11 @@ footer a:hover {
     width: 100%;
 
 }
+
 @media (max-width: 868px) {
     .navbar {
         height: 90px;
+
         .navbardiv {
             gap: 10px;
         }
@@ -1907,11 +1912,13 @@ footer a:hover {
             height: 40px;
             width: 90px;
         }
-        .user-logo{
+
+        .user-logo {
             height: 30px;
         }
+
         .search-logo {
-            right:80px;
+            right: 80px;
         }
 
         #search-bar {
@@ -1956,8 +1963,8 @@ footer a:hover {
             display: inline-block;
             list-style: none;
             text-decoration: none;
-            padding-left:30px;
-            padding-right:30px;
+            padding-left: 30px;
+            padding-right: 30px;
 
             a {
                 color: rgb(0, 0, 0);
@@ -1978,7 +1985,7 @@ footer a:hover {
 
     }
 
-    .message-area{
+    .message-area {
         height: auto;
     }
 
@@ -2055,9 +2062,9 @@ button:hover {
         gap: 10px;
 
 
-        ul{
+        ul {
             padding-left: 0;
-            padding-bottom:0 ;
+            padding-bottom: 0;
             padding-top: 0;
             padding-right: 5px;
             margin: 0;
@@ -2066,7 +2073,6 @@ button:hover {
         .footer-list {
             font-size: 15px;
             text-align: left;
-
 
 
             a {
@@ -2092,7 +2098,8 @@ button:hover {
                 color: white;
                 cursor: pointer;
                 margin-bottom: 10px;
-                p{
+
+                p {
                     font-size: 7px;
                 }
             }
@@ -2103,19 +2110,19 @@ button:hover {
             background-color: #2D2D2D;
         }
 
-        .footer-title{
+        .footer-title {
             font-size: 12px;
             padding-top: 20px;
             text-align: left;
 
         }
 
-        #social-pic{
+        #social-pic {
             width: 20px;
             height: 20px;
         }
 
-        #theme-toggle{
+        #theme-toggle {
             width: 50%;
         }
 
@@ -2285,7 +2292,6 @@ button:hover {
     margin: 0;
 
 }
-
 
 
 .featured-item-wrapper {
@@ -2476,7 +2482,6 @@ button:hover {
 }
 
 
-
 #review-pic {
     width: 400px;
     height: 200px;
@@ -2519,8 +2524,9 @@ button:hover {
 
     #catogery-divider {
         margin-top: 50px;
-            p {
-                font-size: 20px;
+
+        p {
+            font-size: 20px;
 
 
         }
@@ -2563,7 +2569,6 @@ button:hover {
     }
 
 
-
     .back-button,
     .next-button {
         padding: 0;
@@ -2602,10 +2607,10 @@ button:hover {
         padding-bottom: 20px;
         font-size: 15px;
 
-            ul {
-                padding: 0;
-                margin: 0;
-            }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
     }
 
     #guarantee-list {
@@ -2629,8 +2634,6 @@ button:hover {
         width: 350px;
     }
 }
-
-
 
 
 /* CSS for Login Page */
@@ -2937,25 +2940,24 @@ label {
     background-color: #4D4D4D;
 }
 
-#breadcrumbs{
+#breadcrumbs {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-right: 1180px;
 
-        a{
-            text-decoration: none;
-            list-style: none;
-            color: var(--text-colour);
-            font-size: 18px;
-        }
+    a {
+        text-decoration: none;
+        list-style: none;
+        color: var(--text-colour);
+        font-size: 18px;
+    }
 
-        P{
-            color: var(--text-colour);
-            font-size: 18px;
-        }
+    P {
+        color: var(--text-colour);
+        font-size: 18px;
+    }
 
 }
-
 
 
 @media (max-width: 1340px) {
@@ -3039,23 +3041,23 @@ label {
     }
 
 
-    #breadcrumbs{
+    #breadcrumbs {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         margin: 0;
 
 
-            a{
-                text-decoration: none;
-                list-style: none;
-                color: var(--text-colour);
-                font-size: 14px;
-            }
+        a {
+            text-decoration: none;
+            list-style: none;
+            color: var(--text-colour);
+            font-size: 14px;
+        }
 
-            P{
-                color: var(--text-colour);
-                font-size: 14px;
-            }
+        P {
+            color: var(--text-colour);
+            font-size: 14px;
+        }
 
     }
 
@@ -3107,7 +3109,7 @@ label {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    
+
 }
 
 .left-container {
@@ -3118,7 +3120,7 @@ label {
     img {
         width: 650px;
         height: 600px;
-        object-fit:contain;
+        object-fit: contain;
     }
 
     margin-top: 20px;
@@ -3264,11 +3266,13 @@ label {
         }
 
     }
-    #product-info{
+
+    #product-info {
         margin-bottom: 50px;
-            p {
-                font-size: 0.7rem;
-            }
+
+        p {
+            font-size: 0.7rem;
+        }
     }
 
     .right-container {
@@ -3511,6 +3515,22 @@ label {
     }
 }
 
+.privacy {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    padding: 20px;
+    line-height: 1.6;
+
+    h1 {
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
 #delivery-and-returns {
 
     /* I think all the stuff under here is for delivery and returns */
@@ -3703,7 +3723,8 @@ label {
         color: black;
     }
 }
-.click-collect{
+
+.click-collect {
 
 }
 
