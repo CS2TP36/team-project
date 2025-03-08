@@ -6,9 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Models\IndividualOrder;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReportController extends Controller
 {
+    function show()
+    {
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to access this page');
+        }
+        return view('pages.admin.stock-reports');
+    }
+
     // a function to get the stock level warnings for the reports page, returns an  array of warnings in format [product, warning]
     static function getWarnings(): array
     {
@@ -78,6 +87,9 @@ class ReportController extends Controller
     }
     // return the page with selected product id from the form.
     function stockLevelForm(Request $request){
+        if (!Auth::check() || !Auth::user()->isAdmin()) {
+            return back()->with('message', 'You do not have permission to do whatever you are trying to do');
+        }
         $request->validate([
             'product' => 'required|exists:products,id',
         ]);

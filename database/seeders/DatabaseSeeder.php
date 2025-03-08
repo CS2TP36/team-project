@@ -1018,7 +1018,7 @@ Machine washable
             new Product ([
                 'name' => 'Velocity Performance T-Shirt',
                 'description' =>
-                    "The Velocity Performance T-Shirt is engineered for athletes and fitness enthusiasts. Made from breathable, moisture-wicking fabric, 
+                    "The Velocity Performance T-Shirt is engineered for athletes and fitness enthusiasts. Made from breathable, moisture-wicking fabric,
                     it keeps you cool and dry during intense workouts. The sleek, athletic fit enhances movement and flexibility, while the bold red stripe
                      accents add a dynamic and stylish touch.
 
@@ -1033,11 +1033,11 @@ Machine washable, tumble dry low
                 'category_id' => Category::all()->where('name', 'Shirts')->first()->id,
                 'stock' => rand(1, 50)
             ]),
-            
+
             new Product ([
                 'name' => 'Apex Grid Performance T-Shirt',
                 'description' =>
-                    "The Apex Grid Performance T-Shirt is designed for athletes seeking both style and functionality. Made with lightweight, moisture-wicking fabric, 
+                    "The Apex Grid Performance T-Shirt is designed for athletes seeking both style and functionality. Made with lightweight, moisture-wicking fabric,
                     it enhances airflow to keep you cool and dry during intense training.
                      The geometric grid pattern gives a futuristic and energetic look, while the ergonomic fit allows maximum flexibility and movement.
 Care & Material
@@ -1056,8 +1056,8 @@ Machine washable, cold wash recommended
             new Product ([
                 'name' => 'Titan Compression Long Sleeve',
                 'description' =>
-                    "The Titan Compression Long Sleeve is built for performance and endurance. Designed with advanced compression technology, it enhances muscle support 
-                    and improves circulation, making it perfect for intense training and recovery.The sleek, body-contouring fit provides unrestricted movement, while 
+                    "The Titan Compression Long Sleeve is built for performance and endurance. Designed with advanced compression technology, it enhances muscle support
+                    and improves circulation, making it perfect for intense training and recovery.The sleek, body-contouring fit provides unrestricted movement, while
                     the breathable, moisture-wicking fabric keeps you cool and dry during workouts.
 Care & Material
 85% Polyester, 15% Spandex
@@ -1076,7 +1076,7 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'NeoStrike Compression T-Shirt',
                 'description' =>
-                    "The NeoStrike Compression T-Shirt is engineered for maximum performance and agility. Featuring high-stretch, moisture-wicking fabric, it keeps you cool, dry, 
+                    "The NeoStrike Compression T-Shirt is engineered for maximum performance and agility. Featuring high-stretch, moisture-wicking fabric, it keeps you cool, dry,
                     and comfortable during intense workouts. The ergonomic design enhances mobility, while the bold neon green and black accents create a striking,
                      futuristic look. Perfect for gym sessions, running, and high-intensity training.
 Care & Material
@@ -1093,8 +1093,8 @@ Machine washable, cold wash recommended
             new Product ([
                 'name' => 'Inferno Compression Long Sleeve',
                 'description' =>
-                    "The Inferno Compression Long Sleeve is built for intense workouts and high-performance training. Designed with heat-regulating, moisture-wicking fabric, 
-                    it keeps you cool and dry while providing optimal muscle support. The sleek gradient red-to-black design gives it a bold, fiery look, while the ergonomic fit 
+                    "The Inferno Compression Long Sleeve is built for intense workouts and high-performance training. Designed with heat-regulating, moisture-wicking fabric,
+                    it keeps you cool and dry while providing optimal muscle support. The sleek gradient red-to-black design gives it a bold, fiery look, while the ergonomic fit
                     allows for unrestricted movement. Ideal for gym training, running, and outdoor activities.
 Care & Material
 85% Polyester, 15% Spandex
@@ -1110,7 +1110,7 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'Shadowstrike Performance Hoodie',
                 'description' =>
-                    "The Shadowstrike Performance Hoodie combines style, comfort, and high-performance design. Made from premium moisture-wicking fabric, 
+                    "The Shadowstrike Performance Hoodie combines style, comfort, and high-performance design. Made from premium moisture-wicking fabric,
                     it keeps you warm yet breathable during workouts or casual wear. The sleek black design with bold red accents adds a modern, athletic look, while the adjustable
                      hood and zip-up front provide versatility.The fitted design ensures maximum flexibility and comfort, making it perfect for training, running, or everyday wear.
 Care & Material
@@ -1127,8 +1127,8 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'SkyForge Athletic Hoodie',
                 'description' =>
-                    "The SkyForge Athletic Hoodie is designed for performance and comfort, perfect for training sessions or casual wear. Made with a lightweight 
-                    yet insulating fabric, it provides warmth without overheating. The sleek blue design with textured shoulder accents adds a modern touch, while 
+                    "The SkyForge Athletic Hoodie is designed for performance and comfort, perfect for training sessions or casual wear. Made with a lightweight
+                    yet insulating fabric, it provides warmth without overheating. The sleek blue design with textured shoulder accents adds a modern touch, while
                     the adjustable hood and full-zip closure offer versatility. The ergonomic fit ensures full range of motion, making it ideal for active and everyday wear.
 Care & Material
 70% Polyester, 30% cotton
@@ -1145,8 +1145,8 @@ Machine washable, tumble dry low
                 'name' => 'StormFlex Performance Hoodie',
                 'description' =>
                     "The StormFlex Performance Hoodie is built for versatility and comfort, making it ideal for both active and casual wear.
-                     Crafted with a premium, stretch-fit fabric, it provides warmth without restricting movement. The sleek grey design with subtle gradient accents 
-                     offers a modern, athletic look, while the full-zip closure and adjustable hood ensure maximum adaptability and style. 
+                     Crafted with a premium, stretch-fit fabric, it provides warmth without restricting movement. The sleek grey design with subtle gradient accents
+                     offers a modern, athletic look, while the full-zip closure and adjustable hood ensure maximum adaptability and style.
                     Whether you're hitting the gym, going for a run, or just relaxing, this hoodie delivers performance and style in one package.
 Care & Material
 68% Polyester, 32% cotton
@@ -1163,7 +1163,7 @@ Machine washable, air dry recommended
                 'name' => 'Vortex Edge Pullover Hoodie',
                 'description' =>
                     "The Vortex Edge Pullover Hoodie is designed for those who want to stand out while staying comfortable. Featuring a bold geometric design with striking neon green accents,
-                     this hoodie offers a modern and futuristic look. The soft fleece lining provides warmth and comfort, while the relaxed fit ensures all-day wearability. 
+                     this hoodie offers a modern and futuristic look. The soft fleece lining provides warmth and comfort, while the relaxed fit ensures all-day wearability.
                     The adjustable drawstring hood and ribbed cuffs add extra style and functionality, making it perfect for training, casual wear, or street fashion.
 Care & Material
 60% Cotton, 40% Polyester
@@ -1179,7 +1179,7 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'Inferno Flux Zip Hoodie',
                 'description' =>
-                    "The Inferno Flux Zip Hoodie is built for those who demand style and performance. With a striking red-to-black gradient design, this hoodie makes a bold statement 
+                    "The Inferno Flux Zip Hoodie is built for those who demand style and performance. With a striking red-to-black gradient design, this hoodie makes a bold statement
                     while offering premium comfort. The sleek, athletic fit ensures maximum flexibility, while the soft fleece interior provides warmth without bulk. Featuring a full-zip closure,
                      adjustable hood, and ribbed cuffs, this hoodie is perfect for training, outdoor adventures, or casual wear.
 Care & Material
@@ -1198,11 +1198,11 @@ Machine washable, air dry recommended
                 'description' =>
                     "The HyperEdge Running Shoes are designed for next-level performance with a futuristic aesthetic. Featuring a breathable mesh upper, these shoes ensure
                      maximum airflow and comfort during long runs or high-intensity workouts. The advanced cushioned sole provides shock absorption and superior traction,
-                      making it perfect for sports, training, and casual wear. 
+                      making it perfect for sports, training, and casual wear.
                     The bold blue, black, and neon green colorway adds a high-energy, modern look that stands out.
 Care & Material
 Mesh Upper with Rubber Sole
-Wipe clean with a damp cloth 
+Wipe clean with a damp cloth
 
 ",
                 'price' => 75.00,
@@ -1215,12 +1215,12 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'Inferno Sprint Running Shoes',
                 'description' =>
-                    "The Inferno Sprint Running Shoes are built for speed, endurance, and style. Designed with a breathable mesh upper, these shoes provide maximum ventilation while 
-                    maintaining durability. The shock-absorbing cushioned sole ensures optimal traction and comfort for high-intensity training and running. 
+                    "The Inferno Sprint Running Shoes are built for speed, endurance, and style. Designed with a breathable mesh upper, these shoes provide maximum ventilation while
+                    maintaining durability. The shock-absorbing cushioned sole ensures optimal traction and comfort for high-intensity training and running.
                     Featuring a bold black and red colorway, these shoes deliver a futuristic, aggressive look that’s perfect for athletes and sneaker enthusiasts alike.
 Care & Material
 Breathable performance mesh
-Wipe clean with a damp cloth 
+Wipe clean with a damp cloth
 
 ",
                 'price' => 78.00,
@@ -1238,7 +1238,7 @@ Wipe clean with a damp cloth
                     these sneakers are versatile for sports, running, or casual wear. The streamlined aesthetic makes them a perfect blend of style and functionality.
 Care & Material
 Lightweight, breathable mesh
-Wipe clean with a damp cloth 
+Wipe clean with a damp cloth
 
 ",
                 'price' => 72.00,
@@ -1251,12 +1251,12 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'BlazeStorm Running Shoes',
                 'description' =>
-                    "The BlazeStorm Running Shoes are built for speed, agility, and endurance. Featuring a breathable mesh upper, these shoes provide lightweight support 
-                    and ventilation for maximum performance. The high-traction cushioned outsole ensures superior grip and comfort, making them ideal for running, gym workouts, and casual wear. 
+                    "The BlazeStorm Running Shoes are built for speed, agility, and endurance. Featuring a breathable mesh upper, these shoes provide lightweight support
+                    and ventilation for maximum performance. The high-traction cushioned outsole ensures superior grip and comfort, making them ideal for running, gym workouts, and casual wear.
                     The black and orange color scheme gives these shoes a bold, fiery aesthetic, perfect for those who want to stand out.
 Care & Material
 Mesh Upper with Rubber Sole
-Wipe clean with a damp cloth 
+Wipe clean with a damp cloth
 
 ",
                 'price' => 76.00,
@@ -1269,13 +1269,13 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'TitanFlow Running Shoes',
                 'description' =>
-                    "The TitanFlow Running Shoes combine style, comfort, and high performance. Featuring a breathable mesh upper, 
-                    these shoes provide lightweight support and airflow, ensuring maximum comfort during workouts or everyday wear. The cushioned sole 
-                    absorbs impact for optimal traction and stability, making them ideal for running, training, and long-distance walking. 
+                    "The TitanFlow Running Shoes combine style, comfort, and high performance. Featuring a breathable mesh upper,
+                    these shoes provide lightweight support and airflow, ensuring maximum comfort during workouts or everyday wear. The cushioned sole
+                    absorbs impact for optimal traction and stability, making them ideal for running, training, and long-distance walking.
                     The navy blue and silver color scheme adds a sleek and versatile aesthetic, perfect for any occasion.
 Care & Material
 Mesh Upper with Rubber Sole
-Wipe clean with a damp cloth 
+Wipe clean with a damp cloth
 
 ",
                 'price' => 74.00,
@@ -1288,9 +1288,9 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'ShadowFlex Performance Joggers',
                 'description' =>
-                    "The ShadowFlex Performance Joggers are crafted for comfort, mobility, and a modern athletic look. Designed with a tapered slim fit, 
-                    these joggers offer flexibility and style for both workouts and casual wear. The elastic waistband with adjustable drawstrings provides 
-                    a secure and customizable fit, while the zippered side pockets offer convenience and security for essentials. 
+                    "The ShadowFlex Performance Joggers are crafted for comfort, mobility, and a modern athletic look. Designed with a tapered slim fit,
+                    these joggers offer flexibility and style for both workouts and casual wear. The elastic waistband with adjustable drawstrings provides
+                    a secure and customizable fit, while the zippered side pockets offer convenience and security for essentials.
                     The lightweight, breathable fabric ensures all-day comfort, making them perfect for training, running, or everyday use.
 Care & Material
 85% Polyester, 15% Spandex
@@ -1308,7 +1308,7 @@ Machine washable, cold wash recommended
                 'name' => 'Midnight Core Joggers',
                 'description' =>
                     "The Midnight Core Joggers are designed for comfort, performance, and a classic athletic look. Featuring a relaxed fit with tapered legs,
-                     they offer maximum flexibility for both workouts and everyday wear. The elastic waistband with adjustable drawstrings ensures a secure and 
+                     they offer maximum flexibility for both workouts and everyday wear. The elastic waistband with adjustable drawstrings ensures a secure and
                      customizable fit, while the zippered side pockets provide secure storage for essentials.
                      Crafted from soft, breathable fabric, these joggers deliver all-day comfort with a modern touch.
 Care & Material
@@ -1326,7 +1326,7 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'Titan Motion Joggers',
                 'description' =>
-                    "The Titan Motion Joggers are designed for athletic performance and streetwear appeal. Featuring a slim tapered fit, these 
+                    "The Titan Motion Joggers are designed for athletic performance and streetwear appeal. Featuring a slim tapered fit, these
                     joggers provide a modern and stylish look while maintaining maximum comfort. The moisture-wicking fabric ensures breathability and flexibility,
                      making them ideal for gym workouts, running, or casual wear. The black side panel accents add a sleek, sporty touch, while the zippered pockets
                     provide secure storage for essentials.
@@ -1345,8 +1345,8 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'AeroFlex Utility Joggers',
                 'description' =>
-                    "The AeroFlex Utility Joggers offer a sleek and functional design, perfect for active and casual lifestyles. Made from soft stretch fabric, these joggers 
-                    provide unmatched comfort and flexibility. The elastic waistband with adjustable drawstrings ensures a secure fit, while the zippered side pockets and 
+                    "The AeroFlex Utility Joggers offer a sleek and functional design, perfect for active and casual lifestyles. Made from soft stretch fabric, these joggers
+                    provide unmatched comfort and flexibility. The elastic waistband with adjustable drawstrings ensures a secure fit, while the zippered side pockets and
                     cargo-style detail add practical storage options. With a light grey base and black accents, these joggers bring a modern and versatile aesthetic to any outfit.
 Care & Material
 75% Polyester, 25% Cotton
@@ -1359,13 +1359,13 @@ Machine washable, cold wash recommended
                 'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
                 'stock' => rand(1, 50)
             ]),
-           
+
             new Product ([
                 'name' => 'AeroFlex Utility Joggers',
                 'description' =>
-                    "The Crimson Velocity Joggers bring together bold style and athletic functionality. Featuring a slim tapered fit, these joggers provide optimal flexibility and comfort. 
-                    The elastic waistband with drawstrings allows for a custom fit, while the zippered pockets offer secure storage for essentials. Designed with breathable fabric, 
-                    they ensure all-day comfort, making them ideal for training, running, or casual wear. 
+                    "The Crimson Velocity Joggers bring together bold style and athletic functionality. Featuring a slim tapered fit, these joggers provide optimal flexibility and comfort.
+                    The elastic waistband with drawstrings allows for a custom fit, while the zippered pockets offer secure storage for essentials. Designed with breathable fabric,
+                    they ensure all-day comfort, making them ideal for training, running, or casual wear.
                     The deep red with black accents adds a striking and modern aesthetic to any outfit.
 Care & Material
 80% Polyester, 20% Spandex
@@ -1382,9 +1382,9 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'Shadow Elite Performance Jacket',
                 'description' =>
-                    "The Shadow Elite Performance Jacket is designed for athletes and style-conscious individuals. Featuring a slim fit and a high-collar design, 
+                    "The Shadow Elite Performance Jacket is designed for athletes and style-conscious individuals. Featuring a slim fit and a high-collar design,
                     this jacket provides a modern and dynamic look while ensuring maximum comfort and mobility. The full-zip front and zippered side pockets offer
-                     convenience and functionality, making it ideal for training, outdoor workouts, or casual wear. The lightweight, breathable fabric allows 
+                     convenience and functionality, making it ideal for training, outdoor workouts, or casual wear. The lightweight, breathable fabric allows
                      for all-weather adaptability, keeping you comfortable in any setting.
 Care & Material
 90% Polyester, 10% Spandex
@@ -1401,9 +1401,9 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'Midnight Apex Training Jacket',
                 'description' =>
-                    "The Midnight Apex Training Jacket blends performance and modern style with its sleek, slim-fit design. Crafted from soft and breathable fabric, 
+                    "The Midnight Apex Training Jacket blends performance and modern style with its sleek, slim-fit design. Crafted from soft and breathable fabric,
                     it provides all-day comfort and flexibility for workouts, outdoor activities, or casual wear. The full-zip front, high collar, and zippered pockets
-                     add functionality and convenience,  making it perfect for layering or wearing solo. The navy blue with subtle white accents delivers a classic, 
+                     add functionality and convenience,  making it perfect for layering or wearing solo. The navy blue with subtle white accents delivers a classic,
                      versatile aesthetic.
 Care & Material
 85% Polyester, 15% Spandex
@@ -1420,8 +1420,8 @@ Machine washable, cold wash recommended
             new Product ([
                 'name' => 'Inferno Bomber Jacket',
                 'description' =>
-                    "The Inferno Bomber Jacket combines modern style with functional warmth, making it perfect for training, casual wear, or layering in colder weather. 
-                    Designed with a relaxed fit, this jacket features a ribbed collar, cuffs, and hem for a snug and comfortable feel. The full-zip front and zippered side 
+                    "The Inferno Bomber Jacket combines modern style with functional warmth, making it perfect for training, casual wear, or layering in colder weather.
+                    Designed with a relaxed fit, this jacket features a ribbed collar, cuffs, and hem for a snug and comfortable feel. The full-zip front and zippered side
                     pockets offer convenience and practicality, while the insulated fabric ensures warmth without bulk. The deep red and black colour scheme gives a bold,
                      athletic look with a touch of streetwear edge.
 Care & Material
@@ -1440,8 +1440,8 @@ Machine washable, tumble dry low
                 'name' => 'StormGuard Windbreaker Jacket',
                 'description' =>
                     "The StormGuard Windbreaker Jacket is built for athletes and outdoor enthusiasts who need lightweight protection from the elements.
-                     Made with water-resistant and breathable fabric, this jacket keeps you dry and comfortable in unpredictable weather. The adjustable hood, 
-                     full-zip front, and zippered side pockets provide functionality and convenience, while the relaxed fit ensures easy movement. 
+                     Made with water-resistant and breathable fabric, this jacket keeps you dry and comfortable in unpredictable weather. The adjustable hood,
+                     full-zip front, and zippered side pockets provide functionality and convenience, while the relaxed fit ensures easy movement.
                     The sleek white and black colour scheme gives it a modern and versatile look, perfect for training, running, or casual wear.
 Care & Material
 100% Polyester (Water-Resistant)
@@ -1477,8 +1477,8 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'Velocity Performance T-Shirt',
                 'description' =>
-                    "The Velocity Women's Performance T-Shirt is designed for active lifestyles, offering breathability, comfort, and a sleek fit. 
-                    The moisture-wicking fabric keeps you cool and dry, while the slim-fit design with a subtle scoop neckline ensures a flattering, modern silhouette. 
+                    "The Velocity Women's Performance T-Shirt is designed for active lifestyles, offering breathability, comfort, and a sleek fit.
+                    The moisture-wicking fabric keeps you cool and dry, while the slim-fit design with a subtle scoop neckline ensures a flattering, modern silhouette.
                     The curved hem adds style and extra coverage, making this t-shirt perfect for workouts, running, or casual wear.
 Care & Material
 90% Polyester, 10% Spandex
@@ -1495,7 +1495,7 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'Nova Training T-Shirt',
                 'description' =>
-                    "The Nova Women's Training T-Shirt is designed for performance and versatility. Featuring moisture-wicking fabric, it keeps you cool and dry during 
+                    "The Nova Women's Training T-Shirt is designed for performance and versatility. Featuring moisture-wicking fabric, it keeps you cool and dry during
                     workouts or casual wear. The slim-fit design, scoop neckline, and curved hem create a flattering silhouette, while the lightweight, breathable material allows for
                      maximum comfort and movement. The navy blue with white accents offers a classic and timeless look.
 Care & Material
@@ -1513,7 +1513,7 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'Blaze Active T-Shirt',
                 'description' =>
-                    "The Blaze Women's Active T-Shirt is designed for high-energy workouts and everyday comfort. Made with moisture-wicking, breathable fabric, 
+                    "The Blaze Women's Active T-Shirt is designed for high-energy workouts and everyday comfort. Made with moisture-wicking, breathable fabric,
                     it keeps you cool and dry throughout the day. The slim-fit cut, scoop neckline, and curved hem provide a flattering and comfortable fit,
                      while the bold deep red and black accents add a dynamic, stylish touch. Perfect for training, running, or casual wear.
 Care & Material
@@ -1531,7 +1531,7 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'Serenity Training T-Shirt',
                 'description' =>
-                    "The Serenity Women's Training T-Shirt offers a soft and elegant take on activewear. Designed with breathable, moisture-wicking fabric, 
+                    "The Serenity Women's Training T-Shirt offers a soft and elegant take on activewear. Designed with breathable, moisture-wicking fabric,
                     it keeps you cool and comfortable during workouts or casual outings. The slim-fit silhouette, scoop neckline, and curved hem provide a flattering, feminine look,
                      while the white and pastel pink colour scheme adds a fresh and stylish aesthetic. Perfect for yoga, running, or everyday wear.
 Care & Material
@@ -1549,8 +1549,8 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'Titan Crop Top',
                 'description' =>
-                    "The Titan Women's Crop Top is a bold and sporty choice for those who want style and functionality in their activewear. Made with breathable, moisture-wicking fabric, 
-                    it keeps you cool and dry during workouts. The slim-fit cut, round neckline, and cropped length create a modern and flattering silhouette, while the dark green and black 
+                    "The Titan Women's Crop Top is a bold and sporty choice for those who want style and functionality in their activewear. Made with breathable, moisture-wicking fabric,
+                    it keeps you cool and dry during workouts. The slim-fit cut, round neckline, and cropped length create a modern and flattering silhouette, while the dark green and black
                     colour scheme adds a powerful and athletic touch. Perfect for gym sessions, running, or casual streetwear looks.
 Care & Material
 88% Polyester, 12% Spandex
@@ -1567,8 +1567,8 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'ShadowFlex Performance Hoodie',
                 'description' =>
-                    "The ShadowFlex Women's Performance Hoodie is designed for athletes and active lifestyles, offering a sleek, slim fit with breathable comfort. 
-                    The moisture-wicking fabric keeps you dry and comfortable, while the drawstring hood and curved hem provide a flattering and versatile look. 
+                    "The ShadowFlex Women's Performance Hoodie is designed for athletes and active lifestyles, offering a sleek, slim fit with breathable comfort.
+                    The moisture-wicking fabric keeps you dry and comfortable, while the drawstring hood and curved hem provide a flattering and versatile look.
                     The long sleeves offer extra coverage, making it perfect for workouts, running, or layering for casual wear.
 Care & Material
 90% Polyester, 10% Spandex
@@ -1585,8 +1585,8 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'BlushWave Cropped Hoodie',
                 'description' =>
-                    "The BlushWave Women's Cropped Hoodie offers a modern and stylish take on casual athletic wear. Designed with a relaxed fit and slightly cropped length, this hoodie provides 
-                    a trendy and flattering silhouette. The soft, breathable fabric ensures all-day comfort, while the adjustable drawstring hood adds functionality. Perfect for layering, workouts, 
+                    "The BlushWave Women's Cropped Hoodie offers a modern and stylish take on casual athletic wear. Designed with a relaxed fit and slightly cropped length, this hoodie provides
+                    a trendy and flattering silhouette. The soft, breathable fabric ensures all-day comfort, while the adjustable drawstring hood adds functionality. Perfect for layering, workouts,
                     or everyday casual wear, the pastel pink and white color scheme adds a chic and feminine touch.
 Care & Material
 80% Cotton, 20% Polyester
@@ -1603,8 +1603,8 @@ Machine washable, cold wash recommended
             new Product ([
                 'name' => 'Nova Zip-Up Hoodie',
                 'description' =>
-                    "The Nova Women's Zip-Up Hoodie is designed for athletic performance and casual versatility. Featuring a slim fit with a full-zip front, it offers comfort and 
-                    flexibility for everyday wear. The lightweight, breathable fabric keeps you cool and comfortable, while the zippered side pockets provide secure storage for 
+                    "The Nova Women's Zip-Up Hoodie is designed for athletic performance and casual versatility. Featuring a slim fit with a full-zip front, it offers comfort and
+                    flexibility for everyday wear. The lightweight, breathable fabric keeps you cool and comfortable, while the zippered side pockets provide secure storage for
                     small essentials.The adjustable drawstring hood ensures extra coverage and protection, making it perfect for layering during workouts or outdoor activities.
                     The navy blue and white color scheme adds a classic and stylish touch.
 Care & Material
@@ -1623,8 +1623,8 @@ Machine washable, tumble dry low
                 'name' => 'CloudComfort Oversized Hoodie',
                 'description' =>
                     "The CloudComfort Oversized Hoodie is perfect for effortless streetwear style and cozy comfort. Featuring a relaxed fit with a large drawstring hood, this hoodie
-                     provides a laid-back yet trendy aesthetic. The soft fleece fabric ensures maximum warmth and softness, while the ribbed cuffs and hem offer a secure fit. 
-                    The front kangaroo pocket adds functionality, making it an ideal choice for lounging, casual wear, or layering in colder weather. 
+                     provides a laid-back yet trendy aesthetic. The soft fleece fabric ensures maximum warmth and softness, while the ribbed cuffs and hem offer a secure fit.
+                    The front kangaroo pocket adds functionality, making it an ideal choice for lounging, casual wear, or layering in colder weather.
                     The light grey with subtle black accents delivers a minimalist, versatile look.
 Care & Material
 85% Polyester, 15% Spandex
@@ -1641,8 +1641,8 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'Inferno Pullover Hoodie',
                 'description' =>
-                    "The Inferno Women's Pullover Hoodie is built for athletic performance and everyday wear, offering a sleek, slim fit with a high-collar hood for extra protection. 
-                    Made with stretchable, breathable fabric, it ensures flexibility and comfort, whether you're training or lounging. The ribbed cuffs and hem provide a secure fit, 
+                    "The Inferno Women's Pullover Hoodie is built for athletic performance and everyday wear, offering a sleek, slim fit with a high-collar hood for extra protection.
+                    Made with stretchable, breathable fabric, it ensures flexibility and comfort, whether you're training or lounging. The ribbed cuffs and hem provide a secure fit,
                     while the front kangaroo pocket offers functionality and warmth. The deep red and black color scheme gives it a bold and sporty look, making it a must-have for
                      active and casual wardrobes.
 Care & Material
@@ -1660,8 +1660,8 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'NovaStride Running Trainers',
                 'description' =>
-                    "The NovaStride Women's Running Trainers combine performance, comfort, and modern design. Featuring a breathable mesh upper, these trainers keep your feet cool and ventilated, 
-                    while the cushioned sole offers shock absorption and superior support for running and training. The lightweight yet durable construction ensures all-day comfort, making them 
+                    "The NovaStride Women's Running Trainers combine performance, comfort, and modern design. Featuring a breathable mesh upper, these trainers keep your feet cool and ventilated,
+                    while the cushioned sole offers shock absorption and superior support for running and training. The lightweight yet durable construction ensures all-day comfort, making them
                     perfect for workouts,jogging, or everyday wear. The black and white color scheme delivers a sleek and versatile aesthetic.
 Care & Material
 Breathable mesh with reinforced overlays
@@ -1696,8 +1696,8 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'Inferno Sprint Trainers',
                 'description' =>
-                    "The Inferno Sprint Women's Trainers are designed for high-performance workouts and bold style. With a breathable mesh upper, they keep your feet cool and ventilated even 
-                    during intense sessions. The cushioned sole absorbs impact, providing superior comfort and support for running, gym training, or all-day wear. 
+                    "The Inferno Sprint Women's Trainers are designed for high-performance workouts and bold style. With a breathable mesh upper, they keep your feet cool and ventilated even
+                    during intense sessions. The cushioned sole absorbs impact, providing superior comfort and support for running, gym training, or all-day wear.
                     The deep red and black color scheme adds a striking, athletic edge, making them a standout choice for any active wardrobe.
 Care & Material
 Breathable mesh with reinforced overlays
@@ -1714,8 +1714,8 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'TitanFlow Running Trainers',
                 'description' =>
-                    "The TitanFlow Women's Running Trainers offer a sleek, high-performance design for comfort and durability. Featuring a breathable mesh upper, these trainers ensure maximum 
-                    ventilation while keeping your feet supported and comfortable. The cushioned sole absorbs impact, making them perfect for running, gym workouts, or all-day wear. 
+                    "The TitanFlow Women's Running Trainers offer a sleek, high-performance design for comfort and durability. Featuring a breathable mesh upper, these trainers ensure maximum
+                    ventilation while keeping your feet supported and comfortable. The cushioned sole absorbs impact, making them perfect for running, gym workouts, or all-day wear.
                     The navy blue and silver color scheme adds a modern, stylish edge, perfect for both sports and casual outfits.
 Care & Material
 Breathable mesh with reinforced overlays
@@ -1733,7 +1733,7 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'CloudFlex Casual Sneakers',
                 'description' =>
-                    "The CloudFlex Women's Casual Sneakers offer a versatile, trendy design that’s perfect for everyday wear. With a sleek, low-top silhouette, these sneakers feature a 
+                    "The CloudFlex Women's Casual Sneakers offer a versatile, trendy design that’s perfect for everyday wear. With a sleek, low-top silhouette, these sneakers feature a
                     breathable knit upper that provides lightweight comfort and flexibility. The cushioned sole ensures all-day support, making them ideal for long walks, casual outings,
                      or daily activities. The white and light grey colour scheme adds a minimalist and modern touch, making them easy to pair with any outfit.
 Care & Material
@@ -1751,8 +1751,8 @@ Wipe clean with a damp cloth
             new Product ([
                 'name' => 'LunaFlex High-Waisted Joggers',
                 'description' =>
-                    "The LunaFlex Women's High-Waisted Joggers offer comfort, performance, and a feminine edge. Designed with a slim, tapered fit, these joggers contour the body while 
-                    providing freedom of movement. The high-waisted elastic waistband with drawstrings ensures a secure and flattering fit, while the zippered side pockets add functionality. 
+                    "The LunaFlex Women's High-Waisted Joggers offer comfort, performance, and a feminine edge. Designed with a slim, tapered fit, these joggers contour the body while
+                    providing freedom of movement. The high-waisted elastic waistband with drawstrings ensures a secure and flattering fit, while the zippered side pockets add functionality.
                     Crafted from lightweight, breathable fabric, they are perfect for workouts, running, or casual wear.The black base with subtle pink accents adds a sleek yet stylish touch.
 Care & Material
 80% Polyester, 20% Spandex
@@ -1769,7 +1769,7 @@ Machine washable, cold wash recommended
             new Product ([
                 'name' => 'RoseWave Joggers',
                 'description' =>
-                    "The RoseWave Women's Joggers offer a chic and feminine twist on classic athletic wear. Designed with a high-waisted fit and slim, tapered legs, these joggers provide both comfort 
+                    "The RoseWave Women's Joggers offer a chic and feminine twist on classic athletic wear. Designed with a high-waisted fit and slim, tapered legs, these joggers provide both comfort
                     and style. The soft, breathable fabric ensures all-day wearability, while the zippered side pockets add functionality without bulk. The pastel pink and white color scheme brings a
                     trendy, modern aesthetic, making these joggers perfect for gym sessions, casual outings, or lounging in style.
 Care & Material
@@ -1806,8 +1806,8 @@ Machine washable, cold wash recommended
             new Product ([
                 'name' => 'CloudEase Wide-Leg Pants',
                 'description' =>
-                    "The CloudEase Women's Wide-Leg Pants offer a relaxed yet stylish design, perfect for both active and casual wear. Featuring a high-waisted fit with an elastic 
-                    waistband and drawstrings, these pants provide a secure and adjustable fit. The soft, breathable fabric ensures all-day comfort, while the wide-leg cut adds a modern 
+                    "The CloudEase Women's Wide-Leg Pants offer a relaxed yet stylish design, perfect for both active and casual wear. Featuring a high-waisted fit with an elastic
+                    waistband and drawstrings, these pants provide a secure and adjustable fit. The soft, breathable fabric ensures all-day comfort, while the wide-leg cut adds a modern
                     and effortless touch. The light grey with subtle black accents creates a minimalist, versatile look, making them ideal for lounging, yoga, or everyday styling.
 Care & Material
 85% Cotton, 15% Polyester
@@ -1820,12 +1820,12 @@ Machine washable, cold wash recommended
                 'category_id' => Category::all()->where('name', 'Trousers')->first()->id,
                 'stock' => rand(1, 50)
             ]),
-           
+
             new Product ([
                 'name' => 'Eclipse Performance Jacket',
                 'description' =>
-                    "The Eclipse Women's Performance Jacket is designed for athletic performance and sleek casual wear. Featuring a slim-fit silhouette, high collar, and full-zip front, 
-                    this jacket delivers a modern and versatile look. Made with lightweight, breathable fabric, it ensures all-day comfort and flexibility, whether you're training, traveling, 
+                    "The Eclipse Women's Performance Jacket is designed for athletic performance and sleek casual wear. Featuring a slim-fit silhouette, high collar, and full-zip front,
+                    this jacket delivers a modern and versatile look. Made with lightweight, breathable fabric, it ensures all-day comfort and flexibility, whether you're training, traveling,
                     or layering for cooler weather. The zippered side pockets add secure storage for small essentials, while the black and gray color scheme keeps it stylish and timeless.
 Care & Material
 85% Cotton, 15% Spandex
@@ -1842,8 +1842,8 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'BlushCore Cropped Puffer Jacket',
                 'description' =>
-                    "The BlushCore Women's Cropped Puffer Jacket offers fashion-forward warmth, perfect for layering in colder weather. Designed with a cropped fit, high collar, and full-zip front, 
-                    this jacket keeps you cozy while maintaining a sleek, trendy look. The elasticized cuffs provide a snug fit, while the lightweight insulated fabric ensures warmth without bulk. 
+                    "The BlushCore Women's Cropped Puffer Jacket offers fashion-forward warmth, perfect for layering in colder weather. Designed with a cropped fit, high collar, and full-zip front,
+                    this jacket keeps you cozy while maintaining a sleek, trendy look. The elasticized cuffs provide a snug fit, while the lightweight insulated fabric ensures warmth without bulk.
                     The pastel pink and white color scheme adds a chic, modern touch, making it ideal for everyday styling.
 Care & Material
 100% Polyester (Insulated)
@@ -1860,7 +1860,7 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'StormRush Windbreaker',
                 'description' =>
-                    "The StormRush Women's Windbreaker is built for performance and everyday versatility. Made from lightweight, water-resistant fabric, this jacket provides protection against wind 
+                    "The StormRush Women's Windbreaker is built for performance and everyday versatility. Made from lightweight, water-resistant fabric, this jacket provides protection against wind
                     and light rain while maintaining breathability. The zip-up front, high collar, and adjustable hood offer customized coverage, while the zippered side pockets ensure secure storage
                      for essentials. The navy blue and white colour combination adds a bold, athletic touch, making it perfect for outdoor workouts, running, or casual wear.
 Care & Material
@@ -1878,7 +1878,7 @@ Machine washable, air dry recommended
             new Product ([
                 'name' => 'Inferno Fleece Jacket',
                 'description' =>
-                    "The Inferno Women's Fleece Jacket is designed for athletes and adventurers who need warmth and performance in one sleek package. Featuring a slim fit with a full-zip front and 
+                    "The Inferno Women's Fleece Jacket is designed for athletes and adventurers who need warmth and performance in one sleek package. Featuring a slim fit with a full-zip front and
                     high collar, this jacket provides insulation while remaining breathable. The soft fleece-lined fabric ensures cozy comfort in colder temperatures, while the zippered side pockets
                      offer secure storage for essentials. The deep red and black color scheme adds a bold and sporty aesthetic, perfect for training, outdoor activities, or casual wear.
 Care & Material
@@ -1896,7 +1896,7 @@ Machine washable, tumble dry low
             new Product ([
                 'name' => 'Terra Quilted Jacket',
                 'description' =>
-                    "The Terra Women's Quilted Jacket is designed for style, warmth, and everyday versatility. Featuring a fitted silhouette with a high collar, this jacket provides a chic and modern 
+                    "The Terra Women's Quilted Jacket is designed for style, warmth, and everyday versatility. Featuring a fitted silhouette with a high collar, this jacket provides a chic and modern
                     look while ensuring lightweight warmth. The snap-button front closure offers easy layering, while the zippered side pockets provide secure storage for essentials.
                      The insulated quilted fabric delivers cozy comfort without bulk, making it ideal for cool-weather outings, casual wear, or layering over activewear.
                      The olive green with subtle black accents adds a stylish and nature-inspired touch.
@@ -1916,7 +1916,7 @@ Machine washable, air dry recommended
                 'name' => 'TerraFlex Cargo Joggers',
                 'description' =>
                     "The TerraFlex Women's Cargo Joggers combine functionality, comfort, and effortless style. Designed with a high-waisted fit and relaxed silhouette, these joggers provide ultimate
-                     comfort for both active and casual wear. The elastic waistband with drawstrings ensures a customizable fit, while the multiple cargo pockets offer practical storage for small 
+                     comfort for both active and casual wear. The elastic waistband with drawstrings ensures a customizable fit, while the multiple cargo pockets offer practical storage for small
                      essentials. The soft, breathable fabric makes them perfect for lounging, workouts, or streetwear-inspired outfits. The beige with subtle brown accents delivers a versatile and modern aesthetic.
 Care & Material
 80% Cotton, 20% Polyester
@@ -1930,7 +1930,7 @@ Machine washable, cold wash recommended
                 'stock' => rand(1, 50)
             ])
 ];
-        
+
 foreach ($products as $product) {
             $product->save();
         }
@@ -2386,7 +2386,7 @@ foreach ($products as $product) {
             'phone_number' => '+447111111111',
             'home_address' => 'Test home address',
             'postcode' => '',
-            'role' => 'user'
+            'role' => 'admin'
         ]);
         $user->save();
     }
