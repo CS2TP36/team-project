@@ -143,7 +143,3 @@ Route::get('/account/{page?}', [AccountController::class, 'show'])->name('accoun
 Route::get('/address-add', function () {
     return view('pages.newaddresspage');
 });
-
-Route::get('/account-addresses', function () {
-    return view('pages.account-addresses');
-});
