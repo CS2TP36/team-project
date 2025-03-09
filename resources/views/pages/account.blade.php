@@ -23,7 +23,7 @@
                 </a>
 
                 <!-- Need to sort out this link -->
-                <a href="#" class="card">
+                <a href="/account/addresses" class="card">
                     <img src="images/addresses-icon.png" alt="Addresses">
                     <div class="card-content">
                         <h2>Your Addresses</h2>
