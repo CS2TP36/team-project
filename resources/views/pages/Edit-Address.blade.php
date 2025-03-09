@@ -2,7 +2,7 @@
 @section('title','Edit Address')
 @section('content')
 
-<div class = " Edit-Address ">
+<div class = "Edit-Address">
     <div class= "container">
         <h2> Edit Address </h2>
         <form id = "editAddressForm">
