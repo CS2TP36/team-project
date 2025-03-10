@@ -1,5 +1,6 @@
 @extends('layouts.page')
 @section('title','Edit Address')
+@section('script', asset('js/careers.js'))
 @section('content')
 <div class="careers-container">
     <h2>Join Our Team</h2>
