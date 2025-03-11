@@ -4,8 +4,9 @@
     <div class="account-page">
         <div class="container">
             <h1>Your Account</h1>
+            <!-- Grid told contain the "cards" -->
             <div class="grid">
-                <!-- Need to sort out this link -->
+                <!-- Link to Contact Details Page -->
                 <a href="/account/details" class="card">
                     <img src="images/details-icon.png" alt="Details">
                     <div class="card-content">
@@ -13,7 +14,7 @@
                         <p>First name, Last name, Email adddress</p>
                     </div>
                 </a>
-
+                <!-- Link to Previous Orders Page -->
                 <a href="/orders" class="card">
                     <img src="images/orders-icon.png" alt="Orders">
                     <div class="card-content">
@@ -21,8 +22,7 @@
                         <p>Track, return, cancel an order, download invoice or buy again</p>
                     </div>
                 </a>
-
-                <!-- Need to sort out this link -->
+                <!-- Link to Account-Addresses Page -->
                 <a href="/account/addresses" class="card">
                     <img src="images/addresses-icon.png" alt="Addresses">
                     <div class="card-content">
@@ -30,7 +30,7 @@
                         <p>Edit, remove or set default address</p>
                     </div>
                 </a>
-
+                <!-- Link to Change Password Page -->
                 <a href="/change-pass" class="card">
                     <img src="images/security-icon.png" alt="Security">
                     <div class="card-content">
