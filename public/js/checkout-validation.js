@@ -90,8 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('shipping-price').textContent = shipping.toFixed(2);
 
         if (discountInfo.applyDiscount.checked && discountInfo.discountCode.value.trim()) {
-            // Replace with your discount logic
-            discount = 0; // Example: replace with actual discount calculation
+            discount = 0; 
             document.getElementById('discount-amount').textContent = discount.toFixed(2);
         } else {
             document.getElementById('discount-amount').textContent = '0.00';
