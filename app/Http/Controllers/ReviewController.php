@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\IndividualOrder;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Review;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,8 +17,13 @@ class ReviewController extends Controller
     function show($productId) {
         // get the product
         $product = Product::all()->where('id', $productId)->first();
-        // TODO: find out if they have bought the product
-        $purchased = true;
+        // check if logged in
+        if (!Auth::check()) {
+            return redirect()->back()->with('error', 'You must be logged in to review a product');
+        }
+        // check if user has purchased the product
+        $userid = Auth::user()['id'];
+        $purchased = $this->allowedToReview($userid, $product);
         // return page if purchased and product exists
         if ($purchased && $product) {
             return view('pages.review', ['product' => $product]);
@@ -35,7 +43,14 @@ class ReviewController extends Controller
         if (!Auth::check()) {
             return redirect()->back()->with('error', 'You must be logged in to review a product');
         }
+        // check if user has purchased the product
         $user = Auth::user();
+        $userid = $user['id'];
+        $product = Product::all()->where('id', $request['product_id'])->first();
+        $purchased = $this->allowedToReview($userid, $product);
+        if (!$purchased) {
+            return redirect()->back()->with('error', 'You must purchase the product to review it');
+        }
         // create review
         $review = new Review([
             'user_id' => $user['id'],
@@ -56,5 +71,26 @@ class ReviewController extends Controller
         // TODO: could involve some sorting in the future
         // return them
         return $reviews;
+    }
+
+    // ensures that the user is allowed to review the product
+    function allowedToReview(int $userid, Product $product): bool
+    {
+        // get all the orders from a user
+        $orders = Order::all()->where('user_id', $userid);
+        // go through each order
+        foreach ($orders as $order) {
+            // get all the individual orders for that order
+            $individualOrders = IndividualOrder::all()->where('order_id', $order->id);
+            // go through each individual order
+            foreach ($individualOrders as $individualOrder) {
+                // if the product was ordered return true
+                if ($individualOrder->product_id == $product->id) {
+                    return true;
+                }
+            }
+        }
+        // if the product was never ordered return false
+        return false;
     }
 }
