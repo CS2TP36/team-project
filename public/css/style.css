@@ -411,6 +411,10 @@ body {
 
     h1 {
         color: var(--text-colour);
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     .card-content h2 {
@@ -422,7 +426,7 @@ body {
 
 .contact-details {
     font-family: Arial, sans-serif;
-    background-color: var(--alt-bg-colour);
+    /* background-color: var(--alt-bg-colour); */
     width: 650px;
     margin: 0 auto;
     margin-top: 10px;
@@ -437,6 +441,7 @@ body {
         color: var(--text-colour);
         font-size: 2em;
         min-width: 320px;
+        text-align: center;
     }
 }
 
@@ -644,15 +649,14 @@ body {
     /* added padding inside the container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* add shadwo around the container*/
-}
 
-/*h1 styling */
-
-h1 {
-    color: var(--text-colour);
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
+    /*h1 styling */
+    h1 {
+        color: var(--text-colour);
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 
 /*orders*/
@@ -2639,14 +2643,12 @@ button:hover {
 /* CSS for Login Page */
 
 .login {
-    background-color: var(--alt-bg-colour);
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1400px;
     padding-left: 25px;
     padding-right: 25px;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 160px;
 
     h2 {
         text-align: left;
@@ -2750,13 +2752,16 @@ button:hover {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+
+    /* styling for header */
+    h1{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
-/* styling for header */
-h1{
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
+
 /* shows the addresses in a grid format*/
 .addresses{
     display: grid;
@@ -3203,12 +3208,11 @@ label {
 
 .right-container {
     flex: 1;
-    background-color: var(--alt-bg-colour);
+    /* background-color: var(--alt-bg-colour); */
     max-width: 500px;
     max-height: 800px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-top: 50px;
     padding-left: 25px;
     padding-right: 50px;
     font-size: 0.8rem;
@@ -3486,7 +3490,7 @@ label {
 
 .review-form {
     flex: 1;
-    max-width: 1350px;
+    max-width: 750px;
     padding: 5px;
     margin: 0 auto;
 
