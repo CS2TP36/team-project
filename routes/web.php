@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressStorage;
 use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\ManageUsersController;
 use App\Http\Controllers\Admin\ReportController;
@@ -137,10 +138,9 @@ Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPrevi
 Route::get('/account', [AccountController::class, 'show'])->name('account.page');
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
 
-// temporary route for adeeb
-Route::get('/address-add', function () {
-    return view('pages.newaddresspage');
-});
+// address routes
+Route::get('/address/add', [AddressStorage::class, 'showAdd']);
+Route::get('/address/edit', [AddressStorage::class, 'showEdit']);
 
 // careers page route
 Route::get('/careers', function () {
