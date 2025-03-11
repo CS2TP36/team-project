@@ -81,9 +81,7 @@ Route::get('/terms-conditions', function () {
     return view('pages.terms-conditions');
 });
 
-Route::get('/click', function () {
-    return view('pages.click');
-});
+
 
 
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
@@ -147,4 +145,8 @@ Route::get('/address-add', function () {
 // careers page route
 Route::get('/careers', function () {
     return view('pages.careers');
+});
+
+Route::get('/sponsor', function () {
+    return view('pages.sponsor');
 });

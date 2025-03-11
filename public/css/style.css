@@ -3798,7 +3798,89 @@ label {
     }
 }
 
-.click-collect {
+#sponsor-banner {
+        width: 100%;
+        position: relative;
+        max-height: 600px;
+        animation: fadein 1s ease-out forwards;
+}
+    
+#sponsor-banner-container {
+        position: relative;
+        width: 100%;
+        max-height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+}
+    
+#sponsor-text-banner {
+        position: absolute;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        color: #000;
+        font-family: Impact, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        animation: fadeleft 1s ease-out forwards;
+
+            h2{
+                font-size: 80px;
+                margin-bottom:5px;
+            }
+}
+#sponsor-logo{
+    width: 200px;
+    height: 200px;
+}
+#sponsor-pic{
+    width: 400px ;
+    height:400px;
+}
+#sponsor-text {
+    display: flex;
+    align-items: center;
+    gap: 60px; 
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 20px;
+    flex-direction: row;
+    line-height: 1.7;
 
 }
+
+#second-sponsor-text {
+    display: flex;
+    align-items: center;
+    gap: 60px; 
+    padding-left: 300px;
+    padding-right: 300px;
+    margin: 0 auto; 
+    font-size: 20px;
+    flex-direction: row-reverse;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    line-height: 1.7;
+}
+#sponsor-list{
+    flex-direction: column;
+    list-style: none;
+}
+#athlete-pic{
+    height: 200px;
+    width: 200px;
+}
+#sponsor-join-text{
+    display: flex;
+    align-items: center;
+    gap: 60px; 
+    padding-left: 500px;
+    padding-right: 500px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 20px;
+    flex-direction: row;
+    line-height: 1.7;
+}
+
 
