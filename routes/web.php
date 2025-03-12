@@ -49,9 +49,6 @@ Route::get('/contact', function () {
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
 Route::get('/product/{id?}', [ShowProduct::class, 'show'])->name('product.show');
 
-// Show the previous orders page
-Route::get('/previous-orders', [PreviousOrders::class, 'show'])->name('previous-orders.show');
-
 
 // Show the checkout page
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
@@ -84,8 +81,9 @@ Route::get('/terms-conditions', function () {
 
 
 
-
+// previous orders routes
 Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
+Route::get('/orders/more', [PreviousOrders::class, 'loadMore'])->name('orders.more');
 
 Route::get('/admin', [\App\Http\Controllers\Admin\AccountController::class, 'show'])->name('admin');
 
