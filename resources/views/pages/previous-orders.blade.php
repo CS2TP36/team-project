@@ -26,7 +26,7 @@
             <div class="order-items">
                     @foreach($order->individualOrders as $individualOrder)
                     <div class="item">
-                    <img src="{{ $individualOrder->product()->getMainImage() }}" alt="Product Image">
+                    <img src="{{ $individualOrder->product()->getMainImage() }}">
                         
         <!-- product info(name,price and quantity bought) -->
             <div class="previous-item-details"> 
