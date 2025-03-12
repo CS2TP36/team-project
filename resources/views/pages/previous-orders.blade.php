@@ -31,7 +31,7 @@
         // add an event listener to the button
         loadMore.addEventListener('click', function() {
             // get the current page number using parseInt to convert it to a number
-            let pageNo = parseInt(this.getAttribute('data-page')) || 1;
+            let pageNo = parseInt(this.getAttribute('data-page')) || 2;
             // make a fetch request to the server to get the next set of orders
             fetch(`/orders/more?page=${pageNo}`, {
                 headers: {
