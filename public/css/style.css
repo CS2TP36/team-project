@@ -113,7 +113,7 @@ main {
     --alt-bg-colour: #1E1E1E;
     --text-colour: #F5F5F5;
     --btn-bg-colour: #4D4D4D;
-    --btn-text-colour: #F5F5F5; 
+    --btn-text-colour: #F5F5F5;
     --btn-hover-colour: #2D2D2D;
     --input-text-colour: #1E1E1E;
     --border-color: #ddd;
@@ -129,7 +129,7 @@ main {
     background-color: var(--alt-bg-colour);
     border: none;
     box-shadow: none;
-    
+
     :hover {
         opacity: 0.7;
     }
@@ -225,7 +225,7 @@ body {
         outline: none;
     }
 
-    /* 
+    /*
     .faq-question:hover {
         color: var(--btn-hover-colour);
     } */
@@ -274,7 +274,7 @@ body {
 
     .FMI {
         text-align: center;
-        
+
         padding: 40px 20px;
         background: var(--alt-bg-colour);
         border-radius: 15px;
@@ -719,7 +719,7 @@ body {
 }
 
 /* product text styling for name price and qunatity */
-.item-name { 
+.item-name {
     font-weight: bold;
     font-size: 15px;
 }
@@ -755,13 +755,13 @@ body {
     cursor: pointer;
     font-size: 13px;
     white-space: nowrap; /* prevent text from wrapping */
-    
+
 }
 
 /* hover effect for wehn on buttons */
 .order-actions .button:hover {
     background-color: #333;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 /* CSS for Basket Page*/
@@ -1767,9 +1767,8 @@ footer a:hover {
 
     .logo {
         height: 60px;
-        width: 250px;
+        width: 235px;
         padding: 8px;
-
     }
 
     .logo:hover {
@@ -2811,7 +2810,7 @@ button:hover {
 /* styling of edit and remove links */
 .actions a {
     font-size: 14px;
-    color: #007185; 
+    color: #007185;
     text-decoration: none;
     margin-right: 10px;
 }
@@ -3753,7 +3752,7 @@ label {
  .forgot-password h1 {
         text-align: center;
          margin-bottom: 20px;
-        
+
     }
 
 /* styling for the forms*/
@@ -3793,7 +3792,7 @@ label {
         padding: 10px;
         margin: 15px auto;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         width: auto;
         text-align: center;
         border-radius: 5px;
@@ -3809,7 +3808,7 @@ label {
         max-height: 600px;
         animation: fadein 1s ease-out forwards;
 }
-    
+
 #sponsor-banner-container {
         position: relative;
         width: 100%;
@@ -3817,7 +3816,7 @@ label {
         display: flex;
         flex-wrap: wrap;
 }
-    
+
 #sponsor-text-banner {
         position: absolute;
         left: 10%;
@@ -3843,7 +3842,7 @@ label {
 #sponsor-text {
     display: flex;
     align-items: center;
-    gap: 60px; 
+    gap: 60px;
     padding-left: 300px;
     padding-right: 300px;
     margin-top: 80px;
@@ -3857,10 +3856,10 @@ label {
 #second-sponsor-text {
     display: flex;
     align-items: center;
-    gap: 60px; 
+    gap: 60px;
     padding-left: 300px;
     padding-right: 300px;
-    margin: 0 auto; 
+    margin: 0 auto;
     font-size: 20px;
     flex-direction: row-reverse;
     margin-top: 80px;
@@ -3878,7 +3877,7 @@ label {
 #sponsor-join-text{
     display: flex;
     align-items: center;
-    gap: 60px; 
+    gap: 60px;
     padding-left: 500px;
     padding-right: 500px;
     margin-top: 80px;
@@ -3921,13 +3920,13 @@ label {
         border-radius: 5px;
         font-size: 16px;
     }
-    
+
     input[type="text"]:focus {
         border-color: #007bff;
         outline: none;
     }
 }
-    
+
 .container {
     width: 100%;
     max-width: 500px;
@@ -3936,14 +3935,14 @@ label {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
- 
+
 .checkbox-container {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 10px;
 }
-    
+
 .btn {
     width: 100%;
     padding: 10px;
@@ -3953,18 +3952,18 @@ label {
     cursor: pointer;
     margin-top: 15px;
 }
-    
+
 .save {
     background-color: #28a745;
     color: white;
 }
-    
+
 .cancel {
     background-color: #dc3545;
     color: white;
 }
-    
+
 .btn:hover {
     opacity: 0.8;
 }
-    
+
