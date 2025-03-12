@@ -13,7 +13,7 @@
             <li class="footer-title">Company Info</li>
             <li class="footer-list"><a href="/aboutus">About Us</a></li>
             <li class="footer-list"><a href="/terms-conditions">Terms and Conditions</a></li><!--links to the terms and conditions-->
-            <li class="footer-list"><a href = "/student">Student Discount</a></li><!--links to about us-->
+            <li class="footer-list"><a href = "/sponsor">Sponsorship</a></li><!--links to about us-->
             <li class="footer-list"><a href="{{ route('privacy') }}">Privacy Policy</a></li><!--links to about us-->
         </ul>
     </div>

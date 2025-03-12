@@ -6,7 +6,7 @@
 <div class= "Sponsership">
         <section>
             <div id="sponsor-banner-container">
-                <img src="{{asset('images/model-sponser.jpg')}}" id="sponsor-banner">
+                <img src="{{asset('images/sponsorship.jpg')}}" id="sponsor-banner">
                 <div id="sponsor-text-banner">
                     <h2>JOIN SPORTSWEAR</h2>
                     <p> WANT TO JOIN A BRAND THAT IS COMMITED TO HELP <BR>YOU ACHIEVE YOUR DREAMS?</p>
