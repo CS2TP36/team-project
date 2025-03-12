@@ -450,8 +450,9 @@ body {
 
     h1 {
         color: var(--text-colour);
-        font-size: 2em;
-        min-width: 320px;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
         text-align: center;
     }
 }
@@ -645,7 +646,7 @@ body {
 /*  previous orders CSS */
 /* main styling for previous ordes page */
 #previous-orders {
-    background-color: #fff;
+    background-color: var(--bg-colour);
     font-family: Arial, Helvetica, sans-serif;
     max-width: 800px; /* keep compact */
     width: 100%;
@@ -658,7 +659,7 @@ body {
 #previous-orders h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: var(--text-colour);
     text-align: center;
     margin-bottom: 15px;
 }
@@ -727,12 +728,12 @@ body {
 }
 
 .item-price {
-    color: #777;
+    color: var(--text-colour);
     font-size: 13px;
 }
 
 .item-quantity {
-    color: #777;
+    color: var(--text-colour);
     font-size: 13px;
     margin-top: 2px;
 }
@@ -747,8 +748,8 @@ body {
 
 /* button styling */
 .order-actions .button {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--btn-bg-colour);
+    color: var(--btn-text-colour);
     transition: background-color 0.3s ease, transform 0.2s ease;
     min-width: 100px;
     border: none;
@@ -762,7 +763,7 @@ body {
 
 /* hover effect for wehn on buttons */
 .order-actions .button:hover {
-    background-color: #333;
+    background-color: var(--btn-hover-colour);
     transform: scale(1.05);
 }
 
