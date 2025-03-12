@@ -1910,8 +1910,14 @@ footer a:hover {
         }
 
         .logo {
-            height: 40px;
-            width: 90px;
+            display: none;
+        }
+
+        .logo-m{
+            height: 50px;
+            width: 52px;
+            display: block;
+            margin-left: 8px;
         }
 
         .user-logo {
