@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AddressStorage;
+use App\Http\Controllers\AddressStorageController;
 use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\ManageUsersController;
 use App\Http\Controllers\Admin\ReportController;
@@ -137,8 +137,8 @@ Route::get('/account', [AccountController::class, 'show'])->name('account.page')
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
 
 // address routes
-Route::get('/address/add', [AddressStorage::class, 'showAdd']);
-Route::get('/address/edit', [AddressStorage::class, 'showEdit']);
+Route::get('/address/add', [AddressStorageController::class, 'showAdd']);
+Route::get('/address/edit', [AddressStorageController::class, 'showEdit']);
 
 // careers page route
 Route::get('/careers', function () {
