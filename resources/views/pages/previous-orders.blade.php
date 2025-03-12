@@ -14,7 +14,7 @@
                 @include('reusables.previous-orders')
             </div>
             @if ($orders->hasMorePages())
-                <button id="load-more">Load more pages</button>
+                <button id="load-more">Load more orders</button>
             @endif
         @else
             <p>No previous orders found</p>
