@@ -3934,6 +3934,7 @@ label {
     flex-direction: row;
     line-height: 1.7;
     background-color: #d5d4d4;
+    color: #000;
 
 }
 
@@ -3953,6 +3954,7 @@ label {
     padding-left: 50px;
     line-height: 1.7;
     background-color: #d5d4d4;
+    color: #000;
 }
 
 #sponsor-list {
@@ -3978,6 +3980,7 @@ label {
     background-color: #d5d4d4;
     height: auto;
     font-weight: bold;
+    color: #000;
 }
 
 #sponsor-parallax-info{
@@ -3986,7 +3989,7 @@ label {
     transform: translateX(-50%);
     font-family: 'Arial', sans-serif;
     font-size: 20px;
-    color: var(--text-banner-colour);
+    color: white;
     padding: 22px;
     top: 15%;
     left: 50%;
@@ -4082,6 +4085,7 @@ label {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    background-color: #d5d4d4;
 }
 
 #sustain-guarantee {
@@ -4092,7 +4096,7 @@ label {
     padding-bottom: 40px;
     font-size: 16px;
     font-family: 'Arial', sans-serif;
-    color: #000;
+    color: var(--text-banner-colour);
 
 
 }
@@ -4121,6 +4125,7 @@ label {
     flex-direction: row;
     line-height: 1.7;
     background-color: #d5d4d4;
+    color: #000;
 
 }
 
@@ -4135,8 +4140,9 @@ label {
     margin-top: 80px;
     margin-bottom: 80px;
     padding-right: 50px;
-    line-height: 1.7;
+    line-height: 1.2;
     background-color: #d5d4d4;
+    color: #000;
 }
 
 #sustain-list {
