@@ -637,140 +637,127 @@ body {
     }
 }
 
-/* CSS for Previous Orders Page */
-
-#previous-orders-body {
-    background-color: var(--bg-colour);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
+/*  previous orders CSS */
+/* main styling for previous ordes page */
 #previous-orders {
-    background-color: var(--alt-bg-colour);
-    max-width: 1200px;
-    margin: 30px auto;
-    /*centre the container with margin */
-    padding: 20px;
-    /* added padding inside the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* add shadwo around the container*/
-
-    /*h1 styling */
-    h1 {
-        color: var(--text-colour);
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px; /* keep compact */
+    width: 100%;
+    padding: 15px;
+    margin: 30px auto; /* centers the content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*create shadow effect*/
 }
 
-/*orders*/
-
-.orders-list {
-    margin-top: 20px;
-    /*add margin from top for spacing*/
-}
-
-/* styling for each order*/
-
-.order {
-    background-color: var(--bg-colour);
-    border-radius: 8px;
-    /*rounded corners*/
-    padding: 20px;
+/* header styling */
+#previous-orders h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
     margin-bottom: 15px;
-    /*add spacign between orders*/
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-    /* add a lighter shadow for contrast*/
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+/* orders list */
+.orders-list {
+    margin-top: 10px;
+}
+
+/* styling for each individual order */
+.order {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /*smaller shdow effect created */
     transition: background-color 0.3s ease;
-    /* transition for background*/
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    }
+
+.order:hover {
+    background-color: #f1f1f1;
 }
 
-/* /* .order:hover {
-    background-color: #010101;
-    /* change background on hover */
-/*}  */
-
+/* order information date, dispatch, total) */
 .order-info {
-    flex: 1;
     min-width: 200px;
-}
-
-.order-info p {
-    margin: 5px 0;
-    /*spacing between the text*/
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .order-items {
     display: flex;
     flex-direction: column;
-    /*stack itms vertically*/
-    flex: 2;
-    max-width: 300px;
+    gap: 15px;
 }
 
-.order-items img {
-    width: 100px;
-    /* fixed width for images */
-    height: 100px;
-    /* fixed height for images*/
-    object-fit: cover;
-    margin-bottom: 10px;
-    /* Add space between image and item deets */
+/* item styling*/
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center; /* keep in a row */
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 5px;
 }
-
+/* product details */
 .previous-item-details {
-    text-align: left;
+    flex-grow: 1;
+    text-align: left; /* keeps the name, price and quantity plus all buttons together on the left */
+    font-size: 14px;
+}
+/* product image styling */
+.item img {
+    width: 120px; /* fixed height and width for imges */
+    height: 120px;
+    border-radius: 6px;
 }
 
-.item-name {
+/* product text styling for name price and qunatity */
+.item-name { 
     font-weight: bold;
+    font-size: 15px;
 }
 
 .item-price {
-    color: var(--text-colour);
+    color: #777;
+    font-size: 13px;
 }
 
-/*buttons and actions*/
+.item-quantity {
+    color: #777;
+    font-size: 13px;
+    margin-top: 2px;
+}
 
+/* buttons container (allow for buttons to be next to the image) */
 .order-actions {
-    flex: 1;
     display: flex;
-    /* flexbox for button layout */
-    justify-content: space-between;
-    /* space between buttons*/
+    flex-direction: row; /* buttons kept in a row */
+    gap: 5px;
     align-items: center;
-    flex-wrap: wrap;
 }
 
+/* button styling */
 .order-actions .button {
-    background-color: #FFCC00;
-    /* bright yellow(cann be changed) */
-    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 100px;
     border: none;
     border-radius: 5px;
+    padding: 6px 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    /* transition for hover effect */
+    font-size: 13px;
+    white-space: nowrap; /* prevent text from wrapping */
+    
 }
 
+/* hover effect for wehn on buttons */
 .order-actions .button:hover {
-    background-color: #FFA500;
-    /* turns orange when hovering( this can be changed)*/
-    transform: scale(1.05);
-    /* add enlarging effect when hovering */
+    background-color: #333;
+    transform: scale(1.05); 
 }
-
-/* Add spacing after the filter selector */
-
-.filter {
-    margin-bottom: 20px;
-}
-
 
 /* CSS for Basket Page*/
 .basket {
