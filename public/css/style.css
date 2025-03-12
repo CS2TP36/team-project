@@ -676,7 +676,7 @@ body {
     border-radius: 8px;
     padding: 12px;
     margin-bottom: 10px;
-    }
+}
 
 .order:hover {
     background-color: #f1f1f1;
@@ -705,12 +705,14 @@ body {
     gap: 15px;
     margin-bottom: 5px;
 }
+
 /* product details */
 .previous-item-details {
     flex-grow: 1;
     text-align: left; /* keeps the name, price and quantity plus all buttons together on the left */
     font-size: 14px;
 }
+
 /* product image styling */
 .item img {
     width: 120px; /* fixed height and width for imges */
@@ -1277,6 +1279,59 @@ footer a:hover {
             font-size: 16px;
             padding: 12px;
         }
+    }
+}
+
+/* CSS for careers page */
+.careers {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+
+    .careers-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: #444;
+        margin-top: 20px;
+    }
+
+    .job-listings {
+        margin-top: 20px;
+    }
+
+    .job-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .job-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 5px 0;
     }
 }
 
@@ -1913,7 +1968,7 @@ footer a:hover {
             display: none;
         }
 
-        .logo-m{
+        .logo-m {
             height: 50px;
             width: 52px;
             display: block;
@@ -2756,7 +2811,8 @@ button:hover {
     padding: 20px;
 
     /* styling for header */
-    h1{
+
+    h1 {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
@@ -2765,12 +2821,13 @@ button:hover {
 }
 
 /* shows the addresses in a grid format*/
-.addresses{
+.addresses {
     display: grid;
-    gap:20px;
+    gap: 20px;
 }
+
 /*styling of add address cards*/
-.add-address{
+.add-address {
     color: #444;
     font-size: 18px;
     text-align: center;
@@ -2792,7 +2849,7 @@ button:hover {
 }
 
 /*styling of the address cards */
-.address-card{
+.address-card {
     background-color: white;
     border: 1px solid #ddd;
     padding: 15px;
@@ -2820,7 +2877,8 @@ button:hover {
     text-decoration: none;
     margin-right: 10px;
 }
- /* when you hover edit and remove they udnerline */
+
+/* when you hover edit and remove they udnerline */
 .actions a:hover {
     text-decoration: underline;
 }
@@ -3747,104 +3805,110 @@ label {
 .forgot-password {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 600px;
-    padding:25px;
+    padding: 25px;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     margin-bottom: 160px;
     display: flex
 }
-/* stylign for heading*/
- .forgot-password h1 {
-        text-align: center;
-         margin-bottom: 20px;
 
-    }
+/* stylign for heading*/
+.forgot-password h1 {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
 
 /* styling for the forms*/
-.forgot-password .forgot-password-form{
+.forgot-password .forgot-password-form {
     width: 100%;
     max-width: 500px;
-    padding:20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:none;
+    border: none;
 }
+
 /*label stylng*/
-.forgot-password .forgot-password-form label{
+.forgot-password .forgot-password-form label {
     width: 100%;
     text-align: left;
     margin-bottom: 5px;
-        }
+}
 
 /*input text styling*/
-.forgot-password .forgot-password-form input{
-        width:100%;
-        padding: 10px;
-        border:1px solid black;
-        margin-bottom: 15px;
-        border-radius: 5px;
-    }
+.forgot-password .forgot-password-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
 
 /* submit button styling*/
-.forgot-password .forgot-password-form button{
-        background-color: black;
-        color: white;
-        border: none;
-        cursor: pointer;
-        min-width: 400px;
-        width: 100%;
-        padding: 10px;
-        margin: 15px auto;
-        display: flex;
-        justify-content: center;
-        width: auto;
-        text-align: center;
-        border-radius: 5px;
-    }
+.forgot-password .forgot-password-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    min-width: 400px;
+    width: 100%;
+    padding: 10px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
 /*hover effect*/
 .forgot-password .forgot-password-form button:hover {
-        background-color: #4D4D4D;
-    }
+    background-color: #4D4D4D;
+}
 
 #sponsor-banner {
-        width: 100%;
-        position: relative;
-        max-height: 600px;
-        animation: fadein 1s ease-out forwards;
+    width: 100%;
+    position: relative;
+    max-height: 600px;
+    animation: fadein 1s ease-out forwards;
 }
 
 #sponsor-banner-container {
-        position: relative;
-        width: 100%;
-        max-height: 600px;
-        display: flex;
-        flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #sponsor-text-banner {
-        position: absolute;
-        left: 10%;
-        transform: translate(-50%, -50%);
-        color: #000;
-        font-family: Impact, Arial, Helvetica, sans-serif;
-        font-size: 30px;
-        animation: fadeleft 1s ease-out forwards;
+    position: absolute;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-family: Impact, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    animation: fadeleft 1s ease-out forwards;
 
-            h2{
-                font-size: 80px;
-                margin-bottom:5px;
-            }
+    h2 {
+        font-size: 80px;
+        margin-bottom: 5px;
+    }
 }
-#sponsor-logo{
+
+#sponsor-logo {
     width: 200px;
     height: 200px;
 }
-#sponsor-pic{
-    width: 400px ;
-    height:400px;
+
+#sponsor-pic {
+    width: 400px;
+    height: 400px;
 }
+
 #sponsor-text {
     display: flex;
     align-items: center;
@@ -3872,15 +3936,18 @@ label {
     margin-bottom: 80px;
     line-height: 1.7;
 }
-#sponsor-list{
+
+#sponsor-list {
     flex-direction: column;
     list-style: none;
 }
-#athlete-pic{
+
+#athlete-pic {
     height: 200px;
     width: 200px;
 }
-#sponsor-join-text{
+
+#sponsor-join-text {
     display: flex;
     align-items: center;
     gap: 60px;
@@ -3895,7 +3962,7 @@ label {
 
 /* CSS for Edit Address Page */
 
-.Edit-Address{
+.Edit-Address {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
