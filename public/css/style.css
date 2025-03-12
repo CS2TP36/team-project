@@ -2065,6 +2065,7 @@ footer a:hover {
     height: 350px;
     gap: 50px;
     padding: 0;
+    padding-bottom: 50px;
 }
 
 .footer-list {
@@ -3921,13 +3922,18 @@ label {
     display: flex;
     align-items: center;
     gap: 60px;
-    padding-left: 300px;
-    padding-right: 300px;
+    margin-left: 300px;
+    margin-right: 300px;
     margin-top: 80px;
     margin-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
     font-size: 20px;
     flex-direction: row;
     line-height: 1.7;
+    background-color: #d5d4d4;
 
 }
 
@@ -3935,14 +3941,18 @@ label {
     display: flex;
     align-items: center;
     gap: 60px;
-    padding-left: 300px;
-    padding-right: 300px;
-    margin: 0 auto;
     font-size: 20px;
     flex-direction: row-reverse;
+    margin-left: 300px;
+    margin-right: 300px;
     margin-top: 80px;
     margin-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
     line-height: 1.7;
+    background-color: #d5d4d4;
 }
 
 #sponsor-list {
@@ -3962,11 +3972,13 @@ label {
     padding-left: 500px;
     padding-right: 500px;
     margin-top: 80px;
-    margin-bottom: 80px;
     font-size: 20px;
     flex-direction: row;
     line-height: 1.7;
+    background-color: #d5d4d4;
+    height: auto;
 }
+
 
 /* CSS for Edit Address Page */
 

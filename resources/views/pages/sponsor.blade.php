@@ -39,25 +39,28 @@
             <img src="{{asset('images/training.jpg')}}" id="sponsor-pic">
     </div>
 
+    
     <div id=catogery-divider>
         <p> Look at What Our Atheletes Say</p>
     </div>
 
-    <div id= sponsor-text>
-            <img src="{{asset('images/tom.jpg')}}" id="athlete-pic"><li> <strong>Tom:</strong>" Being sponsored by SportsWear has been a game changer for me. Not only do I get top-quality gear, but their support has helped me stay focused and motivated. From marketing to personal coaching, they truly invest in my success. I feel like I'm part of a team, and together, we’re achieving great things!"</li>
-    </div>
+    <div id= sponsor-review-container>
+        <div id= sponsor-text>
+                <img src="{{asset('images/tom.jpg')}}" id="athlete-pic"><li> <strong>Tom: </strong>" Being sponsored by SportsWear has been a game changer for me. Not only do I get top-quality gear, but their support has helped me stay focused and motivated. From marketing to personal coaching, they truly invest in my success. I feel like I'm part of a team, and together, we’re achieving great things!"</li>
+        </div>
 
-    <div id= sponsor-text>
-        <img src="{{asset('images/justina.jpg')}}" id="athlete-pic"> <li> <strong>Justina:</strong>I never imagined a brand could believe in me as much as SportsWear does. The partnership has elevated my career, offering me opportunities I never thought possible. The clothing is not only stylish but performs incredibly well, and the team behind the brand is so supportive. I feel empowered every day!</li>
-    </div>
+        <div id= sponsor-text>
+            <img src="{{asset('images/justina.jpg')}}" id="athlete-pic"> <li> <strong>Justina: </strong>I never imagined a brand could believe in me as much as SportsWear does. The partnership has elevated my career, offering me opportunities I never thought possible. The clothing is not only stylish but performs incredibly well, and the team behind the brand is so supportive. I feel empowered every day!</li>
+        </div>
 
-    <div id= sponsor-text>
-        <img src="{{asset('images/brandon.jpg')}}" id="athlete-pic"> <li> <strong>Brandon:</strong>Joining the SportsWear family has been one of the best decisions I've made. The gear is unmatched in quality, and the brand's commitment to helping athletes reach their potential is evident in everything they do. It's not just about sponsorship; it's about building long-term relationships and growing together</li>
-    </div>
+        <div id= sponsor-text>
+            <img src="{{asset('images/brandon.jpg')}}" id="athlete-pic"> <li> <strong>Brandon: </strong>Joining the SportsWear family has been one of the best decisions I've made. The gear is unmatched in quality, and the brand's commitment to helping athletes reach their potential is evident in everything they do. It's not just about sponsorship; it's about building long-term relationships and growing together</li>
+        </div>
 
-    <div id=catogery-divider>
-        <p >How to Join Us</p>
-    </div>
+        <div id=catogery-divider>
+            <p >How to Join Us</p>
+        </div>
+    </div> 
 
     <div id= sponsor-join-text>
         <p >If you are interested in exploring sponsorship or investment opportunities with SportsWear, please get in touch with us through the following:</p>
