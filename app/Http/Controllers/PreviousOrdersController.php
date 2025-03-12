@@ -13,7 +13,7 @@ class PreviousOrdersController extends Controller
     // loads the page with the default 10 orders
     function show() {
         if (!Auth::check()) {
-            return redirect('/login/previous-orders')->with('error', 'You are not logged in');
+            return redirect('/login/orders')->with('error', 'You are not logged in');
         }
         $user = Auth::user();
         $orders = Order::where('user_id', $user->id)->orderBy('created_at', 'desc')->paginate(10);
