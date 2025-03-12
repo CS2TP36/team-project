@@ -38,6 +38,16 @@
                         <p>Manage password, email and mobile number</p>
                     </div>
                 </a>
+                @if(Auth::user()->isAdmin())
+                    <!-- Link to Admin Page -->
+                    <a href="/admin" class="card">
+                        <img src="" alt="Admin">
+                        <div class="card-content">
+                            <h2>Admin</h2>
+                            <p>The admin pages</p>
+                        </div>
+                    </a>
+                @endif
             </div>
         </div>
     </div>
