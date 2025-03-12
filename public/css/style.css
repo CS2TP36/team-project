@@ -105,6 +105,7 @@ main {
     --subnavbar-bg-color: #F5F5F5;
     --text-banner-colour: #F5F5F5;
     --text-nav-colour: rgb(168 204 204);
+    --card-bg-colour: #F5F5F5;
 }
 
 .dark-mode {
@@ -121,6 +122,7 @@ main {
     --subnavbar-bg-color: #5D5D5D;
     --text-banner-colour: #1E1E1E;
     --text-nav-colour: #1E1E1E;
+    --card-bg-colour: #1E1E1E;
 }
 
 #theme-toggle {
@@ -394,7 +396,7 @@ body {
     }
 
     .card {
-        background: var(--alt-bg-colour);
+        background: var(--card-bg-colour);
         display: flex;
         align-items: center;
         padding: 20px;
@@ -1375,8 +1377,8 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: #fff;
-    color: #333;
+    background: var(--card-bg-colour);
+    color: var(--text-colour);
     max-width: 900px;
     margin: auto;
     padding: 40px;
@@ -1409,7 +1411,7 @@ footer a:hover {
 .contact-page-details h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #4d4d4d;
+    color: var(--text-colour);
 }
 
 .contact-page-details ul {
@@ -1433,7 +1435,7 @@ footer a:hover {
 .contact-form h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #4d4d4d;
+    color: var(--text-colour);
 }
 
 .input-box {
@@ -1448,12 +1450,12 @@ footer a:hover {
 
 .input-box input,
 .input-box textarea {
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: var(--border-color);
     font-size: 1rem;
-    background: #f9f9f9;
 }
 
 .input-box textarea {
@@ -1466,8 +1468,8 @@ footer a:hover {
 .btn-send {
     width: 100%;
     padding: 12px;
-    background: #4d4d4d;
-    color: white;
+    background: var(--btn-bg-colour);
+    color: var(--btn-text-colour);
     font-size: 1.2rem;
     border: none;
     border-radius: 8px;
@@ -3464,7 +3466,7 @@ label {
 /* CSS for Review Page*/
 
 .review {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     min-width: 33vw;
     padding-left: 33vw;
     padding-right: 33vw;
@@ -3518,7 +3520,7 @@ label {
         width: 100%;
         max-width: 33vw;
         border: 1px solid black;
-        font-family: Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 1rem;
         color: var(--text-colour);
     }
