@@ -1,4 +1,7 @@
 <!-- moved into reusables so it can be used to generate pages of orders -->
+@use(App\Models\Shipping)
+@use(App\Models\Order)
+@use(App\Models\IndividualOrder)
 @foreach($orders as $order)
     <div class="order">
 

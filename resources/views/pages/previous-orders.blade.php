@@ -4,8 +4,6 @@
 @use(App\Models\Shipping)
 @section("title", "Previous Orders")
 @section("content")
-    @php($orders = PreviousOrders::getPreviousOrders(Auth::user()))
-
     <!-- main container -->
     <div id="previous-orders">
         <h1>My Previous Orders</h1>
@@ -15,6 +13,9 @@
             <div class="orders-list">
                 @include('reusables.previous-orders')
             </div>
+            @if ($orders->hasMorePages())
+                <button id="load-more">Load more pages</button>
+            @endif
         @else
             <p>No previous orders found</p>
         @endif
