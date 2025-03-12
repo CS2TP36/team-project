@@ -77,7 +77,7 @@ class ReviewController extends Controller
     function allowedToReview(int $userid, Product $product): bool
     {
         // get all the orders from a user
-        $orders = Order::all()->where('user_id', $userid);
+        $orders = Order::all()->where('user_id', $userid)->sortByDesc('created_at');
         // go through each order
         foreach ($orders as $order) {
             // get all the individual orders for that order
