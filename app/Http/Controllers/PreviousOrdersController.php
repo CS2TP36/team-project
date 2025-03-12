@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 // a class for getting all of the previous orders for a user
-class PreviousOrders extends Controller
+class PreviousOrdersController extends Controller
 {
     // loads the page with the default 10 orders
     function show() {

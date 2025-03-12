@@ -1,5 +1,5 @@
 @extends("layouts.page")
-@use(App\Http\Controllers\PreviousOrders)
+@use(App\Http\Controllers\PreviousOrdersController)
 @use(Illuminate\Support\Facades\Auth)
 @use(App\Models\Shipping)
 @section("title", "Previous Orders")
@@ -29,7 +29,7 @@
         // get the load more button
         const loadMore = document.getElementById('load-more');
         // add an event listener to the button
-        loadMore.addEventListener('click', function() {
+        loadMore.addEventListener('click', function () {
             // get the current page number using parseInt to convert it to a number
             let pageNo = parseInt(this.getAttribute('data-page')) || 2;
             // make a fetch request to the server to get the next set of orders
