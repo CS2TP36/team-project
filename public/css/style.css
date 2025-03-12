@@ -3977,6 +3977,7 @@ label {
     line-height: 1.7;
     background-color: #d5d4d4;
     height: auto;
+    font-weight: bold;
 }
 
 #sponsor-parallax-info{
@@ -4073,5 +4074,94 @@ label {
 
 .btn:hover {
     opacity: 0.8;
+}
+
+/*Sustainability Page CSS*/
+
+#sustain-gurantee-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#sustain-guarantee {
+    display: flex;
+    gap: 70px;
+    text-align: center;
+    list-style-type: none;
+    padding-bottom: 40px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+
+
+}
+
+#guarantee-list {
+    max-width: 400px;
+    padding: 20px;
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+#sustain-second-text {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-left: 300px;
+    margin-right: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-left: 40px;
+    font-size: 20px;
+    flex-direction: row;
+    line-height: 1.7;
+    background-color: #d5d4d4;
+
+}
+
+#sustain-text {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-size: 20px;
+    flex-direction: row-reverse;
+    margin-left: 100px;
+    margin-right: 300px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-right: 50px;
+    line-height: 1.7;
+    background-color: #d5d4d4;
+}
+
+#sustain-list {
+    flex-direction: column;
+    list-style: none;
+}
+
+#section-divider {
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+    margin-top: 75px;
+    margin-bottom: 35px;
+    text-align: center;
+    animation: fadeup 1s ease-out;
+
+
+    p {
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-thickness: 5px;
+        text-underline-offset: 15px;
+        color: var(--text-colour);
+
+
+    }
 }
 

@@ -148,3 +148,8 @@ Route::get('/careers', function () {
 Route::get('/sponsor', function () {
     return view('pages.sponsor');
 });
+
+
+Route::get('/sustainability', function () {
+    return view('pages.sustainability');
+});

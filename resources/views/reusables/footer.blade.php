@@ -13,8 +13,9 @@
             <li class="footer-title">Company Info</li>
             <li class="footer-list"><a href="/aboutus">About Us</a></li>
             <li class="footer-list"><a href="/terms-conditions">Terms and Conditions</a></li><!--links to the terms and conditions-->
-            <li class="footer-list"><a href = "/sponsor">Sponsorship</a></li><!--links to about us-->
-            <li class="footer-list"><a href="{{ route('privacy') }}">Privacy Policy</a></li><!--links to about us-->
+            <li class="footer-list"><a href = "/sponsor">Sponsorship</a></li>
+            <li class="footer-list"><a href = "/sustainability">Sustainability</a></li>
+            <li class="footer-list"><a href="{{ route('privacy') }}">Privacy Policy</a></li>
         </ul>
     </div>
 
@@ -30,8 +31,8 @@
         <ul><!--list for signing in and toggle theme-->
             <li class="footer-title">Follow Us</li>
             <li class="footer-list"> <a href="https://www.facebook.com/"> <img src="{{asset('images/Facebook.png')}}" id = social-pic></li>
-            <li class="footer-list"> <a href="https://www.instagram.com/"> <img src="{{asset('images/x.png')}}" id = social-pic></li>
-            <li class="footer-list"> <a href="https://x.com/"> <img src="{{asset('images/Insta.png')}}" id = social-pic></li>
+            <li class="footer-list"> <a href="https://x.com/"> <img src="{{asset('images/x.png')}}" id = social-pic></li>
+            <li class="footer-list"> <a href="https://www.instagram.com/"> <img src="{{asset('images/Insta.png')}}" id = social-pic></li>
         </ul>
     </div>
 
