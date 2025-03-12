@@ -29,15 +29,19 @@
         <p> Why Partner With Us?</p>
     </div>
 
-    <div id= second-sponsor-text>
-            <div id = sponsor-list>
-                <li><strong>Proven Marketting Success:</strong> With SportsWear you will have a dedicated marketing team, that are commited to providng our atheletes with the greatest opporutnies available.  </li>
-                <li><strong>Global Reach & Exposure:</strong> As SportsWear is a growing fashion icon, we have a strong presence over various different countries, with a rapid growing community full of active atheletes and fitness enjoyers.</li>
-                <li><strong>Innovative Products:</strong> Our cutting edge clothing wear designs set us apart, allowing us to deliver execptional performance with unparalleled styl made for comfort.</li>
-                <li><strong>Strong Connections:</strong> Once you have joined our team, as one of our atheletes, you will be able to make strong connections with various different companies you can also utilise to grow yourself.</li>
-            </div>
-            <img src="{{asset('images/training.jpg')}}" id="sponsor-pic">
+    <div id="parallax-container">
+    <div id="parallax" style="background-image: url({{ asset("images/second-parall.jpeg") }});"></div>
+    <div id = sponsor-parallax-info>
+                <li><strong>Proven Marketting Success:</strong> With SportsWear you will have a dedicated marketing team, that are commited to providng our atheletes with the greatest opporutnies available.  </li> <br>
+                <li><strong>Global Reach & Exposure:</strong> As SportsWear is a growing fashion icon, we have a strong presence over various different countries, with a rapid growing community full of active atheletes and fitness enjoyers.</li><br>
+                <li><strong>Innovative Products:</strong> Our cutting edge clothing wear designs set us apart, allowing us to deliver execptional performance with unparalleled styl made for comfort.</li><br>
+                <li><strong>Strong Connections:</strong> Once you have joined our team, as one of our atheletes, you will be able to make strong connections with various different companies you can also utilise to grow yourself.</li><br>
+        </div>
     </div>
+
+
+
+
 
     
     <div id=catogery-divider>

@@ -3947,8 +3947,8 @@ label {
     margin-right: 300px;
     margin-top: 80px;
     margin-bottom: 80px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-right: 50px;
     padding-left: 50px;
     line-height: 1.7;
@@ -3977,6 +3977,21 @@ label {
     line-height: 1.7;
     background-color: #d5d4d4;
     height: auto;
+}
+
+#sponsor-parallax-info{
+    text-align: left;
+    position: absolute;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: var(--text-banner-colour);
+    padding: 22px;
+    top: 15%;
+    left: 50%;
+    background-color: rgba(62, 71, 102, 0.377);
+    padding-bottom: 60px;
+    line-break: 1.8;
 }
 
 
