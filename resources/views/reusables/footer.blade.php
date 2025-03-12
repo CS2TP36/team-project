@@ -23,7 +23,7 @@
             <li class="footer-title">Account Info</li>
             <li class="footer-list"> @if(!Auth::check()) <a href="/login">Sign In @else <a href="/logout"> Sign Out @endif</a></li><!--sign in -->
             <li class="footer-list"><a href="/wishlist">Wishlist</a></li>
-            <li class="footer-list"><button id="theme-toggle"><p>Toggle Dark Theme</p><p>Toggle Light Theme</p></button></li><!--dark mode/light mode toggle theme-->
+            <li class="footer-list"><button id="theme-toggle"><img src="{{ asset('images/light-mode-icon.png') }}"></img><img src="{{ asset('images/dark-mode-icon.png') }}"></img></button></li><!--dark mode/light mode toggle theme-->
         </ul>
     </div>
     <div>

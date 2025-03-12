@@ -4,7 +4,6 @@
 
 <div class="privacy">
     <h1> Privacy Policy</h1>
-    <p> Privacy Policy at Sportswear.com </p>
 
     <h2>1.Introduction</h2>
     <p>Welcome to SportsWear. Your privacy is important to us, and we are committed to protecting any personal

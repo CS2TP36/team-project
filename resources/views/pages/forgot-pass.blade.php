@@ -14,7 +14,11 @@
                 <input type="text" name="firstInitial" placeholder="Your first initial" maxlength="1" minlength="1" onkeyup="this.value = this.value.toUpperCase();" required>
 
                 <input type="text" name="lastInitial" placeholder="Your last initial" maxlength="1" minlength="1" onkeyup="this.value = this.value.toUpperCase();" required>
+                
+                <div class="button">
                 <button type="submit">Submit</button>
+                </div>
+            
             </form>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar"> <!--Creates the navbar class creating a container-->
         <div class="navbardiv"><!--Is the div which will contain all the items that are present on the logo-->
-            <a href="/home"><img src="{{ asset('images/Brand.png') }}" class="logo" alt="logo"></a>
+            <a href="/home"><img src="{{ asset('images/Brand.png') }}" class="logo" alt="logo"><img src="{{ asset('images/logo-m.png') }}" class="logo-m" hidden></a>
             <ul>
                 <li class=prime-list><!--class holds the account and basket links-->
                     <form class="searchbar-container" onsubmit="event.preventDefault(); search();">

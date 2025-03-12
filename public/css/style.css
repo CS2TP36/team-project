@@ -92,55 +92,63 @@ main {
 }
 
 :root {
-    --bg-colour: white;
-    --text-colour: black;
-    --btn-bg-colour: black;
-    --btn-text-colour: white;
+    --bg-colour: #F5F5F5;
+    --alt-bg-colour: #1E1E1E;
+    --text-colour: #1E1E1E;
+    --btn-bg-colour: #1E1E1E;
+    --btn-text-colour: #F5F5F5;
     --btn-hover-colour: #4D4D4D;
-    --input-text-colour: black;
-    --border-color: #ddd;
+    --input-text-colour: #1E1E1E;
+    --border-color: #D5D5D5;
     --alt-border-color: gold;
     --box-shadow-color: gold;
-    --subnavbar-bg-color: #ffffff;
-    --text-banner-colour: rgb(255, 255, 255);
+    --subnavbar-bg-color: #F5F5F5;
+    --text-banner-colour: #F5F5F5;
     --text-nav-colour: rgb(168 204 204);
+    --card-bg-colour: #F5F5F5;
 }
 
 .dark-mode {
     --bg-colour: #2D2D2D;
-    --alt-bg-colour: black;
-    --text-colour: white;
+    --alt-bg-colour: #1E1E1E;
+    --text-colour: #F5F5F5;
     --btn-bg-colour: #4D4D4D;
-    --btn-text-colour: white;
+    --btn-text-colour: #F5F5F5;
     --btn-hover-colour: #2D2D2D;
-    --input-text-colour: black;
+    --input-text-colour: #1E1E1E;
     --border-color: #ddd;
     --alt-border-color: gold;
     --box-shadow-color: gold;
-    --subnavbar-bg-color: #9b9b9b;
-    --text-banner-colour: rgb(0, 0, 0);
-    --text-nav-colour: black;
+    --subnavbar-bg-color: #5D5D5D;
+    --text-banner-colour: #1E1E1E;
+    --text-nav-colour: #1E1E1E;
+    --card-bg-colour: #1E1E1E;
 }
 
 #theme-toggle {
-    background-color: var(--bg-colour);
-    color: var(--text-colour);
-    width: 100%;
+    background-color: var(--alt-bg-colour);
+    border: none;
+    box-shadow: none;
 
-    p {
-        font: 1em;
+    :hover {
+        opacity: 0.7;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
     }
 }
 
-#theme-toggle p:last-child {
+#theme-toggle img:last-child {
     display: none;
 }
 
-.dark-mode #theme-toggle p:first-child {
+.dark-mode #theme-toggle img:first-child {
     display: none;
 }
 
-.dark-mode #theme-toggle p:last-child {
+.dark-mode #theme-toggle img:last-child {
     display: block;
 }
 
@@ -217,9 +225,10 @@ body {
         outline: none;
     }
 
+    /*
     .faq-question:hover {
         color: var(--btn-hover-colour);
-    }
+    } */
 
     .arrow {
         transition: transform 0.3s ease-in-out;
@@ -265,11 +274,13 @@ body {
 
     .FMI {
         text-align: center;
-        margin-top: 50px;
+
         padding: 40px 20px;
         background: var(--alt-bg-colour);
         border-radius: 15px;
         max-width: 900px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         margin-left: auto;
         margin-right: auto;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -388,7 +399,7 @@ body {
     }
 
     .card {
-        background: var(--alt-bg-colour);
+        background: var(--card-bg-colour);
         display: flex;
         align-items: center;
         padding: 20px;
@@ -411,6 +422,10 @@ body {
 
     h1 {
         color: var(--text-colour);
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     .card-content h2 {
@@ -422,7 +437,7 @@ body {
 
 .contact-details {
     font-family: Arial, sans-serif;
-    background-color: var(--alt-bg-colour);
+    /* background-color: var(--alt-bg-colour); */
     width: 650px;
     margin: 0 auto;
     margin-top: 10px;
@@ -437,6 +452,7 @@ body {
         color: var(--text-colour);
         font-size: 2em;
         min-width: 320px;
+        text-align: center;
     }
 }
 
@@ -626,141 +642,127 @@ body {
     }
 }
 
-/* CSS for Previous Orders Page */
-
-#previous-orders-body {
-    background-color: var(--bg-colour);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
+/*  previous orders CSS */
+/* main styling for previous ordes page */
 #previous-orders {
-    background-color: var(--alt-bg-colour);
-    max-width: 1200px;
-    margin: 30px auto;
-    /*centre the container with margin */
-    padding: 20px;
-    /* added padding inside the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* add shadwo around the container*/
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px; /* keep compact */
+    width: 100%;
+    padding: 15px;
+    margin: 30px auto; /* centers the content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*create shadow effect*/
 }
 
-/*h1 styling */
-
-h1 {
-    color: var(--text-colour);
-    font-size: 2.5rem;
+/* header styling */
+#previous-orders h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
     text-align: center;
-    margin-bottom: 20px;
-}
-
-/*orders*/
-
-.orders-list {
-    margin-top: 20px;
-    /*add margin from top for spacing*/
-}
-
-/* styling for each order*/
-
-.order {
-    background-color: var(--bg-colour);
-    border-radius: 8px;
-    /*rounded corners*/
-    padding: 20px;
     margin-bottom: 15px;
-    /*add spacign between orders*/
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-    /* add a lighter shadow for contrast*/
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+/* orders list */
+.orders-list {
+    margin-top: 10px;
+}
+
+/* styling for each individual order */
+.order {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /*smaller shdow effect created */
     transition: background-color 0.3s ease;
-    /* transition for background*/
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    }
+
+.order:hover {
+    background-color: #f1f1f1;
 }
 
-/* /* .order:hover {
-    background-color: #010101;
-    /* change background on hover */
-/*}  */
-
+/* order information date, dispatch, total) */
 .order-info {
-    flex: 1;
     min-width: 200px;
-}
-
-.order-info p {
-    margin: 5px 0;
-    /*spacing between the text*/
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .order-items {
     display: flex;
     flex-direction: column;
-    /*stack itms vertically*/
-    flex: 2;
-    max-width: 300px;
+    gap: 15px;
 }
 
-.order-items img {
-    width: 100px;
-    /* fixed width for images */
-    height: 100px;
-    /* fixed height for images*/
-    object-fit: cover;
-    margin-bottom: 10px;
-    /* Add space between image and item deets */
+/* item styling*/
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center; /* keep in a row */
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 5px;
 }
-
+/* product details */
 .previous-item-details {
-    text-align: left;
+    flex-grow: 1;
+    text-align: left; /* keeps the name, price and quantity plus all buttons together on the left */
+    font-size: 14px;
+}
+/* product image styling */
+.item img {
+    width: 120px; /* fixed height and width for imges */
+    height: 120px;
+    border-radius: 6px;
 }
 
+/* product text styling for name price and qunatity */
 .item-name {
     font-weight: bold;
+    font-size: 15px;
 }
 
 .item-price {
-    color: var(--text-colour);
+    color: #777;
+    font-size: 13px;
 }
 
-/*buttons and actions*/
+.item-quantity {
+    color: #777;
+    font-size: 13px;
+    margin-top: 2px;
+}
 
+/* buttons container (allow for buttons to be next to the image) */
 .order-actions {
-    flex: 1;
     display: flex;
-    /* flexbox for button layout */
-    justify-content: space-between;
-    /* space between buttons*/
+    flex-direction: row; /* buttons kept in a row */
+    gap: 5px;
     align-items: center;
-    flex-wrap: wrap;
 }
 
+/* button styling */
 .order-actions .button {
-    background-color: #FFCC00;
-    /* bright yellow(cann be changed) */
-    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 100px;
     border: none;
     border-radius: 5px;
+    padding: 6px 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    /* transition for hover effect */
+    font-size: 13px;
+    white-space: nowrap; /* prevent text from wrapping */
+
 }
 
+/* hover effect for wehn on buttons */
 .order-actions .button:hover {
-    background-color: #FFA500;
-    /* turns orange when hovering( this can be changed)*/
+    background-color: #333;
     transform: scale(1.05);
-    /* add enlarging effect when hovering */
 }
-
-/* Add spacing after the filter selector */
-
-.filter {
-    margin-bottom: 20px;
-}
-
 
 /* CSS for Basket Page*/
 .basket {
@@ -1017,7 +1019,7 @@ h1 {
 }
 
 footer {
-    background-color: black;
+    background-color: var(--alt-bg-colour);
     color: white;
     padding: 20px;
     /* text-align: center; */
@@ -1378,8 +1380,8 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: #fff;
-    color: #333;
+    background: var(--card-bg-colour);
+    color: var(--text-colour);
     max-width: 900px;
     margin: auto;
     padding: 40px;
@@ -1412,7 +1414,7 @@ footer a:hover {
 .contact-page-details h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #4d4d4d;
+    color: var(--text-colour);
 }
 
 .contact-page-details ul {
@@ -1436,7 +1438,7 @@ footer a:hover {
 .contact-form h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #4d4d4d;
+    color: var(--text-colour);
 }
 
 .input-box {
@@ -1451,12 +1453,12 @@ footer a:hover {
 
 .input-box input,
 .input-box textarea {
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: var(--border-color);
     font-size: 1rem;
-    background: #f9f9f9;
 }
 
 .input-box textarea {
@@ -1469,8 +1471,8 @@ footer a:hover {
 .btn-send {
     width: 100%;
     padding: 12px;
-    background: #4d4d4d;
-    color: white;
+    background: var(--btn-bg-colour);
+    color: var(--btn-text-colour);
     font-size: 1.2rem;
     border: none;
     border-radius: 8px;
@@ -1741,7 +1743,7 @@ footer a:hover {
 
 .navbar {
     font-family: Arial, Helvetica, sans-serif;
-    background: #000000;
+    background: var(--alt-bg-colour);
     height: 70px;
     display: flex;
     flex-wrap: wrap;
@@ -1765,9 +1767,8 @@ footer a:hover {
 
     .logo {
         height: 60px;
-        width: 250px;
-        padding: 8px;
-
+        width: 235px;
+        padding-left: 8px;
     }
 
     .logo:hover {
@@ -1909,8 +1910,14 @@ footer a:hover {
         }
 
         .logo {
-            height: 40px;
-            width: 90px;
+            display: none;
+        }
+
+        .logo-m{
+            height: 50px;
+            width: 52px;
+            display: block;
+            margin-left: 8px;
         }
 
         .user-logo {
@@ -1997,7 +2004,7 @@ footer a:hover {
 .footer-container {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    background-color: black;
+    background-color: var(--alt-bg-colour);
     justify-content: space-evenly;
     height: 350px;
     gap: 50px;
@@ -2024,7 +2031,7 @@ footer a:hover {
         transform: scale(1.0);
     }
 
-    button {
+    /* button {
         font-size: 18px;
         width: 100px;
         height: 50px;
@@ -2034,7 +2041,7 @@ footer a:hover {
         cursor: pointer;
         margin-bottom: 10px;
         border-radius: 8px;
-    }
+    } */
 }
 
 
@@ -2173,7 +2180,7 @@ button:hover {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    background-color: #000;
+    background-color: var(--alt-bg-colour);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -2639,20 +2646,18 @@ button:hover {
 /* CSS for Login Page */
 
 .login {
-    background-color: var(--alt-bg-colour);
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1400px;
     padding-left: 25px;
     padding-right: 25px;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 160px;
 
     h2 {
         text-align: left;
         margin-left: 5px;
         margin-bottom: 5px;
-        padding-top: 20px;
+        padding-top: 15px;
     }
 }
 
@@ -2736,7 +2741,6 @@ button:hover {
         }
     }
 
-
     .new-customers {
         margin-left: 0;
     }
@@ -2750,13 +2754,16 @@ button:hover {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+
+    /* styling for header */
+    h1{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
-/* styling for header */
-h1{
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
+
 /* shows the addresses in a grid format*/
 .addresses{
     display: grid;
@@ -2809,7 +2816,7 @@ h1{
 /* styling of edit and remove links */
 .actions a {
     font-size: 14px;
-    color: #007185; 
+    color: #007185;
     text-decoration: none;
     margin-right: 10px;
 }
@@ -3203,12 +3210,11 @@ label {
 
 .right-container {
     flex: 1;
-    background-color: var(--alt-bg-colour);
+    /* background-color: var(--alt-bg-colour); */
     max-width: 500px;
     max-height: 800px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-top: 50px;
     padding-left: 25px;
     padding-right: 50px;
     font-size: 0.8rem;
@@ -3468,7 +3474,7 @@ label {
 /* CSS for Review Page*/
 
 .review {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     min-width: 33vw;
     padding-left: 33vw;
     padding-right: 33vw;
@@ -3486,7 +3492,7 @@ label {
 
 .review-form {
     flex: 1;
-    max-width: 1350px;
+    max-width: 750px;
     padding: 5px;
     margin: 0 auto;
 
@@ -3522,7 +3528,7 @@ label {
         width: 100%;
         max-width: 33vw;
         border: 1px solid black;
-        font-family: Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 1rem;
         color: var(--text-colour);
     }
@@ -3737,68 +3743,233 @@ label {
 }
 
 /* CSS for forgotten password page */
-
+/* main styling for the page */
 .forgot-password {
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 1400px;
-    padding-left: 25px;
-    padding-right: 25px;
+    max-width: 600px;
+    padding:25px;
+    flex-direction: column;
     align-items: center;
     margin: 0 auto;
     margin-bottom: 160px;
-    border: 1px solid black;
-
-    h1 {
-        text-align: center;
-        margin-left: 5px;
-        margin-bottom: 5px;
-        padding-top: 20px;
-    }
+    display: flex
 }
+/* stylign for heading*/
+ .forgot-password h1 {
+        text-align: center;
+         margin-bottom: 20px;
 
-.forgot-password .forgot-password-form {
-    flex: 1;
-    max-width: 650px;
-    padding: 5px;
-    margin: 0 auto;
-    border: 1px solid red;
-
-    label {
-        display: block;
-        margin-bottom: 5px;
     }
 
-    input {
-        max-width: 500px;
-        width: 100%;
+/* styling for the forms*/
+.forgot-password .forgot-password-form{
+    width: 100%;
+    max-width: 500px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:none;
+}
+/*label stylng*/
+.forgot-password .forgot-password-form label{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+        }
+
+/*input text styling*/
+.forgot-password .forgot-password-form input{
+        width:100%;
         padding: 10px;
-        border: 1px solid black;
+        border:1px solid black;
         margin-bottom: 15px;
+        border-radius: 5px;
     }
 
-    button {
+/* submit button styling*/
+.forgot-password .forgot-password-form button{
         background-color: black;
         color: white;
-        border: 1px solid black;
+        border: none;
         cursor: pointer;
-        max-width: 522px;
+        min-width: 400px;
         width: 100%;
         padding: 10px;
-        margin-bottom: 15px;
+        margin: 15px auto;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        text-align: center;
+        border-radius: 5px;
     }
-
-    button:hover {
+/*hover effect*/
+.forgot-password .forgot-password-form button:hover {
         background-color: #4D4D4D;
     }
 
-    a {
-        text-decoration: underline;
-        text-align: left;
-        color: black;
+#sponsor-banner {
+        width: 100%;
+        position: relative;
+        max-height: 600px;
+        animation: fadein 1s ease-out forwards;
+}
+
+#sponsor-banner-container {
+        position: relative;
+        width: 100%;
+        max-height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+#sponsor-text-banner {
+        position: absolute;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        color: #000;
+        font-family: Impact, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        animation: fadeleft 1s ease-out forwards;
+
+            h2{
+                font-size: 80px;
+                margin-bottom:5px;
+            }
+}
+#sponsor-logo{
+    width: 200px;
+    height: 200px;
+}
+#sponsor-pic{
+    width: 400px ;
+    height:400px;
+}
+#sponsor-text {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 20px;
+    flex-direction: row;
+    line-height: 1.7;
+
+}
+
+#second-sponsor-text {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin: 0 auto;
+    font-size: 20px;
+    flex-direction: row-reverse;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    line-height: 1.7;
+}
+#sponsor-list{
+    flex-direction: column;
+    list-style: none;
+}
+#athlete-pic{
+    height: 200px;
+    width: 200px;
+}
+#sponsor-join-text{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-left: 500px;
+    padding-right: 500px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 20px;
+    flex-direction: row;
+    line-height: 1.7;
+}
+
+/* CSS for Edit Address Page */
+
+.Edit-Address{
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+        color: #555;
+    }
+
+    input[type="text"],
+    input[type="checkbox"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus {
+        border-color: #007bff;
+        outline: none;
     }
 }
 
-.click-collect {
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.save {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
