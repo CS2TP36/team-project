@@ -2942,13 +2942,20 @@ button:hover {
         margin-top: 10px;
     }
 
-    button:hover {
-        background-color: #4D4D4D;
-    }
-
-    .error {
+    .form-group .error-message {
         color: red;
-        font-size: 0.9em;
+        font-size: 12px;
+        margin-top: 5px;
+        font-weight: bold;
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+    }
+    
+    .form-group input.error,
+    .form-group select.error {
+        border-color: red;
+        background-color: #F9D9D9;
     }
 }
 

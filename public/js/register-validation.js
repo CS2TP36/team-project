@@ -1,94 +1,103 @@
-const signupForm = document.getElementById('signupForm');
+document.addEventListener('DOMContentLoaded', () => {
+    const signupForm = document.getElementById('signupForm');
 
-signupForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+    signupForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    console.log("Form submitted!");
+        // Creates an object to store references to the input fields making for a easier to access and validate the input values.
+        const fields = {
+            firstName: document.getElementById('firstName'),
+            lastName: document.getElementById('lastName'),
+            email: document.getElementById('email'),
+            password: document.getElementById('password'),
+            confirmPassword: document.getElementById('password_confirmation'),
+            phone: document.getElementById('phone'),
+            address: document.getElementById('address'),
+        };
 
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    const phoneNumber = document.getElementById('phone').value.trim();
-    const address = document.getElementById('address').value.trim();
+        // Creates an object to store the display names of the input field and is used to display user-friendly error messages
+        const fieldNames = {
+            firstName: 'First Name',
+            lastName: 'Last Name',
+            email: 'Email',
+            password: 'Password',
+            confirmPassword: 'Confirm Password',
+            phone: 'Phone Number',
+            address: 'Address',
+        };
 
-    let isValid = true;
+        let isValid = true;
 
-    // Clear previous errors
-    document.querySelectorAll('.error').forEach(error => error.textContent = '');
+        // Clear previous errors
+        for (const key in fields) {
+            clearError(fields[key]);
+        }
 
-    // First name validation
-    if (firstName === '') {
-        document.getElementById('firstNameError').textContent = 'Please provide your first name.';
-        isValid = false;
+        // Validation
+        if (!validateFields(fields, fieldNames)) {
+            isValid = false;
+        }
+
+        if (fields.password.value !== fields.confirmPassword.value) {
+            displayError(fields.confirmPassword, 'Passwords don’t match. Try again.');
+            isValid = false;
+        }
+
+        if (fields.phone.value && !isValidPhoneNumber(fields.phone.value)) {
+            displayError(fields.phone, 'Please provide a valid UK phone number.');
+            isValid = false;
+        }
+
+        if (fields.email.value && !isValidEmail(fields.email.value)) {
+            displayError(fields.email, 'That doesn’t look like a valid email.');
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert('You’ve successfully signed up! Welcome!');
+            signupForm.submit();
+        }
+    });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 
-    // Last name validation
-    if (lastName === '') {
-        document.getElementById('lastNameError').textContent = 'Last name is required.';
-        isValid = false;
+    function isValidPhoneNumber(phoneNumber) {
+        const ukPhoneRegex = /^\+44\d{10,13}$/;
+        return ukPhoneRegex.test(phoneNumber);
     }
 
-    // Email validation
-    if (email === '') {
-        document.getElementById('emailError').textContent = 'Don’t forget to enter your email.';
-        isValid = false;
-    } else if (!isValidEmail(email)) {
-        document.getElementById('emailError').textContent = 'That doesn’t look like a valid email.';
-        isValid = false;
-    }
+    const displayError = (inputElement, message) => {
+        let errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (!errorSpan) {
+            errorSpan = document.createElement('span');
+            errorSpan.className = 'error-message';
+            inputElement.parentElement.appendChild(errorSpan);
+        }
+        errorSpan.textContent = message;
+        inputElement.classList.add('error');
+    };
 
-    // Password validation
-    if (password === '') {
-        document.getElementById('passwordError').textContent = 'You need to choose a password.';
-        isValid = false;
-    } else if (password.length < 8) {
-        document.getElementById('passwordError').textContent = 'Password should be at least 8 characters long.';
-        isValid = false;
-    }
+    const clearError = (inputElement) => {
+        const errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (errorSpan) errorSpan.remove();
+        inputElement.classList.remove('error');
+    };
 
-    // Confirm password validation
-    if (confirmPassword === '') {
-        document.getElementById('confirmPasswordError').textContent = 'Please confirm your password.';
-        isValid = false;
-    } else if (password !== confirmPassword) {
-        document.getElementById('confirmPasswordError').textContent = 'Passwords don’t match. Try again.';
-        isValid = false;
-    }
+    const validateFields = (fields, fieldNames) => {
+        let isValid = true;
 
-    // Phone number validation
-    if (phoneNumber === '') {
-        document.getElementById('phoneError').textContent = 'We need your phone number.';
-        isValid = false;
-    } else if (!isValidPhoneNumber(phoneNumber)) {
-        document.getElementById('phoneError').textContent = 'Please provide a valid UK phone number.';
-        isValid = false;
-    }
+        for (let key in fields) {
+            const field = fields[key];
+            const fieldName = fieldNames[key];
+            if (!field.value || !field.value.trim()) {
+                displayError(field, `${fieldName} is required.`);
+                isValid = false;
+            }
+        }
 
-    // Address validation
-    if (address === '') {
-        document.getElementById('addressError').textContent = 'Address is required.';
-        isValid = false;
-    } else if (address.length < 5) {
-        document.getElementById('addressError').textContent = 'Your address seems too short. Please enter a valid address.';
-        isValid = false;
-    }
-
-    // Submit form if everything is valid
-    if (isValid) {
-        console.log("Form is valid. Submitting...");
-        alert('You’ve successfully signed up! Welcome!');
-        signupForm.submit();
-    }
+        return isValid;
+    };
 });
-
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-function isValidPhoneNumber(phoneNumber) {
-    const ukPhoneRegex = /^\+44\d{10,13}$/;
-    return ukPhoneRegex.test(phoneNumber);
-}
