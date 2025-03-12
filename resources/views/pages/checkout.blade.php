@@ -30,15 +30,15 @@
                     </div>
                     <div class="form-group">
                         <label for="address">Street Address</label>
-                        <input type="text" id="address" name="address" placeholder="e.g. 123 BlastBurn Road" required>
+                        <input type="text" id="address" name="address" placeholder="Street Address" required>
                     </div>
                     <div class="form-group">
                         <label for="postcode">Postcode</label>
-                        <input type="text" id="postcode" name="postcode" placeholder="e.g. M62 8TT" required>
+                        <input type="text" id="postcode" name="postcode" placeholder="Between 5-7 digit" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder=" " required>
+                        <input type="tel" id="phone" name="phone" placeholder="" required>
                     </div>
                     <div id="billing-errors" class="error-message"></div>
                     <button type="button" class="next-section" data-next="payment-method-section">Next</button>
@@ -53,7 +53,7 @@
                     <legend>Payment Details</legend>
                     <div class="form-group">
                         <label for="card-name">Name on Card</label>
-                        <input type="text" id="card-name" name="card_name" placeholder="John Doe" required>
+                        <input type="text" id="card-name" name="card_name" placeholder="Input Name on Card" required>
                     </div>
                     <div class="form-group">
                         <label for="card-number">Card Number</label>
