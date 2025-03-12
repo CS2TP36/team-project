@@ -1,6 +1,8 @@
 @extends('layouts.page')
 @section('title','Register')
-@section('script', 'js/register-validation.js')
+@section('script')
+    {{ asset('/js/register-validation.js') }}
+@endsection
 @section('content')
     <div class="register">
         <h2>Register to Become a Member</h2>
@@ -16,7 +18,7 @@
             </div>
         @endif
 
-        <form id="signupForm" method="POST" action="{{ route('register.store') }}" novalidate>
+        <form id="signupForm" method="POST" action="{{ route('register.store') }}">
             @csrf <!-- Laravel CSRF protection -->
             
             <div class="form-group">
@@ -58,8 +60,7 @@
             <div class="form-group">
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" value="{{ old('address') }}" required>
-                <span class="error-message"></span>
-            </div>
+                <span id="addressError" class="error"></span>
 
             <button type="submit">Sign Up</button>
         </form>
