@@ -1768,7 +1768,7 @@ footer a:hover {
     .logo {
         height: 60px;
         width: 235px;
-        padding: 8px;
+        padding-left: 8px;
     }
 
     .logo:hover {
