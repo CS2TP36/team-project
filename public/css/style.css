@@ -149,7 +149,6 @@ body {
 }
 
 /*CSS for Account Page*/
-
 .account-page {
     .container {
         background-color: var(--bg-colour);
@@ -196,7 +195,6 @@ body {
 }
 
 /* CSS for FAQ Page*/
-
 .FAQ {
     h1 {
         text-align: center;
@@ -236,7 +234,6 @@ body {
     }
 
     /* FAQ Question */
-
     .faq-question {
         width: 100%;
         padding: 15px;
@@ -263,7 +260,6 @@ body {
     }
 
     /* FAQ Answer */
-
     .faq-answer {
         display: none;
         padding: 15px;
@@ -281,14 +277,12 @@ body {
     }
 
     /* Links Inside FAQ */
-
     .faq-item a {
         display: inline-block;
         margin-top: 10px;
         padding: 8px 15px;
         background: var(--btn-bg-colour);
         color: var(--btn-text-colour);  
-        /* font-weight: bold; */
         text-decoration: none;
         border: 1px solid var(--btn-border-color);
         border-radius: 5px;
@@ -299,7 +293,6 @@ body {
     }
 
     /* "If This Has Not Helped" Section */
-
     .FMI {
         text-align: center;
         padding: 40px 20px;
@@ -324,13 +317,11 @@ body {
     }
 
     /* Contact Link */
-
     #contact-link {
         display: inline-block;
         padding: 10px 20px;
         background: var(--btn-bg-colour);
         color: var(--btn-text-colour);
-        /* font-weight: bold; */
         text-decoration: none;
         border-radius: 5px;
         transition: 0.3s;
@@ -341,7 +332,6 @@ body {
     }
 
     /* Social Icons */
-
     ul {
         display: flex;
         padding: 0;
@@ -399,7 +389,6 @@ body {
 }
 
 /* CSS for Contact Details Page*/
-
 .contact-details {
     padding: 15px;
 
@@ -433,7 +422,7 @@ body {
         }
 
         button:hover {
-            background-color: var(--btn-hover-colour);
+            background-color: var(--alt-bh-colour);
         }
 
         .contact-line-break {
@@ -443,7 +432,6 @@ body {
         }
 
         form input[type="text"], input[type="email"] {
-            color: var(--input-text-colour);
             border: 1px solid var(--border-color);
             padding: 10px;
             /*Disables default browser outline on focus*/
@@ -457,6 +445,7 @@ body {
     }
 }
 
+/* Media Query for Contact Details Page */
 @media (max-width: 768px) {
     .contact-details {
         width: 300px;
@@ -486,85 +475,67 @@ body {
 }
 
 /* CSS for change password page */
-/*  styling for change password container */
-
 .change {
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 50px auto;
-    /* centre the container */
-    max-width: 600px;
-    padding: 25px;
-
-    /* h2 styling */
-
-    h2 {
-        color: #333;
-        font-size: 1.6em;
-        text-align: left;
-        margin: 0 0 15px 5px;
-        /* add spacing */
-    }
-
-    /* styling for reset sections */
+    padding: 15px;
 
     .reset-sections {
-        display: flex;
+        width: 33vw;
+        min-width: 500px;
+        max-width: 600px;
+        margin: 0 auto;
         margin-bottom: 20px;
-        flex-direction: column;
-        /* stack vertical */
-    }
 
-    /* h3 header styling */
+        h2 {
+            text-align: center;
+        }
 
-    .reset-sections h3 {
-        font-size: 1.2em;
-        color: #555;
-        margin-bottom: 15px;
-    }
+        .change-pass-label {
+            margin-bottom: 15px;
+        }
 
-    /* styling for forms */
+        form input {
+            width: 95.5%;
+            min-width: 320px;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
 
-    .reset-sections input {
-        width: 95%;
-        max-width: 500px;
-        border: 1px solid black;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+        form input[type="password"] {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            /*Disables default browser outline on focus*/
+            outline: none;
+        }
 
+        form input[type="password"]:focus {
+            box-shadow: 0 0 10px var(--box-shadow-color);
+            border-color: var(--alt-border-color);
+        }
 
-    /* styling for submit button */
+        button {
+            width: 100%;
+            min-width: 320px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid var(--border-color);
+            background-color: var(--btn-bg-colour);
+            color: var(--btn-text-colour);
+            cursor: pointer;
+        }
 
-    .reset-sections button {
-        width: 100%;
-        max-width: 522px;
-        padding: 10px;
-        border: 1px solid black;
-        background-color: black;
-        color: white;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
+        button:hover {
+            background-color: var(--btn-hover-colour);
+        }
 
-    /* atyling for hover */
+        .error-messages ul li {
+            color: red;
+            padding-left: 0;
+            margin: 0;
+        }
 
-    reset-sections button:hover {
-        background-color: #4D4D4D
-    }
-
-
-    /* styling for error mesages */
-
-    .error-message ul {
-        color: red;
-        padding-left: 0;
-        margin: 0;
-    }
-
-
-    .error-message li {
-        margin-bottom: 5px;
+        .error-messages li {
+            margin-bottom: 5px;
+        }
     }
 }
 
@@ -2668,10 +2639,7 @@ button:hover {
     max-width: 650px;
     padding: 5px;
 
-    label {
-        display: block;
-        color: var(--text-colour);
-    }
+    /* Need to sort out label spacing */
 
     input {
         width: 100%;
@@ -4260,6 +4228,33 @@ label {
         background-color: #4D4D4D;
         transform: scale(0.98);
     }
-
 }
 
+.Edit_Payment{
+    .payment-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+}
