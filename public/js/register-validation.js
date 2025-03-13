@@ -1,45 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const registerForm = {
-        firstName: document.getElementById('firstName'),
-        lastName: document.getElementById('lastName'),
-        email: document.getElementById('email'),
-        password: document.getElementById('password'),
-        password_confirmation: document.getElementById('password_confirmation'),
-        phone: document.getElementById('phone'),
-        address: document.getElementById('address'),
-    };
+    const signupForm = document.getElementById('signupForm');
 
-    const registerFieldNames = {
-        firstName: 'First Name',
-        lastName: 'Last Name',
-        email: 'Email',
-        password: 'Password',
-        password_confirmation: 'Confirm Password',
-        phone: 'Phone Number',
-        address: 'Address',
-    };
+    signupForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    const registerValidationRules = {
-        firstName: {}, // Required
-        lastName: {}, // Required
-        email: {
-            pattern: "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$",
-            message: "must be a valid email address."
-        },
-        password: {
-            pattern: "^.{8,}$",
-            message: "must be at least 8 characters long."
-        },
-        password_confirmation: {}, // Will be compared to password
-        phone: {
-            pattern: "^\\+44\\d{10,13}$",
-            message: "must be a valid UK phone number (e.g., +441234567890)."
-        },
-        address: {}, // Required
-    };
+        // Creates an object to store references to the input fields making for a easier to access and validate the input values.
+        const fields = {
+            firstName: document.getElementById('firstName'),
+            lastName: document.getElementById('lastName'),
+            email: document.getElementById('email'),
+            password: document.getElementById('password'),
+            confirmPassword: document.getElementById('password_confirmation'),
+            phone: document.getElementById('phone'),
+            address: document.getElementById('address'),
+        };
 
-    // Reusable error handling functions:
-    function displayError(inputElement, message) {
+        // Creates an object to store the display names of the input field and is used to display user-friendly error messages
+        const fieldNames = {
+            firstName: 'First Name',
+            lastName: 'Last Name',
+            email: 'Email',
+            password: 'Password',
+            confirmPassword: 'Confirm Password',
+            phone: 'Phone Number',
+            address: 'Address',
+        };
+
+        let isValid = true;
+
+        // Clear previous errors
+        for (const key in fields) {
+            clearError(fields[key]);
+        }
+
+        // Validation
+        if (!validateFields(fields, fieldNames)) {
+            isValid = false;
+        }
+
+        if (fields.password.value !== fields.confirmPassword.value) {
+            displayError(fields.confirmPassword, 'Passwords don’t match. Try again.');
+            isValid = false;
+        }
+
+        if (fields.phone.value && !isValidPhoneNumber(fields.phone.value)) {
+            displayError(fields.phone, 'Please provide a valid UK phone number.');
+            isValid = false;
+        }
+
+        if (fields.email.value && !isValidEmail(fields.email.value)) {
+            displayError(fields.email, 'That doesn’t look like a valid email.');
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert('You’ve successfully signed up! Welcome!');
+            signupForm.submit();
+        }
+    });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function isValidPhoneNumber(phoneNumber) {
+        const ukPhoneRegex = /^\+44\d{10,13}$/;
+        return ukPhoneRegex.test(phoneNumber);
+    }
+
+    const displayError = (inputElement, message) => {
         let errorSpan = inputElement.parentElement.querySelector('.error-message');
         if (!errorSpan) {
             errorSpan = document.createElement('span');
@@ -48,57 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         errorSpan.textContent = message;
         inputElement.classList.add('error');
-    }
+    };
 
-    function clearError(inputElement) {
+    const clearError = (inputElement) => {
         const errorSpan = inputElement.parentElement.querySelector('.error-message');
         if (errorSpan) errorSpan.remove();
         inputElement.classList.remove('error');
-    }
+    };
 
-    function validateField(inputElement, fieldName, validationRules) {
-        clearError(inputElement); // Clear any existing errors
-
-        if (!inputElement.value || !inputElement.value.trim()) {
-            displayError(inputElement, `${fieldName} is required.`);
-            return false;
-        }
-
-        if (validationRules && validationRules.pattern) {
-            const pattern = new RegExp(validationRules.pattern);
-            if (!pattern.test(inputElement.value.trim())) {
-                displayError(inputElement, `${fieldName} ${validationRules.message}`);
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    function validateFields(fields, fieldNames, validationRules) {
+    const validateFields = (fields, fieldNames) => {
         let isValid = true;
 
         for (let key in fields) {
             const field = fields[key];
             const fieldName = fieldNames[key];
-            const rules = validationRules[key];
-
-            if (!validateField(field, fieldName, rules)) {
+            if (!field.value || !field.value.trim()) {
+                displayError(field, `${fieldName} is required.`);
                 isValid = false;
             }
         }
 
-        // Special check for password confirmation:
-        if (fields.password_confirmation && fields.password.password.value !== fields.password_confirmation.value) {
-            displayError(fields.password_confirmation, "Passwords do not match.");
-            isValid = false;
-        }
         return isValid;
-    }
-
-    document.getElementById('signupForm').addEventListener('submit', (event) => {
-        if (!validateFields(registerForm, registerFieldNames, registerValidationRules)) {
-            event.preventDefault(); // Prevent form submission if validation fails
-        }
-    });
+    };
 });
