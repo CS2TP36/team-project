@@ -155,5 +155,5 @@ Route::get('/sustainability', function () {
 });
 
 Route::get('/account-payments', function () {
-    return view('pages.accountpayments');
+    return view('pages.account-payments');
 });
