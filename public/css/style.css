@@ -3334,7 +3334,6 @@ label {
         background-color: black;
         height: 2px;
         flex-grow: 1;
-
     }
 
 
@@ -3641,12 +3640,6 @@ label {
     align-items: center;
     margin: 0 auto;
     color: var(--text-colour);
-
-    h1 {
-        color: var(--text-colour);
-        font-size: 2em;
-        min-width: 320px;
-    }
 }
 
 .review-form {
@@ -3654,6 +3647,12 @@ label {
     max-width: 750px;
     padding: 5px;
     margin: 0 auto;
+
+    h1 {
+        color: var(--text-colour);
+        font-size: 2em;
+        min-width: 320px;
+    }
 
     .review-image {
         display: flex;
@@ -3712,9 +3711,10 @@ label {
         width: 100%;
     }
 
-    .line-break {
+    .review-line-break {
         margin-top: 10px;
-        outline: 1px solid var(--text-colour);
+        height: 2px;
+        /* outline: 1px solid var(--text-colour); */
         background-color: var(--text-colour);
         width: 100%;
         min-width: 320px;
