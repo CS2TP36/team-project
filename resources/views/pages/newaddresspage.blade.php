@@ -1,14 +1,7 @@
 @extends('layouts.page')
 @section('title', 'New Address')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Address</title>
-</head>
-<div class="container">
+<div class="new-address-container">
     <form class="address-form">
         <h2>Add a New Address</h2>
 
@@ -31,17 +24,13 @@
         <input type="text" id="city" placeholder="Enter your city" required>
 
         <div class="checkbox-container">
-    <label for="default-address">
-        <input type="checkbox" id="default-address">
-        Make this my default address
-    </label>
-</div>
-
-        
-
+            <label for="default-address">
+                <input type="checkbox" id="default-address">
+                Make this my default address
+            </label>
+        </div>
         <button type="submit">Add Address</button>
     </form>
 </div>
-</html>
 
 @endsection
