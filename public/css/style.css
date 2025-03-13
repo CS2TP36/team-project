@@ -2811,16 +2811,16 @@ button:hover {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-
+}
     /* styling for header */
 
-    h1 {
+  .accountaddresses h1 {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
         text-align: center;
     }
-}
+
 
 /* shows the addresses in a grid format*/
 .addresses {
@@ -2884,6 +2884,88 @@ button:hover {
 .actions a:hover {
     text-decoration: underline;
 }
+
+/*account stored cards CSS */
+.accountpayments {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+    /* styling for header */
+
+  .accountpayments h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+/* shows the cards in a grid format*/
+.payments {
+    display: grid;
+    gap: 20px;
+}
+
+/*styling of add method cards*/
+.add-payment{
+    color: #444;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    cursor: pointer;
+    min-height: 150px;
+    border-radius: 8px;
+}
+
+/* hover effect over add payment card */
+.add-payment:hover {
+    border-color: #999;
+}
+
+/*styling of the payment cards */
+.payment-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-card strong {
+    font-size: 16px;
+    display: block; /*cards take full width*/
+    margin-bottom: 5px;
+}
+
+.payment-card p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* styling of edit and remove links */
+.actions a {
+    font-size: 14px;
+    color: #007185;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* when you hover edit and remove they udnerline */
+.actions a:hover {
+    text-decoration: underline;
+}
+
 
 /*CSS for Register Page*/
 

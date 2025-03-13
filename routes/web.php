@@ -153,3 +153,7 @@ Route::get('/sponsor', function () {
 Route::get('/sustainability', function () {
     return view('pages.sustainability');
 });
+
+Route::get('/account-payments', function () {
+    return view('pages.accountpayments');
+});
