@@ -65,7 +65,7 @@
             <div>
                 <label for="images">Upload Product Images:</label>
                 <input type="file" id="images" name="images[]" multiple>
-</div>
+            </div>
 
 
             <button type="submit" class="btn btn-primary">Create Product</button>

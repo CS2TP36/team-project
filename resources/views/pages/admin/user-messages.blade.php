@@ -7,10 +7,12 @@
         <p>No messages</p>
     @endif
     @foreach($contactItems as $contactItem)
-        <article style="align-content: center; text-align: center; justify-items: center; justify-content: center; align-items: center">
+        <article
+            style="align-content: center; text-align: center; justify-items: center; justify-content: center; align-items: center">
             <h4>{{ $contactItem->name }}</h4>
             <div role="group">
-                <p style="margin-right: 5px"><a href="mailto:{{ $contactItem->email }}">{{ $contactItem->email }}</a></p>
+                <p style="margin-right: 5px"><a href="mailto:{{ $contactItem->email }}">{{ $contactItem->email }}</a>
+                </p>
                 <p style="margin-left: 5px">{{ $contactItem->phone }}</p>
             </div>
             <p>{{ $contactItem->message }}</p>
@@ -25,7 +27,11 @@
             @for($i = 1; $i <= $pages; $i++)
                 <li>
                     <!-- dont show link for current page -->
-                    <small>@if ($i == $page) {{ $i }} @else <a href="/admin/messages/{{ $i }}">{{ $i }}</a>@endif</small>
+                    <small>@if ($i == $page)
+                            {{ $i }}
+                        @else
+                            <a href="/admin/messages/{{ $i }}">{{ $i }}</a>
+                        @endif</small>
                 </li>
             @endfor
         </ul>
