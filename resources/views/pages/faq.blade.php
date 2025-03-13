@@ -68,14 +68,14 @@
             <h2>If This Has Not Helped</h2>
             <p>If this page has not answered your question you can always drop us an Email or use our contact page to
                 get in touch.</p>
-            <a href="/contact">Contact Us</a>
-            <!-- <h2>You can also check out our socials as we also listen here.</h2>
+            <a id="contact-link" href="/contact">Contact Us</a>
+            <h2>You can also check out our socials as we also listen here.</h2>
             <ul>
                 <li><a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a></li>
                 <li><a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a></li>
                 <li><a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a></li>
                 <li><a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a></li>
-            </ul> -->
+            </ul>
         </div>
     </div>
     </div>

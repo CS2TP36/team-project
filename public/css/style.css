@@ -97,7 +97,9 @@ main {
     --text-colour: #1E1E1E;
     --btn-bg-colour: #1E1E1E;
     --btn-text-colour: #F5F5F5;
+    --btn-border-colour: #1E1E1E;
     --btn-hover-colour: #4D4D4D;
+    --alt-bh-colour: #4D4D4D;
     --input-text-colour: #1E1E1E;
     --border-color: #D5D5D5;
     --alt-border-color: gold;
@@ -114,12 +116,13 @@ main {
     --bg-colour: #2D2D2D;
     --text-colour: #F5F5F5;
     --btn-bg-colour: #4D4D4D;
+    --btn-border-colour: #1E1E1E;
     --btn-hover-colour: #1E1E1E;
-    /* --border-color: #ddd; */
+    --alt-bh-colour: #2D2D2D;
+    --border-color: #ddd;
     --alt-border-color: gold;
     --box-shadow-color: gold;
-    --alt-bs-colour: rgb(252, 252, 252);
-    --alt-bs-colour: rgb(252, 252, 252);
+    --alt-bs-colour: rgba(252, 252, 252, 0.1);
     --subnavbar-bg-color: #5D5D5D;
     --text-banner-colour: #1E1E1E;
     --text-nav-colour: #1E1E1E;
@@ -224,7 +227,7 @@ body {
         border-radius: 8px;
         box-shadow: 0 4px 10px var(--alt-bs-colour);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        border: 1px solid #ddd;
+        border: 1px solid var(--border-color);
     }
 
     .faq-item:hover {
@@ -246,15 +249,14 @@ body {
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        align-items: center;
         transition: color 0.3s ease;
         outline: none;
     }
 
-    /*
+    
     .faq-question:hover {
-        color: var(--btn-hover-colour);
-    } */
+        opacity: 0.7;
+    }
 
     .arrow {
         transition: transform 0.3s ease-in-out;
@@ -267,7 +269,7 @@ body {
         padding: 15px;
         font-size: 0.95rem;
         color: var(--text-colour);
-        border-top: 1px solid #ddd;
+        border-top: 1px solid var(--border-color);
     }
 
     .faq-item.active .faq-answer {
@@ -284,23 +286,22 @@ body {
         display: inline-block;
         margin-top: 10px;
         padding: 8px 15px;
-        background: var(--alt-bg-colour);
-        color: var(--text-colour);
-        font-weight: bold;
+        background: var(--btn-bg-colour);
+        color: var(--btn-text-colour);  
+        /* font-weight: bold; */
         text-decoration: none;
+        border: 1px solid var(--btn-border-color);
         border-radius: 5px;
-
     }
 
     .faq-item a:hover {
-        background: var(--btn-hover-colour);
+        background: var(--alt-bh-colour);
     }
 
     /* "If This Has Not Helped" Section */
 
     .FMI {
         text-align: center;
-
         padding: 40px 20px;
         background: var(--card-bg-colour);
         border-radius: 15px;
@@ -309,54 +310,51 @@ body {
         margin-bottom: 50px;
         margin-left: auto;
         margin-right: auto;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px var(--alt-bs-colour);
     }
 
     .FMI h2 {
         font-size: 1.8rem;
         margin-bottom: 10px;
-        color: var(--text-colour);
     }
 
     .FMI p {
         font-size: 1rem;
-        color: var(--text-colour);
         margin-bottom: 20px;
     }
 
-    /* Contact Button */
+    /* Contact Link */
 
-    .FMI a {
+    #contact-link {
         display: inline-block;
         padding: 10px 20px;
         background: var(--btn-bg-colour);
         color: var(--btn-text-colour);
-        font-weight: bold;
+        /* font-weight: bold; */
         text-decoration: none;
         border-radius: 5px;
         transition: 0.3s;
     }
 
-    .FMI a:hover {
+    #contact-link:hover {
         background: #2D2D2D;
     }
 
     /* Social Icons */
 
     ul {
-        list-style: none;
         display: flex;
+        padding: 0;
         justify-content: center;
-        gap: 15px;
+        gap: 20px;
         margin-top: 20px;
     }
 
     ul li {
-        display: inline-block;
+        list-style: none;
     }
 
     ul li img {
-        width: 40px;
         height: 40px;
         transition: transform 0.3s ease;
     }
