@@ -106,6 +106,7 @@ main {
     --text-banner-colour: #F5F5F5;
     --text-nav-colour: rgb(168 204 204);
     --card-bg-colour: #F5F5F5;
+    --card-hover-colour: #D5D5D5;
 }
 
 .dark-mode {
@@ -123,21 +124,7 @@ main {
     --text-banner-colour: #1E1E1E;
     --text-nav-colour: #1E1E1E;
     --card-bg-colour: #1E1E1E;
-}
-
-#theme-toggle {
-    background-color: var(--alt-bg-colour);
-    border: none;
-    box-shadow: none;
-
-    :hover {
-        opacity: 0.7;
-    }
-
-    img {
-        width: auto;
-        height: 36px;
-    }
+    --card-hover-colour: #4D4D4D;
 }
 
 #theme-toggle img:last-child {
@@ -153,8 +140,56 @@ main {
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: var(--bg-colour);
     color: var(--text-colour);
+}
+
+/*CSS for Account Page*/
+
+.account-page {
+    .container {
+        background-color: var(--bg-colour);
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+        gap: 20px;
+    }
+
+    .card {
+        background: var(--card-bg-colour);
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        color: var(--text-colour);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .card:hover {
+        background-color: var(--card-hover-colour);
+    }
+
+    img {
+        width: 50px;
+        margin-right: 20px;
+    }
+
+    .card-content h2 {
+        margin-bottom: 5px;
+    }
 }
 
 /* CSS for FAQ Page*/
@@ -374,64 +409,7 @@ body {
     }
 }
 
-/*CSS for Account Page*/
 
-.account-page {
-    font-family: Arial, sans-serif;
-    justify-content: center;
-    color: var(--text-colour);
-    /* border: red 1px solid; */
-
-    .container {
-        background-color: var(--bg-colour);
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 15px;
-    }
-
-    .grid {
-        display: grid;
-        /* border: 1px solid rebeccapurple; */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-        gap: 20px;
-    }
-
-    .card {
-        background: var(--card-bg-colour);
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        color: var(--text-colour);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        text-decoration: none;
-    }
-
-    .card:hover {
-        background-color: rgb(188, 185, 185);
-        box-shadow: 0 0 10px var(--box-shadow-color);
-        border-color: var(--alt-border-color);
-    }
-
-    img {
-        width: 50px;
-        margin-right: 20px;
-    }
-
-    h1 {
-        color: var(--text-colour);
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .card-content h2 {
-        margin-bottom: 5px;
-    }
-}
 
 /* CSS for Contact Details Page*/
 
