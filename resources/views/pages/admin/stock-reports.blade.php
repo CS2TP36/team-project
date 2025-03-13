@@ -46,7 +46,7 @@
                         $rateOfSale = "Insufficient data";
                     }
                 @endphp
-                <!-- Output the values to the page -->
+                    <!-- Output the values to the page -->
                 <h5><a href="/product/{{ $product->id }}">{{ $product->name }}</a></h5>
                 <p>Current stock level: {{ $product->stock }}</p>
                 <p>Rate of sale: {{ $rateOfSale }}</p>
@@ -72,6 +72,5 @@
         </form>
 
     </article>
-
 
 @endsection

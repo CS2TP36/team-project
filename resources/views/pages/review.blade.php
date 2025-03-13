@@ -30,8 +30,8 @@
                 <h2>Add a written review</h2>
                 <!-- Input for review -->
                 <textarea name="message" id="message" cols="10" rows="7"
-                        placeholder="What did you like or dislike? What did you use this product for?" required
-                        style="resize: none"></textarea>
+                          placeholder="What did you like or dislike? What did you use this product for?" required
+                          style="resize: none"></textarea>
                 <div class="review-line-break"><br></div>
                 <p>We will notify you via email as soon as your review is processed.</p>
                 <input type="hidden" name="product_id" value="{{$product->id}}">
