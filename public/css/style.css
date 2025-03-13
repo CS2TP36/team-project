@@ -521,6 +521,7 @@ body {
         min-width: 320px;
         max-width: 100%;
         padding: 10px;
+        margin-left: 0px;
     }
 
 }
@@ -627,7 +628,6 @@ body {
     background-color: var(--bg-colour);
     font-family: Arial, Helvetica, sans-serif;
     max-width: 800px; /* keep compact */
-    width: 100%;
     padding: 15px;
     margin: 30px auto; /* centers the content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*create shadow effect*/
@@ -658,7 +658,7 @@ body {
 }
 
 .order:hover {
-    background-color: #f1f1f1;
+    background-color: #d8d8d8;
 }
 
 /* order information date, dispatch, total) */
@@ -729,7 +729,6 @@ body {
     background-color: var(--btn-bg-colour);
     color: var(--btn-text-colour);
     transition: background-color 0.3s ease, transform 0.2s ease;
-    min-width: 100px;
     border: none;
     border-radius: 5px;
     padding: 6px 10px;
@@ -1681,6 +1680,8 @@ footer a:hover {
     .text ul {
         font-size: 1.1rem;
         color: var(--text-colour);
+        list-style: none;
+        padding: 0;
     }
 
     #cta {
@@ -1844,7 +1845,7 @@ footer a:hover {
     }
 
     .user-logo {
-        height: 36px;
+        height: 2.2rem;
     }
 
     .user-logo:hover {
