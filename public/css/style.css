@@ -2936,15 +2936,20 @@ button:hover {
         font-size: 12px;
         margin-top: 5px;
         font-weight: bold;
-        position: absolute;
-        bottom: -18px;
-        left: 0;
+        display: block;
+        height: 14px;
+        margin-top: 2px;
+        visibility: hidden;
     }
     
-    .form-group input.error,
-    .form-group select.error {
-        border-color: red;
-        background-color: #F9D9D9;
+    input.error, select.error {
+        border-color: red !important;
+        background-color: #F9D9D9 !important;
+        outline: none;
+    }
+
+    .error-message.active {
+        visibility: visible; 
     }
 }
 

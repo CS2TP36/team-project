@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <form id="signupForm" method="POST" action="{{ route('register.store') }}">
+        <form id="signupForm" method="POST" action="{{ route('register.store') }}" novalidate>
             @csrf <!-- Laravel CSRF protection -->
 
             <div class="form-group">
@@ -61,8 +61,9 @@
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" value="{{ old('address') }}" required>
                 <span id="addressError" class="error"></span>
-
-                <button type="submit">Sign Up</button>
+            </div>
+            
+            <button type="submit">Sign Up</button>
         </form>
     </div>
 @endsection
