@@ -1,8 +1,6 @@
 @extends('layouts.page')
 @section('title','Register')
-@section('script')
-    {{ asset('/js/register-validation.js') }}
-@endsection
+@section('script', 'js/register-validation.js')
 @section('content')
     <div class="register">
         <h2>Register to Become a Member</h2>
