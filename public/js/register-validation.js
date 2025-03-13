@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('signupForm');
 
+    // This Maps input field ID's to the corresponding DOM elements allowing for easy access to input fields for valifation or data retrieval
     const fields = {
         firstName: document.getElementById('firstName'),
         lastName: document.getElementById('lastName'),
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         address: document.getElementById('address'),
     };
 
+    // This Maps input field ID's to the names given enhancing error messages and user feedback
     const fieldNames = {
         firstName: 'First Name',
         lastName: 'Last Name',
