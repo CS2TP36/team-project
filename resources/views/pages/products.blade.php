@@ -17,7 +17,7 @@
     </div>
 
     <!-- a breadcrumb menu -->
-     <div>
+    <div>
         <div id="breadcrumbs">
             <p id="breadcrumb-list"><a href="/products">Products > </a></p>
         </div>
@@ -46,7 +46,8 @@
                                 <label for="high-to-low">Price (High To Low)</label>
                             </li>
                             <li class="category-buttons"><!--creates the buttons to click on the filter for each one-->
-                                <input type="radio" id="alphabetical-a-to-z" name="sort-by" value="a-to-z" checked="checked">
+                                <input type="radio" id="alphabetical-a-to-z" name="sort-by" value="a-to-z"
+                                       checked="checked">
                                 <label for="alphabetical-a-to-z">Alphabet (A-Z)</label>
                             </li>
                             <li class="category-buttons"><!--creates the buttons to click on the filter for each one-->
@@ -131,7 +132,7 @@
                 <!--checks if a message has been set and if it has then it displays it-->
                 <div id="message">
                     <p>{{$message}}</p><!--displays the message-->
-                </div
+                </div>
             @endif
             @foreach($products as $product)
                 <div class="product-item">
@@ -139,7 +140,7 @@
                     <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-link">
                         <!--gets the product id and the link to the product details page-->
                         <img src="{{ asset($product->getMainImage()) }}" alt="{{ $product['name'] }}"
-                            class="product-image"></img><!--get the image for each of the products-->
+                             class="product-image"></img><!--get the image for each of the products-->
                         <div class="product-details"><!--creates the  product details class -->
                             <h3>{{ $product['name'] }}</h3><!--Tprints the products name-->
                             <p>£{{ number_format($product['price'],2) }}</p><!--prints the price-->
@@ -148,8 +149,8 @@
                 </div>
             @endforeach <!--ends the iteration loop-->
         </div>
-        </div>
-        </form>
+    </div>
+    </form>
     <div>
 @endsection
 

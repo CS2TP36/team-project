@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AddressStorage;
+use App\Http\Controllers\AddressStorageController;
 use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\ManageUsersController;
 use App\Http\Controllers\Admin\ReportController;
@@ -9,7 +9,7 @@ use App\Http\Controllers\Auth\ForgotPassController;
 use App\Http\Controllers\Auth\PassChangeController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\PreviousOrders;
+use App\Http\Controllers\PreviousOrdersController;
 use App\Http\Controllers\ProductLister;
 use App\Http\Controllers\ProductSearcher;
 use App\Http\Controllers\ReviewController;
@@ -49,9 +49,6 @@ Route::get('/contact', function () {
 Route::get('/products/{mens?}/{sortBy?}/{ascending?}/{catFilter?}/{priceFilter?}', [ProductLister::class, 'show'])->name('products.show');
 Route::get('/product/{id?}', [ShowProduct::class, 'show'])->name('product.show');
 
-// Show the previous orders page
-Route::get('/previous-orders', [PreviousOrders::class, 'show'])->name('previous-orders.show');
-
 
 // Show the checkout page
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('basket.show');
@@ -84,8 +81,9 @@ Route::get('/terms-conditions', function () {
 
 
 
-
-Route::get('/orders', [PreviousOrders::class, 'show'])->name('orders.show');
+// previous orders routes
+Route::get('/orders', [PreviousOrdersController::class, 'show'])->name('orders.show');
+Route::get('/orders/more', [PreviousOrdersController::class, 'loadMore'])->name('orders.more');
 
 Route::get('/admin', [\App\Http\Controllers\Admin\AccountController::class, 'show'])->name('admin');
 
@@ -139,8 +137,8 @@ Route::get('/account', [AccountController::class, 'show'])->name('account.page')
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
 
 // address routes
-Route::get('/address/add', [AddressStorage::class, 'showAdd']);
-Route::get('/address/edit', [AddressStorage::class, 'showEdit']);
+Route::get('/address/add', [AddressStorageController::class, 'showAdd']);
+Route::get('/address/edit', [AddressStorageController::class, 'showEdit']);
 
 // careers page route
 Route::get('/careers', function () {
@@ -149,4 +147,20 @@ Route::get('/careers', function () {
 
 Route::get('/sponsor', function () {
     return view('pages.sponsor');
+});
+
+
+Route::get('/sustainability', function () {
+    return view('pages.sustainability');
+});
+
+Route::get('/account-payments', function () {
+    return view('pages.account-payments');
+});
+// temporary routes for adeeb
+Route::get('/address-add', function () {
+    return view('pages.newaddresspage');
+});
+Route::get('/payment-add', function () {
+    return view('pages.newpaymentpage');
 });

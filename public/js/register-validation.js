@@ -1,94 +1,100 @@
-const signupForm = document.getElementById('signupForm');
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signupForm');
 
-signupForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+    const fields = {
+        firstName: document.getElementById('firstName'),
+        lastName: document.getElementById('lastName'),
+        email: document.getElementById('email'),
+        password: document.getElementById('password'),
+        password_confirmation: document.getElementById('password_confirmation'),
+        phone: document.getElementById('phone'),
+        address: document.getElementById('address'),
+    };
 
-    console.log("Form submitted!");
+    const fieldNames = {
+        firstName: 'First Name',
+        lastName: 'Last Name',
+        email: 'Email',
+        password: 'Password',
+        password_confirmation: 'Confirm Password',
+        phone: 'Phone Number',
+        address: 'Address',
+    };
 
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    const phoneNumber = document.getElementById('phone').value.trim();
-    const address = document.getElementById('address').value.trim();
+    // Error handling functions
+    const displayError = (inputElement, message) => {
+        let errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (!errorSpan) {
+            errorSpan = document.createElement('span');
+            errorSpan.className = 'error-message';
+            inputElement.parentElement.appendChild(errorSpan);
+        }
+        errorSpan.textContent = message;
+        inputElement.classList.add('error');
+    };
 
-    let isValid = true;
+    const clearError = (inputElement) => {
+        const errorSpan = inputElement.parentElement.querySelector('.error-message');
+        if (errorSpan) errorSpan.remove();
+        inputElement.classList.remove('error');
+    };
 
-    // Clear previous errors
-    document.querySelectorAll('.error').forEach(error => error.textContent = '');
+    // Field validation function
+    const validateFields = () => {
+        let isValid = true;
 
-    // First name validation
-    if (firstName === '') {
-        document.getElementById('firstNameError').textContent = 'Please provide your first name.';
-        isValid = false;
-    }
+        for (let key in fields) {
+            const field = fields[key];
+            const fieldName = fieldNames[key];
+            const value = field.value.trim();
 
-    // Last name validation
-    if (lastName === '') {
-        document.getElementById('lastNameError').textContent = 'Last name is required.';
-        isValid = false;
-    }
+            if (!value) {
+                displayError(field, `${fieldName} is required.`);
+                isValid = false;
+            } else {
+                clearError(field);
+            }
 
-    // Email validation
-    if (email === '') {
-        document.getElementById('emailError').textContent = 'Don’t forget to enter your email.';
-        isValid = false;
-    } else if (!isValidEmail(email)) {
-        document.getElementById('emailError').textContent = 'That doesn’t look like a valid email.';
-        isValid = false;
-    }
+            if (key === 'email') {
+                const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(value)) {
+                    displayError(field, 'Enter a valid email address.');
+                    isValid = false;
+                }
+            }
 
-    // Password validation
-    if (password === '') {
-        document.getElementById('passwordError').textContent = 'You need to choose a password.';
-        isValid = false;
-    } else if (password.length < 8) {
-        document.getElementById('passwordError').textContent = 'Password should be at least 8 characters long.';
-        isValid = false;
-    }
+            if (key === 'password' && value.length < 8) {
+                displayError(field, 'Password must be at least 8 characters.');
+                isValid = false;
+            }
 
-    // Confirm password validation
-    if (confirmPassword === '') {
-        document.getElementById('confirmPasswordError').textContent = 'Please confirm your password.';
-        isValid = false;
-    } else if (password !== confirmPassword) {
-        document.getElementById('confirmPasswordError').textContent = 'Passwords don’t match. Try again.';
-        isValid = false;
-    }
+            if (key === 'password_confirmation' && value !== fields.password.value) {
+                displayError(field, 'Passwords do not match.');
+                isValid = false;
+            }
 
-    // Phone number validation
-    if (phoneNumber === '') {
-        document.getElementById('phoneError').textContent = 'We need your phone number.';
-        isValid = false;
-    } else if (!isValidPhoneNumber(phoneNumber)) {
-        document.getElementById('phoneError').textContent = 'Please provide a valid UK phone number.';
-        isValid = false;
-    }
+            if (key === 'phone') {
+                const phonePattern = /^\+44\d{10,13}$/;
+                if (!phonePattern.test(value)) {
+                    displayError(field, 'Enter a valid UK phone number (e.g., +44 1234567890).');
+                    isValid = false;
+                }
+            }
+        }
 
-    // Address validation
-    if (address === '') {
-        document.getElementById('addressError').textContent = 'Address is required.';
-        isValid = false;
-    } else if (address.length < 5) {
-        document.getElementById('addressError').textContent = 'Your address seems too short. Please enter a valid address.';
-        isValid = false;
-    }
+        return isValid;
+    };
 
-    // Submit form if everything is valid
-    if (isValid) {
-        console.log("Form is valid. Submitting...");
-        alert('You’ve successfully signed up! Welcome!');
-        signupForm.submit();
-    }
+    // Real-time validation
+    Object.values(fields).forEach((field) => {
+        field.addEventListener('input', () => clearError(field));
+    });
+
+    // Form submission handling
+    form.addEventListener('submit', (event) => {
+        if (!validateFields()) {
+            event.preventDefault();
+            alert('Please fix the errors before submitting.');
+        }
+    });
 });
-
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-function isValidPhoneNumber(phoneNumber) {
-    const ukPhoneRegex = /^\+44\d{10,13}$/;
-    return ukPhoneRegex.test(phoneNumber);
-}

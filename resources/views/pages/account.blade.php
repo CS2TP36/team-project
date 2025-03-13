@@ -18,7 +18,7 @@
                 <a href="/orders" class="card">
                     <img src="images/orders-icon.png" alt="Orders">
                     <div class="card-content">
-                        <h2>Your Orders</h2>
+                        <h2>Your Previous Orders</h2>
                         <p>Track, return, cancel an order, download invoice or buy again</p>
                     </div>
                 </a>
@@ -38,6 +38,16 @@
                         <p>Manage password, email and mobile number</p>
                     </div>
                 </a>
+                @if(Auth::user()->isAdmin())
+                    <!-- Link to Admin Page -->
+                    <a href="/admin" class="card">
+                        <img src="" alt="Admin">
+                        <div class="card-content">
+                            <h2>Admin</h2>
+                            <p>The admin pages</p>
+                        </div>
+                    </a>
+                @endif
             </div>
         </div>
     </div>
