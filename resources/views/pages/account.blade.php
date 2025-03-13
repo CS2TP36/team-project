@@ -18,7 +18,7 @@
                 <a href="/orders" class="card">
                     <img src="images/orders-icon.png" alt="Orders">
                     <div class="card-content">
-                        <h2>Your Orders</h2>
+                        <h2>Your Previous Orders</h2>
                         <p>Track, return, cancel an order, download invoice or buy again</p>
                     </div>
                 </a>

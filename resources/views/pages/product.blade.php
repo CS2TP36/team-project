@@ -13,13 +13,13 @@
 @section('content')
     <div class="product">
         <!-- Created a left and right container to make working with the page easier-->
-        <div class = "left-container">
+        <div class="left-container">
             <!-- Image of the product -->
             <img src="{{ asset($product->getMainImage()) }}"></img>
         </div>
 
-        <div class = "right-container">
-            <div class = "product-info">
+        <div class="right-container">
+            <div class="product-info">
                 <!-- Title/Name of the product -->
                 <h2>{{$product['name']}}</h2>
                 <!-- Price of the product -->
@@ -35,13 +35,14 @@
                     <div class="line-break"></div>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10"> ({{$product['stock']}} in stock)
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                    ({{$product['stock']}} in stock)
 
                     <p>Choose size:</p>
-                    <button class = "size-selection" type="button" onclick="selectSize('S')">S</button>
-                    <button class = "size-selection" type="button" onclick="selectSize('M')">M</button>
-                    <button class = "size-selection" type="button" onclick="selectSize('L')">L</button>
-                    
+                    <button class="size-selection" type="button" onclick="selectSize('S')">S</button>
+                    <button class="size-selection" type="button" onclick="selectSize('M')">M</button>
+                    <button class="size-selection" type="button" onclick="selectSize('L')">L</button>
+
                     <button type="submit">Add to Basket</button>
 
                 </form>
@@ -82,37 +83,39 @@
                 </section>
                 @php($reviews = ReviewController::getReviews($product->id))
                 <section id="review" class="content-section">
-                        <p><strong>Reviews:</strong></p>
-                        <!-- TODO: Probably want to rename classes and do some css to make look nice -->
-                        <div class="something">
-                            @foreach($reviews->reverse() as $review)
-                                <div class="line-break"></div>
-                                <p><strong>User: {{ (User::get()->where('id', $review['user_id'])->first())['first_name'] }}</strong></p>
-                                <!-- <div class="line-break"></div> -->
-                                <p><strong>{{$review['title']}}</strong></p>
-                                <p>{{$review['review']}}</p>
-                                <p id="star-{{ $loop->index }}">{{$review['rating']}}</p>
+                    <p><strong>Reviews:</strong></p>
+                    <!-- TODO: Probably want to rename classes and do some css to make look nice -->
+                    <div class="something">
+                        @foreach($reviews->reverse() as $review)
+                            <div class="line-break"></div>
+                            <p>
+                                <strong>User: {{ (User::get()->where('id', $review['user_id'])->first())['first_name'] }}</strong>
+                            </p>
+                            <!-- <div class="line-break"></div> -->
+                            <p><strong>{{$review['title']}}</strong></p>
+                            <p>{{$review['review']}}</p>
+                            <p id="star-{{ $loop->index }}">{{$review['rating']}}</p>
 
-                                <script>
-                                    function displayStarRating(rating, starId) {
-                                        const starContainer = document.getElementById(starId);
-                                        starContainer.innerHTML = '';
+                            <script>
+                                function displayStarRating(rating, starId) {
+                                    const starContainer = document.getElementById(starId);
+                                    starContainer.innerHTML = '';
 
-                                        for (let i = 1; i <= 5; i++) {
-                                            const star = document.createElement('span');
-                                            if (i <= rating) {
-                                                star.textContent = '⭐';
-                                            } else {
-                                                star.textContent = '';
-                                            }
-                                            starContainer.appendChild(star);
+                                    for (let i = 1; i <= 5; i++) {
+                                        const star = document.createElement('span');
+                                        if (i <= rating) {
+                                            star.textContent = '⭐';
+                                        } else {
+                                            star.textContent = '';
                                         }
+                                        starContainer.appendChild(star);
                                     }
+                                }
 
-                                    displayStarRating(<?php echo $review['rating']; ?>, 'star-{{ $loop->index }}');
-                                </script>
-                            @endforeach
-                        </div>
+                                displayStarRating(<?php echo $review['rating']; ?>, 'star-{{ $loop->index }}');
+                            </script>
+                        @endforeach
+                    </div>
                 </section>
             </div>
 

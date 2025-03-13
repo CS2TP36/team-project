@@ -34,7 +34,8 @@
 
                     <label for="password">Password *</label><br>
                     <input type="password" id="password" name="password" required/><br>
-                    <input type="hidden" name="redirect" id="redirect" value="@if(isset($redirect)){{$redirect}}@endif"/>
+                    <input type="hidden" name="redirect" id="redirect"
+                           value="@if(isset($redirect)){{$redirect}}@endif"/>
                     <button type="submit">Sign In</button>
                 </form>
                 <!-- TODO: Added this back in for testing may need css idk -->
@@ -48,7 +49,9 @@
                     <p>✓ Access your personal wishlist.</p>
                     <p>✓ Basket saves added items.</p>
                     <p>✓ Instant access to your acount.</p>
-                    <a href="/register"><button type="button">Register today</button></a>
+                    <a href="/register">
+                        <button type="button">Register today</button>
+                    </a>
                 </form>
             </div>
         </div>

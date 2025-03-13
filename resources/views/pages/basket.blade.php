@@ -14,14 +14,14 @@
                         <!-- Contains the Image of the item and the remove button -->
                         <div class="item-image">
                             <img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}"></img>
-                            
+
                             <form action="{{ route('basket.remove', $item->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit">Remove</button>
                             </form>
                         </div>
-                       <!-- Contains the product name, price and size -->
+                        <!-- Contains the product name, price and size -->
                         <div class="item-details">
                             <p>{{ $item->product->name }}</p>
                             <p><strong>£{{ number_format($item->product->price * $item->quantity, 2) }}</strong></p>
@@ -37,7 +37,7 @@
                             </form>
                         </div>
                     </div>
-                <!-- Text displayed if the Basket has no items -->
+                    <!-- Text displayed if the Basket has no items -->
                 @empty
                     <p>Your basket is empty!</p>
                 @endforelse
@@ -50,9 +50,12 @@
                 <div class="line-break"></div>
                 <p><strong>Total: £{{ number_format($total, 2) }}</strong></p>
                 <div class="line-break"></div>
-                <a href="/checkout"><button>Proceed to Checkout</button></a>
+                <a href="/checkout">
+                    <button>Proceed to Checkout</button>
+                </a>
                 <!-- Link for Privacy Policy -->
-                <p>We will use your information in accordance with our (<a href="/privacy-policy">Privacy Policy</a>). Updated January 2025</p>
+                <p>We will use your information in accordance with our (<a href="/privacy-policy">Privacy Policy</a>).
+                    Updated January 2025</p>
             </div>
         </section>
     </div>

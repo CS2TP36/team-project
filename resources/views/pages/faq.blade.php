@@ -4,7 +4,7 @@
     {{ asset('/js/faq.js') }}
 @endsection
 @section('content')
-<div class="FAQ">
+    <div class="FAQ">
         <h1>Frequently Asked Questions</h1>
         <h2 class="disclaimer fade-in">Here you will find the Most asked questions and Some general Insight</h2>
 
@@ -20,7 +20,8 @@
                 <button class="faq-question">What payment methods do we Accept? <span class="arrow">▼</span></button>
                 <div class="faq-answer">At the current moment we only accept the major credit and debit cards, Plans for
                     Paypal, apple pay, google pay are in the works as well as other apps to help with Payments like
-                    Klarna.</div>
+                    Klarna.
+                </div>
             </div>
 
             <div class="faq-item">
@@ -28,7 +29,8 @@
                         class="arrow">▼</span></button>
                 <div class="faq-answer">Notify us either through email or though our socials and we will help you, you
                     will need to return the item and we will either provide a full refund or we will ship the product
-                    you purchased back to you once again.</div>
+                    you purchased back to you once again.
+                </div>
             </div>
 
             <div class="faq-item">
@@ -67,14 +69,14 @@
             <p>If this page has not answered your question you can always drop us an Email or use our contact page to
                 get in touch.</p>
             <a href="/contact">Contact Us</a>
-            <h2>You can also check out our socials as we also listen here.</h2>
+            <!-- <h2>You can also check out our socials as we also listen here.</h2>
             <ul>
                 <li><a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a></li>
                 <li><a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a></li>
                 <li><a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a></li>
                 <li><a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a></li>
-            </ul>
+            </ul> -->
         </div>
     </div>
-</div>
+    </div>
 @endsection

@@ -11,7 +11,7 @@
                     <div class="wishlist-item">
                         <div class="item-image">
                             <img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}"></img>
-                            
+
                             <form action="{{ route('wishlist.remove', $item->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')

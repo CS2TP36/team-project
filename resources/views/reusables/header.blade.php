@@ -8,6 +8,7 @@
                         <input id="search-bar" type="search" placeholder="Search SportsWear">
                             <img src="{{ asset('images/search.PNG') }}" class="search-logo" alt="Search Icon">
                     </form>
+                    <a id="theme-toggle"><img src="{{ asset('images/light-mode-icon.png') }}" class="user-logo" ></img><img src="{{ asset('images/dark-mode-icon.png') }}" class="user-logo" ></img></a>
                     <a href="/account"><img src="{{ asset('images/Account.png') }}" class="user-logo" ></a> <!--links to account page-->
                     <a href="/wishlist"><img src="{{ asset('images/Hearts.png') }}" class="user-logo" > </a>
                     <a href="/basket"><img src="{{ asset('images/Shop.png') }}" class="user-logo" > </a> <!--links to basket page-->
