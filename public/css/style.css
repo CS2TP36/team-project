@@ -193,7 +193,7 @@ body {
     }
 
     .faq-item {
-        background: var(--alt-bg-colour);
+        background: var(--card-bg-colour);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -276,7 +276,7 @@ body {
         text-align: center;
 
         padding: 40px 20px;
-        background: var(--alt-bg-colour);
+        background: var(--card-bg-colour);
         border-radius: 15px;
         max-width: 900px;
         margin-top: 50px;
@@ -303,8 +303,8 @@ body {
     .FMI a {
         display: inline-block;
         padding: 10px 20px;
-        background: black;
-        color: white;
+        background: var(--btn-bg-colour);
+        color: var(--btn-text-colour);
         font-weight: bold;
         text-decoration: none;
         border-radius: 5px;
@@ -312,7 +312,7 @@ body {
     }
 
     .FMI a:hover {
-        background: #333;
+        background: #2D2D2D;
     }
 
     /* Social Icons */
@@ -1408,7 +1408,7 @@ footer a:hover {
 }
 
 
-/* Contact Page Styling */
+/* CSS for Contact Page */
 
 .contact-wrapper {
     font-family: 'Poppins', sans-serif;
@@ -1416,6 +1416,7 @@ footer a:hover {
     color: var(--text-colour);
     padding: 50px 20px;
     text-align: center;
+    border: 1px solid gold;
 }
 
 /* Header Section */
@@ -1447,6 +1448,7 @@ footer a:hover {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border: #007bff 1px solid;
 }
 
 
@@ -1462,6 +1464,7 @@ footer a:hover {
     padding: 5px;
     justify-content: center;
     align-items: center;
+    border: purple 1px solid;
 }
 
 .contact-us-brand {
@@ -1493,6 +1496,7 @@ footer a:hover {
     flex: 1;
     min-width: 300px;
     padding-left: 20px;
+    border: #28a745 1px solid;
 }
 
 .contact-form h2 {
@@ -1506,9 +1510,10 @@ footer a:hover {
 }
 
 .input-box label {
+    text-align: left;
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .input-box input,
@@ -1535,6 +1540,7 @@ footer a:hover {
     color: var(--btn-text-colour);
     font-size: 1.2rem;
     border: none;
+    align-self: center;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
@@ -1700,15 +1706,16 @@ footer a:hover {
     }
 
     #cta {
-        text-align: cente r;
-        padding: 30px 20px;
+        text-align: center;
+        /* padding: 30px 20px; */
         background: #222;
         color: white;
+        height: 150px;
         max-height: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
         text-align: center;
     }
 
@@ -1751,7 +1758,7 @@ footer a:hover {
     }
 
     section {
-        min-height: 50vh;
+        min-height: 250px;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
