@@ -157,3 +157,7 @@ Route::get('/sustainability', function () {
 Route::get('/account-payments', function () {
     return view('pages.account-payments');
 });
+// temporary route for adeeb
+Route::get('/address-add', function () {
+    return view('pages.newaddresspage');
+});
