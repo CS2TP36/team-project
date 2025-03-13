@@ -131,7 +131,7 @@
                 <!--checks if a message has been set and if it has then it displays it-->
                 <div id="message">
                     <p>{{$message}}</p><!--displays the message-->
-                </div
+                </div>
             @endif
             @foreach($products as $product)
                 <div class="product-item">

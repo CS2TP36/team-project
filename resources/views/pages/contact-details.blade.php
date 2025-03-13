@@ -11,17 +11,17 @@
                 <h2>First Name</h2>
                 <input type="text" id="first-name-new" name="first-name" value="{{ $user['first_name'] }}" required></input>
                 <input type="hidden" id="first-name-old" value="{{ $user['first_name'] }}">
-                <div class="line-break"><br></div>
+                <div class="contact-line-break"><br></div>
 
                 <h2>Last Name</h2>
                 <input type="text" id="last-name-new" name="last-name" value="{{ $user['last_name'] }}" required></input>
                 <input type="hidden" id="last-name-old" value="{{ $user['last_name'] }}">
-                <div class="line-break"><br></div>
+                <div class="contact-line-break"><br></div>
 
                 <h2>Email</h2>
                 <input type="email" id="email-new" name="email" value="{{ $user['email'] }}" required></input>
                 <input type="hidden" id="email-old" value="{{ $user['email'] }}">
-                <div class="line-break"><br></div>
+                <div class="contact-line-break"><br></div>
 
                 <h2>Phone Number</h2>
                 <input type="text" id="phone-number-new" name="phone-number" value="{{ $user['phone_number'] }}" required></input>
