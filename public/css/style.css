@@ -2893,9 +2893,8 @@ button:hover {
     margin: 0 auto;
     padding: 20px;
 }
-    /* styling for header */
-
-  .accountpayments h1 {
+/* styling for header */
+.accountpayments h1 {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
