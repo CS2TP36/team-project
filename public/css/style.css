@@ -102,6 +102,7 @@ main {
     --border-color: #D5D5D5;
     --alt-border-color: gold;
     --box-shadow-color: gold;
+    --alt-bs-colour: rgba(0, 0, 0, 0.1);
     --subnavbar-bg-color: #F5F5F5;
     --text-banner-colour: #F5F5F5;
     --text-nav-colour: rgb(168 204 204);
@@ -111,15 +112,14 @@ main {
 
 .dark-mode {
     --bg-colour: #2D2D2D;
-    --alt-bg-colour: #1E1E1E;
     --text-colour: #F5F5F5;
     --btn-bg-colour: #4D4D4D;
-    --btn-text-colour: #F5F5F5;
     --btn-hover-colour: #1E1E1E;
-    --input-text-colour: #1E1E1E;
-    --border-color: #ddd;
+    /* --border-color: #ddd; */
     --alt-border-color: gold;
     --box-shadow-color: gold;
+    --alt-bs-colour: rgb(252, 252, 252);
+    --alt-bs-colour: rgb(252, 252, 252);
     --subnavbar-bg-color: #5D5D5D;
     --text-banner-colour: #1E1E1E;
     --text-nav-colour: #1E1E1E;
@@ -195,21 +195,12 @@ body {
 /* CSS for FAQ Page*/
 
 .FAQ {
-    background-color: var(--bg-colour);
-    color: var(--text-colour);
-    padding: 40px 20px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-
     h1 {
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 15px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: var(--text-colour);
     }
 
     .disclaimer {
@@ -230,8 +221,8 @@ body {
     .faq-item {
         background: var(--card-bg-colour);
         padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 10px var(--alt-bs-colour);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         border: 1px solid #ddd;
     }
