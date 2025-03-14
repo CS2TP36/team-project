@@ -814,7 +814,8 @@ body {
 
     .wishlist-details {
         max-width: 750px;
-        margin-right: 200px;
+        margin-left: 100px;
+        margin-right: 100px;
 
         .line-break {
             background-color: var(--border-color);
@@ -829,7 +830,7 @@ body {
             align-items: center;
             margin-bottom: 10px;;
 
-            .w-item-image {
+            .wishlist-image {
                 display: flex;
                 flex-direction: column;
                 margin-right: 20px;
@@ -852,8 +853,7 @@ body {
                 margin-right: 100px;
 
                 p {
-                    min-width: 320px;
-                    width: 350px;
+                    width: auto;
                     font-size: 1em;
                     line-height: 1.5;
                 }
@@ -869,6 +869,7 @@ body {
         }
     }
 }
+
 
 footer {
     background-color: var(--alt-bg-colour);
