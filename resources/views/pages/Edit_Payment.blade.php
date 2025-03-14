@@ -4,7 +4,7 @@
 <div class="edit-payment-container">
     <h2>Edit Payment Information</h2>
     <form id="paymentForm">
-        @csrf
+        
         <div class="form-group">
             <label for="cardNumber">Card Number</label>
             <input type="text" id="cardNumber" name="card_number" placeholder="Enter card number" required>
