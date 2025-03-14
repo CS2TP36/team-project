@@ -2,6 +2,7 @@
 @use(App\Http\Controllers\PreviousOrdersController)
 @use(Illuminate\Support\Facades\Auth)
 @use(App\Models\Shipping)
+@php($noFooter = true)
 @section("title", "Previous Orders")
 @section("content")
     <!-- main container -->
