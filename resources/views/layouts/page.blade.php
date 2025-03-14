@@ -20,6 +20,7 @@
         <!-- allows each page to add its own main content by overriding the content section. -->
         @yield('content')
     </main>
+    <!-- if you dont want a footer on a page, set noFooter to true in php near top -->
     @if (!isset($noFooter))
         <!-- utilises a consistent footer -->
         @include("reusables.footer")
