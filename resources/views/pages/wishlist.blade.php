@@ -18,7 +18,7 @@
                                 <button type="submit">Remove</button>
                             </form>
                         </div>
-                        <div class="item-details">
+                        <div class="w-item-details">
                             <p>{{ $item->product->name }}</p>
                             <p><strong>£{{ number_format($item->product->price * $item->quantity, 2) }}</strong></p>
                             <p>Size: {{ $item->size }}</p> <!-- Display size -->

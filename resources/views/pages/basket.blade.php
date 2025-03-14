@@ -22,7 +22,7 @@
                             </form>
                         </div>
                         <!-- Contains the product name, price and size -->
-                        <div class="item-details">
+                        <div class="b-item-details">
                             <p>{{ $item->product->name }}</p>
                             <p><strong>£{{ number_format($item->product->price * $item->quantity, 2) }}</strong></p>
                             <p>Size: {{ $item->size }}</p> <!-- Display size -->

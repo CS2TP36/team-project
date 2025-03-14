@@ -713,7 +713,7 @@ body {
                 }
             }
 
-            .item-details {
+            .b-item-details {
                 margin-right: 100px;
                 
                 p {
@@ -816,7 +816,7 @@ body {
             flex-direction: row;
             align-items: center;
             margin-bottom: 10px;;
-            
+
             .item-image {
                 display: flex;
                 flex-direction: column;
@@ -836,7 +836,7 @@ body {
                 }
             }
 
-            .item-details {
+            .w-item-details {
                 margin-right: 100px;
 
                 p {
