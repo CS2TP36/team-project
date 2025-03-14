@@ -126,7 +126,7 @@ main {
 }
 
 .dark-mode {
-    --bg-colour: #2D2D2D;
+    --bg-colour: #4d4d4d;
     --text-colour: #F5F5F5;
     --btn-bg-colour: #4D4D4D;
     --btn-border-colour: #1E1E1E;
@@ -2922,10 +2922,12 @@ footer a:hover {
     max-height: 420px;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    transition: color 0.3s ease-in, transform 0.3s ease-in;
 }
 
 .product-item:hover {
     opacity: 0.7;
+    transform: scale(1.05);
 }
 
 .product-details {
@@ -2977,7 +2979,7 @@ label {
 }
 
 .filter-btn {
-    background-color: var(--btn-bg-colour);
+    background-color: black;
     color: var(--btn-text-colour);
     border: none;
     padding: 10px 20px;
