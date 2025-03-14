@@ -700,7 +700,7 @@ body {
             align-items: center;
             margin-bottom: 10px;;
 
-            .item-image {
+            .b-item-image {
                 display: flex;
                 flex-direction: column;
                 margin-right: 20px;
@@ -817,7 +817,7 @@ body {
             align-items: center;
             margin-bottom: 10px;;
 
-            .item-image {
+            .w-item-image {
                 display: flex;
                 flex-direction: column;
                 margin-right: 20px;

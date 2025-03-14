@@ -12,7 +12,7 @@
                     <!-- Contains each basket item -->
                     <div class="basket-item">
                         <!-- Contains the Image of the item and the remove button -->
-                        <div class="item-image">
+                        <div class="b-item-image">
                             <img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}"></img>
 
                             <form action="{{ route('basket.remove', $item->id) }}" method="POST">

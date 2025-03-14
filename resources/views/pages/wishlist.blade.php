@@ -9,7 +9,7 @@
                 <div class="line-break"></div>
                 @forelse($wishlistItems as $item)
                     <div class="wishlist-item">
-                        <div class="item-image">
+                        <div class="w-item-image">
                             <img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}"></img>
 
                             <form action="{{ route('wishlist.remove', $item->id) }}" method="POST">
