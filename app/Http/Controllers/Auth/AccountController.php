@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Error;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use function Laravel\Prompts\select;
 
 class AccountController extends Controller
@@ -34,23 +36,30 @@ class AccountController extends Controller
             return back()->with('message', 'You are not logged in');
         }
         // validate the request
-        if (!$request->validate([
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
+        $request->validate([
+            'first-name' => 'required|string',
+            'last-name' => 'required|string',
             'email' => 'required|email',
             'phone-number' => 'required|string'
-        ])) {
-            return back()->with('error', $request->errors());
+        ]);
+
+        try {
+            DB::beginTransaction();
+            // update the user's details
+            $user = Auth::user();
+            $user['first_name'] = $request->input('first-name');
+            $user['last_name'] = $request->input('last-name');
+            $user['email'] = $request->input('email');
+            $user['phone_number'] = $request->input('phone-number');
+            $user->save();
+            // tell the user it was successful
+            DB::commit();
+            return back()->with('message', 'Your information has been updated');
+        } catch (Error $e) {
+            DB::rollBack();
+            // tell the user it was unsuccessful
+            return back()->with('error', $e->getMessage());
         }
-        // update the user's details
-        $user = Auth::user();
-        $user->first_name = $request->input('first_name');
-        $user->last_name = $request->input('last_name');
-        $user->email = $request->input('email');
-        $user->phone_number = $request->input('phone-number');
-        $user->save();
-        // tell the user it was successful
-        return back()->with('message', 'Your information has been updated');
     }
 
 }
