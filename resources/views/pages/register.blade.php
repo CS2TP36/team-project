@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <form id="signupForm" method="POST" action="{{ route('register.store') }}">
+        <form id="signupForm" method="POST" action="{{ route('register.store') }}" novalidate>
             @csrf <!-- Laravel CSRF protection -->
 
             <div class="form-group">
@@ -53,7 +53,7 @@
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required pattern="^\+44\d{10,13}$"
-                       placeholder="e.g., +44 1234 567890 (Needs to be UK)">
+                       placeholder="e.g., +441234567890 (Needs to be UK, formatted like the example)">
                 <span class="error-message"></span>
             </div>
 
@@ -61,8 +61,9 @@
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" value="{{ old('address') }}" required>
                 <span id="addressError" class="error"></span>
-
-                <button type="submit">Sign Up</button>
+            </div>
+            
+            <button type="submit">Sign Up</button>
         </form>
     </div>
 @endsection

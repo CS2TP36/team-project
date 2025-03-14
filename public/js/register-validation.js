@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('signupForm');
 
+    // This Maps input field ID's to the corresponding DOM elements allowing for easy access to input fields for valifation or data retrieval
     const fields = {
         firstName: document.getElementById('firstName'),
         lastName: document.getElementById('lastName'),
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         address: document.getElementById('address'),
     };
 
+    // This Maps input field ID's to the names given enhancing error messages and user feedback
     const fieldNames = {
         firstName: 'First Name',
         lastName: 'Last Name',
@@ -26,16 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let errorSpan = inputElement.parentElement.querySelector('.error-message');
         if (!errorSpan) {
             errorSpan = document.createElement('span');
-            errorSpan.className = 'error-message';
+            errorSpan.className = 'error-message active';
             inputElement.parentElement.appendChild(errorSpan);
         }
         errorSpan.textContent = message;
+        errorSpan.classList.add('active'); 
         inputElement.classList.add('error');
     };
-
+    
     const clearError = (inputElement) => {
         const errorSpan = inputElement.parentElement.querySelector('.error-message');
-        if (errorSpan) errorSpan.remove();
+        if (errorSpan) {
+            errorSpan.textContent = "";
+            errorSpan.classList.remove('active'); 
+        }
         inputElement.classList.remove('error');
     };
 
@@ -87,14 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Real-time validation
     Object.values(fields).forEach((field) => {
-        field.addEventListener('input', () => clearError(field));
+        field.addEventListener('input', () => {
+            clearError(field);
+        });
     });
 
     // Form submission handling
     form.addEventListener('submit', (event) => {
         if (!validateFields()) {
             event.preventDefault();
-            alert('Please fix the errors before submitting.');
         }
     });
 });
