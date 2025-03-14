@@ -3462,7 +3462,7 @@ label {
     }
 
     .container {
-        background-color: var(--alt-bg-colour);
+        background-color: var(--bg-colour);
         max-width: 1200px;
         margin: 0 auto;
         margin-top: 15px;
