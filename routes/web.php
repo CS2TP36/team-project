@@ -136,6 +136,7 @@ Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPrevi
 // stuff for getting the various account pages defined via accountcontroller
 Route::get('/account', [AccountController::class, 'show'])->name('account.page');
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
+Route::post('/account/update', [AccountController::class, 'update'])->name('account.update');
 
 // address routes
 Route::get('/address/add', [AddressStorageController::class, 'showAdd']);

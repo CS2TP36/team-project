@@ -6,7 +6,7 @@
         <h1>Your Details</h1>
         <div class="contact-details-form">
             <!-- Needs a controller -->
-            <form id="details-form">
+            <form id="details-form" method="post" action="{{ route('account.update') }}">
                 @csrf
                 <h2>First Name</h2>
                 <input type="text" id="first-name-new" name="first-name" value="{{ $user['first_name'] }}"

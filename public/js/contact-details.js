@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let lastNameChanged = document.getElementById("last-name-new").value !== document.getElementById("last-name-old").value;
         let emailChanged = document.getElementById("email-new").value !== document.getElementById("email-old").value;
         let phoneChanged = document.getElementById("phone-number-new").value !== document.getElementById("phone-number-old").value;
+        // only submit the form if there have been changes
         if (firstNameChanged || lastNameChanged || emailChanged || phoneChanged) {
             form.submit();
         } else {
