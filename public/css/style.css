@@ -146,6 +146,17 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-colour);
     color: var(--text-colour);
+
+    button {
+        border: none;
+        cursor: pointer;
+        background-color: var(--btn-bg-colour);
+        color: var(--btn-text-colour);
+    }
+
+    button:hover {
+        background-color: var(--alt-bh-colour);
+    }
 }
 
 /*CSS for Account Page*/
@@ -250,7 +261,6 @@ body {
         outline: none;
     }
 
-    
     .faq-question:hover {
         opacity: 0.7;
     }
@@ -413,16 +423,9 @@ body {
             width: 80px;
             padding: 10px;
             font-size: 1em;
-            border: 1px solid var(--border-color);
-            background-color: var(--btn-bg-colour);
-            color: var(--btn-text-colour);
             cursor: pointer;
             margin-top: 10px;
             margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: var(--alt-bh-colour);
         }
 
         .contact-line-break {
@@ -726,18 +729,9 @@ body {
             button {
                 width: 65px;
                 padding: 5px;
-                border: none;
-                background-color: var(--btn-bg-colour);
-                color: var(--btn-text-colour);
                 cursor: pointer;
                 margin-bottom: 10px;
             }
-
-            button:hover {
-                background-color: var(--alt-bh-colour);
-            }
-
-            
         }
 
         .line-break {
@@ -756,15 +750,8 @@ body {
         button {
             width: 250px;
             padding: 10px;
-            border: none;
-            background-color: var(--btn-bg-colour);
-            color: var(--btn-text-colour);
             cursor: pointer;
             margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: var(--alt-bh-colour);
         }
 
         a {
@@ -864,15 +851,8 @@ body {
                 button {
                     width: 65px;
                     padding: 5px;
-                    border: 1px solid var(--btn-bg-colour);
-                    background-color: var(--btn-bg-colour);
-                    color: var(--btn-text-colour);
                     cursor: pointer;
                     margin-bottom: 10px;
-                }
-
-                button:hover {
-                    background-color: var(--btn-hover-colour);
                 }
             }
 
@@ -896,15 +876,8 @@ body {
                 button {
                     width: 100px;
                     padding: 5px;
-                    border: 1px solid var(--btn-bg-colour);
-                    background-color: var(--btn-bg-colour);
-                    color: var(--btn-text-colour);
                     cursor: pointer;
                     margin-bottom: 10px;
-                }
-
-                button:hover {
-                    background-color: var(--btn-hover-colour);
                 }
             }
         }
@@ -1991,23 +1964,6 @@ footer a:hover {
         color: white;
         transform: scale(1.0);
     }
-
-    /* button {
-        font-size: 18px;
-        width: 100px;
-        height: 50px;
-        border: 1px solid black;
-        background-color: #4D4D4D;
-        color: white;
-        cursor: pointer;
-        margin-bottom: 10px;
-        border-radius: 8px;
-    } */
-}
-
-
-button:hover {
-    background-color: #2D2D2D;
 }
 
 .footer-title {
@@ -2638,14 +2594,7 @@ button:hover {
                 width: 100%;
                 min-width: 320px;
                 padding: 10px;
-                border: none;
-                background-color: var(--btn-bg-colour);
-                color: var(--btn-text-colour);
                 cursor: pointer;
-            }
-    
-            button:hover {
-                background-color: var(--alt-bh-colour);
             }
 
             a {
@@ -3296,40 +3245,22 @@ label {
     .size-selection {
         max-width: 50px;
         padding: 10px;
-        background-color: var(--btn-bg-colour);
-        color: var(--btn-text-colour);
 
         button {
             width: 50px;
             height: 50px;
             padding: 10px;
-            border: 1px solid black;
             cursor: pointer;
             margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: var(--btn-hover-colour);
         }
     }
 
     .purchase-options {
-        label {
-            color: var(--text-colour);
-        }
-
         button {
             width: 500px;
             padding: 10px;
-            border: 1px solid black;
-            background-color: var(--btn-bg-colour);
-            color: var(--btn-text-colour);
             cursor: pointer;
             margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: var(--btn-hover-colour);
         }
     }
 
@@ -3445,10 +3376,6 @@ label {
                 cursor: pointer;
                 margin-bottom: 10px;
             }
-
-            button:hover {
-                background-color: var(--btn-hover-colour);
-            }
         }
 
         .purchase-options {
@@ -3507,15 +3434,8 @@ label {
         width: 100%;
         max-width: 522px;
         padding: 10px;
-        border: 1px solid black;
-        background-color: black;
-        color: white;
         cursor: pointer;
         margin-bottom: 10px;
-    }
-
-    button:hover {
-        background-color: #4D4D4D;
     }
 
     a {
@@ -3591,15 +3511,8 @@ label {
         width: 80px;
         padding: 10px;
         font-size: 1em;
-        border: 1px solid black;
-        background-color: var(--btn-bg-colour);
-        color: var(--btn-text-colour);
         cursor: pointer;
         margin-bottom: 10px;
-    }
-
-    button:hover {
-        background-color: var(--btn-hover-colour);
     }
 
     .rating {
@@ -3844,12 +3757,7 @@ label {
     border-radius: 5px;
 }
 
-/* submit button styling*/
 .forgot-password .forgot-password-form button {
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
     min-width: 400px;
     width: 100%;
     padding: 10px;
@@ -3859,11 +3767,6 @@ label {
     width: auto;
     text-align: center;
     border-radius: 5px;
-}
-
-/*hover effect*/
-.forgot-password .forgot-password-form button:hover {
-    background-color: #4D4D4D;
 }
 
 #sponsor-banner {
