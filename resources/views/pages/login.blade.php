@@ -4,10 +4,10 @@
 @endsection
 @section('content')
     <div class="login">
-        <h2>Login</h2>
         <!-- Split into existing and new customers to keep code organised-->
         <div class="login-sections">
             <div class="existing-customers">
+                <h2>Login</h2>
                 <h3>Existing Customers</h3>
 
                 @if ($errors->any())

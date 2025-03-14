@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="forgot-password">
-        <h1>Have you forgotten your password?</h1>
+        <h2>Have you forgotten your password?</h2>
 
         <div class="forgot-password-form">
             <form method="POST" action="{{ route('forgot-pass.change') }}">

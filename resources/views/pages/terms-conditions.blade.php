@@ -6,7 +6,7 @@
 @section('content')
     <div class="terms-container">
         <h1>TERMS AND CONDITIONS</h1>
-        <h2 class="disclaimer fade-in">THIS WEBSITE IS NOT REAL, ITS FOR TESTING PURPOSES ANYTHING YOU WILL ORDER OR
+        <h2 id="disclaimer" class="fade-in">THIS WEBSITE IS NOT REAL, ITS FOR TESTING PURPOSES ANYTHING YOU WILL ORDER OR
             PLACE WILL NOT ARRIVE AND TRANSACTIONS SHOULD NOT BE TAKEN</h2>
 
         <div class="fade-in">
