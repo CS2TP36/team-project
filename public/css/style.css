@@ -520,14 +520,7 @@ body {
             min-width: 320px;
             padding: 10px;
             font-size: 1em;
-            border: 1px solid var(--border-color);
-            background-color: var(--btn-bg-colour);
-            color: var(--btn-text-colour);
             cursor: pointer;
-        }
-
-        button:hover {
-            background-color: var(--btn-hover-colour);
         }
 
         .error-messages ul li {
@@ -3306,62 +3299,6 @@ label {
         }
     }
 }
-
-/*CSS for Forgot Password Page*/
-
-.reset {
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 300px;
-    padding-left: 25px;
-    padding-right: 25px;
-
-    h2 {
-        text-align: left;
-        margin-left: 5px;
-        margin-bottom: 5px;
-    }
-
-    .reset-sections {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .existing-customers {
-        flex: 1;
-        max-width: 650px;
-        padding: 5px;
-
-        label {
-            display: block;
-        }
-
-        margin-bottom: 10px;
-    }
-
-    input {
-        width: 100%;
-        max-width: 500px;
-        border: 1px solid black;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    button {
-        width: 100%;
-        max-width: 522px;
-        padding: 10px;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
-
-    a {
-        text-decoration: underline;
-        text-align: left;
-        color: black;
-    }
-}
-
 /* CSS for Review Page*/
 
 .review {
@@ -3624,63 +3561,55 @@ label {
     }
 }
 
-/* CSS for forgotten password page */
-/* main styling for the page */
+/*CSS for Forgot Password Page*/
 .forgot-password {
-    font-family: Arial, Helvetica, sans-serif;
     max-width: 600px;
     padding: 25px;
-    flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 160px;
-    display: flex
-}
 
-/* stylign for heading*/
-.forgot-password h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .forgot-password-form {
+        width: 100%;
+        max-width: 450px;
+        align-items: center;
+        margin: auto;
+    } 
+    
+    .forgot-pass-label {
+        margin-bottom: 15px;
+    }
 
-}
+    form input {
+        width: 95.5%;
+        min-width: 320px;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
 
-/* styling for the forms*/
-.forgot-password .forgot-password-form {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-}
+    form input[type="text"], form input[type="email"] {
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        /*Disables default browser outline on focus*/
+        outline: none;
+    }
 
-/*label stylng*/
-.forgot-password .forgot-password-form label {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 5px;
-}
+    form input[type="text"]:focus, form input[type="email"]:focus {
+        box-shadow: 0 0 10px var(--box-shadow-color);
+        border-color: var(--alt-border-color);
+    }
 
-/*input text styling*/
-.forgot-password .forgot-password-form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid black;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-.forgot-password .forgot-password-form button {
-    min-width: 400px;
-    width: 100%;
-    padding: 10px;
-    margin: 15px auto;
-    display: flex;
-    justify-content: center;
-    width: auto;
-    text-align: center;
-    border-radius: 5px;
+    button {
+        width: 100%;
+        min-width: 320px;
+        padding: 10px;
+        font-size: 1em;
+        cursor: pointer;
+    }
 }
 
 #sponsor-banner {
