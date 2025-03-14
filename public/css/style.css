@@ -1,5 +1,4 @@
 /* styling for the container*/
-
 html,
 body {
     min-height: 100%;
@@ -10,6 +9,20 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
+
+    button {
+        border: none;
+        cursor: pointer;
+        background-color: var(--btn-bg-colour);
+        color: var(--btn-text-colour);
+    }
+
+    button:hover {
+        background-color: var(--alt-bh-colour);
+    }
 }
 
 main {
