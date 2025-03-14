@@ -698,6 +698,7 @@ body {
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin-bottom: 10px;;
 
             .item-image {
                 display: flex;
@@ -814,7 +815,8 @@ body {
             display: flex;
             flex-direction: row;
             align-items: center;
-
+            margin-bottom: 10px;;
+            
             .item-image {
                 display: flex;
                 flex-direction: column;
