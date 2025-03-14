@@ -4,10 +4,10 @@
 @endsection
 @section('content')
     <div class="login">
-        <h2>Login</h2>
         <!-- Split into existing and new customers to keep code organised-->
         <div class="login-sections">
             <div class="existing-customers">
+                <h2>Login</h2>
                 <h3>Existing Customers</h3>
 
                 @if ($errors->any())
@@ -28,17 +28,13 @@
 
                 <form method="POST" action="{{ route('login.authenticate') }}">
                     @csrf
-
-                    <label for="email">Email *</label><br>
+                    <div class="login-label"><label for="email">Email *</label><br></div>
                     <input type="email" id="email" name="email" value="{{ old('email') }}" required/><br>
-
-                    <label for="password">Password *</label><br>
+                    <div class="login-label"><label for="password">Password *</label><br></div>
                     <input type="password" id="password" name="password" required/><br>
-                    <input type="hidden" name="redirect" id="redirect"
-                           value="@if(isset($redirect)){{$redirect}}@endif"/>
+                    <input type="hidden" name="redirect" id="redirect" value="@if(isset($redirect)){{$redirect}}@endif"/>
                     <button type="submit">Sign In</button>
                 </form>
-                <!-- TODO: Added this back in for testing may need css idk -->
                 <a href="/forgot-pass"><p>Forgotten your password?</p></a>
             </div>
 
@@ -48,11 +44,9 @@
                     <p>✓ Manage your orders and preferences.</p>
                     <p>✓ Access your personal wishlist.</p>
                     <p>✓ Basket saves added items.</p>
-                    <p>✓ Instant access to your acount.</p>
-                    <a href="/register">
-                        <button type="button">Register today</button>
-                    </a>
+                    <p>✓ Instant access to your acount.</p>    
                 </form>
+                <a href="/register">Register today</a>
             </div>
         </div>
     </div>

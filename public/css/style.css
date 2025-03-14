@@ -474,7 +474,7 @@ body {
     }
 }
 
-/* CSS for change password page */
+/* CSS for Change Password page */
 .change {
     padding: 15px;
 
@@ -539,6 +539,7 @@ body {
     }
 }
 
+/* Media Query for Change Password Page */
 @media (max-width: 768px) {
     .account-page {
         min-width: 200px;
@@ -2611,73 +2612,100 @@ button:hover {
 
 
 /* CSS for Login Page */
-
 .login {
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 1400px;
-    padding-left: 25px;
-    padding-right: 25px;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
 
-    h2 {
-        text-align: left;
-        margin-left: 5px;
-        margin-bottom: 5px;
-        padding-top: 15px;
-    }
-}
+    .login-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 1em;
 
-.login-sections {
-    display: flex;
-    flex-direction: row;
-}
+        .existing-customers {
+            flex: 1;
+            min-width: 500px;
+            max-width: 500px;
+            padding: 5px;
 
-.existing-customers,
-.new-customers {
-    flex: 1;
-    max-width: 650px;
-    padding: 5px;
+            .login-label {
+                margin-bottom: 15px;
+            }
 
-    /* Need to sort out label spacing */
+            form input {
+                width: 95.5%;
+                min-width: 320px;
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
 
-    input {
-        width: 100%;
-        max-width: 500px;
-        color: var(--input-text-colour);
-        border: 1px solid black;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+            form input[type="email"], input[type="password"] {
+                border: 1px solid var(--border-color);
+                padding: 10px;
+                /*Disables default browser outline on focus*/
+                outline: none;
+            }
 
-    button {
-        width: 100%;
-        max-width: 522px;
-        padding: 10px;
-        border: 1px solid black;
-        background-color: var(--btn-bg-colour);
-        color: var(--btn-text-colour);
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
+            form input[type="email"]:focus, input[type="password"]:focus {
+                box-shadow: 0 0 10px var(--alt-bs-colour);
+                border-color: var(--border-color);
+            }
 
-    button:hover {
-        background-color: var(--btn-hover-colour);
-    }
+            button {
+                width: 100%;
+                min-width: 320px;
+                padding: 10px;
+                border: 1px solid var(--btn-border-color);
+                background-color: var(--btn-bg-colour);
+                color: var(--btn-text-colour);
+                cursor: pointer;
+            }
+    
+            button:hover {
+                background-color: var(--alt-bh-colour);
+            }
 
-    a {
-        text-decoration: underline;
-        text-align: left;
-        color: var(--text-colour);
-    }
-}
+            a {
+                text-decoration: underline;
+                text-align: left;
+                color: var(--text-colour);
+            }
+        }
 
-.new-customers {
-    margin-left: 35px;
-    margin-bottom: 10px;
+        .new-customers {
+            flex: 1;
+            max-width: 500px;
+            max-height: 250px;
+            margin-top: 50px;
+            margin-left: 200px;
+            padding: 5px;
+            
+            form {
+                line-height: 1;
+                margin-bottom: 5px;
+                
+                p {
+                    margin-left: 10px;
+                }
+            }
 
-    p {
-        margin-left: 10px;
+            a {
+                display: inline-block;
+                font-size: 0.8em;
+                width: 95.5%;
+                text-align: center;
+                padding: 8px 15px;
+                background: var(--btn-bg-colour);
+                color: var(--btn-text-colour);  
+                text-decoration: none;
+                border: 1px solid var(--btn-border-color);
+            }
+        
+            a:hover {
+                background: var(--alt-bh-colour);
+            }
+        }
     }
 }
 
