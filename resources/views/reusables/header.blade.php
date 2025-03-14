@@ -1,3 +1,4 @@
+@section('script', 'js/featured-scroll.js')
 <header>
     <nav class="navbar"> <!--Creates the navbar class creating a container-->
         <div class="navbardiv"><!--Is the div which will contain all the items that are present on the logo-->
@@ -34,3 +35,4 @@
         @endif
     </div>
 </header>
+
