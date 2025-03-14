@@ -117,7 +117,7 @@ main {
     --border-color: #D5D5D5;
     --alt-border-color: gold;
     --box-shadow-color: gold;
-    --alt-bs-colour: rgba(0, 0, 0, 0.5);
+    --alt-bs-colour: rgba(0, 0, 0, 0.1);
     --subnavbar-bg-color: #F5F5F5;
     --text-banner-colour: #F5F5F5;
     --text-nav-colour: rgb(168 204 204);
@@ -135,7 +135,7 @@ main {
     --border-color: #ddd;
     --alt-border-color: gold;
     --box-shadow-color: gold;
-    --alt-bs-colour: rgba(252, 252, 252, 0.5);
+    --alt-bs-colour: rgba(252, 252, 252, 0.1);
     --subnavbar-bg-color: #5D5D5D;
     --text-banner-colour: #1E1E1E;
     --text-nav-colour: #1E1E1E;
@@ -1135,7 +1135,7 @@ footer a:hover {
 /* CSS for careers page */
 .careers {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: var(--bg-colour);
     margin: 0;
     padding: 0;
 
@@ -1147,12 +1147,10 @@ footer a:hover {
     }
 
     h2 {
-        color: #333;
         margin-bottom: 10px;
     }
 
     h3 {
-        color: #444;
         margin-top: 20px;
     }
 
@@ -1161,18 +1159,18 @@ footer a:hover {
     }
 
     .job-card {
-        border: 1px solid #ddd;
+        border: 1px solid var(--border-color);
         padding: 15px;
         margin: 10px 0;
         border-radius: 8px;
-        background-color: #fff;
+        background-color: var(--card-bg-colour);
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease-in-out;
     }
 
     .job-card:hover {
         transform: scale(1.02);
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 8px var(--alt-bh-colour);
     }
 
     ul {
@@ -3781,13 +3779,13 @@ label {
         width: 100%;
         padding: 10px;
         margin-top: 5px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--border-color);
         border-radius: 5px;
         font-size: 16px;
     }
 
     input[type="text"]:focus {
-        border-color: #007bff;
+        border-color: var(--alt-border-color);
         outline: none;
     }
 
