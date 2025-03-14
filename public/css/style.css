@@ -1657,10 +1657,12 @@ footer a:hover {
 
     .user-logo {
         height: 2.2rem;
+        transition:  transform 0.2s ease-in;
     }
 
     .user-logo:hover {
         opacity: 0.7;
+        transform: scale(1.1);
     }
 
 
@@ -1712,6 +1714,7 @@ footer a:hover {
             font-weight: bold;
             list-style: none;
             text-decoration: none;
+            transition: color 0.2s ease-in, transform 0.2s ease-in;
         }
 
         /*Hover for Men and Women*/
@@ -1719,7 +1722,7 @@ footer a:hover {
         a:hover {
             text-decoration: underline;
             color: var(--text-nav-colour);
-            transform: scale(1.0);
+            transform: scale(1.03);
         }
     }
 
@@ -2027,6 +2030,7 @@ footer a:hover {
         text-decoration: none;
         border-radius: 8px;
         margin-bottom: 20px;
+        transition: color 0.2s ease-in, transform 0.2s ease-in;
 
     }
 
@@ -2035,6 +2039,7 @@ footer a:hover {
 #home-slogan a:hover {
     background-color: #88a4ad;
     color: black;
+    transform: scale(1.03);
 }
 
 #home-slogan p {
@@ -2114,13 +2119,14 @@ footer a:hover {
     color: rgb(0, 0, 0);
     background-color: #d5d4d4;
     flex-wrap: wrap;
-    transition: background-color 0.4s;
+    transition: background-color 0.4s, transform 0.4s;
 
 
 }
 
 #select-catogeries a:hover {
     opacity: 0.7;
+    transform: scale(1.05);
 
 }
 
@@ -2166,20 +2172,25 @@ footer a:hover {
     padding: 20px;
     flex: none;
     padding-top: 0;
+    transition: color 0.2s ease-in, transform 0.2s ease-in;
 
 
 }
 
 .featured-item:hover {
     opacity: 0.7;
+    transform: scale(1.05);
+
 }
 
 .featured-link {
     list-style: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
-
+    
 }
+
+
 
 .featured-details {
     font-size: 15px;
@@ -2205,6 +2216,10 @@ footer a:hover {
     background-color: #D5D5D5;
     border-radius: 5px;
 
+        a:hover{
+            transform: scale(1.05);
+        }
+
 
     img {
         height: 50px;
@@ -2215,11 +2230,21 @@ footer a:hover {
 .next-button {
     margin-right: 120px;
     padding-left: 20px;
+    transition: color 0.2s ease-in, transform 0.2s ease-in;
 }
+
+.next-button:hover {
+    transform: scale(1.03);
+}
+
 
 .back-button {
     padding-right: 20px;
-    margin-left: 120px
+    margin-left: 120px;
+    transition: color 0.2s ease-in, transform 0.2s ease-in;
+}
+.back-button:hover {
+    transform: scale(1.03);
 }
 
 #parallax-container {
@@ -2253,6 +2278,7 @@ footer a:hover {
     left: 50%;
     background-color: rgba(62, 71, 102, 0.377);
     padding-bottom: 60px;
+    
 }
 
 #parallax-info h3 {
@@ -2282,6 +2308,8 @@ footer a:hover {
 #parallax-info a:hover {
     background-color: #88a4ad;
     color: rgb(0, 0, 0);
+
+
 }
 
 #home-gurantee-container {
