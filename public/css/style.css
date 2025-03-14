@@ -737,12 +737,14 @@ body {
                 background-color: var(--alt-bh-colour);
             }
 
-            .line-break {
-                background-color: var(--border-color);
-                width: 100%;
-                height: 2px;
-                margin-bottom: 20px;
-            }
+            
+        }
+
+        .line-break {
+            background-color: var(--border-color);
+            width: 100%;
+            height: 2px;
+            margin-bottom: 20px;
         }
     }
 
