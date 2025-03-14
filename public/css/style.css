@@ -117,7 +117,7 @@ main {
     --border-color: #D5D5D5;
     --alt-border-color: gold;
     --box-shadow-color: gold;
-    --alt-bs-colour: rgba(0, 0, 0, 0.1);
+    --alt-bs-colour: rgba(0, 0, 0, 0.5);
     --subnavbar-bg-color: #F5F5F5;
     --text-banner-colour: #F5F5F5;
     --text-nav-colour: rgb(168 204 204);
@@ -135,7 +135,7 @@ main {
     --border-color: #ddd;
     --alt-border-color: gold;
     --box-shadow-color: gold;
-    --alt-bs-colour: rgba(252, 252, 252, 0.1);
+    --alt-bs-colour: rgba(252, 252, 252, 0.5);
     --subnavbar-bg-color: #5D5D5D;
     --text-banner-colour: #1E1E1E;
     --text-nav-colour: #1E1E1E;
@@ -2555,7 +2555,8 @@ footer a:hover {
                 font-size: 0.8em;
                 width: 95.5%;
                 text-align: center;
-                padding: 8px 15px;
+                padding: 10px;
+                /* padding: 8px 15px; */
                 background: var(--btn-bg-colour);
                 color: var(--btn-text-colour);
                 text-decoration: none;
@@ -3504,9 +3505,10 @@ label {
     .content-section {
         background-color: var(--bg-colour);
         padding: 25px 30px;
+        border: var(--border-color);
         border-radius: 8px;
         margin: 20px auto;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 12px var(--alt-bs-colour);
     }
 
     /* Section Heading */
