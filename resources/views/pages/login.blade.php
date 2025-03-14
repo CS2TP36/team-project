@@ -49,9 +49,7 @@
                     <p>✓ Access your personal wishlist.</p>
                     <p>✓ Basket saves added items.</p>
                     <p>✓ Instant access to your acount.</p>
-                    <a href="/register">
-                        <button type="button">Register today</button>
-                    </a>
+                    <a href="/register">Register today</a>
                 </form>
             </div>
         </div>
