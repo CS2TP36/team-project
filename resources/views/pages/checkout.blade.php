@@ -53,13 +53,11 @@
                         <legend>Payment Details</legend>
                         <div class="form-group">
                             <label for="card-name">Name on Card</label>
-                            <input type="text" id="card-name" name="card_name" placeholder="Input Name on Card"
-                                   required>
+                            <input type="text" id="card-name" name="card_name" placeholder="Input Name on Card" required>
                         </div>
                         <div class="form-group">
                             <label for="card-number">Card Number</label>
-                            <input type="text" id="card-number" name="card_number" placeholder="1111-2222-3333-4444"
-                                   required>
+                            <input type="text" id="card-number" name="card_number" placeholder="1111-2222-3333-4444" required>
                         </div>
                         <div class="form-group">
                             <label for="expiry-date">Expiry Date</label>
