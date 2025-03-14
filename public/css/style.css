@@ -479,11 +479,11 @@ body {
     padding: 15px;
 
     .reset-sections {
-        width: 33vw;
-        min-width: 500px;
-        max-width: 600px;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
         margin-bottom: 20px;
+        align-items: center;
+        margin: auto;
 
         h2 {
             text-align: center;
@@ -2600,14 +2600,14 @@ button:hover {
 
     .login-sections {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         margin: 0 auto;
         font-size: 1em;
+        gap: 150px;
 
         .existing-customers {
             flex: 1;
-            min-width: 500px;
             max-width: 500px;
             padding: 5px;
 
@@ -2660,7 +2660,6 @@ button:hover {
             max-width: 500px;
             max-height: 250px;
             margin-top: 50px;
-            margin-left: 200px;
             padding: 5px;
 
             form {
@@ -2714,9 +2713,7 @@ button:hover {
         }
     }
 
-    .new-customers {
-        margin-left: 0;
-    }
+    
 
 }
 
