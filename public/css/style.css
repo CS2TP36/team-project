@@ -245,6 +245,7 @@ body {
     }
 
     /* FAQ Question */
+
     .faq-question {
         width: 100%;
         padding: 15px;
@@ -270,6 +271,7 @@ body {
     }
 
     /* FAQ Answer */
+
     .faq-answer {
         display: none;
         padding: 15px;
@@ -287,6 +289,7 @@ body {
     }
 
     /* Links Inside FAQ */
+
     .faq-item a {
         display: inline-block;
         margin-top: 10px;
@@ -303,6 +306,7 @@ body {
     }
 
     /* "If This Has Not Helped" Section */
+
     .FMI {
         text-align: center;
         padding: 40px 20px;
@@ -327,6 +331,7 @@ body {
     }
 
     /* Contact Link */
+
     #contact-link {
         display: inline-block;
         padding: 10px 20px;
@@ -342,6 +347,7 @@ body {
     }
 
     /* Social Icons */
+
     ul {
         display: flex;
         padding: 0;
@@ -1787,7 +1793,6 @@ footer a:hover {
             margin: 0;
 
 
-
             a {
                 color: white;
                 font-size: 13px;
@@ -1967,7 +1972,6 @@ footer a:hover {
 }
 
 
-
 #text-banner {
     position: absolute;
     left: 10%;
@@ -1982,7 +1986,6 @@ footer a:hover {
 
 
 /*Hover for Shop Now, Colour needs amending*/
-
 
 
 #text-banner a:hover {
@@ -2573,7 +2576,6 @@ footer a:hover {
     }
 
 
-
 }
 
 /*CSS for your addresses page*/
@@ -2584,6 +2586,7 @@ footer a:hover {
     margin: 0 auto;
     padding: 20px;
 }
+
 /* styling for header */
 
 .accountaddresses h1 {
@@ -2665,6 +2668,7 @@ footer a:hover {
     margin: 0 auto;
     padding: 20px;
 }
+
 /* styling for header */
 .accountpayments h1 {
     font-size: 24px;
@@ -2681,7 +2685,7 @@ footer a:hover {
 }
 
 /*styling of add method cards*/
-.add-payment{
+.add-payment {
     color: #444;
     font-size: 18px;
     text-align: center;
@@ -2821,9 +2825,6 @@ footer a:hover {
 }
 
 /*CSS for the Product Lists page*/
-
-
-
 
 
 #product-text-banner {
@@ -2970,7 +2971,6 @@ label {
     }
 
 }
-
 
 
 @media (max-width: 1340px) {
@@ -3299,6 +3299,7 @@ label {
         }
     }
 }
+
 /* CSS for Review Page*/
 
 .review {
@@ -3717,7 +3718,7 @@ label {
     color: #000;
 }
 
-#sponsor-parallax-info{
+#sponsor-parallax-info {
     text-align: left;
     position: absolute;
     transform: translateX(-50%);
@@ -3812,7 +3813,6 @@ label {
         opacity: 0.8;
     }
 }
-
 
 
 /*Sustainability Page CSS*/
@@ -3995,7 +3995,7 @@ label {
     }
 }
 
-.Edit_Payment{
+.Edit_Payment {
     .payment-container {
         max-width: 600px;
         margin: 0 auto;
@@ -4021,5 +4021,119 @@ label {
         padding: 10px 15px;
         border: none;
         cursor: pointer;
+    }
+}
+
+/*adeebs stuff from wherever*/
+.put-this-in-a-class {
+    .payment-container {
+        /* my sizing */
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        color: #000;
+
+        /* Border & background  */
+        background-color: #ffffff;
+        border: 1px solid #dedada;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .payment-label {
+        display: block;
+        margin: 20px 0 5px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .payment-input {
+        width: 50%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #999999;
+        border-radius: 4px;
+        outline: none;
+    }
+
+
+    .card-logos {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0 5px;
+        flex-wrap: wrap;
+    }
+
+
+    .card-logos img {
+        height: 30px;
+        width: auto;
+        object-fit: contain;
+    }
+
+
+    .card-type-text {
+        font-size: 14px;
+        color: #787575;
+        margin-bottom: 20px;
+    }
+
+
+    .expiry-example,
+    .cvc-info {
+        font-size: 14px;
+        color: #666666;
+        margin-top: 5px;
+    }
+
+    .expiry-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .expiry-field {
+        max-width: 10%;
+    }
+
+    .expiry-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        border: 1px solid #999999;
+        border-radius: 4px;
+        outline: none;
+    }
+
+
+    .cvc-input {
+        max-width: 80px;
+    }
+
+    .changes-submit-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 22px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #0e0d0d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .changes-submit-btn:hover {
+        background-color: #0f0e0e;
     }
 }
