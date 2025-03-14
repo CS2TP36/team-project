@@ -172,3 +172,6 @@ Route::get('/address-add', function () {
 Route::get('/payment-add', function () {
     return view('pages.newpaymentpage');
 });
+Route::get('/payment-edit', function () {
+    return view('pages.Edit_Payment');
+});

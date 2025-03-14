@@ -3995,12 +3995,12 @@ label {
     }
 }
 
-.Edit_Payment {
-    .payment-container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+/* CSS for the Edit Payment Method page */
+.edit-payment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
 
     .form-group {
         margin-bottom: 15px;
