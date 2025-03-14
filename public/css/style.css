@@ -284,7 +284,7 @@ body {
         background: var(--btn-bg-colour);
         color: var(--btn-text-colour);  
         text-decoration: none;
-        border: 1px solid var(--btn-border-color);
+        border: none;
         border-radius: 5px;
     }
 
@@ -675,42 +675,19 @@ body {
     transform: scale(1.05);
 }
 
-/* CSS for Basket Page*/
-.basket {
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-colour);
-    color: var(--text-colour);
-    /* border: 1px solid purple; */
-}
-
+/* CSS for Basket Page */
 .basket-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 auto;
-    padding: 5px;
-    /* border: 1px solid pink; */
 
     .basket-details {
-        max-width: 750px;
         margin-right: 200px;
-        /* border: 1px solid orangered; */
-
-        .line-break {
-            background-color: var(--text-colour);
-            width: 100%;
-            height: 2px;
-            margin-bottom: 20px;
-        }
 
         .basket-item {
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin: 0;
-            padding: 0;
 
             .item-image {
                 display: flex;
@@ -718,7 +695,6 @@ body {
                 margin-right: 20px;
                 align-items: center;
                 justify-content: center;
-                /* border: 1px solid lightblue; */
 
                 img {
                     width: 100px;
@@ -727,13 +703,7 @@ body {
             }
 
             .item-details {
-                display: flex;
-                flex-direction: column;
-                align-items: left;
-                line-height: 0.5;
                 margin-right: 100px;
-
-                /* border: 1px solid lightgreen; */
             }
 
             .item-details p {
@@ -746,7 +716,6 @@ body {
                 form {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
 
                     input {
                         margin-bottom: 5px;
@@ -757,7 +726,7 @@ body {
             button {
                 width: 65px;
                 padding: 5px;
-                border: 1px solid black;
+                border: none;
                 background-color: var(--btn-bg-colour);
                 color: var(--btn-text-colour);
                 cursor: pointer;
@@ -765,7 +734,14 @@ body {
             }
 
             button:hover {
-                background-color: var(--btn-hover-colour);
+                background-color: var(--alt-bh-colour);
+            }
+
+            .line-break {
+                background-color: var(--border-color);
+                width: 100%;
+                height: 2px;
+                margin-bottom: 20px;
             }
         }
     }
@@ -774,12 +750,11 @@ body {
         width: 350px;
         text-align: center;
         margin-top: 75px;
-        /* border: 1px solid teal; */
 
         button {
             width: 250px;
             padding: 10px;
-            border: 1px solid black;
+            border: none;
             background-color: var(--btn-bg-colour);
             color: var(--btn-text-colour);
             cursor: pointer;
@@ -787,7 +762,7 @@ body {
         }
 
         button:hover {
-            background-color: var(--btn-hover-colour);
+            background-color: var(--alt-bh-colour);
         }
 
         a {
@@ -796,7 +771,7 @@ body {
 
         .line-break {
             align-self: center;
-            background-color: var(--text-colour);
+            background-color: var(--border-color);
             width: 95%;
             height: 2px;
             margin: 0 auto;
@@ -805,6 +780,7 @@ body {
     }
 }
 
+/* Media Query for Basket Page */
 @media (max-width: 768px) {
     .basket-container {
         flex-direction: column;
@@ -2655,7 +2631,7 @@ button:hover {
                 width: 100%;
                 min-width: 320px;
                 padding: 10px;
-                border: 1px solid var(--btn-border-color);
+                border: none;
                 background-color: var(--btn-bg-colour);
                 color: var(--btn-text-colour);
                 cursor: pointer;
@@ -2698,7 +2674,7 @@ button:hover {
                 background: var(--btn-bg-colour);
                 color: var(--btn-text-colour);  
                 text-decoration: none;
-                border: 1px solid var(--btn-border-color);
+                border: none;
             }
         
             a:hover {
