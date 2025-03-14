@@ -3480,25 +3480,22 @@ label {
     }
 }
 
+/* CSS for Privacy Policy Page */
 .privacy {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    padding: 20px;
+    width: 60%;
+    min-width: 650px;
+    max-width: 1000px;
+    margin: 0 auto;
     line-height: 1.6;
 
     h1 {
         text-align: center;
     }
-
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
 }
 
+/* CSS for Delivery and Returns Page */
 #delivery-and-returns {
 
-    /* I think all the stuff under here is for delivery and returns */
     /* General Layout */
 
     .returns-container {
