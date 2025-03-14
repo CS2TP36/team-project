@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WishlistController;
 
+use App\Http\Controllers\AddressController;
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -139,6 +140,13 @@ Route::get('/account/{page?}', [AccountController::class, 'show'])->name('accoun
 // address routes
 Route::get('/address/add', [AddressStorageController::class, 'showAdd']);
 Route::get('/address/edit', [AddressStorageController::class, 'showEdit']);
+Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
+Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
+Route::get('/account/addresses/create', [AddressController::class, 'create'])->name('address.create');
+Route::post('/account/addresses/store', [AddressController::class, 'store'])->name('address.store');
+Route::get('/account/addresses/{address}/edit', [AddressController::class, 'edit'])->name('address.edit');
+Route::put('/account/addresses/{address}', [AddressController::class, 'update'])->name('address.update');
+Route::delete('/account/addresses/{address}', [AddressController::class, 'destroy'])->name('address.destroy');
 
 // careers page route
 Route::get('/careers', function () {
@@ -163,4 +171,7 @@ Route::get('/address-add', function () {
 });
 Route::get('/payment-add', function () {
     return view('pages.newpaymentpage');
+});
+Route::get('/payment-edit', function () {
+    return view('pages.Edit_Payment');
 });

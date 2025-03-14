@@ -1,4 +1,5 @@
 @extends("layouts.page")
+@php($noFooter = true)
 @use(App\Http\Controllers\PreviousOrdersController)
 @use(Illuminate\Support\Facades\Auth)
 @use(App\Models\Shipping)

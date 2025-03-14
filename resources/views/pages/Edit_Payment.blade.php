@@ -1,9 +1,9 @@
 @extends('layouts.page')
 @section('title', 'Edit Payment')
 @section('content')
-<div class="payment-container">
+<div class="edit-payment-container">
     <h2>Edit Payment Information</h2>
-    <form id="paymentForm" method="POST" action="{{ route('update.payment') }}">
+    <form id="paymentForm">
         @csrf
         <div class="form-group">
             <label for="cardNumber">Card Number</label>
