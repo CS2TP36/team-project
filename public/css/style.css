@@ -2610,7 +2610,6 @@ button:hover {
     }
 }
 
-
 /* CSS for Login Page */
 .login {
     justify-content: center;
@@ -2680,7 +2679,7 @@ button:hover {
             margin-top: 50px;
             margin-left: 200px;
             padding: 5px;
-            
+
             form {
                 line-height: 1;
                 margin-bottom: 5px;
