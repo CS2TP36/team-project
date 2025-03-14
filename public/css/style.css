@@ -1219,7 +1219,6 @@ footer a:hover {
 }
 
 /* CSS for Contact Page */
-
 .contact-wrapper {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-colour);
@@ -1514,58 +1513,30 @@ footer a:hover {
 
     #cta {
         text-align: center;
-        /* padding: 30px 20px; */
+        padding: 30px 20px;
         background: #222;
-        color: white;
-        height: 150px;
         max-height: 250px;
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        /* justify-content: center; */
         text-align: center;
-    }
 
-    #cta a {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 15px 30px;
-        background: #88a4ad;;
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        border-radius: 5px;
-        transition: box-shadow 0.3s ease;
-    }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: var(--btn-bg-colour);
+            color: var(--btn-text-colour);  
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+        }
 
-    #cta a:hover {
-        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
-    }
-
-    #cta ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin-top: 15px;
-    }
-
-    #cta ul li {
-        margin: 0 5px;
-    }
-
-    #cta ul li img {
-        width: 35px;
-        height: 35px;
-        transition: transform 0.3s ease;
-    }
-
-    #cta ul li img:hover {
-        transform: scale(1.2);
+        a:hover {
+            background: var(--alt-bh-colour);
+        }
     }
 
     section {
-        min-height: 250px;
+        min-height: 200px;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
