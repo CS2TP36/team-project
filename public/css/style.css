@@ -4024,22 +4024,21 @@ label {
     }
 }
 
-/*adeebs stuff from wherever*/
-.put-this-in-a-class {
-    .payment-container {
-        /* my sizing */
-        max-width: 500px;
-        margin: 40px auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-        color: #000;
+/* CSS for new payment method page */
+.new-payment-container {
+    /* my sizing */
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
 
-        /* Border & background  */
-        background-color: #ffffff;
-        border: 1px solid #dedada;
-        border-radius: 5px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
+    /* Border & background  */
+    background-color: #ffffff;
+    border: 1px solid #dedada;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 
     .payment-title {
         font-size: 28px;
