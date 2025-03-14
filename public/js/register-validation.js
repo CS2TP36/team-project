@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (key === 'phone') {
                 const phonePattern = /^\+44\d{10,13}$/;
                 if (!phonePattern.test(value)) {
-                    displayError(field, 'Enter a valid UK phone number (e.g., +44 1234567890).');
+                    displayError(field, 'Enter a valid UK phone number (e.g., +441234567890).');
                     isValid = false;
                 }
             }
