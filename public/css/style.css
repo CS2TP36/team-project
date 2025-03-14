@@ -2553,7 +2553,8 @@ footer a:hover {
                 font-size: 0.8em;
                 width: 95.5%;
                 text-align: center;
-                padding: 8px 15px;
+                padding: 10px;
+                /* padding: 8px 15px; */
                 background: var(--btn-bg-colour);
                 color: var(--btn-text-colour);
                 text-decoration: none;
