@@ -24,6 +24,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WishlistController;
 
 use App\Http\Controllers\AddressController;
+use Illuminate\Contracts\View\View;
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -33,7 +34,6 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 
 Route::redirect('/', '/home');
 
-Route::get('/account', [AccountController::class, 'show'])->middleware('auth');
 
 Route::get('/home', function () {
     return view('pages.home');
@@ -133,21 +133,18 @@ Route::post('/admin/discounts', [DiscountController::class, 'add'])->name('admin
 
 Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPreview'])->name('search.preview');
 
-// stuff for getting the various account pages defined via accountcontroller
-Route::get('/account', [AccountController::class, 'show'])->name('account.page');
-Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
-Route::post('/account/update', [AccountController::class, 'update'])->name('account.update');
 
-// address routes
-Route::get('/address/add', [AddressStorageController::class, 'showAdd']);
-Route::get('/address/edit', [AddressStorageController::class, 'showEdit']);
-Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
+
+// Address routes (more specific routes first!)
 Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
 Route::get('/account/addresses/create', [AddressController::class, 'create'])->name('address.create');
 Route::post('/account/addresses/store', [AddressController::class, 'store'])->name('address.store');
 Route::get('/account/addresses/{address}/edit', [AddressController::class, 'edit'])->name('address.edit');
-Route::put('/account/addresses/{address}', [AddressController::class, 'update'])->name('address.update');
-Route::delete('/account/addresses/{address}', [AddressController::class, 'destroy'])->name('address.destroy');
+Route::put('/account/addresses/{address}', [AddressController::class, 'update'])->name('address.update');Route::delete('/account/addresses/{address}', [AddressController::class, 'destroy'])->name('address.destroy');
+
+// Generic account route (last!)
+Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
+
 
 // careers page route
 Route::get('/careers', function () {
@@ -165,14 +162,4 @@ Route::get('/sustainability', function () {
 
 Route::get('/account-payments', function () {
     return view('pages.account-payments');
-});
-// temporary routes for adeeb
-Route::get('/address-add', function () {
-    return view('pages.newaddresspage');
-});
-Route::get('/payment-add', function () {
-    return view('pages.newpaymentpage');
-});
-Route::get('/payment-edit', function () {
-    return view('pages.Edit_Payment');
 });

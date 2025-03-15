@@ -3,47 +3,54 @@
 @section('title','Edit Address')
 @section('content')
 
-    <div class="Edit-Address">
-        <div class="container">
-            <h2> Edit Address </h2>
-            <form id="editAddressForm">
+<div class="Edit-Address">
+    <div class="container">
+        <h2>Edit Address</h2>
 
-                <label for="full_Name">Full Name (first & last)</label>
-                <input type="text" id="full_Name" name="full_Name" placeholder="Enter your name" required>
+        <form id="editAddressForm" 
+              action="{{ route('address.update', $address->id) }}" 
+              method="POST">
+            @csrf
+            @method('PUT')
 
-                <label for="phone_Number">Phone Number</label>
-                <input type="text" id="phone_Number" name="phone_Number" placeholder="Enter your Phone number" required>
+            <label for="full_Name">Full Name (first & last)</label>
+            <input type="text" id="full_Name" name="full_name" 
+                   value="{{ old('full_name', $address->full_name) }}" required>
 
-                <label for="post_Code">Post Code</label>
-                <input type="text" id="post_Code" name="post_Code" placeholder=" Enter your PostCode" required>
+            <label for="phone_Number">Phone Number</label>
+            <input type="text" id="phone_Number" name="phone_number" 
+                   value="{{ old('phone_number', $address->phone_number) }}" required>
 
-                <label for="address_Line1">Address Line 1 (Company Name)</label>
-                <input type="text" id="address_Line1" name="address_Line1" placeholder="Enter your Address line"
-                       required>
+            <label for="post_Code">Post Code</label>
+            <input type="text" id="post_Code" name="post_code" 
+                   value="{{ old('post_code', $address->post_code) }}" required>
 
-                <label for="address_Line2">Address Line 2 (Optional)</label>
-                <input type="text" id="address_Line2" name="address_Line2" placeholder="Enter your Address line ">
+            <label for="address_Line1">Address Line 1</label>
+            <input type="text" id="address_Line1" name="address_line1" 
+                   value="{{ old('address_line1', $address->address_line1) }}" required>
 
-                <label for="town_City">Town/City</label>
-                <input type="text" id="town_City" name="town_City" placeholder="Enter your Town/City" required>
+            <label for="address_Line2">Address Line 2 (Optional)</label>
+            <input type="text" id="address_Line2" name="address_line2" 
+                   value="{{ old('address_line2', $address->address_line2) }}">
 
-                <label for="county">County (If Applicable)</label>
-                <input type="text" id="county" name="county" placeholder="Enter your County">
+            <label for="town_City">Town/City</label>
+            <input type="text" id="town_City" name="town_city" 
+                   value="{{ old('town_city', $address->town_city) }}" required>
 
-                <div class="checkbox-container">
-                    <input type="checkbox" id="default" name="default">
-                    <label for="default"> Set As Default Address </label>
-                </div>
-                <button type="submit" class="btn save"> Save Changes</button>
-                <button type="button" class="btn cancel" onclick="cancelEdit()">Cancel</button>
-            </form>
-        </div>
+            <label for="county">County (If Applicable)</label>
+            <input type="text" id="county" name="county" 
+                   value="{{ old('county', $address->county) }}">
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="is_default" name="is_default" value="1"
+                    {{ old('is_default', $address->is_default) ? 'checked' : '' }}>
+                <label for="is_default">Set As Default Address</label> 
+            </div>
+
+            <button type="submit" class="btn save">Save Changes</button>
+            <button type="button" class="btn cancel" onclick="window.history.back()">Cancel</button>
+        </form>
     </div>
+</div>
 
 @endsection
-
-
-
-
-
-
