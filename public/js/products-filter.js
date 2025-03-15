@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (path[0] === "0") {
             document.getElementById('womens').checked = true;
             breadcrumb.innerHTML += "<a href='/products/0'>Womens > </a>";
+            //document.getElementById('banner').src = "";
+            // ^ when get a womens banner image uncomment and give path
         }
         // sort by
         if (pathLen > 2) {
