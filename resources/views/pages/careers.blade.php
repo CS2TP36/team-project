@@ -1,5 +1,5 @@
 @extends('layouts.page')
-@section('title','Edit Address')
+@section('title','Careers')
 @section('content')
     <div class="careers">
         <div class="careers-container">
