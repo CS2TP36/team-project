@@ -7,6 +7,7 @@
 
         <div class="forgot-password-form">
             <form method="POST" action="{{ route('forgot-pass.change') }}">
+                @csrf
                 <label for="email">Enter your email</label>
                 <input type="email" name="email" placeholder="Email" required>
 
