@@ -7,7 +7,7 @@
                 <li class=prime-list><!--class holds the account and basket links-->
                     <form class="searchbar-container" onsubmit="event.preventDefault(); search();">
                         <input id="search-bar" type="search" placeholder="Search SportsWear">
-                            <img src="{{ asset('images/search.PNG') }}" class="search-logo" alt="Search Icon">
+                            <img src="{{ asset('images/search.PNG') }}" class="search-logo" alt="Search Icon" onclick="search()">
                             <div id="previews-container"></div>
                     </form>
                     <a id="theme-toggle"><img src="{{ asset('images/light-mode-icon.png') }}" class="user-logo" ></img><img src="{{ asset('images/dark-mode-icon.png') }}" class="user-logo" ></img></a>
