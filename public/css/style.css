@@ -4191,3 +4191,9 @@ label {
         background-color: #0f0e0e;
     }
 }
+
+.order-success{
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+}
