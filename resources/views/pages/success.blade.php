@@ -8,7 +8,7 @@
             <p>Order number: {{ $orderNumber }}</p>
             <br>
             <p>Tracking number: {{$trackingNumber}}</p>
-            <h2>Thanks For Uuing SportsWear, we hope you enjoy your clothing!</h2>
+            <h2>Thanks For Using SportsWear, we hope you enjoy your clothing!</h2>
         </div>
     @endif
 @endsection
