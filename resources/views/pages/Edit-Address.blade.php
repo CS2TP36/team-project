@@ -1,4 +1,5 @@
 @extends('layouts.page')
+@section('script', 'js/edit.js')
 @section('title','Edit Address')
 @section('content')
 
@@ -35,7 +36,6 @@
                 </div>
                 <button type="submit" class="btn save"> Save Changes</button>
                 <button type="button" class="btn cancel" onclick="cancelEdit()">Cancel</button>
-                <script src="{{ asset('js/edit.js') }}"></script>
             </form>
         </div>
     </div>
