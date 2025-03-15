@@ -126,9 +126,9 @@ main {
 }
 
 .dark-mode {
-    --bg-colour: #4d4d4d;
+    --bg-colour: #3D3D3D;
     --text-colour: #F5F5F5;
-    --btn-bg-colour: #4D4D4D;
+    --btn-bg-colour: #5D5D5D;
     --btn-border-colour: #1E1E1E;
     --btn-hover-colour: #1E1E1E;
     --alt-bh-colour: #6D6D6D;
@@ -4047,7 +4047,6 @@ label {
     margin: 0 auto;
     padding: 20px;
 
-
     .form-group {
         margin-bottom: 15px;
     }
@@ -4057,16 +4056,12 @@ label {
         padding: 10px;
         margin-top: 5px;
         margin-bottom: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--border-color);
         border-radius: 5px;
     }
 
-    .btn {
-        background-color: #4CAF50;
-        color: white;
+    button {
         padding: 10px 15px;
-        border: none;
-        cursor: pointer;
     }
 }
 

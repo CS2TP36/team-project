@@ -25,7 +25,7 @@
             <input type="password" id="cvv" name="cvv" placeholder="CVV" required>
         </div>
 
-        <button type="submit" class="btn">Update Payment</button>
+        <button type="submit">Update Payment</button>
     </form>
 </div>
 @endsection
