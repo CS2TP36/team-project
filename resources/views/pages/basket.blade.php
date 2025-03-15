@@ -12,7 +12,7 @@
                     <!-- Contains each basket item -->
                     <div class="basket-item">
                         <!-- Contains the Image of the item and the remove button -->
-                        <div class="item-image">
+                        <div class="basket-item-image">
                             <img src="{{ $item->product->getMainImage() }}" alt="{{ $item->product->name }}"></img>
 
                             <form action="{{ route('basket.remove', $item->id) }}" method="POST">
@@ -22,7 +22,7 @@
                             </form>
                         </div>
                         <!-- Contains the product name, price and size -->
-                        <div class="item-details">
+                        <div class="basket-item-details">
                             <p>{{ $item->product->name }}</p>
                             <p><strong>£{{ number_format($item->product->price * $item->quantity, 2) }}</strong></p>
                             <p>Size: {{ $item->size }}</p> <!-- Display size -->
