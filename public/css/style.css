@@ -2558,6 +2558,27 @@ footer a:hover {
                 text-align: left;
                 color: var(--text-colour);
             }
+
+            .error-message {
+                color: red;
+                font-size: 12px;
+                margin-top: 5px;
+                font-weight: bold;
+                display: block;
+                height: 14px;
+                visibility: hidden;
+            }
+            
+            .error-message.active {
+                visibility: visible;
+            }
+            
+            input.error {
+                border-color: red !important;
+                background-color: #F9D9D9 !important;
+                outline: none;
+            }
+
         }
 
         .new-customers {

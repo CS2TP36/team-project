@@ -64,14 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 isValid = false;
             }
 
-            return isValid;
         };
+
+        return isValid;
     };
 
     // Real-time validation
     Object.values(fields).forEach((field) => {
         field.addEventListener('input', () => {
             clearError(field);
+            validateFields();
         });
     });
 
