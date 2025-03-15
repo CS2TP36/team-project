@@ -712,7 +712,7 @@ body {
             align-items: center;
             margin-bottom: 10px;;
 
-            .b-item-image {
+        .basket-item-image {
                 display: flex;
                 flex-direction: column;
                 margin-right: 20px;
@@ -725,7 +725,7 @@ body {
                 }
             }
 
-            .b-item-details {
+            .basket-item-details {
                 margin-right: 100px;
 
                 p {
