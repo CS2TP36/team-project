@@ -2346,21 +2346,53 @@ footer a:hover {
 
 }
 
-/*
 #home-review-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 50px;
+    gap: 80px;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
+#home-reviews {
+    padding: 30px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px #969696;
+    width: 300px;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    transition: color 0.2s ease-in, transform 0.2s ease-in;
+}
 
-#review-pic {
-    width: 400px;
-    height: 200px;
-    padding: 40px;
+#home-reviews h2 {
+    font-size: 1.5em;
+}
+
+#home-reviews h1 {
+    font-size: 20px;
+    color: #000000;
+}
+
+#home-review-stars {
+    color: gold;
+    margin-bottom: 5px;
 
 }
-*/
+
+#home-review-pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    border-color: #000;
+
+}
+
+#home-reviews:hover {
+    transform: scale(1.03);
+}
 
 @media (max-width: 768px) {
     #text-banner p {
@@ -4196,4 +4228,5 @@ label {
     align-items: center;
     text-align: center;
     font-size: 1.3rem;
+
 }
