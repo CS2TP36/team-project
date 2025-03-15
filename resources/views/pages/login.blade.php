@@ -1,7 +1,6 @@
 @extends('layouts.page')
-@section('title')
-    Login
-@endsection
+@section('title','Login')
+@section('script', 'js/login-validation.js')
 @section('content')
     <div class="login">
         <!-- Split into existing and new customers to keep code organised-->
@@ -26,19 +25,22 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ route('login.authenticate') }}">
+                <form id="loginForm" method="POST" action="{{ route('login.authenticate') }}" novalidate>
                     @csrf
 
-                    <label for="email">Email *</label><br>
-                    <input type="email" id="email" name="email" value="{{ old('email') }}" required/><br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="{{ old('email') }}" required/>
+                    <span class="error-message"></span>
 
-                    <label for="password">Password *</label><br>
-                    <input type="password" id="password" name="password" required/><br>
-                    <input type="hidden" name="redirect" id="redirect"
-                           value="@if(isset($redirect)){{$redirect}}@endif"/>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required/>
+                    <span class="error-message"></span>
+
+                    <input type="hidden" name="redirect" id="redirect"value="@if(isset($redirect)){{$redirect}}@endif"/>
+
                     <button type="submit">Sign In</button>
                 </form>
-                <!-- TODO: Added this back in for testing may need css idk -->
+
                 <a href="/forgot-pass"><p>Forgotten your password?</p></a>
             </div>
 
