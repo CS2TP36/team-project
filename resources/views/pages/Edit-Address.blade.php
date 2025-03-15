@@ -35,8 +35,7 @@
                 </div>
                 <button type="submit" class="btn save"> Save Changes</button>
                 <button type="button" class="btn cancel" onclick="cancelEdit()">Cancel</button>
-
-
+                <script src="{{ asset('js/edit.js') }}"></script>
             </form>
         </div>
     </div>

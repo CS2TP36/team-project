@@ -3783,29 +3783,31 @@ label {
 /* CSS for Edit Address Page */
 
 .Edit-Address {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
+    background-color: var(--bg-colour);
     display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 
     h2 {
         text-align: center;
-        color: #333;
     }
 
     label {
         font-weight: bold;
         margin-top: 10px;
         display: block;
-        color: #555;
     }
 
-    input[type="text"],
-    input[type="checkbox"] {
+    label[for="default"] {
+        margin: 0;
+        margin-top: 2px;
+        font-weight: bold;
+    }
+
+    input[type="text"] {
         width: 100%;
         padding: 10px;
         margin-top: 5px;
@@ -3816,21 +3818,19 @@ label {
 
     input[type="text"]:focus {
         border-color: var(--alt-border-color);
+        box-shadow: 0 0 10px var(--box-shadow-color);
         outline: none;
     }
 
     .container {
         width: 100%;
         max-width: 500px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background: var(--bg-colour);
     }
 
     .checkbox-container {
         display: flex;
-        align-items: center;
+        flex-direction: row;
         gap: 10px;
         margin-top: 10px;
     }
@@ -3843,16 +3843,6 @@ label {
         font-size: 16px;
         cursor: pointer;
         margin-top: 15px;
-    }
-
-    .save {
-        background-color: #28a745;
-        color: white;
-    }
-
-    .cancel {
-        background-color: #dc3545;
-        color: white;
     }
 
     .btn:hover {
