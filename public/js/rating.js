@@ -1,4 +1,4 @@
-// Code runs after the HTML doc is fully loaded 
+// Code runs after the HTML doc is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const ratingContainer = document.querySelector('.rating');
     const stars = ratingContainer.querySelectorAll('.star');
@@ -29,3 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function validate() {
+    var rating = document.getElementById('rating-holder').value;
+    if (rating === "" || rating === null || rating < 1){
+        alert("Please rate the product (1-5 stars)");
+        return false;
+    }
+    document.getElementById("review-form").submit();
+}

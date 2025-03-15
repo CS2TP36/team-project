@@ -4,7 +4,7 @@
     <div class="review">
         <div class="review-form">
             <h1>Create Review</h1>
-            <form method="POST" action="{{ route('review.add') }}">
+            <form method="POST" action="{{ route('review.add') }}" id="review-form">
                 @csrf
                 <!-- Image + Name of Product -->
                 <div class="review-image">
@@ -36,9 +36,9 @@
                 <p>We will notify you via email as soon as your review is processed.</p>
                 <input type="hidden" name="product_id" value="{{$product->id}}">
                 <input type="hidden" id="rating-holder" name="rating" value="0">
-                <!-- Submit button -->
-                <button type="submit">Submit</button>
             </form>
+            <!-- Submit button -->
+            <button onclick="validate()">Submit</button>
         </div>
     </div>
 @endsection
