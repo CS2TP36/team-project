@@ -1607,6 +1607,8 @@ footer a:hover {
     opacity: 0;
     animation: fadedown 0.8s ease-out forwards;
     width: 100%;
+    z-index: 100; 
+    position: relative;
 
 
     .navbardiv {
@@ -1636,6 +1638,25 @@ footer a:hover {
         position: relative;
         display: flex;
         padding-right: 10px;
+        flex-direction: column;
+    }
+
+    #previews-container{
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        z-index: 75;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 20px;
+    }
+
+    .preview-link{
+        padding-top: 10px;
+        padding-left: 20px;
+
     }
 
     #search-bar {
@@ -1685,6 +1706,8 @@ footer a:hover {
     display: flex;
     animation: fadedown 0.5s ease-out forwards;
     border-bottom: 2px solid #ddd;
+    z-index: 60;
+    position: relative;
 
     .second-navdiv {
         display: flex;
@@ -2145,6 +2168,7 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .featured-item-container {
