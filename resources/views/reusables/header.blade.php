@@ -8,7 +8,7 @@
                     <form class="searchbar-container" onsubmit="event.preventDefault(); search();">
                         <input id="search-bar" type="search" placeholder="Search SportsWear">
                             <img src="{{ asset('images/search.PNG') }}" class="search-logo" alt="Search Icon" onclick="search()">
-                            <div id="previews-container"></div>
+                        <div id="previews-container" class = "open"></div>
                     </form>
                     <a id="theme-toggle"><img src="{{ asset('images/light-mode-icon.png') }}" class="user-logo" ></img><img src="{{ asset('images/dark-mode-icon.png') }}" class="user-logo" ></img></a>
                     <a href="/account"><img src="{{ asset('images/Account.png') }}" class="user-logo" ></a> <!--links to account page-->

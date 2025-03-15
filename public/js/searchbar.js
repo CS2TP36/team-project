@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {//This waits for the 
                 previewsA.href = `/product/${productpreviewid}`; //it sets the reference of the products to the id that was collected //
                 previewsA.textContent = productpreviewname; //add the text of the preview to be the name of the product//
                 previews.appendChild(previewsA);//adds the link to the previews division//
-                previews.appendChild(document.createElement("br"));//adds the text break for spacing//
             });
         })
 

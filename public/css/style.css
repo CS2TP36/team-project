@@ -1644,20 +1644,31 @@ footer a:hover {
     #previews-container{
         background-color: white;
         position: absolute;
-        top: 100%;
+        top: 105%;
         z-index: 75;
-        width: 100%;
+        width: 98%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        border-radius: 20px;
+        border-radius: 10px;
     }
+
+
 
     .preview-link{
         padding-top: 10px;
         padding-left: 20px;
+        text-decoration: none;
+        font-size: 1rem;
+        padding-bottom: 10px;
+        border-radius: 8px;
 
     }
+
+    .preview-link:hover{
+        background-color: #d5d4d4;
+    }
+
 
     #search-bar {
         width: 300px;
