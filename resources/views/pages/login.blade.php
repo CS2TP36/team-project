@@ -1,6 +1,6 @@
 @extends('layouts.page')
 @section('title','Login')
-@section('script', 'js/login-validation.js')
+@section('script', asset('js/login-validation.js'))
 @section('content')
     <div class="login">
         <!-- Split into existing and new customers to keep code organised-->
