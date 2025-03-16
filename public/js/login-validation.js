@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (key === 'password' && value.length < 8) {
-                displayError(field, 'Password must be at least 8 characters.');
+                displayError(field, 'Password is incorrect.');
                 isValid = false;
             }
 
