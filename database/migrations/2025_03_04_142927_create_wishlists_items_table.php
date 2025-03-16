@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('wishlist_items', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
             $table->string('session_id')->nullable();
             $table->unsignedBigInteger('product_id');
             $table->string('size')->nullable();

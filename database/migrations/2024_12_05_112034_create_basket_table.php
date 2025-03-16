@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable(); // for users that a logged in
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
             $table->string('session_id')->nullable(); //for guest on wbe
             $table->unsignedBigInteger('product_id');
             $table->string('size')->nullable();

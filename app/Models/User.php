@@ -70,4 +70,14 @@ class User extends Authenticatable
 {
     return $this->hasMany(Address::class);
 }
+
+    public function wishlistItems()
+    {
+        return $this->hasMany(WishlistItem::class);
+    }
+
+    public function basketItems()
+    {
+        return $this->hasMany(Basket::class);
+    }
 }

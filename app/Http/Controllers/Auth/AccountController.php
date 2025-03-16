@@ -62,4 +62,28 @@ class AccountController extends Controller
         }
     }
 
+    public function destroy(Request $request)
+    {
+        $user = Auth::user();
+
+        if (!$user) {
+            return redirect()->route('login.show')->with('error', 'You must be logged in to delete your account.');
+        }
+
+        // Log out the user before deleting the account
+        Auth::logout();
+
+        // Delete all associated data (optional, depending on your setup)
+        $user->addresses()->delete(); // Delete all user addresses
+        $user->orders()->delete(); // Delete all user orders
+        $user->reviews()->delete(); // Delete all user reviews
+        $user->wishlistItems()->delete();
+        $user->basketItems()->delete();
+        $user->delete(); // Delete user account
+  
+
+        // Redirect to home page with success message
+        return redirect('/')->with('success', 'Your account has been deleted successfully.');
+    }
+
 }
