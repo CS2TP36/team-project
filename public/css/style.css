@@ -849,7 +849,7 @@ body {
                 }
             }
 
-            .w-item-details {
+            .wishlist-item-details {
                 margin-right: 100px;
 
                 p {
@@ -3874,7 +3874,6 @@ label {
 /* CSS for Edit Address Page */
 
 .Edit-Address {
-    background-color: var(--bg-colour);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -3899,7 +3898,7 @@ label {
     }
 
     input[type="text"] {
-        width: 100%;
+        width: 95.5%;
         padding: 10px;
         margin-top: 5px;
         border: 1px solid var(--border-color);
@@ -4038,87 +4037,66 @@ label {
 
 .new-address-container {
     display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
 
     .address-form {
-        background: white;
-        padding: 20px;
         width: 100%;
-        max-width: 400px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .address-form h2 {
-        margin-bottom: 15px;
-        font-size: 20px;
+    h2 {
         text-align: center;
     }
 
     label {
-        font-size: 14px;
         font-weight: bold;
         display: block;
         margin-top: 10px;
-        margin-bottom: 5px;
     }
 
-    input {
-        width: 100%;
+    label[for="default"] {
+        margin: 0;
+        margin-top: 2px;
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="tel"] {
+        width: 95.5%;
         padding: 10px;
-        border: 1px solid #ccc;
+        margin-top: 5px;
+        border: 1px solid var(--border-color);
         border-radius: 5px;
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus, input[type="tel"]:focus {
+        border-color: var(--alt-border-color);
+        box-shadow: 0 0 10px var(--box-shadow-color);
+        outline: none;
     }
 
     .checkbox-container {
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        gap: 10px;
         margin-top: 10px;
-        font-weight: bold;
-        font-size: 14px;
-    }
-
-    .checkbox-container label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-    }
-
-    .checkbox-container input {
-        width: 15px;
-        height: 15px;
-        cursor: pointer;
-        accent-color: rgb(14, 14, 14);
-        margin: 0;
     }
 
     button {
-        background-color: rgb(1, 0, 0);
-        color: white;
-        font-weight: 600;
-        transition: background-color 0.3s ease, transform 0.2s ease;
         width: 100%;
-        font-size: 15px;
-        padding: 13px 30px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-top: 14px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 15px;
+        align-self: center;
     }
 
     button:hover {
-        background-color: rgb(3, 3, 3);
-        transform: scale(1.05);
-    }
-
-    button:active {
-        background-color: #4D4D4D;
-        transform: scale(0.98);
+        opacity: 0.8;
     }
 }
 
@@ -4132,17 +4110,43 @@ label {
         margin-bottom: 15px;
     }
 
-    input {
-        width: 100%;
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 96.5%;
         padding: 10px;
         margin-top: 5px;
-        margin-bottom: 10px;
         border: 1px solid var(--border-color);
         border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input[type="month"] {
+        width: 25.5%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+        border-color: var(--alt-border-color);
+        box-shadow: 0 0 10px var(--box-shadow-color);
+        outline: none;
     }
 
     button {
-        padding: 10px 15px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 15px;
+        align-self: center;
     }
 }
 
@@ -4263,5 +4267,4 @@ label {
     align-items: center;
     text-align: center;
     font-size: 1.3rem;
-
 }

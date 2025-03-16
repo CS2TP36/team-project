@@ -111,39 +111,11 @@
     </div>
 
     <div id=home-review-container>
-            <div id = home-reviews>
-                <img src="{{asset('images/review-1.png')}}" id=home-review-pic>
-                <h2> Will Raybould</h2>
-                <p id="star-0"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></p>
-                <h1> Great Peformance </h1>
-                <p>"I like to regularly have my morning runs to start my day off ,
-                    therefore I bought the Active Cool Compression Shirt . I must say
-                    the quality of the clothing has been absolutely fantastic . The
-                    performance is also top notch , providing me great posture while
-                    running ."
-                </p>
-            </div>
-            <div id = home-reviews> 
-                <img src="{{asset('images/review-2.png')}}" id=home-review-pic>
-                <h2> Sally Cena</h2>
-                <p id="star-0"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></p>
-                <h1> Comfortable Trainers </h1>
-                <p>"I need to buy new trainers to suit both my casual and sports
-                lifestyle, I stumbled upon the SwiftRun Trainers. The trainers feel
-                very light-weight and comfortable, as well as very fast and
-                accurate delivery."
-                </p>
-            </div>
-            <div id = home-reviews> 
-                <img src="{{asset('images/review-3.png')}}" id=home-review-pic>
-                <h2> Jessica Cambell</h2>
-                <p id="home-review-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></p>
-                <h1> Amazing Quality </h1>
-                <p>"I had bought the Luxe Fleece Hoodie and the Balance Crop Tee,
-                    the clothes very super comfortable and looked very high quality
-                    when I wore them. I will definitely order from Sportswear Again!"
-                </p>
-            </div>
+        <div id=home-review-wrapper>
+            <img src="{{asset('images/Review1.png')}}" id=review-pic>
+            <img src="{{asset('images/Review2.png')}}" id=review-pic>
+            <img src="{{asset('images/Review3.png')}}" id=review-pic>
+        </div>
     </div>
 
 

@@ -4,14 +4,14 @@
     <div class="account-page">
         <div class="container">
             <h1>Your Account</h1>
-            <!-- Grid told contain the "cards" -->
+            <!-- Grid to contain the "cards" -->
             <div class="grid">
                 <!-- Link to Contact Details Page -->
                 <a href="/account/details" class="card">
                     <img src="images/details-icon.png" alt="Details">
                     <div class="card-content">
                         <h2>Your Details</h2>
-                        <p>First name, Last name, Email adddress</p>
+                        <p>First name, Last name, Email address</p>
                     </div>
                 </a>
                 <!-- Link to Previous Orders Page -->
@@ -30,6 +30,14 @@
                         <p>Edit, remove or set default address</p>
                     </div>
                 </a>
+                <!-- Link to Account-Payments Page -->
+                <a href="{{ route('account.payments') }}" class="card">
+                    <img src="images/account-payment-icon.png" alt="Payments">
+                    <div class="card-content">
+                        <h2>Your Payment Methods</h2>
+                        <p>View, add, and manage your saved payment methods</p>
+                    </div>
+                </a>
                 <!-- Link to Change Password Page -->
                 <a href="/change-pass" class="card">
                     <img src="images/security-icon.png" alt="Security">
@@ -41,7 +49,7 @@
                 @if(Auth::user()->isAdmin())
                     <!-- Link to Admin Page -->
                     <a href="/admin" class="card">
-                        <img src="" alt="Admin">
+                        <img src="images/admin-icon.png" alt="Admin">
                         <div class="card-content">
                             <h2>Admin</h2>
                             <p>The admin pages</p>
@@ -52,4 +60,3 @@
         </div>
     </div>
 @endsection
-

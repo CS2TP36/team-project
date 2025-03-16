@@ -3,12 +3,11 @@
 @section('content')
     <!-- checks if there is an order and tracking number provided -->
     @if(isset($orderNumber) and  isset($trackingNumber))
-        <div class="order-success">
-            <h1>Order Has Been Placed</h1>
+        <div class="aboutus">
+            <h1>Order Placed</h1>
             <p>Order number: {{ $orderNumber }}</p>
             <br>
             <p>Tracking number: {{$trackingNumber}}</p>
-            <h2>Thanks For Using SportsWear, we hope you enjoy your clothing!</h2>
         </div>
     @endif
 @endsection
