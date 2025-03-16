@@ -9,6 +9,9 @@ class Basket extends Model
 {
     use HasFactory;
 
+    protected $table = 'baskets'; // Explicitly define the table name
+
+
     protected $fillable = ['user_id', 'session_id', 'product_id', 'size', 'quantity'];
 
     public function product(): \Illuminate\Database\Eloquent\Relations\BelongsTo

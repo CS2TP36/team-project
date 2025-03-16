@@ -30,8 +30,25 @@
                        required></input>
                 <input type="hidden" id="phone-number-old" value="{{ $user['phone_number'] }}">
             </form>
-            <!-- for some reason having hte button in the form was auto-submitting the form -->
-            <button id="submit-button">Update</button>
+
+            <button type="submit" form="details-form" class="btn btn-primary mt-4">Update Details</button>
+
+            <!-- Delete Account Button -->
+            <button type="button" class="btn btn-danger mt-4" onclick="confirmDelete()">Delete Account</button>
+
+            <!-- Hidden Delete Account Form -->
+            <form id="delete-account-form" method="POST" action="{{ route('account.delete') }}" style="display: none;">
+                @csrf
+                @method('DELETE')
+            </form>
         </div>
     </div>
+
+    <script>
+        function confirmDelete() {
+            if (confirm('Are you sure? This action is irreversible.')) {
+                document.getElementById('delete-account-form').submit();
+            }
+        }
+    </script>
 @endsection
