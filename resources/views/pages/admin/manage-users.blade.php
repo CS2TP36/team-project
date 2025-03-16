@@ -19,52 +19,39 @@
 
         <table class="table table-striped table-hover mt-3">
             <thead class="table-dark">
-            <tr>
-                <th class="text-center">ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th class="text-center">Role</th>
-                <th class="text-center">Actions</th>
-            </tr>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th class="text-center">Role</th>
+                    <th class="text-center">Actions</th>
+                </tr>
             </thead>
             <tbody>
-
-            <!-- Dummy data for now for placeholders -->
-            <!-- first person-->
-            <tr>
-                <td class="text-center">1</td>
-                <td>John Smith</td>
-                <td>john@smith.com</td>
-                <td class="text-center">Admin</td>
-                <td class="text-center d-flex justify-content-center gap-2">
-                    <a href="#" class="btn btn-sm btn-warning">
-                        ✏️ Edit
-                    </a>
-                    <form action="#" method="POST">
-                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">
-                            Delete
-                        </button>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <!-- second person -->
-                <td class="text-center">2</td>
-                <td>Bruce wayne</td>
-                <td>burcee@wayne.com</td>
-                <td class="text-center">Customer</td>
-                <td class="text-center d-flex justify-content-center gap-2">
-                    <a href="#" class="btn btn-sm btn-warning">
-                        ✏️ Edit
-                    </a>
-                    <form action="#" method="POST">
-                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">
-                            Delete
-                        </button>
-                    </form>
-                </td>
-            </tr>
-
+                @foreach($users as $user)
+                    <tr>
+                        <td class="text-center">{{ $user->id }}</td>
+                        <td>{{ $user->first_name }} {{ $user->last_name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td class="text-center">
+                            <form method="POST" action="{{ route('admin.update-role', $user->id) }}">
+                                @csrf
+                                @method('PATCH')
+                                <select name="role" class="form-select" onchange="this.form.submit()">
+                                    <option value="admin" @if($user->role === 'admin') selected @endif>Admin</option>
+                                    <option value="customer" @if($user->role === 'customer') selected @endif>Customer</option>
+                                </select>
+                            </form>
+                        </td>
+                        <td class="text-center d-flex justify-content-center gap-2">
+                        <form action="{{ route('admin.delete-user', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
+                            @csrf
+                            @method('DELETE') <!-- Ensure DELETE request -->
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
 

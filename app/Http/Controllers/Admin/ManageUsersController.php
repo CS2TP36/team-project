@@ -10,30 +10,56 @@ use Illuminate\Support\Facades\Auth;
 class ManageUsersController extends Controller
 {
     // function to check if the user is allowed to manage users
-    private function allowed(): bool {
-        if (!Auth::check() || !Auth::user()->isAdmin()) {
-            return false;
-        }
-        return true;
+    private function allowed(): bool
+    {
+        return Auth::check() && Auth::user()->isAdmin();
     }
+
     // function to show the manage users page
-    function show(Request $request) {
-        // if not allowed redirect to home
+    public function show(Request $request)
+    {
         if (!$this->allowed()) {
             return redirect('/home')->with('message', 'You are not allowed to manage users');
         }
-        // get all the users
-        $users = User::all()->sortBy('id');
-        // if a role is specified filter the users
-        if ($request) {
-            $request->validate([
-                'role' => 'string|in:admin,customer,all'
-            ]);
-            if ($request['role'] != 'all') {
-                $users = $users->where('role', $request['role']);
-            }
+
+        // Fetch users and optionally filter by role
+        $query = User::query();
+        if ($request->has('role') && in_array($request->role, ['admin', 'customer'])) {
+            $query->where('role', $request->role);
         }
-        // return the page with the required users
-        return view('pages.admin.manage-users', ['users' => $users, 'role' => $request['role'] ?? 'all']);
+
+        $users = $query->orderBy('id')->get();
+        return view('pages.admin.manage-users', compact('users'))->with('role', $request->role ?? 'all');
+    }
+
+    // function to update user role
+    public function updateRole(Request $request, $id)
+    {
+        if (!$this->allowed()) {
+            return redirect('/home')->with('message', 'You are not allowed to manage users');
+        }
+
+        $request->validate([
+            'role' => 'required|string|in:admin,customer',
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->role = $request->role;
+        $user->save();
+
+        return redirect()->route('admin.manage-users')->with('success', 'User role updated successfully.');
+    }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+
+        // Prevent admins from deleting themselves
+        if (Auth::id() === $user->id) {
+            return redirect()->route('admin.manage-users')->with('error', 'You cannot delete yourself.');
+        }
+
+        $user->delete();
+        return redirect()->route('admin.manage-users')->with('success', 'User deleted successfully.');
     }
 }
