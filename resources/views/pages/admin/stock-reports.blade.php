@@ -4,12 +4,21 @@
 @php
     $warnings = ReportController::getWarnings();
     $products = Product::all()->sortBy("name");
+    $popular = Product::orderBy("popularity", "desc")->limit(5)->get();
 @endphp
 @extends("layouts.admin")
 @section("title","Stock Reports")
 @section("content")
     <h3>Stock Reports</h3>
     <br>
+    <article>
+        <h4>Most Popular</h4>
+        <ol>
+            @foreach($popular as $product)
+                <li><a href="/product/{{ $product->id }}">{{ $product->name }}</a></li>
+            @endforeach
+        </ol>
+    </article>
     <article>
         <h4>Warnings</h4>
         @if($warnings)
