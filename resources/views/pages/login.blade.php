@@ -28,13 +28,17 @@
                 <form id="loginForm" method="POST" action="{{ route('login.authenticate') }}" novalidate>
                     @csrf
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="{{ old('email') }}" required/>
-                    <span class="error-message"></span>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" required/>
+                        <span class="error-message"></span>
+                    </div>
 
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required/>
-                    <span class="error-message"></span>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required/>
+                        <span class="error-message"></span>
+                    </div>
 
                     <input type="hidden" name="redirect" id="redirect"value="@if(isset($redirect)){{$redirect}}@endif"/>
 
