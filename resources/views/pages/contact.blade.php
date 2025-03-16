@@ -30,17 +30,17 @@
 
                     <div class="input-box">
                         <label for="name">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required @if(\Illuminate\Support\Facades\Auth::check()) value="{{ \Illuminate\Support\Facades\Auth::user()->first_name }} {{ \Illuminate\Support\Facades\Auth::user()->last_name }}" @endif>
                     </div>
 
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                        <input type="email" name="email" id="email" placeholder="you@example.com" required @if(\Illuminate\Support\Facades\Auth::check()) value="{{ \Illuminate\Support\Facades\Auth::user()->email }}" @endif>
                     </div>
 
                     <div class="input-box">
                         <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="phone" placeholder="+44 1234 567890" required>
+                        <input type="text" name="phone" id="phone" placeholder="+44 1234 567890" required @if(\Illuminate\Support\Facades\Auth::check()) value="{{ \Illuminate\Support\Facades\Auth::user()->phone_number }}" @endif>
                     </div>
 
                     <div class="input-box">
