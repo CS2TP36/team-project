@@ -32,7 +32,7 @@
                 </a>
                 <!-- Link to Account-Payments Page -->
                 <a href="{{ route('account.payments') }}" class="card">
-                    <img src="images/payment-icon.png" alt="Payments">
+                    <img src="images/account-payment-icon.png" alt="Payments">
                     <div class="card-content">
                         <h2>Your Payment Methods</h2>
                         <p>View, add, and manage your saved payment methods</p>
@@ -44,7 +44,6 @@
                     <div class="card-content">
                         <h2>Login & Security</h2>
                         <p>Manage password, email and mobile number</p>
-                        <p>Manage password, email, and mobile number</p>
                     </div>
                 </a>
                 @if(Auth::user()->isAdmin())

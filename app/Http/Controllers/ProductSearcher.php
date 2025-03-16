@@ -67,7 +67,7 @@ class ProductSearcher extends Controller
 
     function searchPreview(String $searchTerm="")
     {
-        $products = ProductLister::get();
+        $products = ProductLister::get()->sortByDesc('popularity');
         $toReturn = [];
         foreach($products as $product){
             // add to list if matches
