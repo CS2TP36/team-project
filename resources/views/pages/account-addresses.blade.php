@@ -1,51 +1,49 @@
 @extends('layouts.page')
-
 @section('title', 'Your Addresses')
-
 @section('content')
-<div class="accountaddresses">
-    <h1>Your Addresses</h1>
 
-    <div class="addresses">
-        @if(isset($addresses) && $addresses->isNotEmpty())
-            @foreach($addresses as $address)
-                <div class="address-card">
-                    <strong>
-                        {{ $address->full_name }}
-                        @if($address->is_default || (!$addresses->where('is_default', true)->count() && $loop->first))
-                            (Default)
-                        @endif
-                    </strong>
-                    <p>
-                        {{ $address->address_line1 }}<br>
-                        @if($address->address_line2)
-                            {{ $address->address_line2 }}<br>
-                        @endif
-                        {{ $address->town_city }}, {{ $address->post_code }}<br>
-                        @if($address->county)
-                            {{ $address->county }}<br>
-                        @endif
-                        Phone: {{ $address->phone_number }}
-                    </p>
+    <div class="accountaddresses">
+        <h1>Your Addresses</h1>
 
-                    <div class="address-actions">
-                        <a href="{{ route('address.edit', $address->id) }}">Edit</a>
-                        |
-                        <form action="{{ route('address.destroy', $address->id) }}" method="POST" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" onclick="return confirm('Are you sure?')">Remove</button>
-                        </form>
+        <!-- card to add an address -->
+        <div class="addresses">
+            <a href="{{ route('address.create') }}" class="add-address">+ Add Address</a>
+
+            @if(isset($addresses) && $addresses->isNotEmpty())
+                @foreach($addresses as $address)
+                    <div class="address-card">
+                        <strong>
+                            {{ $address->full_name }}
+                            @if($address->is_default || (!$addresses->where('is_default', true)->count() && $loop->first))
+                                (Default)
+                            @endif
+                        </strong>
+                        <p>
+                            {{ $address->address_line1 }}<br>
+                            @if($address->address_line2)
+                                {{ $address->address_line2 }}<br>
+                            @endif
+                            {{ $address->town_city }}, {{ $address->post_code }}<br>
+                            {{ $address->country }}<br>
+                            Phone: {{ $address->phone_number }}
+                        </p>
+
+                        <!-- links -->
+                        <div class="actions">
+                            <a href="{{ route('address.edit', $address->id) }}">Edit</a> | 
+                            <form action="{{ route('address.destroy', $address->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <a href="#" onclick="event.preventDefault(); if(confirm('Are you sure?')) this.closest('form').submit();">Remove</a>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            @endforeach
-        @else
-            <p>No addresses found. <a href="{{ route('address.create') }}">Add a new address</a>.</p>
-        @endif
+                @endforeach
+            @else
+                <!-- If no addresses exist -->
+                <p>No addresses found.</p>
+            @endif
+        </div>
     </div>
 
-    <div class="add-new-address">
-        <a href="{{ route('address.create') }}" class="btn btn-primary">Add New Address</a>
-    </div>
-</div>
 @endsection

@@ -151,6 +151,9 @@ Route::put('/account/payments/{id}', [PaymentMethodController::class, 'update'])
 Route::delete('/account/payments/{id}', [PaymentMethodController::class, 'destroy'])->name('payment.destroy');
 
 // Generic account route (last!)
+Route::get('/account', [AccountController::class, 'show'])->name('account.page');
+Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
+Route::post('/account/update', [AccountController::class, 'update'])->name('account.update');
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
 
 
