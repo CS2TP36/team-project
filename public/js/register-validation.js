@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!value) {
                 displayError(field, `${fieldName} is required.`);
                 isValid = false;
+                continue;
             } else {
                 clearError(field);
             }
@@ -69,20 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            if (key === 'password' && value.length < 8) {
-                displayError(field, 'Password must be at least 8 characters.');
-                isValid = false;
+            if (key === 'password') {
+                const passwordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?/~`\\-]).{8,}$/;
+                if (!passwordPattern.test(value)) {
+                    displayError(field, 'Password must be at least 8 characters, contain a number and a special character.');
+                    isValid = false;
+                }
             }
 
             if (key === 'password_confirmation' && value !== fields.password.value) {
-                displayError(field, 'Passwords do not match.');
+                displayError(field, 'Passwords do not match');
                 isValid = false;
             }
-
+            
             if (key === 'phone') {
-                const phonePattern = /^\+44\d{10,13}$/;
+                const phonePattern = /^(?:\+44\s?\d{4}\s?\d{6}|0\d{4}\s?\d{6})$/;
                 if (!phonePattern.test(value)) {
-                    displayError(field, 'Enter a valid UK phone number (e.g., +441234567890).');
+                    displayError(field, 'Enter a valid UK phone number (e.g., +44 7000 000000 or 07000 000000).');
                     isValid = false;
                 }
             }
