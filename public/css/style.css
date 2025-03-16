@@ -1284,7 +1284,6 @@ footer a:hover {
     padding: 5px;
     justify-content: center;
     align-items: center;
-    border: purple 1px solid;
 }
 
 .contact-us-brand {
@@ -1316,7 +1315,6 @@ footer a:hover {
     flex: 1;
     min-width: 300px;
     padding-left: 20px;
-    border: #28a745 1px solid;
 }
 
 .contact-form h2 {
@@ -1406,7 +1404,6 @@ footer a:hover {
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
-    background: #000;
 }
 
 /* Hover Effect */
