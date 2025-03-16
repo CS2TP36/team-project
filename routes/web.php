@@ -150,6 +150,10 @@ Route::get('/account/payments/{id}/edit', [PaymentMethodController::class, 'edit
 Route::put('/account/payments/{id}', [PaymentMethodController::class, 'update'])->name('payment.update');
 Route::delete('/account/payments/{id}', [PaymentMethodController::class, 'destroy'])->name('payment.destroy');
 
+Route::get('/admin/manage-users', [ManageUsersController::class, 'show'])->name('admin.manage-users');
+Route::patch('/admin/manage-users/{id}/update-role', [ManageUsersController::class, 'updateRole'])->name('admin.update-role');
+Route::delete('/admin/manage-users/{id}', [ManageUsersController::class, 'destroy'])->name('admin.delete-user');
+Route::delete('/account/delete', [AccountController::class, 'destroy'])->name('account.delete');
 Route::get('/account', [AccountController::class, 'show'])->name('account.page');
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
 Route::post('/account/update', [AccountController::class, 'update'])->name('account.update');
