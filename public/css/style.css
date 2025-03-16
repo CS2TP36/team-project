@@ -2631,22 +2631,29 @@ footer a:hover {
 
             .error-message {
                 color: red;
-                font-size: 12px;
-                margin-top: 5px;
+                font-size: 14px;
                 font-weight: bold;
-                display: block;
-                height: 14px;
-                visibility: hidden;
+                display: none; 
+                padding: 5px 0; 
+                border-radius: 10px; 
             }
             
             .error-message.active {
-                visibility: visible;
+                display: block;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
             }
             
             input.error {
                 border-color: red !important;
                 background-color: #F9D9D9 !important;
                 outline: none;
+            }
+
+            button {
+                margin-top: 10px;
             }
 
         }

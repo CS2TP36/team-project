@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!value) {
                 displayError(field, `${fieldName} is required.`);
                 isValid = false;
+                continue;  
             } else {
                 clearError(field);
             }
@@ -68,14 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return isValid;
     };
-
-    // Real-time validation
-    Object.values(fields).forEach((field) => {
-        field.addEventListener('input', () => {
-            clearError(field);
-            validateFields();
-        });
-    });
 
     // Form submission handling
     form.addEventListener('submit', (event) => {
