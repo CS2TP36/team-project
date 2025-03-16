@@ -21,8 +21,8 @@
     <nav class="second-nav"><!--creates a secondary navigation-->
         <div class="second-navdiv"><!--creates the second nav div which will hold all the items together-->
             <ul>
-                <li class=subprime-list><a href="/products/1">Men</a></li><!--holds all of the gender links-->
-                <li class=subprime-list><a href="/products/0">Women</a></li><!--links to men and women-->
+                <li class=subprime-list><a href="/products/1" id="navbar-men">Men</a></li><!--holds all of the gender links-->
+                <li class=subprime-list><a href="/products/0" id="navbar-women">Women</a></li><!--links to men and women-->
             </ul>
         </div>
     </nav>

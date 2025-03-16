@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\ProductManagementController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\PaymentMethodController;
 
 use App\Http\Controllers\AddressController;
 use Illuminate\Contracts\View\View;
@@ -142,7 +143,16 @@ Route::post('/account/addresses/store', [AddressController::class, 'store'])->na
 Route::get('/account/addresses/{address}/edit', [AddressController::class, 'edit'])->name('address.edit');
 Route::put('/account/addresses/{address}', [AddressController::class, 'update'])->name('address.update');Route::delete('/account/addresses/{address}', [AddressController::class, 'destroy'])->name('address.destroy');
 
-// Generic account route (last!)
+Route::get('/account/payments', [PaymentMethodController::class, 'index'])->name('account.payments');
+Route::get('/account/payments/create', [PaymentMethodController::class, 'create'])->name('payment.create');
+Route::post('/account/payments/store', [PaymentMethodController::class, 'store'])->name('payment.store');
+Route::get('/account/payments/{id}/edit', [PaymentMethodController::class, 'edit'])->name('payment.edit');
+Route::put('/account/payments/{id}', [PaymentMethodController::class, 'update'])->name('payment.update');
+Route::delete('/account/payments/{id}', [PaymentMethodController::class, 'destroy'])->name('payment.destroy');
+
+Route::get('/account', [AccountController::class, 'show'])->name('account.page');
+Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
+Route::post('/account/update', [AccountController::class, 'update'])->name('account.update');
 Route::get('/account/{page?}', [AccountController::class, 'show'])->name('account.subpage');
 
 

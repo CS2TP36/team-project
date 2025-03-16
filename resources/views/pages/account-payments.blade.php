@@ -7,31 +7,36 @@
 
         <!-- Card to add a new card/payment method -->
         <div class="payments">
-            <div class="add-payment"> + Add Payment Method</div>
+            <a href="{{ route('payment.create') }}" class="add-payment">+ Add Payment Method</a>
 
-            <!-- dummy data for first payment card-->
-            <div class="payment-card">
-                <strong>Visa</strong>
-                <p> Ashfaq Choudhury <br> **** **** **** 1234 <br> Exp:12/25
-                </p>
+            <!-- Check if payment methods exist -->
+                @if(isset($payments) && $payments->isNotEmpty())
+                @foreach($payments as $paymentMethod)
+                    <div class="payment-card">
+                        <strong>
+                            **** **** **** {{ substr($paymentMethod->card_number, -4) }}
+                            @if($paymentMethod->is_default) (Default) @endif
+                        </strong>
+                        <p>
+                            {{ $paymentMethod->card_name }} <br>
+                            Expiry: {{ str_pad($paymentMethod->expiry_month, 2, '0', STR_PAD_LEFT) }}/{{ $paymentMethod->expiry_year }}
+                        </p>
 
-                <!-- links -->
-                <div class="actions">
-                    <a href="">Edit</a> | <a href="">Remove</a>
-                </div>
-            </div>
-
-            <!-- dummy data for second payment card-->
-            <div class="payment-card">
-                <strong>MasterCard</strong>
-                <p> John Smith <br> **** **** **** 5678 <br> Exp:09/27
-                </p>
-
-                <!-- links -->
-                <div class="actions">
-                    <a href="">Edit</a> | <a href="">Remove</a>
-                </div>
-            </div>
+                        <!-- Actions -->
+                        <div class="actions">
+                            <a href="{{ route('payment.edit', $paymentMethod->id) }}">Edit</a> | 
+                            <form action="{{ route('payment.destroy', $paymentMethod->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <a href="#" onclick="event.preventDefault(); if(confirm('Are you sure?')) this.closest('form').submit();">Remove</a>
+                            </form>
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <p>No payment methods found.</p>
+            @endif
         </div>
+    </div>
 
 @endsection

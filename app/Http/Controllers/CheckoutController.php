@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Emailers\OrderEmailer;
 use App\Models\DiscountCode;
 use App\Models\IndividualOrder;
 use Illuminate\Http\Request;
@@ -129,12 +128,6 @@ class CheckoutController extends Controller
             // commit to db
 
             DB::commit();
-
-            // send the order confirmation email
-            $mailer = new OrderEmailer();
-            $mailer->sendOrderConfirmation($order);
-            // actually delete the emailer after sending
-            unset($mailer);
 
             return view('pages.success')->with(['orderNumber' => $order['id'], 'trackingNumber' => $shipping['tracking_number']]);
 

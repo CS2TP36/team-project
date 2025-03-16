@@ -30,8 +30,9 @@
         <input type="text" id="county" name="county" placeholder="Enter your county">
 
         <div class="checkbox-container">
+            <input type="hidden" name="is_default" value="0">
             <label for="default-address">
-                <input type="checkbox" id="default-address" name="is_default">
+                <input type="checkbox" id="default-address" name="is_default" value="1">
                 Make this my default address
             </label>
         </div>
