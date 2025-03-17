@@ -23,6 +23,12 @@ body {
     button:hover {
         background-color: var(--alt-bh-colour);
     }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,  input[type="tel"]:focus{
+        box-shadow: 0 0 10px var(--box-shadow-color);
+        border-color: var(--alt-border-color);
+        outline: none;
+    }
 }
 
 main {
@@ -356,7 +362,7 @@ body {
     }
 
     #contact-link:hover {
-        background: #2D2D2D;
+        background: var(--alt-bh-colour);
     }
 
     /* Social Icons */
@@ -432,17 +438,25 @@ body {
         max-width: 600px;
         margin: 0 auto;
 
-        form input {
-            width: 100%;
-            min-width: 320px;
-            font-size: 1em;
+        form {
+            input {
+                width: 100%;
+                min-width: 320px;
+                font-size: 1em;
+            }
+
+            input[type="text"], input[type="email"] {
+                border: 1px solid var(--border-color);
+                padding: 10px;
+                /*Disables default browser outline on focus*/
+                outline: none;
+            }
         }
 
         button {
-            width: 80px;
+            width: 250px;
             padding: 10px;
             font-size: 1em;
-            cursor: pointer;
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -453,17 +467,7 @@ body {
             height: 2px;
         }
 
-        form input[type="text"], input[type="email"] {
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            /*Disables default browser outline on focus*/
-            outline: none;
-        }
-
-        form input[type="text"]:focus, input[type="email"]:focus {
-            box-shadow: 0 0 10px var(--box-shadow-color);
-            border-color: var(--alt-border-color);
-        }
+        
     }
 }
 
@@ -515,23 +519,20 @@ body {
             margin-bottom: 15px;
         }
 
-        form input {
-            width: 95.5%;
-            min-width: 320px;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
+        form {
+            input {
+                width: 95.5%;
+                min-width: 320px;
+                font-size: 1em;
+                margin-bottom: 10px;
 
-        form input[type="password"] {
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            /*Disables default browser outline on focus*/
-            outline: none;
-        }
-
-        form input[type="password"]:focus {
-            box-shadow: 0 0 10px var(--box-shadow-color);
-            border-color: var(--alt-border-color);
+                input[type="password"] {
+                    border: 1px solid var(--border-color);
+                    padding: 10px;
+                    /*Disables default browser outline on focus*/
+                    outline: none;
+                }
+            }
         }
 
         button {
@@ -539,7 +540,6 @@ body {
             min-width: 320px;
             padding: 10px;
             font-size: 1em;
-            cursor: pointer;
         }
 
         .error-messages ul li {
@@ -2597,23 +2597,20 @@ footer a:hover {
                 margin-bottom: 15px;
             }
 
-            form input {
-                width: 95.5%;
-                min-width: 320px;
-                font-size: 1em;
-                margin-bottom: 10px;
-            }
+            form {
+                input {
+                    width: 95.5%;
+                    min-width: 320px;
+                    font-size: 1em;
+                    margin-bottom: 10px;
+                }
 
-            form input[type="email"], input[type="password"] {
-                border: 1px solid var(--border-color);
-                padding: 10px;
-                /*Disables default browser outline on focus*/
-                outline: none;
-            }
-
-            form input[type="email"]:focus, input[type="password"]:focus {
-                box-shadow: 0 0 10px var(--alt-bs-colour);
-                border-color: var(--border-color);
+                input[type="email"], input[type="password"] {
+                    border: 1px solid var(--border-color);
+                    padding: 10px;
+                    /*Disables default browser outline on focus*/
+                    outline: none;
+                }
             }
 
             button {
@@ -3546,7 +3543,7 @@ label {
         /* Highlight on hover and when active */
     }
 
-    input[type="text"],
+    input[type="text"], 
     textarea {
         width: 100%;
         min-width: 300px;
@@ -3732,23 +3729,20 @@ label {
         margin-bottom: 15px;
     }
 
-    form input {
-        width: 95.5%;
-        min-width: 320px;
-        font-size: 1em;
-        margin-bottom: 10px;
-    }
+    form {
+        input {
+            width: 95.5%;
+            min-width: 320px;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
 
-    form input[type="text"], form input[type="email"] {
-        border: 1px solid var(--border-color);
-        padding: 10px;
-        /*Disables default browser outline on focus*/
-        outline: none;
-    }
-
-    form input[type="text"]:focus, form input[type="email"]:focus {
-        box-shadow: 0 0 10px var(--box-shadow-color);
-        border-color: var(--alt-border-color);
+        input[type="text"], form input[type="email"] {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            /*Disables default browser outline on focus*/
+            outline: none;
+        }
     }
 
     button {
@@ -3916,12 +3910,6 @@ label {
         font-size: 16px;
     }
 
-    input[type="text"]:focus {
-        border-color: var(--alt-border-color);
-        box-shadow: 0 0 10px var(--box-shadow-color);
-        outline: none;
-    }
-
     .container {
         width: 100%;
         max-width: 500px;
@@ -4083,12 +4071,6 @@ label {
         font-size: 16px;
     }
 
-    input[type="text"]:focus, input[type="tel"]:focus {
-        border-color: var(--alt-border-color);
-        box-shadow: 0 0 10px var(--box-shadow-color);
-        outline: none;
-    }
-
     .checkbox-container {
         display: flex;
         flex-direction: row;
@@ -4142,12 +4124,6 @@ label {
         border: 1px solid var(--border-color);
         border-radius: 5px;
         font-size: 16px;
-    }
-
-    input[type="text"]:focus, input[type="password"]:focus {
-        border-color: var(--alt-border-color);
-        box-shadow: 0 0 10px var(--box-shadow-color);
-        outline: none;
     }
 
     button {
