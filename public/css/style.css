@@ -181,7 +181,6 @@ main {
 /*CSS for Account Page*/
 .account-page {
     .container {
-        background-color: var(--bg-colour);
         max-width: 1200px;
         margin: 0 auto;
         margin-bottom: 10px;
@@ -330,6 +329,7 @@ main {
         text-align: center;
         padding: 40px 20px;
         background: var(--card-bg-colour);
+        border: 1px solid var(--border-color);
         border-radius: 15px;
         max-width: 900px;
         margin-top: 50px;
@@ -337,16 +337,17 @@ main {
         margin-left: auto;
         margin-right: auto;
         box-shadow: 0 4px 10px var(--alt-bs-colour);
-    }
 
-    .FMI h2 {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-    }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
 
-    .FMI p {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
     }
 
     /* Contact Link */
@@ -430,6 +431,13 @@ main {
     h1 {
         font-size: 24px;
         text-align: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin: 0 auto;
     }
 
     .contact-details-form {
@@ -444,12 +452,12 @@ main {
 
         button {
             width: 250px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 5px;
         }
 
         .contact-line-break {
-            margin-top: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
             background-color: var(--border-color);
             height: 2px;
         }
@@ -492,7 +500,7 @@ main {
     .reset-sections {
         width: 100%;
         max-width: 400px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         align-items: center;
         margin: auto;
 
@@ -505,7 +513,7 @@ main {
         }
 
         form input[type="password"] {
-            width: 95.5%;
+            width: 94.5%;
             margin-bottom: 10px;
         }
 
@@ -540,24 +548,22 @@ main {
     }
 }
 
-/*  previous orders CSS */
+/* CSS for Previous Orders Page */
 /* main styling for previous ordes page */
 #previous-orders {
-    background-color: var(--bg-colour);
-    font-family: Arial, Helvetica, sans-serif;
     max-width: 800px; /* keep compact */
     padding: 15px;
     margin: 30px auto; /* centers the content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*create shadow effect*/
-}
+    box-shadow: 0 0 10px var(--alt-bs-colour); /*create shadow effect*/
 
-/* header styling */
-#previous-orders h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--text-colour);
-    text-align: center;
-    margin-bottom: 15px;
+    /* header styling */
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--text-colour);
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
 /* orders list */
@@ -567,7 +573,7 @@ main {
 
 /* styling for each individual order */
 .order {
-    background-color: #f9f9f9;
+    background-color: var(--card-bg-colour);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /*smaller shdow effect created */
     transition: background-color 0.3s ease;
     border-radius: 8px;
@@ -576,7 +582,7 @@ main {
 }
 
 .order:hover {
-    background-color: #d8d8d8;
+    background-color: var(--card-hover-colour);
 }
 
 /* order information date, dispatch, total) */
@@ -623,14 +629,11 @@ main {
     font-size: 15px;
 }
 
-.item-price {
-    color: var(--text-colour);
+.item-price, .item-quantity {
     font-size: 13px;
 }
 
 .item-quantity {
-    color: var(--text-colour);
-    font-size: 13px;
     margin-top: 2px;
 }
 
@@ -644,21 +647,15 @@ main {
 
 /* button styling */
 .order-actions .button {
-    background-color: var(--btn-bg-colour);
-    color: var(--btn-text-colour);
     transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none;
-    border-radius: 5px;
     padding: 6px 10px;
-    cursor: pointer;
-    font-size: 13px;
+    font-size: 13px; 
     white-space: nowrap; /* prevent text from wrapping */
 
 }
 
 /* hover effect for wehn on buttons */
 .order-actions .button:hover {
-    background-color: var(--btn-hover-colour);
     transform: scale(1.05);
 }
 
