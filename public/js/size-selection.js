@@ -1,12 +1,14 @@
-
 const buttons = document.querySelectorAll(".size-selection");
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         buttons.forEach(btn => {
-            btn.style.backgroundColor = "#4D4D4D";
+            btn.style.backgroundColor = "transparent";
+            // Need to grab text colour variable
+            btn.style.color = "var(--text-colour)";
         });
-        button.style.backgroundColor = "#1D1D1D";
+        button.style.backgroundColor = "#1E1E1E";
+        button.style.color = "#F5F5F5";
     });
 });
 
