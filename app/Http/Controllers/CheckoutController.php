@@ -6,153 +6,246 @@ use App\Http\Emailers\OrderEmailer;
 use App\Models\DiscountCode;
 use App\Models\IndividualOrder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Address;
+use App\Models\PaymentMethod;
+use App\Models\Basket;
 use App\Models\Order;
 use App\Models\Transaction;
 use App\Models\Shipping;
-use App\Models\Basket;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class CheckoutController extends Controller
 {
-    // Display the checkout page
-    public function index() {
-        // Check if the user is logged in
+    public function index()
+    {
+        // 1) Ensure user is logged in
         if (!Auth::check()) {
-            // Redirect to login page if not logged in
-            return redirect('/login');
+            return redirect()->route('login.show')->with('message', 'Please login first.');
         }
 
-        // Get the user's basket items
-        $basket = Basket::all()->where('user_id', Auth::id());
+        // 2) Gather user’s saved addresses, payment methods, and basket items
+        $addresses = Address::where('user_id', Auth::id())->get();
+        $paymentMethods = PaymentMethod::where('user_id', Auth::id())->get();
+        $basketItems = Basket::with('product')->where('user_id', Auth::id())->get();
 
-        // Redirect to basket page if the basket is empty
-        if ($basket->isEmpty()) {
-            return redirect('/basket');
+        // 3) If basket is empty, redirect to basket page
+        if ($basketItems->isEmpty()) {
+            return redirect('/basket')->with('error', 'Your basket is empty.');
         }
 
-        // Return the checkout view
-        return view('pages.checkout');
+        // 4) Render checkout view with the user’s data
+        return view('pages.checkout', compact('addresses', 'paymentMethods', 'basketItems'));
     }
 
-    // Handle the checkout process
     public function checkout(Request $request)
-    {
-        // Begin a database transaction
-        DB::beginTransaction();
+{
+    DB::beginTransaction();
+    try {
+        // 1) SHIPPING ADDRESS
+        if ($request->shipping_address === 'new') {
+            // new shipping
+            $shippingFullName = $request->input('shipping_full_name');
+            $shippingAddress  = $request->input('shipping_address_line1');
+            $shippingCity     = $request->input('shipping_city');
+            $shippingPostcode = $request->input('shipping_post_code');
+            $shippingPhone    = $request->input('shipping_phone');
 
-        try {
-
-            // get values from the request
-
-            $values = $request->only([
-                'region', 'full_name', 'address', 'postcode', 'phone',
-                'card_name', 'card_number', 'expiry_date', 'cvv', 'discount_code'
-            ]);
-
-            // get relevent basket items
-            $basket = Basket::with('product')->where('user_id', Auth::id())->get();
-
-            // get the total price
-
-            $total = $basket->sum(fn($item) => $item->getTotalPrice());
-
-            // check if there is a discount code, if so apply it
-            if ($values['discount_code']) {
-                $discount = DiscountCode::where('code', $values['discount_code'])->first();
-                if ($discount && $discount->isValid()) {
-                    $total = $discount->applyDiscount($total);
-                }
-            }
-            // TODO: test if the above works after checkout page is reworked
-
-            // create a new order
-            $order = Order::create([
-                'user_id' => Auth::id(),
-                'order_date' => now(),
-                'order_status' => 'pending',
-                'order_total_price' => $total,
-                'shipping_id' => null,
-            ]);
-
-            // create a transaction for the order
-            $transaction = Transaction::create([
-                'transaction_amount' => $total,
-                'transaction_info' => 'purchase',
-                'transaction_status' => 'completed',
-            ]);
-
-            // link the transaction to the order
-            $order->transaction_id = $transaction->id;
-            $order->save();
-
-            // create the shipping item
-            $shipping = Shipping::create([
-                'shipping_date' => now(),
-                'delivery_date' => null,
-                'home_address' => "{$values['full_name']}, {$values['address']}, {$values['postcode']}",
-                'tracking_number' => rand(100000, 999999),
-            ]);
-
-            // link shipping to order
-            $order->shipping_id = $shipping->id;
-            $order->save();
-            // convert every basket item into and individualOrder item
-            foreach ($basket as $basketItem) {
-                Log::info('Processing basket item:', $basketItem->toArray());
-                if (!$basketItem->product || !$basketItem->product->price) {
-                    throw new \Exception('Basket item product or price is missing');
-                }
-
-                IndividualOrder::create([
-                    'order_id' => $order->id,
-                    'product_id' => $basketItem->product_id,
-                    'quantity' => $basketItem->quantity,
-                    'price' => $basketItem->product->price,
-                    'size' => $basketItem->size,
+            if ($request->has('save_new_address')) {
+                Address::create([
+                    'user_id'       => Auth::id(),
+                    'full_name'     => $shippingFullName,
+                    'address_line1' => $shippingAddress,
+                    'town_city'     => $shippingCity,
+                    'post_code'     => $shippingPostcode,
+                    'phone_number'  => $shippingPhone,
                 ]);
             }
+        } else {
+            // existing shipping
+            $address = Address::where('user_id', Auth::id())
+                ->find($request->shipping_address);
 
-            foreach ($basket as $basketItem) {
-                // to reduce the stock level of hte given item
-                $product = $basketItem->product;
-                $product['stock'] = $product['stock'] - $basketItem->quantity;
-                // add to popularity count (5 for each order)
-                $product['popularity'] = $product['popularity'] + (5 * $basketItem->quantity);
-                // save the product
-                $product->save();
-                // then delete the item from the basket
-                $basketItem->delete();
+            if (!$address) {
+                throw new \Exception('Invalid shipping address.');
             }
 
-            // commit to db
-
-            DB::commit();
-
-            // send the order confirmation email
-            $mailer = new OrderEmailer();
-            $mailer->sendOrderConfirmation($order);
-            // actually delete the emailer after sending
-            unset($mailer);
-
-            return view('pages.success')->with(['orderNumber' => $order['id'], 'trackingNumber' => $shipping['tracking_number']]);
-
-        }catch (\Exception $e) {
-            // Rollback the transaction in case of an error
-            DB::rollBack();
-
-            // Log the error for debugging
-            Log::error('Checkout error: ' . $e->getMessage(), [
-                'file' => $e->getFile(),
-                'line' => $e->getLine(),
-                'trace' => $e->getTraceAsString()
-            ]);
-
-            // Redirect back with an error message
-            return redirect()->route('checkout.checkout')->withErrors('An error occurred. Please try again later.');
-
+            $shippingFullName = $address->full_name;
+            $shippingAddress  = $address->address_line1;
+            $shippingCity     = $address->town_city;
+            $shippingPostcode = $address->post_code;
+            $shippingPhone    = $address->phone_number;
         }
 
+        // 2) BILLING ADDRESS
+        if ($request->has('same_as_shipping') && $request->same_as_shipping === 'on') {
+            $billingFullName = $shippingFullName;
+            $billingAddress  = $shippingAddress;
+            $billingCity     = $shippingCity;
+            $billingPostcode = $shippingPostcode;
+        } else {
+            $billingFullName = $request->input('billing_full_name');
+            $billingAddress  = $request->input('billing_address');
+            $billingCity     = $request->input('billing_city');
+            $billingPostcode = $request->input('billing_postcode');
+        }
+
+        // 3) PAYMENT METHOD
+        if ($request->payment_method === 'new') {
+            $paymentCardName   = $request->input('payment_card_name');
+            $paymentCardNumber = $request->input('payment_card_number');
+            $paymentExpiry     = $request->input('payment_expiry');
+            $paymentCVV        = $request->input('payment_cvv');
+
+            // parse "MM/YY"
+            if (strpos($paymentExpiry, '/') !== false) {
+                [$expMonth, $expYear] = explode('/', $paymentExpiry);
+                $expMonth = trim($expMonth);
+                $expYear  = trim($expYear);
+            } else {
+                throw new \Exception('Invalid expiry format. Use MM/YY');
+            }
+
+            if ($request->has('save_new_payment')) {
+                PaymentMethod::create([
+                    'user_id'      => Auth::id(),
+                    'card_name'    => $paymentCardName,
+                    'card_number'  => $paymentCardNumber,
+                    'expiry_month' => $expMonth,
+                    'expiry_year'  => $expYear,
+                    'cvv'          => $paymentCVV,
+                ]);
+            }
+        } else {
+            $paymentMethod = PaymentMethod::where('user_id', Auth::id())
+                ->find($request->payment_method);
+
+            if (!$paymentMethod) {
+                throw new \Exception('Invalid payment method.');
+            }
+        }
+
+        // 4) BASKET NOT EMPTY
+        $basket = Basket::with('product')->where('user_id', Auth::id())->get();
+        if ($basket->isEmpty()) {
+            throw new \Exception('Basket is empty.');
+        }
+
+        // 5) OUT-OF-STOCK CHECK
+        $outOfStockItems = [];
+        foreach ($basket as $item) {
+            if (!$item->product || $item->product->stock < $item->quantity) {
+                $outOfStockItems[] = $item;
+            }
+        }
+        if (!empty($outOfStockItems)) {
+            DB::rollBack();
+            return view('pages.checkout_out_of_stock', compact('outOfStockItems'));
+        }
+
+        // 6) CALCULATE SUBTOTAL
+        $total = $basket->sum(fn($item) => $item->getTotalPrice());
+
+        // 6b) ADD SHIPPING COST
+        $shippingOption = $request->input('shipping_option', 'standard'); 
+        $shippingCost   = 4.49; // default standard
+        if ($shippingOption === 'next_day') {
+            $shippingCost = 6.49;
+        } elseif ($shippingOption === 'priority') {
+            $shippingCost = 5.49;
+        }
+        $total += $shippingCost;
+
+        // 7) DISCOUNT CODE (server-validated)
+        if ($request->filled('discount_code') && $request->input('apply_discount') === '1') {
+            $discount = DiscountCode::where('code', $request->discount_code)->first();
+
+            if (!$discount || !$discount->isValid()) {
+                DB::rollBack();
+                return redirect()->route('checkout.checkout')
+                    ->withErrors('Invalid or expired discount code.');
+            } else {
+                $total = $discount->applyDiscount($total);
+            }
+        }
+
+        // 8) CREATE ORDER
+        $order = Order::create([
+            'user_id'           => Auth::id(),
+            'order_date'        => now(),
+            'order_status'      => 'pending',
+            'order_total_price' => $total, // final total with shipping + discount
+            'shipping_id'       => null,
+        ]);
+
+        // 9) CREATE TRANSACTION
+        $transaction = Transaction::create([
+            'transaction_amount' => $total,
+            'transaction_info'   => 'purchase',
+            'transaction_status' => 'completed',
+        ]);
+        $order->transaction_id = $transaction->id;
+        $order->save();
+
+        // 10) CREATE SHIPPING RECORD
+        $shipping = Shipping::create([
+            'shipping_date'   => now(),
+            'delivery_date'   => null,
+            'home_address'    => "{$shippingFullName}, {$shippingAddress}, {$shippingCity}, {$shippingPostcode}",
+            'tracking_number' => rand(100000, 999999),
+        ]);
+        $order->shipping_id = $shipping->id;
+        $order->save();
+
+        // 11) CREATE INDIVIDUAL ORDER ITEMS
+        foreach ($basket as $basketItem) {
+            if (!$basketItem->product || !$basketItem->product->price) {
+                throw new \Exception('Basket item product or price is missing.');
+            }
+
+            IndividualOrder::create([
+                'order_id'   => $order->id,
+                'product_id' => $basketItem->product_id,
+                'quantity'   => $basketItem->quantity,
+                'price'      => $basketItem->product->price,
+                'size'       => $basketItem->size,
+            ]);
+        }
+
+        // 12) UPDATE STOCK & CLEAR BASKET
+        foreach ($basket as $basketItem) {
+            $product = $basketItem->product;
+            $product->stock -= $basketItem->quantity;
+            $product->popularity += (5 * $basketItem->quantity);
+            $product->save();
+            $basketItem->delete();
+        }
+
+        DB::commit();
+
+        // CONFIRMATION EMAIL
+        $mailer = new OrderEmailer();
+        $mailer->sendOrderConfirmation($order);
+        unset($mailer);
+
+        // SUCCESS PAGE
+        return view('pages.success')->with([
+            'orderNumber'    => $order->id,
+            'trackingNumber' => $shipping->tracking_number,
+            'finalTotal'     => $total, // If you want to show final total in success page
+        ]);
+
+    } catch (\Exception $e) {
+        DB::rollBack();
+        Log::error('Checkout error: ' . $e->getMessage(), [
+            'file'  => $e->getFile(),
+            'line'  => $e->getLine(),
+            'trace' => $e->getTraceAsString()
+        ]);
+
+        return redirect()->route('checkout.checkout')
+            ->withErrors('An error occurred: ' . $e->getMessage());
     }
+}
 }
