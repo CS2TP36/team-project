@@ -130,6 +130,7 @@ class CheckoutController extends Controller
                 // to reduce the stock level of hte given item
                 $product = $basketItem->product;
                 $product->stock -= $basketItem->quantity;
+                $product->popularity += (5 * $basketItem->quantity);
                 $product->save();
                 // then delete the item from the basket
                 $basketItem->delete();
