@@ -18,7 +18,7 @@
                             <form action="{{ route('basket.remove', $item->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Remove</button>
+                                <button id="remove-btn" type="submit">Remove</button>
                             </form>
                         </div>
                         <!-- Contains the product name, price and size -->

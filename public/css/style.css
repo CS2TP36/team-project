@@ -14,10 +14,13 @@ body {
     color: var(--text-colour);
 
     button {
-        border: none;
-        cursor: pointer;
+        font-size: 1em;
         background-color: var(--btn-bg-colour);
         color: var(--btn-text-colour);
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
     button:hover {
@@ -172,23 +175,6 @@ main {
 
 .dark-mode #theme-toggle img:last-child {
     display: block;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-colour);
-    color: var(--text-colour);
-
-    button {
-        border: none;
-        cursor: pointer;
-        background-color: var(--btn-bg-colour);
-        color: var(--btn-text-colour);
-    }
-
-    button:hover {
-        background-color: var(--alt-bh-colour);
-    }
 }
 
 /*CSS for Account Page*/
@@ -457,8 +443,6 @@ body {
 
         button {
             width: 250px;
-            padding: 10px;
-            font-size: 1em;
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -528,8 +512,6 @@ body {
         button {
             width: 100%;
             min-width: 320px;
-            padding: 10px;
-            font-size: 1em;
         }
 
         .error-messages ul li {
@@ -741,6 +723,10 @@ body {
                 padding: 5px;
                 margin-bottom: 10px;
             }
+
+            #remove-btn {
+                font-size: 0.8em;
+            }
         }
     }
 
@@ -751,8 +737,6 @@ body {
 
         button {
             width: 250px;
-            padding: 10px;
-            cursor: pointer;
             margin-bottom: 10px;
         }
 
@@ -837,6 +821,10 @@ body {
                     padding: 5px;
                     margin-bottom: 10px;
                 }
+
+                #remove-btn {
+                    font-size: 0.8em;
+                }
             }
 
             .wishlist-item-details {
@@ -851,8 +839,7 @@ body {
 
             .add-basket {
                 button {
-                    width: 100px;
-                    padding: 5px;
+                    width: 150px;
                     margin-bottom: 10px;
                 }
             }
@@ -2594,8 +2581,6 @@ footer a:hover {
             button {
                 width: 100%;
                 min-width: 320px;
-                padding: 10px;
-                cursor: pointer;
             }
 
             a {
@@ -2626,11 +2611,6 @@ footer a:hover {
                 background-color: #F9D9D9 !important;
                 outline: none;
             }
-
-            button {
-                margin-top: 10px;
-            }
-
         }
 
         .new-customers {
@@ -3280,9 +3260,8 @@ label {
 
         button {
             width: 50px;
+            padding: 5px;
             height: 50px;
-            padding: 10px;
-            cursor: pointer;
             margin-bottom: 10px;
         }
     }
@@ -3290,8 +3269,7 @@ label {
     .purchase-options {
         button {
             width: 500px;
-            padding: 10px;
-            cursor: pointer;
+            padding: 5px;
             margin-bottom: 10px;
         }
     }
@@ -3404,8 +3382,6 @@ label {
                 font-size: 10px;
                 width: 20px;
                 height: 50px;
-                padding: 10px;
-                cursor: pointer;
                 margin-bottom: 10px;
             }
         }
@@ -3414,8 +3390,6 @@ label {
             button {
                 font-size: 10px;
                 width: 400px;
-                padding: 10px;
-                cursor: pointer;
                 margin-bottom: 10px;
             }
         }
@@ -3486,9 +3460,6 @@ label {
 
     button {
         width: 80px;
-        padding: 10px;
-        font-size: 1em;
-        cursor: pointer;
         margin-bottom: 10px;
     }
 
@@ -3709,9 +3680,6 @@ label {
     button {
         width: 100%;
         min-width: 320px;
-        padding: 10px;
-        font-size: 1em;
-        cursor: pointer;
     }
 }
 
@@ -4031,9 +3999,6 @@ label {
 
     button {
         width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 16px;
         margin-top: 15px;
         align-self: center;
     }
@@ -4069,9 +4034,6 @@ label {
 
     button {
         width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 16px;
         margin-top: 15px;
         align-self: center;
     }
