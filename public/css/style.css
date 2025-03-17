@@ -24,6 +24,19 @@ body {
         background-color: var(--alt-bh-colour);
     }
 
+    input[type="text"], input[type="email"], input[type="password"],  input[type="tel"] {
+        font-size: 1em;
+        min-width: 320px;
+        color: var(--input-text-colour);
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+        /*Disables default browser outline on focus*/
+        outline: none;
+    }
+
     input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,  input[type="tel"]:focus{
         box-shadow: 0 0 10px var(--box-shadow-color);
         border-color: var(--alt-border-color);
@@ -438,19 +451,8 @@ body {
         max-width: 600px;
         margin: 0 auto;
 
-        form {
-            input {
-                width: 100%;
-                min-width: 320px;
-                font-size: 1em;
-            }
-
-            input[type="text"], input[type="email"] {
-                border: 1px solid var(--border-color);
-                padding: 10px;
-                /*Disables default browser outline on focus*/
-                outline: none;
-            }
+        form input[type="text"], input[type="email"] {
+            width: 100%;
         }
 
         button {
@@ -519,20 +521,8 @@ body {
             margin-bottom: 15px;
         }
 
-        form {
-            input {
-                width: 95.5%;
-                min-width: 320px;
-                font-size: 1em;
-                margin-bottom: 10px;
-
-                input[type="password"] {
-                    border: 1px solid var(--border-color);
-                    padding: 10px;
-                    /*Disables default browser outline on focus*/
-                    outline: none;
-                }
-            }
+        form input[type="password"] {
+            width: 95.5%;
         }
 
         button {
@@ -2597,20 +2587,8 @@ footer a:hover {
                 margin-bottom: 15px;
             }
 
-            form {
-                input {
-                    width: 95.5%;
-                    min-width: 320px;
-                    font-size: 1em;
-                    margin-bottom: 10px;
-                }
-
-                input[type="email"], input[type="password"] {
-                    border: 1px solid var(--border-color);
-                    padding: 10px;
-                    /*Disables default browser outline on focus*/
-                    outline: none;
-                }
+            form input[type="email"], input[type="password"] {
+                width: 95.5%;
             }
 
             button {
@@ -3546,13 +3524,8 @@ label {
     input[type="text"], 
     textarea {
         width: 100%;
-        min-width: 300px;
         max-width: 1200px;
-        color: var(--input-text-colour);
-        border: 1px solid var(--text-colour);
         padding: 10px;
-        outline: none;
-        /*Disables default browser outline on focus*/
     }
 
     input[type="text"]:focus,
@@ -3729,20 +3702,8 @@ label {
         margin-bottom: 15px;
     }
 
-    form {
-        input {
-            width: 95.5%;
-            min-width: 320px;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-
-        input[type="text"], form input[type="email"] {
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            /*Disables default browser outline on focus*/
-            outline: none;
-        }
+    form input[type="text"], form input[type="email"] {
+        width: 95.5%;
     }
 
     button {
@@ -3903,11 +3864,6 @@ label {
 
     input[type="text"] {
         width: 95.5%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        font-size: 16px;
     }
 
     .container {
@@ -4064,11 +4020,6 @@ label {
 
     input[type="text"], input[type="tel"] {
         width: 95.5%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        font-size: 16px;
     }
 
     .checkbox-container {
@@ -4110,20 +4061,10 @@ label {
 
     input[type="text"], input[type="password"] {
         width: 96.5%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        font-size: 16px;
     }
 
     input[type="month"] {
         width: 25.5%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        font-size: 16px;
     }
 
     button {
