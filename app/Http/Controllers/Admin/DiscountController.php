@@ -39,4 +39,24 @@ class DiscountController extends Controller
         $discount->save();
         return redirect('/admin/account')->with('message', 'Discount code added');
     }
+
+    public function ajaxCheckDiscount(Request $request)
+    {
+        $code = $request->query('code'); // e.g. ?code=HELLO10
+        $discount = DiscountCode::where('code', $code)->first();
+
+        // If code not found or invalid, return JSON with valid=false
+        if (!$discount || !$discount->isValid()) {
+            return response()->json([
+                'valid' => false,
+                'error' => 'Invalid or expired code.'
+            ], 200);
+        }
+
+        // Otherwise, return the exact discount percentage
+        return response()->json([
+            'valid'       => true,
+            'percent_off' => $discount->percent_off,
+        ], 200);
+    }
 }

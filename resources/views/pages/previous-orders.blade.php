@@ -3,17 +3,18 @@
 @use(App\Http\Controllers\PreviousOrdersController)
 @use(Illuminate\Support\Facades\Auth)
 @use(App\Models\Shipping)
+
 @section("title", "Previous Orders")
 @section("content")
-    <!-- main container -->
     <div id="previous-orders">
         <h1>My Previous Orders</h1>
-        @if($orders->count() > 0)
 
+        @if($orders->count() > 0)
             <!-- Order list section -->
             <div class="orders-list" id="orders-list">
                 @include('reusables.previous-orders')
             </div>
+
             @if ($orders->hasMorePages())
                 <button id="load-more">Load more orders</button>
             @endif
@@ -24,28 +25,29 @@
 @endsection
 
 <script>
-    // the script for loading more pages of orders (need to do it on page as it will use some blade variables)
-    // first wait for the page to load
+    // Script for "Load more" functionality
     document.addEventListener('DOMContentLoaded', function () {
-        // get the load more button
-        const loadMore = document.getElementById('load-more');
-        // add an event listener to the button
-        loadMore.addEventListener('click', function () {
-            // get the current page number using parseInt to convert it to a number
+        const loadMoreBtn = document.getElementById('load-more');
+        if (!loadMoreBtn) return; // If there's no button, do nothing
+
+        loadMoreBtn.addEventListener('click', function () {
+            // Determine current page from data-page or default to page 2
             let pageNo = parseInt(this.getAttribute('data-page')) || 2;
-            // make a fetch request to the server to get the next set of orders
+
+            // Fetch next set of orders via AJAX
             fetch(`/orders/more?page=${pageNo}`, {
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
                 }
-                // put hte response into the page
-            }).then(response => response.text()).then(html => {
-                // put received html inside the orders list after the current orders
+            })
+            .then(response => response.text())
+            .then(html => {
+                // Append the newly loaded orders to the existing list
                 document.getElementById('orders-list').insertAdjacentHTML('beforeend', html);
-                // increment the page number
+                // Increment page number for next time
                 this.setAttribute('data-page', pageNo + 1);
-                // catch errors
-            }).catch(error => console.error(error));
+            })
+            .catch(error => console.error('Error loading more orders:', error));
         });
     });
 </script>

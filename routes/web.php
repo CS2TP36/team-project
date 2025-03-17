@@ -135,6 +135,9 @@ Route::get('/account/contact-details', [AccountController::class, 'show'])
 
 Route::post('/basket/remove-out-of-stock', [BasketController::class, 'removeOutOfStock'])->name('basket.removeOutOfStock');
 
+// routes/web.php
+Route::get('/discount-validate', [DiscountController::class, 'ajaxCheckDiscount'])->name('discount.validate');
+
 // Address routes (more specific routes first!)
 Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
 Route::get('/account/addresses/create', [AddressController::class, 'create'])->name('address.create');
