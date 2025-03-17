@@ -26,6 +26,7 @@
                     <legend>Shipping Address</legend>
 
                     @if($addresses->count() > 0)
+                        <!-- If user has saved addresses, show them + "Use a new address" -->
                         <div class="form-group">
                             <p>Select a saved address:</p>
                             @foreach($addresses as $address)
@@ -72,8 +73,12 @@
                             </div>
                         </fieldset>
                     @else
+                        <!-- No saved addresses: hidden radio for 'new' so JS sees shipping_address="new" -->
                         <p>You have no saved addresses. Please enter a new address below:</p>
-                        <input type="hidden" name="shipping_address" value="new">
+                        <label style="display:none;">
+                            <input type="radio" name="shipping_address" value="new" checked>
+                        </label>
+
                         <fieldset id="new-shipping-fields" style="margin-top:1em;">
                             <legend>New Shipping Address</legend>
                             <div class="form-group">
@@ -164,7 +169,6 @@
                                     {{ $method->card_name }} - **** **** **** {{ substr($method->card_number, -4) }}
                                 </label>
                             @endforeach
-
                             <label style="display:block; margin-top:1em;">
                                 <input type="radio" name="payment_method" value="new" required>
                                 Use a new payment method
@@ -197,8 +201,13 @@
                             </div>
                         </fieldset>
                     @else
+                        <!-- No saved payments: hidden radio ensures "new" is checked -->
                         <p>You have no saved payment methods. Please enter a new method below:</p>
-                        <input type="hidden" name="payment_method" value="new">
+
+                        <label style="display:none;">
+                            <input type="radio" name="payment_method" value="new" checked>
+                        </label>
+
                         <fieldset id="new-payment-fields" style="margin-top:1em;">
                             <legend>New Payment Method</legend>
                             <div class="form-group">
@@ -413,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6) Discount Calculator
+    // 6) Discount Code logic (if you do live discount calls)
     const applyDiscountCheckbox = document.getElementById('apply-discount');
     const discountCodeField = document.getElementById('discount-code-field');
     const discountCodeInput = document.getElementById('discount_code');
@@ -430,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7) On final Next from discount -> fill hidden fields
+    // 7) On final Next from discount -> fill hidden fields for form submission
     const finalNext = document.querySelector('[data-next="order-summary-section"]');
     finalNext.addEventListener('click', () => {
         // shipping address
@@ -479,11 +488,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('discount_code_hidden').value = discountCodeInput.value;
         }
 
-        // Recalc final total
+        // Recalc final total for the summary
         updateGrandTotal();
     });
 
-    // 8) Shipping cost & final total updates (front-end)
+    // 8) Shipping cost & final total updates (front-end only)
     const shippingOptionRadios = document.querySelectorAll('input[name="shipping_option"]');
     shippingOptionRadios.forEach(radio => {
         radio.addEventListener('change', () => {
@@ -492,11 +501,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
     async function fetchExactDiscount() {
+        // OPTIONAL: if you do live discount retrieval
         const code = discountCodeInput.value.trim();
         if (!applyDiscountCheckbox.checked || !code) {
-            // No discount if checkbox isn't checked or code is empty
             document.getElementById('discount-amount').textContent = '0.00';
             updateGrandTotal();
             return;
@@ -508,24 +516,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await res.json();
 
             if (!data.valid) {
-                // If invalid, show discount = 0
                 document.getElementById('discount-amount').textContent = '0.00';
             } else {
-                // Data contains the exact percent_off
                 const percentOff = parseFloat(data.percent_off) || 0;
                 const subtotal = parseFloat(document.getElementById('subtotal-price').textContent) || 0;
-
                 const discountValue = subtotal * (percentOff / 100);
                 document.getElementById('discount-amount').textContent = discountValue.toFixed(2);
             }
         } catch (error) {
             console.error('Error fetching discount info:', error);
-            // If error, reset discount to 0
             document.getElementById('discount-amount').textContent = '0.00';
         }
         updateGrandTotal();
     }
-
 
     function updateShippingCost() {
         const selected = document.querySelector('input[name="shipping_option"]:checked');
@@ -551,7 +554,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const grand = (subtotal + shipping - discount).toFixed(2);
         document.getElementById('grand-total').textContent = grand;
     }
-
 });
 </script>
 @endsection

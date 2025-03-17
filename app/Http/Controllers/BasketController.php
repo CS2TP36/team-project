@@ -11,20 +11,21 @@ use Illuminate\Support\Facades\Auth;
 class BasketController extends Controller
 {
     // Show basket items
-    public function index(Request $request)
+    public function index()
     {
-        $baskets = Basket::query();
-    
-        if ($request->user()) {
-            $baskets->where('user_id', $request->user()->id);
-        } else {
-            $baskets->where('session_id', $request->session()->getId());
+        // Check if user is logged in
+        if (!Auth::check()) {
+            return redirect()->route('login.show')
+                ->with('error', 'You must be logged in to view your basket. Please log in or create an account.');
         }
-    
-        $basketItems = $baskets->with('product')->get();
-    
-        $total = $basketItems->sum(fn($item) => $item->product->price * $item->quantity);
-    
+
+        // Fetch basket items for this user
+        $basketItems = Basket::with('product')->where('user_id', Auth::id())->get();
+
+        // Calculate total
+        $total = $basketItems->sum(fn($item) => $item->getTotalPrice());
+
+        // Pass both items and total to the blade
         return view('pages.basket', compact('basketItems', 'total'));
     }
     
