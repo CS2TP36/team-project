@@ -133,6 +133,8 @@ Route::get('/account/contact-details', [AccountController::class, 'show'])
     ->name('account.contact-details')
     ->defaults('page', 'details');
 
+Route::post('/basket/remove-out-of-stock', [BasketController::class, 'removeOutOfStock'])->name('basket.removeOutOfStock');
+
 // Address routes (more specific routes first!)
 Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
 Route::get('/account/addresses/create', [AddressController::class, 'create'])->name('address.create');

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product; // Pull Products stored in product model 
 use App\Models\Basket; // Pulls the Basket table 
 use App\Models\WishlistItem;//Pulls items from the Wishlist 
-
+use Illuminate\Support\Facades\Auth;
 
 class BasketController extends Controller
 {
@@ -102,6 +102,16 @@ class BasketController extends Controller
         return redirect()->route('basket.index')->with('success', 'Basket updated!');
     }
     
+    public function removeOutOfStock(Request $request)
+    {
+        $basketItems = Basket::with('product')->where('user_id', Auth::id())->get();
+        foreach ($basketItems as $item) {
+            if (!$item->product || $item->product->stock < $item->quantity) {
+                $item->delete();
+            }
+        }
+        return redirect()->route('basket.index')->with('message', 'Out-of-stock items have been removed from your basket.');
+    }
 
     // Remove item from basket
     public function remove($id)
