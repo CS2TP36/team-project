@@ -506,6 +506,7 @@ main {
 
         form input[type="password"] {
             width: 95.5%;
+            margin-bottom: 10px;
         }
 
         button {
