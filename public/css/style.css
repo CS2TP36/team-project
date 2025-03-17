@@ -3598,6 +3598,14 @@ label {
     animation: fadein 1s ease-out forwards;
 }
 
+
+#sponsor-banner {
+    width: 100%;
+    position: relative;
+    max-height: 600px;
+    animation: fadein 1s ease-out forwards;
+}
+
 #sponsor-banner-container {
     position: relative;
     width: 100%;
@@ -3609,17 +3617,35 @@ label {
 #sponsor-text-banner {
     position: absolute;
     left: 10%;
-    transform: translate(-50%, -50%);
     color: #000;
-    font-family: Impact, Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 1.3rem;
     animation: fadeleft 1s ease-out forwards;
+    font-weight: bold;
 
     h2 {
         font-size: 80px;
-        margin-bottom: 5px;
+        margin-bottom: 50px;
     }
 }
+
+
+
+
+#sponsor-parallax-info {
+    text-align: left;
+    position: absolute;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 22px;
+    top: 15%;
+    left: 50%;
+    background-color: rgba(62, 71, 102, 0.377);
+    padding-bottom: 60px;
+    line-break: 1.8;
+}
+
 
 #sponsor-logo {
     width: 200px;
@@ -3629,6 +3655,16 @@ label {
 #sponsor-pic {
     width: 400px;
     height: 400px;
+}
+
+#sponsor-list {
+    flex-direction: column;
+    list-style: none;
+}
+
+#athlete-pic {
+    height: 200px;
+    width: 200px;
 }
 
 #sponsor-text {
@@ -3643,12 +3679,30 @@ label {
     padding-bottom: 50px;
     padding-right: 50px;
     padding-left: 50px;
-    font-size: 20px;
+    font-size: 1.1rem;
     flex-direction: row;
     line-height: 1.7;
     background-color: #d5d4d4;
     color: #000;
 
+}
+
+#sponsor-join-text {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-left: 500px;
+    padding-right: 500px;
+    margin-top: 80px;
+    font-size: 20px;
+    flex-direction: row;
+    line-height: 1.7;
+    background-color: #d5d4d4;
+    height: auto;
+    color: #000;
+        ul {
+            list-style: none;
+        }
 }
 
 #second-sponsor-text {
@@ -3670,46 +3724,9 @@ label {
     color: #000;
 }
 
-#sponsor-list {
-    flex-direction: column;
-    list-style: none;
-}
 
-#athlete-pic {
-    height: 200px;
-    width: 200px;
-}
 
-#sponsor-join-text {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    padding-left: 500px;
-    padding-right: 500px;
-    margin-top: 80px;
-    font-size: 20px;
-    flex-direction: row;
-    line-height: 1.7;
-    background-color: #d5d4d4;
-    height: auto;
-    font-weight: bold;
-    color: #000;
-}
 
-#sponsor-parallax-info {
-    text-align: left;
-    position: absolute;
-    transform: translateX(-50%);
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    color: white;
-    padding: 22px;
-    top: 15%;
-    left: 50%;
-    background-color: rgba(62, 71, 102, 0.377);
-    padding-bottom: 60px;
-    line-break: 1.8;
-}
 
 
 /* CSS for Edit Address Page */

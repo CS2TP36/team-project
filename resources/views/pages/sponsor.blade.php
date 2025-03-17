@@ -60,10 +60,16 @@
             </div>
         </div>
 
+      
+
 
         <div id=catogery-divider>
             <p> Look at What Our Atheletes Say</p>
         </div>
+
+
+
+
 
         <div id=sponsor-review-container>
             <div id=sponsor-text>
@@ -77,19 +83,19 @@
 
             <div id=sponsor-text>
                 <img src="{{asset('images/justina.jpg')}}" id="athlete-pic">
-                <li><strong>Justina: </strong>I never imagined a brand could believe in me as much as SportsWear does.
+                <li><strong>Justina: </strong>"I never imagined a brand could believe in me as much as SportsWear does.
                     The partnership has elevated my career, offering me opportunities I never thought possible. The
                     clothing is not only stylish but performs incredibly well, and the team behind the brand is so
-                    supportive. I feel empowered every day!
+                    supportive. I feel empowered every day!"
                 </li>
             </div>
 
             <div id=sponsor-text>
                 <img src="{{asset('images/brandon.jpg')}}" id="athlete-pic">
-                <li><strong>Brandon: </strong>Joining the SportsWear family has been one of the best decisions I've
+                <li><strong>Brandon: </strong>"Joining the SportsWear family has been one of the best decisions I've
                     made. The gear is unmatched in quality, and the brand's commitment to helping athletes reach their
                     potential is evident in everything they do. It's not just about sponsorship; it's about building
-                    long-term relationships and growing together
+                    long-term relationships and growing together."
                 </li>
             </div>
 
@@ -107,4 +113,7 @@
             </ul>
         </div>
     </div>
+
+
+        
 @endsection
