@@ -45,7 +45,7 @@
                           placeholder="Write your message here..."required
                           style="resize: none"></textarea>
 
-                    <button type="submit" class="btn-send">Send Message</button>
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
@@ -53,10 +53,12 @@
         <div class="social-section">
             <h2>Check us Out we also listen here! </h2>
             <div class="social-icons">
-                <a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a>
-                <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a>
-                <a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a></li>
+                    <li><a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a></li>
+                    <li><a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a></li>
+                </ul>
             </div>
         </div>
     </div>
