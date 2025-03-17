@@ -60,7 +60,7 @@ Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add')
 Route::patch('/basket/update/{id}', [BasketController::class, 'update'])->name('basket.update');
 Route::delete('/basket/remove/{id}', [BasketController::class, 'remove'])->name('basket.remove');
 
-// wishlist stuff
+// Wishlist routes
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::post('/wishlist/add', [WishlistController::class, 'add'])->name('wishlist.add');
 Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
@@ -74,7 +74,7 @@ Route::get('/terms-conditions', function () {
     return view('pages.terms-conditions');
 });
 
-// previous orders routes
+// Previous orders routes
 Route::get('/orders', [PreviousOrdersController::class, 'show'])->name('orders.show');
 Route::get('/orders/more', [PreviousOrdersController::class, 'loadMore'])->name('orders.more');
 
@@ -94,6 +94,12 @@ Route::get('/admin/products/{product}/edit', [ProductManagementController::class
 Route::put('/admin/products/{product}', [ProductManagementController::class, 'update'])->name('admin.products.update');
 Route::delete('/admin/products/{product}', [ProductManagementController::class, 'destroy'])->name('admin.products.destroy');
 
+// Discount routes
+// GET route to show the discount code creation page.
+Route::get('/admin/discounts', [DiscountController::class, 'show'])->name('admin.discounts');
+// POST route to add a new discount code.
+Route::post('/admin/discounts', [DiscountController::class, 'add'])->name('admin.discounts.add');
+
 // Show the review page
 Route::get('/review/{productId}', [ReviewController::class, 'show'])->name('review.show');
 Route::post('/review/add', [ReviewController::class, 'add'])->name('review.add');
@@ -111,7 +117,7 @@ Route::get('/faq', function () {
     return view('pages.faq');
 });
 
-// show admin manage users
+// Show admin manage users
 Route::get('/admin/manage-users', [ManageUsersController::class, 'show'])->name('admin.manage-users');
 Route::patch('/admin/manage-users/{id}/update-role', [ManageUsersController::class, 'updateRole'])->name('admin.update-role');
 Route::delete('/admin/manage-users/{id}', [ManageUsersController::class, 'destroy'])->name('admin.delete-user');
@@ -121,7 +127,11 @@ Route::get('/search-preview/{searchTerm}', [ProductSearcher::class, 'searchPrevi
 Route::get('/account', [AccountController::class, 'show'])->name('account.page');
 Route::post('/account/update', [AccountController::class, 'update'])->name('account.update');
 Route::delete('/account/delete', [AccountController::class, 'destroy'])->name('account.delete');
-Route::get('/account/contact-details', [AccountController::class, 'showContactDetails'])->name('account.contact-details');
+
+// Changed the route for contact details to use the "show" method with a default parameter.
+Route::get('/account/contact-details', [AccountController::class, 'show'])
+    ->name('account.contact-details')
+    ->defaults('page', 'details');
 
 // Address routes (more specific routes first!)
 Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
@@ -138,7 +148,7 @@ Route::get('/account/payments/{id}/edit', [PaymentMethodController::class, 'edit
 Route::put('/account/payments/{id}', [PaymentMethodController::class, 'update'])->name('payment.update');
 Route::delete('/account/payments/{id}', [PaymentMethodController::class, 'destroy'])->name('payment.destroy');
 
-// careers page route
+// Careers page route
 Route::get('/careers', function () {
     return view('pages.careers');
 });

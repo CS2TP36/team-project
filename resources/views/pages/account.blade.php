@@ -7,7 +7,7 @@
             <!-- Grid to contain the "cards" -->
             <div class="grid">
                 <!-- Link to Contact Details Page -->
-                <a href="/account/details" class="card">
+                <a href="{{ route('account.contact-details') }}" class="card">
                     <img src="images/details-icon.png" alt="Details">
                     <div class="card-content">
                         <h2>Your Details</h2>
