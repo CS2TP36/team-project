@@ -35,15 +35,15 @@
                     <div class="line-break"></div>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
-                    ({{$product['stock']}} in stock)
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="{{ $product->stock }}" required>
+                    @if($product->stock > 0) ({{$product['stock']}} in stock) @else() (Out of stock) @endif
 
                     <p>Choose size:</p>
                     <button class="size-selection" type="button" onclick="selectSize('S')">S</button>
                     <button class="size-selection" type="button" onclick="selectSize('M')">M</button>
                     <button class="size-selection" type="button" onclick="selectSize('L')">L</button>
 
-                    <button type="submit">Add to Basket</button>
+                    <button type="submit" @if($product->stock < 1) disabled style="background-color: var(--alt-bh-colour)" @endif>Add to Basket</button>
 
                 </form>
 
