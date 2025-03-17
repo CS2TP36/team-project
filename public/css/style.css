@@ -27,7 +27,8 @@ body {
         background-color: var(--alt-bh-colour);
     }
 
-    input[type="text"], input[type="email"], input[type="password"],  input[type="tel"] {
+    input[type="text"], input[type="email"], input[type="password"],  input[type="tel"], textarea {
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 1em;
         min-width: 320px;
         color: var(--input-text-colour);
@@ -40,7 +41,7 @@ body {
         outline: none;
     }
 
-    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,  input[type="tel"]:focus{
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,  input[type="tel"]:focus, textarea:focus {
         box-shadow: 0 0 10px var(--box-shadow-color);
         border-color: var(--alt-border-color);
         outline: none;
@@ -452,8 +453,6 @@ main {
             background-color: var(--border-color);
             height: 2px;
         }
-
-        
     }
 }
 
@@ -1208,16 +1207,10 @@ footer a:hover {
 
 /* CSS for Contact Page */
 .contact-wrapper {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-colour);
-    color: var(--text-colour);
-    padding: 50px 20px;
     text-align: center;
-    border: 1px solid gold;
 }
 
 /* Header Section */
-
 .contact-header {
     margin-bottom: 30px;
 }
@@ -1245,7 +1238,7 @@ footer a:hover {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-    border: #007bff 1px solid;
+    /* border: #007bff 1px solid; */
 }
 
 
@@ -1291,39 +1284,27 @@ footer a:hover {
 .contact-form {
     flex: 1;
     min-width: 300px;
-    padding-left: 20px;
-}
+    /* border: 1px solid blue; */
 
-.contact-form h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--text-colour);
-}
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--text-colour);
+    }
 
-.input-box {
-    margin-bottom: 20px;
-}
+    label {
+        text-align: left;
+        font-weight: bold;
+        display: block;
+    }
 
-.input-box label {
-    text-align: left;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-}
+    input {
+        width: 95%;
+    }
 
-.input-box input,
-.input-box textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: var(--border-color);
-    font-size: 1rem;
-}
-
-.input-box textarea {
-    height: 100px;
-    resize: none;
+    textarea {
+        width: 95%;
+    }
 }
 
 /* Submit Button */
@@ -1349,6 +1330,7 @@ footer a:hover {
 
 .social-section {
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .social-section h2 {
@@ -3401,24 +3383,16 @@ label {
 /* CSS for Review Page*/
 
 .review {
-    font-family: Arial, Helvetica, sans-serif;
-    min-width: 33vw;
-    padding-left: 33vw;
-    padding-right: 33vw;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
-    color: var(--text-colour);
 }
 
 .review-form {
-    flex: 1;
+    /* flex: 1; */
     max-width: 750px;
     padding: 5px;
     margin: 0 auto;
 
     h1 {
-        color: var(--text-colour);
         font-size: 2em;
         min-width: 320px;
     }
@@ -3448,16 +3422,6 @@ label {
     input {
         width: 100%;
         min-width: 300px;
-        font-size: 1em;
-    }
-
-    textarea {
-        width: 100%;
-        max-width: 33vw;
-        border: 1px solid black;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        color: var(--text-colour);
     }
 
     button {
@@ -3473,8 +3437,7 @@ label {
     .review-line-break {
         margin-top: 10px;
         height: 2px;
-        /* outline: 1px solid var(--text-colour); */
-        background-color: var(--text-colour);
+        background-color: var(--border-color);
         width: 100%;
         min-width: 320px;
         max-width: 1200px;
@@ -3482,29 +3445,17 @@ label {
 
     .star {
         font-size: 3rem;
-        color: #ccc;
-        /* Default color (empty star) */
+        color: var(--border-color);
         cursor: pointer;
-        /* Indicate interactivity */
     }
 
-    .star:hover,
-    .star.active {
+    .star:hover, .star.active {
         color: gold;
-        /* Highlight on hover and when active */
     }
 
-    input[type="text"], 
-    textarea {
+    input[type="text"], textarea {
         width: 100%;
         max-width: 1200px;
-        padding: 10px;
-    }
-
-    input[type="text"]:focus,
-    textarea:focus {
-        box-shadow: 0 0 10px var(--box-shadow-color);
-        border-color: var(--alt-border-color);
     }
 }
 
