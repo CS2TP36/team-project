@@ -33,8 +33,7 @@
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" value="{{ old('email') }}" required
-                       placeholder="e.g., something@something.com">
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required placeholder="e.g., something@something.com">
                 <span class="error-message"></span>
             </div>
 
@@ -60,7 +59,6 @@
             <div class="form-group">
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" value="{{ old('address') }}" required>
-                <span id="addressError" class="error"></span>
             </div>
             
             <button type="submit">Sign Up</button>
