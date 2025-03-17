@@ -113,14 +113,14 @@
     <div id=home-review-container>
             <div id = home-reviews>
                 <img src="{{asset('images/review-1.png')}}" id=home-review-pic>
-                <h2> Will Raybould</h2>
+                <h2> Johnathan Raybould</h2>
                 <p id="star-0"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></p>
                 <h1> Great Peformance </h1>
                 <p>"I like to regularly have my morning runs to start my day off ,
-                    therefore I bought the Active Cool Compression Shirt . I must say
-                    the quality of the clothing has been absolutely fantastic . The
-                    performance is also top notch , providing me great posture while
-                    running ."
+                    therefore I bought the Active Cool Compression Shirt. I must say
+                    the quality of the clothing has been absolutely fantastic. The
+                    performance is also top notch, providing me great posture while
+                    running."
                 </p>
             </div>
             <div id = home-reviews> 

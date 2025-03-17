@@ -1949,7 +1949,6 @@ button {
 #text-banner {
     position: absolute;
     left: 10%;
-    transform: translate(-50%, -50%);
     color: var(--text-banner-colour);
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(50px, 8vw, 50px);
@@ -1974,7 +1973,6 @@ button {
     font-weight: bold;
     background-color: var(--alt-bg-colour);
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
 
 
     a {
@@ -2008,7 +2006,6 @@ button {
 
 #catogery-divider {
     font-family: Arial, Helvetica, sans-serif;
-    width: auto;
     margin-top: 75px;
     margin-bottom: 35px;
     text-align: center;
@@ -2041,7 +2038,6 @@ button {
     list-style-type: none;
     padding: 0;
     display: flex;
-    box-sizing: border-box;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -2099,7 +2095,7 @@ button {
 .featured-item-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+
     
 }
 
@@ -2207,8 +2203,6 @@ button {
 }
 
 #parallax-container {
-    margin: 0 auto;
-    width: 100%;
     height: 500px;
     overflow: hidden;
     position: relative;
@@ -2228,8 +2222,6 @@ button {
 #parallax-info {
     position: absolute;
     transform: translateX(-50%);
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
     color: white;
     text-align: center;
     padding: 22px;
@@ -2319,7 +2311,6 @@ button {
     box-shadow: 0 2px 5px #969696;
     width: 300px;
     text-align: center;
-    font-size: 16px;
     color: #000000;
     transition: color 0.2s ease-in, transform 0.2s ease-in;
     background-color: white;
@@ -3802,16 +3793,6 @@ label {
 
 }
 
-#guarantee-list {
-    max-width: 400px;
-    padding: 20px;
-
-    img {
-        width: 250px;
-        height: 250px;
-    }
-
-}
 
 #sustain-second-text {
     display: flex;
