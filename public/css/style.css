@@ -2431,7 +2431,6 @@ button {
         gap: 20px;
         padding-bottom: 20px;
         font-size: 15px;
-        padding-left: 0;
 
         ul {
             padding: 0;
@@ -3573,11 +3572,6 @@ label {
     font-size: 1.3rem;
     animation: fadeleft 1s ease-out forwards;
     font-weight: bold;
-
-    h2 {
-        font-size: 80px;
-        margin-bottom: 50px;
-    }
 }
 
 
