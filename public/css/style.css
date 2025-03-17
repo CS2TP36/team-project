@@ -3212,13 +3212,11 @@ label {
 /* CSS for the Product Page*/
 
 .product {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-
 }
 
 .left-container {
@@ -3238,7 +3236,6 @@ label {
 
 .right-container {
     flex: 1;
-    /* background-color: var(--alt-bg-colour); */
     max-width: 500px;
     max-height: 800px;
     margin-top: 20px;
@@ -3254,24 +3251,21 @@ label {
         margin-bottom: 20px;
     }
 
-    .size-selection {
-        max-width: 50px;
-        padding: 10px;
-
-        button {
-            width: 50px;
-            padding: 5px;
-            height: 50px;
-            margin-bottom: 10px;
-        }
-    }
-
     .purchase-options {
         button {
             width: 500px;
-            padding: 5px;
             margin-bottom: 10px;
         }
+
+        .size-selection {
+            width: 50px;
+            max-width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            padding: 0;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+        }   
     }
 
     nav ul {
