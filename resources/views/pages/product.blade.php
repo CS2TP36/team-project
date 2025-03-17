@@ -1,4 +1,5 @@
 @extends('layouts.page')
+@section('script', asset('js/displayRating.js'))
 @section('title')
     Product
 @endsection
@@ -97,21 +98,6 @@
                             <p id="star-{{ $loop->index }}">{{$review['rating']}}</p>
 
                             <script>
-                                function displayStarRating(rating, starId) {
-                                    const starContainer = document.getElementById(starId);
-                                    starContainer.innerHTML = '';
-
-                                    for (let i = 1; i <= 5; i++) {
-                                        const star = document.createElement('span');
-                                        if (i <= rating) {
-                                            star.textContent = '⭐';
-                                        } else {
-                                            star.textContent = '';
-                                        }
-                                        starContainer.appendChild(star);
-                                    }
-                                }
-
                                 displayStarRating(<?php echo $review['rating']; ?>, 'star-{{ $loop->index }}');
                             </script>
                         @endforeach
