@@ -1213,70 +1213,63 @@ footer a:hover {
 /* Header Section */
 .contact-header {
     margin-bottom: 30px;
-}
 
-.contact-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--text-colour);
-}
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--text-colour);
+    }
 
-.contact-header p {
-    font-size: 1.2rem;
-    opacity: 0.8;
+    p {
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
 }
 
 .contact-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: var(--card-bg-colour);
-    color: var(--text-colour);
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-    /* border: #007bff 1px solid; */
+    box-shadow: 0px 8px 20px var(--alt-bs-colour);
+    border: 1px solid green;
 }
-
 
 .contact-page-details {
     flex: 1;
     min-width: 300px;
-    padding-right: 20px;
-    font-family: Arial, sans-serif;
+    margin-right: 20px;
     width: 650px;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
     padding: 5px;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid orange;
 }
 
 .contact-us-brand {
     width: 250px;
     height: 250px;
-    margin-top: 50px;
-
+    margin-top: 25px;
 }
 
-.contact-page-details h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: var(--text-colour);
-}
+.contact-page-details {
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: var(--text-colour);
+    }
 
-.contact-page-details ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1.2rem;
-}
+    ul {
+        list-style: none;
+        padding: 0;
+        font-size: 1.2rem;
+    }
 
-.contact-page-details li {
-    margin-bottom: 10px;
+    li {
+        margin-bottom: 10px;
+    }
 }
 
 /* Contact Form */
@@ -1284,7 +1277,7 @@ footer a:hover {
 .contact-form {
     flex: 1;
     min-width: 300px;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
 
     h2 {
         font-size: 2rem;
@@ -1331,49 +1324,42 @@ footer a:hover {
 .social-section {
     margin-top: 40px;
     margin-bottom: 20px;
-}
 
-.social-section h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
-}
 
-.social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    /* Makes it circular */
-    background: rgba(255, 255, 255, 0.2);
-    /* Light background for contrast */
-    border: 3px solid white;
-    /* White border for definition */
-}
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        /* Makes it circular */
+        background: rgba(255, 255, 255, 0.2);
+        /* Light background for contrast */
+        border: 3px solid white;
+        /* White border for definition */
+    }
 
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-}
+     a:hover, img:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.4);
+    }
 
-/* Hover Effect */
-
-.social-icons a:hover {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.social-icons a:hover img {
-    transform: scale(1.2);
+    img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
 }
 
 /* Responsive */
