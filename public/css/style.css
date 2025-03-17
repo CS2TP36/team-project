@@ -1446,12 +1446,12 @@ button {
 
     #cta {
         text-align: center;
-        padding: 30px 20px;
-        background: #222;
+        padding: 10px;
+        /* padding: 30px 20px; */
         max-height: 250px;
         align-items: center;
         text-align: center;
-        color: var(--btn-text-colour);
+        border-top: 1px solid var(--border-color);
 
         a {
             display: inline-block;
