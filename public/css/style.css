@@ -1685,16 +1685,23 @@ button {
 }
 
 .error {
+    display: flex;
+    flex-direction: row;
     color: red;
     font-size: 25px;
     font-weight: bold;
     animation: fadein 1s ease-out forwards;
-    font-family: Arial, Helvetica, sans-serif;
     border: 1px solid red;
+    border-radius: 5px;
+    margin-top: 10px;
     width: 100%;
     justify-content: center;
     align-items: center;
 
+    img {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 .message {
