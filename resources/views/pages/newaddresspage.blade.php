@@ -3,7 +3,7 @@
 @section('script', asset('js/newaddress.js'))
 @section('content')
 <div class="new-address-container">
-    <form id="newaddressForm" action="{{ route('address.store') }}" method="POST">
+    <form id="newaddressForm" action="{{ route('address.store') }}" method="POST" novalidate>
         @csrf
         <h2>Add a New Address</h2>
         
