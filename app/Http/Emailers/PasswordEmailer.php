@@ -16,7 +16,7 @@ class PasswordEmailer extends Emailer
     {
         $to = $user->email;
         $subject = 'SportsWear - Password Reset';
-        $message = 'Hello ' . $user->name . ', your password has been reset. Your new password is: ' . $newpass . '        Please login and change your password as soon as possible.';
+        $message = 'Hello ' . $user->first_name . ', your password has been reset. Your new password is: ' . $newpass . '        Please login and change your password as soon as possible.';
         return $this->sendEmail($to, $subject, $message);
     }
 }
