@@ -2,17 +2,17 @@
 @section('title', 'Your Payments')
 @section('content')
 
-    <div class="accountpayments">
+    <div class="account-address-payment">
         <h1>Your Payment Methods</h1>
 
         <!-- Card to add a new card/payment method -->
-        <div class="payments">
-            <a href="{{ route('payment.create') }}" class="add-payment">+ Add Payment Method</a>
+        <div class="addresses-payments">
+            <a href="{{ route('payment.create') }}" class="add">+ Add Payment Method</a>
 
             <!-- Check if payment methods exist -->
                 @if(isset($payments) && $payments->isNotEmpty())
                 @foreach($payments as $paymentMethod)
-                    <div class="payment-card">
+                    <div class="card">
                         <strong>
                             **** **** **** {{ substr($paymentMethod->card_number, -4) }}
                             @if($paymentMethod->is_default) (Default) @endif

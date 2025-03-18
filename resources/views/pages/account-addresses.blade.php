@@ -2,16 +2,16 @@
 @section('title', 'Your Addresses')
 @section('content')
 
-    <div class="accountaddresses">
+    <div class="account-address-payment">
         <h1>Your Addresses</h1>
 
         <!-- card to add an address -->
-        <div class="addresses">
-            <a href="{{ route('address.create') }}" class="add-address">+ Add Address</a>
+        <div class="addresses-payments">
+            <a href="{{ route('address.create') }}" class="add">+ Add Address</a>
 
             @if(isset($addresses) && $addresses->isNotEmpty())
                 @foreach($addresses as $address)
-                    <div class="address-card">
+                    <div class="card">
                         <strong>
                             {{ $address->full_name }}
                             @if($address->is_default || (!$addresses->where('is_default', true)->count() && $loop->first))

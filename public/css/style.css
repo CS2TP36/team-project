@@ -2613,12 +2613,10 @@ button {
             width: 94%;
         }
     }
-
-
 }
 
-/* CSS for Address Page */
-.accountaddresses {
+/* CSS for Address and Payment Page */
+.account-address-payment {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
@@ -2630,12 +2628,12 @@ button {
         text-align: center;
     }
 
-    .addresses {
+    .addresses-payments {
         display: grid;
         gap: 20px;
     }
 
-    .add-address {
+    .add {
         color: var(--text-colour);
         font-size: 18px;
         text-align: center;
@@ -2651,11 +2649,11 @@ button {
         border-radius: 8px;
     }
 
-    .add-address:hover {
+    .add:hover {
         border-color: #999;
     }
 
-    .address-card {
+    .card {
         background-color: var(--card-bg-colour);
         border: 1px solid var(--border-color);
         padding: 15px;
@@ -2686,77 +2684,6 @@ button {
         text-decoration: underline;
     }
 }
-
-/* CSS for Payment Page */
-.accountpayments {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-
-    h1 {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .payments {
-        display: grid;
-        gap: 20px;
-    }
-
-    .add-payment {
-        color: var(--text-colour);
-        font-size: 18px;
-        text-align: center;
-        font-weight: bold;
-        border: 2px dashed var(--border-color);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        cursor: pointer;
-        min-height: 150px;
-        border-radius: 8px;
-    }
-
-    .add-payment:hover {
-        border-color: #999;
-    }
-
-    .payment-card {
-        background-color: var(--card-bg-colour);
-        border: 1px solid var(--border-color);
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px var(--alt-bs-colour);
-    }
-
-    .payment-card strong {
-        font-size: 16px;
-        display: block; /*cards take full width*/
-        margin-bottom: 5px;
-    }
-
-    .payment-card p {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-bottom: 10px;
-    }
-
-    .actions a {
-        font-size: 14px;
-        color: #007185;
-        text-decoration: none;
-        margin-right: 10px;
-    }
-
-    .actions a:hover {
-        text-decoration: underline;
-    }
-}
-
 
 /*CSS for Register Page*/
 .register {
