@@ -1680,7 +1680,6 @@ button {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 10px;
 }
 
 .error {
@@ -1694,6 +1693,7 @@ button {
     border: 1px solid yellow;
     border-radius: 5px;
     width: 100%;
+    margin-top: 10px;
 
     img {
         width: 45px;
@@ -1702,13 +1702,23 @@ button {
 }
 
 .message {
-    color: var(--text-colour);
+    display: flex;
+    flex-direction: row;
+    background-color: #D9F9D9;
+    color: black;
     font-size: 25px;
     font-weight: bold;
-    animation: fadein 1s ease-out forwards;
-    border: 1px solid rgb(0, 0, 0);
+    animation: fadein 1s ease-out forwards;     
+    border: 1px solid green;
+    border-radius: 5px;
     width: 100%;
+    margin-top: 10px;
 
+    img {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
 }
 
 @media (max-width: 868px) {

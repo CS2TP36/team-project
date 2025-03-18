@@ -29,7 +29,10 @@
     <!-- kind of want a messages/error section here -->
     <div class="message-area">
         @if(session('message'))
-            <div class="message">{{ session('message') }}</div>  
+            <div class="message">
+                <img src="{{ asset('images/success-icon.png') }}"></img>
+                {{ session('message') }}
+            </div>  
         @endif
         @if(session('error'))
             <div class="error">
