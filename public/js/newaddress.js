@@ -3,21 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // This Maps input field ID's to the corresponding DOM elements allowing for easy access to input fields for valifation or data retrieval
     const fields = {
-        firstName: document.getElementById('fullName'),
+        fullName: document.getElementById('full-name'),
         phone: document.getElementById('phone'),
         postcode: document.getElementById('postcode'),
-        address_line1: document.getElementById('address_line1'),
+        address_line1: document.getElementById('addressline1'),
         city: document.getElementById('city'),
     };
-
+    
     // This Maps input field ID's to the names given enhancing error messages and user feedback
     const fieldNames = {
-        fullName: 'fullName',
+        fullName: 'Full Name',
         phone: 'Phone Number',
         postcode: 'Postcode',
-        address_line1: 'Address_Line1',
+        address_line1: 'Address Line 1',
         city: 'City',
     };
+    
 
     // Error handling functions
     const displayError = (inputElement, message) => {
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         errorSpan.classList.add('active');
         inputElement.classList.add('error');
     };
-
+    
     const clearError = (inputElement) => {
         const errorSpan = inputElement.parentElement.querySelector('.error-message');
         if (errorSpan) {
@@ -74,9 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             
-            if (key === 'address-line1') {
+            if (key === 'address_line1') { 
                 if (value.length < 3 || value.length > 100) {
-                    displayError(field, 'Enter a valid address');
+                    displayError(field, 'Enter a valid address.');
                     isValid = false;
                 }
             }
@@ -89,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             
-            if (key === 'full-name') {
+            if (key === 'fullName') { 
                 const namePattern = /^[A-Za-z]+(?:\s[A-Za-z]+)?$/;
                 if (!namePattern.test(value)) {
-                    displayError(field, 'Enter a valid full name letters only, max one space.');
+                    displayError(field, 'Enter a valid full name (letters only, max one space).');
                     isValid = false;
                 }
             }
@@ -104,8 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form submission handling
     form.addEventListener('submit', (event) => {
         if (!validateFields()) {
-            event.preventDefault();
+            event.preventDefault(); 
         }
     });
+    
 
 });
