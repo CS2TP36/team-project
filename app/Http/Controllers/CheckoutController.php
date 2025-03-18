@@ -148,7 +148,7 @@ class CheckoutController extends Controller
         $total = $basket->sum(fn($item) => $item->getTotalPrice());
 
         // 6b) ADD SHIPPING COST
-        $shippingOption = $request->input('shipping_option', 'standard'); 
+        $shippingOption = $request->input('shipping_option', 'standard');
         $shippingCost   = 4.49; // default standard
         if ($shippingOption === 'next_day') {
             $shippingCost = 6.49;
@@ -224,11 +224,13 @@ class CheckoutController extends Controller
 
         DB::commit();
 
-        // CONFIRMATION EMAIL
-        $mailer = new OrderEmailer();
-        $mailer->sendOrderConfirmation($order);
-        unset($mailer);
-
+        // only email if email is setup on machine
+        if (env('MAILGUN_SECRET')) {
+            // create a mailer and send the order confirmation email
+            $mailer = new OrderEmailer();
+            $mailer->sendOrderConfirmation($order);
+            unset($mailer);
+        }
         // SUCCESS PAGE
         return view('pages.success')->with([
             'orderNumber'    => $order->id,
