@@ -7,7 +7,7 @@
     <div class="container">
         <h2>Edit Address</h2>
 
-        <form id="editAddressForm"  action="{{ route('address.update', $address->id) }}" method="POST">
+        <form id="editAddressForm"  action="{{ route('address.update', $address->id) }}" method="POST" novalidate>
             @csrf@method('PUT')
 
             <div class="form-group">
