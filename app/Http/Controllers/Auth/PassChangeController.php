@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Emailers\PasswordEmailer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -33,6 +34,12 @@ class PassChangeController extends Controller
         $user->password = Hash::make($validated['password']);
         $user->save();
         if ($validated) {
+            // only send the email if the MAILGUN_SECRET is set
+            if (env('MAILGUN_SECRET')) {
+                // send an email to confirm password change
+                $mailer = new PasswordEmailer();
+                $mailer->sendPasswordChangeNotification($user);
+            }
             return redirect('/home');
         }
         return back()->withErrors('passChange', 'Something went wrong');
