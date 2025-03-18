@@ -3316,9 +3316,6 @@ label {
 
 /* CSS for Delivery and Returns Page */
 #delivery-and-returns {
-
-    /* General Layout */
-
     .returns-container {
         font-family: Arial, sans-serif;
         color: var(--text-colour);
@@ -3338,9 +3335,10 @@ label {
         padding: 20px;
     }
 
-    /* Tabs Navigation */
-
-    .tabs-container {
+    button {
+        
+    }
+    /* .tabs-container {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
@@ -3356,17 +3354,15 @@ label {
         text-transform: uppercase;
         margin: 0 5px;
         transition: background-color 0.3s ease;
-    }
-
+    } */
+/* 
     .tab-btn.active-tab {
         background-color: var(--btn-bg-colour);
     }
 
     .tab-btn:hover {
         background-color: var(--btn-hover-colour);
-    }
-
-    /* Content Sections */
+    } */
 
     .content-section {
         background-color: var(--bg-colour);
@@ -3376,8 +3372,6 @@ label {
         margin: 20px auto;
         box-shadow: 0 5px 12px var(--alt-bs-colour);
     }
-
-    /* Section Heading */
 
     .section-heading {
         font-size: 24px;
@@ -3389,8 +3383,6 @@ label {
         padding-bottom: 5px;
     }
 
-    /* Description Text */
-
     .return-description, .delivery-description {
         font-size: 16px;
         color: var(--text-colour);
@@ -3398,51 +3390,19 @@ label {
         text-align: justify;
     }
 
-    /* List Items */
-
-    .list-group-item {
-        font-size: 20px;
-        padding: 40px;
-        margin-bottom: 10px;
-        background-color: var(--bg-colour);
-        border: 1px solid #ddd;
-        border-radius: 4px;
-    }
-
-    /* Button Styles */
-
-    .btn-primary {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #007bff;
-        color: var(--btn-text-colour);
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .btn-primary:hover {
-        background-color: #0056b3;
-    }
-
-    /* Icon Styles */
-
     .section-icon {
         width: 100px;
         height: 100px;
         vertical-align: middle;
     }
 
-    /* Links */
-
-    a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
+    .list-group-item {
+        font-size: 20px;
+        padding: 40px;
+        margin-bottom: 10px;
+        background-color: var(--bg-colour);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
     }
 }
 
