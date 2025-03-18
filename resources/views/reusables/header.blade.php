@@ -33,7 +33,7 @@
         @endif
         @if(session('error'))
             <div class="error">
-                <img src="{{ asset('images/error-icon.png') }}"></img>
+                <img src="{{ asset('images/caution-icon.png') }}"></img>
                 {{ session('error') }}
             </div>
         @endif
