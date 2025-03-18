@@ -31,9 +31,12 @@ class ContactController extends Controller
                 'message' => $contactForm['message']
             ]);
             $contactItem->save();
-            // sends a confirmation email
-            $contactEmailer = new ContactEmailer();
-            $contactEmailer->sendConfirmation($contactItem);
+            // only send email if the mailgun secret is set
+            if (env('MAILGUN_SECRET')) {
+                // sends a confirmation email
+                $contactEmailer = new ContactEmailer();
+                $contactEmailer->sendConfirmation($contactItem);
+            }
         }
         return redirect('/home')->with('message', 'Thanks for contacting us!');
     }
