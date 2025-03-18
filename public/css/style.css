@@ -1267,6 +1267,26 @@ footer {
     textarea {
         width: 95%;
     }
+
+    .form-group .error-message {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        height: 14px;
+        margin-top: 2px;
+        visibility: hidden;
+    }
+
+    input.error, select.error {
+        border-color: red !important;
+        background-color: #F9D9D9 !important;
+        outline: none;
+    }
+
+    .error-message.active {
+        visibility: visible;
+    }
 }
 
 /* Submit Button */
