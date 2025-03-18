@@ -10,25 +10,35 @@
         <form id="editAddressForm"  action="{{ route('address.update', $address->id) }}" method="POST">
             @csrf@method('PUT')
 
-            <label for="full_Name">Full Name (first & last)</label>
-            <input type="text" id="full_Name" name="full_name" value="{{ old('full_name', $address->full_name) }}" required>
+            <div class="form-group">
+              <label for="full_Name">Full Name (first & last)</label>
+              <input type="text" id="full_Name" name="full_name" value="{{ old('full_name', $address->full_name) }}" required>
+            </div>
 
-            <label for="phone_Number">Phone Number</label>
-            <input type="text" id="phone_Number" name="phone_number" value="{{ old('phone_number', $address->phone_number) }}" required>
+            <div class="form-group">
+              <label for="phone_Number">Phone Number</label>
+              <input type="text" id="phone_Number" name="phone_number" value="{{ old('phone_number', $address->phone_number) }}" required>
+            </div>
 
-            <label for="post_Code">Post Code</label>
-            <input type="text" id="post_Code" name="post_code" value="{{ old('post_code', $address->post_code) }}" required>
+            <div class="form-group">
+              <label for="post_Code">Post Code</label>
+              <input type="text" id="post_Code" name="post_code" value="{{ old('post_code', $address->post_code) }}" required>
+            </div>
 
-            <label for="address_Line1">Address Line 1</label>
-            <input type="text" id="address_Line1" name="address_line1" value="{{ old('address_line1', $address->address_line1) }}" required>
+            <div class="form-group">
+              <label for="address_Line1">Address Line 1</label>
+              <input type="text" id="address_Line1" name="address_line1" value="{{ old('address_line1', $address->address_line1) }}" required>
+            </div>
 
             <label for="address_Line2">Address Line 2 (Optional)</label>
             <input type="text" id="address_Line2" name="address_line2" value="{{ old('address_line2', $address->address_line2) }}">
 
-            <label for="town_City">Town/City</label>
-            <input type="text" id="town_City" name="town_city" value="{{ old('town_city', $address->town_city) }}" required>
+            <div class="form-group">
+              <label for="town_City">Town/City</label>
+              <input type="text" id="town_City" name="town_city" value="{{ old('town_city', $address->town_city) }}" required>
+            </div>
 
-            <label for="county">County (If Applicable)</label>
+            <label for="county">County (Optional)</label>
             <input type="text" id="county" name="county" value="{{ old('county', $address->county) }}">
 
             <div class="checkbox-container">
