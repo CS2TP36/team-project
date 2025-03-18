@@ -16,7 +16,7 @@
 
     <p>Please choose an action:</p>
 
-    <!-- Form to remove out-of-stock items from the basket -->
+    <!-- Form to remove out of stock products from the basket -->
     <form action="{{ route('basket.removeOutOfStock') }}" method="POST" style="margin-bottom: 1em;">
         @csrf
         <button type="submit" style="
@@ -31,7 +31,7 @@
         </button>
     </form>
 
-    <!-- Link to cancel the order and return to the basket -->
+    <!-- Link to cancel order and return to the basket -->
     <a href="{{ route('basket.index') }}" style="
         display: inline-block; 
         background-color: #6c757d; 

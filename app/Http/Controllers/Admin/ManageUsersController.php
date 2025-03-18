@@ -22,7 +22,7 @@ class ManageUsersController extends Controller
             return redirect('/home')->with('message', 'You are not allowed to manage users');
         }
 
-        // Fetch users and optionally filter by role
+        // Fetches users and filter by role
         $query = User::query();
         if ($request->has('role') && in_array($request->role, ['admin', 'customer'])) {
             $query->where('role', $request->role);
@@ -54,7 +54,7 @@ class ManageUsersController extends Controller
     {
         $user = User::findOrFail($id);
 
-        // Prevent admins from deleting themselves
+        // Prevents admins from deleting themselves
         if (Auth::id() === $user->id) {
             return redirect()->route('admin.manage-users')->with('error', 'You cannot delete yourself.');
         }

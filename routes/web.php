@@ -95,7 +95,6 @@ Route::put('/admin/products/{product}', [ProductManagementController::class, 'up
 Route::delete('/admin/products/{product}', [ProductManagementController::class, 'destroy'])->name('admin.products.destroy');
 
 // Discount routes
-// GET route to show the discount code creation page.
 Route::get('/admin/discounts', [DiscountController::class, 'show'])->name('admin.discounts');
 // POST route to add a new discount code.
 Route::post('/admin/discounts', [DiscountController::class, 'add'])->name('admin.discounts.add');
@@ -128,17 +127,14 @@ Route::get('/account', [AccountController::class, 'show'])->name('account.page')
 Route::post('/account/update', [AccountController::class, 'update'])->name('account.update');
 Route::delete('/account/delete', [AccountController::class, 'destroy'])->name('account.delete');
 
-// Changed the route for contact details to use the "show" method with a default parameter.
 Route::get('/account/contact-details', [AccountController::class, 'show'])
     ->name('account.contact-details')
     ->defaults('page', 'details');
 
 Route::post('/basket/remove-out-of-stock', [BasketController::class, 'removeOutOfStock'])->name('basket.removeOutOfStock');
 
-// routes/web.php
 Route::get('/discount-validate', [DiscountController::class, 'ajaxCheckDiscount'])->name('discount.validate');
 
-// Address routes (more specific routes first!)
 Route::get('/account/addresses', [AddressController::class, 'index'])->name('account.addresses');
 Route::get('/account/addresses/create', [AddressController::class, 'create'])->name('address.create');
 Route::post('/account/addresses/store', [AddressController::class, 'store'])->name('address.store');

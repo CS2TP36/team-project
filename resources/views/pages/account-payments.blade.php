@@ -5,11 +5,11 @@
     <div class="account-address-payment">
         <h1>Your Payment Methods</h1>
 
-        <!-- Card to add a new card/payment method -->
+        <!-- Card to add a new card -->
         <div class="addresses-payments">
             <a href="{{ route('payment.create') }}" class="add">+ Add Payment Method</a>
 
-            <!-- Check if payment methods exist -->
+            <!-- Checks if payment methods exist -->
                 @if(isset($payments) && $payments->isNotEmpty())
                 @foreach($payments as $paymentMethod)
                     <div class="card">

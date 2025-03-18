@@ -15,7 +15,7 @@ class AddressController extends Controller
             return redirect()->route('login.show')->with('message', 'Please login first.');
         }
 
-        // Retrieve addresses for logged-in user
+        // Retrieves addresses for logged-in user
         $addresses = Address::where('user_id', Auth::id())->get();
     
     
@@ -32,7 +32,7 @@ class AddressController extends Controller
             return redirect()->route('login.show')->with('message', 'Please login first.');
         }
 
-        return view('pages.newaddresspage'); // Now uses the new address page
+        return view('pages.newaddresspage'); // Uses the new address page
     }
 
     // Handles address form submission and saves data
@@ -80,7 +80,7 @@ class AddressController extends Controller
 
         $address = Address::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
 
-        return view('pages.edit-address', compact('address'));
+        return view('pages.edit-address', compact('address')); //Uses the edit address page
     }
     public function destroy($id)
     {

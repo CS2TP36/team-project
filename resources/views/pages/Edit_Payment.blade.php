@@ -15,7 +15,7 @@
         <input type="text" id="cardNumber" name="card_number" value="{{ old('card_number', $paymentMethod->card_number) }}" required>
         <span class="error-message" id="cardNumberError"></span>
 
-        <!-- Cardholder Name (Moved before Expiry Date) -->
+        <!-- Cardholder Name -->
         <label for="cardName">Cardholder Name</label>
         <input type="text" id="cardName" name="card_name" value="{{ old('card_name', $paymentMethod->card_name) }}" required>
         <span class="error-message" id="cardNameError"></span>

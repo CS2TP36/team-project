@@ -59,11 +59,11 @@ class ProductManagementController extends Controller
 
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                // Generate a unique file name using UUID
+                // Generates a unique file name using UUID
                 $imageName = Str::uuid() . '.' . $image->getClientOriginalExtension();
                 $image->move(public_path('images/productImage'), $imageName);
 
-                // Store the image in `product_images` table
+                // Stores the image in `product_images` table
                 ProductImage::create([
                     'product_id' => $product->id,
                     'image_name' => $imageName,

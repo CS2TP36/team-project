@@ -9,7 +9,7 @@ class DiscountCode extends Model
 {
     protected $table = 'discount_codes';
 
-    // If you want mass assignment, you can define fillable fields
+    
     protected $fillable = [
         'start',
         'expiry',

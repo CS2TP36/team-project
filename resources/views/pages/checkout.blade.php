@@ -18,7 +18,7 @@
 
     <div class="checkout-container">
 
-        <!-- 1) SHIPPING ADDRESS SECTION -->
+        // Shipping Address Section
         <section class="checkout-section" id="shipping-info-section">
             <h2>Shipping Information</h2>
             <form id="shipping-form">
@@ -26,7 +26,7 @@
                     <legend>Shipping Address</legend>
 
                     @if($addresses->count() > 0)
-                        <!-- If user has saved addresses, show them + "Use a new address" -->
+                        // If user has saved addresses, also show option to add a new address
                         <div class="form-group">
                             <p>Select a saved address:</p>
                             @foreach($addresses as $address)
@@ -36,7 +36,6 @@
                                     {{ $address->town_city }}, {{ $address->post_code }}
                                 </label>
                             @endforeach
-
                             <label style="display:block; margin-top:1em;">
                                 <input type="radio" name="shipping_address" value="new" required>
                                 Use a new address
@@ -73,7 +72,7 @@
                             </div>
                         </fieldset>
                     @else
-                        <!-- No saved addresses: hidden radio for 'new' so JS sees shipping_address="new" -->
+                        // hidden radio needed for JS to see new shipping address
                         <p>You have no saved addresses. Please enter a new address below:</p>
                         <label style="display:none;">
                             <input type="radio" name="shipping_address" value="new" checked>
@@ -123,7 +122,7 @@
             </form>
         </section>
 
-        <!-- 2) BILLING ADDRESS SECTION -->
+        // Billing Address Section    
         <section class="checkout-section" id="billing-info-section" style="display:none;">
             <h2>Billing Information</h2>
             <form id="billing-form">
@@ -153,7 +152,7 @@
             </form>
         </section>
 
-        <!-- 3) PAYMENT METHOD SECTION -->
+        // Payment Method Section    
         <section class="checkout-section" id="payment-method-section" style="display:none;">
             <h2>Payment Method</h2>
             <form id="payment-form">
@@ -201,9 +200,7 @@
                             </div>
                         </fieldset>
                     @else
-                        <!-- No saved payments: hidden radio ensures "new" is checked -->
                         <p>You have no saved payment methods. Please enter a new method below:</p>
-
                         <label style="display:none;">
                             <input type="radio" name="payment_method" value="new" checked>
                         </label>
@@ -241,7 +238,7 @@
             </form>
         </section>
 
-        <!-- 4) SHIPPING OPTIONS SECTION -->
+        // Shipping Method Section
         <section class="checkout-section" id="shipping-options-section" style="display:none;">
             <h2>Shipping Options</h2>
             <form id="shipping-options-form">
@@ -271,7 +268,7 @@
             </form>
         </section>
 
-        <!-- 5) DISCOUNT CODE SECTION -->
+        // Discount Code Section
         <section class="checkout-section" id="discount-section" style="display:none;">
             <h2>Discount Code</h2>
             <form id="discount-form">
@@ -293,7 +290,7 @@
             </form>
         </section>
 
-        <!-- 6) ORDER SUMMARY SECTION -->
+        // Order Summary Section
         <section class="checkout-section" id="order-summary-section" style="display:none;">
             <form id="order-form" method="POST" action="{{ route('checkout.checkout') }}">
                 @csrf
@@ -313,7 +310,6 @@
                 <p class="total">Discount: -£<span id="discount-amount">0.00</span></p>
                 <p class="total">Grand Total: £<span id="grand-total">0.00</span></p>
 
-                <!-- Hidden fields for the controller -->
                 <input type="hidden" name="shipping_address" id="shipping_address_hidden">
                 <input type="hidden" name="shipping_full_name" id="shipping_full_name_hidden">
                 <input type="hidden" name="shipping_address_line1" id="shipping_address_line1_hidden">
@@ -321,20 +317,17 @@
                 <input type="hidden" name="shipping_post_code" id="shipping_post_code_hidden">
                 <input type="hidden" name="shipping_phone" id="shipping_phone_hidden">
                 <input type="hidden" name="save_new_address" id="save_new_address_hidden">
-
                 <input type="hidden" name="same_as_shipping" id="same_as_shipping_hidden">
                 <input type="hidden" name="billing_full_name" id="billing_full_name_hidden">
                 <input type="hidden" name="billing_address" id="billing_address_hidden">
                 <input type="hidden" name="billing_city" id="billing_city_hidden">
                 <input type="hidden" name="billing_postcode" id="billing_postcode_hidden">
-
                 <input type="hidden" name="payment_method" id="payment_method_hidden">
                 <input type="hidden" name="payment_card_name" id="payment_card_name_hidden">
                 <input type="hidden" name="payment_card_number" id="payment_card_number_hidden">
                 <input type="hidden" name="payment_expiry" id="payment_expiry_hidden">
                 <input type="hidden" name="payment_cvv" id="payment_cvv_hidden">
                 <input type="hidden" name="save_new_payment" id="save_new_payment_hidden">
-
                 <input type="hidden" name="shipping_option" id="shipping_option_hidden">
                 <input type="hidden" name="apply_discount" id="apply_discount_hidden">
                 <input type="hidden" name="discount_code" id="discount_code_hidden">
@@ -344,7 +337,7 @@
             </form>
         </section>
 
-        <!-- success page hidden -->
+        // success page
         <section id="order-success" style="display: none;">
             <h2>Order Placed Successfully!</h2>
             <p>Your order has been successfully placed. Thank you for shopping with us!</p>
@@ -354,7 +347,6 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    // 1) Universal next/back logic
     document.querySelectorAll('.next-section').forEach(btn => {
         btn.addEventListener('click', () => {
             const nextId = btn.dataset.next;
@@ -370,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2) Shipping Next button custom logic
     const shippingNextBtn = document.getElementById('shipping-next-btn');
     const sameAsShippingCheckbox = document.getElementById('same_as_shipping');
     const billingSection = document.getElementById('billing-info-section');
@@ -386,13 +377,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3) Toggle billing fields if "same as shipping?" is unchecked
+    // shows billing address fields if "same as shipping" checkbox unselected
     const billingFields = document.getElementById('billing-fields');
     sameAsShippingCheckbox.addEventListener('change', () => {
         billingFields.style.display = sameAsShippingCheckbox.checked ? 'none' : 'block';
     });
 
-    // 4) Show/hide new shipping address fields
+    
     const addressRadios = document.getElementsByName('shipping_address');
     const newShippingFields = document.getElementById('new-shipping-fields');
     if (addressRadios.length > 0) {
@@ -407,7 +398,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5) Show/hide new payment method fields
     const paymentMethodRadios = document.getElementsByName('payment_method');
     const newPaymentFields = document.getElementById('new-payment-fields');
     if (paymentMethodRadios.length > 0) {
@@ -422,7 +412,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6) Discount Code logic (if you do live discount calls)
     const applyDiscountCheckbox = document.getElementById('apply-discount');
     const discountCodeField = document.getElementById('discount-code-field');
     const discountCodeInput = document.getElementById('discount_code');
@@ -439,10 +428,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7) On final Next from discount -> fill hidden fields for form submission
+    // fills in hidden form for submission
     const finalNext = document.querySelector('[data-next="order-summary-section"]');
     finalNext.addEventListener('click', () => {
-        // shipping address
         const selectedShipping = document.querySelector('input[name="shipping_address"]:checked');
         document.getElementById('shipping_address_hidden').value = selectedShipping ? selectedShipping.value : '';
 
@@ -455,10 +443,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('save_new_address_hidden').value      = document.getElementById('save_new_address').checked ? '1' : '0';
         }
 
-        // same_as_shipping
         document.getElementById('same_as_shipping_hidden').value = sameAsShippingCheckbox.checked ? 'on' : 'off';
 
-        // if not same as shipping, fill billing
         if (!sameAsShippingCheckbox.checked) {
             document.getElementById('billing_full_name_hidden').value = document.getElementById('billing_full_name').value;
             document.getElementById('billing_address_hidden').value   = document.getElementById('billing_address').value;
@@ -466,7 +452,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('billing_postcode_hidden').value  = document.getElementById('billing_postcode').value;
         }
 
-        // payment method
         const selectedPayment = document.querySelector('input[name="payment_method"]:checked');
         document.getElementById('payment_method_hidden').value = selectedPayment ? selectedPayment.value : '';
 
@@ -478,21 +463,18 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('save_new_payment_hidden').value    = document.getElementById('save_new_payment').checked ? '1' : '0';
         }
 
-        // shipping option
         const selectedShippingOption = document.querySelector('input[name="shipping_option"]:checked');
         document.getElementById('shipping_option_hidden').value = selectedShippingOption ? selectedShippingOption.value : '';
 
-        // discount
         document.getElementById('apply_discount_hidden').value = applyDiscountCheckbox.checked ? '1' : '0';
         if (applyDiscountCheckbox.checked) {
             document.getElementById('discount_code_hidden').value = discountCodeInput.value;
         }
 
-        // Recalc final total for the summary
         updateGrandTotal();
     });
 
-    // 8) Shipping cost & final total updates (front-end only)
+    // calculates shipping and adds to grand total
     const shippingOptionRadios = document.querySelectorAll('input[name="shipping_option"]');
     shippingOptionRadios.forEach(radio => {
         radio.addEventListener('change', () => {
@@ -501,8 +483,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // calculates discount and calculates new total
     async function fetchExactDiscount() {
-        // OPTIONAL: if you do live discount retrieval
         const code = discountCodeInput.value.trim();
         if (!applyDiscountCheckbox.checked || !code) {
             document.getElementById('discount-amount').textContent = '0.00';
@@ -524,12 +506,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('discount-amount').textContent = discountValue.toFixed(2);
             }
         } catch (error) {
-            console.error('Error fetching discount info:', error);
             document.getElementById('discount-amount').textContent = '0.00';
         }
         updateGrandTotal();
     }
 
+    // sets shipping cost
     function updateShippingCost() {
         const selected = document.querySelector('input[name="shipping_option"]:checked');
         let shippingCost = 0;
@@ -542,11 +524,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 shippingCost = 5.49;
                 break;
             default:
-                shippingCost = 4.49; // standard
+                shippingCost = 4.49;
         }
         document.getElementById('shipping-price').textContent = shippingCost.toFixed(2);
     }
-
+    // Updates the grand total whenever shipping cost or discount changes
     function updateGrandTotal() {
         const subtotal = parseFloat(document.getElementById('subtotal-price').textContent) || 0;
         const shipping = parseFloat(document.getElementById('shipping-price').textContent) || 0;

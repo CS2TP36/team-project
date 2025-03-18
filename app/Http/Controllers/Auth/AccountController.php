@@ -13,14 +13,14 @@ class AccountController extends Controller
 {
     public function show($page = 'account')
     {
-        // Uses laravel Auth to check if the user is logged in
+        // Checks if user is logged in
         if (!Auth::check()) {
             return redirect('/login/account');
         }
 
-        // Retrieves the user from the Auth
+        // Retrieves the user 
         $user = Auth::user();
-        // check which page to return
+        // checks which page to return
         return match ($page) {
             'orders' => redirect()->route('previous-orders.show'),
             'details' => view('pages.contact-details', ['user' => $user]),
@@ -29,13 +29,13 @@ class AccountController extends Controller
         };
     }
 
-    // used to update account details (non-password)
+    // Updates user details
     function update(Request $request) {
-        // check if user is logged in
+        // checks if user is logged in
         if (!Auth::check()) {
             return back()->with('message', 'You are not logged in');
         }
-        // validate the request
+        // validates the request
         $request->validate([
             'first-name' => 'required|string',
             'last-name' => 'required|string',
@@ -45,19 +45,20 @@ class AccountController extends Controller
 
         try {
             DB::beginTransaction();
-            // update the user's details
+            // updates the user's details
             $user = Auth::user();
             $user['first_name'] = $request->input('first-name');
             $user['last_name'] = $request->input('last-name');
             $user['email'] = $request->input('email');
             $user['phone_number'] = $request->input('phone-number');
             $user->save();
-            // tell the user it was successful
+            // tells the user it was successful
             DB::commit();
             return back()->with('message', 'Your information has been updated');
+            // catches error and rolls changes back if so
         } catch (Error $e) {
             DB::rollBack();
-            // tell the user it was unsuccessful
+            // tells the user it was unsuccessful
             return back()->with('error', $e->getMessage());
         }
     }
@@ -70,19 +71,18 @@ class AccountController extends Controller
             return redirect()->route('login.show')->with('error', 'You must be logged in to delete your account.');
         }
 
-        // Log out the user before deleting the account
+        // Logs the user out before deleting
         Auth::logout();
 
-        // Delete all associated data (optional, depending on your setup)
-        $user->addresses()->delete(); // Delete all user addresses
-        $user->orders()->delete(); // Delete all user orders
-        $user->reviews()->delete(); // Delete all user reviews
-        $user->wishlistItems()->delete();
-        $user->basketItems()->delete();
+        $user->addresses()->delete(); // Deletes all user addresses
+        $user->orders()->delete(); // Deletes all user orders
+        $user->reviews()->delete(); // Deletes all user reviews
+        $user->wishlistItems()->delete(); // Deletes all wishlist items
+        $user->basketItems()->delete(); // Deletes all basket items
         $user->delete(); // Delete user account
   
 
-        // Redirect to home page with success message
+        // Redirects user to home page with success message
         return redirect('/')->with('success', 'Your account has been deleted successfully.');
     }
 

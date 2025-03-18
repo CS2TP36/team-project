@@ -46,7 +46,7 @@
                         <td class="text-center d-flex justify-content-center gap-2">
                         <form action="{{ route('admin.delete-user', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure?')">
                             @csrf
-                            @method('DELETE') <!-- Ensure DELETE request -->
+                            @method('DELETE') 
                             <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                         </form>
                         </td>

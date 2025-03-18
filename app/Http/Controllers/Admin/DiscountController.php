@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class DiscountController extends Controller
 {
-    // to show the discount code creation page
+    // shows discount creation page
     function show() {
         if (!Auth::check() || !Auth::user()->isAdmin()) {
             return back()->with('message', 'You do not have permission to access this page');
@@ -42,7 +42,7 @@ class DiscountController extends Controller
 
     public function ajaxCheckDiscount(Request $request)
     {
-        $code = $request->query('code'); // e.g. ?code=HELLO10
+        $code = $request->query('code'); 
         $discount = DiscountCode::where('code', $code)->first();
 
         // If code not found or invalid, return JSON with valid=false
