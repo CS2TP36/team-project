@@ -1,5 +1,5 @@
 @extends('layouts.page')
-@section('script', 'js/edit.js')
+@section('script', asset('js/edit.js'))
 @section('title','Edit Address')
 @section('content')
 
