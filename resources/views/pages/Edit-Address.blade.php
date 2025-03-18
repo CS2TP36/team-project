@@ -8,7 +8,7 @@
         <h2>Edit Address</h2>
 
         <form id="editAddressForm"  action="{{ route('address.update', $address->id) }}" method="POST" novalidate>
-            @csrf@method('PUT')
+            @csrf
 
             <div class="form-group">
               <label for="full_Name">Full Name (first & last)</label>
