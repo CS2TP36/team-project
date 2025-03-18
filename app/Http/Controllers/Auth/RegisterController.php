@@ -44,9 +44,12 @@ class RegisterController extends Controller
             'postcode' => '', // You can add logic to handle the postcode if needed
             'role' => 'user', // Default role
         ]);
-
-        // Optionally, log the user in after registration
-        // auth()->login($user);
+        // only send the email if the MAILGUN_SECRET is set
+        if (env('MAILGUN_SECRET')) {
+            // send an email to confirm account creation
+            $mailer = new RegistrationEmailer();
+            $mailer->sendRegistrationEmail($user);
+        }
 
         // Redirect to the home page or a success page
         return redirect('/home')->with('success', 'Registration successful!');
