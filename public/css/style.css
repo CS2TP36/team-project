@@ -3334,38 +3334,27 @@ label {
         margin-bottom: 15px;
         padding: 20px;
     }
-
-    button {
-        
-    }
-    /* .tabs-container {
+    
+     .tabs-container {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
     }
-
+    
     .tab-btn {
         padding: 10px 20px;
-        font-weight: bold;
-        color: var(--btn-text-colour);
-        background-color: var(--btn-bg-colour);
-        border: none;
-        cursor: pointer;
+        font-weight: bold;  
         text-transform: uppercase;
         margin: 0 5px;
         transition: background-color 0.3s ease;
-    } */
-/* 
+    } 
+
+    /* Not sure what colour to make this */
     .tab-btn.active-tab {
-        background-color: var(--btn-bg-colour);
+        background-color: #007185;
     }
 
-    .tab-btn:hover {
-        background-color: var(--btn-hover-colour);
-    } */
-
     .content-section {
-        background-color: var(--bg-colour);
         padding: 25px 30px;
         border: var(--border-color);
         border-radius: 8px;
@@ -3470,9 +3459,6 @@ label {
     animation: fadeleft 1s ease-out forwards;
     font-weight: bold;
 }
-
-
-
 
 #sponsor-parallax-info {
     text-align: left;

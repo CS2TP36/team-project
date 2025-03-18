@@ -13,8 +13,8 @@
 
             <!-- Tabs for Delivery and Returns -->
             <div class="tabs-container text-center my-4">
-                <button>DELIVERY</button>
-                <button>RETURNS</button>
+                <button  id="tab-delivery" class="tab-btn active-tab">DELIVERY</button>
+                <button id="tab-returns" class="tab-btn">RETURNS</button>
             </div>
 
             <!-- Delivery Section -->
