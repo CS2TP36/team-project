@@ -20,22 +20,22 @@ class CheckoutController extends Controller
 {
     public function index()
     {
-        // Ensures user is logged in
+        // 1) Ensure user is logged in
         if (!Auth::check()) {
             return redirect()->route('login.show')->with('message', 'Please login first.');
         }
 
-        // Gathers user’s saved addresses, payment methods, and basket items
+        // 2) Gather user’s saved addresses, payment methods, and basket items
         $addresses = Address::where('user_id', Auth::id())->get();
         $paymentMethods = PaymentMethod::where('user_id', Auth::id())->get();
         $basketItems = Basket::with('product')->where('user_id', Auth::id())->get();
 
-        // If basket is empty, redirects them to basket page
+        // 3) If basket is empty, redirect to basket page
         if ($basketItems->isEmpty()) {
             return redirect('/basket')->with('error', 'Your basket is empty.');
         }
 
-        // Returns the checkout view with the user’s data
+        // 4) Render checkout view with the user’s data
         return view('pages.checkout', compact('addresses', 'paymentMethods', 'basketItems'));
     }
 
@@ -43,9 +43,9 @@ class CheckoutController extends Controller
 {
     DB::beginTransaction();
     try {
-        //Shipping Address
+        // 1) SHIPPING ADDRESS
         if ($request->shipping_address === 'new') {
-            //new address
+            // new shipping
             $shippingFullName = $request->input('shipping_full_name');
             $shippingAddress  = $request->input('shipping_address_line1');
             $shippingCity     = $request->input('shipping_city');
@@ -63,7 +63,7 @@ class CheckoutController extends Controller
                 ]);
             }
         } else {
-            // existing address
+            // existing shipping
             $address = Address::where('user_id', Auth::id())
                 ->find($request->shipping_address);
 
@@ -78,7 +78,7 @@ class CheckoutController extends Controller
             $shippingPhone    = $address->phone_number;
         }
 
-        //Billing Address
+        // 2) BILLING ADDRESS
         if ($request->has('same_as_shipping') && $request->same_as_shipping === 'on') {
             $billingFullName = $shippingFullName;
             $billingAddress  = $shippingAddress;
@@ -91,14 +91,14 @@ class CheckoutController extends Controller
             $billingPostcode = $request->input('billing_postcode');
         }
 
-        //Payment Method
+        // 3) PAYMENT METHOD
         if ($request->payment_method === 'new') {
             $paymentCardName   = $request->input('payment_card_name');
             $paymentCardNumber = $request->input('payment_card_number');
             $paymentExpiry     = $request->input('payment_expiry');
             $paymentCVV        = $request->input('payment_cvv');
 
-            // Parses and splits expiry into month and year for database entry
+            // parse "MM/YY"
             if (strpos($paymentExpiry, '/') !== false) {
                 [$expMonth, $expYear] = explode('/', $paymentExpiry);
                 $expMonth = trim($expMonth);
@@ -126,13 +126,13 @@ class CheckoutController extends Controller
             }
         }
 
-        //Empty Basket
+        // 4) BASKET NOT EMPTY
         $basket = Basket::with('product')->where('user_id', Auth::id())->get();
         if ($basket->isEmpty()) {
             throw new \Exception('Basket is empty.');
         }
 
-        //Checks if any items in basket are out of stock
+        // 5) OUT-OF-STOCK CHECK
         $outOfStockItems = [];
         foreach ($basket as $item) {
             if (!$item->product || $item->product->stock < $item->quantity) {
@@ -144,11 +144,11 @@ class CheckoutController extends Controller
             return view('pages.checkout_out_of_stock', compact('outOfStockItems'));
         }
 
-        //Calculates basket total
+        // 6) CALCULATE SUBTOTAL
         $total = $basket->sum(fn($item) => $item->getTotalPrice());
 
-        //Adds on shipping cost
-        $shippingOption = $request->input('shipping_option', 'standard'); 
+        // 6b) ADD SHIPPING COST
+        $shippingOption = $request->input('shipping_option', 'standard');
         $shippingCost   = 4.49; // default standard
         if ($shippingOption === 'next_day') {
             $shippingCost = 6.49;
@@ -157,7 +157,7 @@ class CheckoutController extends Controller
         }
         $total += $shippingCost;
 
-        //Applies any discount codes
+        // 7) DISCOUNT CODE (server-validated)
         if ($request->filled('discount_code') && $request->input('apply_discount') === '1') {
             $discount = DiscountCode::where('code', $request->discount_code)->first();
 
@@ -170,7 +170,7 @@ class CheckoutController extends Controller
             }
         }
 
-        //Creates an order
+        // 8) CREATE ORDER
         $order = Order::create([
             'user_id'           => Auth::id(),
             'order_date'        => now(),
@@ -179,7 +179,7 @@ class CheckoutController extends Controller
             'shipping_id'       => null,
         ]);
 
-        //Creates a transaction
+        // 9) CREATE TRANSACTION
         $transaction = Transaction::create([
             'transaction_amount' => $total,
             'transaction_info'   => 'purchase',
@@ -188,7 +188,7 @@ class CheckoutController extends Controller
         $order->transaction_id = $transaction->id;
         $order->save();
 
-        //Create Shipping Method
+        // 10) CREATE SHIPPING RECORD
         $shipping = Shipping::create([
             'shipping_date'   => now(),
             'delivery_date'   => null,
@@ -198,7 +198,7 @@ class CheckoutController extends Controller
         $order->shipping_id = $shipping->id;
         $order->save();
 
-        //Creates the individual order items
+        // 11) CREATE INDIVIDUAL ORDER ITEMS
         foreach ($basket as $basketItem) {
             if (!$basketItem->product || !$basketItem->product->price) {
                 throw new \Exception('Basket item product or price is missing.');
@@ -213,7 +213,7 @@ class CheckoutController extends Controller
             ]);
         }
 
-        //Updates remaining stock and basket
+        // 12) UPDATE STOCK & CLEAR BASKET
         foreach ($basket as $basketItem) {
             $product = $basketItem->product;
             $product->stock -= $basketItem->quantity;
@@ -224,19 +224,20 @@ class CheckoutController extends Controller
 
         DB::commit();
 
-        //Sends confirmation email
-        $mailer = new OrderEmailer();
-        $mailer->sendOrderConfirmation($order);
-        unset($mailer);
-
-        // Returns the order success page
+        // only email if email is setup on machine
+        if (env('MAILGUN_SECRET')) {
+            // create a mailer and send the order confirmation email
+            $mailer = new OrderEmailer();
+            $mailer->sendOrderConfirmation($order);
+            unset($mailer);
+        }
+        // SUCCESS PAGE
         return view('pages.success')->with([
             'orderNumber'    => $order->id,
             'trackingNumber' => $shipping->tracking_number,
-            'finalTotal'     => $total, 
+            'finalTotal'     => $total, // If you want to show final total in success page
         ]);
 
-        // Catches errors and rolls back database if needed
     } catch (\Exception $e) {
         DB::rollBack();
         Log::error('Checkout error: ' . $e->getMessage(), [
