@@ -1,6 +1,6 @@
 @extends('layouts.page')
 @section('title', 'Contact Us')
-@section('script', 'js/contact.js')
+@section('script', asset('js/contact.js'))
 @section('content')
 
     <div class="contact-wrapper">
@@ -24,26 +24,27 @@
 
             <div class="contact-form">
                 <h2>Contact Form</h2>
-                <form method="POST" action="{{ route('contact.store') }}" onsubmit="validateContactForm(event)"
-                      id="contact-form">
-                    @csrf
-
-
+                <form id="contactForm" method="POST" action="{{ route('contact.store') }}" novalidate>
+                    @CSRF
+                    <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" name="name" id="name" placeholder="Your Name" required @if(\Illuminate\Support\Facades\Auth::check()) value="{{ \Illuminate\Support\Facades\Auth::user()->first_name }} {{ \Illuminate\Support\Facades\Auth::user()->last_name }}" @endif>
+                    </div>
 
-
+                    <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="you@example.com" required @if(\Illuminate\Support\Facades\Auth::check()) value="{{ \Illuminate\Support\Facades\Auth::user()->email }}" @endif>
+                    </div>
 
-
+                    <div class="form-group">
                         <label for="phone">Phone</label>
                         <input type="text" name="phone" id="phone" placeholder="+44 1234 567890" required @if(\Illuminate\Support\Facades\Auth::check()) value="{{ \Illuminate\Support\Facades\Auth::user()->phone_number }}" @endif>
+                    </div>
 
+                    <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="10" rows="7"
-                          placeholder="Write your message here..."required
-                          style="resize: none"></textarea>
+                        <textarea name="message" id="message" cols="10" rows="7" placeholder="Write your message here..."required style="resize: none"></textarea>
+                    </div>
 
                     <button type="submit">Send Message</button>
                 </form>
