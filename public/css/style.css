@@ -2617,30 +2617,24 @@ button {
 
 }
 
-/*CSS for Address Page*/
+/* CSS for Address Page */
 .accountaddresses {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 
-
-    /* styling for header */
-
-    .accountaddresses h1 {
+    h1 {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
         text-align: center;
     }
 
-
-    /* shows the addresses in a grid format*/
     .addresses {
         display: grid;
         gap: 20px;
     }
 
-    /*styling of add address cards*/
     .add-address {
         color: var(--text-colour);
         font-size: 18px;
@@ -2657,12 +2651,10 @@ button {
         border-radius: 8px;
     }
 
-    /* hover effect over add adress card */
     .add-address:hover {
         border-color: #999;
     }
 
-    /*styling of the address cards */
     .address-card {
         background-color: var(--card-bg-colour);
         border: 1px solid var(--border-color);
@@ -2683,7 +2675,6 @@ button {
         }
     }
 
-    /* styling of edit and remove links */
     .actions a {
         font-size: 14px;
         color: #007185;
@@ -2691,7 +2682,6 @@ button {
         margin-right: 10px;
     }
 
-    /* when you hover edit and remove they udnerline */
     .actions a:hover {
         text-decoration: underline;
     }
@@ -2699,35 +2689,28 @@ button {
 
 /* CSS for Payment Page */
 .accountpayments {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 
-
-    /* styling for header */
-    .accountpayments h1 {
+    h1 {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
         text-align: center;
     }
 
-
-    /* shows the cards in a grid format*/
     .payments {
         display: grid;
         gap: 20px;
     }
 
-    /*styling of add method cards*/
     .add-payment {
-        color: #444;
+        color: var(--text-colour);
         font-size: 18px;
         text-align: center;
         font-weight: bold;
-        border: 2px dashed #ccc;
+        border: 2px dashed var(--border-color);
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -2738,18 +2721,16 @@ button {
         border-radius: 8px;
     }
 
-    /* hover effect over add payment card */
     .add-payment:hover {
         border-color: #999;
     }
 
-    /*styling of the payment cards */
     .payment-card {
-        background-color: white;
-        border: 1px solid #ddd;
+        background-color: var(--card-bg-colour);
+        border: 1px solid var(--border-color);
         padding: 15px;
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px var(--alt-bs-colour);
     }
 
     .payment-card strong {
@@ -2759,13 +2740,11 @@ button {
     }
 
     .payment-card p {
-        color: #333;
         font-size: 14px;
         line-height: 1.5;
         margin-bottom: 10px;
     }
 
-    styling of edit and remove links
     .actions a {
         font-size: 14px;
         color: #007185;
@@ -2773,7 +2752,6 @@ button {
         margin-right: 10px;
     }
 
-    /* when you hover edit and remove they udnerline */
     .actions a:hover {
         text-decoration: underline;
     }
@@ -2781,7 +2759,6 @@ button {
 
 
 /*CSS for Register Page*/
-
 .register {
     display: flex;
     flex-direction: column;
