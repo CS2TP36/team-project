@@ -9,6 +9,7 @@
 
         <form id="editAddressForm"  action="{{ route('address.update', $address->id) }}" method="POST" novalidate>
             @csrf
+            @method('PUT')
 
             <div class="form-group">
               <label for="full_Name">Full Name (first & last)</label>
@@ -43,7 +44,7 @@
 
             <div class="checkbox-container">
                 <input type="checkbox" id="is_default" name="is_default" value="1" {{ old('is_default', $address->is_default) ? 'checked' : '' }}>
-                <label for="is_default">Set As Default Address</label> 
+                <label for="is_default">Set As Default Address</label>
             </div>
 
             <button type="submit" class="btn save">Save Changes</button>
