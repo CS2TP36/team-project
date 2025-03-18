@@ -49,7 +49,7 @@
                 @if(Auth::user()->isAdmin())
                     <!-- Link to Admin Page -->
                     <a href="/admin" class="card">
-                        <img src="images/admin-icon.png" alt="Admin">
+                        <img src="images/admin.png" alt="Admin">
                         <div class="card-content">
                             <h2>Admin</h2>
                             <p>The admin pages</p>
