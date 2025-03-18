@@ -1688,6 +1688,7 @@ button {
     display: flex;
     flex-direction: row;
     color: red;
+    background-color: #F9D9D9;
     font-size: 25px;
     font-weight: bold;
     animation: fadein 1s ease-out forwards;
