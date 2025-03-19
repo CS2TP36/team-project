@@ -1674,10 +1674,6 @@ button {
 
 }
 
-
-
-
-
 .message-area {
     width: 15%;
     margin: auto;
@@ -1709,18 +1705,16 @@ button {
     }
 }
 
-
-
 .error {
     align-items: center;
     display: flex;
     flex-direction: row;
-    background-color: #fd9996;
+    background-color: #F9F9D9;
     color: black;
     font-size: 1rem;
     font-weight: bold;
     animation: fadein 1s ease-out forwards;
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid yellow;
     border-radius: 5px;
     width: 100%;
     margin-top: 7px;
