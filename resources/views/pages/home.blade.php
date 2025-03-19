@@ -42,7 +42,7 @@
         </div>
 
         <div id="parallax-container">
-            <div id="parallax" style="background-image: url({{ asset("images/Parallax.png") }});"></div>
+            <div id="parallax" style="background-image: url({{ asset('images/Parallax.png') }});"></div>
             <div id=parallax-info>
                 <h3>What Is SportsWear?</h3>
                 <p> SportsWear is not just a clothing apparel. Its more than that, its a lifestyle, its about peformace,

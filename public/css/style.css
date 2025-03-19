@@ -3436,7 +3436,6 @@ label {
 .sponsor-main{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 }
 
 #sponsor-parallax-info {
