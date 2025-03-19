@@ -4,19 +4,19 @@
 @section('content')
 
 
-    <div class="Sponsership"><!--creates the home class-->
+    <div class="Sponsorship"><!--creates the home class-->
         <section>
             <div id="banner-container"><!--creates the banner container-->
                 <img src="{{asset('images/sponsorship.jpg')}}" id="banner">
                 <div id="text-banner">
                 <P>JOIN SPORTSWEAR</p>
-                <p> WANT TO JOIN A BRAND THAT IS COMMITED TO HELP <BR>YOU ACHIEVE YOUR DREAMS?</p>
+                <p> WANT TO JOIN A BRAND <br> THAT IS COMMITED TO HELP <BR>YOU ACHIEVE YOUR DREAMS?</p>
                 <img src="{{asset('images/logo-contact.png')}}" id="sponsor-logo">
             </div>
         </section>
 
         <div id=catogery-divider>
-            <p> Join our Sponsership Program</p>
+            <p> Join our Sponsorship Program</p>
         </div>
 
 
@@ -27,7 +27,7 @@
                 reach the greatest heights of your career. At Sportswear, we are not only a sports fashion brand, but
                 also your partner that wants to see you achieve your dreams. We are commited to empowering all our
                 atheletes with the tools, support and opportunites that they require to reach their new heights. When
-                you work with us, you dont just get yourself a sponser- you gain a true ally in our journey together to
+                you work with us, you dont just get yourself a sponsor- you gain a true ally in our journey together to
                 success. So how about it? Lets Create something amazing together! </p>
             <img src="{{asset('images/boxing.jpg')}}" id="sponsor-pic">
         </div>
