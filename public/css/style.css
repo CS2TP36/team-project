@@ -171,6 +171,26 @@ main {
 .dark-mode {
     --bg-colour: #262738;
     --text-colour: #F5F5F5;
+    --btn-bg-colour: #434671;
+    --btn-border-colour: #1E1E1E;
+    --btn-hover-colour: #1E1E1E;
+    --alt-bh-colour: #6D6D6D;
+    --border-color: #ddd;
+    --alt-border-color: gold;
+    --box-shadow-color: gold;
+    --alt-bs-colour: rgba(252, 252, 252, 0.1);
+    --subnavbar-bg-color: #353754;
+    --text-banner-colour: #1E1E1E;
+    --text-nav-colour: #1E1E1E;
+    --card-bg-colour: #1E1E1E;
+    --card-hover-colour: #4D4D4D;
+    --delivery-button: #000000;
+}
+
+
+/*CSS for dark mode old .dark-mode {
+    --bg-colour: #3d3d3d;
+    --text-colour: #F5F5F5;
     --btn-bg-colour: #5D5D5D;
     --btn-border-colour: #1E1E1E;
     --btn-hover-colour: #1E1E1E;
@@ -185,7 +205,8 @@ main {
     --card-bg-colour: #1E1E1E;
     --card-hover-colour: #4D4D4D;
     --delivery-button: #000000;
-}
+} */
+
 
 #theme-toggle img:last-child {
     display: none;
@@ -1688,6 +1709,8 @@ button {
     }
 }
 
+
+
 .error {
     align-items: center;
     display: flex;
@@ -1711,6 +1734,8 @@ button {
         margin-right: 10px;
     }
 }
+
+
 
 @media (max-width: 868px) {
     .navbar {
@@ -1759,13 +1784,18 @@ button {
             gap: 10px;
             margin: 0;
 
+
             a {
                 color: white;
                 font-size: 13px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
+
+
             }
+
+
         }
     }
 
@@ -1799,6 +1829,7 @@ button {
                 transform: scale(1.0);
             }
         }
+
     }
 
     .message-area {
@@ -1832,8 +1863,13 @@ button {
         color: white;
         font-size: 18px;
         text-decoration: none;
+
     }
+
+   
 }
+
+
 
 .footer-title {
     color: white;
@@ -1852,6 +1888,7 @@ button {
 #social-pic:hover{
     transform: scale(1.2);
 }
+
 
 @media (max-width: 768px) {
     .footer-container {
@@ -3273,6 +3310,7 @@ label {
 /* CSS for Delivery and Returns Page */
 #delivery-and-returns {
     .returns-container {
+        font-family: Arial, sans-serif;
         color: var(--text-colour);
         background-color: var(--alt-bg-colour);
         margin: 0;
@@ -3304,7 +3342,7 @@ label {
         transition: background-color 0.3s ease;
     } 
 
-    /* Button Colour to Change*/
+    /* Button Colour to*/
     .tab-btn.active-tab {
         background-color: var(--delivery-button);
     }
@@ -3476,6 +3514,7 @@ label {
     background-color: #d5d4d4;
     max-width: 1500px;
     width: 60vw;
+    color: #000;
 
 }
 
@@ -3490,7 +3529,9 @@ label {
     background-color: #d5d4d4;
     height: auto;
     justify-content: center;
+    color: #000;
         ul {
+
             list-style: none;
         }
 }
