@@ -1674,53 +1674,24 @@ button {
 
 }
 
+/* CSS for Messages */
 .message-area {
     width: 15%;
     margin: auto;
 }
 
-
-.message {
+#message-error {
     align-items: center;
     display: flex;
     flex-direction: row;
-    background-color: #D9F9D9;
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-    animation: fadein 1s ease-out forwards;     
-    border: 1px solid green;
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 7px;
-    padding-left: 12px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-
-
-    img {
-        width: 1.2vw;
-        height: 1.2vw;
-        margin-right: 10px;
-    }
-}
-
-.error {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    background-color: #F9F9D9;
     color: black;
     font-size: 1rem;
     font-weight: bold;
     animation: fadein 1s ease-out forwards;
-    border: 1px solid yellow;
     border-radius: 5px;
     width: 100%;
     margin-top: 7px;
-    padding-left: 12px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 2px 2px 12px 0px;
 
     img {
         width: 1.2vw;
@@ -1729,7 +1700,15 @@ button {
     }
 }
 
+.message {
+    background-color: #D9F9D9;  
+    border: 1px solid green;
+}
 
+.error {
+    background-color: #F9F9D9;
+    border: 1px solid yellow;
+}
 
 @media (max-width: 868px) {
     .navbar {

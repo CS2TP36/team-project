@@ -29,13 +29,13 @@
     <!-- kind of want a messages/error section here -->
     <div class="message-area">
         @if(session('message'))
-            <div class="message">
+            <div id="message-error" class="message">
                 <img src="{{ asset('images/success-icon.png') }}"></img>
                 {{ session('message') }}
             </div>  
         @endif
         @if(session('error'))
-            <div class="error">
+            <div id="message-error" class="error">
                 <img src="{{ asset('images/caution-icon.png') }}"></img>
                 {{ session('error') }}
             </div>
