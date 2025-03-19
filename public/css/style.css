@@ -1833,6 +1833,7 @@ button {
     text-align: left;
     display: block;
     margin-top: 25px;
+    flex: 1;
 
     a {
         color: white;
@@ -2490,6 +2491,8 @@ button {
 .login {
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
 
     .login-sections {
         display: flex;
