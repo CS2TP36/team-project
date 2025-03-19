@@ -86,4 +86,10 @@
             <img src="{{asset('images/2025.jpg')}}" id="sponsor-pic">
         </div>
 
+        <div id="sustain-second-text">
+            <p>All of the clothing items at SportsWear are stocked in their largest size. Upon the item being ordered they are adjusted down to fit whichever size is required. This means that being able to buy an item is not dependent on which size you require. This also reduces waste in unsold units, therefore helping us to run a more sustainable business.</p>
+            <img src="{{ asset('images/productImage/7db446c4-8537-41b6-a1ee-e7068bfb8bc8.jpg') }}">
+        </div>
+    </div>
+
 @endsection
