@@ -10,7 +10,7 @@
                 <img src="{{asset('images/sponsorship.jpg')}}" id="banner">
                 <div id="text-banner">
                 <P>JOIN SPORTSWEAR</p>
-                <p> WANT TO JOIN A BRAND THAT IS COMMITED TO HELP <BR>YOU ACHIEVE YOUR DREAMS?</p>
+                <p> WANT TO JOIN A BRAND <br> THAT IS COMMITED TO HELP <BR>YOU ACHIEVE YOUR DREAMS?</p>
                 <img src="{{asset('images/logo-contact.png')}}" id="sponsor-logo">
             </div>
         </section>
