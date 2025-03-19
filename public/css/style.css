@@ -1688,8 +1688,6 @@ button {
     }
 }
 
-
-
 .error {
     align-items: center;
     display: flex;
@@ -1713,8 +1711,6 @@ button {
         margin-right: 10px;
     }
 }
-
-
 
 @media (max-width: 868px) {
     .navbar {
@@ -1763,18 +1759,13 @@ button {
             gap: 10px;
             margin: 0;
 
-
             a {
                 color: white;
                 font-size: 13px;
                 font-weight: bold;
                 list-style: none;
                 text-decoration: none;
-
-
             }
-
-
         }
     }
 
@@ -1808,7 +1799,6 @@ button {
                 transform: scale(1.0);
             }
         }
-
     }
 
     .message-area {
@@ -1842,13 +1832,8 @@ button {
         color: white;
         font-size: 18px;
         text-decoration: none;
-
     }
-
-   
 }
-
-
 
 .footer-title {
     color: white;
@@ -1867,7 +1852,6 @@ button {
 #social-pic:hover{
     transform: scale(1.2);
 }
-
 
 @media (max-width: 768px) {
     .footer-container {
@@ -3289,7 +3273,6 @@ label {
 /* CSS for Delivery and Returns Page */
 #delivery-and-returns {
     .returns-container {
-        font-family: Arial, sans-serif;
         color: var(--text-colour);
         background-color: var(--alt-bg-colour);
         margin: 0;
