@@ -2569,7 +2569,7 @@ button {
 
             a {
                 display: inline-block;
-                font-size: 0.8em;
+                font-size: 1em;
                 width: 95.5%;
                 text-align: center;
                 padding: 10px;
@@ -2578,6 +2578,7 @@ button {
                 color: var(--btn-text-colour);
                 text-decoration: none;
                 border: none;
+                border-radius: 5px;
             }
 
             a:hover {
