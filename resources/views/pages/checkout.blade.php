@@ -18,7 +18,7 @@
 
     <div class="checkout-container">
 
-        // Shipping Address Section
+        <!-- Shipping Address Section -->
         <section class="checkout-section" id="shipping-info-section">
             <h2>Shipping Information</h2>
             <form id="shipping-form">
@@ -26,7 +26,7 @@
                     <legend>Shipping Address</legend>
 
                     @if($addresses->count() > 0)
-                        // If user has saved addresses, also show option to add a new address
+                        <!-- If user has saved addresses, also show option to add a new address -->
                         <div class="form-group">
                             <p>Select a saved address:</p>
                             @foreach($addresses as $address)
@@ -72,7 +72,7 @@
                             </div>
                         </fieldset>
                     @else
-                        // hidden radio needed for JS to see new shipping address
+                        <!-- hidden radio needed for JS to see new shipping address -->
                         <p>You have no saved addresses. Please enter a new address below:</p>
                         <label style="display:none;">
                             <input type="radio" name="shipping_address" value="new" checked>
@@ -122,7 +122,7 @@
             </form>
         </section>
 
-        // Billing Address Section    
+        <!-- Billing Address Section -->    
         <section class="checkout-section" id="billing-info-section" style="display:none;">
             <h2>Billing Information</h2>
             <form id="billing-form">
@@ -152,7 +152,7 @@
             </form>
         </section>
 
-        // Payment Method Section    
+        <!-- Payment Method Section -->    
         <section class="checkout-section" id="payment-method-section" style="display:none;">
             <h2>Payment Method</h2>
             <form id="payment-form">
@@ -238,7 +238,7 @@
             </form>
         </section>
 
-        // Shipping Method Section
+        <!-- Shipping Method Section -->
         <section class="checkout-section" id="shipping-options-section" style="display:none;">
             <h2>Shipping Options</h2>
             <form id="shipping-options-form">
@@ -268,7 +268,7 @@
             </form>
         </section>
 
-        // Discount Code Section
+        <!-- Discount Code Section -->
         <section class="checkout-section" id="discount-section" style="display:none;">
             <h2>Discount Code</h2>
             <form id="discount-form">
@@ -290,7 +290,7 @@
             </form>
         </section>
 
-        // Order Summary Section
+        <!-- Order Summary Section -->
         <section class="checkout-section" id="order-summary-section" style="display:none;">
             <form id="order-form" method="POST" action="{{ route('checkout.checkout') }}">
                 @csrf
@@ -337,7 +337,7 @@
             </form>
         </section>
 
-        // success page
+        <!-- success page -->
         <section id="order-success" style="display: none;">
             <h2>Order Placed Successfully!</h2>
             <p>Your order has been successfully placed. Thank you for shopping with us!</p>
