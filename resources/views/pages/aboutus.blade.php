@@ -123,14 +123,7 @@
         <section id="cta">
             <h2>Join the Movement</h2>
             <p>Explore our collection and take your performance to the next level.</p>
-            <a href="/products">Shop Now</a>
-            <!-- <h2>Follow Us</h2>
-            <ul>
-                <li><a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a></li>
-                <li><a href="https://www.instagram.com/"><img src="images/Insta.png" alt="Instagram"></a></li>
-                <li><a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a></li>
-                <li><a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="LinkedIn"></a></li>
-            </ul> -->
+            <a id="button-link" href="/products">Shop Now</a>
         </section>
     </div>
 @endsection

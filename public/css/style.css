@@ -46,6 +46,24 @@ body {
         border-color: var(--alt-border-color);
         outline: none;
     }
+
+    /* For <a> tags that look similar to buttons */
+    #button-link {
+        font-size: 1em;
+        text-align: center;
+        display: inline-block;
+        padding: 10px 20px;
+        background: var(--btn-bg-colour);
+        color: var(--btn-text-colour);
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    #button-link:hover {
+        background: var(--alt-bh-colour);
+    }
 }
 
 main {
@@ -307,24 +325,12 @@ main {
     }
 
     /* Links Inside FAQ */
-
-    .faq-item a {
-        display: inline-block;
+    #button-link {
         margin-top: 10px;
         padding: 8px 15px;
-        background: var(--btn-bg-colour);
-        color: var(--btn-text-colour);
-        text-decoration: none;
-        border: none;
-        border-radius: 5px;
-    }
-
-    .faq-item a:hover {
-        background: var(--alt-bh-colour);
     }
 
     /* "If This Has Not Helped" Section */
-
     .FMI {
         text-align: center;
         padding: 40px 20px;
@@ -1438,19 +1444,9 @@ button {
         text-align: center;
         border-top: 1px solid var(--border-color);
 
-        a {
-            display: inline-block;
+        #button-link {
             margin-top: 10px;
             padding: 8px 15px;
-            background: var(--btn-bg-colour);
-            color: var(--btn-text-colour);
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-        }
-
-        a:hover {
-            background: var(--alt-bh-colour);
         }
     }
 
@@ -2567,22 +2563,9 @@ button {
                 }
             }
 
-            a {
-                display: inline-block;
-                font-size: 1em;
+            #button-link {
                 width: 95.5%;
-                text-align: center;
                 padding: 10px;
-                /* padding: 8px 15px; */
-                background: var(--btn-bg-colour);
-                color: var(--btn-text-colour);
-                text-decoration: none;
-                border: none;
-                border-radius: 5px;
-            }
-
-            a:hover {
-                background: var(--alt-bh-colour);
             }
         }
     }
