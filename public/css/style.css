@@ -324,7 +324,6 @@ main {
         transform: rotate(180deg);
     }
 
-    /* Links Inside FAQ */
     #button-link {
         margin-top: 10px;
         padding: 8px 15px;
@@ -356,24 +355,7 @@ main {
 
     }
 
-    /* Contact Link */
-
-    #contact-link {
-        display: inline-block;
-        padding: 10px 20px;
-        background: var(--btn-bg-colour);
-        color: var(--btn-text-colour);
-        text-decoration: none;
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-
-    #contact-link:hover {
-        background: var(--alt-bh-colour);
-    }
-
     /* Social Icons */
-
     ul {
         display: flex;
         padding: 0;
@@ -455,6 +437,7 @@ main {
         form input[type="text"], input[type="email"] {
             width: 95%;
         }
+        
         .contact-line-break {
             margin-top: 5px;
             margin-bottom: 10px;
