@@ -165,6 +165,7 @@ main {
     --text-nav-colour: rgb(168 204 204);
     --card-bg-colour: #F5F5F5;
     --card-hover-colour: #D5D5D5;
+    --delivery-button: #5d5d5d;
 }
 
 .dark-mode {
@@ -183,6 +184,7 @@ main {
     --text-nav-colour: #1E1E1E;
     --card-bg-colour: #1E1E1E;
     --card-hover-colour: #4D4D4D;
+    --delivery-button: #000000;
 }
 
 #theme-toggle img:last-child {
@@ -3319,9 +3321,9 @@ label {
         transition: background-color 0.3s ease;
     } 
 
-    /* Not sure what colour to make this */
+    /* Button Colour to Change*/
     .tab-btn.active-tab {
-        background-color: #007185;
+        background-color: var(--delivery-button);
     }
 
     .content-section {
@@ -3498,7 +3500,6 @@ label {
     display: flex;
     align-items: center;
     gap: 60px;
-    padding: 0 500px;
     margin-top: 80px;
     font-size: 20px;
     flex-direction: row;
@@ -3506,7 +3507,6 @@ label {
     background-color: #d5d4d4;
     height: auto;
     justify-content: center;
-    color: #000;
         ul {
             list-style: none;
         }
