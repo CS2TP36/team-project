@@ -3399,7 +3399,7 @@ label {
 #sponsor-banner {
     width: 100%;
     position: relative;
-    max-height: 600px;
+    height: 600px;
     animation: fadein 1s ease-out forwards;
 }
 
@@ -3421,11 +3421,13 @@ label {
 
 #sponsor-text-banner {
     position: absolute;
-    left: 10%;
-    color: #000;
-    font-size: 1.3rem;
+    left: 25%;
+    font-size: clamp(50px, 8vw, 50px);
     animation: fadeleft 1s ease-out forwards;
     font-weight: bold;
+    display: flex;
+    flex-direction: row-reverse;
+    top: 22%;
 }
 
 #sponsor-parallax-info {
@@ -3446,6 +3448,7 @@ label {
 #sponsor-logo {
     width: 200px;
     height: 200px;
+    padding-right: 30px;
 }
 
 #sponsor-pic {
