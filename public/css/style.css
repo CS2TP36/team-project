@@ -432,7 +432,7 @@ main {
 
 /* CSS for Contact Details Page*/
 .contact-details {
-    padding: 15px;
+    padding: 50px;
 
     h1 {
         font-size: 24px;
@@ -453,21 +453,22 @@ main {
         margin: 0 auto;
 
         form input[type="text"], input[type="email"] {
-            width: 100%;
+            width: 95%;
         }
-
-        button {
-            width: 250px;
-            margin-top: 5px;
-        }
-
         .contact-line-break {
             margin-top: 5px;
             margin-bottom: 10px;
             background-color: var(--border-color);
             height: 2px;
+            width: 99%;
         }
     }
+
+    .contact-detail-button {
+        width: 100%;
+        margin-top: 15px;
+    }
+
 }
 
 /* Media Query for Contact Details Page */
