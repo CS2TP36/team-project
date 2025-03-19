@@ -3110,51 +3110,38 @@ label {
         cursor: pointer;
         padding-bottom: 4px;
         position: relative;
-        /* For positioning the pseudo-element */
         transition: color 0.3s ease;
-        /* Smooth color transition */
     }
 
     nav li::after {
-        /* Pseudo-element for the underline */
         content: "";
         position: absolute;
         left: 0;
         bottom: -2px;
-        /* Adjust position below the text */
         width: 0;
-        /* Initially hidden */
         height: 2px;
         background-color: transparent;
-        /* Initially transparent */
         transition: width 0.3s ease, background-color 0.3s ease;
-        /* Smooth transitions */
     }
 
-    nav li.active,
-    nav li:hover {
+    /* Should change this */
+    nav li.active, nav li:hover {
         color: blueviolet;
-        /* Example active/hover color */
     }
 
-    nav li.active::after,
-    nav li:hover::after {
+    nav li.active::after, nav li:hover::after {
         width: 100%;
-        /* Show underline on active/hover */
         background-color: blueviolet;
-        /* Example underline color */
     }
 
     .content-section {
         display: none;
-        /* Hide all sections by default */
     }
 
     .content-section.active {
         display: block;
         max-height: 320px;
         overflow: auto;
-        /* Show the active section */
     }
 }
 
@@ -3186,7 +3173,6 @@ label {
     }
 
     .right-container {
-
         max-width: 400px;
         margin: 0;
         padding: 0;
@@ -3223,78 +3209,77 @@ label {
 
 .review {
     margin: 0 auto;
-}
 
-.review-form {
-    /* flex: 1; */
-    max-width: 750px;
-    padding: 5px;
-    margin: 0 auto;
+    .review-form {
+        max-width: 750px;
+        padding: 5px;
+        margin: 0 auto;
 
-    h1 {
-        font-size: 2em;
-        min-width: 320px;
-    }
-
-    .review-image {
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 100%;
-            max-width: 100px;
-            margin-right: 20px;
+        h1 {
+            font-size: 2em;
+            min-width: 320px;
         }
-    }
 
-    h2 {
-        min-width: 320px;
-        width: 100%;
-    }
+        .review-image {
+            display: flex;
+            align-items: center;
 
-    p {
-        min-width: 320px;
-        width: 100%;
-        font-size: 1em;
-    }
+            img {
+                width: 100%;
+                max-width: 100px;
+                margin-right: 20px;
+            }
+        }
 
-    input {
-        width: 100%;
-        min-width: 300px;
-    }
+        h2 {
+            min-width: 320px;
+            width: 100%;
+        }
 
-    button {
-        width: 80px;
-        margin-bottom: 10px;
-    }
+        p {
+            min-width: 320px;
+            width: 100%;
+            font-size: 1em;
+        }
 
-    .rating {
-        min-width: 320px;
-        width: 100%;
-    }
+        input {
+            width: 100%;
+            min-width: 300px;
+        }
 
-    .review-line-break {
-        margin-top: 10px;
-        height: 2px;
-        background-color: var(--border-color);
-        width: 100%;
-        min-width: 320px;
-        max-width: 1200px;
-    }
+        button {
+            width: 80px;
+            margin-bottom: 10px;
+        }
 
-    .star {
-        font-size: 3rem;
-        color: var(--border-color);
-        cursor: pointer;
-    }
+        .rating {
+            min-width: 320px;
+            width: 100%;
+        }
 
-    .star:hover, .star.active {
-        color: gold;
-    }
+        .review-line-break {
+            margin-top: 10px;
+            height: 2px;
+            background-color: var(--border-color);
+            width: 100%;
+            min-width: 320px;
+            max-width: 1200px;
+        }
 
-    input[type="text"], textarea {
-        width: 100%;
-        max-width: 1200px;
+        .star {
+            font-size: 3rem;
+            color: var(--border-color);
+            cursor: pointer;
+        }
+
+        .star:hover, .star.active {
+            color: gold;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            max-width: 1200px;
+        }
     }
 }
 
@@ -3471,7 +3456,6 @@ label {
     line-break: 1.8;
 }
 
-
 #sponsor-logo {
     width: 200px;
     height: 200px;
@@ -3549,11 +3533,6 @@ label {
     color: #000;
 }
 
-
-
-
-
-
 /* CSS for Edit Address Page */
 
 .Edit-Address {
@@ -3599,16 +3578,7 @@ label {
 
     .btn {
         width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
         margin-top: 15px;
-    }
-
-    .btn:hover {
-        opacity: 0.8;
     }
 
     .form-group .error-message {
@@ -3761,10 +3731,6 @@ label {
         width: 100%;
         margin-top: 15px;
         align-self: center;
-    }
-
-    button:hover {
-        opacity: 0.8;
     }
 
     .form-group .error-message {
