@@ -1,6 +1,7 @@
 @extends('layouts.page')
 @section('title','Contact Details')
 @section('script', asset('js/contact-details.js'))
+
 @section('content')
     <div class="contact-details">
         <h1>Your Details</h1>
@@ -30,12 +31,14 @@
                        required></input>
                 <input type="hidden" id="phone-number-old" value="{{ $user['phone_number'] }}">
             </form>
+            
+            <div class="contact-line-break"><br></div>
+            <div class = contact-detail-button>
+                <button type="submit" form="details-form" class="btn btn-primary mt-4">Update Details</button>
 
-            <button type="submit" form="details-form" class="btn btn-primary mt-4">Update Details</button>
-
-            <!-- Delete Account Button -->
-            <button type="button" class="btn btn-danger mt-4" onclick="confirmDelete()">Delete Account</button>
-
+                <!-- Delete Account Button -->
+                <button type="button" class="btn btn-danger mt-4" onclick="confirmDelete()">Delete Account</button>
+            </div>
             <!-- Hidden Delete Account Form -->
             <form id="delete-account-form" method="POST" action="{{ route('account.delete') }}" style="display: none;">
                 @csrf
