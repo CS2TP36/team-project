@@ -36,14 +36,14 @@
             <div class="faq-item">
                 <button class="faq-question">What is your return policy? <span class="arrow">▼</span></button>
                 <div class="faq-answer">You can return items within 30 days of purchase as long as they are unworn and
-                    in original condition. More information relating to returns can be found below.<br><a
+                    in original condition. More information relating to returns can be found below.<br><a id="button-link" 
                         href="/delivery-and-returns">Delivery and Returns</a></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">Do you ship internationally? <span class="arrow">▼</span></button>
                 <div class="faq-answer">At this curretn moment we do not ship oversees and only in the United Kingdom,
-                    in the future we plan on shipping globally. Below you can find our shipping Information.<br><a
+                    in the future we plan on shipping globally. Below you can find our shipping Information.<br><a id="button-link" 
                         href="/shipping">Shipping Information</a></div>
             </div>
 
@@ -51,7 +51,7 @@
                 <button class="faq-question">How long do products take to get to me? <span
                         class="arrow">▼</span></button>
                 <div class="faq-answer">When purchasing you have a choise of either 3-5 working days, next day delivery
-                    or chosen day. More information relating to shipping can be found below.<br><a
+                    or chosen day. More information relating to shipping can be found below.<br><a id="button-link" 
                         href="/shipping">Shipping Information</a></div>
             </div>
 
@@ -59,7 +59,7 @@
                 <button class="faq-question">Do you offer discounts or promotions<span class="arrow">▼</span></button>
                 <div class="faq-answer">Yes we do we offer students a discount and on occassion we drop discount codes
                     through email and on our socials so check out our socials and add our email to recieve promo
-                    codes.<br><a href="/discount">Discount</a>
+                    codes.<br><a id="button-link" href="/discount">Discount</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <h2>If This Has Not Helped</h2>
             <p>If this page has not answered your question you can always drop us an Email or use our contact page to
                 get in touch.</p>
-            <a id="contact-link" href="/contact">Contact Us</a>
+            <a id="button-link" href="/contact">Contact Us</a>
             <h2>You can also check out our socials as we also listen here.</h2>
             <ul>
                 <li><a href="https://www.facebook.com/"><img src="images/Facebook.png" alt="Facebook"></a></li>
