@@ -6,7 +6,7 @@
 
     <div class="Sponsorship"><!--creates the home class-->
         <section>
-            <div id="banner-container"><!--creates the banner container-->
+            <div id="sponsor-banner-container"><!--creates the banner container-->
                 <img src="{{asset('images/sponsorship.jpg')}}" id="sponsor-banner">
                 <div id="sponsor-text-banner">
                 <p>Sponsorship At SportsWear</p>
@@ -18,7 +18,7 @@
             <p> Join our Sponsorship Program</p>
         </div>
 
-
+    <div class = sponsor-main>
         <div id=sponsor-text>
             <p>Want to Succeed? Want to Achieve you dream? We understand that success is not something that happens in
                 isolation, its about building meaninful relationships with eachother that helps elevate everyone who is

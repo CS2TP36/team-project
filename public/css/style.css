@@ -12,6 +12,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-colour);
     color: var(--text-colour);
+    justify-content: center;
 
     button {
         font-size: 1em;
@@ -2093,6 +2094,7 @@ button {
 .featured-item-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     
 }
@@ -3396,17 +3398,20 @@ label {
     }
 }
 
-#sponsor-banner {
+
+.Sponsorship {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    position: relative;
-    height: 600px;
-    animation: fadein 1s ease-out forwards;
+    min-height: 100%;
+    margin: 0 auto;
+    overflow-x: hidden; 
 }
 
-
 #sponsor-banner {
     width: 100%;
     position: relative;
+    object-fit: cover;
     max-height: 600px;
     animation: fadein 1s ease-out forwards;
 }
@@ -3417,6 +3422,7 @@ label {
     max-height: 600px;
     display: flex;
     flex-wrap: wrap;
+
 }
 
 #sponsor-text-banner {
@@ -3427,7 +3433,14 @@ label {
     font-weight: bold;
     display: flex;
     flex-direction: row-reverse;
-    top: 22%;
+    top: 25%;
+}
+
+
+.sponsor-main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 #sponsor-parallax-info {
@@ -3470,19 +3483,13 @@ label {
     display: flex;
     align-items: center;
     gap: 60px;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
+    margin: 50px auto 0 auto;
+    padding: 50px;
     font-size: 1.1rem;
     flex-direction: row;
     line-height: 1.7;
     background-color: #d5d4d4;
-    color: #000;
+    max-width: 1500px;
 
 }
 
@@ -3490,14 +3497,14 @@ label {
     display: flex;
     align-items: center;
     gap: 60px;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding: 0 500px;
     margin-top: 80px;
     font-size: 20px;
     flex-direction: row;
     line-height: 1.7;
     background-color: #d5d4d4;
     height: auto;
+    justify-content: center;
     color: #000;
         ul {
             list-style: none;
@@ -3510,14 +3517,8 @@ label {
     gap: 60px;
     font-size: 20px;
     flex-direction: row-reverse;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 50px;
-    padding-left: 50px;
+    margin: 80px 300px;
+    padding: 30px 50px;     
     line-height: 1.7;
     background-color: #d5d4d4;
     color: #000;
