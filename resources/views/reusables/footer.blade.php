@@ -6,6 +6,7 @@
             <li class="footer-list"><a href="/delivery-and-returns">Return Policy</a></li><!--links to about us-->
             <li class="footer-list"><a href="/delivery-and-returns">Shipping Information</a></li>
             <li class="footer-list"><a href="/faq">FAQ</a></li>
+            <li class="footer-list"><a href="/careers">Careers</a></li>
         </ul>
 
     <div>
