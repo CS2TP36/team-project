@@ -1652,7 +1652,9 @@ main {
 
 /* CSS for Messages */
 .message-area {
-    width: 15%;
+    width: 25%;
+    min-width: 320px;
+    max-width: 400px;
     margin: auto;
 }
 
@@ -1670,8 +1672,10 @@ main {
     padding: 2px 2px 12px 0px;
 
     img {
-        width: 1.2vw;
-        height: 1.2vw;
+        /* width: 1.2vw;
+        height: 1.2vw; */
+        width: 35px;
+        height: 35px;
         margin-right: 10px;
     }
 }
