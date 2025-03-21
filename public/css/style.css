@@ -3216,13 +3216,14 @@ label {
         padding: 20px;
     }
 
-     .tabs-container {
+    .tabs-container {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
     }
 
     .tab-btn {
+        width: 45%;
         padding: 10px 20px;
         font-weight: bold;
         text-transform: uppercase;
