@@ -3,8 +3,7 @@
         <ul><!--list for contacting us-->
             <li class="footer-title">Customer Service</li><!--links to the contact page-->
             <li class="footer-list"><a href="/contact">Contact Us</a></li><!--links to the contact page-->
-            <li class="footer-list"><a href="/delivery-and-returns">Return Policy</a></li><!--links to about us-->
-            <li class="footer-list"><a href="/delivery-and-returns">Shipping Information</a></li>
+            <li class="footer-list"><a href="/delivery-and-returns">Delivery & Returns Policy</a></li><!--links to about us-->
             <li class="footer-list"><a href="/faq">FAQ</a></li>
             <li class="footer-list"><a href="/careers">Careers</a></li>
         </ul>

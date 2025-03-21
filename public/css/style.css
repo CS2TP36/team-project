@@ -165,6 +165,7 @@ main {
     --text-nav-colour: rgb(168 204 204);
     --card-bg-colour: #F5F5F5;
     --card-hover-colour: #D5D5D5;
+    --contact-box-colour: #e4e4e4;
     --delivery-button: #5d5d5d;
 }
 
@@ -184,6 +185,7 @@ main {
     --text-nav-colour: #1E1E1E;
     --card-bg-colour: #1E1E1E;
     --card-hover-colour: #4D4D4D;
+    --contact-box-colour: #21223a;
     --delivery-button: #000000;
 }
 
@@ -1262,6 +1264,7 @@ main {
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0px 8px 20px var(--alt-bs-colour);
+        background: var(--contact-box-colour);
     }
 
     .contact-page-details {
