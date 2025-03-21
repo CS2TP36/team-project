@@ -248,7 +248,7 @@ main {
         max-width: 1200px;
         margin: 0 auto;
         margin-bottom: 10px;
-        padding: 15px;
+        padding: 40px;
     }
 
     h1 {
@@ -465,6 +465,7 @@ main {
 /* CSS for Contact Details Page*/
 .contact-details {
     padding: 50px;
+    margin: 0 auto;
 
     h1 {
         font-size: 24px;
@@ -571,7 +572,6 @@ main {
 @media (max-width: 768px) {
     .account-page {
         min-width: 200px;
-        margin: 20px;
         margin-bottom: 100px;
 
         h1 {
@@ -1927,7 +1927,7 @@ main {
     font-size: clamp(50px, 8vw, 50px);
     font-weight: bold;
     animation: fadeleft 1s ease-out forwards;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 0.08rem black;
 }
 
 
@@ -2320,7 +2320,8 @@ main {
 @media (max-width: 768px) {
     #text-banner p {
         font-size: clamp(16px, 5vw, 30px);
-        -webkit-text-stroke: 1px black;
+        color: #000;
+        -webkit-text-stroke: 0;
     }
 
     #home-slogan {
@@ -2335,6 +2336,7 @@ main {
             padding-right: 20px;
             padding-left: 20px;
             font-size: 15px;
+        
 
         }
 
@@ -2817,7 +2819,8 @@ label {
 @media (max-width: 1340px) {
     #product-text-banner {
         font-size: clamp(16px, 5vw, 30px);
-        -webkit-text-stroke: 1px black;
+        color: #000;
+        -webkit-text-stroke: 0;
     }
 
     .Products-Filter-Container {
