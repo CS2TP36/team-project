@@ -30,7 +30,7 @@ class RegisterController extends Controller
             'lastName' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
-            'phone' => 'required|string|regex:/^\+44\d{10,13}$/',
+            'phone' => 'required|string|regex:/^(?:\+44\s?\d{4}\s?\d{6}|\+44\d{10}|07\d{3}\s?\d{6}|07\d{9})$/',
             'address' => 'required|string|max:255',
         ]);
 
