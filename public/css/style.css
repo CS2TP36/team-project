@@ -560,14 +560,24 @@ main {
             min-width: 320px;
         }
 
-        .error-messages ul li {
+        .form-group .error-message {
             color: red;
-            padding-left: 0;
-            margin: 0;
+            font-size: 12px;
+            font-weight: bold;
+            display: block;
+            height: 14px;
+            margin-top: 2px;
+            visibility: hidden;
         }
-
-        .error-messages li {
-            margin-bottom: 5px;
+    
+        input.error, select.error {
+            border-color: red !important;
+            background-color: #F9D9D9 !important;
+            outline: none;
+        }
+    
+        .error-message.active {
+            visibility: visible;
         }
     }
 }
