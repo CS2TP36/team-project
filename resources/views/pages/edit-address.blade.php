@@ -5,7 +5,24 @@
 <div class="Edit-Address">
     <div class="container">
         <h2>Edit Address</h2>
+        
+        <!-- Display Validation Errors -->
+        @if ($errors->any())
+            <div class="error-messages">
+              <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+              </ul>
+            </div>
+        @endif
 
+        @if (session('error'))
+            <div class="error-message">
+              <p>{{ session('error') }}</p>
+            </div>
+        @endif
+        
         <form id="editAddressForm"  action="{{ route('address.update', $address->id) }}" method="POST" novalidate>
             @csrf
             @method('PUT')
