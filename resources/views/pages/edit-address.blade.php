@@ -31,16 +31,10 @@
               <input type="text" id="address_Line1" name="address_line1" value="{{ old('address_line1', $address->address_line1) }}" required>
             </div>
 
-            <label for="address_Line2">Address Line 2 (Optional)</label>
-            <input type="text" id="address_Line2" name="address_line2" value="{{ old('address_line2', $address->address_line2) }}">
-
             <div class="form-group">
               <label for="town_City">Town/City</label>
               <input type="text" id="town_City" name="town_city" value="{{ old('town_city', $address->town_city) }}" required>
             </div>
-
-            <label for="county">County (Optional)</label>
-            <input type="text" id="county" name="county" value="{{ old('county', $address->county) }}">
 
             <div class="checkbox-container">
                 <input type="checkbox" id="is_default" name="is_default" value="1" {{ old('is_default', $address->is_default) ? 'checked' : '' }}>
