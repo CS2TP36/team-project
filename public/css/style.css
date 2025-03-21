@@ -908,6 +908,9 @@ main {
 
 /*CSS for Checkout Page*/
 .checkout {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -928,18 +931,20 @@ main {
     h1 {
         font-size: 28px;
         font-weight: bold;
+        color: black;
         padding-left: 10px;
         text-align: center;
     }
 
-    .billing-info h2 {
+    .shipping-info h2 {
         font-size: 20px;
         margin-bottom: 20px;
         padding-left: 10px;
     }
 
-    .payment-method h2 {
+    .checkout-section h2 {
         font-size: 20px;
+        color: black;
         margin-bottom: 20px;
         padding-left: 10px;
     }
@@ -957,7 +962,12 @@ main {
 
         input, select {
             width: 100%;
+            padding: 12px;
             font-size: 14px;
+            border: 1px solid #D9D9D9;
+            border-radius: 6px;
+            background-color: #F9F9F9;
+            color: #4D4D4D;
             box-sizing: border-box;
         }
 
