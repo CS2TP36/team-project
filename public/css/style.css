@@ -458,8 +458,12 @@ main {
         max-width: 600px;
         margin: 0 auto;
 
-        form input[type="text"], input[type="email"] {
+        input[type="text"], 
+        input[type="email"] {
             width: 95%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
         }
 
         .contact-line-break {
@@ -474,6 +478,26 @@ main {
     .contact-detail-button {
         width: 100%;
         margin-top: 15px;
+    }
+
+    .form-group .error-message {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        height: 14px;
+        margin-top: 2px;
+        visibility: hidden;
+    }
+
+    input.error, select.error {
+        border-color: red !important;
+        background-color: #F9D9D9 !important;
+        outline: none;
+    }
+
+    .error-message.active {
+        visibility: visible;
     }
 
 }
