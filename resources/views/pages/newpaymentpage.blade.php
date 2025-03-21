@@ -1,28 +1,10 @@
 @extends('layouts.page')
 @section('title', 'New Payment Method')
-@section('script', asset('js/newPayment.js'))
 @section('content')
     <div class="new-payment-container">
         <h1 class="payment-title">Enter New Payment Details</h1>
 
-        <!-- Display Validation Errors -->
-        @if ($errors->any())
-            <div class="error-messages">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
-        @if (session('error'))
-            <div class="error-message">
-                <p>{{ session('error') }}</p>
-            </div>
-        @endif
-
-        <form id="newPaymentForm" action="{{ route('payment.store') }}" method="POST" novalidate>
+        <form id="payment-form" action="{{ route('payment.store') }}" method="POST">
             @csrf
             <label for="cardNumber" class="payment-label">Card number</label>
             <input
