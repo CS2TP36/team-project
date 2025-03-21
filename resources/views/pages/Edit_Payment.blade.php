@@ -1,10 +1,11 @@
 @extends('layouts.page')
 @section('title', 'Edit Payment')
+@section('script', asset('js/editpayment.js'))
 @section('content')
 <div class="edit-payment-container">
     <h1>Edit Payment Information</h1>
 
-    <form action="{{ route('payment.update', $paymentMethod->id) }}" method="POST" onsubmit="return validateForm()">
+    <form id="editPaymentForm" action="{{ route('payment.update', $paymentMethod->id) }}"  method="POST" novalidate>
         @csrf
         @method('PUT')
 
