@@ -3755,19 +3755,12 @@ label {
 
 /* CSS for new payment method page */
 .new-payment-container {
-    /* my sizing */
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #000;
-
-    /* Border & background  */
-    background-color: #ffffff;
-    border: 1px solid #dedada;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 2px 8px var(--alt-bs-colour);
 
     .payment-title {
         font-size: 28px;
@@ -3786,11 +3779,10 @@ label {
         width: 50%;
         padding: 10px;
         font-size: 16px;
-        border: 1px solid #999999;
+        border: 1px solid var(--border-color);
         border-radius: 4px;
         outline: none;
     }
-
 
     .card-logos {
         display: flex;
@@ -3809,7 +3801,6 @@ label {
 
     .card-type-text {
         font-size: 14px;
-        color: #787575;
         margin-bottom: 20px;
     }
 
@@ -3817,7 +3808,6 @@ label {
     .expiry-example,
     .cvc-info {
         font-size: 14px;
-        color: #666666;
         margin-top: 5px;
     }
 
@@ -3836,7 +3826,7 @@ label {
         width: 100%;
         padding: 10px;
         font-size: 15px;
-        border: 1px solid #999999;
+        border: 1px solid var(--border-color);
         border-radius: 4px;
         outline: none;
     }
@@ -3850,25 +3840,13 @@ label {
         display: inline-block;
         margin-top: 20px;
         padding: 12px 22px;
-        font-size: 16px;
         font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #0e0d0d;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
         transition: background-color 0.2s ease;
-    }
-
-    .changes-submit-btn:hover {
-        background-color: #0f0e0e;
-    }
+    }    
 }
 
 .order-success {
     align-items: center;
     text-align: center;
     font-size: 1.3rem;
-
 }

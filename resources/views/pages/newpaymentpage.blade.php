@@ -18,7 +18,7 @@
             />
             <small class="error-message" id="cardNumberError"></small>
 
-            <div class="card-logos"><img src="{{ asset("images/payment-icon.png") }}" alt="Accepted Cards"/></div>
+            <div class="card-logos"><img src='{{ asset("images/payment-icon.png") }}' alt="Accepted Cards"/></div>
             <p class="card-type-text">Accepted credit and debit card types</p>
 
             <label class="payment-label">Expiry date</label>
