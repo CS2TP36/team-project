@@ -3411,11 +3411,13 @@ label {
 
 #sponsor-join-text {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 60px;
-    margin-top: 80px;
-    font-size: 20px;
-    flex-direction: row;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 65%;
+    padding-right: 30px;
+    padding-left: 30px;
     line-height: 1.7;
     background-color: #d5d4d4;
     height: auto;
@@ -3424,6 +3426,11 @@ label {
         ul {
 
             list-style: none;
+        }
+
+        p{
+            width: 60%;
+            text-align: center;
         }
 }
 
@@ -3446,16 +3453,19 @@ label {
     #sponsor-text {
         flex-direction: column;
         gap: 20px;
-        width: 50vw;
+        width: 300px;
         padding: 20px;
     }
 
     #sponsor-text-banner{
         left: 10%;
+        font-size: 15px;
     }
 
     #sponsor-logo{
-        display: none;
+        height: 40px;
+        width: 40px;
+        padding-right: 10px;
     }
     #sponsor-pic, #athlete-pic {
         width: 100%;
