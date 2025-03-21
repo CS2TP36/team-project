@@ -27,16 +27,10 @@
             <input type="text" id="addressline1" name="address_line1" placeholder="Street address, P.O. box, company name" required>
         </div>
 
-        <label for="address-line2">Address Line 2 (Optional)</label>
-        <input type="text" id="address-line2" name="address_line2" placeholder="Apartment, suite, unit, building, floor">
-
         <div class="form-group">
             <label for="city">Town/City</label>
             <input type="text" id="city" name="town_city" placeholder="Enter your city" required>
         </div>
-
-        <label for="county">County (Optional)</label>
-        <input type="text" id="county" name="county" placeholder="Enter your county">
 
         <div class="checkbox-container">
             <input type="hidden" name="is_default" value="0">
