@@ -16,6 +16,12 @@
             </div>
         @endif
 
+        @if (session('error'))
+            <div class="error-message">
+                <p>{{ session('error') }}</p>
+            </div>
+        @endif
+
         <form id="signupForm" method="POST" action="{{ route('register.store') }}" novalidate>
             @csrf <!-- Laravel CSRF protection -->
 
