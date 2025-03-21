@@ -1,7 +1,5 @@
 @extends('layouts.page')
-
 @section('title', 'New Payment Method')
-
 @section('content')
     <div class="new-payment-container">
         <h1 class="payment-title">Enter New Payment Details</h1>
