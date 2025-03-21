@@ -43,8 +43,8 @@
             <div class="faq-item">
                 <button class="faq-question">Do you ship internationally? <span class="arrow">▼</span></button>
                 <div class="faq-answer">At this curretn moment we do not ship oversees and only in the United Kingdom,
-                    in the future we plan on shipping globally. Below you can find our shipping Information.<br><a id="button-link" 
-                        href="/shipping">Shipping Information</a></div>
+                    in the future we plan on shipping globally. Below you can find our Delivery and Returns.<br><a id="button-link" 
+                        href="/delivery-and-returns">Delivery and Returns</a></div>
             </div>
 
             <div class="faq-item">
@@ -52,14 +52,14 @@
                         class="arrow">▼</span></button>
                 <div class="faq-answer">When purchasing you have a choise of either 3-5 working days, next day delivery
                     or chosen day. More information relating to shipping can be found below.<br><a id="button-link" 
-                        href="/shipping">Shipping Information</a></div>
+                        href="/delivery-and-returns">Delivery and Returns</a></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">Do you offer discounts or promotions<span class="arrow">▼</span></button>
                 <div class="faq-answer">Yes we do we offer students a discount and on occassion we drop discount codes
                     through email and on our socials so check out our socials and add our email to recieve promo
-                    codes.<br><a id="button-link" href="/discount">Discount</a>
+                    codes.<br>
                 </div>
             </div>
         </div>
