@@ -3,6 +3,24 @@
 @section('script', asset('js/newaddress.js'))
 @section('content')
 <div class="new-address-container">
+
+    <!-- Display Validation Errors -->
+     @if ($errors->any())
+        <div class="error-messages">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div class="error-message">
+            <p>{{ session('error') }}</p>
+        </div>
+    @endif
+
     <form id="newaddressForm" action="{{ route('address.store') }}" method="POST" novalidate>
         @csrf
         <h2>Add a New Address</h2>
