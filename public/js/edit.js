@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Field validation function
     const validateFields = () => {
         let isValid = true;
-      
+
         for (let key in fields) {
           const field = fields[key];
           const fieldName = fieldNames[key];
           const value = field.value.trim();
-      
+
           if (!value) {
             displayError(field, `${fieldName} is required.`);
             isValid = false;
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             clearError(field);
           }
-      
+
           if (key === 'phone') {
               const phonePattern = /^(?:\+44\s?\d{4}\s?\d{6}|\+44\d{10}|0\d{4}\s?\d{6}|0\d{10})$/;
             if (!phonePattern.test(value)) {
@@ -76,31 +76,31 @@ document.addEventListener('DOMContentLoaded', () => {
               isValid = false;
             }
           }
-      
+
           if (key === 'postcode') {
-            const postcodePattern = !/^[a-zA-Z0-9\s]{5,8}$/;
+            const postcodePattern = /^[a-zA-Z0-9\s]{5,8}$/;
             if (!postcodePattern.test(value)) {
               displayError(field, 'Enter a valid postcode (5-7 alphanumeric characters).');
               isValid = false;
             }
           }
-      
+
           if (key === 'address_line1') {
               if(value.length < 1){
                   displayError(field,'Address Line 1 is required');
                   isValid = false;
               }
-      
+
           }
-      
+
           if (key === 'city') {
-            const cityPattern = /^[A-Za-z\s-]+$/; 
+            const cityPattern = /^[A-Za-z\s-]+$/;
             if (!cityPattern.test(value)) {
               displayError(field, 'Enter a valid city name (letters, spaces, and hyphens only).');
               isValid = false;
             }
           }
-      
+
           if (key === 'fullName') {
               const namePattern = /^[A-Za-z\s]+$/;
             if (!namePattern.test(value)) {
@@ -109,10 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           }
         }
-      
+
         return isValid;
       };
-
 
     // Check if form values have changed
     const hasFormChanged = () => {
@@ -123,17 +122,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Form submission handling
-    form.addEventListener('submit', (event) => {
-        if (!validateFields()) {
-            event.preventDefault(); // Prevent form submission if validation fails
-            return;
-        }
-
+    document.getElementById("submit").addEventListener('click', (event) => {
         if (!hasFormChanged()) {
-            event.preventDefault(); // Prevent submission if no changes were made
             alert('No changes detected. Update your address before saving.');
+        } else if (validateFields()) {
+            form.submit();
         }
     });
-
-
 });

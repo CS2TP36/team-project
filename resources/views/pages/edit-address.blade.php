@@ -5,7 +5,7 @@
 <div class="Edit-Address">
     <div class="container">
         <h2>Edit Address</h2>
-        
+
         <!-- Display Validation Errors -->
         @if ($errors->any())
             <div class="error-messages">
@@ -22,7 +22,7 @@
               <p>{{ session('error') }}</p>
             </div>
         @endif
-        
+
         <form id="editAddressForm"  action="{{ route('address.update', $address->id) }}" method="POST" novalidate>
             @csrf
             @method('PUT')
@@ -59,7 +59,7 @@
 
         </form>
 
-        <button type="submit" class="btn save">Save Changes</button>
+        <button id="submit" class="btn save">Save Changes</button>
         <button type="button" class="btn cancel" onclick="window.history.back()">Cancel</button>
     </div>
 </div>
