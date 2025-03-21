@@ -65,6 +65,26 @@ body {
     #button-link:hover {
         background: var(--alt-bh-colour);
     }
+
+    .form-group .error-message {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        height: 14px;
+        margin-top: 2px;
+        visibility: hidden;
+    }
+
+    input.error, select.error {
+        border-color: red !important;
+        background-color: #F9D9D9 !important;
+        outline: none;
+    }
+
+    .error-message.active {
+        visibility: visible;
+    }
 }
 
 main {
@@ -481,27 +501,6 @@ main {
         width: 100%;
         margin-top: 15px;
     }
-
-    .form-group .error-message {
-        color: red;
-        font-size: 12px;
-        font-weight: bold;
-        display: block;
-        height: 14px;
-        margin-top: 2px;
-        visibility: hidden;
-    }
-
-    input.error, select.error {
-        border-color: red !important;
-        background-color: #F9D9D9 !important;
-        outline: none;
-    }
-
-    .error-message.active {
-        visibility: visible;
-    }
-
 }
 
 /* Media Query for Contact Details Page */
@@ -560,26 +559,6 @@ main {
         button {
             width: 100%;
             min-width: 320px;
-        }
-
-        .form-group .error-message {
-            color: red;
-            font-size: 12px;
-            font-weight: bold;
-            display: block;
-            height: 14px;
-            margin-top: 2px;
-            visibility: hidden;
-        }
-    
-        input.error, select.error {
-            border-color: red !important;
-            background-color: #F9D9D9 !important;
-            outline: none;
-        }
-    
-        .error-message.active {
-            visibility: visible;
         }
     }
 }
@@ -1322,26 +1301,6 @@ main {
 
         textarea {
             width: 95%;
-        }
-
-        .form-group .error-message {
-            color: red;
-            font-size: 12px;
-            font-weight: bold;
-            display: block;
-            height: 14px;
-            margin-top: 2px;
-            visibility: hidden;
-        }
-
-        input.error, select.error {
-            border-color: red !important;
-            background-color: #F9D9D9 !important;
-            outline: none;
-        }
-
-        .error-message.active {
-            visibility: visible;
         }
     }
 
@@ -2532,28 +2491,9 @@ main {
                 color: var(--text-colour);
             }
 
-            .error-message {
-                color: red;
-                font-size: 14px;
-                font-weight: bold;
-                display: none;
-                padding: 5px 0;
-                border-radius: 10px;
-            }
-
-            .error-message.active {
-                display: block;
-            }
-
             .form-group {
                 margin-bottom: 10px;
-            }
-
-            input.error {
-                border-color: red !important;
-                background-color: #F9D9D9 !important;
-                outline: none;
-            }
+            } 
         }
 
         .new-customers {
@@ -2715,26 +2655,6 @@ main {
     button {
         width: 100%;
         margin-top: 10px;
-    }
-
-    .form-group .error-message {
-        color: red;
-        font-size: 12px;
-        font-weight: bold;
-        display: block;
-        height: 14px;
-        margin-top: 2px;
-        visibility: hidden;
-    }
-
-    input.error, select.error {
-        border-color: red !important;
-        background-color: #F9D9D9 !important;
-        outline: none;
-    }
-
-    .error-message.active {
-        visibility: visible;
     }
 }
 
@@ -3379,26 +3299,6 @@ label {
         width: 100%;
         min-width: 320px;
     }
-
-    .form-group .error-message {
-        color: red;
-        font-size: 12px;
-        font-weight: bold;
-        display: block;
-        height: 14px;
-        margin-top: 2px;
-        visibility: hidden;
-    }
-
-    input.error, select.error {
-        border-color: red !important;
-        background-color: #F9D9D9 !important;
-        outline: none;
-    }
-
-    .error-message.active {
-        visibility: visible;
-    }
 }
 
 
@@ -3609,26 +3509,6 @@ label {
         width: 100%;
         margin-top: 15px;
     }
-
-    .form-group .error-message {
-        color: red;
-        font-size: 12px;
-        font-weight: bold;
-        display: block;
-        height: 14px;
-        margin-top: 2px;
-        visibility: hidden;
-    }
-
-    input.error, select.error {
-        border-color: red !important;
-        background-color: #F9D9D9 !important;
-        outline: none;
-    }
-
-    .error-message.active {
-        visibility: visible;
-    }
 }
 
 
@@ -3760,26 +3640,6 @@ label {
         width: 100%;
         margin-top: 15px;
         align-self: center;
-    }
-
-    .form-group .error-message {
-        color: red;
-        font-size: 12px;
-        font-weight: bold;
-        display: block;
-        height: 14px;
-        margin-top: 2px;
-        visibility: hidden;
-    }
-
-    input.error, select.error {
-        border-color: red !important;
-        background-color: #F9D9D9 !important;
-        outline: none;
-    }
-
-    .error-message.active {
-        visibility: visible;
     }
 }
 
