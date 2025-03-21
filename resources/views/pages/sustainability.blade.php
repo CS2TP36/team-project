@@ -19,17 +19,17 @@
 
         <div id=sustain-gurantee-container>
             <ul id=sustain-guarantee>
-                <li id=guarantee-list><img src="{{asset('images/clothing-icon.png')}}">
+                <li id=sustain-guarantee-list><img src="{{asset('images/clothing-icon.png')}}">
                     <h3> Sustainable Materials & Production</h3>At SportsWear we use recycled polyester and organic
                     cotton for our clothing collections, this helps reduce reliance on toxic plastics and harmful
                     pesticides.
                 </li>
-                <li id=guarantee-list><img src="{{asset('images/moneys.png')}}">
+                <li id=sustain-guarantee-list><img src="{{asset('images/moneys.png')}}">
                     <h3> Circular Economy & Waste Reduction </h3> Our Brands New collection focuses on providing
                     bio-degradable packaging which helps cut down on millions of wasted plastic polybags used every
                     year.
                 </li>
-                <li id=guarantee-list><img src="{{asset('images/Carbon-foot.png')}}">
+                <li id=sustain-guarantee-list><img src="{{asset('images/Carbon-foot.png')}}">
                     <h3> Carbon Footprint & Ethical Supply Chain</h3>At SportsWear we are commited to achievingcarbon
                     neutralitiy, we do this by using maximum renewable energy in our main production facilities and
                     warehouses, hleping reducing the amount of harmful greenhouse gasses produced every year.
@@ -39,7 +39,7 @@
 
 
         <div id=section-divider>
-            <p>Our Misson For Sustainability At SportsWear</p>
+            <p>Our Misson For Sustainability </p>
         </div>
 
         <div id=sustain-text>
@@ -55,7 +55,7 @@
                 circular economy initiatives, investing in renewable energy, ensuring that we source responsibly. We aim
                 to lead the world into a much more sustainable place. We at Sportswear don't just talk aboout change, we
                 take action to create a better future for the future generation. </p>
-            <img src="{{asset('images/flower-shoe.jpg')}}" id="sponsor-pic">
+            <img src="{{asset('images/flower-shoe.jpg')}}" id="sustain-pic">
         </div>
 
         <div id=sustain-second-text>
@@ -65,7 +65,7 @@
                 meet the Fair Trade standards, making sure that transparency and accoutability is met at every stage of
                 the production. By ensuring that me prioritse ethical manufacturing, we are commited to making a
                 positive impact on the enviromental world. </p>
-            <img src="{{asset('images/factory.jpg')}}" id="sponsor-pic">
+            <img src="{{asset('images/factory.jpg')}}" id="sustain-pic">
         </div>
 
         <div id=sustain-text>
@@ -83,12 +83,12 @@
                     recyling it into newer products.
                 </li>
             </ul>
-            <img src="{{asset('images/2025.jpg')}}" id="sponsor-pic">
+            <img src="{{asset('images/2025.jpg')}}" id="sustain-pic">
         </div>
 
         <div id="sustain-second-text">
             <p>All of the clothing items at SportsWear are stocked in their largest size. Upon the item being ordered they are adjusted down to fit whichever size is required. This means that being able to buy an item is not dependent on which size you require. This also reduces waste in unsold units, therefore helping us to run a more sustainable business.</p>
-            <img src="{{ asset('images/productImage/7db446c4-8537-41b6-a1ee-e7068bfb8bc8.jpg') }}">
+            <img src="{{ asset('images/productImage/7db446c4-8537-41b6-a1ee-e7068bfb8bc8.jpg') }}" id = "sustain-pic">
         </div>
     </div>
 
