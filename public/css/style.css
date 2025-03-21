@@ -876,13 +876,13 @@ main {
 
             .add-basket {
                 button {
-                    width: 150px;
                     margin-bottom: 10px;
                 }
             }
         }
     }
 }
+
 
 /* CSS for Footer */
 /* footer {
