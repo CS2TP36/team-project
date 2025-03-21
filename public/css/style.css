@@ -407,6 +407,8 @@ main {
     @media (max-width: 900px) {
         .faq-container {
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .FAQ h1 {
@@ -430,6 +432,8 @@ main {
 
         .FMI {
             padding: 30px 15px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .FMI h2 {
@@ -713,7 +717,7 @@ main {
 .basket-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
 
     .line-break {
         background-color: var(--border-color);
@@ -723,7 +727,7 @@ main {
     }
 
     .basket-details {
-        margin-right: 200px;
+        max-width: 100%;
 
         .basket-item {
             display: flex;
@@ -748,7 +752,7 @@ main {
                 margin-right: 100px;
 
                 p {
-                    width: 350px;
+                    width: 22vw;
                     font-size: 1em;
                     line-height: 1.5;
                 }
@@ -800,6 +804,9 @@ main {
 
 /* Media Query for Basket Page */
 @media (max-width: 768px) {
+    .basket-details {
+        margin: 0 auto;
+    }
     .basket-container {
         flex-direction: column;
         padding: 10px;
@@ -815,7 +822,7 @@ main {
         }
     }
 
-    .item-details {
+    .basket-item-details {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -823,6 +830,10 @@ main {
         margin-right: 0;
         text-align: left;
         width: 80px;
+
+    }
+    .basket-summary {
+        margin: 0 auto;
     }
 }
 
@@ -1202,19 +1213,19 @@ main {
     }
 
     h2 {
-        font-size: 1.8em;
+        font-size: 1.5em;
         font-weight: bold;
         margin-top: 40px;
     }
 
     #disclaimer {
-        font-size: 1.3em;
+        font-size: 1.2em;
         color: red;
         text-align: center;
     }
 
     p, ul {
-        font-size: 1.1em;
+        font-size: 1.05em;
     }
 
     ul {
@@ -1477,7 +1488,7 @@ main {
         }
 
         p,ul {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             list-style: none;
             padding: 0;
         }

@@ -20,7 +20,7 @@
             <!-- Delivery Section -->
             <section id="delivery-info" class="content-section">
                 <h2>
-                    <img src="{{ asset('images/delivery-truck.png') }}" alt="Delivery Logo" class="section-icon">
+                    <img src="{{ asset('images/Returns-truck.png') }}" alt="Delivery Logo" class="section-icon">
                     Delivery Services
                 </h2>
                 <div class="my-3">

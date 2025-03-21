@@ -3,7 +3,7 @@
         <ul><!--list for contacting us-->
             <li class="footer-title">Customer Service</li><!--links to the contact page-->
             <li class="footer-list"><a href="/contact">Contact Us</a></li><!--links to the contact page-->
-            <li class="footer-list"><a href="/delivery-and-returns">Delivery & Returns Policy</a></li><!--links to about us-->
+            <li class="footer-list"><a href="/delivery-and-returns">Returns Policy</a></li><!--links to about us-->
             <li class="footer-list"><a href="/faq">FAQ</a></li>
             <li class="footer-list"><a href="/careers">Careers</a></li>
         </ul>
@@ -12,7 +12,7 @@
         <ul><!--list for about us/terms-->
             <li class="footer-title">Company Info</li>
             <li class="footer-list"><a href="/aboutus">About Us</a></li>
-            <li class="footer-list"><a href="/terms-conditions">Terms and Conditions</a></li><!--links to the terms and conditions-->
+            <li class="footer-list"><a href="/terms-conditions">Terms & Conditions</a></li><!--links to the terms and conditions-->
             <li class="footer-list"><a href = "/sponsor">Sponsorship</a></li>
             <li class="footer-list"><a href = "/sustainability">Sustainability</a></li>
             <li class="footer-list"><a href="{{ route('privacy') }}">Privacy Policy</a></li>
