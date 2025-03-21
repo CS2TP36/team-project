@@ -57,9 +57,10 @@
                 <label for="is_default">Set As Default Address</label>
             </div>
 
-            <button type="submit" class="btn save">Save Changes</button>
-            <button type="button" class="btn cancel" onclick="window.history.back()">Cancel</button>
         </form>
+
+        <button type="submit" class="btn save">Save Changes</button>
+        <button type="button" class="btn cancel" onclick="window.history.back()">Cancel</button>
     </div>
 </div>
 
