@@ -28,7 +28,11 @@ body {
         background-color: var(--alt-bh-colour);
     }
 
-    input[type="text"], input[type="email"], input[type="password"],  input[type="tel"], textarea {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    textarea {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1em;
         min-width: 320px;
@@ -42,7 +46,11 @@ body {
         outline: none;
     }
 
-    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,  input[type="tel"]:focus, textarea:focus {
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
         box-shadow: 0 0 10px var(--box-shadow-color);
         border-color: var(--alt-border-color);
         outline: none;
@@ -236,7 +244,8 @@ main {
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* Responsive grid */
         gap: 20px;
     }
 
@@ -458,7 +467,8 @@ main {
         max-width: 600px;
         margin: 0 auto;
 
-        form input[type="text"], input[type="email"] {
+        form input[type="text"],
+        input[type="email"] {
             width: 95%;
         }
 
@@ -565,10 +575,13 @@ main {
 /* CSS for Previous Orders Page */
 /* main styling for previous ordes page */
 #previous-orders {
-    max-width: 800px; /* keep compact */
+    max-width: 800px;
+    /* keep compact */
     padding: 15px;
-    margin: 30px auto; /* centers the content */
-    box-shadow: 0 0 10px var(--alt-bs-colour); /*create shadow effect*/
+    margin: 30px auto;
+    /* centers the content */
+    box-shadow: 0 0 10px var(--alt-bs-colour);
+    /*create shadow effect*/
 
     /* header styling */
     h1 {
@@ -588,7 +601,8 @@ main {
 /* styling for each individual order */
 .order {
     background-color: var(--card-bg-colour);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /*smaller shdow effect created */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    /*smaller shdow effect created */
     transition: background-color 0.3s ease;
     border-radius: 8px;
     padding: 12px;
@@ -617,7 +631,8 @@ main {
 .item {
     width: 100%;
     display: flex;
-    align-items: center; /* keep in a row */
+    align-items: center;
+    /* keep in a row */
     justify-content: space-between;
     gap: 15px;
     margin-bottom: 5px;
@@ -626,13 +641,15 @@ main {
 /* product details */
 .previous-item-details {
     flex-grow: 1;
-    text-align: left; /* keeps the name, price and quantity plus all buttons together on the left */
+    text-align: left;
+    /* keeps the name, price and quantity plus all buttons together on the left */
     font-size: 14px;
 }
 
 /* product image styling */
 .item img {
-    width: 120px; /* fixed height and width for imges */
+    width: 120px;
+    /* fixed height and width for imges */
     height: 120px;
     border-radius: 6px;
 }
@@ -643,7 +660,8 @@ main {
     font-size: 15px;
 }
 
-.item-price, .item-quantity {
+.item-price,
+.item-quantity {
     font-size: 13px;
 }
 
@@ -654,7 +672,8 @@ main {
 /* buttons container (allow for buttons to be next to the image) */
 .order-actions {
     display: flex;
-    flex-direction: row; /* buttons kept in a row */
+    flex-direction: row;
+    /* buttons kept in a row */
     gap: 5px;
     align-items: center;
 }
@@ -664,7 +683,8 @@ main {
     transition: background-color 0.3s ease, transform 0.2s ease;
     padding: 6px 10px;
     font-size: 13px;
-    white-space: nowrap; /* prevent text from wrapping */
+    white-space: nowrap;
+    /* prevent text from wrapping */
 
 }
 
@@ -693,7 +713,8 @@ main {
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-bottom: 10px;;
+            margin-bottom: 10px;
+            ;
 
             .basket-item-image {
                 display: flex;
@@ -813,7 +834,8 @@ main {
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-bottom: 10px;;
+            margin-bottom: 10px;
+            ;
 
             .wishlist-image {
                 display: flex;
@@ -960,7 +982,8 @@ main {
             display: block;
         }
 
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 12px;
             font-size: 14px;
@@ -982,7 +1005,8 @@ main {
             left: 0;
         }
 
-        input.error, select.error {
+        input.error,
+        select.error {
             border-color: red;
             background-color: #F9D9D9;
         }
@@ -1177,7 +1201,8 @@ main {
         text-align: center;
     }
 
-    p, ul {
+    p,
+    ul {
         font-size: 1.1em;
     }
 
@@ -1297,7 +1322,8 @@ main {
             visibility: hidden;
         }
 
-        input.error, select.error {
+        input.error,
+        select.error {
             border-color: red !important;
             background-color: #F9D9D9 !important;
             outline: none;
@@ -1439,7 +1465,8 @@ main {
             margin-bottom: 10px;
         }
 
-        p,ul {
+        p,
+        ul {
             font-size: 1.1rem;
             list-style: none;
             padding: 0;
@@ -1552,7 +1579,7 @@ main {
         flex-direction: column;
     }
 
-    #previews-container{
+    #previews-container {
         background-color: #F5F5F5;
         position: absolute;
         top: 105%;
@@ -1564,7 +1591,7 @@ main {
         border-radius: 10px;
     }
 
-    .preview-link{
+    .preview-link {
         text-decoration: none;
         font-size: 0.9rem;
         border-radius: 8px;
@@ -1572,7 +1599,7 @@ main {
         padding: 10px 10px 20px 10px;
     }
 
-    .preview-link:hover{
+    .preview-link:hover {
         background-color: #D5D5D5;
     }
 
@@ -1595,7 +1622,7 @@ main {
 
     .user-logo {
         height: 2.2rem;
-        transition:  transform 0.2s ease-in;
+        transition: transform 0.2s ease-in;
     }
 
     .user-logo:hover {
@@ -1776,6 +1803,7 @@ main {
                 list-style: none;
                 text-decoration: none;
             }
+
             /*Hover for Men and Women*/
 
             a:hover {
@@ -1834,7 +1862,7 @@ main {
         transition: transform 0.2s ease-in, color 0.2s ease-in;
     }
 
-    #social-pic:hover{
+    #social-pic:hover {
         transform: scale(1.2);
     }
 }
@@ -2137,9 +2165,9 @@ main {
     background-color: #D5D5D5;
     border-radius: 5px;
 
-        a:hover{
-            transform: scale(1.05);
-        }
+    a:hover {
+        transform: scale(1.05);
+    }
 
 
     img {
@@ -2164,6 +2192,7 @@ main {
     margin-left: 120px;
     transition: color 0.2s ease-in, transform 0.2s ease-in;
 }
+
 .back-button:hover {
     transform: scale(1.03);
 }
@@ -2297,7 +2326,7 @@ main {
 
 }
 
-#home-review-pic{
+#home-review-pic {
     width: 100px;
     height: 100px;
     border-radius: 60px;
@@ -2478,7 +2507,8 @@ main {
                 margin-bottom: 15px;
             }
 
-            form input[type="email"], input[type="password"] {
+            form input[type="email"],
+            input[type="password"] {
                 width: 95.5%;
             }
 
@@ -2612,7 +2642,8 @@ main {
 
         strong {
             font-size: 16px;
-            display: block; /*cards take full width*/
+            display: block;
+            /*cards take full width*/
             margin-bottom: 5px;
         }
 
@@ -2688,7 +2719,8 @@ main {
         visibility: hidden;
     }
 
-    input.error, select.error {
+    input.error,
+    select.error {
         border-color: red !important;
         background-color: #F9D9D9 !important;
         outline: none;
@@ -2894,7 +2926,7 @@ label {
 
     }
 
-    
+
 }
 
 
@@ -2913,7 +2945,7 @@ label {
 
     #breadcrumbs {
         font-family: Arial, Helvetica, sans-serif;
-        text-align: center; 
+        text-align: center;
         margin: 0;
 
         a {
@@ -3058,11 +3090,13 @@ label {
     }
 
     /* Should change this */
-    nav li.active, nav li:hover {
+    nav li.active,
+    nav li:hover {
         color: blueviolet;
     }
 
-    nav li.active::after, nav li:hover::after {
+    nav li.active::after,
+    nav li:hover::after {
         width: 100%;
         background-color: blueviolet;
     }
@@ -3205,11 +3239,13 @@ label {
             cursor: pointer;
         }
 
-        .star:hover, .star.active {
+        .star:hover,
+        .star.active {
             color: gold;
         }
 
-        input[type="text"], textarea {
+        input[type="text"],
+        textarea {
             width: 100%;
             max-width: 1200px;
         }
@@ -3249,7 +3285,7 @@ label {
         padding: 20px;
     }
 
-     .tabs-container {
+    .tabs-container {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
@@ -3286,7 +3322,8 @@ label {
         padding-bottom: 5px;
     }
 
-    .return-description, .delivery-description {
+    .return-description,
+    .delivery-description {
         font-size: 16px;
         color: var(--text-colour);
         line-height: 1.6;
@@ -3332,7 +3369,8 @@ label {
         margin-bottom: 15px;
     }
 
-    form input[type="text"], form input[type="email"] {
+    form input[type="text"],
+    form input[type="email"] {
         width: 95.5%;
     }
 
@@ -3381,7 +3419,7 @@ label {
 }
 
 
-.sponsor-main{
+.sponsor-main {
     display: flex;
     flex-direction: column;
 }
@@ -3450,10 +3488,11 @@ label {
     height: auto;
     justify-content: center;
     color: #000;
-        ul {
 
-            list-style: none;
-        }
+    ul {
+
+        list-style: none;
+    }
 }
 
 #second-sponsor-text {
@@ -3467,6 +3506,7 @@ label {
     line-height: 1.7;
     background-color: #d5d4d4;
 }
+
 @media (max-width: 768px) {
     #sponsor-banner-container {
         flex-direction: column;
@@ -3479,22 +3519,26 @@ label {
         padding: 20px;
     }
 
-    #sponsor-text-banner{
+    #sponsor-text-banner {
         left: 10%;
     }
 
-    #sponsor-logo{
+    #sponsor-logo {
         display: none;
     }
-    #sponsor-pic, #athlete-pic {
+
+    #sponsor-pic,
+    #athlete-pic {
         width: 100%;
         height: auto;
     }
+
     #sponsor-join-text {
         padding: 0 5px;
         font-size: 16px;
     }
-    #sponsor-parallax-info{
+
+    #sponsor-parallax-info {
         font-size: 16px;
         width: 80vw;
         top: 5%;
@@ -3561,7 +3605,8 @@ label {
         visibility: hidden;
     }
 
-    input.error, select.error {
+    input.error,
+    select.error {
         border-color: red !important;
         background-color: #F9D9D9 !important;
         outline: none;
@@ -3686,7 +3731,8 @@ label {
         font-weight: bold;
     }
 
-    input[type="text"], input[type="tel"] {
+    input[type="text"],
+    input[type="tel"] {
         width: 95.5%;
     }
 
@@ -3713,7 +3759,8 @@ label {
         visibility: hidden;
     }
 
-    input.error, select.error {
+    input.error,
+    select.error {
         border-color: red !important;
         background-color: #F9D9D9 !important;
         outline: none;
@@ -3740,7 +3787,8 @@ label {
         margin-top: 10px;
     }
 
-    input[type="text"], input[type="password"] {
+    input[type="text"],
+    input[type="password"] {
         width: 96.5%;
     }
 
@@ -3753,6 +3801,8 @@ label {
         margin-top: 15px;
         align-self: center;
     }
+
+
 }
 
 /* CSS for new payment method page */
@@ -3866,9 +3916,30 @@ label {
     .changes-submit-btn:hover {
         background-color: #0f0e0e;
     }
+
+    .error-message {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        height: 14px;
+        margin-top: 2px;
+        visibility: hidden;
+    }
+    
+    input.error,
+    select.error {
+        border-color: red !important;
+        background-color: #F9D9D9 !important;
+        outline: none;
+    }
+    
+    .error-message.active {
+        visibility: visible;
+    }
 }
 
-.order-success{
+.order-success {
     align-items: center;
     text-align: center;
     font-size: 1.3rem;
