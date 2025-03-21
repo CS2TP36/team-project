@@ -77,20 +77,7 @@ class CheckoutController extends Controller
             $shippingPostcode = $address->post_code;
             $shippingPhone    = $address->phone_number;
         }
-
-        // Billing Addresses
-        if ($request->has('same_as_shipping') && $request->same_as_shipping === 'on') {
-            $billingFullName = $shippingFullName;
-            $billingAddress  = $shippingAddress;
-            $billingCity     = $shippingCity;
-            $billingPostcode = $shippingPostcode;
-        } else {
-            $billingFullName = $request->input('billing_full_name');
-            $billingAddress  = $request->input('billing_address');
-            $billingCity     = $request->input('billing_city');
-            $billingPostcode = $request->input('billing_postcode');
-        }
-
+        
         // Payment Methods
         if ($request->payment_method === 'new') {
             $paymentCardName   = $request->input('payment_card_name');
