@@ -1,7 +1,5 @@
 @extends('layouts.page')
-
 @section('title', 'Edit Payment')
-
 @section('content')
 <div class="edit-payment-container">
     <h1>Edit Payment Information</h1>
