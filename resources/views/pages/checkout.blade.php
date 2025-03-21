@@ -302,16 +302,17 @@
             <form id="order-form" method="POST" action="{{ route('checkout.checkout') }}">
                 @csrf
                 <h2>Order Summary</h2>
-                <ul id="order-items">
                     @php($total = 0)
                     @foreach($basketItems as $basketItem)
-                        @php($total += $basketItem->getTotalPrice())
-                        <li class="order-item">
+                        <div class="order-items">
+                            <div class="item-img">
+                                <img src="{{ $basketItem->product->getMainImage() }}" alt="{{ $basketItem->product->name }}"></img>
+                            </div>
+                            @php($total += $basketItem->getTotalPrice())
                             {{ $basketItem->product->name }}:
                             £{{ number_format($basketItem->product->price,2) }} x {{ $basketItem->quantity }}
-                        </li>
+                        </div>
                     @endforeach
-                </ul>
                 <p class="total">Subtotal: £<span id="subtotal-price">{{ number_format($total, 2) }}</span></p>
                 <p class="total">Shipping: £<span id="shipping-price">0.00</span></p>
                 <p class="total">Discount: -£<span id="discount-amount">0.00</span></p>
