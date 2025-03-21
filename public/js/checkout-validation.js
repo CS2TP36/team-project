@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const shippingNextBtn = document.getElementById('shipping-next-btn');
     const sameAsShippingCheckbox = document.getElementById('same_as_shipping');
-    const billingSection = document.getElementById('billing-info-section');
+//    const billingSection = document.getElementById('billing-info-section');
     const paymentSection = document.getElementById('payment-method-section');
 
     shippingNextBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         document.getElementById('shipping-info-section').style.display = 'none';
-        if (sameAsShippingCheckbox.checked) {
+//        if (sameAsShippingCheckbox.checked) {
             paymentSection.style.display = 'block';
-        } else {
-            billingSection.style.display = 'block';
-        }
+//        } else {
+//            billingSection.style.display = 'block';
+//        }
     });
 
     // shows billing address fields if "same as shipping" checkbox unselected
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         billingFields.style.display = sameAsShippingCheckbox.checked ? 'none' : 'block';
     });
 
-    
+
     const addressRadios = document.getElementsByName('shipping_address');
     const newShippingFields = document.getElementById('new-shipping-fields');
     if (addressRadios.length > 0) {

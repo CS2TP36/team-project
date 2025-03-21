@@ -29,9 +29,11 @@
                         <!-- If user has saved addresses, also show option to add a new address -->
                         <div class="form-group">
                             <p>Select a saved address:</p>
+                            @php($count=0)
                             @foreach($addresses as $address)
+                                @php($count++)
                                 <label style="display:block; margin-bottom:0.5em;">
-                                    <input type="radio" name="shipping_address" value="{{ $address->id }}" required>
+                                    <input type="radio" name="shipping_address" value="{{ $address->id }}" required {{ $count == 1 ? 'checked' : '' }}>
                                     {{ $address->full_name }}, {{ $address->address_line1 }},
                                     {{ $address->town_city }}, {{ $address->post_code }}
                                 </label>
@@ -116,13 +118,14 @@
                         </label>
                     </div>
                 </fieldset>
-                <button type="button" class="next-section" data-next="billing-info-section" id="shipping-next-btn">
+                <button type="button" class="next-section" data-next="payment-method-section" id="shipping-next-btn">
                     Next
                 </button>
             </form>
         </section>
 
-        <!-- Billing Address Section -->    
+        <!-- Billing Address Section -->
+        <!--
         <section class="checkout-section" id="billing-info-section" style="display:none;">
             <h2>Billing Information</h2>
             <form id="billing-form">
@@ -151,8 +154,9 @@
                 </fieldset>
             </form>
         </section>
+        -->
 
-        <!-- Payment Method Section -->    
+        <!-- Payment Method Section -->
         <section class="checkout-section" id="payment-method-section" style="display:none;">
             <h2>Payment Method</h2>
             <form id="payment-form">
@@ -162,9 +166,11 @@
                     @if($paymentMethods->count() > 0)
                         <div class="form-group">
                             <p>Select a saved payment method:</p>
+                            @php($count=0)
                             @foreach ($paymentMethods as $method)
+                                @php($count++)
                                 <label style="display:block; margin-bottom:0.5em;">
-                                    <input type="radio" name="payment_method" value="{{ $method->id }}" required>
+                                    <input type="radio" name="payment_method" value="{{ $method->id }}" required {{ $count == 1 ? 'checked' : '' }}>
                                     {{ $method->card_name }} - **** **** **** {{ substr($method->card_number, -4) }}
                                 </label>
                             @endforeach
@@ -233,7 +239,7 @@
                     @endif
 
                     <button type="button" class="next-section" data-next="shipping-options-section">Next</button>
-                    <button type="button" class="back-section" data-back="billing-info-section">Back</button>
+                    <button type="button" class="back-section" data-back="shipping-info-section">Back</button>
                 </fieldset>
             </form>
         </section>
