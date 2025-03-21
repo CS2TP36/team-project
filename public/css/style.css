@@ -28,7 +28,7 @@ body {
         background-color: var(--alt-bh-colour);
     }
 
-    input[type="text"], input[type="email"], input[type="password"],  input[type="tel"], textarea {
+    input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1em;
         min-width: 320px;
@@ -42,13 +42,14 @@ body {
         outline: none;
     }
 
-    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,  input[type="tel"]:focus, textarea:focus {
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus, textarea:focus {
         box-shadow: 0 0 10px var(--box-shadow-color);
         border-color: var(--alt-border-color);
         outline: none;
     }
 
     /* For <a> tags that look similar to buttons */
+
     #button-link {
         font-size: 1em;
         text-align: center;
@@ -380,6 +381,7 @@ main {
     }
 
     /* "If This Has Not Helped" Section */
+
     .FMI {
         text-align: center;
         padding: 40px 20px;
@@ -406,6 +408,7 @@ main {
     }
 
     /* Social Icons */
+
     ul {
         display: flex;
         padding: 0;
@@ -489,7 +492,7 @@ main {
         max-width: 600px;
         margin: 0 auto;
 
-        input[type="text"], 
+        input[type="text"],
         input[type="email"] {
             width: 95%;
             padding: 8px;
@@ -586,6 +589,7 @@ main {
     box-shadow: 0 0 10px var(--alt-bs-colour); /*create shadow effect*/
 
     /* header styling */
+
     h1 {
         font-size: 24px;
         font-weight: bold;
@@ -782,6 +786,7 @@ main {
     .basket-details {
         margin: 0 auto;
     }
+
     .basket-container {
         flex-direction: column;
         padding: 10px;
@@ -807,6 +812,7 @@ main {
         width: 80px;
 
     }
+
     .basket-summary {
         margin: 0 auto;
     }
@@ -955,7 +961,7 @@ main {
                 width: 100px;
                 min-width: 75px;
             }
-        }  
+        }
     }
 
     .checkout-container {
@@ -1147,6 +1153,7 @@ main {
     }
 
     /* Fade-in Effect */
+
     .fade-in {
         opacity: 0;
         transform: translateY(40px);
@@ -1164,6 +1171,7 @@ main {
     text-align: center;
 
     /* Header Section */
+
     .contact-header {
         margin-bottom: 30px;
 
@@ -1225,6 +1233,7 @@ main {
     }
 
     /* Contact Form */
+
     .contact-form {
         flex: 1;
         min-width: 300px;
@@ -1251,12 +1260,14 @@ main {
     }
 
     /* Submit Button */
+
     button {
         width: 100%;
         margin-bottom: 10px;
     }
 
     /* Social Media Section */
+
     .social-section {
         margin-top: 30px;
         margin-bottom: 20px;
@@ -1381,7 +1392,7 @@ main {
             margin-bottom: 10px;
         }
 
-        p,ul {
+        p, ul {
             font-size: 1.05rem;
             list-style: none;
             padding: 0;
@@ -1494,7 +1505,7 @@ main {
         flex-direction: column;
     }
 
-    #previews-container{
+    #previews-container {
         background-color: #F5F5F5;
         position: absolute;
         top: 105%;
@@ -1506,7 +1517,7 @@ main {
         border-radius: 10px;
     }
 
-    .preview-link{
+    .preview-link {
         text-decoration: none;
         font-size: 0.9rem;
         border-radius: 8px;
@@ -1514,7 +1525,7 @@ main {
         padding: 10px 10px 20px 10px;
     }
 
-    .preview-link:hover{
+    .preview-link:hover {
         background-color: #D5D5D5;
     }
 
@@ -1537,7 +1548,7 @@ main {
 
     .user-logo {
         height: 2.2rem;
-        transition:  transform 0.2s ease-in;
+        transition: transform 0.2s ease-in;
     }
 
     .user-logo:hover {
@@ -1593,6 +1604,7 @@ main {
         }
 
         /*Hover for Men and Women*/
+
         a:hover {
             text-decoration: underline;
             color: var(--text-nav-colour);
@@ -1719,6 +1731,7 @@ main {
                 list-style: none;
                 text-decoration: none;
             }
+
             /*Hover for Men and Women*/
 
             a:hover {
@@ -1778,7 +1791,7 @@ main {
         transition: transform 0.2s ease-in, color 0.2s ease-in;
     }
 
-    #social-pic:hover{
+    #social-pic:hover {
         transform: scale(1.2);
     }
 }
@@ -1812,6 +1825,7 @@ main {
             }
 
             /*Hover*/
+
             a:hover {
                 text-decoration: underline;
                 transform: scale(1.0);
@@ -2055,7 +2069,6 @@ main {
 }
 
 
-
 .featured-details {
     font-size: 15px;
     background-color: #d5d4d4;
@@ -2081,9 +2094,9 @@ main {
     background-color: #D5D5D5;
     border-radius: 5px;
 
-        a:hover{
-            transform: scale(1.05);
-        }
+    a:hover {
+        transform: scale(1.05);
+    }
 
 
     img {
@@ -2108,6 +2121,7 @@ main {
     margin-left: 120px;
     transition: color 0.2s ease-in, transform 0.2s ease-in;
 }
+
 .back-button:hover {
     transform: scale(1.03);
 }
@@ -2240,7 +2254,7 @@ main {
 
 }
 
-#home-review-pic{
+#home-review-pic {
     width: 100px;
     height: 100px;
     border-radius: 60px;
@@ -2271,7 +2285,7 @@ main {
             padding-right: 20px;
             padding-left: 20px;
             font-size: 15px;
-        
+
 
         }
 
@@ -2555,6 +2569,7 @@ main {
     .actions form a {
         margin-left: 5px;
     }
+
     .actions a:hover {
         text-decoration: underline;
     }
@@ -2648,7 +2663,6 @@ main {
 }
 
 
-
 .Filter-Page {
     border-radius: 15px;
     text-align: left;
@@ -2708,7 +2722,6 @@ label {
 .filter-btn:hover {
     background-color: var(--btn-hover-colour);
 }
-
 
 
 #products-list {
@@ -2799,8 +2812,6 @@ label {
 }
 
 
-
-
 @media (max-width: 768px) {
     #product-text-banner {
         font-size: 15px;
@@ -2816,7 +2827,7 @@ label {
 
     #breadcrumbs {
         font-family: Arial, Helvetica, sans-serif;
-        text-align: center; 
+        text-align: center;
         margin: 0;
 
         a {
@@ -2881,7 +2892,7 @@ label {
     max-width: 650px;
     max-height: 800px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 
     img {
@@ -2964,6 +2975,7 @@ label {
     }
 
     /* Should change this */
+
     nav li.active, nav li:hover {
         color: blueviolet;
     }
@@ -3169,6 +3181,7 @@ label {
     }
 
     /* Button Colour to*/
+
     .tab-btn.active-tab {
         background-color: var(--delivery-button);
     }
@@ -3286,7 +3299,7 @@ label {
 }
 
 
-.sponsor-main{
+.sponsor-main {
     display: flex;
     flex-direction: column;
 }
@@ -3357,15 +3370,16 @@ label {
     height: auto;
     justify-content: center;
     color: #000;
-        ul {
 
-            list-style: none;
-        }
+    ul {
 
-        p{
-            width: 60%;
-            text-align: center;
-        }
+        list-style: none;
+    }
+
+    p {
+        width: 60%;
+        text-align: center;
+    }
 }
 
 #second-sponsor-text {
@@ -3379,6 +3393,7 @@ label {
     line-height: 1.7;
     background-color: #d5d4d4;
 }
+
 @media (max-width: 768px) {
     #sponsor-banner-container {
         flex-direction: column;
@@ -3391,26 +3406,29 @@ label {
         padding: 20px;
     }
 
-    #sponsor-text-banner{
+    #sponsor-text-banner {
         left: 10%;
         font-size: 7vw;
     }
 
-    #sponsor-logo{
+    #sponsor-logo {
         height: 40px;
         width: 40px;
         padding-right: 10px;
         align-items: center;
     }
+
     #sponsor-pic, #athlete-pic {
         width: 100%;
         height: auto;
     }
+
     #sponsor-join-text {
         padding: 0 5px;
         font-size: 16px;
     }
-    #sponsor-parallax-info{
+
+    #sponsor-parallax-info {
         font-size: 16px;
         width: 80vw;
         top: 5%;
@@ -3420,29 +3438,31 @@ label {
 
 @media (max-width: 1260px) {
 
-    #sponsor-text{
+    #sponsor-text {
         width: 80vw;
     }
 
-    #sponsor-pic{
+    #sponsor-pic {
         width: 300px;
         height: 300px;
     }
-    #sponsor-parallax-info{
+
+    #sponsor-parallax-info {
         top: 7%;
         font-size: 16px;
     }
-    #sponsor-text-banner{
+
+    #sponsor-text-banner {
         left: 10%;
         font-size: 3.5vw;
     }
 
-    #sponsor-logo{
+    #sponsor-logo {
         height: 10vw;
         width: 10vw;
         padding-right: 10px;
         align-items: center;
-}
+    }
 }
 
 /* CSS for Edit Address Page */
@@ -3522,6 +3542,7 @@ label {
     font-size: 1vw;
     max-width: 400px;
     padding: 20px;
+
     img {
         width: 10vw;
         height: 10vw;
@@ -3569,7 +3590,7 @@ label {
     font-size: 1vw;
 }
 
-#sustain-pic{
+#sustain-pic {
     height: 20vw;
     width: 30vw;
 }
@@ -3594,6 +3615,7 @@ label {
 
     }
 }
+
 @media (max-width: 768px) {
     #sustain-guarantee {
         flex-direction: column;
@@ -3618,7 +3640,8 @@ label {
         text-align: center;
         flex-wrap: wrap;
     }
-    #sustain-second-text{
+
+    #sustain-second-text {
         margin: 20px 20px;
         flex-wrap: wrap;
         font-size: 15px;
@@ -3631,10 +3654,12 @@ label {
         height: 40vw;
         width: 50vw;
     }
-    #sustain-list{
+
+    #sustain-list {
         font-size: 15px;
         padding: 20px;
     }
+
     #section-divider {
         margin-top: 50px;
 
@@ -3841,7 +3866,7 @@ label {
     }
 }
 
-.order-success{
+.order-success {
     align-items: center;
     text-align: center;
     font-size: 1.3rem;
