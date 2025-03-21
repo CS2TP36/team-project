@@ -30,19 +30,19 @@
                 <div class="form-group">
                     <label for="email">Enter your email</label>
                     <input type="email" name="email" placeholder="Email" required>
-                    <span class="error-message"></span><br>
+                    <span class="error-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="firstInitial">Enter your initials for first name</label>
                     <input type="text" name="firstInitial" placeholder="Your first initial" maxlength="1" minlength="1" onkeyup="this.value = this.value.toUpperCase();" required>
-                    <span class="error-message"></span><br>
+                    <span class="error-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="firstInitial">Enter your initials for last name</label>
                     <input type="text" name="lastInitial" placeholder="Your last initial" maxlength="1" minlength="1" onkeyup="this.value = this.value.toUpperCase();" required>
-                    <span class="error-message"></span><br>
+                    <span class="error-message"></span>
                 </div>
 
                 <div class="button">

@@ -15,16 +15,12 @@
                     <span class="error-message"></span>
                 </div>
 
-                <div class="contact-line-break"></div>
-
                 <div class="form-group">
                     <label for="last-name-new">Last Name:</label>
                     <input type="text" id="last-name-new" name="last-name" value="{{ $user['last_name'] }}" required>
                     <input type="hidden" id="last-name-old" value="{{ $user['last_name'] }}">
                     <span class="error-message"></span>
                 </div>
-
-                <div class="contact-line-break"></div>
 
                 <div class="form-group">
                     <label for="email-new">Email:</label>
@@ -33,16 +29,12 @@
                     <span class="error-message"></span>
                 </div>
 
-                <div class="contact-line-break"></div>
-
                 <div class="form-group">
                     <label for="phone-number-new">Phone Number:</label>
                     <input type="text" id="phone-number-new" name="phone-number" value="{{ $user['phone_number'] }}" required>
                     <input type="hidden" id="phone-number-old" value="{{ $user['phone_number'] }}">
                     <span class="error-message"></span>
                 </div>
-
-                <div class="contact-line-break"></div>
 
                 <div class="contact-detail-button">
                     <button type="submit" class="btn btn-primary mt-4">Update Details</button>

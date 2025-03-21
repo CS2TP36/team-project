@@ -24,13 +24,13 @@
                 <div class="form-group">
                     <label for="password">New Password *</label>
                     <input type="password" id="password" name="password" required/><br>
-                    <span class="error-message"></span><br>
+                    <span class="error-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="password_confirmation">Confirm *</label>
                     <input type="password" id="password_confirmation" name="password_confirmation" required/><br>
-                    <span class="error-message"></span><br>
+                    <span class="error-message"></span>
                 </div>
 
                 <button type="submit">Change Password</button>
