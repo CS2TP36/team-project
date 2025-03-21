@@ -2304,7 +2304,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
-    padding: 20px;
     background-color: var(--bg-colour);
     padding-bottom: 80px;
 }
@@ -2924,17 +2923,14 @@ label {
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1280px) {
+@media (max-width: 1260px) {
+
     .Filter-Page {
-        max-width: 500px;
-        padding-top: 20px;
         position: static;
-
-
     }
-
-    
 }
+
+
 
 
 @media (max-width: 768px) {
