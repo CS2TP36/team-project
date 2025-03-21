@@ -2641,9 +2641,9 @@ main {
     }
 
     form {
-        width: 100%;
+        width: 95%;
         max-width: 500px;
-        padding: 10px 20px 25px 25px;
+        padding: 10px;
         margin-bottom: 10px;
     }
 
