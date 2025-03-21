@@ -110,13 +110,14 @@
                             </div>
                         </fieldset>
                     @endif
-
+<!--
                     <div class="form-group" style="margin-top:1em;">
                         <label>
                             <input type="checkbox" id="same_as_shipping" checked>
                             Billing address same as shipping?
                         </label>
                     </div>
+                    -->
                 </fieldset>
                 <button type="button" class="next-section" data-next="payment-method-section" id="shipping-next-btn">
                     Next
@@ -323,11 +324,13 @@
                 <input type="hidden" name="shipping_post_code" id="shipping_post_code_hidden">
                 <input type="hidden" name="shipping_phone" id="shipping_phone_hidden">
                 <input type="hidden" name="save_new_address" id="save_new_address_hidden">
+                <!--
                 <input type="hidden" name="same_as_shipping" id="same_as_shipping_hidden">
                 <input type="hidden" name="billing_full_name" id="billing_full_name_hidden">
                 <input type="hidden" name="billing_address" id="billing_address_hidden">
                 <input type="hidden" name="billing_city" id="billing_city_hidden">
                 <input type="hidden" name="billing_postcode" id="billing_postcode_hidden">
+                -->
                 <input type="hidden" name="payment_method" id="payment_method_hidden">
                 <input type="hidden" name="payment_card_name" id="payment_card_name_hidden">
                 <input type="hidden" name="payment_card_number" id="payment_card_number_hidden">
