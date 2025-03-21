@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             if (key === 'phone') {
-                const phonePattern = /^(?:\+44\s?\d{4}\s?\d{6}|0\d{4}\s?\d{6})$/;
+                const phonePattern = !/^(?:\+44\s?\d{4}\s?\d{6}|\+44\d{10}|07\d{3}\s?\d{6}|07\d{9})$/;
                 if (!phonePattern.test(value)) {
                     displayError(field, 'Enter a valid UK phone number (e.g., +44 7000 000000 or 07000 000000).');
                     isValid = false;
