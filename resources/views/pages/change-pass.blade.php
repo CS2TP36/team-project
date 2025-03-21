@@ -1,5 +1,6 @@
 @extends('layouts.page')
 @section('title', 'Forgot-pass')
+@section('script', asset('js/changepass.js'))
 @section('content')
 
     <div class="change">
@@ -17,12 +18,20 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('change-pass.change') }}">
+            <form id="changepassForm" method="POST" action="{{ route('change-pass.change') }}" novalidate>
                 @csrf
-                <label for="password">New Password *</label><br>
-                <input type="password" id="password" name="password" required/><br>
-                <label for="password_confirmation">Confirm *</label><br>
-                <input type="password" id="password_confirmation" name="password_confirmation" required/><br>
+
+                <div class="form-group">
+                    <label for="password">New Password *</label>
+                    <input type="password" id="password" name="password" required/><br>
+                    <span class="error-message"></span><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="password_confirmation">Confirm *</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" required/><br>
+                    <span class="error-message"></span><br>
+                </div>
 
                 <button type="submit">Change Password</button>
             </form>
