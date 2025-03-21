@@ -1653,8 +1653,6 @@ main {
 /* CSS for Messages */
 .message-area {
     width: 25%;
-    min-width: 320px;
-    max-width: 400px;
     margin: auto;
 }
 
