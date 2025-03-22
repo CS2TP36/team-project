@@ -45,9 +45,9 @@
             <div id="parallax" style="background-image: url({{ asset('images/Parallax.png') }});"></div>
             <div id=parallax-info>
                 <h3>What Is SportsWear?</h3>
-                <p> SportsWear is not just a clothing apparel. Its more than that, its a lifestyle, its about peformace,
+                <p> SportsWear is not just a clothing apparel. It's more than that, its about lifestyle, its about performance,
                     confidence, pushing past the limits to reach your dreams! We are a dedicated team, passionate about
-                    providing high-quality sportswear and gear. Our mission is to support athletes and fitness
+                    providing high-quality SportsWear. Our mission is to support athletes and fitness
                     enthusiasts by offering products that combine style, performance and comfort.</p>
                 <a href=/aboutus> Find out more! </a>
             </div>
@@ -89,19 +89,17 @@
     <div id=home-gurantee-container>
         <ul id=home-guarantee>
             <li id=guarantee-list><img src="{{asset('images/clothing-icon.png')}}">
-                <h3> 100% High Quality Clothing</h3> All of our clothing is built from the finest of fabric that have
-                tended to with excellent care. Every apparel we craft, is a result of our dedicated passion towards
-                providing our customers with the highest standard of sports fashion available.
+                <h3> 100% High Quality Clothing</h3> All of our clothing is made from the finest fabrics, carefully tended to with excellent care. 
+                Every piece of apparel we craft is the result of our dedicated passion for providing our customers with the highest standard of sports fashion available.
             </li>
             <li id=guarantee-list><img src="{{asset('images/refund-icon.png')}}">
-                <h3> Guaranteed Easy Free Returns </h3> Are you not happy wiht one of our clothing apparels? No worries
-                then, at Sportswear we have an open and free refund policy, where if you do not like a piece of clothing
-                apparel you bought from us, you can also refund it and send us the clothes back.
+                <h3> Guaranteed Easy Free Returns </h3> Are you not happy with one of our pieces of clothing? No worries then! At Sportswear, 
+                we have an open and free refund policy, this means that if you are not happy with a product you purchased from us, you can always return it for a refund.
+
             </li>
             <li id=guarantee-list><img src="{{asset('images/delivery-truck.png')}}">
-                <h3> Ultra Fast & Reliable Shipping</h3>We take pride in our ultra fast shipping system that we have put
-                in place, whenever you may order clothing apparel we have a guarantee of providing you with the delievry
-                within 4 working days. We have a delivery accuracy rating of 99%.
+                <h3> Ultra Fast & Reliable Shipping</h3>We take pride in our ultra-fast shipping system, which we’ve put in place to ensure quick deliveries. 
+                Whenever you place an order, we guarantee delivery within four working days. Our delivery accuracy rating stands at 99%.
             </li>
         </ul>
     </div>
@@ -116,11 +114,8 @@
                 <h2> Johnathan Raybould</h2>
                 <p id="star-0"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></p>
                 <h1> Great Peformance </h1>
-                <p>"I like to regularly have my morning runs to start my day off ,
-                    therefore I bought the Active Cool Compression Shirt. I must say
-                    the quality of the clothing has been absolutely fantastic. The
-                    performance is also top notch, providing me great posture while
-                    running."
+                <p>"I like to regularly go for my morning runs to start my day off. Therefore, I bought the Active Cool Compression Shirt. 
+                    I must say, the quality of the clothing has been absolutely fantastic. The performance is also top-notch, providing me with great posture while running."
                 </p>
             </div>
             <div id = home-reviews> 
@@ -128,10 +123,7 @@
                 <h2> Sally Cena</h2>
                 <p id="star-0"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></p>
                 <h1> Comfortable Trainers </h1>
-                <p>"I need to buy new trainers to suit both my casual and sports
-                lifestyle, I stumbled upon the SwiftRun Trainers. The trainers feel
-                very light-weight and comfortable, as well as very fast and
-                accurate delivery."
+                <p>"I need to buy new trainers that suit both my casual and sports lifestyle. I stumbled upon the SwiftRun Trainers, which feel very lightweight and comfortable, with fast and accurate delivery."
                 </p>
             </div>
             <div id = home-reviews> 
@@ -139,9 +131,7 @@
                 <h2> Jessica Cambell</h2>
                 <p id="home-review-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></p>
                 <h1> Amazing Quality </h1>
-                <p>"I had bought the Luxe Fleece Hoodie and the Balance Crop Tee,
-                    the clothes very super comfortable and looked very high quality
-                    when I wore them. I will definitely order from Sportswear Again!"
+                <p>"I bought the Luxe Fleece Hoodie and the Balance Crop Tee. The clothes were super comfortable and looked very high-quality when I wore them. I will definitely order from Sportswear again!"
                 </p>
             </div>
     </div>
