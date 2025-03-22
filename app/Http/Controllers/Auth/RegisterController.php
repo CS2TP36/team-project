@@ -53,6 +53,6 @@ class RegisterController extends Controller
         }
 
         // Redirect to the home page or a success page
-        return redirect('/home')->with('success', 'Registration successful!');
+        return redirect('/home')->with('message', 'Registration successful! Now you can log into your account.');
     }
 }
