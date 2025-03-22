@@ -59,7 +59,7 @@
             </div>
         </div>
 
-      
+
 
 
         <div id=catogery-divider>
@@ -107,12 +107,12 @@
             <p>If you are interested in exploring sponsorship or investment opportunities with SportsWear, please get in
                 touch with us through the following:</p>
             <ul>
-                <li><strong>Contact:</strong> Sportswear@gmail.com</li>
+                <li><strong>Contact:</strong> support@thesportswear.website</li>
                 <li><strong>Phone Number:</strong> 0121 326 1812</li>
             </ul>
         </div>
     </div>
 
 
-        
+
 @endsection

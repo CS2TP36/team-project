@@ -3361,7 +3361,7 @@ label {
     flex-direction: column;
     align-items: center;
     font-size: 1rem;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     width: 65%;
     padding-right: 30px;
     padding-left: 30px;
@@ -3842,7 +3842,7 @@ label {
         padding: 12px 22px;
         font-weight: bold;
         transition: background-color 0.2s ease;
-    }    
+    }
 }
 
 .order-success {
