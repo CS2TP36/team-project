@@ -19,7 +19,7 @@
                     <img src="images/orders-icon.png" alt="Orders">
                     <div class="card-content">
                         <h2>Your Previous Orders</h2>
-                        <p>Track, return, cancel an order, download invoice or buy again</p>
+                        <p>View your orders, leave a review or buy again</p>
                     </div>
                 </a>
                 <!-- Link to Account-Addresses Page -->
@@ -43,7 +43,7 @@
                     <img src="images/security-icon.png" alt="Security">
                     <div class="card-content">
                         <h2>Login & Security</h2>
-                        <p>Manage password, email and mobile number</p>
+                        <p>Manage password</p>
                     </div>
                 </a>
                 @if(Auth::user()->isAdmin())
