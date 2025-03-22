@@ -6,6 +6,7 @@
     <link href="{{ asset('/favicon.ico') }}" rel="icon">
     <!-- title can be rewritten by extending pages -->
     <title>@yield('title')</title>
+    <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
     <link href=" {{ asset('css/style.css') }}" rel="stylesheet">
     <!-- A place where scripts can be imported -->
     <script src="@yield('script')"></script>
