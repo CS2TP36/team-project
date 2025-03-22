@@ -125,38 +125,6 @@
             </form>
         </section>
 
-        <!-- Billing Address Section -->
-        <!--
-        <section class="checkout-section" id="billing-info-section" style="display:none;">
-            <h2>Billing Information</h2>
-            <form id="billing-form">
-                <fieldset>
-                    <legend>Billing Details</legend>
-                    <div id="billing-fields" style="display:none;">
-                        <div class="form-group">
-                            <label for="billing_full_name">Full Name</label>
-                            <input type="text" id="billing_full_name" placeholder="Input Full Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="billing_address">Street Address</label>
-                            <input type="text" id="billing_address" placeholder="Street Address">
-                        </div>
-                        <div class="form-group">
-                            <label for="billing_postcode">Postcode</label>
-                            <input type="text" id="billing_postcode" placeholder="Between 5-7 digit">
-                        </div>
-                        <div class="form-group">
-                            <label for="billing_city">City</label>
-                            <input type="text" id="billing_city" placeholder="City">
-                        </div>
-                    </div>
-                    <button type="button" class="next-section" data-next="payment-method-section">Next</button>
-                    <button type="button" class="back-section" data-back="shipping-info-section">Back</button>
-                </fieldset>
-            </form>
-        </section>
-        -->
-
         <!-- Payment Method Section -->
         <section class="checkout-section" id="payment-method-section" style="display:none;">
             <h2>Payment Method</h2>
@@ -253,7 +221,7 @@
                     <legend>Select Delivery Method</legend>
                     <div class="form-group">
                         <label>
-                            <input type="radio" name="shipping_option" value="standard" required>
+                            <input type="radio" name="shipping_option" value="standard" required checked>
                             Standard Delivery: 4-7 days (£4.49)
                         </label>
                     </div>
@@ -325,13 +293,7 @@
                 <input type="hidden" name="shipping_post_code" id="shipping_post_code_hidden">
                 <input type="hidden" name="shipping_phone" id="shipping_phone_hidden">
                 <input type="hidden" name="save_new_address" id="save_new_address_hidden">
-                <!--
-                <input type="hidden" name="same_as_shipping" id="same_as_shipping_hidden">
-                <input type="hidden" name="billing_full_name" id="billing_full_name_hidden">
-                <input type="hidden" name="billing_address" id="billing_address_hidden">
-                <input type="hidden" name="billing_city" id="billing_city_hidden">
-                <input type="hidden" name="billing_postcode" id="billing_postcode_hidden">
-                -->
+
                 <input type="hidden" name="payment_method" id="payment_method_hidden">
                 <input type="hidden" name="payment_card_name" id="payment_card_name_hidden">
                 <input type="hidden" name="payment_card_number" id="payment_card_number_hidden">
