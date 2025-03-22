@@ -36,14 +36,14 @@
             <div class="faq-item">
                 <button class="faq-question">What is your return policy? <span class="arrow">▼</span></button>
                 <div class="faq-answer">You can return items within 30 days of purchase as long as they are unworn and
-                    in original condition. More information relating to returns can be found below.<br><a id="button-link" 
+                    in original condition. More information relating to returns can be found below.<br><a id="button-link"
                         href="/delivery-and-returns">Delivery and Returns</a></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question">Do you ship internationally? <span class="arrow">▼</span></button>
                 <div class="faq-answer">At this curretn moment we do not ship oversees and only in the United Kingdom,
-                    in the future we plan on shipping globally. Below you can find our Delivery and Returns.<br><a id="button-link" 
+                    in the future we plan on shipping globally. Below you can find our Delivery and Returns.<br><a id="button-link"
                         href="/delivery-and-returns">Delivery and Returns</a></div>
             </div>
 
@@ -51,7 +51,7 @@
                 <button class="faq-question">How long do products take to get to me? <span
                         class="arrow">▼</span></button>
                 <div class="faq-answer">When purchasing you have a choise of either 3-5 working days, next day delivery
-                    or chosen day. More information relating to shipping can be found below.<br><a id="button-link" 
+                    or chosen day. More information relating to shipping can be found below.<br><a id="button-link"
                         href="/delivery-and-returns">Delivery and Returns</a></div>
             </div>
 
@@ -62,6 +62,15 @@
                     codes.<br>
                 </div>
             </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How can all the sizes be available? <span class="arrow">▼</span></button>
+                <div class="faq-answer">
+                    All of the clothing items at SportsWear are stocked in their largest size. Upon the item being ordered they are adjusted down to fit whichever size is required. This means that being able to buy an item is not dependent on which size you require. This also reduces waste in unsold units, therefore helping us to run a more sustainable business.
+                    <br>
+                </div>
+            </div>
+
         </div>
 
         <div class=" FMI">
