@@ -28,6 +28,12 @@
     // the script for loading more pages of orders (need to do it on page as it will use some blade variables)
     // first wait for the page to load
     document.addEventListener('DOMContentLoaded', function () {
+        // fix chromium header issue
+        var isChromium = !!window.chrome;
+        if (isChromium) {
+            document.getElementsByTagName('header')[0].style.marginTop = '110px';
+        }
+
         // get the load more button
         const loadMoreBtn = document.getElementById('load-more');
         if (!loadMoreBtn) return; // If there's no button, do nothing
