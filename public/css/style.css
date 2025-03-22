@@ -2778,7 +2778,7 @@ label {
 
     .Filter-Page {
         max-width: 500px;
-        padding-top: 20px;
+        font-size: 0.85rem;
 
 
     }
@@ -2794,13 +2794,13 @@ label {
     }
 
     .product-image {
-        height: 280px;
-        width: 280px;
+        height: 260px;
+        width: 260px;
 
     }
 
     .product-details {
-        font-size: 15px;
+        font-size: 0.8rem;
     }
 
 
