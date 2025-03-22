@@ -221,7 +221,7 @@
                     <legend>Select Delivery Method</legend>
                     <div class="form-group">
                         <label>
-                            <input type="radio" name="shipping_option" value="standard" required checked>
+                            <input type="radio" name="shipping_option" value="standard" required>
                             Standard Delivery: 4-7 days (£4.49)
                         </label>
                     </div>
@@ -285,6 +285,7 @@
                 <p class="total">Shipping: £<span id="shipping-price">0.00</span></p>
                 <p class="total">Discount: -£<span id="discount-amount">0.00</span></p>
                 <p class="total">Grand Total: £<span id="grand-total">0.00</span></p>
+                <input type="hidden" id="price-pre-discount" value="{{ $total }}">
 
                 <input type="hidden" name="shipping_address" id="shipping_address_hidden">
                 <input type="hidden" name="shipping_full_name" id="shipping_full_name_hidden">

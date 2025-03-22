@@ -149,8 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('discount-amount').textContent = '0.00';
             } else {
                 const percentOff = parseFloat(data.percent_off) || 0;
-                const subtotal = parseFloat(document.getElementById('subtotal-price').textContent) || 0;
+                console.log(`${percentOff}%`);
+                const subtotal = parseFloat(document.getElementById('price-pre-discount').value) || 0;
+                console.log(`${subtotal}`);
                 const discountValue = subtotal * (percentOff / 100);
+                console.log(`${discountValue}`);
                 document.getElementById('discount-amount').textContent = discountValue.toFixed(2);
             }
         } catch (error) {
@@ -178,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Updates the grand total whenever shipping cost or discount changes
     function updateGrandTotal() {
-        const subtotal = parseFloat(document.getElementById('subtotal-price').textContent) || 0;
+        const subtotal = parseFloat(document.getElementById('price-pre-discount').value) || 0;
         const shipping = parseFloat(document.getElementById('shipping-price').textContent) || 0;
         const discount = parseFloat(document.getElementById('discount-amount').textContent) || 0;
         const grand = (subtotal + shipping - discount).toFixed(2);
