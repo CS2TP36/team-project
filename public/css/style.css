@@ -2789,7 +2789,7 @@ label {
 
     .Filter-Page {
         max-width: 500px;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
 
 
     }
@@ -2817,7 +2817,7 @@ label {
 
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1261px) {
 
     .Filter-Page {
         position: static;
