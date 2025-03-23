@@ -194,7 +194,7 @@ main {
     --delivery-button: #5d5d5d;
 }
 
-.dark-mode {
+/* .dark-mode {
     --bg-colour: #262738;
     --text-colour: #F5F5F5;
     --btn-bg-colour: #434671;
@@ -212,10 +212,9 @@ main {
     --card-hover-colour: #4D4D4D;
     --contact-box-colour: #21223a;
     --delivery-button: #000000;
-}
+} */
 
-
-/*CSS for dark mode old .dark-mode {
+.dark-mode {
     --bg-colour: #3d3d3d;
     --text-colour: #F5F5F5;
     --btn-bg-colour: #5D5D5D;
@@ -231,9 +230,9 @@ main {
     --text-nav-colour: #1E1E1E;
     --card-bg-colour: #1E1E1E;
     --card-hover-colour: #4D4D4D;
-    --delivery-button: #000000;
-} */
-
+    --contact-box-colour: #1E1E1E;
+    --delivery-button: #1E1E1E;
+} 
 
 #theme-toggle img:last-child {
     display: none;
