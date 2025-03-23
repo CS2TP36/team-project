@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const shippingNextBtn = document.getElementById('shipping-next-btn');
-//    const sameAsShippingCheckbox = document.getElementById('same_as_shipping');
-//    const billingSection = document.getElementById('billing-info-section');
+
     const paymentSection = document.getElementById('payment-method-section');
 
     shippingNextBtn.addEventListener('click', (e) => {
@@ -24,13 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('shipping-info-section').style.display = 'none';
         paymentSection.style.display = 'block';
     });
-/*
-    // shows billing address fields if "same as shipping" checkbox unselected
-    const billingFields = document.getElementById('billing-fields');
-    sameAsShippingCheckbox.addEventListener('change', () => {
-        billingFields.style.display = sameAsShippingCheckbox.checked ? 'none' : 'block';
-    });
-*/
 
     const addressRadios = document.getElementsByName('shipping_address');
     const newShippingFields = document.getElementById('new-shipping-fields');
@@ -91,15 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('save_new_address_hidden').value      = document.getElementById('save_new_address').checked ? '1' : '0';
         }
 
-    //    document.getElementById('same_as_shipping_hidden').value = sameAsShippingCheckbox.checked ? 'on' : 'off';
-/*
-        if (!sameAsShippingCheckbox.checked) {
-            document.getElementById('billing_full_name_hidden').value = document.getElementById('billing_full_name').value;
-            document.getElementById('billing_address_hidden').value   = document.getElementById('billing_address').value;
-            document.getElementById('billing_city_hidden').value      = document.getElementById('billing_city').value;
-            document.getElementById('billing_postcode_hidden').value  = document.getElementById('billing_postcode').value;
-        }
-*/
         const selectedPayment = document.querySelector('input[name="payment_method"]:checked');
         document.getElementById('payment_method_hidden').value = selectedPayment ? selectedPayment.value : '';
 
