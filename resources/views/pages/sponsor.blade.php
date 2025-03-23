@@ -4,7 +4,7 @@
 @section('content')
 
 
-    <div class="Sponsorship"><!--creates the home class-->
+    <div class="Sponsorship"><!--creates the sponsor class-->
         <section>
             <div id="sponsor-banner-container"><!--creates the banner container-->
                 <img src="{{asset('images/sponsorship.jpg')}}" id="sponsor-banner">
@@ -18,6 +18,7 @@
             <p> Join our Sponsorship Program</p>
         </div>
 
+        <!--First Sponsor Section-->
     <div class = sponsor-main>
         <div id=sponsor-text>
             <p>Want to Succeed? Want to Achieve you dream? We understand that success is not something that happens in
@@ -35,6 +36,7 @@
             <p> Why Partner With Us?</p>
         </div>
 
+        <!--Parallax Container for Sponsor-->
         <div id="parallax-container">
             <div id="parallax" style="background-image: url({{ asset("images/second-parall.jpeg") }});"></div>
             <div id=sponsor-parallax-info>
@@ -69,7 +71,7 @@
 
 
 
-
+        <!--Sponsor Review Section-->
         <div id=sponsor-review-container>
             <div id=sponsor-text>
                 <img src="{{asset('images/tom.jpg')}}" id="athlete-pic">
@@ -103,6 +105,7 @@
             </div>
         </div>
 
+        <!--Sponsor Join Text-->
         <div id=sponsor-join-text>
             <p>If you are interested in exploring sponsorship or investment opportunities with SportsWear, please get in
                 touch with us through the following:</p>

@@ -16,7 +16,7 @@
             <p>Sustainability At SportsWear</p>
         </div>
 
-
+        <!--Gurantee container section-->
         <div id=sustain-gurantee-container>
             <ul id=sustain-guarantee>
                 <li id=sustain-guarantee-list><img src="{{asset('images/clothing-icon.png')}}">
@@ -37,7 +37,7 @@
             </ul>
         </div>
 
-
+        <!--First sustainability section-->
         <div id=section-divider>
             <p>Our Misson For Sustainability </p>
         </div>
@@ -57,7 +57,8 @@
                 take action to create a better future for the future generation. </p>
             <img src="{{asset('images/flower-shoe.jpg')}}" id="sustain-pic">
         </div>
-
+        
+        <!--Second Sustainability Section-->
         <div id=sustain-second-text>
             <p>Sustainability goes far beyond materials and textiles, it is also about the people who are behind the
                 products. That is why we have partnered with ethically certified factories that make sure they provide:
@@ -68,6 +69,7 @@
             <img src="{{asset('images/factory.jpg')}}" id="sustain-pic">
         </div>
 
+        <!--Third Sustainability Section-->
         <div id=sustain-text>
             <ul id=sustain-list>
                 <li><h3> Increase Use of Sustainable Materials</h3>By the end of 2025, We at SportsWear will aim to make
@@ -85,7 +87,8 @@
             </ul>
             <img src="{{asset('images/2025.jpg')}}" id="sustain-pic">
         </div>
-
+        
+        <!--Joining section-->
         <div id="sustain-second-text">
             <p>All of the clothing items at SportsWear are stocked in their largest size. Upon the item being ordered they are adjusted down to fit whichever size is required. This means that being able to buy an item is not dependent on which size you require. This also reduces waste in unsold units, therefore helping us to run a more sustainable business.</p>
             <img src="{{ asset('images/productImage/7db446c4-8537-41b6-a1ee-e7068bfb8bc8.jpg') }}" id = "sustain-pic">

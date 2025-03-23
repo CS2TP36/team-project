@@ -11,12 +11,12 @@
                     <p>Dream.</p>
                     <p>Aspire Higher.</p>
                     <p>Achieve Your Destiny.</p>
-                    <!--<p>The Best Quality For The Best Price</p> -->
+                    <!--writing for the slogan-->
                 </div>
             </div>
         </section>
 
-        <div id=home-slogan><!--divide the sections-->
+        <div id=home-slogan><!--slogan button-->
             <p> Unleash Your Potential. Embrace Greatness </p>
             <a href="/products">Shop Now</a>
         </div>
@@ -41,7 +41,7 @@
             </ul>
         </div>
 
-        <div id="parallax-container">
+        <div id="parallax-container"> <!--the parallax section container-->
             <div id="parallax" style="background-image: url({{ asset('images/Parallax.png') }});"></div>
             <div id=parallax-info>
                 <h3>What Is SportsWear?</h3>
@@ -59,7 +59,7 @@
 
         @php($featuredProducts = FeaturedProductController::getFeaturedProducts())
 
-        <!-- TODO: rename this container and work out what ur doing with it -->
+        <!--The section for the carousel item feature slider-->
         <div class="featured-item-wrapper">
             <button class="back-button"><img src="{{asset('images/back_button.png')}}"></button>
             <div class="featured-item-container">
@@ -85,7 +85,7 @@
     <div id=catogery-divider>
         <p>What Can You Expect From Us?</p>
     </div>
-
+    <!--HTML for home Gurantee container-->
     <div id=home-gurantee-container>
         <ul id=home-guarantee>
             <li id=guarantee-list><img src="{{asset('images/clothing-icon.png')}}">
@@ -107,7 +107,7 @@
     <div id=catogery-divider>
         <p>Check Out Some Of Our Reviews</p>
     </div>
-
+    <!--Section for thr reviews at the very bottom of the page-->
     <div id=home-review-container>
             <div id = home-reviews>
                 <img src="{{asset('images/review-1.png')}}" id=home-review-pic>

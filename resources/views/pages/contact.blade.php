@@ -10,7 +10,7 @@
                 have come to the right place</p>
         </div>
 
-        <div class="contact-container">
+        <div class="contact-container"> <!--Contacts Section-->
             <div class="contact-page-details">
                 <h2>Contact Info</h2>
                 <ul>
