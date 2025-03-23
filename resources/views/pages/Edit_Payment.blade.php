@@ -11,7 +11,7 @@
 
         <!-- Card Number -->
         <label for="cardNumber">Card Number</label>
-        <input type="text" id="cardNumber" name="card_number" value="{{ old('card_number', $paymentMethod->card_number) }}" required>
+        <input type="text" id="cardNumber" name="card_number" value="{{ old('card_number', $paymentMethod->card_number) }}" minlength="16" maxlength="16" required>
         <span class="error-message" id="cardNumberError"></span>
 
         <!-- Cardholder Name -->
@@ -29,7 +29,7 @@
 
         <!-- CVV -->
         <label for="cardCvc">CVV</label>
-        <input type="text" id="cardCvc" name="cvv" value="{{ old('cvv', $paymentMethod->cvv) }}" required>
+        <input type="text" id="cardCvc" name="cvv" maxlength="3" minlength="3" value="{{ old('cvv', $paymentMethod->cvv) }}" required>
         <span class="error-message" id="cvvError"></span>
 
         <!-- Buttons -->

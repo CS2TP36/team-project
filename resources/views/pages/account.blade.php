@@ -58,12 +58,11 @@
                     </a>
                 @endif
 
-                
                 <a href="/logout" class="card">
                     <img src="images/logout.png" alt="Security">
                     <div class="card-content">
-                        <h2>Logout</h2>
-                        <p>Logout of your account</p>
+                        <h2>Sign out</h2>
+                        <p>Sign of your account</p>
                     </div>
                 </a>
             </div>
