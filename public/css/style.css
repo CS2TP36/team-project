@@ -2786,6 +2786,12 @@ label {
         font-size: 0.8rem;
     }
 
+    #breadcrumbs {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: auto;
+    }
+
 
 }
 
