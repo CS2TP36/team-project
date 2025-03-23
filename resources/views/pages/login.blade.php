@@ -19,12 +19,6 @@
                     </div>
                 @endif
 
-                @if (session('error'))
-                    <div class="error-message">
-                        <p>{{ session('error') }}</p>
-                    </div>
-                @endif
-
                 <form id="loginForm" method="POST" action="{{ route('login.authenticate') }}" novalidate>
                     @csrf
 
