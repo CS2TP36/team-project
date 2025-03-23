@@ -43,7 +43,7 @@
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="10" rows="7" placeholder="Write your message here..."required style="resize: none"></textarea>
+                        <textarea name="message" id="message" cols="10" rows="7" placeholder="Write your message here..." required style="resize: none"></textarea>
                     </div>
 
                     <button type="submit">Send Message</button>
