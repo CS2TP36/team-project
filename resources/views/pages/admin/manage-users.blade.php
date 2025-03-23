@@ -13,6 +13,8 @@
                     <option value="all" @if($role === "all") selected @endif>All Roles</option>
                     <option value="admin" @if($role === "admin") selected @endif>Admin</option>
                     <option value="customer" @if($role === "customer") selected @endif>Customer</option>
+                    <option value="customer" @if($role === "user") selected @endif>Customer</option>
+
                 </select>
             </form>
         </div>
