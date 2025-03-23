@@ -1300,6 +1300,18 @@ main {
             transform: scale(1.2);
         }
     }
+
+    .form-group {
+        text-align: left;
+    }
+
+    /* .form-group .error-message {
+        text-align: left;
+    } */
+
+    /* input.error, select.error {
+        text-align: left;
+    } */
 }
 
 /* Media Query for Contact Page */
