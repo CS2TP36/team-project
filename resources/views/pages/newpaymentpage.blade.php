@@ -1,10 +1,11 @@
 @extends('layouts.page')
 @section('title', 'New Payment Method')
+@section('script', asset('js/payment-validation.js'))
 @section('content')
     <div class="new-payment-container">
         <h1 class="payment-title">Enter New Payment Details</h1>
 
-        <form id="payment-form" action="{{ route('payment.store') }}" method="POST">
+        <form id="payment-form" action="{{ route('payment.store') }}" method="POST" onsubmit="validatePayment(event)" novalidate>
             @csrf
             <label for="cardNumber" class="payment-label">Card number</label>
             <input
@@ -13,7 +14,8 @@
                 name="card_number"
                 class="payment-input"
                 placeholder="1234 5678 9012 3456"
-                maxlength="19"
+                minlength="16"
+                maxlength="16"
                 required
             />
             <small class="error-message" id="cardNumberError"></small>
@@ -72,7 +74,8 @@
                 name="card_cvc"
                 class="payment-input cvc-input"
                 placeholder="123"
-                maxlength="4"
+                minlength="3"
+                maxlength="3"
                 required
             />
             <small class="error-message" id="cardCvcError"></small>
