@@ -736,7 +736,7 @@ main {
                 margin-right: 100px;
 
                 p {
-                    width: 22vw;
+                    width: 35vw;
                     font-size: 1em;
                     line-height: 1.5;
                 }
@@ -815,7 +815,6 @@ main {
         margin-right: 0;
         text-align: left;
         width: 80px;
-
     }
 
     .basket-summary {
