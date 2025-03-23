@@ -31,7 +31,6 @@ body {
     input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1em;
-        /* min-width: 320px; */
         color: var(--input-text-colour);
         border: 1px solid var(--border-color);
         border-radius: 5px;
@@ -3673,8 +3672,8 @@ label {
     justify-content: center;
     align-items: center;
 
-    .address-form {
-        width: 100%;
+    #newaddressForm {
+        width: 95%;
     }
 
     h2 {
