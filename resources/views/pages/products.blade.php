@@ -134,6 +134,9 @@
                     <p>{{$message}}</p><!--displays the message-->
                 </div>
             @endif
+            @if($products->isEmpty())
+                    <p>No products found</p>
+            @endif
             @foreach($products as $product)
                 <div class="product-item">
                     <!--for each of the products in the products catogery it iterates through it and  present it in the webpage-->
