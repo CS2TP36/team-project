@@ -47,14 +47,6 @@
                     </div>
                 </a>
 
-                <a href="/logout" class="card">
-                    <img src="images/logout.png" alt="Security">
-                    <div class="card-content">
-                        <h2>Logout</h2>
-                        <p>Logout of your account</p>
-                    </div>
-                </a>
-
                 @if(Auth::user()->isAdmin())
                     <!-- Link to Admin Page -->
                     <a href="/admin" class="card">
@@ -65,6 +57,15 @@
                         </div>
                     </a>
                 @endif
+
+                
+                <a href="/logout" class="card">
+                    <img src="images/logout.png" alt="Security">
+                    <div class="card-content">
+                        <h2>Logout</h2>
+                        <p>Logout of your account</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
