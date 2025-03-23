@@ -696,17 +696,20 @@ main {
 .basket-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: 0 auto;
 
     .line-break {
         background-color: var(--border-color);
-        width: 100%;
+        width: 75%;
         height: 2px;
         margin-bottom: 20px;
     }
 
     .basket-details {
-        max-width: 100%;
+        width: 65%;
+        max-width: 1000px;
+        margin-right: 250px;
 
         .basket-item {
             display: flex;
@@ -728,6 +731,8 @@ main {
             }
 
             .basket-item-details {
+                width: 45%;
+                max-width: 1000px;
                 margin-right: 100px;
 
                 p {
