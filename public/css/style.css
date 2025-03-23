@@ -975,12 +975,12 @@ main {
     .checkout-container {
         max-width: 900px;
         width: 60%;
-        min-width: 500px;
         margin: 40px auto;
         padding: 20px;
         border: 1px solid var(--border-color);
         border-radius: 8px;
         box-shadow: 0 4px 8px var(--alt-bs-colour);
+        min-width: 300px;
     }
 
     h1 {
@@ -1012,7 +1012,15 @@ main {
             font-size: 16px;
             display: block;
         }
+
+        input[type="text"]{
+            min-width: 50%;
+        }
+        input[type="tel"], textarea {
+            min-width: 50%;
+        }
     }
+    
 
     button {
         width: 100%;
