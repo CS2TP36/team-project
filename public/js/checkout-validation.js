@@ -1,9 +1,132 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const messageArea = document.getElementsByClassName("message-area")[0];
+    function shippingInfoValidated() {
+        // do some validation for shipping info
+        const shippingInfoRadio = document.querySelector("input[name='shipping_address']:checked");
+        if (!shippingInfoRadio) {
+            messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                "                You need to select a shipping address\n" +
+                "            </div>";
+            return false;
+        }
+        // if adding a new payment method
+        if (shippingInfoRadio.value === "new") {
+            const fullName = document.getElementById('shipping_full_name').value;
+            const addressLine1 = document.getElementById('shipping_address_line1').value;
+            const city = document.getElementById('shipping_city').value;
+            const postCode = document.getElementById('shipping_post_code').value;
+            const phone = document.getElementById('shipping_phone').value;
+
+            if (!fullName || !addressLine1 || !city || !postCode || !phone) {
+                messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                    "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                    "                Address fields cannot be blank\n" +
+                    "            </div>";
+                return false;
+            }
+        }
+        return true;
+    }
+    function paymentValidated() {
+        // do some validation for payment info
+        const paymentInfoRadio = document.querySelector("input[name='payment_method']:checked");
+        if (!paymentInfoRadio) {
+            messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                "                You have to select a payment method\n" +
+                "            </div>";
+            return false;
+        }
+        // if adding a new payment method
+        if (paymentInfoRadio.value === "new") {
+            const cardName = document.getElementById('payment_card_name').value;
+            const cardNumber = document.getElementById('payment_card_number').value;
+            const expiry = document.getElementById('payment_expiry').value;
+            const cvv = document.getElementById('payment_cvv').value;
+
+            if (!cardName || !cardNumber || !expiry || !cvv) {
+                messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                    "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                    "                Payment fields cannot be blank\n" +
+                    "            </div>";
+                return false;
+            }
+            // check if card number is valid
+            if (cardNumber.length !== 16 || !!isNaN(parseInt(cardNumber))) {
+                messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                    "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                    "                Card number not valid\n" +
+                    "            </div>";
+                return false;
+            }
+            // check if cvv is valid
+            if (cvv.length !== 3 || !!isNaN(parseInt(cvv))) {
+                messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                    "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                    "                CVV not valid\n" +
+                    "            </div>";
+                return false;
+            }
+        }
+        return true;
+    }
+    function shippingOptionValidated() {
+        const shippingOptionRadio = document.querySelector("input[name='shipping_option']:checked");
+        if (!shippingOptionRadio) {
+            messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                "                You need to select a shipping option\n" +
+                "            </div>";
+            return false;
+        }
+        return true;
+    }
+    function discountValidated() {
+        const discountCheckbox = document.getElementById('apply-discount');
+        if (discountCheckbox.checked) {
+            const discountCode = document.getElementById('discount_code').value;
+            if (!discountCode) {
+                messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+                    "                <img src=\"/images/caution-icon.png\"></img>\n" +
+                    "                You need to enter a discount code\n" +
+                    "            </div>";
+                return false;
+            }
+        }
+        return true;
+    }
+
     document.querySelectorAll('.next-section').forEach(btn => {
         btn.addEventListener('click', () => {
+            const messageArea = document.getElementsByClassName("message-area")[0];
             const nextId = btn.dataset.next;
-            btn.closest('.checkout-section').style.display = 'none';
-            document.getElementById(nextId).style.display = 'block';
+            if (nextId === 'payment-method-section') {
+                if (shippingInfoValidated()) {
+                    messageArea.innerHTML = "";
+                    btn.closest('.checkout-section').style.display = 'none';
+                    document.getElementById(nextId).style.display = 'block';
+                }
+            }
+            if (nextId === 'shipping-options-section') {
+                if (paymentValidated()) {
+                    messageArea.innerHTML = "";
+                    btn.closest('.checkout-section').style.display = 'none';
+                    document.getElementById(nextId).style.display = 'block';
+                }
+            } else if (nextId === 'discount-section') {
+                if (shippingOptionValidated()){
+                    messageArea.innerHTML = "";
+                    btn.closest('.checkout-section').style.display = 'none';
+                    document.getElementById(nextId).style.display = 'block';
+                }
+            } else if (nextId === 'order-summary-section') {
+                if (discountValidated()) {
+                    messageArea.innerHTML = "";
+                    btn.closest('.checkout-section').style.display = 'none';
+                    document.getElementById(nextId).style.display = 'block';
+                }
+            }
         });
     });
     document.querySelectorAll('.back-section').forEach(btn => {
@@ -17,12 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const shippingNextBtn = document.getElementById('shipping-next-btn');
 
     const paymentSection = document.getElementById('payment-method-section');
-
-    shippingNextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        document.getElementById('shipping-info-section').style.display = 'none';
-        paymentSection.style.display = 'block';
-    });
 
     const addressRadios = document.getElementsByName('shipping_address');
     const newShippingFields = document.getElementById('new-shipping-fields');
