@@ -20,7 +20,7 @@ class ContactController extends Controller
                 'message' => 'required'
             ]);
         } catch (\Throwable $th) {
-            return response()->json(['error' => $th->getMessage()]);
+            return back()->with('error', $th->getMessage());
         }
         if ($contactForm) {
             // creates a contact item
