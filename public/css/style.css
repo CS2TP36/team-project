@@ -31,7 +31,7 @@ body {
     input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1em;
-        min-width: 320px;
+        /* min-width: 320px; */
         color: var(--input-text-colour);
         border: 1px solid var(--border-color);
         border-radius: 5px;
@@ -3118,19 +3118,20 @@ label {
         }
 
         h2 {
-            min-width: 320px;
-            width: 100%;
+            width: 95%;
         }
 
         p {
-            min-width: 320px;
-            width: 100%;
+            width: 95%;
             font-size: 1em;
         }
 
-        input {
-            width: 100%;
-            min-width: 300px;
+        #headline {
+            width: 90%;
+        }
+
+        #message {
+            width: 90%;
         }
 
         button {
@@ -3147,9 +3148,9 @@ label {
             margin-top: 10px;
             height: 2px;
             background-color: var(--border-color);
-            width: 100%;
+            width: 94%;
             min-width: 320px;
-            max-width: 1200px;
+            /* max-width: 1200px; */
         }
 
         .star {
@@ -3160,11 +3161,6 @@ label {
 
         .star:hover, .star.active {
             color: gold;
-        }
-
-        input[type="text"], textarea {
-            width: 100%;
-            max-width: 1200px;
         }
     }
 }
