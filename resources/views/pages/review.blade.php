@@ -25,7 +25,7 @@
                 <div class="review-line-break"><br></div>
                 <h2>Add a headline</h2>
                 <!-- Input for headline -->
-                <input type="text" placeholder="What's most important to know?" name="headline"></input>
+                <input type="text" id="headline" placeholder="What's most important to know?" name="headline" required></input>
                 <div class="review-line-break"><br></div>
                 <h2>Add a written review</h2>
                 <!-- Input for review -->
