@@ -24,7 +24,7 @@
     <form id="newaddressForm" action="{{ route('address.store') }}" method="POST" novalidate>
         @csrf
         <h2>Add a New Address</h2>
-        
+
         <div class="form-group">
             <label for="full-name">Full Name</label>
             <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
@@ -52,12 +52,8 @@
 
         <div class="checkbox-container">
             <input type="hidden" name="is_default" value="0">
-            <label for="default-address">
-                <input type="checkbox" id="default-address" name="is_default" value="1">
-                Make this my default address
-            </label>
         </div>
-        
+
         <button type="submit">Add Address</button>
     </form>
 </div>

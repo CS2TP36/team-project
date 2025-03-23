@@ -15,7 +15,6 @@
                     <div class="card">
                         <strong>
                             **** **** **** {{ substr($paymentMethod->card_number, -4) }}
-                            @if($paymentMethod->is_default) (Default) @endif
                         </strong>
                         <p>
                             {{ $paymentMethod->card_name }} <br>
@@ -24,7 +23,7 @@
 
                         <!-- Actions -->
                         <div class="actions">
-                            <a href="{{ route('payment.edit', $paymentMethod->id) }}">Edit</a> | 
+                            <a href="{{ route('payment.edit', $paymentMethod->id) }}">Edit</a> |
                             <form action="{{ route('payment.destroy', $paymentMethod->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')

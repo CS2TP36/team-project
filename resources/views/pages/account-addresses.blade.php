@@ -14,9 +14,6 @@
                     <div class="card">
                         <strong>
                             {{ $address->full_name }}
-                            @if($address->is_default || (!$addresses->where('is_default', true)->count() && $loop->first))
-                                (Default)
-                            @endif
                         </strong>
                         <p>
                             {{ $address->address_line1 }}<br>
@@ -30,7 +27,7 @@
 
                         <!-- links -->
                         <div class="actions">
-                            <a href="{{ route('address.edit', $address->id) }}">Edit</a> | 
+                            <a href="{{ route('address.edit', $address->id) }}">Edit</a> |
                             <form action="{{ route('address.destroy', $address->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')

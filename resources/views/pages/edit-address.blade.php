@@ -52,11 +52,6 @@
               <input type="text" id="town_City" name="town_city" value="{{ old('town_city', $address->town_city) }}" required>
             </div>
 
-            <div class="checkbox-container">
-                <input type="checkbox" id="is_default" name="is_default" value="1" {{ old('is_default', $address->is_default) ? 'checked' : '' }}>
-                <label for="is_default">Set As Default Address</label>
-            </div>
-
         </form>
 
         <button id="submit" class="btn save">Save Changes</button>
