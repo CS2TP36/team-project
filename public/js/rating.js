@@ -31,9 +31,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function validate() {
+    let messageArea = document.getElementsByClassName("message-area")[0];
+    // check if rating been left
     var rating = document.getElementById('rating-holder').value;
     if (rating === "" || rating === null || rating < 1){
-        alert("Please rate the product (1-5 stars)");
+        messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+            "                <img src=\"/images/caution-icon.png\"></img>\n" +
+            "                Please rate the product (1-5 stars)\n" +
+            "            </div>";
+        return false;
+    }
+    //check if headline been left
+    var headline = document.getElementById('headline').value;
+    if (headline === "" || headline === null){
+        messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+            "                <img src=\"/images/caution-icon.png\"></img>\n" +
+            "                Please add a headline\n" +
+            "            </div>";
+        return false;
+    }
+    //check if review been left
+    var review = document.getElementById('message').value;
+    if (review === "" || review === null){
+        messageArea.innerHTML += "<div id=\"message-error\" class=\"error\">\n" +
+            "                <img src=\"/images/caution-icon.png\"></img>\n" +
+            "                Please add a message\n" +
+            "            </div>";
         return false;
     }
     document.getElementById("review-form").submit();

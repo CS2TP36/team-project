@@ -33,12 +33,17 @@ class ReviewController extends Controller
     }
     function add(Request $request) {
         // validate request
-        $request->validate([
+        $validated = $request->validate([
             'rating' => 'required|integer|between:1,5',
             'message' => 'required|string',
             'product_id' => 'required|integer',
             'headline' => 'required|string',
         ]);
+
+        if(!$validated) {
+            return redirect()->back()->with('error', 'All fields are required');
+        }
+
         // check if logged in
         if (!Auth::check()) {
             return redirect()->back()->with('error', 'You must be logged in to review a product');
