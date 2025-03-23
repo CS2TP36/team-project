@@ -871,12 +871,15 @@ main {
 
                 p {
                     width: 22vw;
+                    max-width: 400px;
                     font-size: 1em;
                     line-height: 1.5;
                 }
             }
 
             .add-basket {
+                justify-content: center;
+
                 button {
                     margin-bottom: 10px;
                 }
@@ -1304,14 +1307,6 @@ main {
     .form-group {
         text-align: left;
     }
-
-    /* .form-group .error-message {
-        text-align: left;
-    } */
-
-    /* input.error, select.error {
-        text-align: left;
-    } */
 }
 
 /* Media Query for Contact Page */
