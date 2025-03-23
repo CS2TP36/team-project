@@ -708,7 +708,6 @@ main {
     .basket-details {
         width: 65%;
         max-width: 1000px;
-        /* margin-right: 250px; */
 
         .basket-item {
             display: flex;
@@ -787,10 +786,6 @@ main {
 
 /* Media Query for Basket Page */
 @media (max-width: 768px) {
-    .basket-details {
-        /* margin: 0 auto; */
-    }
-
     .basket-container {
         flex-direction: column;
         padding: 10px;
@@ -891,55 +886,6 @@ main {
     }
 }
 
-
-/* CSS for Footer */
-/* footer {
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9rem;
-
-    a {
-        color: var(--btn-text-colour);
-        text-decoration: none;
-        padding: 0;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-} */
-
-/* Media Query for Footer */
-/* @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    table td,
-    table th {
-        font-size: 0.55rem;
-        padding: 4px;
-        width: 50%;
-    }
-
-    div input[type="text"],
-    div button {
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    div p,
-    div strong {
-        font-size: 1rem;
-    }
-
-    footer {
-        font-size: 0.8rem;
-    }
-} */
-
 /*CSS for Checkout Page*/
 .checkout {
     background-color: var(--bg-colour);
@@ -948,6 +894,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    fieldset {
+        border: var(--border-color) 1px solid;
+    }
 
     .order-items {
         display: flex;
