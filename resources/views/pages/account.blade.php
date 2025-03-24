@@ -27,7 +27,7 @@
                     <img src="images/addresses-icon.png" alt="Addresses">
                     <div class="card-content">
                         <h2>Your Addresses</h2>
-                        <p>Edit, remove or set default address</p>
+                        <p>Edit, remove or add a new address</p>
                     </div>
                 </a>
                 <!-- Link to Account-Payments Page -->
