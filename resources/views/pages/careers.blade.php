@@ -4,14 +4,14 @@
     <div class="careers">
         <div class="careers-container">
             <h2>Join Our Team</h2>
-            <p>At sportswear, we are passionate about sports and clothing so we are sharing that passion with YOU! if
-                your
-                looking for an exciting career in the sports clothing industry check out our open positions below.</p>
+            <p>At sportswear, we are passionate about sports and clothing so we are sharing that passion with YOU! If
+                you're
+                looking for an exciting career in the sports clothing industry, check out our open positions below.</p>
             <div class="job-listings">
                 <div class="job-card">
                     <h3>Sales Associate</h3>
                     <p>We are looking for an enthusiastic Sales Associate to help customers find the perfect
-                        sportswear.</p>
+                        clothing.</p>
                 </div>
 
                 <div class="job-card">
