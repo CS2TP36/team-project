@@ -1,3 +1,4 @@
+// This is for the Product Detail Page, it sorts out the styling of the sub headings 
 document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('nav li');
     const contentSections = document.querySelectorAll('.content-section'); // Select sections

@@ -104,7 +104,7 @@
                     </div>
                 </section>
             </div>
-
+            <!-- This JS file changes the style of the sub headings to make them have a purple colour and an underline once clicked -->
             <script src="{{ asset('js/underline.js') }}"></script>
         </div>
     </div>
