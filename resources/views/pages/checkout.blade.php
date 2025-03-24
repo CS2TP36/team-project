@@ -110,14 +110,6 @@
                             </div>
                         </fieldset>
                     @endif
-<!--
-                    <div class="form-group" style="margin-top:1em;">
-                        <label>
-                            <input type="checkbox" id="same_as_shipping" checked>
-                            Billing address same as shipping?
-                        </label>
-                    </div>
-                    -->
                 </fieldset>
                 <button type="button" class="next-section" data-next="payment-method-section" id="shipping-next-btn">
                     Next

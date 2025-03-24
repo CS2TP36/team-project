@@ -189,8 +189,8 @@ main {
     --text-nav-colour: rgb(168 204 204);
     --card-bg-colour: #F5F5F5;
     --card-hover-colour: #D5D5D5;
-    --contact-box-colour: #e4e4e4;
-    --delivery-button: #5d5d5d;
+    --contact-box-colour: #E4E4E4;
+    --delivery-button: #5D5D5D;
 }
 
 /* .dark-mode {
@@ -214,7 +214,7 @@ main {
 } */
 
 .dark-mode {
-    --bg-colour: #3d3d3d;
+    --bg-colour: #3D3D3D;
     --text-colour: #F5F5F5;
     --btn-bg-colour: #5D5D5D;
     --btn-border-colour: #1E1E1E;
@@ -1605,8 +1605,6 @@ main {
     justify-content: center;
 
     img {
-        /* width: 1.2vw;
-        height: 1.2vw; */
         width: 35px;
         height: 35px;
         margin-right: 10px;
@@ -1671,14 +1669,6 @@ main {
             text-decoration: none;
             gap: 10px;
             margin: 0;
-
-            /* a {
-                color: white;
-                font-size: 13px;
-                font-weight: bold;
-                list-style: none;
-                text-decoration: none;
-            } */
         }
     }
 
@@ -2970,8 +2960,6 @@ label {
         background-color: transparent;
         transition: width 0.3s ease, background-color 0.3s ease;
     }
-
-    /* Should change this */
 
     nav li.active, nav li:hover {
         color: blueviolet;

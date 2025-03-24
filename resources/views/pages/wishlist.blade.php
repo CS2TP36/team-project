@@ -2,7 +2,6 @@
 @section('title', 'Wishlist')
 @section('content')
     <div class="wishlist">
-        <!-- <h1>Wishlist</h1> -->
         <section class="wishlist-container">
             <div class="wishlist-details">
                 <h2>Your Wishlist</h2>
