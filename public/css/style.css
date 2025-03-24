@@ -3460,6 +3460,15 @@ label {
     }
 }
 
+@media (max-width: 1368px) {
+
+    #sponsor-text-banner {
+        left:5%;
+    }
+    
+
+}
+
 /* CSS for Edit Address Page */
 
 .Edit-Address {
