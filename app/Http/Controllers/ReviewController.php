@@ -73,7 +73,6 @@ class ReviewController extends Controller
     static function getReviews($productId) {
         // get all reviews for product
         $reviews = Review::all()->where('product_id', $productId);
-        // TODO: could involve some sorting in the future
         // return them
         return $reviews;
     }
