@@ -24,7 +24,7 @@
             <img src="images/Mission-.png" class="section-image" alt="Mission Image">
             <div class="text">
                 <h2>Our Mission</h2>
-                <p>At Sportswear, our mission is to fill the gap in the market for athletic apparel that combines
+                <p>At SportsWear, our mission is to fill the gap in the market for athletic apparel that combines
                     cutting-edge
                     performance, unmatched comfort, and sustainability.
                     We recognized that athletes deserve more than just gear—they need clothing that adapts to their
@@ -63,14 +63,14 @@
         <section class="content-container">
             <img src="images/Origin.png" class="section-image" alt="Origin Image">
             <div class="text">
-                <h2>Sportswear Origin</h2>
-                <p>Sportswear was founded in 2024 by a group of passionate athletes, designers, and innovators who saw a
+                <h2>SportsWear Origin</h2>
+                <p>SportsWear was founded in 2024 by a group of passionate athletes, designers, and innovators who saw a
                     gap
                     in the market for athletic apparel that truly met the needs of modern athletes.
                     Frustrated with gear that compromised performance for comfort, and vice versa, we set out to create
                     a
                     brand that could do both. After countless hours of research and collaboration, we developed a line
-                    of sportswear designed not only
+                    of SportsWear designed not only
                     for peak performance but also for durability, flexibility, and style.</p>
 
                 <p>Driven by a shared commitment to sustainability and quality, we sourced only the best materials and
@@ -85,7 +85,7 @@
             <img src="images/Unique-.png" class="section-image" alt="Unique Image">
             <div class="text">
                 <h2>What Sets Us Apart</h2>
-                <p>At Sportswear, we believe in more than just making high-quality gear we’re redefining what athletic
+                <p>At SportsWear, we believe in more than just making high-quality gear we’re redefining what athletic
                     apparel
                     should be. Here’s what makes us different:</p>
                 <ul>
