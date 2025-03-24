@@ -85,7 +85,6 @@
                 @php($reviews = ReviewController::getReviews($product->id))
                 <section id="review" class="content-section">
                     <p><strong>Reviews:</strong></p>
-                    <!-- TODO: Probably want to rename classes and do some css to make look nice -->
                     <div class="something">
                         @foreach($reviews->reverse() as $review)
                             <div class="line-break"></div>
