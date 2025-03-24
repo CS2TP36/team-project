@@ -13,7 +13,7 @@ class WishlistController extends Controller
     public function index(Request $request)
     {
         if (!Auth::check()){
-            return redirect()->route('login')->with('error', 'Please login to view your wishlist.');
+            return redirect('/login')->with('error', 'Please login to view your wishlist.');
         }
         $wishlists = WishlistItem::query();
 
@@ -33,7 +33,7 @@ class WishlistController extends Controller
     public function add(Request $request)
     {
         if (!Auth::check()){
-            return redirect()->route('login')->with('error', 'Please login to add products to your wishlist.');
+            return redirect('/login')->with('error', 'Please login to add products to your wishlist.');
         }
         $validated = $request->validate([
             'product_id' => 'required|exists:products,id',
@@ -72,7 +72,7 @@ class WishlistController extends Controller
     public function remove($id)
     {
         if (!Auth::check()){
-            return redirect()->route('login')->with('error', 'Please login to remove products from your wishlist.');
+            return redirect('/login')->with('error', 'Please login to remove products from your wishlist.');
         }
         $wishlistItem = WishlistItem::find($id);
         if ($wishlistItem) {
