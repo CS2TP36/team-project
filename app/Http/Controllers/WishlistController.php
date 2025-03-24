@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\WishlistItem;
+use Illuminate\Support\Facades\Auth;
 
 class WishlistController extends Controller
 {
     // Show wishlist items
     public function index(Request $request)
     {
+        if (!Auth::check()){
+            return redirect()->route('login')->with('error', 'Please login to view your wishlist.');
+        }
         $wishlists = WishlistItem::query();
 
         // Filter by user ID if logged in, otherwise by session
@@ -28,6 +32,9 @@ class WishlistController extends Controller
     // Add item to wishlist
     public function add(Request $request)
     {
+        if (!Auth::check()){
+            return redirect()->route('login')->with('error', 'Please login to add products to your wishlist.');
+        }
         $validated = $request->validate([
             'product_id' => 'required|exists:products,id',
             'size'       => 'required|in:S,M,L',
@@ -64,6 +71,9 @@ class WishlistController extends Controller
     // Remove item from wishlist
     public function remove($id)
     {
+        if (!Auth::check()){
+            return redirect()->route('login')->with('error', 'Please login to remove products from your wishlist.');
+        }
         $wishlistItem = WishlistItem::find($id);
         if ($wishlistItem) {
             $wishlistItem->delete();
