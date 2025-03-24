@@ -62,7 +62,7 @@
                     <img src="images/logout.png" alt="Security">
                     <div class="card-content">
                         <h2>Sign out</h2>
-                        <p>Sign of your account</p>
+                        <p>Sign out of your account</p>
                     </div>
                 </a>
             </div>
