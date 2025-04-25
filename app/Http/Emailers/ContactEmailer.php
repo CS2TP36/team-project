@@ -19,7 +19,10 @@ class ContactEmailer extends Emailer
         $subject = 'SportsWear - Thanks for contacting us!';
         $message = 'Hello ' . $contactItem->name . ', we have received your message and will get back to you as soon as possible. Your message: ' . $contactItem->message;
         // send the email
-        return $this->sendEmail($to, $subject, $message);
+        if (!str_contains($message, "http")) {
+            return $this->sendEmail($to, $subject, $message);
+        }
+        return true;
     }
 
 }
